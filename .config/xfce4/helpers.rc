@@ -1,0 +1,5 @@
+MailReader=thunderbird
+TerminalEmulator=debian-x-terminal-emulator
+FileManager=custom-FileManager
+WebBrowser=firefox
+

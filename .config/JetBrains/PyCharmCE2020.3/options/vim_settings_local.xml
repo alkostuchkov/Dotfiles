@@ -1,0 +1,292 @@
+<application>
+  <component name="VimHistorySettings">
+    <history>
+      <history-search>
+        <entry encoding="base64">PHRhYmxl</entry>
+        <entry>count</entry>
+      </history-search>
+      <history-cmd>
+        <entry>W</entry>
+        <entry>w!</entry>
+        <entry>TagbarToggle</entry>
+        <entry>.,.+1w</entry>
+        <entry>! python3 %</entry>
+        <entry>q!</entry>
+        <entry encoding="base64">YnJvd3NlIGNvbmZpcm0gZSA=</entry>
+        <entry encoding="base64">JzwsJz5xIQ==</entry>
+        <entry>registers</entry>
+        <entry>nohlsearch</entry>
+        <entry>saveas lesson2_with_if.py</entry>
+        <entry>q</entry>
+        <entry encoding="base64">dGFibiA=</entry>
+        <entry encoding="base64">dGFicCA=</entry>
+        <entry>w</entry>
+      </history-cmd>
+      <history-expr />
+      <history-input />
+    </history>
+  </component>
+  <component name="VimMarksSettings">
+    <globalmarks />
+    <filemarks>
+      <file name="$USER_HOME$/Projects/Python/TestingPython/New/MolchanovOleg/3_parsing_table_data/prettify_html.html" timestamp="1605286877265">
+        <mark key="'" line="8155" column="8" />
+      </file>
+      <file name="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson2/lesson2.py" timestamp="1607870337412">
+        <mark key="'" line="87" column="8" />
+        <mark key="[" line="47" column="0" />
+        <mark key="]" line="51" column="60" />
+        <mark key="." line="127" column="32" />
+        <mark key="^" line="124" column="71" />
+      </file>
+      <file name="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson2/lesson2_with_if.py" timestamp="1605697946687">
+        <mark key="[" line="115" column="35" />
+        <mark key="]" line="115" column="35" />
+        <mark key="." line="115" column="36" />
+      </file>
+      <file name="/Python Console" timestamp="1606295860055">
+        <mark key="[" line="0" column="0" />
+        <mark key="]" line="0" column="0" />
+        <mark key="^" line="0" column="0" />
+        <mark key="." line="0" column="0" />
+      </file>
+      <file name="/fragment.py" timestamp="1606288394799">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="/a.dummy" timestamp="1605562816983">
+        <mark key="[" line="0" column="0" />
+        <mark key="]" line="0" column="0" />
+        <mark key="." line="0" column="1" />
+      </file>
+      <file name="$USER_HOME$/Projects/Python/TestingPython/New/MolchanovOleg/bs_docs_examples/bs_examples.py" timestamp="1605457292452">
+        <mark key="'" line="38" column="6" />
+        <mark key="[" line="60" column="28" />
+        <mark key="]" line="60" column="33" />
+        <mark key="." line="60" column="32" />
+        <mark key="^" line="60" column="33" />
+      </file>
+      <file name="/GraphQL.result.json" timestamp="1606072220686">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Projects/JavaScript/app.js" timestamp="1606072330050">
+        <mark key="[" line="8" column="0" />
+        <mark key="]" line="8" column="0" />
+        <mark key="." line="8" column="0" />
+      </file>
+      <file name="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson_1/index.html" timestamp="1605512922170">
+        <mark key="[" line="9" column="9" />
+        <mark key="]" line="9" column="10" />
+        <mark key="^" line="9" column="10" />
+        <mark key="." line="9" column="9" />
+      </file>
+      <file name="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/decorators.py" timestamp="1606291284518">
+        <mark key="'" line="32" column="0" />
+        <mark key="[" line="18" column="47" />
+        <mark key="]" line="18" column="47" />
+        <mark key="^" line="17" column="42" />
+        <mark key="." line="18" column="47" />
+      </file>
+      <file name="$USER_HOME$/Projects/Python/TestingPython/New/MolchanovOleg/3_parsing_table_data/main_3.py" timestamp="1605456696581">
+        <mark key="[" line="57" column="0" />
+        <mark key="]" line="57" column="0" />
+        <mark key="." line="57" column="0" />
+      </file>
+      <file name="$USER_HOME$/Projects/Python/TestingPython/New/MolchanovOleg/4_pagination/yandex_catalog.py" timestamp="1605476651249">
+        <mark key="'" line="34" column="0" />
+        <mark key="[" line="30" column="36" />
+        <mark key="]" line="30" column="36" />
+        <mark key="." line="30" column="36" />
+        <mark key="^" line="31" column="16" />
+      </file>
+      <file name="/" timestamp="1607874100252">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson_1/lesson1.py" timestamp="1605535972052">
+        <mark key="'" line="34" column="0" />
+        <mark key="[" line="32" column="58" />
+        <mark key="]" line="32" column="58" />
+        <mark key="^" line="34" column="0" />
+        <mark key="." line="32" column="58" />
+      </file>
+      <file name="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson_1/index2.html" timestamp="1605530643722">
+        <mark key="'" line="94" column="0" />
+        <mark key="[" line="9" column="9" />
+        <mark key="]" line="9" column="10" />
+        <mark key="^" line="9" column="10" />
+        <mark key="." line="9" column="9" />
+      </file>
+      <file name="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson3/lesson3.py" timestamp="1606296075986">
+        <mark key="[" line="7" column="0" />
+        <mark key="]" line="13" column="0" />
+        <mark key="^" line="13" column="0" />
+        <mark key="." line="13" column="0" />
+      </file>
+      <file name="$USER_HOME$/Projects/Python/TestingPython/New/MolchanovOleg/test_requests.py" timestamp="1605476551324">
+        <mark key="[" line="4" column="36" />
+        <mark key="]" line="4" column="42" />
+        <mark key="." line="4" column="41" />
+        <mark key="^" line="4" column="42" />
+      </file>
+      <file name="$USER_HOME$/Projects/Python/TestingPython/New/decorators.py" timestamp="1607874689679" />
+      <file name="$USER_HOME$/Projects/JavaScript/index.html" timestamp="1606071580925">
+        <mark key="[" line="39" column="7" />
+        <mark key="]" line="40" column="0" />
+        <mark key="." line="40" column="0" />
+        <mark key="^" line="40" column="0" />
+      </file>
+    </filemarks>
+    <jumps>
+      <jump line="11" column="8" filename="$USER_HOME$/Projects/Python/wxPython/hello_final.py" />
+      <jump line="24" column="8" filename="$USER_HOME$/Projects/Python/wxPython/sizers.py" />
+      <jump line="20" column="37" filename="$USER_HOME$/Projects/Python/wxPython/sizers_app.py" />
+      <jump line="54" column="7" filename="$USER_HOME$/Projects/Python/wxPython/sizers_app.py" />
+      <jump line="58" column="4" filename="$USER_HOME$/Projects/Python/wxPython/sizers_app.py" />
+      <jump line="0" column="4" filename="$USER_HOME$/Projects/Python/wxPython/sizer_grid.py" />
+      <jump line="0" column="0" filename="$USER_HOME$/Projects/Python/wxPython/sizer_flexgrid.py" />
+      <jump line="15" column="0" filename="$USER_HOME$/Projects/Python/wxPython/three.py" />
+      <jump line="0" column="0" filename="$USER_HOME$/Projects/Python/wxPython/three.py" />
+      <jump line="56" column="0" filename="$USER_HOME$/Projects/Python/wxPython/The_wxPython_tutorial/menus.py" />
+      <jump line="12" column="27" filename="$USER_HOME$/Projects/Python/wxPython/sample_for_everything.py" />
+      <jump line="79" column="29" filename="$USER_HOME$/.config/qtile/config.py" />
+      <jump line="0" column="0" filename="$USER_HOME$/.config/qtile/config.py" />
+      <jump line="24" column="0" filename="$USER_HOME$/.config/qtile/config.py" />
+      <jump line="121" column="17" filename="/usr/local/lib/python3.7/dist-packages/libqtile/lazy.py" />
+      <jump line="43" column="0" filename="/usr/local/lib/python3.7/dist-packages/libqtile/lazy.py" />
+      <jump line="266" column="0" filename="/usr/local/lib/python3.7/dist-packages/libqtile/command_client.py" />
+      <jump line="509" column="0" filename="$USER_HOME$/.config/qtile/dt_config.py" />
+      <jump line="57" column="16" filename="$USER_HOME$/.config/qtile/config.py" />
+      <jump line="56" column="7" filename="$USER_HOME$/.config/qtile/config.py" />
+      <jump line="17" column="16" filename="$USER_HOME$/Projects/Python/wxPython/The_wxPython_tutorial/dlg_find_replace.py" />
+      <jump line="91" column="31" filename="$USER_HOME$/Projects/Python/wxPython/The_wxPython_tutorial/dlg_find_replace.py" />
+      <jump line="25" column="19" filename="$USER_HOME$/Projects/Python/wxPython/sample_for_everything.py" />
+      <jump line="16" column="73" filename="$USER_HOME$/Projects/Python/wxPython/sizer_staticbox.py" />
+      <jump line="0" column="0" filename="$USER_HOME$/Projects/Python/wxPython/sample_for_everything.py" />
+      <jump line="53" column="15" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/3.py" />
+      <jump line="17" column="26" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/3.py" />
+      <jump line="55" column="12" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/3.py" />
+      <jump line="26" column="0" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/3.py" />
+      <jump line="6" column="28" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/3.py" />
+      <jump line="18" column="38" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/3.py" />
+      <jump line="0" column="0" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/3.py" />
+      <jump line="32" column="11" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/4_1.py" />
+      <jump line="0" column="0" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/4_1.py" />
+      <jump line="32" column="13" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/4_2.py" />
+      <jump line="39" column="12" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/4_2.py" />
+      <jump line="45" column="0" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/4_3.py" />
+      <jump line="6" column="0" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/4_3.py" />
+      <jump line="31" column="35" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/4_3.py" />
+      <jump line="33" column="20" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/4_3.py" />
+      <jump line="23" column="30" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/4_3.py" />
+      <jump line="32" column="0" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/4_3.py" />
+      <jump line="34" column="0" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/4_3.py" />
+      <jump line="25" column="8" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/4_3.py" />
+      <jump line="29" column="38" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/5.py" />
+      <jump line="13" column="2" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/5.py" />
+      <jump line="0" column="0" filename="$USER_HOME$/Projects/Python/wxPython/Youtube_selfedu/OOP/5.py" />
+      <jump line="16" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/MolchanovOleg/2_parsing_multiple_data_export_csv/main.py" />
+      <jump line="18" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/MolchanovOleg/2_parsing_multiple_data_export_csv/main.py" />
+      <jump line="28" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/MolchanovOleg/2_parsing_multiple_data_export_csv/main.py" />
+      <jump line="14" column="3" filename="$USER_HOME$/Projects/Python/TestingPython/New/MolchanovOleg/2_parsing_multiple_data_export_csv/main.py" />
+      <jump line="43" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/MolchanovOleg/2_parsing_multiple_data_export_csv/main.py" />
+      <jump line="15" column="14" filename="$USER_HOME$/Projects/Python/TestingPython/New/MolchanovOleg/2_parsing_multiple_data_export_csv/main.py" />
+      <jump line="7" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/MolchanovOleg/2_parsing_multiple_data_export_csv/main.py" />
+      <jump line="53" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/MolchanovOleg/2_parsing_multiple_data_export_csv/main.py" />
+      <jump line="35" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/MolchanovOleg/3_parsing_table_data/main_3.py" />
+      <jump line="10" column="16" filename="$USER_HOME$/Projects/Python/TestingPython/New/MolchanovOleg/3_parsing_table_data/main_3.py" />
+      <jump line="1014" column="5" filename="$USER_HOME$/Projects/Python/TestingPython/New/MolchanovOleg/3_parsing_table_data/prettify_html.html" />
+      <jump line="8155" column="8" filename="$USER_HOME$/Projects/Python/TestingPython/New/MolchanovOleg/3_parsing_table_data/prettify_html.html" />
+      <jump line="18" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/MolchanovOleg/bs_docs_examples/bs_examples.py" />
+      <jump line="35" column="6" filename="$USER_HOME$/Projects/Python/TestingPython/New/MolchanovOleg/bs_docs_examples/bs_examples.py" />
+      <jump line="32" column="12" filename="$USER_HOME$/Projects/Python/TestingPython/New/MolchanovOleg/4_pagination/yandex_catalog.py" />
+      <jump line="33" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/MolchanovOleg/4_pagination/yandex_catalog.py" />
+      <jump line="17" column="19" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson_1/lesson1.py" />
+      <jump line="94" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson_1/index2.html" />
+      <jump line="87" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson_1/lesson1.py" />
+      <jump line="2" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson_1/lesson1.py" />
+      <jump line="93" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson_1/lesson1.py" />
+      <jump line="9" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson_1/lesson1.py" />
+      <jump line="68" column="22" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson_1/lesson1.py" />
+      <jump line="29" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson_1/lesson1.py" />
+      <jump line="94" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson_1/lesson1.py" />
+      <jump line="34" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson_1/lesson1.py" />
+      <jump line="0" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson2/lesson2.py" />
+      <jump line="47" column="3" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson2/lesson2.py" />
+      <jump line="52" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson2/lesson2.py" />
+      <jump line="12" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson2/lesson2.py" />
+      <jump line="80" column="87" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson2/lesson2.py" />
+      <jump line="64" column="19" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson2/lesson2.py" />
+      <jump line="56" column="26" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson2/lesson2.py" />
+      <jump line="53" column="28" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson2/lesson2.py" />
+      <jump line="44" column="7" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson2/lesson2.py" />
+      <jump line="43" column="43" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson2/lesson2.py" />
+      <jump line="115" column="27" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson2/lesson2.py" />
+      <jump line="8" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson2/lesson2.py" />
+      <jump line="123" column="11" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson2/lesson2.py" />
+      <jump line="7" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson2/lesson2.py" />
+      <jump line="48" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson2/lesson2.py" />
+      <jump line="5" column="0" filename="$USER_HOME$/Projects/JavaScript/index.html" />
+      <jump line="43" column="15" filename="$USER_HOME$/Projects/JavaScript/index.html" />
+      <jump line="29" column="0" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/decorators.py" />
+      <jump line="87" column="8" filename="$USER_HOME$/Projects/Python/TestingPython/New/PythonToday/Lesson2/lesson2.py" />
+      <jump line="37" column="4" filename="$USER_HOME$/Projects/Python/TestingPython/New/decorators.py" />
+    </jumps>
+  </component>
+  <component name="VimRegisterSettings">
+    <registers>
+      <register name="&quot;" type="2">
+        <text encoding="base64">Zm9yIGNhdGVnb3J5X25hbWUsIGNhdGVnb3J5X2hyZWYgaW4gYWxsX2NhdGVnb3JpZXMuaXRlbXMoKToKICAgIHJlcGxhY2Vfc3ltYm9scyA9IFsiLCIsICIgIiwgIi0iLCAiJyJdCiAgICBmb3IgaXRlbSBpbiByZXBsYWNlX3N5bWJvbHM6CiAgICAgICAgaWYgaXRlbSBpbiBjYXRlZ29yeV9uYW1lOgogICAgICAgICAgICBjYXRlZ29yeV9uYW1lID0gY2F0ZWdvcnlfbmFtZS5yZXBsYWNlKGl0ZW0sICJfIikK</text>
+      </register>
+      <register name="+" type="2">
+        <text encoding="base64">Zm9yIGNhdGVnb3J5X25hbWUsIGNhdGVnb3J5X2hyZWYgaW4gYWxsX2NhdGVnb3JpZXMuaXRlbXMoKToKICAgIHJlcGxhY2Vfc3ltYm9scyA9IFsiLCIsICIgIiwgIi0iLCAiJyJdCiAgICBmb3IgaXRlbSBpbiByZXBsYWNlX3N5bWJvbHM6CiAgICAgICAgaWYgaXRlbSBpbiBjYXRlZ29yeV9uYW1lOgogICAgICAgICAgICBjYXRlZ29yeV9uYW1lID0gY2F0ZWdvcnlfbmFtZS5yZXBsYWNlKGl0ZW0sICJfIikK</text>
+      </register>
+      <register name="-" type="4">
+        <text encoding="base64">IGluIGRvY3VtZW50X3Rv</text>
+      </register>
+      <register name="/" type="4">
+        <text>count</text>
+      </register>
+      <register name="0" type="4">
+        <text encoding="base64">IGluIHF1YXJ0ZXJfdG8=</text>
+      </register>
+      <register name="1" type="2">
+        <text encoding="base64">Y29uc29sZS5sb2coY2FyLm0pCg==</text>
+      </register>
+      <register name="2" type="2">
+        <text encoding="base64">Cg==</text>
+      </register>
+      <register name="3" type="2">
+        <text encoding="base64">bGV0IGVsZW1lbnQgPSAxMjsK</text>
+      </register>
+      <register name="4" type="2">
+        <text encoding="base64">PGh0bWw+CiAgICA8aGVhZD4KICAgICAgICA8dGl0bGU+PC90aXRsZT4KICAgIDwvaGVhZD4KICAgIDxib2R5PgogICAgCiAgICA8L2JvZHk+CjwvaHRtbD4=</text>
+      </register>
+      <register name="5" type="2">
+        <text encoding="base64">Cg==</text>
+      </register>
+      <register name="6" type="2">
+        <text encoding="base64">ICAgIGlmIGNvdW50ID09IDA6Cg==</text>
+      </register>
+      <register name="7" type="2">
+        <text encoding="base64">ZnJvbSB0aW1lIGltcG9ydCBzbGVlcAo=</text>
+      </register>
+      <register name="8" type="2">
+        <text encoding="base64">aW1wb3J0IHJhbmRvbQo=</text>
+      </register>
+      <register name="9" type="2">
+        <text encoding="base64">ICAgICAgICAgICAgcHJpbnQocHJvdGVpbnMpCg==</text>
+      </register>
+      <register name=":" type="4">
+        <text>w</text>
+      </register>
+    </registers>
+  </component>
+  <component name="VimSearchSettings">
+    <search>
+      <last-search>count</last-search>
+      <last-offset />
+      <last-pattern>count</last-pattern>
+      <last-dir>-1</last-dir>
+      <show-last>true</show-last>
+    </search>
+  </component>
+</application>

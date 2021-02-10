@@ -1,0 +1,28 @@
+[Desktop Entry]
+Version=1.0
+Name=Google Chrome
+GenericName=Web Browser
+GenericName[ru]=Веб-браузер
+Comment=Access the Internet
+Comment[ru]=Доступ в Интернет
+Exec=/usr/bin/google-chrome-stable --password-store=basic %U
+StartupNotify=true
+Terminal=false
+Icon=google-chrome
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml_xml;image/webp;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;
+Actions=new-window;new-private-window;
+X-XFCE-Source=file:///usr/share/applications/google-chrome.desktop
+
+Path=
+
+[Desktop Action new-window]
+Name=New Window
+Name[ru]=Новое окно
+Exec=/usr/bin/google-chrome-stable
+
+[Desktop Action new-private-window]
+Name=New Incognito Window
+Name[ru]=Новое окно в режиме инкогнито
+Exec=/usr/bin/google-chrome-stable --incognito

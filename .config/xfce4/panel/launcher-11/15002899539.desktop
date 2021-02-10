@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Qt Disigner 5.8.0
+Comment=Qt Disigner 5.8.0
+Exec=/home/alexander/Qt5.8.0/5.8/gcc_64/bin/designer
+Icon=qdbusviewer
+Path=
+Terminal=false
+StartupNotify=false

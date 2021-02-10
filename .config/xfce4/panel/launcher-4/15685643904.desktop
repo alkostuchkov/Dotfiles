@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Tor
+Comment=
+Exec=/home/alexander/Programs/Tor/Browser/start-tor-browser
+Icon=/home/alexander/Programs/Tor/Browser/browser/chrome/icons/default/default128.png
+Path=
+Terminal=false
+StartupNotify=false

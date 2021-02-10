@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=xfdesktop --reload
+Comment=xfdesktop --reload
+Exec=sh /home/alexander/.myScripts/xfdesktop_reload.sh
+Icon=xfce4-logo
+Terminal=false
+StartupNotify=false
+X-XFCE-Source=file:///home/alexander/.local/share/applications/xfdesktop_reload.desktop

@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Check Email
+GenericName=Check Email
+Comment=Lightweight program for monitoring new Emails
+Icon=/home/alexander/Programs/CheckEmail/CheckEmail.ico
+Exec=/home/alexander/Programs/CheckEmail/CheckEmail
+Path=/home/alexander/Programs/CheckEmail/
+NoDisplay=false
+Categories=Network;
+StartupNotify=false
+Terminal=false
+X-XFCE-Source=file:///home/alexander/.local/share/applications/Check%20Email.desktop

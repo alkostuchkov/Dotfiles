@@ -1,0 +1,1000 @@
+export QT_QPA_PLATFORMTHEME="qt5ct"
+qt5ct
+echo $QT_STYLE_OVERRIDE
+echo $QT_QPA_PLATFORMTHEME
+cat .profile 
+mc
+chmod -R 755 English/
+rm -
+rm-
+rm -r 40.\ Matthew/
+echo $QT_QPA_PLATFORMTHEME
+export QT_QPA_PLATFORMTHEME="bb10dark"
+echo $QT_QPA_PLATFORMTHEME
+dolphin
+dolphin -style="bb10dark"
+dolphin -style="gtk2"
+dolphin -style="qt5ct"
+export QT_QPA_PLATFORMTHEME="gtk2"
+echo $QT_QPA_PLATFORMTHEME
+dolphin
+sudo dolphin
+sudo dolphin &
+sudo qt5ct
+sudo export QT_QPA_PLATFORMTHEME="qt5ct"
+export QT_QPA_PLATFORMTHEME="qt5ct"
+echo $QT_QPA_PLATFORMTHEME
+sudo qt5ct
+sudo cp -R .config/qt5ct/ ~/.config/
+sudo cp -R .config/qt5ct/ /root/.config/
+sudo qt5ct
+sudo dolphin &
+cd Dropbox/
+ll
+cd Dropbox/
+cd ..
+sudo apt install -f
+sudo apt-get install -f
+nemo -q
+dconf-editor 
+nemo -q
+dconf-editor 
+nemo -q
+sudo apt install -f
+sudo apt autoremove 
+sudo synaptic-pkexec 
+sudo apt autoremove 
+sudo apt clean 
+sudo emacs /etc/environment 
+echo $QT_QPA_PLATFORMTHEME
+ll
+mc
+history 100 |less
+history 500 |less
+DRI_PRIME=1 /home/alexander/PyCharm-Community/bin/pycharm.sh &
+ll
+fc-list :lang=uk | grep monaco
+fc-list :lang=uk | grep Monaco
+fc-list :lang=ru | grep Monaco
+fc-cache -f -v
+fc-list :lang=ru | grep Monaco
+fc-cache -f -v
+fc-list :lang=ru | grep Monaco
+fc-list :lang=ru | grep Fira
+ll
+ll
+sudo cp Monaco_patched.ttf /usr/share/fonts/myFonts/
+sudo chmod 755 Monaco_patched.ttf 
+ll
+dolphin4
+mc
+ll
+python3 main.py 
+mc
+ping ya.ru
+n
+mc
+xfdesktop --reload
+mc
+ping ya.ru
+ping google.com
+ping ya.ru
+ping google.com
+ping ya.ru
+ping google.com
+ping ya.ru
+ping google.com
+ping ya.ru
+sudo -i
+su
+lspci | grep Ralink
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+python3 mainCoinToss.py 
+mc
+ping ya.ru
+su
+wicd-gtk &
+killall nm-applet 
+nm-applet
+cd /etc/network/
+ll
+cat interfaces
+cd /etc/NetworkManager/
+ll
+cat NetworkManager.conf 
+ll
+su
+cd /etc/NetworkManager/
+su
+wicd-gtk --tray &
+sudo apt autoremove 
+su
+cd /etc/NetworkManager/
+ll
+su
+ip a
+ping ya.ru
+su
+ip a
+u
+su
+ip a
+ping ya.ru
+`xinput list | grep SynPS/2\ Synaptics\ TouchPad`
+tmp=`xinput list | grep SynPS/2\ Synaptics\ TouchPad`
+tmp
+echo $tmp
+tmp2=${tmp#*id=}
+echo $tmp2
+id=${tmp2::3}
+echo $id
+id=${tmp2::5}
+echo $id
+id=${tmp2::1}
+echo $id
+id=${tmp2::1}
+echo $id
+select-editor 
+tmp1=`xinput list | grep SynPS/2\ Synaptics\ TouchPad`
+echo $tmp1
+select-editor 
+mc
+id=${tmp2::3}
+echo $id
+id=${tmp2::5}
+echo $id
+mc
+subl .profile 
+emacs -nw
+source .
+source .bashrc 
+source .profile 
+mc
+select-editor 
+mc
+subl touchpadONOFF.sh &
+tmp1=`xinput list | grep SynPS/2\ Synaptics\ TouchPad`
+echo $tmp1
+tmp2=${tmp1#*id=}
+echo $tmp2
+xinput -list
+xinput list | grep SynPS/2\ Synaptics\ TouchPad
+tmp1=`xinput list | grep SynPS/2\ Synaptics\ TouchPad`
+echo $tmp1
+tmp2=${tmp1#*id=}
+echo $tmp2
+id=${tmp2::1}
+echo $id
+xinput list | grep SynPS/2\ Synaptics\ TouchPad
+mc
+su
+mc
+pgrep xflux 
+ll
+source ~/.bashrc 
+ll
+ll
+cp ~/.bashrc ~/.bashrc.bak+
+emacs -nw ~/.bashrc
+source ~/.bashrc 
+ll
+sudo mv X-Arc-Darker/ /usr/share/themes/
+sudo mv X-Arc-Plus/ /usr/share/themes/
+sudo mv X-Arc-Shadow/ /usr/share/themes/
+sudo mv X-Arc-White/ /usr/share/themes/
+xfdesktop --reload
+ping google.ru
+ping ya.ru
+ping google.ru
+ping ya.ru
+ping google.ru
+ping google.com
+ip a
+cd /etc/systemd/network/
+ll
+ll /dev/null 
+./networkReload.sh 
+./networkRestart.sh 
+systemctl restart networking.service 
+gksu systemctl restart networking.service 
+systemctl restart networking.service 
+ping google.com
+lspci
+lspci |grep Ralink
+sudo dpkg -i firmware-misc-nonfree_20161130-3_all_stretch.deb 
+sudo apt autoremove 
+ifconfig 
+ip a
+ifconfig 
+su
+76qo3s76
+su
+ifconfig 
+ip a
+ping google.com
+ip a
+ping google.com
+ping ya.ru
+ping google.com
+ping ya.ru
+su
+ping google.com
+ping ya.ru
+sudo dpkg -i firmware-misc-nonfree_20161130-3_all_stretch.deb 
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+ip a
+ifconfig 
+jkj
+cat /etc/default/keyboard 
+unsetxkbmap -option ctrl:nocaps
+setxkbmap
+setxkbmap -query
+setxkbmap
+setxkbmap -query
+cat /etc/default/keyboard 
+setxkbmap -option
+cat /etc/default/keyboard 
+setxkbmap -query
+cat /etc/default/keyboard 
+./
+./on-off_swapCtrCaps.sh 
+setxkbmap -layout us,ru -option grp:menu_toggle,grp_led:scroll
+cat /etc/default/keyboard 
+setxkbmap -option ctrl:nocaps
+setxkbmap -layout us,ru -option grp:menu_toggle,grp_led:scroll
+jkjkj
+setxkbmap -layout us,ru -option grp:menu_toggle,grp_led:scroll
+setxkbmap -query
+setxkbmap -option grp:menu_toggle,grp_led:scroll
+setxkbmap -query
+setxkbmap -options
+setxkbmap -option
+setxkbmap -query
+setxkbmap -option grp:menu_toggle,grp_led:scroll
+setxkbmap -query
+cat /etc/default/keyboard 
+setxkbmap -option ctrl:nocaps
+cat /etc/default/keyboard 
+setxkbmap -query
+setxkbmap -option grep 'grp:' /usr/share/X11/xkb/rules/base.lst
+grep 'grp:' /usr/share/X11/xkb/rules/base.lst
+setxkbmap -option grp:win_space_toggle
+setxkbmap -query
+setxkbmap -query | grep ctrl:nocaps
+python3 drawing.py --size=200x100
+python3 drawing.py --size=500x100
+python3 drawing.py --size=500x200
+setxkbmap --help
+setxkbmap -help
+setxkbmap -query
+setxkbmap -option ctrl:nocaps
+setxkbmap -query
+setxkbmap -print
+setxkbmap -option ctrl:caps
+jkj
+setxkbmap -query
+setxkbmap -query |grep options:
+setxkbmap -option caps:capslock
+setxkbmap -query |grep options:
+su
+python3 recycleviewTest.py 
+python3
+ll
+konsole
+dolphin4
+konsole &
+ll
+ll
+exec conky -c ~/.myScripts/conky/conkyrc2 2>&1 > /dev/null &
+conky -c ~/.myScripts/conky/conkyrc2 2>&1 > /dev/null &
+xfdesktop-reload
+xfdesktop --reload &
+dolphin4
+python3 --size=400x100 drawing.py 
+python3 drawing.py --size=300x100 
+python3 basic_data.py 
+ll
+pwd
+source ~/Projects/Python/VirtualEnvironments/forKivy/bin/activate
+python -V
+deactivate 
+source ~/Projects/Python/VirtualEnvironments/forKivy/bin/activate
+python basic_data.py 
+deactivate 
+source /home/alexander/Projects/Python/VirtualEnvironments/forKivy/bin/activate
+python -V
+import kivy
+from kivy.app import App
+import kivy
+deactivate 
+python -V
+python3 -V
+ll
+virtualenv -p /usr/bin/python3 forKivy
+which python
+source ./forKivy/bin/activate
+which python
+python -V
+pip install --upgrade pip 
+pip install --upgrade setuptools
+pip install --upgrade wheel
+pip install cython
+pip install kivy
+source ./forKivy/bin/activate
+python -V
+python
+ll
+python basic_data.py 
+deactivate 
+python -V
+mc
+python3 main.py 
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+su
+./Telegram 
+python3 drawing.py --size=200x200
+sudo cp System\ San\ Francisco\ *.ttf /usr/share/fonts/myFonts/
+sudo cp -v System\ San\ Francisco\ *.ttf /usr/share/fonts/myFonts/
+fc-cache -f
+fc-list | grep Francisco
+ping ya.ru
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+ping ya.ru
+su
+ll
+python3 test_1.py 
+mc
+su
+ll
+mc
+su
+python3 floatlayout.py 
+python3 layouts.py 
+python3 gridandtoggle.py 
+python3 layouts.py 
+cd ..
+cd RobertoUlloa_InteractiveApps/Roberto/
+python3 layouts.py 
+dolphin4
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+ll
+su
+su
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+cat /sys/hypervisor/properties/capabilities
+cd /sys/hypervisor/
+ll
+dig https://www.jetbrains.com/idea/
+su
+su
+dconf-editor 
+./genymotion-2.12.2-linux_x64.bin 
+./genymotion
+/etc/init.d/vboxdrv status
+killall firefox
+su
+echo $GRADLE_USER_HOME
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+sudo apt update && sudo apt upgrade 
+su
+lspci
+java -jar scenebuilder-10.0.0-all.jar 
+java -jar scenebuilder-8.5.0-all.jar 
+./emulator
+man ln 
+ln -s ./index.html /home/alexander/Рабочий\ стол/javaFX_doc
+ln -s /home/alexander/forProgramming/Java/Books/Docs/javafx-8u192-apidocs/api/index.html /home/alexander/Рабочий\ стол/javaFX_doc
+ln -s /home/alexander/forProgramming/Java/Books/Docs/jdk-8u192-docs-all/index.html /home/alexander/Рабочий\ стол/jdk-8u192_doc
+mc
+javapackager 
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+rm *.pdf
+sudo dolphin
+java -version
+javac -version
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+=++
+.. 
+mc
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+mc
+leaftoppm 
+sudo apt update && sudo apt upgrade 
+sudo gpg --keyserver subkeys.pgp.net --recv 76F1A20FF987672F
+gpg --export --armor 76F1A20FF987672F | sudo apt-key add -
+sudo gpg --export --armor 76F1A20FF987672F | sudo apt-key add -
+sudo gpg --keyserver subkeys.pgp.net --recv 76F1A20FF987672F
+su
+sudo gpg --keyserver subkeys.pgp.net --recv 76F1A20FF987672F
+sudo apt update && sudo apt upgrade 
+sudo gpg --keyserver keyring.debian.org --recv-keys
+sudo gpg --keyserver keyring.debian.org --recv-keys 76F1A20FF987672F
+su
+sudo gpg --keyserver keyring.debian.org --recv-keys 76F1A20FF987672F
+sudo gpg --keyserver subkeys.pgp.net --recv-keys 76F1A20FF987672F
+sudo gpg --keyserver keyserver.ubuntu.com --recv-keys 76F1A20FF987672F
+sudo gpg --export --armor 76F1A20FF987672F | sudo apt-key add -
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+com 
+mc
+yandex-disk 
+yandex-disk --help
+yandex-disk --status
+yandex-disk status
+yandex-disk setup 
+yandex-disk status
+yandex-disk setup 
+yandex-disk status
+yandex-disk start
+yandex-disk status
+yandex-disk status 
+yandex-disk-indicator
+yandex-disk --help
+yandex-disk start 
+yandex-disk status 
+yandex-disk start 
+yandex-disk sync 
+killall yandex-disk 
+yandex-disk start
+yandex-disk status 
+yandex-disk start
+killall yandex-disk 
+sudo echo "deb http://repo.yandex.ru/yandex-disk/deb/ stable main" | sudo tee -a /etc/apt/sources.list.d/yandex.list > /dev/null && wget http://repo.yandex.ru/yandex-disk/YANDEX-DISK-KEY.GPG -O- | sudo apt-key add - && sudo apt-get update && sudo apt-get install -y yandex-disk
+yandex-disk start -c ~/.config/yandex-disk/config.cfg
+killall yandex-disk 
+yandex-disk start -c ~/.config/yandex-disk/config.cfg
+killall yandex-disk 
+yandex-disk setup 
+yandex-disk --help
+killall yandex-disk 
+yandex-disk token autodidact.pro
+yandex-disk status 
+yandex-disk start -d /home/alexander/Yandex.Disk.autodidact.pro 
+yandex-disk setup 
+yandex-disk status 
+kill -9 yandex-disk-indicator
+killall yandex-disk-indicator
+yandex-disk stop
+killall yandex-disk 
+yandex-disk start
+yandex-disk status 
+killall yandex-disk 
+yandex-disk status 
+yandex-disk start
+yandex-disk status 
+yandex-disk stop
+yandex-disk status 
+yandex-disk stop
+yandex-disk setup
+yandex-disk status 
+yandex-disk stop
+yandex-disk status 
+yandex-disk stop
+yandex-disk status 
+yandex-disk stop
+yandex-disk status 
+yandex-disk stop
+yandex-disk status 
+yandex-disk --help
+yandex-disk status 
+yandex-disk sync 
+yandex-disk status 
+yandex-disk sync 
+yandex-disk status 
+ll
+sudo dpkg -i grive*.deb
+grive 
+grive -a
+grive --help
+grive -a
+sudo apt autoremove 
+sudo apt clean 
+dpkg-buildpackage -j4
+gpg --list-secret-keys 
+export DEBFULLNAME="Bla Bla"
+export DEBEMAIL="bla@bla.org"
+dpkg-buildpackage -j4
+yandex-disk status 
+yandex-disk start 
+yandex-disk status 
+yandex-disk status 
+yandex-disk sync
+yandex-disk status 
+yandex-disk --help
+yandex-disk start -d /home/alexander/Yandex.Disk.autodidact.pro 
+killall yandex-disk 
+yandex-disk status 
+killall yandex-disk 
+yandex-disk status 
+yandex-disk stop
+yandex-disk start
+yandex-disk status 
+yandex-disk stop
+killall yandex-disk 
+yandex-disk status 
+killall yandex-disk 
+kill -9 7726
+ifconfig 
+chmod -R 755 Dropbox/
+chmod -R 744 Dropbox/
+chmod -R 755 Dropbox/
+killall dropbox 
+su
+killall dropbox 
+yandex-disk status 
+su
+google-drive-ocamlfuse /home/alexander/GoogleDrive/
+google-drive-ocamlfuse ~/GoogleDrive/
+google-drive-ocamlfuse ~/GoogleDrive/ >> ~/.myScripts/GoogleDriveStatus.txt
+google-drive-ocamlfuse ~/GoogleDrive/ | ~/.myScripts/GoogleDriveStatus.txt
+google-drive-ocamlfuse ~/GoogleDrive/ > ~/.myScripts/GoogleDriveStatus.txt
+`google-drive-ocamlfuse ~/GoogleDrive/` > ~/.myScripts/GoogleDriveStatus.txt
+google-drive-ocamlfuse ~/GoogleDrive/ | >> ~/.myScripts/GoogleDriveStatus.txt
+google-drive-ocamlfuse ~/GoogleDrive/ 2> ~/.myScripts/GoogleDriveStatus.txt
+google-drive-ocamlfuse ~/GoogleDrive/
+ping 46.56.73.146
+echo | google-drive-ocamlfuse ~/GoogleDrive/
+echo
+echo | hello
+fusermount -u ~/GoogleDrive/
+google-drive-ocamlfuse ~/GoogleDrive/
+ll
+ll > echo
+ll > echo "Hello"
+ll > echo hello
+ll ./lkjlkj > echo
+ll ./lkjlkj 2> echo
+google-drive-ocamlfuse ~/GoogleDrive/
+fusermount -u ~/GoogleDrive/
+google-drive-ocamlfuse ~/GoogleDrive/
+fusermount -u ~/GoogleDrive/
+sudo dpkg -i dropbox_2018.11.28_amd64.deb 
+kwallet
+kwallet-query 
+kwalletd
+ll
+sudo dolphin
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+mc
+su
+ifconfig 
+ping 192.168.1.110
+ping 192.168.1.104
+ping 192.168.1.103
+ftp://192.168.1.103:22
+ftp://192.168.1.103:21
+netstat --help
+nmap
+nmap 192.168.1.1
+nmap 192.168.1.101
+ping 192.168.1.101
+nmap 192.168.1.101
+ping 192.168.1.101
+nmap 192.168.1.101
+nmap 192.168.1.100
+nmap 192.168.1.101
+nmap 192.168.1.100
+nmap 192.168.1.1
+nmap 192.168.1.100
+nmap 192.168.1.101
+ss -tln
+su
+sudo dolphin &
+sudo thunar &
+su
+killall dropbox 
+hostnamectl 
+cat /etc/hosts
+sudo hostnamectl set-hostname mustlive
+cat /etc/hosts
+hostnamectl 
+hostnamectl -h
+hostnamectl 
+cat /etc/hosts
+nano /etc/hosts
+hostname
+hostnamectl 
+nano /etc/hosts
+sudo emacs /etc/hosts
+hostnamectl 
+cat /etc/hosts
+su
+cat /etc/hosts
+ss -tln
+cat /etc/hosts
+hostnamectl 
+hostname 172.217.21.206
+hostname -i
+hostname -I
+hostname -d
+hostname -f
+hostname -A
+hostname -a
+dig 
+dig -h
+dig 172.217.21.206
+dig google.com
+dig +trace google.com
+dig +short google.com
+dig -x 172.217.21.206
+dig -x 192.168.1.100
+dig -x 46.56.75.165
+dig -x 172.217.18.110
+host 172.217.18.110
+nmap 191.168.1.100
+nmap -Pn 191.168.1.100
+nmap 46.56.75.165
+nmap 191.168.1.1
+nmap -vv 191.168.1.100
+nmap 191.168.1.0/24
+nmap -P0 191.168.1.100
+su
+chmod -R 755 .dropbox*
+chmod -R 755 Dropbox/
+killall dropbox
+setxkbmap -query
+setxkbmap -query | grep ctrl:nocaps
+dropbox ls
+dropbox status
+dropbox help
+dropbox running
+dropbox stop
+dropbox running
+dropbox status
+dropbox 
+dropbox status
+dropbox help
+dropbox update
+dropbox status
+dropbox help
+dropbox start
+dropbox status
+host dropbox.com
+host www.dropbox.com
+su
+xfdesktop --reload
+./autoConky.sh &
+sudo dpkg -i dropbox_2019.01.31_amd64.deb 
+dropbox -help
+dropbox -status
+dropbox status
+dropbox start &
+su
+xinput list | grep SynPS/2\ Synaptics\ TouchPad
+tmp1=`xinput list | grep SynPS/2\ Synaptics\ TouchPad`
+echo tmp1
+echo $tmp1
+tmp2=${tmp1#*id=}
+echo $tmp2
+id=${tmp2::3}
+echo $id
+echo $tmp2
+echo $tmp1
+echo $tmp2
+echo $id
+id=${tmp2# }
+echo $id
+id=${tmp2#\ }
+echo $id
+id=${tmp2#\s }
+echo $id
+id=${tmp2#*\s }
+echo $id
+id=${tmp2#* }
+echo $id
+id=${tmp2%%* }
+echo $id
+id=${tmp2%% *}
+echo $id
+id=${tmp2%%% *}
+echo $id
+id=${tmp2%% *}
+echo $id
+id2=${id%% *}
+echo $id
+id2=${id% *}
+id2=${id%% *}
+echo $id2
+id2=${id% *}
+echo $id2
+echo $id
+id=${tmp2%% *}
+echo $id
+echo $tmp2
+id=${tmp2%% * *}
+echo $id
+id=${tmp2% *}
+echo $id
+id=${tmp2%% *}
+echo $id
+echo $tmp2
+id=`expr match "$tmp2" '\([0-9]{1,3}\)'
+id=`expr match "$tmp2" '\([0-9]{1,3}\)'`
+echo $id
+id=`expr match "$tmp2"'\([0-9]{1,3}\)'`
+id=`expr match "$tmp2" '\([0-9]{1,3}\)'`
+echo $id
+echo $tmp2
+id=`expr "$tmp2" '\([0-9]{1,3}\)'`
+echo `expr match "$tmp2" '\([0-9]{1,3}\)'`
+echo `expr match "$tmp2" '\([0-9]\{1,3\}\)'`
+echo `xinput list | grep SynPS/2\ Synaptics\ TouchPad`
+echo ${tmp1#*id=}
+tmp2=${tmp1#*id=}
+echo $tmp2
+tmp1=`xinput list | grep SynPS/2\ Synaptics\ TouchPad`
+echo $tmp1
+tmp2=${tmp1#*id=}
+echo $tmp2
+id=`expr match "$tmp2" '\([0-9]\{1,3\}\)'`
+echo $id
+tmp1=`xinput list | grep SynPS/2\ Synaptics\ TouchPad`
+echo $tmp1
+tmp2=${tmp1#*id=}
+echo $tmp2
+id=`expr match "$tmp2" '\([0-9]\{1,3\}\)'`
+echo $id
+mc
+com 
+ip a
+ifconfig 
+xfdesktop --reload
+mc
+java -version
+javac -version
+java -version
+javac -version
+sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+sudo apt update 
+cd /etc/apt/
+ll
+emacs --nw sources.list
+emacs -nw sources.list
+sudo emacs -nw sources.list
+sudo apt update 
+emacs -nw sources.list
+sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+javapackager jdk-8u201-linux-x64.tar.gz 
+make-jpk
+make-jpkg jdk-8u201-linux-x64.tar.gz 
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+dig -x 54.243.144.12
+dig -x 172.217.16.17
+dig -x 192.48.236.12
+chmod 755 *
+xfdesktop --reload
+xdg-user-dirs-update --set DESKTOP ~/Desktop
+xfdesktop --reload
+ll
+xfdesktop --reload
+xdg-user-dirs-update --set DESKTOP ~/Desktop
+xfdesktop --reload
+cp autoConky.sh autoConky+++.sh
+keepass2 &
+killall keepass2
+keepass2 &
+keepass2
+keepass2 &
+killall keepass2
+keepass2
+lspci 
+ping ya.ru
+cp icons.screen0-1350x698.rc icons.screen0-1350x721.rc 
+xfdesktop --reload
+sudo -i
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+mc
+./genymotion
+./genymotion-3.0.1-linux_x64.bin 
+./genymotion
+DRI_PRIME=1 ./genymotion
+DRI_PRIME=1 /home/alexander/Programs/genymotion
+"DRI_PRIME=1 /home/alexander/Programs/genymotion"
+'DRI_PRIME=1 /home/alexander/Programs/genymotion'
+/home/alexander/Programs/genymotion DRI_PRIME=1
+sh DRI_PRIME=1 /home/alexander/Programs/genymotion
+sh "DRI_PRIME=1 /home/alexander/Programs/genymotion"
+DRI_PRIME=1 glxinfo | grep "OpenGL renderer"
+DRI_PRIME=1 & /home/alexander/Programs/genymotion | grep "OpenGL renderer"
+DRI_PRIME=1 & sh /home/alexander/Programs/genymotion | grep "OpenGL renderer"
+DRI_PRIME=1 sh /home/alexander/Programs/genymotion | grep "OpenGL renderer"
+DRI_PRIME=1 glxinfo | grep "OpenGL renderer"
+glxinfo | grep "OpenGL renderer"
+DRI_PRIME=1 glxinfo | grep "OpenGL renderer"
+DRI_PRIME=1 virtualbox | grep "OpenGL renderer"
+whereis virtualbox
+ll /usr/bin/virtualbox 
+whereis VBox
+DRI_PRIME=1 "/home/alexander/Programs/genymotion"
+DRI_PRIME=1 /home/alexander/Programs/genymotion/genymotion
+exec DRI_PRIME=1 /home/alexander/Programs/genymotion/genymotion
+exec "DRI_PRIME=1" /home/alexander/Programs/genymotion/genymotion
+exec "DRI_PRIME=1 /home/alexander/Programs/genymotion/genymotion"
+glxinfo DRI_PRIME=1 | grep "OpenGL renderer"
+exec "DRI_PRIME=1 /home/alexander/Programs/genymotion/genymotion"
+ifconfig 
+sudo ./iptables_rules.v4.Garant.3G.all.sh 
+sudo ./iptables_rules.v4.Garant.3G.all.sh start
+sudo iptables-save ./iptables
+sudo iptables-save > ./iptables
+chown alexander:alexander iptables
+sudo mv /etc/iptables/rules.v4 /etc/iptables/rules.v4.last
+cp rules.v4.backup /etc/iptables/rules.v4
+sudo cp rules.v4.backup /etc/iptables/rules.v4
+sudo -i
+./emulator
+./emulator64-x86 
+./qemu-img 
+./avdmanager 
+./avdmanager list
+./avdmanager 
+./avdmanager device
+glxinfo | grep "OpenGL render"
+cp runGenymotion.sh runAndroidStudioDiscretGr.sh
+rm *.lock
+mc
+ssh -h
+ssh root@191.168.1.112:2222
+ssh -l root -L 191.168.1.112:2222
+ssh -l root -L 191.168.1.112 :2222
+ssh -L 192.168.1.112:2222 root@admin
+ssh root@192.168.1.112:2222
+ssh 192.168.1.112
+ssh 192.168.1.112:2222
+ssh root@192.168.1.112
+ssh root@192.168.1.112:2222
+ssh root@192.168.1.112 port:2222
+ssh root@192.168.1.112:2222
+ssh -p 2222 192.168.1.112
+cd /home/alexander/.ssh/
+ll
+la
+cat known_hosts 
+ll
+ls
+la
+rm known_hosts 
+cat known_hosts 
+telnet www.google.ru 80
+ssh -p 2222 10.0.8.1
+ssh -p 2222 192.168.1.112
+xterm 
+ssh -p 2222 root@192.168.1.112
+sftp -o Port=2222 root@192.168.1.112:/sdcard
+ssh-keygen 
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+sudo synaptic-pkexec &
+/opt/viber/Viber %u
+sudo apt -f
+apt -h
+sudo apt-get -f
+ll |grep Viber
+./runViberDiscreteGr.sh 
+sudo -i
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+sudo synaptic-pkexec 
+ping jetbrains.com
+ping 54.230.228.5
+sudo -i
+su
+kill -9 12239
+test
+testdisk 
+kill -9 12193
+ping 192.168.1.113
+./testInetStatus.sh &
+sudo ./testInetStatus.sh &
+sudo -i
+systemctl status rc-local.service 
+cat /etc/rc.local 
+pgrep testInetStatus
+cat /home/testInetStatus.sh 
+ping ya.ru
+ifconfig 
+sudo apt update && sudo apt upgrade 
+sudo -i
+sudo synaptic-pkexec 
+sudo teamviewer daemon stop
+sudo teamviewer daemon start
+sudo teamviewer daemon stop
+sudo teamviewer daemon start
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+flatpak run ./gimp-2.10.0-RC2-x86_64.flatpak 
+./gimp-2.10.0-RC2-x86_64.flatpak 
+flatpak ./gimp-2.10.0-RC2-x86_64.flatpak 
+sudo apt autoremove 
+sudo snap-hmm install gimp
+sudo snap install gimp
+snap install gimp
+snap-hmm install gimp
+sudo add-apt-repository ppa:otto-kesselgulasch/gimp
+sudo apt update 
+flatpak --help
+flatpak install gimp-2.10.0-RC2-x86_64.flatpak 
+flatpak install https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
+flatpak --help
+flatpak uninstall https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
+flatpak install https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
+flatpak run org.gimp.GIMP//stable
+flatpak update 
+sudo -i
+sudo dpkg -i virtualbox-6.0_6.0.8-130520~Debian~stretch_amd64.deb 
+./resynthesizer-gui 
+WINEARCH=win32 WINEPREFIX=~/.wine winecfg
+killall WebExtention
+killall WebExtentions
+killall Web \Content
+kill -9 6543
+kill -9 2927
+kill -9 6407
+kill -9 7530
+kill -9 5079
+kill -9 16749
+./runGimp2-10DiscreteGr.sh 
+flatpak update 
+su
+sudo subl /usr/bin/chromium 
+su
+dig +short www.shapecollage.com
+su
+whereis python
+file PhoneBook 
+su
+sudo apt update && sudo apt upgrade 
+sudo apt qutore
+sudo apt autoremove 
+sudo apt clean 
+pyuic5 fMainUI.ui -o fMainUI.py
+dolphin4 &
+xfce4-panel --reload &
+xfce4-panel --help
+xfce4-panel -r &
+python3
+python3
+su
+ping 192.168.1.108
+python3

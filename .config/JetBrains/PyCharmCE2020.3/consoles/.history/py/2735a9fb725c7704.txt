@@ -1,0 +1,13 @@
+import shutil
+-. . -..- - / . -. - .-. -.--
+shutil.which("opera")
+-. . -..- - / . -. - .-. -.--
+shutil.which("google-chrome")
+-. . -..- - / . -. - .-. -.--
+shutil.which("firefox")
+-. . -..- - / . -. - .-. -.--
+import sys
+-. . -..- - / . -. - .-. -.--
+import os
+-. . -..- - / . -. - .-. -.--
+os.system("/usr/bin/firefox")

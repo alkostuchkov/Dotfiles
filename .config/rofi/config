@@ -1,0 +1,6 @@
+rofi.theme: /usr/share/rofi/themes/gruvbox-dark-soft.rasi
+! Enabled modi
+rofi.modi: window,run,ssh,drun
+rofi.font: Ubuntu 13.5
+! rofi.font: DejavuSans Mono 12
+!rofi.width: 50

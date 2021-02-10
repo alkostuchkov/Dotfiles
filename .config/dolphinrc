@@ -1,0 +1,92 @@
+LVDS Window-Maximized 768x1366=true
+LVDS XPosition=3
+LVDS YPosition=23
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAwAAAAAAAAD8AAACtvwCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAmAAAAiwAAAAIA////+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAAsAAACtgAAAFwA////AAAAAQAAALQAAAK7/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAACwAAAK7AAAAAgD///8AAAADAAAFTAAAAQL8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAAAAAFTAAAAAIA////AAAETAAAArYAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+Window-Maximized 768x1366=true
+
+[AdditionalInfoDialog]
+Height 768=297
+Width 1366=324
+
+[Baloo KEditCommentDialog]
+Height 768=256
+Width 1366=278
+
+[CompactMode]
+FontWeight=50
+
+[Desktop Entry]
+DefaultProfile=Profile 1.profile
+
+[DetailsMode]
+FontWeight=50
+IconSize=32
+PreviewSize=32
+
+[DownloadDialog Settings]
+Height 768=490
+Width 1366=700
+
+[Favorite Profiles]
+Favorites=
+
+[General]
+FilterBar=true
+GlobalViewProps=true
+ShowFullPath=true
+ShowSelectionToggle=false
+Version=200
+ViewPropsTimestamp=2017,7,16,2,45,37
+
+[IconsMode]
+FontWeight=50
+IconSize=48
+MaximumTextLines=2
+
+[KPropertiesDialog]
+Height 768=548
+LVDS Height 768=592
+LVDS Width 1366=567
+Width 1366=558
+
+[MainWindow]
+Height 768=743
+LVDS HDMI-0 Window-Maximized 768x1366=true
+LVDS HDMI-0 XPosition=3
+LVDS HDMI-0 YPosition=23
+LVDS Height 768=768
+LVDS Width 1366=1366
+LVDS Window-Maximized 1366x768=true
+LVDS Window-Maximized 768x1366=true
+LVDS XPosition=756
+LVDS YPosition=35
+MenuBar=Disabled
+RestorePositionForNextInstance=false
+State=AAAA/wAAAAD9AAAAAwAAAAAAAABaAAACpvwCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAsAAAAcwAAAAIA////+wAAABQAcABsAGEAYwBlAHMARABvAGMAawAAAAAsAAACpgAAAFwA////AAAAAQAAALQAAAK7/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAACwAAAK7AAAAAgD///8AAAADAAAFVgAAAQL8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAAAAAFVgAAAIcA////AAACVwAAAqYAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+Width 1024=640
+Width 1366=1366
+Width 1368=1118
+Window-Maximized 600x800=true
+Window-Maximized 720x1280=true
+Window-Maximized 768x1366=true
+
+[Open-with settings]
+CompletionMode=5
+History=deadbeef %F,/opt/sublime_text/sublime_text %F,/home/alexander/Programs/FirefoxBeta/firefox %u,/usr/bin/remarkable %f,geany %F,/usr/share/dbeaver/dbeaver,gimp-2.8 %U,evince %U,/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=gimp-2.10 org.gimp.GIMP %U,eom %U,cr3 %F,/usr/bin/wps %f,xfce4-appfinder --collapsed,file-roller %U,/opt/sublime_text/sublime_text
+
+[PlacesPanel]
+IconSize=16
+
+[PreviewSettings]
+Plugins=djvuthumbnail,exrthumbnail,imagethumbnail,jpegthumbnail,windowsimagethumbnail,svgthumbnail,ffmpegthumbs
+
+[SettingsDialog]
+Height 768=536
+Width 1366=670
+Width 1368=696
+
+[ViewPropertiesDialog]
+Height 768=606
+Width 1366=452

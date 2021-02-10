@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Choose Python venv
+Comment=Lets to choose Python venv
+Exec=/home/alexander/Projects/bash/choose_pyenv.sh
+Icon=python3
+Path=
+Terminal=true
+StartupNotify=false

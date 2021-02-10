@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Turn On Discrete Graphics
+GenericName=Turn On Discrete Graphics
+Icon=applications-games
+Exec=/home/alexander/.myScripts/turnOnDiscreteGraphics.sh
+NoDisplay=false
+Categories=Discrete Graphics Launchers;
+Keywords=DRI_PRIME=1
+StartupNotify=false
+Terminal=false
+X-XFCE-Source=file:///home/alexander/.local/share/applications/TurnOnDiscreteGraphics.desktop

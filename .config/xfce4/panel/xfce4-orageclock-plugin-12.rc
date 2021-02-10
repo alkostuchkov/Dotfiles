@@ -1,0 +1,15 @@
+show_frame=false
+fg_set=true
+fg=65535R 65535G 65535B
+bg_set=true
+bg=7967R 8481G 9766B
+timezone=
+width_set=false
+height_set=false
+lines_vertically=false
+rotation=0
+data0=%R
+font0=BauhausLightCTT Bold 22
+tooltip=%A, %d %b, %Y
+hib_timing=true
+

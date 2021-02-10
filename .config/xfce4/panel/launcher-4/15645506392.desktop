@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=FirefoxDeveloper (discrete graphics)
+GenericName=FirefoxDeveloper (discrete graphics)
+Icon=/home/alexander/Programs/FirefoxDeveloper/browser/chrome/icons/default/default128.png
+Exec=/home/alexander/.myScripts/runFirefoxDeveloperDiscreteGr.sh
+NoDisplay=false
+Categories=Other;
+StartupNotify=false
+Terminal=false
+X-XFCE-Source=file:///home/alexander/.local/share/applications/FirefoxDeveloper%20(discrete%20graphics).desktop

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Turn On Discrete Graphics
+Comment=Turn On Discrete Graphics
+Exec=/home/alexander/.myScripts/turnOnDiscreteGraphics.sh
+Icon=applications-games
+Path=
+Terminal=false
+StartupNotify=false

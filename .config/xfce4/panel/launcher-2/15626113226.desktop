@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Booklet For Epson XP-100 (Qt)
+Comment=For printing booklet
+Exec=/home/alexander/Programs/BookletForEpsonXP-100(Qt)/BookletForEpsonXP-100
+Icon=/home/alexander/Programs/BookletForEpsonXP-100(Qt)/booklet_1.ico
+Path=
+Terminal=false
+StartupNotify=false

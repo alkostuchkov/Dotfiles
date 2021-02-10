@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Qt Creator 5.8.0
+Comment=Qt Creator 5.8.0
+Exec=/home/alexander/Qt5.8.0/Tools/QtCreator/bin/qtcreator -stylesheet=/home/alexander/.config/QtProject/+Themes/Qt-Creator-Darcula-master/darcula.css
+Icon=qtcreator
+Path=
+Terminal=false
+StartupNotify=false

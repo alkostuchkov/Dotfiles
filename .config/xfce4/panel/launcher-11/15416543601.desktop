@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Scene Builder
+Comment=Scene Builder (Gluon)
+Exec=java -jar /home/alexander/Programs/SceneBuilder/scenebuilder-8.5.0-all.jar
+Icon=/home/alexander/Programs/SceneBuilder/SceneBuilderLogo-300x300.png
+Path=
+Terminal=false
+StartupNotify=false

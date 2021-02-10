@@ -1,0 +1,16 @@
+[Desktop Entry]
+Version=1.0.0
+Type=Application
+Name=Firefox
+Icon=/home/alexander/Programs/FirefoxBeta/browser/chrome/icons/default/default128.png
+Exec=/home/alexander/.myScripts/runFirefoxDiscreteGr.sh
+Comment=DRI_PRIME=1
+GenericName=Firefox
+Keywords=Firefox
+Categories=Network
+Terminal=false
+NoDisplay=false
+Name[ru_RU]=Firefox (discrete graphics)
+X-XFCE-Source=file:///home/alexander/.local/share/applications/Firefox.desktop
+Path=
+StartupNotify=false

@@ -1,0 +1,1000 @@
+source /home/alexander/Projects/Python/VirtualEnvironments/py3.7/bin/activate
+vim .vimrc 
+vim
+vim-runtime
+vim --help
+vimtutor 
+vim
+vim .vimrc 
+vim
+vim 
+vim .vimrc 
+gvim
+vim .vimrc 
+gvim
+vim 
+vim
+vim .vimrc 
+$EDITOR
+echon $EDITOR
+echo $EDITOR
+vim .profile 
+update-alternatives --config editor 
+vim .vimrc 
+vim Projects/Python/test.py 
+vim .vimrc 
+gvim
+vim .vimrc 
+./install.py --clang-completer
+sudo ./install.py --clang-completer
+sudo ./install.py 
+sudo python3 ./install.py --clang-completer
+nvim 
+nvim
+ll
+la
+ll
+cd Projects/
+cd Python/
+ll
+vim test.py 
+vim 
+vim ~/.vimrc 
+vim
+vim test_vim_ycm.py 
+vim ~/.vimrc 
+vim test_vim_ycm.py 
+vim ~/.vimrc 
+vim test_vim_ycm.py 
+vim ~/.vimrc
+vim test_vim_ycm.py 
+vim ~/.vimrc
+vim test_vim_ycm.py 
+vim ~/.vimrc
+vim test_vim_ycm.py 
+vim --version
+nvim --version
+echo $VIM
+$VIM
+vim ~/.vimrc
+vim --version
+nvim
+vim --version
+whereis vim
+cd /usr/share/vim/vim81/colors/tools/
+ll
+cd ..
+ll
+cd syntax/
+ll
+cat latte.vim 
+ll
+cat hitest.vim 
+nvim .vimrc
+vim .vimrc
+nvim
+vim .vimrc_MartinBrochhaus 
+vim .vimrc
+nvim
+vim .vimrc
+cat .ideavimrc 
+rm *.m4a
+vim Projects/Python/test.py 
+ll
+tmux 
+ls -a
+ls -a |grep tmux
+ls -a |grep .tmux
+la
+ll .config/ | grep tmux
+ll .config/
+cd Projects/
+ll
+ll
+vim
+htop
+ll
+vim
+tmux 
+vim .vimrc
+ll
+htop
+la
+la | less
+vim .tmux.conf
+htop
+tmux 
+git clone https://github.com/gpakosz/.tmux.git
+la | grep tmux
+rm .tmux.conf 
+la | grep tmux
+ln -s -f .tmux/.tmux.conf
+cp .tmux/.tmux.conf.local .
+tmux 
+ll
+tmux 
+pip3 show powerline-status
+exit
+tmux new-session -s test
+tmux 
+tmux new-session -s test_session
+sudo pip3 install git+git://github.com/Lokaltog/powerline
+tmux 
+pip3 show powerline-status
+vim .bashrc
+source .bashrc
+vim .bashrc
+source .bashrc
+ll
+cd Projects/
+ll
+cd
+tmux 
+cd Projects/
+cd
+vim .vimrc
+vim
+vim .vimrc
+vim
+vim .vimrc
+tmux 
+su
+tmux 
+run-shell "powerline-daemon -q"
+tmux 
+D
+tmux 
+killall tmux 
+tmux new-session -s test_session
+echo $EDITOR
+vim .bashrc
+source .bashrc
+tmux 
+vim .tmux.conf.local 
+vim .bashrc
+source .bashrc
+cd Projects/
+ll
+vim .bashrc
+vim .vimrc
+fc-cache -vf /usr/share/fonts/
+tmux 
+file .tmux.conf 
+cd
+git clone https://github.com/gpakosz/.tmux.git
+ln -s -f .tmux/.tmux.conf
+cp .tmux/.tmux.conf.local .
+wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
+wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
+sudo cp -v PowerlineSymbols.otf /usr/share/fonts/myFonts/
+htop 
+cd Projects/
+terminator 
+tmux 
+htop 
+tmux 
+echo $SHELL
+echo $XDG_CONFIG_HOME
+set
+echo $SEt
+echo $SET
+echo $HOME
+echo $XDG_CONFIG_HOME
+ll
+pip3 show powerline-status
+vim .bashrc
+source .bashrc
+vim .vimrc
+tmux 
+sudo pip3 uninstall git+git://github.com/Lokaltog/powerline
+pip3 list
+sudo pip3 uninstall powerline-status
+mkdir -p ~/.config/powerline-shell && powerline-shell --generate-config > ~/.config/powerline-shell/config.json
+su
+ll
+source .bashrc
+ll
+source .bashrc
+su
+source .bashrc
+ll
+source .bashrc
+cd Projects/
+source .bashrc
+ll
+source .bashrc
+ll
+source .bashrc
+ll
+cd Projects/
+ll
+source .bashrc
+ll
+source .bashrc
+ll
+cd Python/
+source .bashrc
+ll
+source .bashrc
+ll
+source .bashrc
+ll
+source .bashrc
+ll
+source .bashrc
+ll
+source .bashrc
+ll
+source .bashrc
+ll
+source .bashrc
+ll
+su
+cd Projects/Python/
+ll
+source .bashrc
+ll
+source .bashrc
+ll
+source .bashrc
+ll
+source .bashrc
+ll
+source .bashrc
+ll
+source .bashrc
+ll
+source .bashrc
+ll
+source .bashrc
+ll
+source .bashrc
+ll
+source .bashrc
+ll
+source .bashrc
+ll
+su
+vim .config/powerline-shell/themes/basic.py 
+tmux 
+vim
+sudo pip3 install powerline-shell
+vim .bashrc
+source .bashrc
+ll
+su
+vim .config/powerline-shell/config.json 
+ll
+source .bashrc
+ll
+cd Projects/
+sudo thunar
+ll
+$EDITOR
+echo $EDITOR
+ll
+exit
+exit
+vim .bashrc
+source .bashrc
+cd Projects/
+vim .tmux.conf.local 
+tmux --help
+man tmux
+tmux new-session -s test
+source .bashrc
+whereis airline-vim
+whereis vim-airline
+ll
+q
+vim .vimrc
+vim .tmux.conf
+tmux 
+vim .vimrc
+tmux 
+tmux 
+cd Projects/GitHub/
+cd CheckEmail/
+ll
+vim README.md 
+pwd
+cd /home/alexander/Projects/GitHub/CheckEmail
+ll
+cd /home/alexander/Projects/GitHub/CheckEmail
+ll
+vim README.md 
+ln -s forProgramming/Python/Books/Serious\ Python.pdf /home/alexander/Рабочий\ стол/SeriousPython
+ln -s /home/alexander/forProgramming/Python/Books/Serious\ Python.pdf /home/alexander/Рабочий\ стол/SeriousPython
+rm Рабочий\ стол/SeriousPython 
+ln -s /home/alexander/forProgramming/Python/Books/Serious\ Python.pdf /home/alexander/Рабочий\ стол/SeriousPython
+ln -s /home/alexander/forProgramming/Vim/VimScript/learnvimscriptthehardway-sample.pdf /home/alexander/Рабочий\ стол/VimScript
+mv ~/forProgramming/Vim/VimScript/ ~/forProgramming/Vim/Vimscript
+mv ~/forProgramming/Vim/Vimscript/learnvimscriptthehardway-sample.pdf ~/forProgramming/Vim/Vimscript/LearnVimscript.pdf
+ln -s /home/alexander/forProgramming/Vim/Vimscript/LearnVimscript.pdf /home/alexander/Рабочий\ стол/LearnVimscript
+vim README.md 
+vim .vimrc
+netcat -h
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+su
+ln -s /home/alexander/forProgramming/Python/Books/Dan\ Bader\ -\ Python\ tricks.pdf /home/alexander/Рабочий\ стол/PythonTricks
+ln -s /home/alexander/forProgramming/Python/Books/Building\ Chatbots\ with\ Python.pdf /home/alexander/Рабочий\ стол/BuildingChatbotsWithPython
+vim
+vim test.txt
+nvim 
+vim
+source .bashrc
+vim
+cat /etc/default/locale 
+sudo update-locale LANG=en_US.utf8
+locale
+update-locale --help
+cat /etc/default/locale 
+sudo update-locale LANG=en_US.UTF8
+sudo update-locale LANG=en_US.UTF-8
+locale-gen
+tmux
+locale
+tmux
+tmux --help
+tmux new-session -s change_locale
+locale-gen
+locale -a
+sudo dpkg-reconfigure locales 
+locale -a
+cat /etc/default/locale 
+locale
+sudo update-locale LANG=en_US.utf8
+locale
+cat /etc/default/locale 
+locale -a
+locale
+cat /etc/default/locale 
+vim /etc/default/locale 
+cat /etc/default/locale 
+sudo vim /etc/default/locale 
+sudo reboot
+locale
+cat /etc/default/locale 
+locale -a
+cat /etc/default/locale 
+locale
+locate-gen
+whereis locate
+whereis locate-gen
+locale-gen
+sudo locale-gen en_US.UTF-8
+locale
+cat /etc/default/locale 
+xdg-user-dir
+xdg-user-dirs-update 
+cat /etc/xdg/user-dirs.conf 
+cat /etc/xdg/user-dirs.defaults 
+xdg-user-dirs-update 
+sudo xdg-user-dirs-update 
+cat /etc/xdg/user-dirs.defaults 
+tmux new-session -s basic
+htop
+tmux list-sessions
+tmux ls
+tmux attach
+tmux ls
+tmux new -s second
+ll
+ls
+ll
+htop
+top
+htop
+tmux ls
+tmux attach -t basic
+tmux kill-session -t basic
+tmux kill-session -t second
+tmux ls
+tmux new windows -n shell
+tmux new -s windows -n shell
+tmux ls
+tmux kill-session -t windows
+tmux ls
+ln -s /home/alexander/English/Murhpy\ Raymond/English\ Grammar\ in\ Use.\ Murphy\ R.\,\ 2019\,\ 5th.PDF /home/alexander/Desktop/Murphy
+ln -s /home/alexander/forProgramming/Vim/Vimscript/Steve\ Losh\ -\ Learn\ Vimscript.pdf /home/alexander/Desktop/LearnVimscript
+ln -s /home/alexander/forProgramming/Python/Books/Dan\ Bader\ -\ Python\ tricks.pdf /home/alexander/Desktop/PythonTricks
+ln -s /home/alexander/forProgramming/Python/Books/Julien\ Danjou\ -\ Serious\ Python.pdf /home/alexander/Desktop/SeriousPython
+ln -s /home/alexander/forProgramming/Python/Books/Sumit\ Raj\ -\ Building\ Chatbots\ with\ Python.pdf /home/alexander/Desktop/BuildingChatbotsWithPython
+su
+ln -s /home/alexander/forProgramming/Vim/Vimscript/Steve\ Losh\ -\ Learn\ Vimscript\ the\ Hard\ Way.pdf.pdf /home/alexander/Desktop/LearnVimscript
+su
+ln -s /home/alexander/forProgramming/Vim/Vimscript/Steve\ Losh\ -\ Learn\ Vimscript\ the\ Hard\ Way.pdf /home/alexander/Desktop/LearnVimscript
+vim
+vim .vimrc
+locate
+whereis locate
+/usr/bin/locate 
+/usr/bin/locate  --help
+whereis timezone
+/etc/timezone
+sudo /etc/timezone
+whereis tzdata
+sudo dpkg-reconfigure tzdata
+vim .vimrc
+vm .vimrc .vimrc_tmp
+mv .vimrc .vimrc_tmp
+vim .vimrc
+mv .vimrc_tmp .vimrc
+vim .vimrc
+nvim .vimrc
+vim .config/xfce4/terminal/terminalrc
+vim .config/terminator/config 
+nvim .vimrc
+vim .vimrc
+vimtutor 
+vim .vimrc
+vimtutor 
+vim .vimrc
+ll
+tmux 
+vim .vimrc
+vim
+vim .vimrc
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+vim .vimrc
+vim test.py
+cd Projects/Python/PythonLessons/
+ll
+vim test.py 
+vim .vimrc_myBack 
+vim .vimrc
+vim _vimrc_xp 
+vim
+vim _vimrc_xp 
+terminator 
+vim _vimrc_xp 
+ll
+ll
+ls
+la
+ll
+la
+ls
+ll
+konsole
+vim .vimrc
+vim
+vim .vimrc
+vim
+cd 
+vim .vimrc
+ll
+xfce4-terminal
+konsole
+ll
+ll ~
+la
+git clone https://github.com/jkaving/intellij-colors-solarized.git
+git clone https://github.com/altercation/vim-colors-solarized.git
+cd Desktop/
+vim help.py
+gvim
+gvim help.py 
+vim help.py
+vim .vimrc
+ll
+vim .config/terminator/config 
+vim .vimrc
+cd Projects/Python/Prohoryonok/
+ll
+vim pyQt5hello.py 
+ll
+chmod -R JustMultiWindowsApp/
+chmod -R 755 JustMultiWindowsApp/
+ll
+cd ..
+ll
+chmod -R 755 Prohoryonok/
+cd Prohoryonok/
+ll
+cd ..
+cd Projects/Python/Prohoryonok/
+vim pyQt5hello.py 
+vim
+gvim
+vim
+su
+tmux 
+vim .vimrc
+ll
+cd Desktop/
+vim help.py 
+killall firefox
+killall firefox-bin
+cd Desktop/
+vim help.py 
+vim weather_forecast.py 
+sudo pytho3 -m pip install pyown
+sudo python3 -m pip install pyown
+sudo python3 -m pip install pyowm
+subl .vimrc
+cd Desktop/
+vim weather_forecast.py 
+cd Desktop/
+vim help.py 
+python3
+garden list
+garden search graph
+garden --help
+/usr/bin/wps %F
+ln -s /usr/bin/wps /home/alexander/Desktop/wps_office
+cd Desktop/
+ll
+ll | grep wps
+ln -s /usr/bin/wps /home/alexander/.myScripts/wps_office
+echo $HOME
+/usr/bin/wps
+sudo /usr/bin/wps
+cd Desktop/
+ll | grep wps
+ll /usr/bin/ | grep wps
+ln -s /usr/bin/wps /home/alexander/.myScripts/wps
+ln -s /usr/bin/wps /home/alexander/Desktop/wps
+ll | grep wps
+which wps
+which wps-office-prometheus
+whereis wps-office-prometheus
+whereis wps
+ll | grep wps
+./wps-office-prometheus.desktop 
+vim wps-office-prometheus.desktop 
+/usr/bin/wps %F
+sudo /usr/bin/wps %F
+exo-open --help
+exo-open --launch wps-office-prometheus.desktop 
+exo-open wps-office-prometheus.desktop 
+exo-open --help
+cd Desktop/
+ll | grep wps
+sudo chown alexander:alexander wps-office-prometheus.desktop 
+ll | grep wps
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+gvim main.py 
+sudo /etc/init.d/lightdm restart 
+ll
+cd Projects/Python/Kivy/
+ll
+cd TestKivy/
+ll
+vim
+ll
+vim .vimrc
+cd Projects/Python/Kivy/TestKivy/
+ll
+vim test.kv 
+vim .vimrc
+vim ~/.vimrc
+vim test.kv 
+vim ~/.vimrc
+ping 192.168.1.1
+ll
+cd Projects/Python/Kivy/
+ll
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+cd Desktop/
+ll
+ll | grep *.py
+ll | grep .py
+ll | grep "*.py"
+ll | grep .py
+vim help.py 
+gvim help.py 
+vim help.py 
+ll
+dconf-editor 
+xfce4-settings-editor 
+python3
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+vim .vimrc
+vim 
+qt5ct 
+baloo_file
+whereis baloo_file
+baloo_file --help
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+"/home/alexander/Programs/PyCharm-Community/bin/pycharm.sh" %f
+java -h
+java -version
+javac -version
+update-alternatives -l
+update-alternatives -java
+update-alternatives -help
+update-alternatives --help
+update-alternatives --list java
+update-alternatives --list python
+update-alternatives --config java
+sudo update-alternatives --config java
+update-alternatives --list java
+update-alternatives --config java
+./pycharm.sh 
+javac -version
+java -version
+update-alternatives --list java
+"/home/alexander/Programs/PyCharm-Community/bin/pycharm.sh" %f
+update-alternatives --list java
+whereis java
+whereis javac
+java -version
+javac -version
+npm --help
+npm list
+npm install -g npm
+history | grep npm
+sudo apt update && sudo apt upgrade 
+vim 
+vim .vimrc
+xterm
+vim .vimrc
+git clone https://github.com/HeaTTheatR/KivyMD.git
+python3 main.py 
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+python3 ./main.py 
+cwd
+pwd
+source ~/Projects/Python/VirtualEnvironments/py3.7/bin/activate
+python main.py 
+git clone https://github.com/HeaTTheatR/KivyMD.git
+python main.py 
+python
+deactivate 
+python3 main.py 
+sudo python3 ./setup.py install
+python3 main.py 
+python3
+sudo python3 ./setup.py install
+python3 main.py 
+cd Projects/Python/Kivy/ForAndroid/
+ll
+python3 test_plyer.py 
+sudo pip3 install plyer
+sudo pip3 install pip --upgrade pip
+python3 test_plyer.py 
+python3
+sudo pip3 uninstall plyer
+sudo pip3 install plyer
+python3 test_plyer.py 
+python3
+vim
+cd Projects/Python/Kivy/
+ll
+cd TestKivy/
+ll
+vim kivy_settings.py
+cd Projects/Python/Kivy/TestKivy/
+ll
+vim kivy_settings.py 
+cd Projects/Python/Kivy/TestKivy/
+vim kivy_settings.py 
+cd Projects/Python/Kivy/TestKivy/
+vim kivy_settings.py 
+ll
+python3 kivy_settings.py 
+cd Projects/Python/Kivy/TestKivy/
+vim kivy_settings.py 
+cd Projects/Python/Kivy/TestKivy/
+vim kivy_settings.py 
+ll
+vim widgets.py 
+htop
+killall terminator
+cd Projects/Python/Kivy/TestKivy/
+ll
+python3 widgets.py
+ll
+python3 recycle_view.py 
+cd Projects/Python/Kivy/TestKivy/
+ll
+python3 recycle_view.py 
+cd Projects/Python/Kivy/TestKivy/
+ll
+python3 floatlayout.py 
+cd Projects/Python/Kivy/TestKivy/
+ll
+python3 floatlayout.py 
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+apt list --upgradable 
+sudo apt clean 
+cd Projects/Python/Kivy/TestKivy/
+ll
+python3
+ll
+vim just_for_run.py
+pip3 --help
+sudo pip3 uninstall plyer
+sudo pip3 install --upgrade markdown
+pip3 --list
+pip3 --help
+pip3 list
+cd Projects/Python/Kivy/TestKivy/
+source ~/Projects/Python/VirtualEnvironments/py3.7/bin/activate
+ll
+python recycle_view.py 
+killall xfce4-terminal 
+htop
+pip3 --help
+sudo pip3 install --upgrade pip3 setuptools virtualenv
+sudo pip3 install --upgrade  setuptools virtualenv
+whereis pytho3
+whereis python3
+sudo thunar &
+whereis pip3
+sudo pip3 install --upgrade pip3 setuptools virtualenv
+sudo pip3 install --upgrade kivy
+sudo pip3 uninstall kivy
+sudo pip3 install kivy
+whereis pip3
+cd Projects/Python/Kivy/TestKivy/
+ll
+python3 floatlayout.py 
+history 100
+sudo pip3 install pip3 --upgrade pip3
+sudo pip install pip --upgrade pip
+python3 layouts.py 
+locale
+locale -a
+sudo dpkg-reconfigure locales 
+locale -a
+cat /etc/default/locale 
+sudo thunar &
+locale
+locale -a
+sudo dpkg-reconfigure locales 
+locale -a
+locale
+cat /etc/default/locale 
+vim 
+sudo thunar &
+locale -a
+locale
+sudo update-locale LANG=en_US.utf8
+locale
+sudo locale-gen en_US.UTF-8
+locale
+sudo vim /etc/default/locale 
+locale
+locale -a
+locale
+sudo vim /etc/default/locale 
+locale
+locale -a
+sudo update-locale 
+sudo locale-gen en_US.UTF-8
+whereis pip
+whereis pip3
+sudo pip3 install --upgrade pip3 wheel setuptools virtualenv
+pip3 list
+/usr/bin/pip3 list
+whereis pip3
+whereis pip3.7
+sudo thunar &
+pip3 list
+whereis pip
+whereis pip3
+sudo pip3 install --upgrade pip3 wheel setuptools virtualenv
+sudo pip3 install --upgrade pip3
+sudo pip3 install --upgrade pip
+sudo pip3 install --upgrade wheel setuptools virtualenv
+whereis pip3
+cd Projects/Python/Kivy/
+ll
+vd Tests---/
+ll
+cd Tests---/
+ll
+python kivy1.py 
+python3 kivy1.py 
+cd Projects/Python/Kivy/Tests---/
+cd ..
+cd TestKivy/
+ll
+sudo /usr/bin/pip3 install --upgrade pip
+sudo python3 -m pip3 install --upgrade pip
+sudo python3 -m pip install --upgrade pip
+cd Desktop/
+vim test_kivy.py
+cd Projects/Python/Kivy/TestKivy/
+ll
+sudo pytho3 recycle_view.py 
+sudo python3 recycle_view.py 
+python
+python3
+whereis python3
+sudo thunar &
+whereis python3
+python3
+whereis python3
+sudo python3 recycle_view.py 
+cd Projects/Python/Kivy/TestKivy/
+ll
+python3 recycle_view.py 
+pytho3 main.py 
+python3 main.py 
+python3 ./setup.py 
+python3 setup.py 
+python3 ./setup.py install
+sudo python3 ./setup.py install
+python3 main.py 
+cd Projects/Python/Kivy/TestKivy/
+ll
+python3 layouts.py 
+ll
+cd ErikSandberg/
+ll
+cd WorkOutApp/
+ll
+python3 main.py 
+cat user-dirs.conf 
+cat user-dirs.defaults 
+gvim user-dirs.defaults 
+whereis pip3
+sudo python3 -m pip install --upgrade pip
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+cd Projects/Python/
+ll
+vim test.py 
+python3
+cd Desktop/
+ll
+ln -s /home/alexander/forProgramming/Python/Books/\[Brian-Overland\]-Supercharged-Python_-Take-Your-Co.epub /home/alexander/Desktop/Supercharged-Python
+ln -h
+ln --help
+ln -s /home/alexander/forProgramming/Python/Books/\[Brian-Overland\]-Supercharged-Python_-Take-Your-Co.epub /home/alexander/Desktop/Supercharged-Python
+killall mplayer 
+python3
+python3 main.py 
+ll
+la
+ll
+ls
+cd OS/
+ll
+cd ..
+cd Music/
+ll
+ls
+cd Projects/Python/Kivy/TestKivy/HugoSolis_KivyCookbook/
+ll
+vim recycleselectable.kv 
+vim accordiontest.kv 
+python3
+cd /etc/udev/rules.d/
+ll
+vim 60-schedulers.rules 
+vim 60-vboxdrv.rules 
+vim 70-sysctl-p.rules 
+rm *.m4a
+sudo python3 -m pip install --upgrade markdown
+sudo python3 -m pip install --upgrade autopep8
+sudo python3 -m pip install --upgrade beautifulsoup4
+python3 
+python3
+sudo python3 ./setup.py install
+source ~/Projects/Python/VirtualEnvironments/py3.7/bin/activate
+python
+python ./setup.py install
+python3 ./setup.py install
+sudo rm -R kivymd-0.102.0-py3.7.egg/
+source deactivate
+git clone https://github.com/HeaTTheatR/KivyMD.wiki.git
+python3 main.py 
+python3
+viber
+/opt/viber/Viber %u
+cd .myScripts/
+ll
+vim run_kivyMD-examples.sh 
+python3
+python3 dialogs_test.py 
+python3 main.py 
+python3 chip.py 
+sh run_kivyMD-examples.sh 
+vim dict_test.py
+gvim dict_test.py
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+ll
+ls
+ll
+python3 main.py 
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+history | grep buildozer
+sudo rm -
+sudo rm -R 2018-07-22-20-img-Deb9-HP-customV2-all-freeGraphics/
+update-java-alternatives -l
+update-alternatives -l
+update-alternatives --help
+update-alternatives --list java
+sudo update-alternatives --config java
+update-alternatives --list java
+sudo update-alternatives --display java
+update-alternatives --list java
+sudo update-alternatives --config java
+java --version
+javac --version
+javac -v
+javac -V
+javac --help
+java --version
+whereis javac
+/usr/bin/javac --version
+javac -help
+javac -version
+java -version
+"/home/alexander/Programs/PyCharm-Community/bin/pycharm.sh" %f
+./pycharm.sh 
+./restart.py 
+python3 ./restart.py 
+./pycharm.sh 
+buildozer android debug
+buildozer init
+buildozer android debug
+sudo pip3 install --upgrade buildozer
+java -version
+javac -version
+sudo pip3 uninstall buildozer
+cd forProgramming/Python/Install/
+ll
+mkdir Buildozer
+ll
+cd Buildozer/
+git clone https://github.com/kivy/buildozer.git
+ll
+cd buildozer/
+ll
+sudo python3 setup.py install
+buildozer --help
+buildozer --version
+buildozer android debug
+buildozer init
+buildozer android debug
+buildozer init
+buildozer android debug
+update-alternatives --list java
+sudo apt autoremove 
+update-alternatives --list java
+sudo update-alternatives --config java
+update-alternatives --list java
+sudo update-alternatives --config java
+java -version
+javac -version
+java -version
+ll
+buildozer android debug
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+cd Projects/Python/Kivy/ForAndroid/
+ll
+cd ../TestKivy/ErikSandberg/DamperApp/
+ll
+sqlite3 dampers.db
+buildozer android debug
+cd Projects/Python/Kivy/TestKivy/ErikSandberg/DamperApp/
+ll
+sqlite3 dampers.db 
+python3
+python3 DamperApp/dict_test.py 

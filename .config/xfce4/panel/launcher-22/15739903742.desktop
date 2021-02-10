@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=GNU Image Manipulation Program (discrete graphics)
+GenericName=Графический редактор GIMP (discrete graphics)
+Icon=gimp
+Exec=/home/alexander/.myScripts/runGimpDiscreteGr.sh
+NoDisplay=false
+Categories=Discrete Graphics Launchers;
+Keywords=DRI_PRIME=1
+StartupNotify=false
+Terminal=false
+X-XFCE-Source=file:///home/alexander/.local/share/applications/%D0%93%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%20GIMP%202.8%20(discrete%20graphics).desktop
+Comment=Создание изображений и редактирование фотографий
+Path=

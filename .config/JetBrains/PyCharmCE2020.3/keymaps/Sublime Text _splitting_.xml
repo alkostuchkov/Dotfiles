@@ -1,0 +1,20 @@
+<keymap version="1" name="Sublime Text (splitting)" parent="Sublime Text">
+  <action id="NextSplitter">
+    <keyboard-shortcut first-keystroke="alt k" />
+  </action>
+  <action id="PrevSplitter">
+    <keyboard-shortcut first-keystroke="alt j" />
+  </action>
+  <action id="ShowPythonzAction">
+    <keyboard-shortcut first-keystroke="alt p" />
+  </action>
+  <action id="SplitHorizontally">
+    <keyboard-shortcut first-keystroke="shift alt h" />
+  </action>
+  <action id="SplitVertically">
+    <keyboard-shortcut first-keystroke="shift alt v" />
+  </action>
+  <action id="ViewMainMenu">
+    <keyboard-shortcut first-keystroke="shift windows" />
+  </action>
+</keymap>

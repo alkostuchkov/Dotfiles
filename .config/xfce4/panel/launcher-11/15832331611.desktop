@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=jupyter notebook
+Comment=jupyter notebook
+Exec=jupyter notebook --notebook-dir=/home/alexander/Projects/Python/JupyterNotebook/
+Icon=/home/alexander/.local/share/applications/jupyter_logo.png
+Path=
+Terminal=false
+StartupNotify=false

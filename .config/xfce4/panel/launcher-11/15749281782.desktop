@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Run KivyMD-examples
+Comment=Run KivyMD-examples
+Exec=sh /home/alexander/Programs/kitchen_sink/run_kivyMD-examples.sh
+Icon=/home/alexander/.myScripts/kivyMD-logo-blue.png
+Path=/home/alexander/Programs/kitchen_sink
+Terminal=false
+StartupNotify=false

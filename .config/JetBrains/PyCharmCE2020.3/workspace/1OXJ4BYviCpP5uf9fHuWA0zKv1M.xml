@@ -1,0 +1,286 @@
+<project version="4">
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gui/fMain.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6279">
+              <caret line="279" column="20" selection-start-line="279" selection-start-column="20" selection-end-line="279" selection-end-column="20" />
+              <folding>
+                <element signature="e#1520#1562#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ThreadsClasses/cLogin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="644">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="e#1520#1575#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MyClasses/cAuthentification.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="171" column="43" selection-start-line="171" selection-start-column="43" selection-end-line="171" selection-end-column="43" />
+              <folding>
+                <element signature="e#1520#1550#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>IMAP4_SSL</find>
+      <find>boxName</find>
+      <find>_translate</find>
+      <find>QtGui.QIcon(&quot;:/icons/Icons/CheckEmail.ico&quot;)</find>
+      <find>c</find>
+      <find>self.__sysTrIcon.setIcon(QtGui.QIcon(&quot;:/icons/Icons/CheckEmail.ico&quot;))</find>
+      <find>btnEdSelectedEmbxs</find>
+      <find>wannaStopTimer.emit()</find>
+      <find>self.__tmrFlashIcon</find>
+      <find>self.__tmrFlashIcon.start(</find>
+      <find>&quot;dlgAddEmailbox&quot;</find>
+      <find>&quot;dlgEditEmailbox&quot;</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>userName</replace>
+      <replace>__translate</replace>
+      <replace>btnEdSelectedEmbx</replace>
+      <replace>&quot;dlgAddEmbx&quot;</replace>
+      <replace>&quot;dlgEditEmbx&quot;</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/dlgEditEmail.py" />
+        <option value="$PROJECT_DIR$/dlgAddEmail.py" />
+        <option value="$PROJECT_DIR$/imap4Test.py" />
+        <option value="$PROJECT_DIR$/Tests/__init__.py" />
+        <option value="$PROJECT_DIR$/Tests/threads.py" />
+        <option value="$PROJECT_DIR$/oneMoreThread.py" />
+        <option value="$PROJECT_DIR$/cCheckEmailbox.py" />
+        <option value="$PROJECT_DIR$/threads.py" />
+        <option value="$PROJECT_DIR$/Treads/worker.py" />
+        <option value="$PROJECT_DIR$/ClassesForTreads/cWorker.py" />
+        <option value="$PROJECT_DIR$/ClassesForTreads/cTimerStartStBar2.py" />
+        <option value="$PROJECT_DIR$/ClassesForTreads/cTimerStartStBar1.py" />
+        <option value="$PROJECT_DIR$/ClassesForTreads/cTimerStartPrBar1.py" />
+        <option value="$PROJECT_DIR$/ClassesForTreads/cTimerStartPrBar2.py" />
+        <option value="$PROJECT_DIR$/ClassesForTreads/cTimer2.py" />
+        <option value="$PROJECT_DIR$/ClassesForTreads/cTimer1.py" />
+        <option value="$PROJECT_DIR$/twoThreadsAtTheSameTime.py" />
+        <option value="$PROJECT_DIR$/ThreadsClasses/cProgressBarManager.py" />
+        <option value="$PROJECT_DIR$/ThreadsClasses/cFlashIcon.py" />
+        <option value="$PROJECT_DIR$/ThreadsClasses/cTimerCheckEvery.py" />
+        <option value="$PROJECT_DIR$/ThreadsClasses/cCheckSelected.py" />
+        <option value="$PROJECT_DIR$/ThreadsClasses/cTimerFlashIcon.py" />
+        <option value="$PROJECT_DIR$/ThreadsClasses/cTimerCheckInternet.py" />
+        <option value="$PROJECT_DIR$/ThreadsClasses/cCheckEveryTimer.py" />
+        <option value="$PROJECT_DIR$/ThreadsClasses/cFlashIconTimer.py" />
+        <option value="$PROJECT_DIR$/testXor.py" />
+        <option value="$PROJECT_DIR$/dlgAbout.py" />
+        <option value="$PROJECT_DIR$/threadPoolTest.py" />
+        <option value="$PROJECT_DIR$/ThreadsClasses/cDoFlashIcon.py" />
+        <option value="$PROJECT_DIR$/ThreadsClasses/cCheckInternetTimer.py" />
+        <option value="$PROJECT_DIR$/cCheckInternet.py" />
+        <option value="$PROJECT_DIR$/authEmailSites.py" />
+        <option value="$PROJECT_DIR$/ThreadsClasses/cCheckInternet.py" />
+        <option value="$PROJECT_DIR$/dlgAddEmailbox.py" />
+        <option value="$PROJECT_DIR$/dlgEditEmailbox.py" />
+        <option value="$PROJECT_DIR$/pathTests.py" />
+        <option value="$PROJECT_DIR$/MyExceptions/myIMAP4LoginError.py" />
+        <option value="$PROJECT_DIR$/MyExceptions/myIMAP4ConnectionError.py" />
+        <option value="$PROJECT_DIR$/cEmailbox.py" />
+        <option value="$PROJECT_DIR$/ThreadsClasses/cCheckEmailbox.py" />
+        <option value="$PROJECT_DIR$/MyExceptions/myIMAP4Errors.py" />
+        <option value="$PROJECT_DIR$/MyExceptions/myExceptions.py" />
+        <option value="$PROJECT_DIR$/ThreadsClasses/cLogin.py" />
+        <option value="$PROJECT_DIR$/cAuthentification.py" />
+        <option value="$PROJECT_DIR$/fMain.py" />
+        <option value="$PROJECT_DIR$/Gui/dlgEditEmailbox.py" />
+        <option value="$PROJECT_DIR$/Gui/fMain.py" />
+        <option value="$PROJECT_DIR$/MyClasses/cAuthentification.py" />
+      </list>
+    </option>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" x="-2" y="-2" width="1370" height="772" extendedState="6" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1" />
+    <panes />
+  </component>
+  <component name="ToolWindowManager">
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48966613" weight="0.2674772" />
+      <window_info id="Structure" order="1" sideWeight="0.51033384" side_tool="true" weight="0.2674772" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Commit" order="3" />
+      <window_info id="Pull Requests" order="4" />
+      <window_info anchor="bottom" id="Services" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32247558" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49925485" weight="0.40952381" />
+      <window_info anchor="bottom" id="Problems View" order="4" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.46191248" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32881355" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007452" side_tool="true" weight="0.38135594" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.4165316" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="make" order="3" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Tests/threads.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-427287225/PyQt5/QtWidgets/QApplication.py" />
+    <entry file="file://$PROJECT_DIR$/threads.py" />
+    <entry file="file://$PROJECT_DIR$/oneMoreThread.py" />
+    <entry file="file://$PROJECT_DIR$/ClassesForTreads/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/ThreadsClasses/cCheckSelected.py" />
+    <entry file="file://$PROJECT_DIR$/ThreadsClasses/cProgressBarManager.py" />
+    <entry file="file://$PROJECT_DIR$/ClassesForTreads/cTimer2.py" />
+    <entry file="file://$PROJECT_DIR$/twoThreadsAtTheSameTime_backup.py" />
+    <entry file="file://$PROJECT_DIR$/ClassesForTreads/cWorker.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-427287225/PyQt5/QtWidgets/QWidget.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-427287225/PyQt5/QtCore/QSettings.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-427287225/PyQt5/QtCore/QEvent.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2019.2/system/python_stubs/-427287225/PyQt5/QtWidgets/QListWidget.py" />
+    <entry file="file://$PROJECT_DIR$/testXor.py" />
+    <entry file="file://$PROJECT_DIR$/ClassesForTreads/cTimer1.py" />
+    <entry file="file://$PROJECT_DIR$/twoThreadsAtTheSameTime.py" />
+    <entry file="file://$PROJECT_DIR$/threadPoolTest.py" />
+    <entry file="file://$PROJECT_DIR$/comics.png" />
+    <entry file="file://$PROJECT_DIR$/fMainUI.py" />
+    <entry file="file://$PROJECT_DIR$/ThreadsClasses/cCheckInternetTimer.py" />
+    <entry file="file://$PROJECT_DIR$/ThreadsClasses/cFlashIconTimer.py" />
+    <entry file="file://$PROJECT_DIR$/ThreadsClasses/cDoFlashIcon.py" />
+    <entry file="file://$PROJECT_DIR$/ThreadsClasses/cCheckEveryTimer.py" />
+    <entry file="file://$PROJECT_DIR$/pathTests.py" />
+    <entry file="file://$PROJECT_DIR$/dlgAbout.py" />
+    <entry file="file:///usr/lib/python3.5/genericpath.py" />
+    <entry file="file://$PROJECT_DIR$/authEmailSites.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2019.2/system/python_stubs/-427287225/PyQt5/QtWidgets/QWidget.py" />
+    <entry file="file://$PROJECT_DIR$/dlgEditEmailbox.py" />
+    <entry file="file://$PROJECT_DIR$/dlgAddEmailbox.py" />
+    <entry file="file:///usr/lib/python3.5/codecs.py" />
+    <entry file="file://$PROJECT_DIR$/MyExceptions/myIMAP4LoginError.py" />
+    <entry file="file:///usr/lib/python3.5/imaplib.py" />
+    <entry file="file://$PROJECT_DIR$/fMain.py" />
+    <entry file="file://$PROJECT_DIR$/cAuthentification.py" />
+    <entry file="file://$PROJECT_DIR$/MyExceptions/myExceptions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cEmailbox.py" />
+    <entry file="file://$PROJECT_DIR$/ThreadsClasses/cCheckEmailbox.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThreadsClasses/cCheckInternet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="2" column="55" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyClasses/cEmailbox.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-234" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gui/dlgPopupMsg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-702" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThreadsClasses/cPopupMsg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-312" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gui/dlgAddEmailbox.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gui/dlgEditEmailbox.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gui/dlgAbout.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.venv/lib/python3.7/site-packages/selenium/webdriver/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.venv/lib/python3.7/site-packages/selenium/webdriver/firefox/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="49" column="11" lean-forward="true" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gui/fMain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6279">
+          <caret line="279" column="20" selection-start-line="279" selection-start-column="20" selection-end-line="279" selection-end-column="20" />
+          <folding>
+            <element signature="e#1520#1562#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThreadsClasses/cLogin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#1520#1575#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyClasses/cAuthentification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="171" column="43" selection-start-line="171" selection-start-column="43" selection-end-line="171" selection-end-column="43" />
+          <folding>
+            <element signature="e#1520#1550#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

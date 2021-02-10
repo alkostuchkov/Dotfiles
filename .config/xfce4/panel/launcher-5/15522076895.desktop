@@ -1,0 +1,14 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Name=Genymotion (discrete graphics)
+GenericName=Android Emulator
+Icon=/home/alexander/Programs/genymotion/icons/icon.png
+Exec=/home/alexander/.myScripts/runGenymotionDiscreteGr.sh
+Categories=Development;Emulator;
+X-XFCE-Source=file:///home/alexander/.local/share/applications/genymobile-genymotion.desktop
+Comment=DRI_PRIME=1
+Path=
+Terminal=false
+StartupNotify=false

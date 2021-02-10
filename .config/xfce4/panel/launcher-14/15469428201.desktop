@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Mount / Unmount Google Drive
+Comment=
+Exec=/home/alexander/.myScripts/mountUnmountGoogleDrive.sh
+Icon=/home/alexander/OS/Linux/Programs_install/Clouds/Grive(forGoogleDrive)/google-drive-512.png
+Path=
+Terminal=false
+StartupNotify=false

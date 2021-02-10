@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=GNU Image Manipulation Program (discrete graphics)
+GenericName=Создание изображений и редактирование фотографий (discrete graphics)
+Icon=gimp
+Exec=/home/alexander/.myScripts/runGimpDiscreteGr.sh
+NoDisplay=false
+Categories=Discrete Graphics Launchers;
+Keywords=DRI_PRIME=1
+StartupNotify=false
+Terminal=false
+X-XFCE-Source=file:///home/alexander/.local/share/applications/GNU%20Image%20Manipulation%20Program%20(discrete_graphics).desktop

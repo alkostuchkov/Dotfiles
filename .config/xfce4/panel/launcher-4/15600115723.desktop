@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0.0
+Type=Application
+Name=Firefox
+Icon=/home/alexander/Programs/FirefoxBeta/browser/chrome/icons/default/default128.png
+Exec=/home/alexander/Programs/FirefoxBeta/firefox %u
+Comment=Firefox
+GenericName=Firefox
+Keywords=Firefox
+Categories=Network
+Terminal=false
+NoDisplay=false
+Name[ru_RU]=Firefox
+X-XFCE-Source=file:///home/alexander/.local/share/applications/Firefox.desktop

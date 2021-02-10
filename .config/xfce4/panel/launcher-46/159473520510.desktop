@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Аварийное завершение программы
+Icon=/home/alexander/Pictures/Logo/kill_10.png
+Exec=xkill
+NoDisplay=false
+Categories=Discrete Graphics Launchers;
+StartupNotify=false
+Terminal=false
+X-XFCE-Source=file:///home/alexander/.local/share/applications/killapp.desktop

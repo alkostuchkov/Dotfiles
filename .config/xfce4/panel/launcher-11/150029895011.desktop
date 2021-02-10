@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Evans Debugger
+Comment=Evan's Debugger
+Exec=/home/alexander/forProgramming/ASM/ANYasm/edb_EvansDebugger_run/edb_EvansDebugger0.9.21/edb
+Icon=kdevelop
+Path=
+Terminal=false
+StartupNotify=false

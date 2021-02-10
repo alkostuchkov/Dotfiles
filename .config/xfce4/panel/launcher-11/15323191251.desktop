@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=GHex
+Name[ru]=GHex
+GenericName=Hex Editor
+GenericName[ru]=Шестнадцатеричный редактор
+Comment=Inspect and edit binary files
+Comment[ru]=Просмотр и изменение двоичных файлов
+Keywords=binary;debug;
+Exec=ghex %F
+Terminal=false
+Type=Application
+Icon=ghex
+Categories=GNOME;GTK;Development;
+StartupNotify=true
+X-XFCE-Source=file:///usr/share/applications/ghex.desktop

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Менеджер Bluetooth
+Comment=Менеджер Bluetooth Blueman
+Exec=/home/alexander/.myScripts/bluemanStartStop.sh
+Icon=blueman
+Path=
+Terminal=false
+StartupNotify=true

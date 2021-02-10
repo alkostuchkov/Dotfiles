@@ -1,0 +1,8 @@
+<application>
+  <component name="LanguageInjectionConfiguration">
+    <injection language="yaml" injector-id="python">
+      <display-name>Kivy kv</display-name>
+      <place><![CDATA[pyStringLiteralMatches("# kv_start(.+?)# kv_end")]]></place>
+    </injection>
+  </component>
+</application>

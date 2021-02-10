@@ -1,0 +1,1000 @@
+nmap 192.168.1.100
+nmap 192.168.1.1
+nmap 192.168.1.100
+nmap 192.168.1.101
+ss -tln
+su
+sudo dolphin &
+sudo thunar &
+su
+killall dropbox 
+hostnamectl 
+cat /etc/hosts
+sudo hostnamectl set-hostname mustlive
+cat /etc/hosts
+hostnamectl 
+hostnamectl -h
+hostnamectl 
+cat /etc/hosts
+nano /etc/hosts
+hostname
+hostnamectl 
+nano /etc/hosts
+sudo emacs /etc/hosts
+hostnamectl 
+cat /etc/hosts
+su
+cat /etc/hosts
+ss -tln
+cat /etc/hosts
+hostnamectl 
+hostname 172.217.21.206
+hostname -i
+hostname -I
+hostname -d
+hostname -f
+hostname -A
+hostname -a
+dig 
+dig -h
+dig 172.217.21.206
+dig google.com
+dig +trace google.com
+dig +short google.com
+dig -x 172.217.21.206
+dig -x 192.168.1.100
+dig -x 46.56.75.165
+dig -x 172.217.18.110
+host 172.217.18.110
+nmap 191.168.1.100
+nmap -Pn 191.168.1.100
+nmap 46.56.75.165
+nmap 191.168.1.1
+nmap -vv 191.168.1.100
+nmap 191.168.1.0/24
+nmap -P0 191.168.1.100
+su
+chmod -R 755 .dropbox*
+chmod -R 755 Dropbox/
+killall dropbox
+setxkbmap -query
+setxkbmap -query | grep ctrl:nocaps
+dropbox ls
+dropbox status
+dropbox help
+dropbox running
+dropbox stop
+dropbox running
+dropbox status
+dropbox 
+dropbox status
+dropbox help
+dropbox update
+dropbox status
+dropbox help
+dropbox start
+dropbox status
+host dropbox.com
+host www.dropbox.com
+su
+xfdesktop --reload
+./autoConky.sh &
+sudo dpkg -i dropbox_2019.01.31_amd64.deb 
+dropbox -help
+dropbox -status
+dropbox status
+dropbox start &
+su
+xinput list | grep SynPS/2\ Synaptics\ TouchPad
+tmp1=`xinput list | grep SynPS/2\ Synaptics\ TouchPad`
+echo tmp1
+echo $tmp1
+tmp2=${tmp1#*id=}
+echo $tmp2
+id=${tmp2::3}
+echo $id
+echo $tmp2
+echo $tmp1
+echo $tmp2
+echo $id
+id=${tmp2# }
+echo $id
+id=${tmp2#\ }
+echo $id
+id=${tmp2#\s }
+echo $id
+id=${tmp2#*\s }
+echo $id
+id=${tmp2#* }
+echo $id
+id=${tmp2%%* }
+echo $id
+id=${tmp2%% *}
+echo $id
+id=${tmp2%%% *}
+echo $id
+id=${tmp2%% *}
+echo $id
+id2=${id%% *}
+echo $id
+id2=${id% *}
+id2=${id%% *}
+echo $id2
+id2=${id% *}
+echo $id2
+echo $id
+id=${tmp2%% *}
+echo $id
+echo $tmp2
+id=${tmp2%% * *}
+echo $id
+id=${tmp2% *}
+echo $id
+id=${tmp2%% *}
+echo $id
+echo $tmp2
+id=`expr match "$tmp2" '\([0-9]{1,3}\)'
+id=`expr match "$tmp2" '\([0-9]{1,3}\)'`
+echo $id
+id=`expr match "$tmp2"'\([0-9]{1,3}\)'`
+id=`expr match "$tmp2" '\([0-9]{1,3}\)'`
+echo $id
+echo $tmp2
+id=`expr "$tmp2" '\([0-9]{1,3}\)'`
+echo `expr match "$tmp2" '\([0-9]{1,3}\)'`
+echo `expr match "$tmp2" '\([0-9]\{1,3\}\)'`
+echo `xinput list | grep SynPS/2\ Synaptics\ TouchPad`
+echo ${tmp1#*id=}
+tmp2=${tmp1#*id=}
+echo $tmp2
+tmp1=`xinput list | grep SynPS/2\ Synaptics\ TouchPad`
+echo $tmp1
+tmp2=${tmp1#*id=}
+echo $tmp2
+id=`expr match "$tmp2" '\([0-9]\{1,3\}\)'`
+echo $id
+tmp1=`xinput list | grep SynPS/2\ Synaptics\ TouchPad`
+echo $tmp1
+tmp2=${tmp1#*id=}
+echo $tmp2
+id=`expr match "$tmp2" '\([0-9]\{1,3\}\)'`
+echo $id
+mc
+com 
+ip a
+ifconfig 
+xfdesktop --reload
+mc
+java -version
+javac -version
+java -version
+javac -version
+sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+sudo apt update 
+cd /etc/apt/
+ll
+emacs --nw sources.list
+emacs -nw sources.list
+sudo emacs -nw sources.list
+sudo apt update 
+emacs -nw sources.list
+sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+javapackager jdk-8u201-linux-x64.tar.gz 
+make-jpk
+make-jpkg jdk-8u201-linux-x64.tar.gz 
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+dig -x 54.243.144.12
+dig -x 172.217.16.17
+dig -x 192.48.236.12
+chmod 755 *
+xfdesktop --reload
+xdg-user-dirs-update --set DESKTOP ~/Desktop
+xfdesktop --reload
+ll
+xfdesktop --reload
+xdg-user-dirs-update --set DESKTOP ~/Desktop
+xfdesktop --reload
+cp autoConky.sh autoConky+++.sh
+keepass2 &
+killall keepass2
+keepass2 &
+keepass2
+keepass2 &
+killall keepass2
+keepass2
+lspci 
+ping ya.ru
+cp icons.screen0-1350x698.rc icons.screen0-1350x721.rc 
+xfdesktop --reload
+sudo -i
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+mc
+./genymotion
+./genymotion-3.0.1-linux_x64.bin 
+./genymotion
+DRI_PRIME=1 ./genymotion
+DRI_PRIME=1 /home/alexander/Programs/genymotion
+"DRI_PRIME=1 /home/alexander/Programs/genymotion"
+'DRI_PRIME=1 /home/alexander/Programs/genymotion'
+/home/alexander/Programs/genymotion DRI_PRIME=1
+sh DRI_PRIME=1 /home/alexander/Programs/genymotion
+sh "DRI_PRIME=1 /home/alexander/Programs/genymotion"
+DRI_PRIME=1 glxinfo | grep "OpenGL renderer"
+DRI_PRIME=1 & /home/alexander/Programs/genymotion | grep "OpenGL renderer"
+DRI_PRIME=1 & sh /home/alexander/Programs/genymotion | grep "OpenGL renderer"
+DRI_PRIME=1 sh /home/alexander/Programs/genymotion | grep "OpenGL renderer"
+DRI_PRIME=1 glxinfo | grep "OpenGL renderer"
+glxinfo | grep "OpenGL renderer"
+DRI_PRIME=1 glxinfo | grep "OpenGL renderer"
+DRI_PRIME=1 virtualbox | grep "OpenGL renderer"
+whereis virtualbox
+ll /usr/bin/virtualbox 
+whereis VBox
+DRI_PRIME=1 "/home/alexander/Programs/genymotion"
+DRI_PRIME=1 /home/alexander/Programs/genymotion/genymotion
+exec DRI_PRIME=1 /home/alexander/Programs/genymotion/genymotion
+exec "DRI_PRIME=1" /home/alexander/Programs/genymotion/genymotion
+exec "DRI_PRIME=1 /home/alexander/Programs/genymotion/genymotion"
+glxinfo DRI_PRIME=1 | grep "OpenGL renderer"
+exec "DRI_PRIME=1 /home/alexander/Programs/genymotion/genymotion"
+ifconfig 
+sudo ./iptables_rules.v4.Garant.3G.all.sh 
+sudo ./iptables_rules.v4.Garant.3G.all.sh start
+sudo iptables-save ./iptables
+sudo iptables-save > ./iptables
+chown alexander:alexander iptables
+sudo mv /etc/iptables/rules.v4 /etc/iptables/rules.v4.last
+cp rules.v4.backup /etc/iptables/rules.v4
+sudo cp rules.v4.backup /etc/iptables/rules.v4
+sudo -i
+./emulator
+./emulator64-x86 
+./qemu-img 
+./avdmanager 
+./avdmanager list
+./avdmanager 
+./avdmanager device
+glxinfo | grep "OpenGL render"
+cp runGenymotion.sh runAndroidStudioDiscretGr.sh
+rm *.lock
+mc
+ssh -h
+ssh root@191.168.1.112:2222
+ssh -l root -L 191.168.1.112:2222
+ssh -l root -L 191.168.1.112 :2222
+ssh -L 192.168.1.112:2222 root@admin
+ssh root@192.168.1.112:2222
+ssh 192.168.1.112
+ssh 192.168.1.112:2222
+ssh root@192.168.1.112
+ssh root@192.168.1.112:2222
+ssh root@192.168.1.112 port:2222
+ssh root@192.168.1.112:2222
+ssh -p 2222 192.168.1.112
+cd /home/alexander/.ssh/
+ll
+la
+cat known_hosts 
+ll
+ls
+la
+rm known_hosts 
+cat known_hosts 
+telnet www.google.ru 80
+ssh -p 2222 10.0.8.1
+ssh -p 2222 192.168.1.112
+xterm 
+ssh -p 2222 root@192.168.1.112
+sftp -o Port=2222 root@192.168.1.112:/sdcard
+ssh-keygen 
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+sudo synaptic-pkexec &
+/opt/viber/Viber %u
+sudo apt -f
+apt -h
+sudo apt-get -f
+ll |grep Viber
+./runViberDiscreteGr.sh 
+sudo -i
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+sudo synaptic-pkexec 
+ping jetbrains.com
+ping 54.230.228.5
+sudo -i
+su
+kill -9 12239
+test
+testdisk 
+kill -9 12193
+ping 192.168.1.113
+./testInetStatus.sh &
+sudo ./testInetStatus.sh &
+sudo -i
+systemctl status rc-local.service 
+cat /etc/rc.local 
+pgrep testInetStatus
+cat /home/testInetStatus.sh 
+ping ya.ru
+ifconfig 
+sudo apt update && sudo apt upgrade 
+sudo -i
+sudo synaptic-pkexec 
+sudo teamviewer daemon stop
+sudo teamviewer daemon start
+sudo teamviewer daemon stop
+sudo teamviewer daemon start
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+flatpak run ./gimp-2.10.0-RC2-x86_64.flatpak 
+./gimp-2.10.0-RC2-x86_64.flatpak 
+flatpak ./gimp-2.10.0-RC2-x86_64.flatpak 
+sudo apt autoremove 
+sudo snap-hmm install gimp
+sudo snap install gimp
+snap install gimp
+snap-hmm install gimp
+sudo add-apt-repository ppa:otto-kesselgulasch/gimp
+sudo apt update 
+flatpak --help
+flatpak install gimp-2.10.0-RC2-x86_64.flatpak 
+flatpak install https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
+flatpak --help
+flatpak uninstall https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
+flatpak install https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
+flatpak run org.gimp.GIMP//stable
+flatpak update 
+sudo -i
+sudo dpkg -i virtualbox-6.0_6.0.8-130520~Debian~stretch_amd64.deb 
+./resynthesizer-gui 
+WINEARCH=win32 WINEPREFIX=~/.wine winecfg
+killall WebExtention
+killall WebExtentions
+killall Web \Content
+kill -9 6543
+kill -9 2927
+kill -9 6407
+kill -9 7530
+kill -9 5079
+kill -9 16749
+./runGimp2-10DiscreteGr.sh 
+flatpak update 
+su
+sudo subl /usr/bin/chromium 
+su
+dig +short www.shapecollage.com
+su
+whereis python
+file PhoneBook 
+su
+sudo apt update && sudo apt upgrade 
+sudo apt qutore
+sudo apt autoremove 
+sudo apt clean 
+pyuic5 fMainUI.ui -o fMainUI.py
+dolphin4 &
+xfce4-panel --reload &
+xfce4-panel --help
+xfce4-panel -r &
+python3
+python3
+su
+ping 192.168.1.108
+python3
+sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt update 
+sudo synaptic-pkexec &
+xfce4-panel -r &
+sudo apt autoremove 
+sudo apt clean 
+sudo apt autoremove 
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+sudo synaptic-pkexec 
+sudo apt autoremove 
+sudo apt clean 
+pyuic5 fMainUI.ui -o fMainUI.py
+pyuic5 dlgAddEmailUI.ui -o dlgAddEmailUI.py
+pyuic5 dlgEditEmailUI.ui -o dlgEditEmailUI.py
+./ui2py.sh 
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o res_rc.py
+pyrcc5 resources.qrc -o resources_rc.py
+pyuic5 dlgAddEmailUI.ui -o dlgAddEmailUI.py
+pyuic5 dlgEditEmailUI.ui -o dlgEditEmailUI.py
+./ui2py.sh 
+pyuic5 fMainUI.ui -o fMainUI.py
+pyuic5 dlgAddEmailUI.ui -o dlgAddEmailUI.py
+pyuic5 dlgAddEmailboxUI.ui -o dlgAddEmailboxUI.py
+pyuic5 fMainUI.ui -o fMainUI.py
+./ui2py.sh 
+pyuic5 fMainUI.ui -o fMainUI.py
+./ui2py.sh 
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o resources_rc.py
+pylupdate5 fMain.py fMainUI.py fMainUI.ui dlgAddEmailbox.py dlgAddEmailboxUI.py dlgAddEmailboxUI.ui dlgEditEmailbox.py dlgEditEmailboxUI.py dlgEditEmailboxUI.ui 
+pylupdate5 fMain.py fMainUI.py fMainUI.ui dlgAddEmailbox.py dlgAddEmailboxUI.py dlgAddEmailboxUI.ui dlgEditEmailbox.py dlgEditEmailboxUI.py dlgEditEmailboxUI.ui -ts checkEmail_ru.ts
+pyrcc5 resources.qrc -o resources_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o resources_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o resources_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o resources_rc.py
+pylupdate5 fMain.py fMainUI.py fMainUI.ui -ts fMain_ru.ts
+pylupdate5 fMain.py fMainUI.py fMainUI.ui -ts checkEmail_fMain_ru.ts
+pylupdate5 dlgAddEmailbox.py dlgAddEmailboxUI.py dlgAddEmailboxUI.ui -ts checkEmail_dlgAddEmbx_ru.ts
+pyrcc5 resources.qrc -o resources_rc.py
+pylupdate5 dlgEditEmailbox.py dlgEditEmailboxUI.py dlgEditEmailboxUI.ui -ts checkEmail_dlgEdEmbx_ru.ts
+pyrcc5 resources.qrc -o resources_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o resources_rc.py
+./shUi2py.sh 
+pyrcc5 resources.qrc -o resources_rc.py
+./shUi2py.sh 
+pyrcc5 resources.qrc -o resources_rc.py
+./shUi2py.sh 
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o resources_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o resources_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o resources_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o resources_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyuic5 fThreadsAndProgressBars.ui -o fThreadsAndProgressBarsUI.py
+pyuic5 fMainUI.ui -o fMainUI.py
+python3 fMainUI.py 
+python3 ./fMainUI.py 
+python3 fMain.py 
+python3
+dpkg -s pulseaudio
+dpkg -s alsa-utils 
+apt -h
+man apt
+apt show alsa-utils 
+apt show pulseaudio
+dpkg --getselection
+dpkg --get-selection
+dpkg --get-selections
+dpkg --get-selections | pulseaudio 
+dpkg --get-selections | grep pulseaudio 
+dpkg --get-selections | grep alsa-utils
+dpkg --get-selections | grep pulseaudio 
+dpkg --get-selections | grep gnome
+dpkg --get-selections | grep compiz
+alsa
+pulseaudio 
+whereis pulseaudio
+whereis alsa-utils
+echo whereis alsa-utils
+whereis alsa-utils
+which alsa-utils
+which pulseaudio
+which alsa-utils
+ping ya.ru
+su
+python3
+echo $USERNAME
+echo $SHELL
+whoami
+python3
+username
+$USERNAME
+$SHELL
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o resources_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o resources_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+python3 fMain.py 
+pyuic5 fMainUI.ui -o fMainUI.py
+python3 fMain.py 
+python3 fMain.py
+python3
+xfdesktop --reload 
+python3
+pyuic5 dlgAboutUI.ui -o dlgAboutUI.py
+pyuic5 fMainUI.ui -o fMainUI.py
+nproc 
+python3
+telnet alizar.habrahabr.ru 80
+ll
+ls
+ll
+sudo cp -v *.ttf /usr/share/fonts/myFonts/
+ping ya.ru
+ping google.com
+pyinstaller --onefile --noconsole --paths /usr/lib/python3/dist-packages/PyQt5/ fMain.spec
+./shGetTranslation_ts.sh 
+pyuic5 dlgEditEmailboxUI.ui -o dlgEditEmailboxUI.py
+pylupdate5 dlgEditEmailbox.py dlgEditEmailboxUI.py dlgEditEmailboxUI.ui -ts checkEmail_dlgEdEmbx_ru.ts
+pyuic5 dlgEditEmailboxUI.ui -o dlgEditEmailboxUI.py
+pyuic5 dlgAddEmailboxUI.ui -o dlgAddEmailboxUI.py
+pyrcc5 resources.qrc -o resources_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o resources_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pylupdate5 fMain.py fMainUI.py fMainUI.ui -ts checkEmail_fMain_ru__.ts
+pylupdate5 fMain.py fMainUI.py fMainUI.ui -ts checkEmail_fMain_ru.ts
+pyuic5 fMainUI.ui -o fMainUI.py
+pylupdate5 fMain.py fMainUI.py fMainUI.ui -ts checkEmail_fMain_ru.ts
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o resources_rc.py
+pylupdate5 fMain.py fMainUI.py fMainUI.ui -ts checkEmail_fMain_ru.ts
+pyuic5 fMainUI.ui -o fMainUI.py
+pylupdate5 fMain.py fMainUI.py fMainUI.ui -ts checkEmail_fMain_ru.ts
+pyrcc5 resources.qrc -o resources_rc.py
+pylupdate5 fMain.py fMainUI.py fMainUI.ui -ts checkEmail_fMain_ru.ts
+pyrcc5 resources.qrc -o resources_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o resources_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o resources_rc.py
+pylupdate5 fMain.py fMainUI.py fMainUI.ui -ts checkEmail_fMain_ru.ts
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o resources_rc.py
+pyuic5 dlgAddEmailboxUI.ui -o dlgAddEmailboxUI.py
+pyuic5 dlgEditEmailboxUI.ui -o dlgEditEmailboxUI.py
+pyuic5 dlgAboutUI.ui -o dlgAboutUI.py
+pylupdate5 dlgAddEmailbox.py dlgAddEmailboxUI.py dlgAddEmailboxUI.ui -ts checkEmail_dlgAddEmbx_ru.ts
+pylupdate5 dlgEditEmailbox.py dlgEditEmailboxUI.py dlgEditEmailboxUI.ui -ts checkEmail_dlgEdEmbx_ru.ts
+pyrcc5 resources.qrc -o resources_rc.py
+pyuic5 dlgAboutUI.ui -o dlgAboutUI.py
+pyrcc5 resources.qrc -o resources_rc.py
+pylupdate5 fMain.py fMainUI.py fMainUI.ui -ts checkEmail_fMain_ru.ts
+pyrcc5 resources.qrc -o resources_rc.py
+pyinstaller --onefile --noconsole /usr/lib/python3/dist-packages/PyQt5/ fMain.spec 
+pyinstaller --onefile --noconsole /usr/lib/python3/dist-packages/PyQt5 fMain.spec 
+pyinstaller --onefile --noconsole /usr/lib/python3/dist-packages/PyQt5/ fMain.spec 
+pyinstaller --onefile --noconsole /usr/lib/python3/dist-packages/PyQt5 fMain.spec 
+pyinstaller --onefile --noconsole --paths /usr/lib/python3/dist-packages/PyQt5/ fMain.spec
+pyinstaller fMain.spec 
+pyinstaller --onefile --noconsole --paths /usr/lib/python3/dist-packages/PyQt5/ fMain.spec
+pyinstaller --onefile --noconsole --paths /usr/lib/python3/dist-packages/PyQt5/ fMain.spec [B
+pylupdate5 fMain.py fMainUI.py fMainUI.ui -ts checkEmail_fMain_ru.ts
+pyrcc5 resources.qrc -o resources_rc.py
+pylupdate5 fMain.py fMainUI.py fMainUI.ui -ts checkEmail_fMain_ru.ts
+pyrcc5 resources.qrc -o resources_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o resources_rc.py
+pyinstaller --onefile --noconsole --paths /usr/lib/python3/dist-packages/PyQt5/ fMain.spec
+pylupdate5 fMain.py fMainUI.py fMainUI.ui -ts checkEmail_fMain_ru.ts
+pylupdate5 dlgAddEmailbox.py dlgAddEmailboxUI.py dlgAddEmailboxUI.ui -ts checkEmail_dlgAddEmbx_ru.ts
+pylupdate5 dlgEditEmailbox.py dlgEditEmailboxUI.py dlgEditEmailboxUI.ui -ts checkEmail_dlgEdEmbx_ru.ts
+pylupdate5 dlgAddEmailbox.py dlgAddEmailboxUI.py dlgAddEmailboxUI.ui -ts checkEmail_dlgAddEmbx_ru.ts
+pylupdate5 fMain.py fMainUI.py fMainUI.ui -ts checkEmail_fMain_ru.ts
+pylupdate5 dlgAddEmailbox.py dlgAddEmailboxUI.py dlgAddEmailboxUI.ui -ts checkEmail_dlgAddEmbx_ru.ts
+pylupdate5 dlgEditEmailbox.py dlgEditEmailboxUI.py dlgEditEmailboxUI.ui -ts checkEmail_dlgEdEmbx_ru.ts
+pylupdate5 dlgAddEmailbox.py dlgAddEmailboxUI.py dlgAddEmailboxUI.ui -ts checkEmail_dlgAddEmbx_ru.ts
+pylupdate5 fMain.py fMainUI.py fMainUI.ui -ts checkEmail_fMain_ru.ts
+pyrcc5 resources.qrc -o resources_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pylupdate5 fMain.py fMainUI.py fMainUI.ui -ts checkEmail_fMain_ru.ts
+pyrcc5 resources.qrc -o resources_rc.py
+./CheckEmail
+./shPyinstaller.sh 
+whereis dropbox
+pyinstaller --version
+./shPyinstaller.sh 
+pyinstaller fMain.spec 
+pip3 list
+sudo pip3 install pyqt5==5.8
+sudo pip install --upgrade pip
+sudo pip3 install pyqt5==5.8
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+ping ya.ru
+pyuic5 TimerUI.ui -o TimerUI.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyuic5 dlgGoUI.ui -o dlgGoUI.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyuic5 dlgGoUI.ui -o dlgGoUI.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyuic5 dlgGoUI.ui -o dlgGoUI.py
+ll
+python3 fMain.py
+pyuic5 dlgGoUI.ui -o dlgGoUI.py
+pyinstaller fMain.spec 
+pyuic5 res.qrc -o rec_rc.py
+pyrcc5 res.qrc -o rec_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 res.qrc -o rec_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 res.qrc -o rec_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o recources_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o recources_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o recources.py
+pyrcc5 resources.qrc -o recources_rc.py
+pyuic5 dlgGoUI.ui -o dlgGoUI.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o recources_rc.py
+pyrcc5 resources.qrc -o recources_rc
+pyrcc5 resources.qrc -o recources_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o recources_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyuic5 dlgGoUI.ui -o dlgGoUI.py
+pyuic5 fMainUI.ui -o fMainUI.py
+pyuic5 dlgGoUI.ui -o dlgGoUI.py
+pyinstaller fMain.spec 
+pylupdate5 fMain.py fMainUI.py fMainUI.ui -ts checkEmail_fMain_ru.ts
+pyrcc5 resources.qrc -o resources_rc.py
+pyinstaller fMain.spec 
+pyrcc5 resources.qrc -o resources_rc.py
+pyinstaller fMain.spec 
+python3 -V
+pyinstaller fMain.spec 
+pyinstaller MultTable.spec 
+pyuic5 dlgGoUI.ui -o dlgGoUI.py
+pyuic5 fMainUI.ui -o fMainUI.py
+seq 
+seq 1 10
+touch ipsweep.sh
+chmod +x ipsweep.sh 
+subl ipsweep.sh 
+./ipsweep.sh 
+./ipsweep.sh 192.168.1.1
+ping 127.0.0.1
+ping -c 1 127.0.0.1
+ping -c 1 192.168.8.1
+./ipsweep.sh 192.168.8.1
+./ipsweep.sh 192.168.8.
+./ipsweep.sh 192.168.8
+./ipsweep.sh 192.168.8 > iplist.txt
+cat iplist.txt 
+./ipsweep.sh
+python3
+geany -w %U edit-in-geany.desktop 
+geany %U edit-in-geany.desktop 
+cut --help
+tr --help
+ll
+ping -c 1 192.168.1.1
+ping -c 1 192.168.1.1 | grep 64 bytes
+ping -c 1 192.168.1.1 | grep "64 bytes"
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 4
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d  -f 4
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d" "  -f 4
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d:  -f 4
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d:
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d: -f 1
+ping -c 1 192.168.1.1
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d: -f 1
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d: -f 1 | cut -d " " -f3
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d: -f 1 | cut -d " " -f 3
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d: -f 1 | cut -d " " -f 1
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d: -f 1 | cut -d " " -f 2
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d: -f 1 | cut -d " " -f 3
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d: -f 1 | cut -d " " -f 4
+ping -c 1 192.168.1.1
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d: -f 1 | cut -d " " -f 4
+man cut
+cut -h
+cut --help
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d: -f 1 | cut -d " " -f 4
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1 | cut -d " " -f 4
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1 | cut -d " " -c "1" -f 4
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1 | cut -d " " -c "1"
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -c "1" -d ":" -f 1 | cut -d " "
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -c "1" -d ":" -f 1
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1 | cut -d " " -f 4
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1 | cut -c "1"
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1 | cut -c "7"
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1 | cut -d " " -f 4
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1 | cut -d " "
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1 | cut -d " " -f 1
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1 | cut -d " " -f 2
+ping -c 1 192.168.1.1
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1 | cut -d " " -f 2
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1 | cut -d " " -f 3
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1 | cut -d " " -f 4
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1 | cut -c "fr"
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1 | cut -c fr
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1 | cut -c 
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1 | cut -d " " -f 4
+ping -c 1 192.168.1.1
+ping -c 1 192.168.1.1 | grep "64 bytes"
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":"
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 4
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 4
+ping -c 1 192.168.1.1
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 4
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 5
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 6
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 7
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 8
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 1
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 2
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 3
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 4
+ping -c 1 192.168.1.1
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 4
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 1,2
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 1,4
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 1,3,5
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 1,3, 5
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 1,3,5
+ping -c 1 192.168.1.1
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 1,3,5
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 0
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 1,3,5
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 1,3,4
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1 | cut -d " " -f 3
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1 | cut -d " " -f 4
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d ":" -f 1 
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 4
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 4| tr ":"
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 4| tr -d ":" 
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 4| tr ":" "+"
+ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f 4| tr -d ":" 
+arp -a
+su
+./ipsweep.sh 192.168.1
+./ipsweep.sh 46.56.72
+./ipsweep.sh 192.168.1
+for itm in $(./iplist.txt); do echo $itm; done
+for itm in $(iplist.txt); do echo $itm; done
+for itm in $(cat iplist.txt); do echo $itm; done
+./ipsweep.sh 192.168.1 > iplist.txt 
+for itm in $(cat iplist.txt); do echo $itm; done
+for itm in $(nmap itm); do echo $itm; done
+for itm in $(iplist.txt); do nmap $itm; done
+for itm in $(cat iplist.txt); do nmap $itm; done
+for itm in $(cat iplist.txt); do nmap $itm; done > nmapResults.txt
+geany nmapResults.txt 
+killall mono
+ll
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt clean 
+sudo cp geckodriver /usr/local/bin/
+touch readme.txt
+sudo pip3 install geckodriver
+sudo pip3 install pygeckodriver
+sudo pip3 install --upgrade pip
+echo $PATH
+sudo pip3 uninstall pygeckodriver
+ifconfig 
+sudo cp chromedriver /usr/local/bin/
+sudo rm geckodriver 
+python3
+whereis chrome
+whereis google-chrome
+whereis firefox
+whereis opera
+gvfs-open 
+gvfs-open "www.google.ru
+help
+q
+gvfs-open www.google.ru
+xdg-open www.google.ru
+xdg-open --help
+man xdg-open 
+gvfs-open www.google.ru
+exo-open --help
+x-www-browser 
+xdg-settings 
+xdg-settings --help
+man xdg-settings 
+xdg-user-dir
+xdg-mime 
+xdg-mime query default http
+xdg-mime query default x-scheme-handler/http
+xdg-mime query default x-scheme-handler/mailto
+xdg-mime query default x-scheme-handler/http
+history | grep pyinstaller
+pyinstaller CheckEmail.spec 
+xdg-settings get 
+xdg-settings --help
+xdg-settings get default-web-browser
+locate custom-WebBrowser.desktop
+xdg-settings get default-web-browser
+locate chromium.desktop
+locate update
+locate chromium.desktop
+locate update
+locate chromium.desktop
+xdg-settings get default-web-browser
+locate debian-sensible-browser.desktop
+xdg-settings get default-web-browser
+locate custom-WebBrowser.desktop
+python3
+x-www-browser --help
+x-www-browser
+ll /usr/bin/x-www-browser 
+ll /etc/alternatives/x-www-browser 
+which(x-www-browser)
+which x-www-browser
+xdg-settings get default-web-browser
+xdg-settings set default-web-browser firefox.desktop
+xdg-settings get default-web-browser
+locate custom-WebBrowser.desktop
+cat ~/.local/share/xfce4/helpers/custom-WebBrowser.desktop 
+cat ~/.local/share/xfce4/helpers/custom-WebBrowser.desktop | grep name
+cat ~/.local/share/xfce4/helpers/custom-WebBrowser.desktop | grep Name
+cat ~/.local/share/xfce4/helpers/custom-WebBrowser.desktop | grep Name | cut -d "=" -f 1
+cat ~/.local/share/xfce4/helpers/custom-WebBrowser.desktop | grep Name | cut -d "=" -f 2
+locate custom-WebBrowser.desktop
+xdg-settings get default-web-browser
+cat /usr/bin/x-www-browser 
+xdg-settings get default-web-browser
+whereis custom-WebBrowser.desktop
+locate custom-WebBrowser.desktop
+locate custom-WebBrowser.desktop | grep .local
+locate custom-WebBrowser.desktop | grep .local/share
+locate custom-WebBrowser.desktop | grep .local/share/xfce4
+locate custom-WebBrowser.desktop | grep ".local/share/xfce4"
+cat | locate custom-WebBrowser.desktop | grep ".local/share/xfce4"
+cat /usr/bin/x-www-browser 
+tac /usr/bin/x-www-browser 
+cat /usr/bin/x-www-browser | grep exec
+cat /usr/bin/x-www-browser 
+dirname /home/alexander/OS/
+xdg-settings get default-web-browser
+which x-www-browser
+dirname | which x-www-browser
+dirname which x-www-browser
+dirname $(which x-www-browser)
+which x-www-browser
+dir
+dirname $(which x-www-browser)
+echo $CHROME_WRAPPER
+`dirname "$CHROME_WRAPPER"`
+$(dirname "$CHROME_WRAPPER")
+HERE="`dirname "$CHROME_WRAPPER"`"
+export PATH="$HERE:$PATH"
+echo $CHROME_WRAPPER
+echo $xdg_app_dir
+echo $XDG_DATA_HOME
+${XDG_DATA_HOME:-$HOME/.local/share/applications}
+echo $HERE
+HERE="`dirname "$CHROME_WRAPPER"`"
+echo $HERE
+export CHROME_WRAPPER="`readlink -f "$0"`"
+echo $HERE
+xdg-settings get default-web-browser
+ll /usr/bin/x-www-browser 
+readlink /usr/bin/x-www-browser 
+cat /etc/alternatives/x-www-browser 
+readlink -f /usr/bin/x-www-browser 
+readlink --help
+readlink -m /usr/bin/x-www-browser 
+readlink --help
+dirname $(readlink -f /usr/bin/x-www-browser)
+readlink -f /usr/bin/x-www-browser 
+su
+readlink -f /usr/bin/x-www-browser 
+xdg-settings get default-web-browser
+locate custom-WebBrowser.desktop
+xdg-settings get default-web-browser
+readlink -f /usr/bin/x-www-browser 
+which opera
+xdg-settings get default-web-browser
+readlink -f /usr/bin/x-www-browser 
+xdg-settings get default-web-browser
+readlink -f /usr/bin/x-www-browser 
+xdg-settings get default-web-browser
+locate opera-browser.desktop
+xdg-settings get default-web-browser
+which opera
+whereis opera
+locate opera
+python3
+readlink -f mp3link 
+xdg-settings get default-web-browser
+python3
+ln --help
+history | grep ln
+ln --help
+sudo ln -s /home/alexander/Programs/FirefoxBeta/firefox /usr/bin/firefox
+pyinstaller CheckEmail.spec 
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o resources_rc.py
+pyuic5 fMainUI.ui -o fMainUI.py
+ln -s /home/alexander/Рабочий\ стол/Релакс_музыка/Симфония\ воды/Track\ 01.mp3 /home/alexander/Рабочий\ стол/mp3link
+pyinstaller CheckEmail.spec 
+pyuic5 fMainUI.ui -o fMainUI.py
+pyrcc5 resources.qrc -o resources_rc.py
+npm install
+curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
+chmod +x nodesource_setup.sh 
+sudo bash nodesource_setup.sh
+sudo apt install nodejs
+sudo cp Ligamonacop.ttf /usr/share/fonts/myFonts/
+ll
+sudo pip install fonttools
+sudo pip3 install fonttools
+sudo pip3 install --upgrade pip
+npm install
+sudo pip3 install npm
+npm install
+./build.sh
+whereis npm
+nodejs -v
+nodejs npm install
+nodejs install
+npm install
+npm -v
+npm install
+./build.sh 
+cd ~
+cd /usr/share/fonts
+cd myFonts/
+sudo cp * /usr/share/fonts/myFonts/
+./build.sh 
+npm install
+./build.sh 
+sudo cp * /usr/share/fonts/myFonts/
+cd /usr/share/fonts
+cd myFonts/
+ll
+pylupdate5 fMain.py fMainUI.py fMainUI.ui -ts checkEmail_fMain_ru.ts
+pylupdate5 ./Gui/fMain.py ./Gui/fMainUI.py ./Gui/fMainUI.ui -ts checkEmail_fMain_ru.ts
+pylupdate5 ../Gui/fMain.py ../Gui/fMainUI.py ../Gui/fMainUI.ui -ts checkEmail_fMain_ru.ts
+pylupdate5 ../Gui/dlgPopupMsg.py ../Gui/dlgPopupMsgUI.py ../Gui/dlgPopupMsgUI.ui -ts checkEmail_dlgPopupMsg_ru.ts
+pylupdate5 ../Gui/fMain.py ../Gui/fMainUI.py ../Gui/fMainUI.ui -ts checkEmail_fMain_ru.ts
+history |grep pyrcc5
+pyrcc5 resources.qrc -o resources_rc.py
+pyinstaller CheckEmail.spec 
+pyuic5 fMainUI.ui -o fMainUI.py
+pyinstaller CheckEmail.spec 
+sudo apt update && sudo apt upgrade 
+sudo apt autoremove 
+sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget
+cd Python3.7.4_build/
+sudo make altinstall
+ll
+cd Python-3.7.3/
+sudo make altinstall
+python
+python3
+python3.7
+which python3.7
+which python3
+which python2
+pyinstaller CheckEmail.spec 
+python3
+python3.7
+python3.7 -m pip3 install selenium
+python3.7 -m pip install selenium
+python3.7 -m pip install --upgrade pip
+sudo python3.7 -m pip install --upgrade pip
+sudo python3 -m pip install --upgrade pip
+pip3 --help
+python --help
+pyuic5 fMainUI.ui -o fMainUI.py
+pyuic5 dlgAboutUI.ui -o dlgAboutUI.py
+pyuic5 dlgPopupMsgUI.ui -o dlgPopupMsgUI.py
+pyuic5 dlgAddEmailboxUI.ui -o dlgAddEmailboxUI.py
+pyuic5 dlgEditEmailboxUI.ui -o dlgEditEmailboxUI.py
+pyinstaller CheckEmail.spec 
+pyuic5 fMainUI.ui -o fMainUI.py
+pyinstaller CheckEmail.spec 
+killall deadbeef 
+killall deadbeef-gtkui

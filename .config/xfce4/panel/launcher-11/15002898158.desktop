@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Qt Linguist 5.8.0
+Comment=Qt Linguist 5.8.0
+Exec=/home/alexander/Qt5.8.0/5.8/gcc_64/bin/linguist
+Icon=linguist-qt4
+Path=
+Terminal=false
+StartupNotify=false

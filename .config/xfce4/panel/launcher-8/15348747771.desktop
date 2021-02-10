@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Switching Ctr <-> CapsLock
+Comment=Switching between Ctrl and CapsLock
+Exec=/home/alexander/.myScripts/on-off_swapCtrCaps.sh
+Icon=/home/alexander/Pictures/Logo/letter_A.png
+Path=
+Terminal=false
+StartupNotify=false

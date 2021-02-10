@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Shape Collage
+Comment=Create collage
+Exec='/home/alexander/Programs/Shape Collage/Shape Collage'
+Icon=gtk3-icon-browser
+Path=
+Terminal=false
+StartupNotify=false
