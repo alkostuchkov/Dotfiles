@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Service
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+MimeType=inode/directory;
+Actions=openTerminalHere;
+X-KDE-AuthorizeAction=shell_access
+
+[Desktop Action openTerminalHere]
+TryExec=terminator
+Exec=terminator -m --working-directory %f
+Name=Open Terminator Here
+Comment=Opens a terminator at the current folder
+Icon=terminator

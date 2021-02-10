@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Pale Moon (discrete graphics)
+GenericName=Pale Moon (discrete graphics)
+Icon=palemoon
+Exec=/home/alexander/.myScripts/runPaleMoonDiscreteGr.sh
+NoDisplay=false
+Categories=Discrete Graphics Launchers;
+Keywords=DRI_PRIME=1
+StartupNotify=false
+Terminal=false

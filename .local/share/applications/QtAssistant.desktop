@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/alexander/Qt5.8.0/5.8/gcc_64/bin/assistant
+Name=Qt Assistant
+GenericName=The IDE of choice for Qt development.
+Comment=Qt Assistant 5.8.0
+Keywords=Qt Assistant
+Icon=QtProject-qtcreator
+Terminal=false
+Categories=Development
+NoDisplay=false

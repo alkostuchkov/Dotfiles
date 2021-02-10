@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Virtual Machine Manager (Discrete Graphics)
+Name[ru]=Менеджер виртуальных машин
+Comment=Manage virtual machines (Discrete Graphics)
+Icon=virt-manager
+Exec=/home/alexander/.myScripts/runVirtManagerDiscreteGr.sh
+Type=Application
+NoDisplay=false
+Categories=Discrete Graphics Launchers;
+Keywords=DRI_PRIME=1
+StartupNotify=false
+Terminal=false
+

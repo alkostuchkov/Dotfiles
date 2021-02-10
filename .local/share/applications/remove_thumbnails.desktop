@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=remove_thumbnails
+Comment=Free up disk space
+Exec=sh /home/alexander/.myScripts/remove_thumbnails.sh
+Icon=list-remove-all
+Terminal=false
+StartupNotify=false

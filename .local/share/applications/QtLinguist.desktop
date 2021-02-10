@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/alexander/Qt5.8.0/5.8/gcc_64/bin/linguist
+Name=Qt Linguist
+GenericName=The IDE of choice for Qt development.
+Comment=Qt Linguist 5.8.0
+Keywords=Qt Linguist
+Icon=QtProject-qtcreator
+Terminal=false
+Categories=Development
+NoDisplay=false

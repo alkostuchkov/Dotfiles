@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Brave Browser(discrete graphics)
+GenericName=Brave Browser(discrete graphics)
+Icon=brave-browser
+Exec=/home/alexander/.myScripts/runBraveBrowserDiscreteGr.sh
+NoDisplay=false
+Categories=DiscreteGraphics;
+Keywords=DRI_PRIME=1
+StartupNotify=false
+Terminal=false

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Mount - Unmount Google Drive auto
+GenericName=Mount - Unmount Google Drive auto
+Icon=/home/alexander/Pictures/Logo/Google/google-drive-512.png
+Exec=/home/alexander/.myScripts/mountUnmountGoogleDrive_auto.sh
+NoDisplay=false
+Categories=Discrete Graphics Launchers;
+StartupNotify=false
+Terminal=false

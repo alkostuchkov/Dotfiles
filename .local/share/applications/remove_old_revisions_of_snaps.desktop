@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=remove_old_revisions_of_snaps
+Comment=Free up disk space
+Exec=gksu sh /home/alexander/.myScripts/remove_old_revisions_of_snaps.sh
+Icon=accessories-system-cleaner
+Terminal=false
+StartupNotify=false

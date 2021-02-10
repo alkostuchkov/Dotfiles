@@ -1,0 +1,12 @@
+[Desktop Entry]
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+X-KDE-Priority=TopLevel
+Type=Service
+MimeType=all/allfiles
+Actions=EditIn
+ 
+[Desktop Action EditAsRoot]
+Name=Edit as root
+Name[ru]=Редактировать под root
+Icon=gvim
+Exec=pkexec gvim -p %F

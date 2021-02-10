@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Viber
+Comment=Viber messanger
+Exec=/home/alexander/Programs/Viber/viber.AppImage
+Icon=viber
+Terminal=false
+Type=Application
+Categories=Chat;Network;InstantMessaging
+MimeType=x-scheme-handler/tg;
+Keywords=chat;im;messaging;messenger;sms;
+X-GNOME-UsesNotifications=true

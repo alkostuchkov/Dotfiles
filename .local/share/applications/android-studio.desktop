@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Android Studio
+Icon=/home/alexander/Programs/Android-Studio/bin/studio.png
+Exec="/home/alexander/Programs/Android-Studio/bin/studio.sh" %f
+Comment=Develop Android Applications
+Categories=Development;IDE;
+Terminal=false

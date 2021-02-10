@@ -1,0 +1,11 @@
+[Desktop Entry]
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+X-KDE-Priority=TopLevel
+Type=Service
+MimeType=text/*
+Actions=EditFromRoot
+ 
+[Desktop Action EditFromRoot]
+Name=Edit from root
+Name[ru]=Править от рута
+Exec=konsole -e sudo nano -w %U 

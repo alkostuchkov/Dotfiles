@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0.0
+Type=Application
+Name=PhoneBook
+Icon=/home/alexander/Programs/PhoneBook/appIcon.png
+# Icon=/home/alexander/Programs/PhoneBook/appIcon.ico
+Exec=/home/alexander/Programs/PhoneBook/PhoneBook
+Path=/home/alexander/Programs/PhoneBook/
+Comment=The telephone book
+GenericName=The PhoneBook
+Keywords=The PhoneBook
+Categories=Office
+Terminal=false
+NoDisplay=false

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+NoDisplay=true
+Exec=/home/alexander/Programs/FirefoxBeta/firefox-bin %u
+Icon=/home/alexander/Programs/FirefoxBeta/browser/chrome/icons/default/default128.png
+# Icon=firefox
+Name=Firefox
+Comment=Custom definition for Firefox

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Вкл-Выкл Conky
+GenericName=Вкл-Выкл Conky
+Icon=process-stop
+Exec=/home/alexander/.myScripts/on-off_conky.sh
+NoDisplay=false
+Categories=Discrete Graphics Launchers;
+StartupNotify=false
+Terminal=false

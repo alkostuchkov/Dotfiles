@@ -1,0 +1,34 @@
+[Desktop Entry]
+Name=Avidemux
+# Exec=/home/alexander/Programs/AppImageApplications/Avidemux.appImage
+Exec="/home/alexander/.myScripts/runAvidemuxDiscreteGr.sh"
+Icon=/home/alexander/Pictures/Logo/avidemux.png
+# Icon=avidemux
+# Icon=appimagekit_e19af7fbfed84471fb52092b5dff6ccb_avidemux
+Type=Application
+Categories=AudioVideo;AudioVideoEditing;Video;
+MimeType=video/mpeg;video/x-mpeg;video/mp4;video/x-m4v;video/quicktime;video/3gp;video/mkv;video/x-matroska;video/webm;video/flv;video/x-flv;video/dv;video/x-msvideo;video/x-ms-wmv;video/x-ms-asf;video/x-anim;
+
+# TryExec=/home/alexander/Programs/AppImageApplications/Avidemux.AppImage
+X-AppImage-Old-Icon=avidemux.png
+X-AppImage-Identifier=e19af7fbfed84471fb52092b5dff6ccb
+Actions=Remove;
+X-AppImageLauncher-Version=2.2.0 (git commit 48662df), built on 2020-11-08 18:57:10 UTC
+
+[Desktop Action Remove]
+Name=Delete this AppImage
+Icon=AppImageLauncher
+Exec=/usr/lib/x86_64-linux-gnu/appimagelauncher/remove "/home/alexander/Programs/AppImageApplications/avidemux.appImage"
+Name[ast]=Desaniciar AppImage del sistema
+Name[cs]=Odebrat AppImage ze systému
+Name[de]=Dieses AppImage löschen
+Name[en]=Delete this AppImage
+Name[es]=Eliminar Appimage del Sistema
+Name[fr]=Supprimer l'AppImage du système
+Name[it]=Rimuovi AppImage dal sistema
+Name[nl]=AppImage deïnstalleren
+Name[pl]=Usuń AppImage z systemu
+Name[pt]=Remover AppImage do sistema
+Name[pt_BR]=Remover AppImage do sistema
+Name[ru]=Удалить AppImage из системы
+Name[zh_Hans]=从系统中移除 AppImage

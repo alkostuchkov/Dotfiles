@@ -1,0 +1,12 @@
+[Desktop Entry]
+X-KDE-ServiceTypes=KonqPopupMenu/Plugin
+X-KDE-Priority=TopLevel
+Type=Service
+MimeType=text/*
+Actions=EditIn
+ 
+[Desktop Action EditIn]
+Name=Edit in Emacs
+Name[ru]=Редактировать в Emacs
+Icon=emacs
+Exec=emacs -w %U 

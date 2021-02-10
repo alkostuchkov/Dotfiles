@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Name=Sublime Text
+Icon=sublime_text.png
+Path=/
+Exec=/opt/sublime_text/sublime_text
+StartupNotify=false
+StartupWMClass=Sublime_text
+OnlyShowIn=Unity;
+X-UnityGenerated=true
+Categories=Development

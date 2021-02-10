@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=BookletForEpsonXP-100 (Qt)
+Comment=Calculate pages for Epson XP-100
+GenericName=Booklet For Epson XP-100
+Keywords=Booklet For Epson XP-100
+Exec=/home/alexander/Programs/BookletForEpsonXP-100(Qt)/BookletForEpsonXP-100
+Terminal=false
+Type=Application
+Icon=/home/alexander/Programs/BookletForEpsonXP-100(Qt)/booklet_1.png
+Categories=Office
+NoDisplay=false

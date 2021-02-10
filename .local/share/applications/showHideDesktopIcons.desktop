@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Show-Hide xfce4 Desktop Icons
+GenericName=Show-Hide xfce4 Desktop Icons
+Icon=preferences-desktop-icons
+Exec=/home/alexander/.myScripts/showHideDesktopIcons.sh
+NoDisplay=false
+Categories=Discrete Graphics Launchers;
+StartupNotify=false
+Terminal=false

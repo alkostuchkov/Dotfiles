@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Evans Debugger
+Comment=Evans Debugger like OllyDbg
+GenericName=Evans Debugger (GenericName)
+Keywords=Script ConkyOnOff
+Exec=/home/alexander/forProgramming/ASM/ANYasm/edb_EvansDebugger_run/edb_EvansDebugger/edb
+Terminal=false
+Type=Application
+Icon=kdevelop.png
+Categories=Development
+NoDisplay=false

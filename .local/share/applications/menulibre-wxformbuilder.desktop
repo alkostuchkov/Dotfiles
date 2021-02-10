@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=wxFormBuilder
+NoDisplay=true
+Comment=wxFormBuilder
+Icon=/home/alexander/Pictures/Logo/wxFormBuilder.png
+Exec=flatpak run org.wxformbuilder.wxFormBuilder
+Actions=
+Categories=Development;X-XFCE;X-Xfce-Toplevel;

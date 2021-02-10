@@ -1,0 +1,24 @@
+[Added Associations]
+application/vnd.debian.binary-package=gdebi-gtk.desktop;
+application/wps-office.xls=wps-office-et.desktop;libreoffice-calc.desktop;
+application/x-designer=DigiaQt-qtcreator-community.desktop;sublime_text.desktop;geany.desktop;emacs24.desktop;emacs24-term.desktop;
+application/x-desktop=gvim.desktop;sublime_text.desktop;geany.desktop;vim.desktop;panel-desktop-handler.desktop;code.desktop;mousepad.desktop;
+application/x-shellscript=sublime_text.desktop;geany.desktop;emacs24.desktop;emacs24-term.desktop;
+application/x-wine-extension-ini=gvim.desktop;sublime_text.desktop;geany.desktop;mousepad.desktop;
+application/xml=sublime_text.desktop;emacs24.desktop;emacs24-term.desktop;geany.desktop;chromium.desktop;google-chrome.desktop;
+image/jpeg=eom.desktop;gimp.desktop;ristretto.desktop;display-im6.q16.desktop;
+image/png=eom.desktop;gimp.desktop;ristretto.desktop;display-im6.q16.desktop;
+image/vnd.microsoft.icon=eom.desktop;gimp.desktop;display-im6.q16.desktop;
+text/plain=gvim.desktop;vim.desktop;geany.desktop;sublime_text.desktop;mousepad.desktop;
+text/x-python=gvim.desktop;sublime_text.desktop;geany.desktop;vim.desktop;idle.desktop;mousepad.desktop;code.desktop;
+video/mp4=smplayer.desktop;vlc.desktop;smplayer_enqueue.desktop;mplayer.desktop;
+
+[Default Applications]
+x-scheme-handler/tg=telegramdesktop.desktop
+x-scheme-handler/viber=viber.desktop
+
+[Removed Associations]
+application/x-designer=chromium.desktop;wine-extension-xml.desktop;wine-extension-txt.desktop;
+application/x-shellscript=wine-extension-txt.desktop;
+application/x-wine-extension-ini=wine-extension-ini.desktop;
+text/plain=libreoffice-writer.desktop;cr3.desktop;wine-extension-txt.desktop;

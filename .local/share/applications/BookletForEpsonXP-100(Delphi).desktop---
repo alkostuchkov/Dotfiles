@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=BookletForEpsonXP-100 (Delphi)
+Comment=Calculate pages for Epson XP-100
+GenericName=Booklet For Epson XP-100
+Keywords=Booklet For Epson XP-100
+Exec=/home/alexander/Projects/Lazarus/BookletForEpsonXP-100_onlyRange/Booklet_for_EsonXP100
+Terminal=false
+Type=Application
+# Icon=document-print-direct.png
+Icon=/home/alexander/Programs/BookletForEpsonXP-100(Qt)/booklet_1.png
+Categories=Office
+NoDisplay=false

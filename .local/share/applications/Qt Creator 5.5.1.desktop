@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Qt Creator 5.5.1
+GenericName=Qt Creator 5.5.1
+Icon=qtcreator
+Exec=/home/alexander/Qt5.5.1/Tools/QtCreator/bin/qtcreator -stylesheet=/home/alexander/.config/QtProject/+Themes/Qt-Creator-Darcula-master/darcula.css
+NoDisplay=false
+Categories=Development;
+Keywords=Qt Creator 5.5.1
+StartupNotify=false
+Terminal=false

@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Run Kivy-examples
+Comment=Run Kivy-examples
+Exec=/home/alexander/.myScripts/run_kivy-examples.sh
+Icon=/home/alexander/Pictures/Logo/kivy-logo-black-256.png
