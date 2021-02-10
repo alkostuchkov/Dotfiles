@@ -1,0 +1,19 @@
+# Это файл конфигурации пользователя Git.
+[user]
+# Пожалуйста, адаптируйте и раскомментируйте следующие строки:
+#	user = alkostuchkov
+#	email = alkostuchkov@gmail.com
+[user]
+	name = alkostuchkov
+	email = alkostuchkov@gmail.com
+[core]
+	editor = vim
+	excludesFile = /home/alexander/.gitignore
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	logda = log --oneline --graph --decorate --all
+[init]
+	defaultBranch = master

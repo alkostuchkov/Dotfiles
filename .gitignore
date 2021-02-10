@@ -1,0 +1,16 @@
+# Directories and files that cannot be commited to git
+
+# Logs
+*.log
+
+# Editors
+.idea
+.vscode
+
+#  Temp / Cache
+cache
+.cache
+temp
+.temp
+
+
