@@ -1,0 +1,21 @@
+    override_utf8_locale yes # форсируем UFT-8 локаль (нужно для xft)  
+    use_xft yes # используем xft  
+##    xftfont DejaVu Sans:size=12 # хороший шрифт, требуется ttf-dejavu  
+    xftalpha 0.5 # коэффциент прозрачности  
+    update_interval 1.0 # частота обновления (на самом деле период)  
+    own_window yes  
+##    own_window_type desktop  
+    own_window_transparent yes
+    own_window_type dock #panel ##override
+    own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager  
+    double_buffer yes # двойная буферизация  
+    minimum_size 1364 2 # минимальный размер (ширина экрана 1280 пикселей)
+    draw_shades no # отключаем тень  
+    alignment top_middle ##top_left # расположение сверху слева  
+    gap_x 0 # начальные координаты: X  
+    gap_y 1 # начальные координаты: Y 
+    xftfont BauhausC Medium:size=13
+    #xftfont BauhausC-Medium:size=12
+    draw_shades yes 
+    TEXT # выводимая информация  
+${voffset 1} ${color grey}cpu1: ${color white} ${cpu cpu1}% ${color red}| ${color grey}cpu2: ${color white} ${cpu cpu2}% ${color red}| ${color grey}Mem: ${color white}${memperc}% ${color red}| ${color grey}IP: ${color white}${exec cat /home/inetStatus.txt}${color red} | ${color grey}Down: ${color white}${totaldown wlan0}  ${downspeed wlan0} /s ${color red} | ${color grey}Up: ${color white}${totalup wlan0}  ${upspeed wlan0} /s ${color red} | ${color grey}Top: ${color white}${top name 1}${TOP pid 1} ${top cpu 1}${top mem 1}${alignr}${time %r} ${color red} | ${color grey}${color white}${time %a %e %b %G}

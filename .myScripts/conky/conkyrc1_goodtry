@@ -1,0 +1,97 @@
+conky.config = {
+    alignment = 'top_right',  -- ok
+    background = true,  -- ok
+    border_width = 1,  -- (толщина границы окна в пикселах)
+    cpu_avg_samples = 2,
+    default_color = 'orange',  -- ok
+    default_outline_color = 'grey90',  -- ok
+    default_shade_color = 'white',
+    double_buffer = true,  -- reduces flicker, may not work for everyone (устраняет нежелательное мерцание окна)
+    draw_borders = false,  -- ok
+    draw_graph_borders = true,
+    draw_outline = false,  -- Text stuff (прорисовка линий по контуру текста и границы вокруг текста)
+    draw_shades = true,  -- (прорисовка тени под текстом)
+    extra_newline = false,
+    font = 'BauhausC Medium:size=13',
+    -- Gap between borders of screen and text (расстояния от левого\правого (верхнего\нижнего) края экрана в пикселах)
+    gap_x = 60,  -- 7
+    gap_y = 60,  -- 18
+    -- Minimum/Maximum size of text area (минимальный/максимальный размер окна)
+    minimum_height = 5,
+    minimum_width = 5,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_ncurses = false,
+    out_to_stderr = false,
+    out_to_x = true,
+--    override_utf8_locale = true,  -- NO in the example
+    own_window = true,  -- ok
+    own_window_class = 'Conky',  -- ok
+--    own_window_hints = undecorated,below,skip_taskbar,sticky,skip_pager,  -- NO in the example
+    own_window_transparent =true,  -- own_window_colour black (прозрачность вывода окна conky yes/no) 
+    own_window_type = 'desktop',  -- ok
+    show_graph_range = false,
+    show_graph_scale = false,
+    stippled_borders = 0,  -- Stippled borders? (рамка вокруг conky (если есть) пунктиром или нет)
+    update_interval = 1.0,  -- ok
+    uppercase = false,  -- set to yes if you want all text to be in uppercase (вывод текста в верхнeм регистре)
+    -- fiddle with window oboje yes (сглаживание шрифтов)
+    use_spacer = 'right',  -- ok
+    use_xft = true,  -- ok
+    xftalpha = 1
+}
+
+conky.text = [[
+${color white}${hr 2}
+${color white}${alignc}${time %A, %e %B %G}
+
+${color white}${font neuropol x free:size=30}${alignc}${time %H:%M:%S}${font}
+${voffset -9}
+${color white}${font OpenLogos:size=30}${alignc}J${font OpenLogos:size=35}^${font}
+${voffset -30}
+${hr 2}
+${voffset 2}${color}${font StyleBats:size=12}O ${font}${color white}Uptime: ${color }$uptime
+${color}${font StyleBats:size=12}Q ${font}${color white}Kernel: ${color }$kernel
+${color}${font StyleBats:size=12}9 ${font}${color white}Local: ${color }${addr wlo1}
+##${color}${font StyleBats:size=12}Z ${font}${color white}Internet: ${color }${exec cat /home/inetStatus.txt}
+${color}${font StyleBats:size=12}Z ${font}${color white}Internet: ${color }${execpi 30 ~/.myScripts/conky/get_ip.py}
+${color}${font StyleBats:size=12}2 ${font}${color white}CPU: ${color }${execi 1 sensors | grep 'high' | cut -c 15-22}
+#${color white}${hr 2}
+${voffset -2}
+${color white}CPU 1: ${color}$font${cpu cpu1}% $alignr${color white}CPU 2: ${color}$font${cpu cpu2}%
+${color white}${cpubar cpu1 3,147 FFFFFF FFFFFF}$alignr${cpubar cpu2 3,147 FFFFFF FFFFFF}
+${voffset -7}
+${color}${font PizzaDude Bullets:size=12}4 ${font}${color white}Top 5                      PID     CPU% RAM%
+${color}${top name 1} ${alignr}${TOP pid 1}   ${top cpu 1}   ${top mem 1}
+${color white}${top name 2} ${alignr}${TOP pid 2}   ${top cpu 2}   ${top mem 2}
+${top name 3} ${alignr}${TOP pid 3}   ${top cpu 3}   ${top mem 3}
+${top name 4} ${alignr}${TOP pid 4}   ${top cpu 4}   ${top mem 4}
+${top name 5} ${alignr}${TOP pid 5}   ${top cpu 5}   ${top mem 5}
+
+${color white}RAM:  ${color} $memperc%  $mem/ $memmax
+${color white}${membar 3,300}
+${color white}SWAP: ${color } $swapperc%  $swap/ $swapmax
+${color white}${swapbar 3,300}
+
+${color white}Root:    ${color }${fs_used /}/ ${fs_free /}/ ${fs_size /}
+${color white}${fs_bar 3,300 /}
+${color white}Home:    ${color }${fs_used /home}/ ${fs_free /home}/ ${fs_size /home}
+${color white}${fs_bar 3,300 /home}
+${voffset 6}${color}${font PizzaDude Bullets:size=12}S${font}  ${color white}Download: ${color }${totaldown wlo1}
+${voffset 1}${color}${font PizzaDude Bullets:size=12}r${font}  ${color white}Input: ${color } ${downspeed wlo1}/s ${alignr}${downspeedgraph wlo1 10,130 FFFFFF FFFFFF}
+
+${color}${font PizzaDude Bullets:size=12}M${font}  ${color white}Upload: ${color }${totalup wlo1}
+${voffset 1}${color}${font PizzaDude Bullets:size=12}v${font}  ${color white}Output: ${color }${upspeed wlo1} /s ${alignr}${upspeedgraph wlo1 10,130 FFFFFF FFFFFF}
+${color white}${hr 2}
+]]
+
+--${image ~/.myScripts/conky/gmail.png -p 1,646 -s 30x30}${font}${color white}${goto 20}${offset 20}${voffset -15} Gmail: ${alignr}${color}${execpi 600 ~/.myScripts/conky/gmail.py}
+
+--${image ~/.myScripts/conky/ymail.png -p 1,680 -s 30x30}${font}${color white}${goto 20}${offset 20}${voffset 1} Ymail: ${alignr}${color}${execpi 600 ~/.myScripts/conky/ymail.py}
+--${color white}${hr 2}
+--${voffset -5}
+--#Громкость
+--#${voffset -1}${color white}Громкость:  ${color white}${execibar 10 /home/volume.sh}
+--${color}${font StyleBats:size=12}Z ${font}${color white}Internet: ${color }${exec cat /home/inetStatus.txt}
+

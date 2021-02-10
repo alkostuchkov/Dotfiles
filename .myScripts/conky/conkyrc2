@@ -1,0 +1,27 @@
+conky.config = {
+    alignment = 'top_left', --top_middle # расположение сверху слева
+    override_utf8_locale = true, -- форсируем UFT-8 локаль (нужно для xft)
+    use_xft = true, -- используем xft
+    xftalpha = 1, -- коэффциент прозрачности
+    update_interval = 1.0, -- частота обновления (на самом деле период)
+    background = true,
+    own_window = true,
+    own_window_transparent = true,
+    own_window_type = 'override',  --'panel', --'dock', --normal --dock #panel ##override #desktop
+    own_window_hints = undecorated,below,sticky,skip_taskbar,skip_pager,
+    double_buffer = true, -- двойная буферизация
+--    minimum_size = 1364, --2 -- минимальный размер (ширина экрана 1280 пикселей)
+    minimum_height = 5,
+--    minimum_width = 1310, --1364, --1293 (for leftPanel)
+    minimum_width = 1360, --1293 (for leftPanel)
+    gap_x = 3, -- начальные координаты: X  72 (for leftPanel)
+    gap_y = 748, --1, -- начальные координаты: Y
+--    gap_y = 6, --1, -- начальные координаты: Y
+    font = 'BauhausC Medium:size=13',
+--    font = 'Ubunt:size=13',
+    draw_shades = true
+}
+-- {time %r} %r=AM/PM formats
+conky.text = [[
+${color grey}cpu1: ${color white} ${cpu cpu1}% ${color red}| ${color grey}cpu2: ${color white} ${cpu cpu2}% ${color red}| ${color grey}Mem: ${color white}${memperc}% ${color red}| ${color grey}IP: ${color white}${execpi 15 ~/.myScripts/conky/get_ip.py}${color red} | ${color grey}Down: ${color white}${totaldown wlo1}  ${downspeed wlo1} /s ${color red} | ${color grey}Up: ${color white}${totalup wlo1}  ${upspeed wlo1} /s ${color red} | ${color grey}Top: ${color white}${top name 1}${TOP pid 1} ${alignr}${color grey} cpu: ${color white}${execi 1 sensors | grep 'high' | cut -c 15-23}${color red} | ${color grey}${color white}${time %a, %e %b %H:%M:%S}
+]]
