@@ -11,7 +11,7 @@ CustomCursorColor=89,111,118
 UseCustomCursorColor=false
 
 [General]
-Name=MyProfile
+Name=OperatorMono
 Parent=FALLBACK/
 TerminalColumns=100
 TerminalRows=30

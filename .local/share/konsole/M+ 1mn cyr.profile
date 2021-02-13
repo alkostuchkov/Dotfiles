@@ -6,7 +6,7 @@ Font=M+ 1mn,15,-1,5,50,0,0,0,0,0,regular
 UseFontLineChararacters=false
 
 [General]
-Name=Profile 1
+Name=M+ 1mn cyr
 Parent=FALLBACK/
 
 [Scrolling]
