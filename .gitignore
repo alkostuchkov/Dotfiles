@@ -12,5 +12,6 @@ cache
 .cache
 temp
 .temp
+__pycache__
 
 
