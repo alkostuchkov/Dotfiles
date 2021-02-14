@@ -1,5 +1,0 @@
-import requests
--. . -..- - / . -. - .-. -.--
-dir(requests)
--. . -..- - / . -. - .-. -.--
-exit()

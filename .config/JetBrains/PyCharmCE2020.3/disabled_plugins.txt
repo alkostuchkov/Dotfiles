@@ -1,4 +1,0 @@
-
-com.4lex4.intellij.solarized
-com.tylerthrailkill.intellij.solarized
-org.intellij.plugins.markdown
