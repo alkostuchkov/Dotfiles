@@ -1,0 +1,16 @@
+{
+    "coord":{"lon":30.9754,"lat":52.4345},
+    "weather":[{"id":601,"main":"Snow","description":"снег","icon":"13d"}],
+    "base":"stations",
+    "main":{"temp":-12.11,"feels_like":-20.38,"temp_min":-12.22,"temp_max":-12,"pressure":1008,"humidity":79},
+    "visibility":4500,
+    "wind":{"speed":7,"deg":360,"gust":11},
+    "snow":{"1h":0.37},
+    "clouds":{"all":90},
+    "dt":1613122047,
+    "sys":{"type":1,"id":8933,"country":"BY","sunrise":1613107090,"sunset":1613142161},
+    "timezone":10800,
+    "id":627907,
+    "name":"Gomel’",
+    "cod":200
+}
