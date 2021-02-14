@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE khotnewstuff3>
+<hotnewstuffregistry>
+ <stuff category="102">
+  <name>Open Tilix Here (Like open konsole here)</name>
+  <providerid>https://api.kde-look.org/ocs/v1/</providerid>
+  <author>faddyy</author>
+  <homepage>https://store.kde.org/p/1239259</homepage>
+  <licence></licence>
+  <version>0.1</version>
+  <rating>66</rating>
+  <downloads>1283</downloads>
+  <installedfile>/home/alexander/.var/app/org.kde.dolphin/data/servicemenu-download//openTilixHere.desktop</installedfile>
+  <id>1239259</id>
+  <releasedate>2018-06-05</releasedate>
+  <summary>Open Tilix Here is a service menu for opening the tilix terminal emulator in the active directory.&lt;br />
+&lt;br />
+to install just put the downloaded file in ~/.local/share/kservices5/ServiceMenus (create it if it doesn't exist) and you're good to go!</summary>
+  <changelog></changelog>
+  <preview>https://cn.opendesktop.org/cache/100x100-0/img/b/b/2/2/6ac085b14febd5faaa31765d8ea59a5b10bd.png</preview>
+  <previewBig>https://cn.opendesktop.org/cache/770x540-0/img/b/b/2/2/6ac085b14febd5faaa31765d8ea59a5b10bd.png</previewBig>
+  <payload>https://dllb2.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE1MjgyNDQxMDYiLCJvIjoiMSIsInMiOiJlY2RiZDY3ODFiZTMyNDYwYTlkYTMyZjA3NjBkNzMyOGEwZDVlNjFlZTRkMWEwZWU3ZjUxNDk3MmM5ZDcyYzZmNjViZjc3MGI4MTk5ZWY1NDY1MTExYWQ0YzZlOTlmYzVjMGI3Y2IxMDkyMGU3ZmZlODMwNTg2YTJlODU0NGZiOCIsInQiOjE1OTMwMzAyMTYsInN0ZnAiOm51bGwsInN0aXAiOiI0Ni41Ni42NS42In0.-6TxRvxIWFeK6Nj_5st2kAagRkZbClJHW8YQ8jA5Nog/openTilixHere.desktop</payload>
+  <tags>mit-license,tilix,emulators,terminals,konsole,addon</tags>
+  <status>installed</status>
+ </stuff>
+</hotnewstuffregistry>
