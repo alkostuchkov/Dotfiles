@@ -41,8 +41,9 @@ def which_netiface_upped(netifaces=[]):
 
 mod = "mod4"
 alt = "mod1"
+my_term = "alacritty"
 #  my_term = "terminator"
-my_term = "konsole"
+#  my_term = "konsole"
 my_font = "Ubuntu"
 my_nerd_font = "Ubuntu Nerd Font"
 my_mono_font = "Ubuntu Mono"
@@ -59,6 +60,7 @@ upped_netiface = which_netiface_upped(netifaces)
 keys = [
 # <SUPER> + FUNCTION KEYS
     Key([mod], "Return", lazy.spawn(my_term), desc="Launch terminal"),
+    Key([mod, "shift"], "Return", lazy.spawn("konsole"), desc="Launch konsole"),
     Key([mod], "Print", lazy.spawn("flameshot gui"), desc="Run flameshot (take screenshot)"),
     Key([mod], "w", lazy.spawn("firefox"), desc="Launch Firefox"),
     Key([mod], "u", lazy.spawn("qutebrowser"), desc="Launch qutebrowser"),
