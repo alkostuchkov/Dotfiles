@@ -384,19 +384,19 @@ c.aliases = {"q": "quit", "w": "session-save", "wq": "quit --save"}
 
 # Adblock
 #  print(str(config.configdir / 'config.py'))
-c.content.blocking.adblock.lists = [
-        "https://easylist.to/easylist/easylist.txt",
-        "https://easylist.to/easylist/easyprivacy.txt",
-        "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt",
-        "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2020.txt",
-        "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/legacy.txt",
-        "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
-        "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt",
-        "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt",
-        "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext&_=223428",
-        "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-social.txt",
-        "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt",
-        "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-unbreak.txt"]
+#  c.content.blocking.adblock.lists = [
+        #  "https://easylist.to/easylist/easylist.txt",
+        #  "https://easylist.to/easylist/easyprivacy.txt",
+        #  "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt",
+        #  "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2020.txt",
+        #  "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/legacy.txt",
+        #  "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
+        #  "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt",
+        #  "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt",
+        #  "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext&_=223428",
+        #  "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-social.txt",
+        #  "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt",
+        #  "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-unbreak.txt"]
 
 # Which cookies to accept. With QtWebEngine, this setting also controls
 # other features with tracking capabilities similar to those of cookies;
@@ -507,7 +507,7 @@ config.set("content.javascript.enabled", True, "chrome://*/*")
 config.set("content.javascript.enabled", True, "qute://*/*")
 
 
-# DT settings
+# DT's settings
 
 # Allow websites to show notifications.
 # Type: BoolAsk
@@ -707,12 +707,11 @@ c.fonts.default_family = "Ubuntu"
 # "px" suffix.
 # Type: String
 c.fonts.default_size = "12pt"
-#  c.fonts.default_size = "11pt"
 
 # Font used in the completion widget.
 # Type: Font
-#  c.fonts.completion.entry = "11pt "SauceCodePro Nerd Font""
 c.fonts.completion.entry = "12pt Ubuntu"
+#  c.fonts.completion.entry = "11pt "SauceCodePro Nerd Font""
 
 # Font used for the debugging console.
 # Type: Font
@@ -749,7 +748,6 @@ config.bind("J", ":tab-prev")
 config.bind("K", ":tab-next")
 #  config.unbind("f")
 #  config.bind(",f", ":hint")
-
 
 # Bindings for cycling through CSS stylesheets from Solarized Everything CSS:
 # https://github.com/alphapapa/solarized-everything-css
