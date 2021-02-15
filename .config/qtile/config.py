@@ -361,7 +361,8 @@ def init_widgets_list():
                     display_format=" {updates}",  # ⟳ 
                     fontsize=14,
                     no_update_string="No updates",
-                    execute=my_term + ' -e "sudo aptitude update && sudo aptitude safe-upgrade && $SHELL"',
+                    execute=my_term + " -e sudo apt update && sudo apt upgrade && $SHELL",
+                    #  execute=my_term + ' -e "sudo aptitude update && sudo aptitude safe-upgrade && $SHELL"',  # for terminator
                     update_interval=900  # 15min after cron's apt-update task
                     ),
             widget.Sep(
@@ -571,6 +572,7 @@ mouse = [
 
 floating_layout = layout.Floating(float_rules=[
     # Run the utility of `xprop` to see the wm class and name of an X client.
+    {"wname": "Preference"},  # Haroopad (md editor) 
     {"wname": "Terminator Preferences"}, 
     {"wname": "Close Button Action"},  # Tixati
     {"wmclass": "com-intellij-updater-Runner"},
