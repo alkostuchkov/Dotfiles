@@ -384,19 +384,19 @@ c.aliases = {"q": "quit", "w": "session-save", "wq": "quit --save"}
 
 # Adblock
 #  print(str(config.configdir / 'config.py'))
-#  c.content.blocking.adblock.lists = [
-        #  "https://easylist.to/easylist/easylist.txt",
-        #  "https://easylist.to/easylist/easyprivacy.txt",
-        #  "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt",
-        #  "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2020.txt",
-        #  "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/legacy.txt",
-        #  "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
-        #  "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt",
-        #  "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt",
-        #  "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext&_=223428",
-        #  "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-social.txt",
-        #  "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt",
-        #  "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-unbreak.txt"]
+c.content.blocking.adblock.lists = [
+        "https://easylist.to/easylist/easylist.txt",
+        "https://easylist.to/easylist/easyprivacy.txt",
+        "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt",
+        "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2020.txt",
+        "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/legacy.txt",
+        "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
+        "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt",
+        "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt",
+        "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext&_=223428",
+        "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-social.txt",
+        "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt",
+        "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-unbreak.txt"]
 
 # Which cookies to accept. With QtWebEngine, this setting also controls
 # other features with tracking capabilities similar to those of cookies;
