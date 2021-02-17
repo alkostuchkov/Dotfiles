@@ -1,8 +1,81 @@
-! Xft settings ----------------------------------------------------------------
+! Xresources-themes -----------------------------------------------------------
+#include "/home/alexander/Xresources-themes/iterm-Gruvbox_Dark.Xresources"
+! #include "/home/alexander/Xresources-themes/my-favourite-gruvbox-dark.Xresources"
+! #include "/home/alexander/Xresources-themes/base16-solarized-dark.Xresources"
+! #include "/home/alexander/Xresources-themes/nord.Xresources"
 
+! Xft settings ----------------------------------------------------------------
 Xft.dpi:        96
 Xft.antialias:  true
 Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.hintstyle:  hintslight
 
+! XTerm -----------------------------------------------------------------------
+XTerm*renderFont: true
+XTerm*faceName: xft:UbuntuMono Nerd Font, \
+                xft:Sarasa Mono SC Nerd, \
+                xft:Mononoki Nerd Font, \
+                xft:JoyPixels:size=14, \
+                xft:Monospace:style=Medium:size=14
+
+XTerm*faceSize: 16
+XTerm*utf8: 2
+XTerm*locale: true
+
+XTerm.vt100.translations: #override \n\
+  Ctrl <Key> j: smaller-vt-font() \n\
+  Ctrl <Key> k: larger-vt-font()
+
+XTerm*translations: #override \
+    Ctrl Shift <KeyPress> C: copy-selection(CLIPBOARD) \n\
+    Ctrl Shift <KeyPress> V: insert-selection(CLIPBOARD)
+! При выделении текста мышью, он переносится в буфер обмена
+XTerm*selectToClipboard: true
+
+! Every shell is a login shell by default (for inclusion of all necessary environment variables)
+XTerm*loginshell: true
+
+! I like a LOT of scrollback...
+XTerm*savelines: 16384
+
+! double-click to select whole URLs :D
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+!! COLORS (Gruvbox Dark)
+! *.foreground:   #ebdbb2
+! *.background:   #282828
+! *.cursorColor:  #ebdbb2
+!
+! ! black
+! *.color0:       #151515
+! *.color8:       #505050
+!
+! ! red
+! *.color1:       #cc241d
+! *.color9:       #cc241d
+!
+! ! green
+! *.color2:       #98971a
+! *.color10:      #98971a
+!
+! ! yellow
+! *.color3:       #d79921
+! *.color11:      #d79921
+!
+! ! blue
+! *.color4:       #458588
+! *.color12:      #458588
+!
+! ! magenta
+! *.color5:       #b16286
+! *.color13:      #b16286
+!
+! ! cyan
+! *.color6:       #689d6a
+! *.color14:      #689d6a
+!
+! ! white
+! *.color7:       #a89984
+! *.color15:      #ebdbb2
+ 
