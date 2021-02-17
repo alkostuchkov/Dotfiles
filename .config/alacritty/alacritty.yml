@@ -122,6 +122,7 @@ font:
     family: Sarasa Mono SC Nerd
 
     # The `style` can be specified to pick a specific face.
+    # style: Light
     style: Regular
 
   # Bold font face
@@ -164,6 +165,7 @@ font:
     family: Sarasa Mono SC Nerd
 
     # The `style` can be specified to pick a specific face.
+    # style: Light Italic
     style: Italic
 
   # Bold italic font face
@@ -220,7 +222,7 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (Tomorrow Night Bright)
+# Colors (Gruvbox dark)
 colors:
   # Default colors
   primary:
@@ -265,14 +267,14 @@ colors:
 
   # Bright colors
   bright:
-    black:   '0x151515'
+    black:   '0x505050'
     red:     '0xcc241d'
     green:   '0x98971a'
     yellow:  '0xd79921'
     blue:    '0x458588'
     magenta: '0xb16286'
     cyan:    '0x689d6a'
-    white:   '0xebdbb2'
+    white:   '0xa89984'
 
   # Dim colors
   #
