@@ -40,6 +40,7 @@
       <value type="string" value="xfce4-sensors-plugin"/>
       <value type="string" value="xfce4-settings-helper"/>
       <value type="string" value="xfdesktop"/>
+      <value type="string" value="yandex-disk-indicator"/>
     </property>
     <property name="muted_applications" type="array">
     </property>
