@@ -223,90 +223,90 @@ font:
 draw_bold_text_with_bright_colors: true
 
 ###############################################################################
-# Colors (Gruvbox dark)
-colors:
-  # Default colors
-  primary:
-    background: '#282828'
-    foreground: '#ebdbb2'
-
-    # Bright and dim foreground colors
-    #
-    # The dimmed foreground color is calculated automatically if it is not present.
-    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
-    # is `false`, the normal foreground color will be used.
-    #dim_foreground: '#9a9a9a'
-    #bright_foreground: '#ffffff'
-
-  # Cursor colors
-  #
-  # Colors which should be used to draw the terminal cursor. If these are unset,
-  # the cursor color will be the inverse of the cell color.
-  cursor:
-    text: '#282828'
-    cursor: '#ebdbb2'
-
-  # Selection colors
-  #
-  # Colors which should be used to draw the selection area. If selection
-  # background is unset, selection color will be the inverse of the cell colors.
-  # If only text is unset the cell text color will remain the same.
-  selection:
-    text: '#ebdbb2'
-    background: '#d45e5e'
-
-  # Normal colors
-  normal:
-    black:   '#151515'
-    red:     '#cc241d'
-    green:   '#98971a'
-    yellow:  '#d79921'
-    blue:    '#458588'
-    magenta: '#b16286'
-    cyan:    '#689d6a'
-    white:   '#ebdbb2'
-
-  # Bright colors
-  bright:
-    black:   '#505050'
-    red:     '#cc241d'
-    green:   '#98971a'
-    yellow:  '#d79921'
-    blue:    '#458588'
-    magenta: '#b16286'
-    cyan:    '#689d6a'
-    white:   '#a89984'
-
-###############################################################################
-
-# # Colors (Material)
+# # Colors (Gruvbox dark)
 # colors:
   # # Default colors
   # primary:
-    # background: '#263238'
-    # foreground: '#eeffff'
+    # background: '#282828'
+    # foreground: '#ebdbb2'
+#
+    # # Bright and dim foreground colors
+    # #
+    # # The dimmed foreground color is calculated automatically if it is not present.
+    # # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
+    # # is `false`, the normal foreground color will be used.
+    # #dim_foreground: '#9a9a9a'
+    # #bright_foreground: '#ffffff'
+#
+  # # Cursor colors
+  # #
+  # # Colors which should be used to draw the terminal cursor. If these are unset,
+  # # the cursor color will be the inverse of the cell color.
+  # cursor:
+    # text: '#282828'
+    # cursor: '#ebdbb2'
+#
+  # # Selection colors
+  # #
+  # # Colors which should be used to draw the selection area. If selection
+  # # background is unset, selection color will be the inverse of the cell colors.
+  # # If only text is unset the cell text color will remain the same.
+  # selection:
+    # text: '#ebdbb2'
+    # background: '#d45e5e'
 #
   # # Normal colors
   # normal:
-    # black:   '#000000'  # Arbitrary
-    # red:     '#e53935'
-    # green:   '#91b859'
-    # yellow:  '#ffb62c'
-    # blue:    '#6182b8'
-    # magenta: '#ff5370'  # Dark pink of the original material theme
-    # cyan:    '#39adb5'
-    # white:   '#a0a0a0'  # Arbitrary
+    # black:   '#151515'
+    # red:     '#cc241d'
+    # green:   '#98971a'
+    # yellow:  '#d79921'
+    # blue:    '#458588'
+    # magenta: '#b16286'
+    # cyan:    '#689d6a'
+    # white:   '#ebdbb2'
 #
   # # Bright colors
   # bright:
-    # black:   '#4e4e4e'  # Arbitrary
-    # red:     '#ff5370'
-    # green:   '#c3e88d'
-    # yellow:  '#ffcb6b'
-    # blue:    '#82aaff'
-    # magenta: '#f07178'  # Pink of the original material theme
-    # cyan:    '#89ddff'
-    # white:   '#ffffff'  # Arbitrary
+    # black:   '#505050'
+    # red:     '#cc241d'
+    # green:   '#98971a'
+    # yellow:  '#d79921'
+    # blue:    '#458588'
+    # magenta: '#b16286'
+    # cyan:    '#689d6a'
+    # white:   '#a89984'
+
+###############################################################################
+
+# Colors (Material)
+colors:
+  # Default colors
+  primary:
+    background: '#263238'
+    foreground: '#eeffff'
+
+  # Normal colors
+  normal:
+    black:   '#000000'  # Arbitrary
+    red:     '#e53935'
+    green:   '#91b859'
+    yellow:  '#ffb62c'
+    blue:    '#6182b8'
+    magenta: '#ff5370'  # Dark pink of the original material theme
+    cyan:    '#39adb5'
+    white:   '#a0a0a0'  # Arbitrary
+
+  # Bright colors
+  bright:
+    black:   '#4e4e4e'  # Arbitrary
+    red:     '#ff5370'
+    green:   '#c3e88d'
+    yellow:  '#ffcb6b'
+    blue:    '#82aaff'
+    magenta: '#f07178'  # Pink of the original material theme
+    cyan:    '#89ddff'
+    white:   '#ffffff'  # Arbitrary
 
 ###############################################################################
 
@@ -789,3 +789,4 @@ key_bindings:
   - { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
   - { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
   - { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }
+  - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
