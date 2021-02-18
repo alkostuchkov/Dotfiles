@@ -12,7 +12,7 @@ reboot
 shutdown")
 
 # choice=$(echo -e "${options[@]}" | dmenu -p 'System: ' -nb '#222B2E' -nf '#fea63c' -fn 'Ubuntu-R 12')
-choice=$(echo -e "${options[@]}" | dmenu -p 'System: ' -nb '#222B2E' -nf '#09DBC9' -sb '#009185' -fn 'Ubuntu-R 12')
+choice=$(echo -e "${options[@]}" | dmenu -p 'System: ' -nb '#222B2E' -nf '#09DBC9' -sb '#009185' -fn 'Ubuntu-18:normal')
 
 case $choice in
     lock)

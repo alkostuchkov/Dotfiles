@@ -94,7 +94,7 @@ keys = [
     Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
 
 # <SUPER> + <SHIFT> + KEYS  (-nf #fea63c)
-    Key([mod, "shift"], "d", lazy.spawn("dmenu_run -nb #222B2E -nf #09DBC9 -sb #009185 -p 'Run: ' -fn 'Ubuntu-R 12'"), desc="Run dmenu"),
+Key([mod, "shift"], "d", lazy.spawn("dmenu_run -nb #222B2E -nf #09DBC9 -sb #009185 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "x", lazy.spawn("xkill"), desc="Kill not answered window"),
     Key([mod, "shift"], "r", lazy.restart(), desc="Restart qtile"),
