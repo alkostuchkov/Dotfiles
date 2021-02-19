@@ -2,8 +2,8 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/alexander/.gtkrc-2.0.mine"
-gtk-theme-name="Klaus"
-gtk-icon-theme-name="Gruvbox"
+gtk-theme-name="Materia-Manjaro-gtk"
+gtk-icon-theme-name="Solarized-Cyan"
 gtk-font-name="Ubuntu 12"
 gtk-cursor-theme-name="Qogir-manjaro-dark"
 gtk-cursor-theme-size=0
