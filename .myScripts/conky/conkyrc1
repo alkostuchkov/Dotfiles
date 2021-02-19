@@ -42,8 +42,13 @@ conky.config = {
     border_width = 1,
 
     -- Default colors and also border colors, orange == #e5e5e5 (цвет выводимого текста и линий параметра draw_outline по-умолчанию)
-    default_color = 'orange',
-    default_outline_color = 'grey90',
+    --default_color = '#39adb5',  -- Manjaro Cyan
+    --default_color = '#e2a0a5',  -- Manjaro Magenta
+    --default_color = '#24D2AF',  -- Manjaro Green
+    default_color = '#ffb62c',  -- Manjaro Orange
+    --default_color = 'orange',
+    --default_outline_color = 'grey90',
+    default_outline_color = '#dbdcd5', -- Manjaro White
 
     -- own_window_colour black (прозрачность вывода окна conky yes/no)
     own_window_transparent =true,
