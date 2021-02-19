@@ -94,7 +94,9 @@ keys = [
     Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
 
 # <SUPER> + <SHIFT> + KEYS  (-nf #fea63c)
-Key([mod, "shift"], "d", lazy.spawn("dmenu_run -nb #222B2E -nf #09DBC9 -sb #009185 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),
+#  Key([mod, "shift"], "d", lazy.spawn("dmenu_run -nb #222B2E -nf #09DBC9 -sb
+#  #009185 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
+Key([mod, "shift"], "d", lazy.spawn("dmenu_run -nb #282828 -nf #d79921 -sb #fea63c -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Gruvbox
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "x", lazy.spawn("xkill"), desc="Kill not answered window"),
     Key([mod, "shift"], "r", lazy.restart(), desc="Restart qtile"),
@@ -226,8 +228,9 @@ for i, group_name in enumerate(group_names, 1):
 
 layout_theme = {"border_width": 3,
                 "margin": 5,
-                #  "border_focus": "e1acff",
-                "border_focus": "2eb398",
+                #  "border_focus": "2eb398",  # Materia Manjaro
+                #  "border_focus": "d79922",  # Gruvbox yellow
+                "border_focus": "fea63c",  # Gruvbox yellow (lighter)
                 "border_normal": "1d2330"
                 }
 
@@ -271,27 +274,43 @@ layouts = [
           #  ["#e1acff", "#e1acff"]] # window name
 
 # My colors
-colors = [["#222B2E", "#222B2E"], # 0 panel background
-          ["#585E72", "#585E72"], # 1 background for current screen tab
-          ["#DBDCD5", "#DBDCD5"], # 2 font color for group names
-          ["#009185", "#009185"], # 3 border line color for current tab
-          ["#8d62a9", "#8d62a9"], # 4 border line color for other tab and odd widgets
-          ["#668bd7", "#668bd7"], # 5 color for the even widgets
-          ["#24D2AF", "#24D2AF"], # 6 window name
-          ["#E2A0A5", "#E2A0A5"], # 7 CPU widget
-          ["#F2B06A", "#F2B06A"], # 8 Memory widget
-          ["#03DB25", "#03DB25"], # 9 NetSpeed widget
+#  colors = [["#222B2E", "#222B2E"], # 0 panel background
+          #  ["#585E72", "#585E72"], # 1 background for current screen tab
+          #  ["#DBDCD5", "#DBDCD5"], # 2 font color for group names
+          #  ["#009185", "#009185"], # 3 border line color for current tab
+          #  ["#8d62a9", "#8d62a9"], # 4 border line color for other tab and odd widgets
+          #  ["#668bd7", "#668bd7"], # 5 color for the even widgets
+          #  ["#24D2AF", "#24D2AF"], # 6 window name
+          #  ["#E2A0A5", "#E2A0A5"], # 7 CPU widget
+          #  ["#F2B06A", "#F2B06A"], # 8 Memory widget
+          #  ["#03DB25", "#03DB25"], # 9 NetSpeed widget
+          #  ["#ffffff", "#ffffff"], # 10 Layout widget
+          #  ["#55EBEA", "#55EBEA"], # 11 KeyboardLayout widget
+          #  ["#F3F008", "#F3F008"], # 12 Date widget
+          #  ["#404555", "#404555"], # 13 system tray
+          #  ["#F6F806", "#F6F806"]] # 14 updates
+
+# Gruvbox colors
+colors = [["#282828", "#282828"], # 0 panel background
+          ["#505050", "#505050"], # 1 background for current screen tab
+          ["#ebdbb2", "#ebdbb2"], # 2 font color for group names
+          ["#d79921", "#d79921"], # 3 border line color for current tab
+          ["#b16286", "#b16286"], # 4 border line color for other tab and odd widgets
+          ["#458588", "#458588"], # 5 color for the even widgets
+          ["#fea63c", "#fea63c"], # 6 window name
+          ["#cc241d", "#cc241d"], # 7 CPU widget
+          ["#98971a", "#98971a"], # 8 Memory widget
+          ["#689d6a", "#689d6a"], # 9 NetSpeed widget
           ["#ffffff", "#ffffff"], # 10 Layout widget
-          ["#55EBEA", "#55EBEA"], # 11 KeyboardLayout widget
-          ["#F3F008", "#F3F008"], # 12 Date widget
-          ["#404555", "#404555"], # 13 system tray
-          ["#F6F806", "#F6F806"]] # 14 updates
+          ["#458588", "#458588"], # 11 KeyboardLayout widget
+          ["#a89984", "#a89984"], # 12 Date widget
+          ["#282828", "#282828"], # 13 system tray
+          ["#d79921", "#d79921"]] # 14 updates
 
 ##### DEFAULT WIDGET SETTINGS #####
 widget_defaults = dict(
     font=my_font,
-    #  fontsize=14,
-    fontsize=12,
+    fontsize=13,
     padding=2,
     background=colors[2]
 )
@@ -342,9 +361,8 @@ def init_widgets_list():
                     ),
             widget.WindowName(
                     #  font=my_mono_bold_font,
-                    #  fontsize=16,
                     font=my_font,
-                    fontsize=13,
+                    fontsize=14,
                     show_state=False,
                     #  show_state=True,
                     foreground=colors[6],
@@ -355,7 +373,7 @@ def init_widgets_list():
                     foreground=colors[14],
                     background=colors[0],
                     colour_have_updates=colors[14],
-                    colour_no_updates="ffffff",
+                    #  colour_no_updates="ffffff",
                     custom_command="apt-show-versions --upgradeable",
                     #  custom_command="apt-show-versions | grep upgradeable | wc -l",
                     display_format=" {updates}",  # ⟳ 
