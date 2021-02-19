@@ -21,7 +21,7 @@ import os
 #  from qutebrowser.api import interceptor
 #
 #
-#  def filter_yt(info: interceptor.Request):
+#  def filter_yt(info: interceptor.request):
     #  url = info.request_url
     #  if (
             #  url.host() == "www.youtube.com"
@@ -567,7 +567,8 @@ c.url.searchengines = {"DEFAULT": "https://duckduckgo.com/?q={}", "ddg": "https:
 # Text color of the completion widget. May be a single color to use for
 # all columns or a list of three colors, one for each column.
 # Type: List of QtColor, or QtColor
-c.colors.completion.fg = ["#9cc4ff", "white", "white"]
+c.colors.completion.fg = ["#24d2af", "white", "white"]
+#  c.colors.completion.fg = ["#9cc4ff", "white", "white"]
 
 # Background color of the completion widget for odd rows.
 # Type: QssColor
@@ -579,7 +580,8 @@ c.colors.completion.even.bg = "#232429"
 
 # Foreground color of completion widget category headers.
 # Type: QtColor
-c.colors.completion.category.fg = "#e1acff"
+c.colors.completion.category.fg = "#f2b06a"
+#  c.colors.completion.category.fg = "#e1acff"
 
 # Background color of the completion widget category headers.
 # Type: QssColor
@@ -603,11 +605,13 @@ c.colors.completion.item.selected.bg = "#ecbe7b"
 
 # Foreground color of the matched text in the selected completion item.
 # Type: QtColor
-c.colors.completion.item.selected.match.fg = "#c678dd"
+c.colors.completion.item.selected.match.fg = "#ffb62c"
+#  c.colors.completion.item.selected.match.fg = "#c678dd"
 
 # Foreground color of the matched text in the completion.
 # Type: QtColor
-c.colors.completion.match.fg = "#c678dd"
+c.colors.completion.match.fg = "#ffb62c"
+#  c.colors.completion.match.fg = "#c678dd"
 
 # Color of the scrollbar handle in the completion view.
 # Type: QssColor
@@ -738,7 +742,7 @@ c.fonts.messages.error = "12pt Ubuntu"
 # Bindings for normal mode
 #  config.bind("M", "hint links spawn mpv {hint-url}")
 config.bind("M", "hint links spawn --detach mpv --force-window yes {hint-url}")
-config.bind("Z", "hint links spawn terminator -e youtube-dl {hint-url}")
+config.bind("Z", "hint links spawn alacritty -e youtube-dl {hint-url}")
 config.bind("t", "set-cmd-text -s :open -t")
 config.bind("xb", "config-cycle statusbar.show always never")
 config.bind("xt", "config-cycle tabs.show always never")
@@ -748,6 +752,8 @@ config.bind("J", ":tab-prev")
 config.bind("K", ":tab-next")
 #  config.unbind("f")
 #  config.bind(",f", ":hint")
+
+config.bind("Sa", "bookmark-add")
 
 # Bindings for cycling through CSS stylesheets from Solarized Everything CSS:
 # https://github.com/alphapapa/solarized-everything-css
