@@ -13,12 +13,7 @@ Xft.hintstyle:  hintslight
 
 ! XTerm -----------------------------------------------------------------------
 XTerm*renderFont: true
-XTerm*faceName: xft:UbuntuMono Nerd Font, \
-                xft:Sarasa Mono SC Nerd, \
-                xft:Mononoki Nerd Font, \
-                xft:JoyPixels:size=14, \
-                xft:Monospace:style=Medium:size=14
-
+XTerm*faceName: xft:UbuntuMono Nerd Font
 XTerm*faceSize: 16
 XTerm*utf8: 2
 XTerm*locale: true
@@ -27,7 +22,8 @@ XTerm.vt100.translations: #override \n\
   Ctrl <Key> j: smaller-vt-font() \n\
   Ctrl <Key> k: larger-vt-font()
 
-XTerm*translations: #override \
+! XTerm*translations: #override \
+XTerm.vt100.translations: #override \
     Ctrl Shift <KeyPress> C: copy-selection(CLIPBOARD) \n\
     Ctrl Shift <KeyPress> V: insert-selection(CLIPBOARD)
 ! При выделении текста мышью, он переносится в буфер обмена

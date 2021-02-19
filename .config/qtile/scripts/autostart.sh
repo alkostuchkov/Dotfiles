@@ -17,4 +17,4 @@ conky -c ~/.myScripts/conky/conkyrc1 &
 dropbox start -i &
 compton --config $HOME/.config/compton.conf &
 $HOME/Programs/CheckEmail/CheckEmail &
-
+xrdb $HOME/.Xresources &
