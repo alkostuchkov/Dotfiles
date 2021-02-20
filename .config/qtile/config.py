@@ -296,13 +296,14 @@ colors = [["#263238", "#263238"], # 0 panel background
           ["#009185", "#009185"], # 3 border line color for current tab
           ["#8d62a9", "#8d62a9"], # 4 border line color for other tab and odd widgets
           ["#6182b8", "#6182b8"], # 5 color for the even widgets
-          ["#24D2AF", "#24D2AF"], # 6 window name
+          ["#24d2af", "#24d2af"], # 6 window name
           ["#e2a0a5", "#e2a0a5"], # 7 CPU widget
-          ["#F2B06A", "#F2B06A"], # 8 Memory widget
+          ["#ffb62c", "#ffb62c"], # 8 Memory widget
+          #  ["#f2b06a", "#f2b06a"], # 8 Memory widget
           ["#91b859", "#91b859"], # 9 NetSpeed widget
           ["#ffffff", "#ffffff"], # 10 Layout widget
           ["#39adb5", "#39adb5"], # 11 KeyboardLayout widget
-          ["#ffb62c", "#ffb62c"], # 12 Date widget
+          ["#39adb5", "#39adb5"], # 12 Date widget
           ["#404555", "#404555"], # 13 system tray
           ["#ffcb6b", "#ffcb6b"]] # 14 updates
 
