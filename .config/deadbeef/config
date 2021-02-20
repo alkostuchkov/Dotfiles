@@ -90,7 +90,7 @@ playlist.column.02 "Заголовок / Исполнитель" "%t" -1 420 0
 playlist.column.03 "Продолжительность" "%l" -1 139 0
 playlist.column.04 "№" "%n" -1 43 1
 playlist.current 0
-playlist.cursor.0 9
+playlist.cursor.0 -1
 playlist.cursor.1 3
 playlist.cursor.11 21
 playlist.cursor.16 8
@@ -126,10 +126,10 @@ prefwin.geometry.x 192
 prefwin.geometry.y 172
 replaygain_mode 0
 replaygain_scale 1
-resume.paused 1
-resume.playlist 0
-resume.position 46.440101
-resume.track 9
+resume.paused 0
+resume.playlist -1
+resume.position -1.000000
+resume.track -1
 src_quality 2
 streamer.8_to_16 1
 streamer.samplerate 44100
