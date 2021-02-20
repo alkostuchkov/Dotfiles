@@ -1,9 +1,9 @@
-"  ____ _____ 
+"  ____ _____
 " |  _ \_   _|  Derek Taylor (DistroTube)
 " | | | || |    http://www.youtube.com/c/DistroTube
-" | |_| || |    http://www.gitlab.com/dwt1/ 
+" | |_| || |    http://www.gitlab.com/dwt1/
 " |____/ |_|
-" |____/ |_|  	
+" |____/ |_|
 
 " vim: filetype=vifm :
 " My config file for the vifm terminal file manager.
@@ -175,7 +175,8 @@ command! reload :write | restart
 " program.
 
 " Pdf
-filextype *.pdf zathura %c %i &, apvlv %c, xpdf %c
+" filextype *.pdf zathura %c %i &, apvlv %c, xpdf %c
+filextype *.pdf atril %c %i &, apvlv %c, xpdf %c
 fileviewer *.pdf
         \ vifmimg pdfpreview %px %py %pw %ph %c
         \ %pc
@@ -191,6 +192,8 @@ filextype *.ps,*.eps,*.ps.gz
 
 " Djvu
 filextype *.djvu
+        \ {View in atril}
+        \ atril %f,
         \ {View in zathura}
         \ zathura %f,
         \ {View in apvlv}
@@ -198,6 +201,8 @@ filextype *.djvu
 
 " Audio
 filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus
+        \ {View using deadbeef}
+        \ deadbeef %f &,
         \ {View using cmus}
         \ alacritty -e cmus %f &,
        \ {Play using ffplay}
@@ -211,12 +216,12 @@ fileviewer *.flac soxi
 filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
          \*.fl[icv],*.m2v,*.mov,*.webm,*.ts,*.mts,*.m4v,*.r[am],*.qt,*.divx,
          \*.as[fx]
+        \ {View using smplayer}
+        \ smplayer %f,
         \ {View using ffplay}
         \ ffplay -fs -autoexit %f,
         \ {View using Dragon}
         \ dragon %f:p,
-        \ {View using mplayer}
-        \ mplayer %f,
 fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
           \*.fl[icv],*.m2v,*.mov,*.webm,*.ts,*.mts,*.m4v,*.r[am],*.qt,*.divx,
           \*.as[fx]
@@ -227,10 +232,10 @@ fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
 
 " Web
 filextype *.html,*.htm
-        \ {Open with emacs}
-        \ emacsclient -c %c &,
         \ {Open with vim}
         \ vim %c &,
+        \ {Open with emacs}
+        \ emacsclient -c %c &,
         \ {Open with dwb}
         \ dwb %f %i &,
         \ {Open with firefox}
@@ -248,10 +253,12 @@ fileviewer *.[1-8] man ./%c | col -b
 
 " Images
 filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
-        \ {View in sxiv}
-        \ sxiv -ia %f &,
+        \ {View in ristretto}
+        \ ristretto %f &,
+"        \ {View in sxiv}
+"        \ sxiv -ia %f &,
         \ {View in imv}
-        \ imv -b 1D2330 -d %d &,
+        \ imv-x11 -b 1D2330 -d %d &,
         \ {View in feh}
         \ feh %d &,
         \ {View in cacaview}
@@ -264,7 +271,7 @@ fileviewer *.gif
         \ vifmimg gifpreview %px %py %pw %ph %c
         \ %pc
         \ vifmimg clear
-        
+
 " OpenRaster
 filextype *.ora
         \ {Edit in MyPaint}
@@ -301,11 +308,14 @@ filetype *.asc
        \ !!gpg --verify %c,
 
 " Torrent
-filetype *.torrent ktorrent %f &
+" filetype *.torrent ktorrent %f &
+filetype *.torrent tixati %f &
 fileviewer *.torrent dumptorrent -v %c
 
 " FuseZipMount
 filetype *.zip,*.jar,*.war,*.ear,*.oxt,*.apkg
+       \ {View contents}
+       \ engrampa %f,
        \ {Mount with fuse-zip}
        \ FUSE_MOUNT|fuse-zip %SOURCE_FILE %DESTINATION_DIR,
        \ {View contents}
@@ -316,6 +326,8 @@ fileviewer *.zip,*.jar,*.war,*.ear,*.oxt zip -sf %c
 
 " ArchiveMount
 filetype *.tar,*.tar.bz2,*.tbz2,*.tgz,*.tar.gz,*.tar.xz,*.txz
+       \ {View contents}
+       \ engrampa %f,
        \ {Mount with archivemount}
        \ FUSE_MOUNT|archivemount %SOURCE_FILE %DESTINATION_DIR,
 fileviewer *.tgz,*.tar.gz tar -tzf %c
@@ -325,6 +337,8 @@ fileviewer *.tar tar -tf %c
 
 " Rar2FsMount and rar archives
 filetype *.rar
+       \ {View contents}
+       \ engrampa %f,
        \ {Mount with rar2fs}
        \ FUSE_MOUNT|rar2fs %SOURCE_FILE %DESTINATION_DIR,
 fileviewer *.rar unrar v %c
@@ -346,12 +360,15 @@ filetype *.ftp
 
 " Fuse7z and 7z archives
 filetype *.7z
+       \ {View contents}
+       \ engrampa %f,
        \ {Mount with fuse-7z}
        \ FUSE_MOUNT|fuse-7z %SOURCE_FILE %DESTINATION_DIR,
 fileviewer *.7z 7z l %c
 
 " Office files
-filextype *.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx libreoffice %f &
+" filextype *.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx libreoffice %f &
+filextype *.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx wps %f &
 fileviewer *.doc catdoc %c
 fileviewer *.docx docx2txt.pl %f -
 
@@ -359,10 +376,13 @@ fileviewer *.docx docx2txt.pl %f -
 filetype *.tudu tudu -f %c
 
 " Qt projects
-filextype *.pro qtcreator %f &
+" filextype *.pro qtcreator %f &
+filextype *.pro gvim %f &
 
 " Directories
 filextype */
+        \ {View in dolphin}
+        \ dolphin %f &,
         \ {View in thunar}
         \ Thunar %f &,
 
