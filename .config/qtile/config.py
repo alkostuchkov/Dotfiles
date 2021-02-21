@@ -299,13 +299,17 @@ colors = [["#263238", "#263238"], # 0 panel background
           ["#24d2af", "#24d2af"], # 6 window name
           ["#e2a0a5", "#e2a0a5"], # 7 CPU widget
           ["#ffb62c", "#ffb62c"], # 8 Memory widget
-          #  ["#f2b06a", "#f2b06a"], # 8 Memory widget
           ["#91b859", "#91b859"], # 9 NetSpeed widget
           ["#ffffff", "#ffffff"], # 10 Layout widget
           ["#39adb5", "#39adb5"], # 11 KeyboardLayout widget
           ["#39adb5", "#39adb5"], # 12 Date widget
+          #  ["#f2b06a", "#f2b06a"], # 12 Date widget
           ["#404555", "#404555"], # 13 system tray
-          ["#ffcb6b", "#ffcb6b"]] # 14 updates
+          ["#e2e0a5", "#e2e0a5"], # 14 updates
+          #  ["#ffcb6b", "#ffcb6b"], # 14 updates
+          ["#eb7bef", "#eb7bef"]] # 15 weather
+          #  ["#ec30f3", "#ec30f3"]] # 15 weather
+          #  ["#e2e0a5", "#e2e0a5"]] # 15 weather
 
 # Gruvbox colors
 #  colors = [["#282828", "#282828"], # 0 panel background
@@ -381,8 +385,8 @@ def init_widgets_list():
                     #  font=my_mono_bold_font,
                     font=my_font,
                     fontsize=14,
-                    show_state=False,
-                    #  show_state=True,
+                    #  show_state="{name}", #  show_state=False,
+                    show_state="{state}{name}", #  show_state=True,
                     foreground=colors[6],
                     background=colors[0],
                     padding=0
@@ -396,10 +400,32 @@ def init_widgets_list():
                     #  custom_command="apt-show-versions | grep upgradeable | wc -l",
                     display_format=" {updates}",  # ⟳ 
                     fontsize=14,
-                    no_update_string="No updates",
+                    #  no_update_string="No updates",
                     execute=my_term + " -e sudo apt update && sudo apt upgrade && $SHELL",
                     #  execute=my_term + ' -e "sudo aptitude update && sudo aptitude safe-upgrade && $SHELL"',  # for terminator
                     update_interval=900  # 15min after cron's apt-update task
+                    ),
+            widget.Sep(
+                    linewidth = 1,
+                    padding = 10,
+                    foreground = colors[2],
+                    background = colors[0]
+                    ),
+            widget.TextBox(
+                    #  text="⛅",
+                    text="🌡",
+                    fontsize=16,
+                    foreground=colors[15],
+                    background=colors[0],
+                    padding=0
+                    ),
+            widget.OpenWeather(
+                    foreground=colors[15],
+                    background=colors[0],
+                    coordinates={"longitude": "30.9754", "latitude": "52.4345"},
+                    format="{location_city}: {main_temp} °{units_temperature}\n{weather_details}",
+                    #  format="{main_temp} °{units_temperature}\n{weather_details}",
+                    update_interval=600,
                     ),
             widget.Sep(
                     linewidth = 1,
