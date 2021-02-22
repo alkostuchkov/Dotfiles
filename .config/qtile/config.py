@@ -8,9 +8,20 @@ from typing import List  # noqa: F401
 from libqtile import bar, layout, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Screen, KeyChord
 from libqtile.lazy import lazy
+from libqtile import qtile
 
 from modules import memory
 from modules import arcobattery
+
+
+def open_htop():
+    """Open htop."""
+    qtile.cmd_spawn(my_term + " -e htop")
+
+
+def open_calendar():
+    """Open gsimplecal."""
+    qtile.cmd_spawn("gsimplecal")
 
 
 def get_all_netifaces(path_to_state="/sys/class/net/"):
@@ -423,7 +434,7 @@ def init_widgets_list():
                     foreground=colors[15],
                     background=colors[0],
                     coordinates={"longitude": "30.9754", "latitude": "52.4345"},
-                    format="{location_city}: {main_temp} °{units_temperature}\n{weather_details}",
+                    format="{location_city}: {main_temp}°{units_temperature}\n{weather_details}",
                     #  format="{main_temp} °{units_temperature}\n{weather_details}",
                     update_interval=600,
                     ),
@@ -439,13 +450,15 @@ def init_widgets_list():
                     fontsize=16,
                     foreground=colors[7],
                     background=colors[0],
-                    padding=0
+                    padding=0,
+                    mouse_callbacks={"Button1": open_htop}
                     ),
             widget.CPU(
                     foreground=colors[7],
                     background=colors[0],
                     format="{freq_current}GHz\n{load_percent}%",
-                    mouse_callbacks={"Button1": lambda qtile: qtile.cmd_spawn(my_term + " -e htop")},
+                    #  mouse_callbacks={"Button1": lambda qtile: qtile.cmd_spawn(my_term + " -e htop")},
+                    mouse_callbacks={"Button1": open_htop},
                     padding=0
                     ),
             widget.Sep(
@@ -459,13 +472,15 @@ def init_widgets_list():
                     fontsize=16,
                     foreground=colors[8],
                     background=colors[0],
-                    padding=0
+                    padding=0,
+                    mouse_callbacks={"Button1": open_htop},
                     ),
             memory.Memory(
                     foreground=colors[8],
                     background=colors[0],
                     format="{MemUsed}M\n{MemPercent}%",
-                    mouse_callbacks={"Button1": lambda qtile: qtile.cmd_spawn(my_term + " -e htop")},
+                    #  mouse_callbacks={"Button1": lambda qtile: qtile.cmd_spawn(my_term + " -e htop")},
+                    mouse_callbacks={"Button1": open_htop},
                     padding=0
                     ),
             widget.Sep(
@@ -548,13 +563,15 @@ def init_widgets_list():
                     foreground=colors[12],
                     background=colors[0],
                     #  fontsize=14,
-                    padding=0
+                    padding=0,
+                    mouse_callbacks={"Button1": open_calendar}
                     ),
             widget.Clock(
                     foreground=colors[12],
                     background=colors[0],
                     padding=3,
-                    mouse_callbacks={"Button1": lambda qtile: qtile.cmd_spawn("gsimplecal")},
+                    #  mouse_callbacks={"Button1": lambda qtile: qtile.cmd_spawn("gsimplecal")},
+                    mouse_callbacks={"Button1": open_calendar},
                     format="%a, %d %b\n%H:%M:%S"
                     ),
             #  widget.Sep(
@@ -634,6 +651,7 @@ mouse = [
 
 floating_layout = layout.Floating(float_rules=[
     # Run the utility of `xprop` to see the wm class and name of an X client.
+    {"wname": "Delete Permanently"},  # Dolphin (delete dialog) 
     {"wname": "Preference"},  # Haroopad (md editor) 
     {"wname": "Terminator Preferences"}, 
     {"wname": "Close Button Action"},  # Tixati
