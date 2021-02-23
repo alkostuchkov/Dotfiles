@@ -7,17 +7,18 @@
 #
 # My fish config.
 
-### EXPORT ###
+### EXPORTs ###
 set -U fish_user_paths $HOME/.local/bin $HOME/Programs/AppImageApplications $fish_user_paths
-# set fish_greeting                         # Supresses fish's intro message
+# set fish_greeting                                # Supresses fish's intro message
 # set fish_greeting 'Welcome to fish!'
-set TERM "xterm-256color"                 # Sets the terminal type
-set EDITOR "vim"                          # $EDITOR use Vim in terminal
-# EDITOR="vim" crontab -e                 # $EDITOR use Vim to edit crontab
+set TERM "xterm-256color"                          # Sets the terminal type
+set EDITOR "vim"                                   # $EDITOR use Vim in terminal
+# EDITOR="vim" crontab -e                          # $EDITOR use Vim to edit crontab
 # select-editor  (~/.selected-editor)
-set VISUAL "gvim"                         # $VISUAL use GVim in GUI mode
-set __GIT_PROMPT_DIR ~/.bash-git-prompt   # Git autocomplition and prompt 
-set PATH $PATH $HOME/.cargo/bin           # PATH for exa in cargo 
+set VISUAL "gvim"                                  # $VISUAL use GVim in GUI mode
+set __GIT_PROMPT_DIR ~/.bash-git-prompt            # Git autocomplition and prompt 
+set PATH $PATH $HOME/.cargo/bin                    # PATH for exa in cargo 
+set -x MANPAGER "sh -c 'col -bx | batcat -l man -p'"  # $MANPAGER use batcat to read mans
 
 source ~/.asdf/asdf.fish                  # For asdf manager 
 

@@ -5,6 +5,10 @@ export PATH=$HOME/.cargo/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="/home/alexander/.oh-my-zsh"
 
+export EDITOR="vim"
+export VISUAL="gvim"
+export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -86,8 +90,6 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
-
-export EDITOR="vim"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"

@@ -2,6 +2,19 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# EXPORTs
+export PATH=$PATH:~/.local/bin/:~/.cargo/bin
+export TERM="screen-256color"
+export EDITOR="vim"
+export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# export PATH="/home/alexander/.pyenv/bin:$PATH"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -138,12 +151,6 @@ fi
 #complete -cf sudo
 #complete -cf sudo gksu
 
-#archey
-
-export PATH=$PATH:~/.local/bin/:~/.cargo/bin
-export TERM="screen-256color"
-export EDITOR="vim"
-
 ### https://github.com/magicmonty/bash-git-prompt ###
 ### START 
 # # Set config variables first
@@ -199,14 +206,6 @@ PS1='\n\[\e[01;33m\]\u\[\e[01;37m\]@\[\e[01;32m\]\h:\[\e[01;34m\]\w\[\e[01;31m\]
 # POWERLINE_BASH_CONTINUATION=1
 # POWERLINE_BASH_SELECT=1
 # . /usr/local/lib/python3.7/dist-packages/powerline/bindings/bash/powerline.sh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# export PATH="/home/alexander/.pyenv/bin:$PATH"
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
 
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
