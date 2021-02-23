@@ -67,7 +67,9 @@ set norunexec
 " Selected color scheme
 " The following line will cause issues if using vifm.vim with regular vim.
 " Either use neovim or comment out the following line.
-colorscheme distrotube
+colorscheme distrotube_corrected
+" colorscheme distrotube
+" colorscheme solarized-dark_corrected
 
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M
@@ -494,10 +496,12 @@ nnoremap yf :!echo %c:p | xclip %i<cr>
 " Mappings for faster renaming
 nnoremap I cw<c-a>
 nnoremap cc cw<c-u>
-nnoremap A cw
+" nnoremap A cw
 
 " Open console in current directory
-nnoremap ,t :!xterm &<cr>
+" nnoremap ,t :!xterm &<cr>
+nnoremap ,t :!alacritty &<cr>
+" nnoremap ,t :!terminator &<cr>
 
 " Open editor to edit vifmrc and apply settings after returning to vifm
 nnoremap ,c :write | edit $MYVIFMRC | restart<cr>
@@ -508,12 +512,16 @@ nnoremap ,C :!gvim --remote-tab-silent $MYVIFMRC &<cr>
 nnoremap ,w :set wrap!<cr>
 
 " Example of standard two-panel file managers mappings
-nnoremap <f3> :!less %f<cr>
-nnoremap <f4> :edit<cr>
+" nnoremap <f3> :!less %f<cr>
+" nnoremap <f4> :edit<cr>
+nnoremap <f2> cw
+nnoremap <f3> :!batcat %f<cr>
+nnoremap <f4> :!gvim %f &<cr>
 nnoremap <f5> :copy<cr>
 nnoremap <f6> :move<cr>
 nnoremap <f7> :mkdir<space>
 nnoremap <f8> :delete<cr>
+nnoremap <f10> :q<cr>
 
 " ------------------------------------------------------------------------------
 
