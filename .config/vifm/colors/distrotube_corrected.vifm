@@ -47,13 +47,13 @@
 highlight clear
 
 highlight Win cterm=none ctermfg=Default ctermbg=Default
-highlight Directory cterm=bold ctermfg=Green ctermbg=Default
+highlight Directory cterm=none ctermfg=Cyan ctermbg=Default
 highlight Link cterm=bold ctermfg=Default ctermbg=Default
 highlight BrokenLink cterm=bold ctermfg=Red ctermbg=Default
 highlight Socket cterm=bold ctermfg=Magenta ctermbg=Default
 highlight Device cterm=bold ctermfg=Red ctermbg=Default
 highlight Fifo cterm=bold ctermfg=Cyan ctermbg=Default
-highlight Executable cterm=bold ctermfg=119 ctermbg=Default
+highlight Executable cterm=none ctermfg=119 ctermbg=Default
 
 highlight Selected cterm=bold ctermfg=Yellow ctermbg=Blue
 highlight CurrLine cterm=bold ctermfg=Default ctermbg=Blue

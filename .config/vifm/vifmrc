@@ -522,6 +522,7 @@ nnoremap <f6> :move<cr>
 nnoremap <f7> :mkdir<space>
 nnoremap <f8> :delete<cr>
 nnoremap <f10> :q<cr>
+nnoremap <f11> :cd . %d<cr>
 
 " ------------------------------------------------------------------------------
 
