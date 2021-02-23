@@ -15,6 +15,7 @@ compton
 dmenu-edit-configs
 dmenu-system-exit
 fish
+homepage
 i3
 kitty
 picom
@@ -51,6 +52,8 @@ case $choice in
 		choice="$HOME/.myScripts/dmenu/dmenu-system-exit.sh";;
     fish)
 		choice="$HOME/.config/fish/config.fish";;
+    homepage)
+		choice="$HOME/.surf/homepage.html";;
 	i3)
 		choice="$HOME/.config/i3/config";;
 	kitty)
