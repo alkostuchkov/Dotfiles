@@ -232,8 +232,8 @@ fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
 
 " Web
 filextype *.html,*.htm
-        \ {Open with vim}
-        \ vim %c &,
+        \ {Open with gvim}
+        \ gvim %c &,
         \ {Open with emacs}
         \ emacsclient -c %c &,
         \ {Open with dwb}
@@ -368,7 +368,7 @@ fileviewer *.7z 7z l %c
 
 " Office files
 " filextype *.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx libreoffice %f &
-filextype *.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx wps %f &
+filextype *.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx,*.ppt wps %f &
 fileviewer *.doc catdoc %c
 fileviewer *.docx docx2txt.pl %f -
 
@@ -385,6 +385,12 @@ filextype */
         \ dolphin %f &,
         \ {View in thunar}
         \ Thunar %f &,
+
+" Config & exec files
+filextype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop gvim %f &
+
+" Books 
+filextype *.fb2,*.epub cr3 %f &
 
 " Syntax highlighting in preview
 "
