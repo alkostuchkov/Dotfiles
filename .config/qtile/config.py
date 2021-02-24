@@ -6,7 +6,7 @@ import socket
 import subprocess
 from typing import List  # noqa: F401
 from libqtile import bar, layout, widget, hook
-from libqtile.config import Click, Drag, Group, Key, Screen, KeyChord
+from libqtile.config import Click, Drag, Group, Key, Screen, KeyChord, Match
 from libqtile.lazy import lazy
 from libqtile import qtile
 
@@ -436,7 +436,7 @@ def init_widgets_list():
                     coordinates={"longitude": "30.9754", "latitude": "52.4345"},
                     format="{location_city}: {main_temp}°{units_temperature}\n{weather_details}",
                     #  format="{main_temp} °{units_temperature}\n{weather_details}",
-                    update_interval=600,
+                    update_interval=1800,
                     ),
             widget.Sep(
                     linewidth = 1,
@@ -649,49 +649,121 @@ mouse = [
     #  Click([mod], "Button2", lazy.window.bring_to_front())
 ]
 
+###############################################################################
+# New EXAMPLE from qtile 0.17.0 for float_rules[]!!!
+#
+# rules specified in `layout.Floating`'s `float_rules` are now evaluated with
+# AND-semantics instead of OR-semantics, i.e. if you specify 2 different
+# property rules, both have to match
+#
+#  from libqtile.config import Match
+#      Match(title=WM_NAME, wm_class=WM_CLASS, role=WM_WINDOW_ROLE)
+###############################################################################
+
 floating_layout = layout.Floating(float_rules=[
     # Run the utility of `xprop` to see the wm class and name of an X client.
-    {"wname": "Delete Permanently"},  # Dolphin (delete dialog) 
-    {"wname": "Preference"},  # Haroopad (md editor) 
-    {"wname": "Terminator Preferences"}, 
-    {"wname": "Close Button Action"},  # Tixati
-    {"wmclass": "com-intellij-updater-Runner"},
-    {"wmclass": "minitube"},
-    {"wmclass": "CheckEmail"},
-    {"wmclass": "GParted"},
-    {"wmclass": "keepass2"},
-    {"wmclass": "vlc"},
-    {"wmclass": "smplayer"},
-    {"wmclass": "deadbeef"},
-    {"wmclass": "galculator"},
+    #  Match(title="Summary", wm_class="synaptic"),
+    #  Match(title="Applying Changes", wm_class="synaptic"),
+    #  Match(wm_class="Polkit-gnome-authentication-agent-1"),
+    #  Match(title="Properties for *", wm_class="dolphin"),
+    #  Match(title="Delete Permanently", wm_class="dolphin"),  # Dolphin (delete dialog)
+    #  Match(title="Preference"),  # Haroopad (md editor)
+    #  Match(title="Close Button Action", wm_class="tixati"),  # Tixati
+    Match(title="Terminator Preferences", wm_class="terminator"),
+    #  Match(wm_class="com-intellij-updater-Runner"),
+    Match(title="win0", wm_class="jetbrains-pycharm-ce"),  # PyCharm
+    Match(wm_class="minitube"),
+    Match(wm_class="CheckEmail"),
+    Match(wm_class="GParted"),
+    Match(wm_class="keepass2"),
+    Match(wm_class="vlc"),
+    Match(wm_class="smplayer"),
+    Match(wm_class="deadbeef"),
+    Match(wm_class="galculator"),
     #  {"wmclass": "VirtualBox Manager"},
-    {"wname": "win0"},  # PyCharm
-    {"wmclass": "gnome-font-viewer"},
-    {"wmclass": "fluxgui"},
-    {"wmclass": "xfce4-power-manager-settings"},
-    {"wmclass": "pavucontrol"},
-    {"wmclass": "gdebi-gtk"},
-    {"wmclass": "volumeicon"},
-    {"wmclass": "gcolor3"},
-    {"wmclass": "gvim"},
-    {"wmclass": "qt5ct"},
-    {"wmclass": "lxappearance"},
-    {"wmclass": "confirm"},
-    {"wmclass": "dialog"},
-    {"wmclass": "download"},
-    {"wmclass": "error"},
-    {"wmclass": "file_progress"},
-    {"wmclass": "notification"},
-    {"wmclass": "splash"},
-    {"wmclass": "toolbar"},
-    {"wmclass": "confirmreset"},  # gitk
-    {"wmclass": "makebranch"},  # gitk
-    {"wmclass": "maketag"},  # gitk
-    {"wname": "branchdialog"},  # gitk
-    {'wname': 'Open File'},
-    {"wname": "pinentry"},  # GPG key password entry
-    {"wmclass": "ssh-askpass"},  # ssh-askpass
+    Match(title="branchdialog"),  # gitk
+    Match(title="Open File"),
+    Match(title="pinentry"),  # GPG key password entry
+    Match(wm_class="gnome-font-viewer"),
+    Match(wm_class="fluxgui"),
+    Match(wm_class="xfce4-power-manager-settings"),
+    Match(wm_class="pavucontrol"),
+    Match(wm_class="gdebi-gtk"),
+    Match(wm_class="volumeicon"),
+    Match(wm_class="gcolor3"),
+    Match(wm_class="gvim"),
+    Match(wm_class="qt5ct"),
+    Match(wm_class="lxappearance"),
+    Match(wm_class="confirmreset"),  # gitk
+    Match(wm_class="makebranch"),  # gitk
+    Match(wm_class="maketag"),  # gitk
+    Match(wm_class="ssh-askpass"),  # ssh-askpass
+    # from libqtile.layout.floating class Floating
+    # default_float_rules 
+    Match(wm_type="utility"),
+    Match(wm_type="notification"),
+    Match(wm_type="toolbar"),
+    Match(wm_type="splash"),
+    Match(wm_type="dialog"),
+    Match(wm_class="file_progress"),
+    Match(wm_class="confirm"),
+    Match(wm_class="dialog"),
+    Match(wm_class="download"),
+    Match(wm_class="error"),
+    Match(wm_class="notification"),
+    Match(wm_class="splash"),
+    Match(wm_class="toolbar"),
+    Match(func=lambda c: c.has_fixed_size())
 ])
+
+# float_rules for qtile version < 0.17.0
+#  floating_layout = layout.Floating(float_rules=[
+    #  # Run the utility of `xprop` to see the wm class and name of an X client.
+    #  {"wname": "synaptic"},  # Synaptic (Preinstall dialog)
+    #  {"wname": "Summary"},  # Synaptic (Summary dialog)
+    #  {"wmclass": "Polkit-gnome-authentication-agent-1"},  # Polkit-gnome-authentication-agent-1
+    #  {"wname": "Properties for *"},  # Dolphin (properties dialog)
+    #  {"wname": "Delete Permanently"},  # Dolphin (delete dialog)
+    #  {"wname": "Preference"},  # Haroopad (md editor)
+    #  {"wname": "Terminator Preferences"},
+    #  {"wname": "Close Button Action"},  # Tixati
+    #  {"wmclass": "com-intellij-updater-Runner"},
+    #  {"wmclass": "minitube"},
+    #  {"wmclass": "CheckEmail"},
+    #  {"wmclass": "GParted"},
+    #  {"wmclass": "keepass2"},
+    #  {"wmclass": "vlc"},
+    #  {"wmclass": "smplayer"},
+    #  {"wmclass": "deadbeef"},
+    #  {"wmclass": "galculator"},
+    #  #  {"wmclass": "VirtualBox Manager"},
+    #  {"wname": "win0"},  # PyCharm
+    #  {"wmclass": "gnome-font-viewer"},
+    #  {"wmclass": "fluxgui"},
+    #  {"wmclass": "xfce4-power-manager-settings"},
+    #  {"wmclass": "pavucontrol"},
+    #  {"wmclass": "gdebi-gtk"},
+    #  {"wmclass": "volumeicon"},
+    #  {"wmclass": "gcolor3"},
+    #  {"wmclass": "gvim"},
+    #  {"wmclass": "qt5ct"},
+    #  {"wmclass": "lxappearance"},
+    #  {"wmclass": "confirm"},
+    #  {"wmclass": "dialog"},
+    #  {"wmclass": "download"},
+    #  {"wmclass": "error"},
+    #  {"wmclass": "file_progress"},
+    #  {"wmclass": "notification"},
+    #  {"wmclass": "splash"},
+    #  {"wmclass": "toolbar"},
+    #  {"wmclass": "confirmreset"},  # gitk
+    #  {"wmclass": "makebranch"},  # gitk
+    #  {"wmclass": "maketag"},  # gitk
+    #  {"wname": "branchdialog"},  # gitk
+    #  {'wname': 'Open File'},
+    #  {"wname": "pinentry"},  # GPG key password entry
+    #  {"wmclass": "ssh-askpass"},  # ssh-askpass
+#  ])
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
