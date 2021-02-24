@@ -55,7 +55,7 @@ highlight Device cterm=bold ctermfg=Red ctermbg=Default
 highlight Fifo cterm=bold ctermfg=Cyan ctermbg=Default
 highlight Executable cterm=none ctermfg=119 ctermbg=Default
 
-highlight Selected cterm=bold ctermfg=Yellow ctermbg=Blue
+highlight Selected cterm=bold ctermfg=202 ctermbg=147
 highlight CurrLine cterm=bold ctermfg=Default ctermbg=Blue
 
 " highlight Selected cterm=bold ctermfg=Yellow ctermbg=Default
