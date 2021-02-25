@@ -47,7 +47,8 @@
 highlight clear
 
 highlight Win cterm=none ctermfg=Default ctermbg=Default
-highlight Directory cterm=none ctermfg=Cyan ctermbg=Default
+highlight Directory cterm=none ctermfg=115 ctermbg=Default
+" highlight Directory cterm=none ctermfg=Cyan ctermbg=Default
 highlight Link cterm=bold ctermfg=Default ctermbg=Default
 highlight BrokenLink cterm=bold ctermfg=Red ctermbg=Default
 highlight Socket cterm=bold ctermfg=Magenta ctermbg=Default
@@ -61,8 +62,12 @@ highlight CurrLine cterm=bold ctermfg=Default ctermbg=Blue
 " highlight Selected cterm=bold ctermfg=Yellow ctermbg=Default
 " highlight CurrLine cterm=bold ctermfg=Default ctermbg=Blue
 
-highlight TopLine cterm=none ctermfg=147 ctermbg=8
-highlight TopLineSel cterm=bold ctermfg=White ctermbg=Default
+" highlight TopLine cterm=none ctermfg=147 ctermbg=8
+" highlight TopLineSel cterm=bold ctermfg=White ctermbg=Default
+
+highlight TopLine cterm=none ctermfg=Default ctermbg=8
+highlight TopLineSel cterm=bold ctermfg=Default ctermbg=8
+
 highlight StatusLine cterm=bold ctermfg=White ctermbg=8
 highlight WildMenu cterm=underline,reverse ctermfg=White ctermbg=Black
 highlight CmdLine cterm=none ctermfg=Green ctermbg=Black
