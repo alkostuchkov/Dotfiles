@@ -601,7 +601,9 @@ c.colors.completion.item.selected.fg = "#282c34"
 
 # Background color of the selected completion item.
 # Type: QssColor
-c.colors.completion.item.selected.bg = "#ecbe7b"
+c.colors.completion.item.selected.bg = "#009185"
+#  c.colors.completion.item.selected.bg = "#497950"
+#  c.colors.completion.item.selected.bg = "#497990"
 
 # Foreground color of the matched text in the selected completion item.
 # Type: QtColor
