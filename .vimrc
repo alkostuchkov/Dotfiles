@@ -591,10 +591,15 @@ inoremap <C-c>r <Esc>:right<CR>a
 nnoremap <C-c>r :right<CR>
 
 " Copy/Cut/Past from/to system buffer
-vnoremap <C-c>y "+y
-vnoremap <C-c>x "+d
-nnoremap <C-c>p "+p
-nnoremap <C-c>P "+P  " P - paste before
+vnoremap <C-c> "+y
+vnoremap <C-x> "+d
+map <C-v> "+p
+" map <C-p> "+p
+vnoremap <C-c> "*y :let @+=@*<CR>
+" vnoremap <C-c>y "+y
+" vnoremap <C-c>x "+d
+" nnoremap <C-c>p "+p
+" nnoremap <C-c>P "+P  " P - paste before
 
 " Surround the selection in "", '', ()
 vnoremap <Leader>" <ESC>`<i"<ESC>`>la"<ESC>
