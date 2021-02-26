@@ -24,6 +24,16 @@ def open_calendar():
     qtile.cmd_spawn("gsimplecal")
 
 
+def open_top5_cpu_usage():
+    """Show top5 CPU usage."""
+    qtile.cmd_spawn(home + "/.myScripts/top5_cpu_usage.sh")
+
+
+def open_top5_mem_usage():
+    """Show top5 MEMORY usage."""
+    qtile.cmd_spawn(home + "/.myScripts/top5_mem_usage.sh")
+
+
 def get_all_netifaces(path_to_state="/sys/class/net/"):
     """
     Get all netifaces in the /sys/class/net/ and
@@ -451,15 +461,21 @@ def init_widgets_list():
                     foreground=colors[7],
                     background=colors[0],
                     padding=0,
-                    mouse_callbacks={"Button1": open_htop}
+                    mouse_callbacks={
+                        "Button1": open_top5_cpu_usage,
+                        "Button3": open_htop
+                    }
                     ),
             widget.CPU(
                     foreground=colors[7],
                     background=colors[0],
+                    padding=0,
                     format="{freq_current}GHz\n{load_percent}%",
                     #  mouse_callbacks={"Button1": lambda qtile: qtile.cmd_spawn(my_term + " -e htop")},
-                    mouse_callbacks={"Button1": open_htop},
-                    padding=0
+                    mouse_callbacks={
+                        "Button1": open_top5_cpu_usage,
+                        "Button3": open_htop
+                    }
                     ),
             widget.Sep(
                     linewidth = 1,
@@ -473,15 +489,21 @@ def init_widgets_list():
                     foreground=colors[8],
                     background=colors[0],
                     padding=0,
-                    mouse_callbacks={"Button1": open_htop},
+                    mouse_callbacks={
+                        "Button1": open_top5_mem_usage,
+                        "Button3": open_htop
+                    }
                     ),
             memory.Memory(
                     foreground=colors[8],
                     background=colors[0],
+                    padding=0,
                     format="{MemUsed}M\n{MemPercent}%",
                     #  mouse_callbacks={"Button1": lambda qtile: qtile.cmd_spawn(my_term + " -e htop")},
-                    mouse_callbacks={"Button1": open_htop},
-                    padding=0
+                    mouse_callbacks={
+                        "Button1": open_top5_mem_usage,
+                        "Button3": open_htop
+                    }
                     ),
             widget.Sep(
                     linewidth = 1,
