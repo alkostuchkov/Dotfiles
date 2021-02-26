@@ -23,6 +23,7 @@ polybar
 qtile
 qutebrowser
 rofi
+udiskie
 vifm
 vim
 xterm
@@ -68,6 +69,8 @@ case $choice in
 		choice="$HOME/.config/qutebrowser/config.py";;
 	rofi)
 		choice="$HOME/.config/rofi/config";;
+	udiskie)
+		choice="$HOME/.config/udiskie/config.yml";;
 	vifm)
 		choice="$HOME/.config/vifm/vifmrc";;
 	vim)

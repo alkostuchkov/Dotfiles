@@ -18,3 +18,8 @@ dropbox start -i &
 compton --config $HOME/.config/compton.conf &
 $HOME/Programs/CheckEmail/CheckEmail &
 xrdb $HOME/.Xresources &
+# -a (--automount) -n (--notify) -t (--tray) -s (--smart-tray)
+# -A (--no-automount) -N (--no-notify) -T (--no-tray)
+udiskie &
+# udiskie --no-automount -n -t &
+# udiskie -a -n -t &

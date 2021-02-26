@@ -1,0 +1,15 @@
+# udiskie config.yml
+# https://www.mankier.com/8/udiskie
+
+program_options:
+    automount: false
+    tray: "auto"
+    notify: true
+    menu: "flat"
+    # menu: "nested"
+    # file_manager: "dolphin"
+    # file_manager: "alacritty -e /home/alexander/.config/vifm/scripts/vifmrun --select /media/alexander"
+    file_manager: "alacritty -e vifm --select /media/alexander"
+    terminal: ""
+    # terminal: "alacritty -e /media/alexander"
+
