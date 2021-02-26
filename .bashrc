@@ -3,7 +3,7 @@
 # for examples
 
 # EXPORTs
-export PATH=$PATH:~/.local/bin/:~/.cargo/bin
+export PATH=$PATH:~/.local/bin/:~/.cargo/bin:~/.config/vifm/scripts
 export TERM="screen-256color"
 export EDITOR="vim"
 export MANPAGER="sh -c 'col -bx | batcat -l man -p'"

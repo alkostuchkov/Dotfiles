@@ -17,7 +17,7 @@ set EDITOR "vim"                                   # $EDITOR use Vim in terminal
 # select-editor  (~/.selected-editor)
 set VISUAL "gvim"                                  # $VISUAL use GVim in GUI mode
 set __GIT_PROMPT_DIR ~/.bash-git-prompt            # Git autocomplition and prompt 
-set PATH $PATH $HOME/.cargo/bin                    # PATH for exa in cargo 
+set PATH $PATH $HOME/.cargo/bin $HOME/.config/vifm/scripts                   # PATH for exa in cargo 
 set -x MANPAGER "sh -c 'col -bx | batcat -l man -p'"  # $MANPAGER use batcat to read mans
 
 source ~/.asdf/asdf.fish                  # For asdf manager 
