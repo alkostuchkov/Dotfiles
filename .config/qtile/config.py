@@ -63,7 +63,7 @@ def which_netiface_upped(netifaces=[]):
 mod = "mod4"
 alt = "mod1"
 my_term = "alacritty"
-#  my_term = "terminator"
+my_term_extra = "terminator"
 #  my_term = "konsole"
 my_font = "Ubuntu"
 my_nerd_font = "Ubuntu Nerd Font"
@@ -92,6 +92,7 @@ keys = [
     Key([mod], "p", lazy.spawn(home + "/Programs/PyCharm-Community/bin/pycharm.sh"), desc="Run PyCharm"),
     Key([mod], "t", lazy.spawn(home + "/Programs/Telegram/Telegram -workdir /home/alexander/.local/share/TelegramDesktop/ -- %u"), desc="Run Telegram"),
     Key([mod], "x", lazy.spawn("xterm"), desc="Run XTerm"),
+    Key([mod], "v", lazy.spawn(my_term + " -e " + home + "/.config/vifm/scripts/vifmrun"), desc="Run vifm"),
     # SWITCH BETWEEN GROUPS
     Key([mod], "Right", lazy.screen.next_group(), desc="Switch to the right group"),
     Key([mod], "Left", lazy.screen.prev_group(), desc="Switch to the left group"),
@@ -255,16 +256,16 @@ layout_theme = {"border_width": 3,
                 }
 
 layouts = [
-    # layout.Bsp(**layout_theme),
-    #layout.Columns(**layout_theme),
-    #layout.RatioTile(**layout_theme),
-    #layout.VerticalTile(**layout_theme),
-    #layout.Matrix(**layout_theme),
-    #layout.Zoomy(**layout_theme),
+    #  layout.Bsp(**layout_theme),
+    #  layout.Columns(**layout_theme),
+    #  layout.RatioTile(**layout_theme),
+    #  layout.VerticalTile(**layout_theme),
+    #  layout.Matrix(**layout_theme),
+    #  layout.Zoomy(**layout_theme),
     layout.MonadTall(**layout_theme),
     layout.MonadWide(**layout_theme),
     layout.Max(**layout_theme),
-    # layout.Tile(shift_windows=True, **layout_theme),
+    layout.Tile(shift_windows=True, **layout_theme),
     # layout.Stack(num_stacks=2),
     layout.Stack(stacks=2, **layout_theme),
     #  layout.TreeTab(
@@ -373,12 +374,12 @@ def init_widgets_list():
                     #  filename="~/.config/qtile/icons/logos/debian_logo_green_brighter+.png",
                     #  mouse_callbacks={"Button1": lambda qtile: qtile.cmd_spawn("rofi run -show drun -show-icons")}
                     #  ),
-            widget.Sep(
-                    linewidth=0,
-                    padding=3,
-                    foreground=colors[2],
-                    background=colors[0]
-                    ),
+            #  widget.Sep(
+                    #  linewidth=0,
+                    #  padding=3,
+                    #  foreground=colors[2],
+                    #  background=colors[0]
+                    #  ),
             widget.GroupBox(
                     font=my_nerd_font,
                     fontsize=14,
@@ -422,7 +423,8 @@ def init_widgets_list():
                     display_format=" {updates}",  # ⟳ 
                     fontsize=14,
                     #  no_update_string="No updates",
-                    execute=my_term + " -e sudo apt update && sudo apt upgrade && $SHELL",
+                    execute=my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'",
+                    #  execute=my_term + " -e sudo apt update && sudo apt upgrade && $SHELL",
                     #  execute=my_term + ' -e "sudo aptitude update && sudo aptitude safe-upgrade && $SHELL"',  # for terminator
                     update_interval=900  # 15min after cron's apt-update task
                     ),
@@ -455,7 +457,7 @@ def init_widgets_list():
                     background = colors[0]
                     ),
             widget.TextBox(
-                    text=" ",
+                    text="",
                     #  text=" ",
                     fontsize=16,
                     foreground=colors[7],
