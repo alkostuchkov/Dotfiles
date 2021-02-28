@@ -593,8 +593,8 @@ nnoremap <C-c>r :right<CR>
 " Copy/Cut/Past from/to system buffer
 vnoremap <C-c> "+y
 vnoremap <C-x> "+d
-map <C-v> "+p
 " map <C-p> "+p
+map <C-p> "+P
 vnoremap <C-c> "*y :let @+=@*<CR>
 " vnoremap <C-c>y "+y
 " vnoremap <C-c>x "+d
