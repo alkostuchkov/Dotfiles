@@ -511,6 +511,12 @@ nnoremap ,C :!gvim --remote-tab-silent $MYVIFMRC &<cr>
 " Toggle wrap setting on ,w key
 nnoremap ,w :set wrap!<cr>
 
+" Mount/Unmount windows disks: /dev/sda1 (C) and /dev/sda2 (D)
+nnoremap ,mc :!udisksctl mount -b /dev/sda1<cr>
+nnoremap ,md :!udisksctl mount -b /dev/sda2<cr>
+nnoremap ,uc :!udisksctl unmount -b /dev/sda1<cr>
+nnoremap ,ud :!udisksctl unmount -b /dev/sda2<cr>
+
 " Example of standard two-panel file managers mappings
 " nnoremap <f3> :!less %f<cr>
 " nnoremap <f4> :edit<cr>
