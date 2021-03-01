@@ -75,7 +75,7 @@ colorscheme distrotube_corrected
 " TIME_STAMP_FORMAT=%m/%d-%H:%M
 " See man date or man strftime for details.
 
-set timefmt=%m/%d\ %H:%M
+set timefmt=%d/%m\ %H:%M
 
 " Show list of matches on tab completion in command-line mode
 
@@ -139,6 +139,7 @@ mark h ~/
 " %D the other window directory name.
 " %m run the command in a menu window
 
+command! properties ~/.myScripts/show_properties.sh %m 2> /dev/null %f
 command! df df -h %m 2> /dev/null
 command! diff vim -d %f %F
 command! zip zip -r %f.zip %f
@@ -394,6 +395,9 @@ filextype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.b
 " Books 
 filextype *.fb2,*.epub cr3 %f &
 
+" .deb 
+filextype *.deb gdebi-gtk %f &
+
 " Syntax highlighting in preview
 "
 " Explicitly set highlight type for some extensions
@@ -472,7 +476,8 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 nnoremap sx :!sxiv -t %d & <cr>
 
 "Open selected images in gimp
-nnoremap gp :!gimp %f & <cr>
+" nnoremap gp :!gimp %f & <cr>
+nnoremap gp :!~/Programs/AppImageApplications/GIMP.AppImage %f & <cr>
 
 " Start shell in current directory
 nnoremap s :shell<cr>
@@ -488,10 +493,12 @@ vnoremap w :view<cr>gv
 nnoremap gb :file &<cr>l
 
 " Yank current directory path into the clipboard
-nnoremap yd :!echo %d | xclip %i<cr>
+" nnoremap yd :!echo %d | xclip %i<cr>
+nnoremap yd :!echo %d | xclip -sel clip<cr>
 
 " Yank current file path into the clipboard
-nnoremap yf :!echo %c:p | xclip %i<cr>
+" nnoremap yf :!echo %c:p | xclip %i<cr>
+nnoremap yf :!echo %c:p | xclip -sel clip<cr>
 
 " Mappings for faster renaming
 nnoremap I cw<c-a>
@@ -500,8 +507,8 @@ nnoremap cc cw<c-u>
 
 " Open console in current directory
 " nnoremap ,t :!xterm &<cr>
-nnoremap ,t :!alacritty &<cr>
 " nnoremap ,t :!terminator &<cr>
+nnoremap ,t :!alacritty &<cr>
 
 " Open editor to edit vifmrc and apply settings after returning to vifm
 nnoremap ,c :write | edit $MYVIFMRC | restart<cr>
@@ -518,15 +525,16 @@ nnoremap ,uc :!udisksctl unmount -b /dev/sda1<cr>
 nnoremap ,ud :!udisksctl unmount -b /dev/sda2<cr>
 
 " Example of standard two-panel file managers mappings
-" nnoremap <f3> :!less %f<cr>
+nnoremap <f3> :!less %f<cr>
 " nnoremap <f4> :edit<cr>
 nnoremap <f2> cw
-nnoremap <f3> :!batcat %f<cr>
+" nnoremap <f3> :!bat %f<cr>
 nnoremap <f4> :!gvim %f &<cr>
 nnoremap <f5> :copy<cr>
 nnoremap <f6> :move<cr>
 nnoremap <f7> :mkdir<space>
 nnoremap <f8> :delete<cr>
+nnoremap <f9> :properties<cr>
 nnoremap <f10> :q<cr>
 nnoremap <f11> :cd . %d<cr>
 
