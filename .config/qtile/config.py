@@ -12,6 +12,7 @@ from libqtile import qtile
 
 from modules import memory
 from modules import arcobattery
+from modules import all_windows_count
 
 
 def open_htop():
@@ -77,6 +78,8 @@ path_to_state = "/sys/class/net/"  # enp2s0/operstate"
 #  default_upped_netiface = "wlo1"
 netifaces = get_all_netifaces(path_to_state)
 upped_netiface = which_netiface_upped(netifaces)
+# Counter of opened windows
+#  opened_windows_counter = 0
 
 keys = [
 # <SUPER> + FUNCTION KEYS
@@ -226,7 +229,8 @@ Key([mod, "shift"], "d", lazy.spawn("dmenu_run -nb #222B2E -nf #09DBC9 -sb #0091
 #       v                   
 #        🌐♬ 🌡 🖬  ⟳ ₿   ⮋⮉🡇 🡅 ⇓⇑        
 group_names = [(" ", {"layout": "monadtall"}),  # WWW
-               (" ", {"layout": "monadtall"}),  # DEV
+               (" ", {"layout": "tile"}),  # DEV
+               #  (" ", {"layout": "monadtall"}),  # DEV
                (" ", {"layout": "max"}),        # FM
                (" ", {"layout": "monadtall"}),  # SYS
                (" ", {"layout": "monadtall"}),  # VIRT
@@ -575,6 +579,20 @@ def init_widgets_list():
                     padding=0,
                     scale=0.6
                     ),
+            widget.WindowCount(
+                    text_format="{num}/",
+                    fontsize=14,
+                    padding=0,
+                    foreground = colors[10],
+                    background = colors[0]
+                    ),
+            all_windows_count.WindowCount(
+                    text_format="{num}",
+                    fontsize=14,
+                    padding=0,
+                    foreground = colors[10],
+                    background = colors[0]
+                    ),
             widget.Sep(
                     linewidth = 1,
                     padding = 10,
@@ -818,6 +836,23 @@ def focus_new_floating_window(window):
     #  subprocess.check_output(["notify-send", "-i", "dialog-information", "{}".format(window.name)])
     if window.floating:
         window.cmd_bring_to_front()
+
+
+# TODO: show amount of opened windows (DONE!!!)
+#  @hook.subscribe.client_new
+#  def increase_opened_windows_counter(window):
+    #  """ Increase counter of opened windows. """
+    #  global opened_windows_counter
+    #  opened_windows_counter += 1
+    #  subprocess.check_output(["notify-send", "-i", "dialog-information", "{}\nOpened windows: {}".format(window.name, opened_windows_counter)])
+#
+#
+#  @hook.subscribe.client_killed
+#  def decrease_opened_windows_counter(window):
+    #  """ Decrease counter of opened windows. """
+    #  global opened_windows_counter
+    #  opened_windows_counter -= 1
+    #  subprocess.check_output(["notify-send", "-i", "dialog-information", "{}\nOpened windows: {}".format(window.name, opened_windows_counter)])
 
 
 # TODO: delete later if these below two functions don't need any more!!!
