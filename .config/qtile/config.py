@@ -741,7 +741,7 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class="maketag"),  # gitk
     Match(wm_class="ssh-askpass"),  # ssh-askpass
     # from libqtile.layout.floating class Floating
-    # default_float_rules 
+    # default_float_rules
     Match(wm_type="utility"),
     Match(wm_type="notification"),
     Match(wm_type="toolbar"),
@@ -756,7 +756,7 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class="splash"),
     Match(wm_class="toolbar"),
     Match(func=lambda c: c.has_fixed_size())
-])
+], border_focus="#009185")  # #689d6a #98971a #d79921 #fea63c #009185
 
 # float_rules for qtile version < 0.17.0
 #  floating_layout = layout.Floating(float_rules=[
