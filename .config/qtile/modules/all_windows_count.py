@@ -33,7 +33,8 @@ class WindowCount(base._TextBox):
         ("fontshadow", None, "font shadow color, default is None(no shadow)"),
         ("padding", None, "Padding left and right. Calculated if None."),
         ("foreground", "#ffffff", "Foreground colour."),
-        ("text_format", "{num}", "Format for message")
+        ("text_format", "{num}", "Format for message"),
+        ("show_zero", False, "Show window count when no windows")
     ]  # type: List[Tuple[str, Any, str]]
 
     def __init__(self, text=" ", width=bar.CALCULATED, **config):
@@ -56,6 +57,15 @@ class WindowCount(base._TextBox):
     def _decrease_count(self, window):
         self._count -= 1
         self.update()
+
+    def calculate_length(self):
+        if self.text and (self._count or self.show_zero):
+            return min(
+                self.layout.width,
+                self.bar.width
+            ) + self.actual_padding * 2
+        else:
+            return 0
 
     def update(self):
         self.text = self.text_format.format(num=self._count)
