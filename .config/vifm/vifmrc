@@ -395,6 +395,9 @@ filextype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.b
 " Books 
 filextype *.fb2,*.epub cr3 %f &
 
+" Fonts 
+filextype *.ttf,*.otf gnome-font-viewer %f &
+
 " .deb 
 filextype *.deb gdebi-gtk %f &
 
