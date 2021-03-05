@@ -1,7 +1,7 @@
 [Appearance]
 AntiAliasFonts=true
 BoldIntense=true
-ColorScheme=GruvboxDark
+ColorScheme=Gruvbox
 DimmValue=128
 Font=UbuntuMono Nerd Font,16,-1,5,50,0,0,0,0,0
 LineSpacing=0

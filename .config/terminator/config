@@ -15,7 +15,7 @@
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
-    font = UbuntuMono Nerd Font 16
+    font = NotoSansMono Nerd Font 13
     foreground_color = "#ebdbb2"
     show_titlebar = False
     scrollbar_position = hidden
@@ -241,17 +241,6 @@
     palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
     use_system_font = False
     copy_on_selection = True
-  [[Gruvbox_dark_SauceCodePro_NerdFont]]
-    background_color = "#282828"
-    background_darkness = 0.97
-    cursor_color = "#aaaaaa"
-    font = SauceCodePro Nerd Font 14
-    foreground_color = "#ebdbb2"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
-    use_system_font = False
-    copy_on_selection = True
   [[Gruvbox_dark_M+_1mn]]
     background_color = "#282828"
     cursor_color = "#aaaaaa"
@@ -310,6 +299,17 @@
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
     font = Sarasa Mono SC Nerd Light 14.5
+    foreground_color = "#ebdbb2"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
+    use_system_font = False
+    copy_on_selection = True
+  [[Gruvbox_dark_NotoSansMono]]
+    background_color = "#282828"
+    background_darkness = 0.97
+    cursor_color = "#aaaaaa"
+    font = Noto Sans Mono 13
     foreground_color = "#ebdbb2"
     show_titlebar = False
     scrollbar_position = hidden
