@@ -13,6 +13,7 @@ bash
 conky
 compton
 dmenu-edit-configs
+dmenu-passmenu
 dmenu-system-exit
 fish
 homepage
@@ -49,6 +50,8 @@ case $choice in
 		# choice="$HOME/.config/compton/compton.conf";;
 	dmenu-edit-configs)
 		choice="$HOME/.myScripts/dmenu/dmenu-edit-configs.sh";;
+	dmenu-passmenu)
+		choice="$HOME/.myScripts/dmenu/dmenu-passmenu.sh";;
 	dmenu-system-exit)
 		choice="$HOME/.myScripts/dmenu/dmenu-system-exit.sh";;
     fish)
