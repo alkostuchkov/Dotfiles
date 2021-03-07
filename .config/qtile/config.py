@@ -200,6 +200,7 @@ Key([mod, "shift"], "d", lazy.spawn("dmenu_run -nb #222B2E -nf #09DBC9 -sb #0091
     Key([alt], "r", lazy.spawn("rofi run -show drun -show-icons"), desc="Run App Lancher"),
     Key([alt], "w", lazy.spawn("rofi run -show window -show-icons"), desc="Switch between opened windows"),
     Key([alt], "c", lazy.spawn(home + "/.myScripts/dmenu/dmenu-edit-configs.sh"), desc="Run dmenu script for editing config files"),
+    Key([alt], "p", lazy.spawn(home + "/.myScripts/dmenu/dmenu-passmenu.sh"), desc="Run dmenu script for editing config files"),
     Key([alt], "s", lazy.spawn(home + "/.myScripts/dmenu/dmenu-system-exit.sh"), desc="System exit menu"),
     Key([alt], "l", lazy.spawn(home + "/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
     Key([alt], "Tab", lazy.group.next_window(), desc="Switch to the next window"),
@@ -417,6 +418,10 @@ def init_widgets_list():
                     background=colors[0],
                     padding=0
                     ),
+            #  widget.Spacer(
+                    #  length=bar.STRETCH,
+                    #  background=colors[0]
+                    #  ),
             widget.CheckUpdates(
                     foreground=colors[14],
                     background=colors[0],
