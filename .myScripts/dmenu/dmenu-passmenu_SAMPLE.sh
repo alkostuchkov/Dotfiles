@@ -65,14 +65,19 @@ quit")
 
 choose_category
 
-for_notify=$(echo $user | cut -d "/" -f2)
-pass $user | xclip -selection clipboard
-# echo "Copied $for_notify to clipboard. Will clear in 45 seconds."
-notify-send -t 5000 -i dialog-information "Copied $for_notify to clipboard.
-Will clear in 45 seconds."
-sleep 45
-cat /dev/null | xclip -sel clip
-notify-send -t 3000 -i dialog-information "Cleared."
+password=$(pass $user)
+if [ $password ]
+    then
+        for_notify=$(echo $user | cut -d "/" -f2)
+        echo $password | xclip -selection clipboard
+        notify-send -t 3000 -i dialog-information "Copied $for_notify to clipboard.
+        Will clear in 45 seconds."
+        sleep 45
+        cat /dev/null | xclip -sel clip
+        notify-send -t 3000 -i dialog-information "Cleared."
+    else
+        notify-send -t 3000 -i dialog-information "Bad Passphrase."
+fi
 
 # Colors
 # choice=$(echo -e "${emails[@]}" | dmenu -p 'Edit config file: ' -nb '#282828' -nf '#fea63c' -sb '#d79921' -fn 'Ubuntu-18:normal')  # Gruvbox
