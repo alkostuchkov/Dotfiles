@@ -1,6 +1,6 @@
 ! Enabled modi
 rofi.modi: window,run,ssh,drun
-rofi.font: Ubuntu 18
+rofi.font: Ubuntu 16
 ! rofi.font: DejavuSans Mono 12
 rofi.width: 60
 rofi.theme: /usr/share/rofi/themes/lb.rasi

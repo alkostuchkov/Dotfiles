@@ -4,7 +4,8 @@
 # with openrc use loginctl
 [ "$(cat /proc/1/comm)" = "systemd" ] && logind=systemctl || logind=loginctl
 
-declare options=("lock
+# declare options=("lock
+options=("lock
 switch_user
 suspend
 hibernate
