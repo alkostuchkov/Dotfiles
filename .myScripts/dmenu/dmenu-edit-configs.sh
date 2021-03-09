@@ -8,92 +8,49 @@
 # Dmenu script for editing some of my more frequently edited config files.
 
 # declare options=("alacritty
-options=("alacritty
-autostart_qtile
-bash
-conky
-compton
-dmenu-edit-configs
-dmenu-passmenu
-dmenu-system-exit
-fish
-homepage
-i3
-kitty
-picom
-polybar
-qtile
-qutebrowser
-rofi
-udiskie
-vifm
-vim
-xterm
-xresources
-zsh
-quit")
+options=(
+"alacritty - $HOME/.config/alacritty/alacritty.yml"
+"autostart_qtile - $HOME/.config/qtile/scripts/autostart.sh"
+"bash - $HOME/.bashrc"
+"conky - $HOME/.myScripts/conky/conkyrc1"
+"compton - $HOME/.config/compton.conf"
+"dmenu-edit-configs - $HOME/.myScripts/dmenu/dmenu-edit-configs.sh"
+"dmenu-passmenu - $HOME/.myScripts/dmenu/dmenu-passmenu.sh"
+"dmenu-system-exit - $HOME/.myScripts/dmenu/dmenu-system-exit.sh"
+"fish - $HOME/.config/fish/config.fish"
+"homepage - $HOME/.surf/homepage.html"
+"i3 - $HOME/.config/i3/config"
+"kitty - $HOME/.config/kitty/kitty.conf"
+"picom - $HOME/.config/picom/picom.conf"
+"polybar - $HOME/.config/polybar/config"
+"qtile - $HOME/.config/qtile/config.py"
+"qutebrowser - $HOME/.config/qutebrowser/config.py"
+"rofi - $HOME/.config/rofi/config"
+"udiskie - $HOME/.config/udiskie/config.yml"
+"vifm - $HOME/.config/vifm/vifmrc"
+"vim - $HOME/.vimrc"
+"xterm - $HOME/XTerm"
+"xresources - $HOME/.Xresources"
+"zsh - $HOME/.zshrc"
+"quit")
 
+# names=$(printf '%s\n' "${options[@]}" | awk '{print $1}')
+# choice=$(printf '%s\n' "${names}" | dmenu -l 10  -nf '#09dbc9' -nb '#222b2e' -sf '#dbdcd5' -sb '#009185' -fn 'Ubuntu-16:normal' -p 'Edit config file:')
+
+choice=$(printf '%s\n' "${options[@]}" | dmenu -l 10  -nf '#09dbc9' -nb '#222b2e' -sf '#dbdcd5' -sb '#009185' -fn 'Ubuntu-16:normal' -p 'Edit config file:')
+
+if [[ "$choice" == "quit" ]]; then
+    echo "Program terminated." && exit 1
+elif [[ "$choice" ]]; then
+    conf=$(printf '%s\n' "${choice}" | awk '{print $NF}')
+    alacritty -e vim "$conf"
+    # terminator -e "vim $choice"
+else
+    echo "Program terminated." && exit 1
+fi
+
+# Colors
 # choice=$(echo -e "${options[@]}" | dmenu -p 'Edit config file: ' -nb '#282828' -nf '#fea63c' -sb '#d79921' -fn 'Ubuntu-18:normal')  # Gruvbox
 # choice=$(echo -e "${options[@]}" | dmenu -p 'Edit config file: ' -nb '#222B2E' -nf '#09DBC9' -sb '#009185' -fn 'Sarasa Mono SC Nerd-17:normal')
 # choice=$(echo -e "${options[@]}" | dmenu -p 'Edit config file: ' -nb '#222B2E' -nf '#09DBC9' -sb '#009185' -fn 'Ubuntu-18:normal')  # Materia Manjaro
-choice=$(dmenu -l 10  -nf '#09dbc9' -nb '#222b2e' -sf '#dbdcd5' -sb '#009185' -fn 'Ubuntu-16:normal' -p 'Edit config file:'   <<< "$options")
 
-case $choice in
-    alacritty)
-		choice="$HOME/.config/alacritty/alacritty.yml";;
-    autostart_qtile)
-        choice="$HOME/.config/qtile/scripts/autostart.sh";;
-	bash)
-		choice="$HOME/.bashrc";;
-	conky)
-		choice="$HOME/.myScripts/conky/conkyrc1";;
-	compton)
-		choice="$HOME/.config/compton.conf";;
-		# choice="$HOME/.config/compton/compton.conf";;
-	dmenu-edit-configs)
-		choice="$HOME/.myScripts/dmenu/dmenu-edit-configs.sh";;
-	dmenu-passmenu)
-		choice="$HOME/.myScripts/dmenu/dmenu-passmenu.sh";;
-	dmenu-system-exit)
-		choice="$HOME/.myScripts/dmenu/dmenu-system-exit.sh";;
-    fish)
-		choice="$HOME/.config/fish/config.fish";;
-    homepage)
-		choice="$HOME/.surf/homepage.html";;
-	i3)
-		choice="$HOME/.config/i3/config";;
-	kitty)
-		choice="$HOME/.config/kitty/kitty.conf";;
-	picom)
-		choice="$HOME/.config/picom/picom.conf";;
-	polybar)
-		choice="$HOME/.config/polybar/config";;
-	qtile)
-		choice="$HOME/.config/qtile/config.py";;
-	qutebrowser)
-		choice="$HOME/.config/qutebrowser/config.py";;
-	rofi)
-		choice="$HOME/.config/rofi/config";;
-	udiskie)
-		choice="$HOME/.config/udiskie/config.yml";;
-	vifm)
-		choice="$HOME/.config/vifm/vifmrc";;
-	vim)
-		choice="$HOME/.vimrc";;
-	xresources)
-		choice="$HOME/.Xresources";;
-	xterm)
-		choice="$HOME/XTerm";;
-	zsh)
-		choice="$HOME/.zshrc";;
-	quit)
-		echo "Program terminated." && exit 1;;
-	*)
-		exit 1;;
-esac
-
-alacritty -e vim "$choice"
-# terminator -e "vim $choice"
-
-# alacritty -e nvim "$choice"
-# emacsclient -c -a emacs "$choice"
