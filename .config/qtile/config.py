@@ -203,7 +203,7 @@ Key([mod, "shift"], "d", lazy.spawn("dmenu_run -nb #222B2E -nf #09DBC9 -sb #0091
     Key([alt], "p", lazy.spawn(home + "/.myScripts/dmenu/dmenu-passmenu.sh"), desc="Run dmenu script for editing config files"),
     Key([alt], "s", lazy.spawn(home + "/.myScripts/dmenu/dmenu-system-exit.sh"), desc="System exit menu"),
     Key([alt], "l", lazy.spawn(home + "/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
-    Key([alt], "k", lazy.spawn(home + "/.myScripts/dmenu/dmenu-kill.sh"), desc="Kill chosen process"),
+    Key([alt], "t", lazy.spawn(home + "/.myScripts/dmenu/dmenu-kill.sh"), desc="Kill chosen process"),
     Key([alt], "e", lazy.spawn(home + "/.myScripts/dmenu/dmenu-search.sh"), desc="Run chosen search engine"),
     Key([alt], "Tab", lazy.group.next_window(), desc="Switch to the next window"),
     #  Key([alt], "k", lazy.spawn(home + "/.myScripts/on-off_conky.sh"), desc="On-Off conky"),
