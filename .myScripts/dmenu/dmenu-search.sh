@@ -76,4 +76,4 @@ while [ -z "$query" ]; do
 done
 
 # Display search results in web browser
-$DMBROWSER "$engineurl"$query
+$DMBROWSER "$engineurl""$query"
