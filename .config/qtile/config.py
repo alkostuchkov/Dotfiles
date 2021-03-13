@@ -15,26 +15,6 @@ from modules import arcobattery
 from modules import all_windows_count
 
 
-def open_htop():
-    """Open htop."""
-    qtile.cmd_spawn(my_term + " -e htop")
-
-
-def open_calendar():
-    """Open gsimplecal."""
-    qtile.cmd_spawn("gsimplecal")
-
-
-def open_top5_cpu_usage():
-    """Show top5 CPU usage."""
-    qtile.cmd_spawn(home + "/.myScripts/top5_cpu_usage.sh")
-
-
-def open_top5_mem_usage():
-    """Show top5 MEMORY usage."""
-    qtile.cmd_spawn(home + "/.myScripts/top5_mem_usage.sh")
-
-
 def get_all_netifaces(path_to_state="/sys/class/net/"):
     """
     Get all netifaces in the /sys/class/net/ and
@@ -429,13 +409,14 @@ def init_widgets_list():
                     background=colors[0],
                     colour_have_updates=colors[14],
                     #  colour_no_updates="ffffff",
+                    fontsize=14,
                     custom_command="apt-show-versions --upgradeable",
                     #  custom_command="apt-show-versions | grep upgradeable | wc -l",
                     display_format=" {updates}",  # ⟳ 
-                    fontsize=14,
+                    distro="Debian",
                     #  no_update_string="No updates",
                     execute=my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'",
-                    #  execute=my_term + " -e sudo apt update && sudo apt upgrade && $SHELL",
+                    #  execute=my_term + " -e sudo apt update && sudo apt upgrade && $SHELL",  # for alacritty
                     #  execute=my_term + ' -e "sudo aptitude update && sudo aptitude safe-upgrade && $SHELL"',  # for terminator
                     update_interval=900  # 15min after cron's apt-update task
                     ),
@@ -475,8 +456,8 @@ def init_widgets_list():
                     background=colors[0],
                     padding=0,
                     mouse_callbacks={
-                        "Button1": open_top5_cpu_usage,
-                        "Button3": open_htop
+                        "Button1": lambda: qtile.cmd_spawn(home + "/.myScripts/top5_cpu_usage.sh"),
+                        "Button3": lambda: qtile.cmd_spawn(my_term + " -e htop")
                     }
                     ),
             widget.CPU(
@@ -484,10 +465,9 @@ def init_widgets_list():
                     background=colors[0],
                     padding=0,
                     format="{freq_current}GHz\n{load_percent}%",
-                    #  mouse_callbacks={"Button1": lambda qtile: qtile.cmd_spawn(my_term + " -e htop")},
                     mouse_callbacks={
-                        "Button1": open_top5_cpu_usage,
-                        "Button3": open_htop
+                        "Button1": lambda: qtile.cmd_spawn(home + "/.myScripts/top5_cpu_usage.sh"),
+                        "Button3": lambda: qtile.cmd_spawn(my_term + " -e htop")
                     }
                     ),
             widget.Sep(
@@ -503,8 +483,8 @@ def init_widgets_list():
                     background=colors[0],
                     padding=0,
                     mouse_callbacks={
-                        "Button1": open_top5_mem_usage,
-                        "Button3": open_htop
+                        "Button1": lambda: qtile.cmd_spawn(home + "/.myScripts/top5_mem_usage.sh"),
+                        "Button3": lambda: qtile.cmd_spawn(my_term + " -e htop")
                     }
                     ),
             memory.Memory(
@@ -512,10 +492,9 @@ def init_widgets_list():
                     background=colors[0],
                     padding=0,
                     format="{MemUsed}M\n{MemPercent}%",
-                    #  mouse_callbacks={"Button1": lambda qtile: qtile.cmd_spawn(my_term + " -e htop")},
                     mouse_callbacks={
-                        "Button1": open_top5_mem_usage,
-                        "Button3": open_htop
+                        "Button1": lambda: qtile.cmd_spawn(home + "/.myScripts/top5_mem_usage.sh"),
+                        "Button3": lambda: qtile.cmd_spawn(my_term + " -e htop")
                     }
                     ),
             widget.Sep(
@@ -613,14 +592,14 @@ def init_widgets_list():
                     background=colors[0],
                     #  fontsize=14,
                     padding=0,
-                    mouse_callbacks={"Button1": open_calendar}
+                    mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("gsimplecal")}
                     ),
             widget.Clock(
                     foreground=colors[12],
                     background=colors[0],
                     padding=3,
                     #  mouse_callbacks={"Button1": lambda qtile: qtile.cmd_spawn("gsimplecal")},
-                    mouse_callbacks={"Button1": open_calendar},
+                    mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("gsimplecal")},
                     format="%a, %d %b\n%H:%M:%S"
                     ),
             #  widget.Sep(
@@ -711,6 +690,24 @@ mouse = [
 
 floating_layout = layout.Floating(float_rules=[
     # Run the utility of `xprop` to see the wm class and name of an X client.
+    # from libqtile.layout.floating class Floating
+    # add (unpack *) default_float_rules
+    *layout.Floating.default_float_rules,
+    #  Match(wm_type="utility"),
+    #  Match(wm_type="notification"),
+    #  Match(wm_type="toolbar"),
+    #  Match(wm_type="splash"),
+    #  Match(wm_type="dialog"),
+    #  Match(wm_class="file_progress"),
+    #  Match(wm_class="confirm"),
+    #  Match(wm_class="dialog"),
+    #  Match(wm_class="download"),
+    #  Match(wm_class="error"),
+    #  Match(wm_class="notification"),
+    #  Match(wm_class="splash"),
+    #  Match(wm_class="toolbar"),
+    #  Match(func=lambda c: c.has_fixed_size()),
+    ####### My float rules #######
     #  Match(title="Summary", wm_class="synaptic"),
     #  Match(title="Applying Changes", wm_class="synaptic"),
     #  Match(wm_class="Polkit-gnome-authentication-agent-1"),
@@ -746,23 +743,7 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class="confirmreset"),  # gitk
     Match(wm_class="makebranch"),  # gitk
     Match(wm_class="maketag"),  # gitk
-    Match(wm_class="ssh-askpass"),  # ssh-askpass
-    # from libqtile.layout.floating class Floating
-    # default_float_rules
-    Match(wm_type="utility"),
-    Match(wm_type="notification"),
-    Match(wm_type="toolbar"),
-    Match(wm_type="splash"),
-    Match(wm_type="dialog"),
-    Match(wm_class="file_progress"),
-    Match(wm_class="confirm"),
-    Match(wm_class="dialog"),
-    Match(wm_class="download"),
-    Match(wm_class="error"),
-    Match(wm_class="notification"),
-    Match(wm_class="splash"),
-    Match(wm_class="toolbar"),
-    Match(func=lambda c: c.has_fixed_size())
+    Match(wm_class="ssh-askpass")  # ssh-askpass
 ], border_focus="#009185")  # #689d6a #98971a #d79921 #fea63c #009185
 
 # float_rules for qtile version < 0.17.0
