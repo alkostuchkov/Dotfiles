@@ -65,6 +65,7 @@ keys = [
 # <SUPER> + FUNCTION KEYS
     Key([mod], "Return", lazy.spawn(my_term), desc="Launch terminal"),
     Key([mod, "shift"], "Return", lazy.spawn("konsole"), desc="Launch konsole"),
+    Key([mod], "r", lazy.spawn("rofi run -show drun -show-icons"), desc="Run App Lancher"),
     Key([mod], "Print", lazy.spawn("flameshot gui"), desc="Run flameshot (take screenshot)"),
     Key([mod], "w", lazy.spawn("firefox"), desc="Launch Firefox"),
     Key([mod], "u", lazy.spawn("qutebrowser"), desc="Launch qutebrowser"),
@@ -99,7 +100,7 @@ keys = [
     Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
 
 # <SUPER> + <SHIFT> + KEYS  (-nf #fea63c)
-Key([mod, "shift"], "d", lazy.spawn("dmenu_run -nb #222B2E -nf #09DBC9 -sb #009185 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
+    Key([mod, "shift"], "d", lazy.spawn("dmenu_run -nb #222B2E -nf #09DBC9 -sb #009185 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
 #  Key([mod, "shift"], "d", lazy.spawn("dmenu_run -nb #282828 -nf #d79921 -sb #fea63c -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Gruvbox
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "x", lazy.spawn("xkill"), desc="Kill not answered window"),
@@ -177,16 +178,24 @@ Key([mod, "shift"], "d", lazy.spawn("dmenu_run -nb #222B2E -nf #09DBC9 -sb #0091
     Key([mod, "control"], "r", lazy.layout.reset()),
 
 # <ALT> + KEYS
-    Key([alt], "r", lazy.spawn("rofi run -show drun -show-icons"), desc="Run App Lancher"),
-    Key([alt], "w", lazy.spawn("rofi run -show window -show-icons"), desc="Switch between opened windows"),
-    Key([alt], "c", lazy.spawn(home + "/.myScripts/dmenu/dmenu-edit-configs.sh"), desc="Run dmenu script for editing config files"),
-    Key([alt], "p", lazy.spawn(home + "/.myScripts/dmenu/dmenu-passmenu.sh"), desc="Run dmenu script for editing config files"),
-    Key([alt], "s", lazy.spawn(home + "/.myScripts/dmenu/dmenu-system-exit.sh"), desc="System exit menu"),
-    Key([alt], "l", lazy.spawn(home + "/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
-    Key([alt], "t", lazy.spawn(home + "/.myScripts/dmenu/dmenu-kill.sh"), desc="Kill chosen process"),
-    Key([alt], "e", lazy.spawn(home + "/.myScripts/dmenu/dmenu-search.sh"), desc="Run chosen search engine"),
-    Key([alt], "Tab", lazy.group.next_window(), desc="Switch to the next window"),
+    KeyChord([alt], "m", [
+        Key([], "c", lazy.spawn(home + "/.myScripts/dmenu/dmenu-edit-configs.sh"), desc="Run dmenu script for editing config files"),
+        Key([], "p", lazy.spawn(home + "/.myScripts/dmenu/dmenu-passmenu.sh"), desc="Run dmenu script for editing config files"),
+        Key([], "l", lazy.spawn(home + "/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
+        Key([], "k", lazy.spawn(home + "/.myScripts/dmenu/dmenu-kill.sh"), desc="Kill chosen process"),
+        Key([], "s", lazy.spawn(home + "/.myScripts/dmenu/dmenu-search.sh"), desc="Run chosen search engine"),
+        Key([], "x", lazy.spawn(home + "/.myScripts/dmenu/dmenu-system-exit.sh"), desc="System exit menu")],
+        mode="Dmenu"
+    ),
+    #  Key([alt], "c", lazy.spawn(home + "/.myScripts/dmenu/dmenu-edit-configs.sh"), desc="Run dmenu script for editing config files"),
+    #  Key([alt], "p", lazy.spawn(home + "/.myScripts/dmenu/dmenu-passmenu.sh"), desc="Run dmenu script for editing config files"),
+    #  Key([alt], "s", lazy.spawn(home + "/.myScripts/dmenu/dmenu-system-exit.sh"), desc="System exit menu"),
+    #  Key([alt], "l", lazy.spawn(home + "/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
+    #  Key([alt], "t", lazy.spawn(home + "/.myScripts/dmenu/dmenu-kill.sh"), desc="Kill chosen process"),
+    #  Key([alt], "e", lazy.spawn(home + "/.myScripts/dmenu/dmenu-search.sh"), desc="Run chosen search engine"),
     #  Key([alt], "k", lazy.spawn(home + "/.myScripts/on-off_conky.sh"), desc="On-Off conky"),
+    Key([alt], "w", lazy.spawn("rofi run -show window -show-icons"), desc="Switch between opened windows"),
+    Key([alt], "Tab", lazy.group.next_window(), desc="Switch to the next window"),
 
 # <CONTROL> + <ALT> + KEYS
 # <CONTROL> + <SHIFT> + KEYS
@@ -299,26 +308,27 @@ layouts = [
           #  ["#F6F806", "#F6F806"]] # 14 updates
 
 # Materia Manjaro
-colors = [["#263238", "#263238"], # 0 panel background
-          ["#585E72", "#585E72"], # 1 background for current screen tab
-          ["#dbdcd5", "#dbdcd5"], # 2 font color for group names
-          ["#009185", "#009185"], # 3 border line color for current tab
-          ["#8d62a9", "#8d62a9"], # 4 border line color for other tab and odd widgets
-          ["#6182b8", "#6182b8"], # 5 color for the even widgets
-          ["#24d2af", "#24d2af"], # 6 window name
-          ["#e2a0a5", "#e2a0a5"], # 7 CPU widget
-          ["#ffb62c", "#ffb62c"], # 8 Memory widget
-          ["#91b859", "#91b859"], # 9 NetSpeed widget
-          ["#ffffff", "#ffffff"], # 10 Layout widget
-          ["#39adb5", "#39adb5"], # 11 KeyboardLayout widget
-          ["#39adb5", "#39adb5"], # 12 Date widget
-          #  ["#f2b06a", "#f2b06a"], # 12 Date widget
-          ["#404555", "#404555"], # 13 system tray
-          ["#e2e0a5", "#e2e0a5"], # 14 updates
-          #  ["#ffcb6b", "#ffcb6b"], # 14 updates
-          ["#eb7bef", "#eb7bef"]] # 15 weather
-          #  ["#ec30f3", "#ec30f3"]] # 15 weather
-          #  ["#e2e0a5", "#e2e0a5"]] # 15 weather
+colors = [["#263238", "#263238"],  # 0 panel background
+          ["#585E72", "#585E72"],  # 1 background for current screen tab
+          ["#dbdcd5", "#dbdcd5"],  # 2 font color for group names
+          ["#009185", "#009185"],  # 3 border line color for current tab
+          ["#8d62a9", "#8d62a9"],  # 4 border line color for other tab and odd widgets
+          ["#6182b8", "#6182b8"],  # 5 color for the even widgets
+          ["#24d2af", "#24d2af"],  # 6 window name
+          ["#e2a0a5", "#e2a0a5"],  # 7 CPU widget
+          ["#ffb62c", "#ffb62c"],  # 8 Memory widget
+          ["#91b859", "#91b859"],  # 9 NetSpeed widget
+          ["#ffffff", "#ffffff"],  # 10 Layout widget
+          ["#39adb5", "#39adb5"],  # 11 KeyboardLayout widget
+          ["#39adb5", "#39adb5"],  # 12 Date widget
+          #  ["#f2b06a", "#f2b06a"],  # 12 Date widget
+          ["#404555", "#404555"],  # 13 system tray
+          ["#e2e0a5", "#e2e0a5"],  # 14 updates
+          #  ["#ffcb6b", "#ffcb6b"],  # 14 updates
+          ["#eb7bef", "#eb7bef"],  # 15 weather
+          ["#d79921", "#d79921"]]  # 16 Chord
+          #  ["#ec30f3", "#ec30f3"]]  # 15 weather
+          #  ["#e2e0a5", "#e2e0a5"]]  # 15 weather
 
 # Gruvbox colors
 #  colors = [["#282828", "#282828"], # 0 panel background
@@ -404,6 +414,12 @@ def init_widgets_list():
                     #  length=bar.STRETCH,
                     #  background=colors[0]
                     #  ),
+            widget.Chord(
+                    padding = 10,
+                    foreground = colors[16],
+                    background = colors[0],
+                    fontsize=14
+                    ),
             widget.CheckUpdates(
                     foreground=colors[14],
                     background=colors[0],
