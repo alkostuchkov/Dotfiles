@@ -4,7 +4,8 @@
 
 # EXPORTs
 export PATH=$PATH:~/.local/bin/:~/.cargo/bin:~/.config/vifm/scripts
-export TERM="screen-256color"
+# export TERM="screen-256color"
+export TERM="xterm-256color"
 export EDITOR="vim"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export NVM_DIR="$HOME/.nvm"
