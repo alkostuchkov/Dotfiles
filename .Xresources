@@ -38,6 +38,48 @@ XTerm*savelines: 16384
 ! double-click to select whole URLs :D
 XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
+! URxvt -----------------------------------------------------------------------
+URxvt*imLocale: en_US.UTF-8
+URxvt*termName: rxvt-unicode-256color
+URxvt*buffered: false
+URxvt.intensityStyles: false
+URxvt.font: xft:Sarasa Mono SC Nerd:size=15
+! URxvt.font: xft:Sarasa Mono SC Nerd:size=15, \
+            ! xft:JoyPixels:size=12, \
+            ! xft:Monospace:style=Medium:size=12
+URxvt.saveLines: 2000
+URxvt.scrollBar: false
+URxvt.cursorColor: white
+
+!! Extensions
+URxvt.perl-ext-common: default,matcher,resize-font,url-select,keyboard-select,clipboard
+URxvt.colorUL: #4682B4
+!! url-select
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: urxvt -e lynx -cfg=~/.lynx.cfg -lss=~/.lynx.lss
+URxvt.url-select.underline: true
+!! keyboard-select:
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+!! resize-font
+URxvt.keysym.C-k:   font-size:increase
+URxvt.keysym.C-j:   font-size:decrease
+!! Matcher
+URxvt.url-launcher:	urxvt -e lynx -cfg=~/.lynx.cfg -lss=~/.lynx.lss
+URxvt.matcher.button: 1
+!!clipboard
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+! URxvt*depth: 32
+
+
+! Palenight Xresources palette
+!! COLORS
+
+!!URxvt*foreground:   #bbc5ff
+!!URxvt*background:   [95]#282a36
+!!URxvt*cursorColor:  #bbc5ff
+
+
 !! COLORS (Gruvbox Dark)
 ! *.foreground:   #ebdbb2
 ! *.background:   #282828
