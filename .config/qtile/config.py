@@ -431,7 +431,11 @@ def init_widgets_list():
                     display_format=" {updates}",  # ⟳ 
                     distro="Debian",
                     #  no_update_string="No updates",
-                    execute=my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'",
+                    mouse_callbacks={
+                        "Button1": lambda: qtile.cmd_spawn(my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'"),
+                        "Button3": lambda: bar.draw()
+                    },
+                    #  execute=my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'",
                     #  execute=my_term + " -e sudo apt update && sudo apt upgrade && $SHELL",  # for alacritty
                     #  execute=my_term + ' -e "sudo aptitude update && sudo aptitude safe-upgrade && $SHELL"',  # for terminator
                     update_interval=900  # 15min after cron's apt-update task
@@ -579,7 +583,11 @@ def init_widgets_list():
                     foreground=colors[10],
                     background=colors[0],
                     padding=0,
-                    scale=0.6
+                    scale=0.6,
+                    mouse_callbacks={
+                        "Button1": qtile.cmd_next_layout,
+                        "Button3": qtile.cmd_prev_layout,
+                    }
                     ),
             widget.WindowCount(
                     text_format="{num}/",
