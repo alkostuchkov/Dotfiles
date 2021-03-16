@@ -23,7 +23,7 @@ font pango:Ubuntu 11
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 5
+new_window pixel 3
 new_float normal
 # default_border pixel 1
 # default_floating_border normal
@@ -82,12 +82,13 @@ bindsym $mod+q split toggle
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+shift+s layout stacking
+bindsym $mod+shift+w layout tabbed
+bindsym $mod+shift+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+f floating toggle
+# bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -154,7 +155,8 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 # Start Applications (keybindings)                                         
 ################################################################################
 # start a terminal
-set $myTerm terminator
+# set $myTerm terminator
+set $myTerm alacritty
 bindsym $mod+Return exec $myTerm
 # bindsym $mod+Return exec i3-sensible-terminal
 
@@ -172,10 +174,10 @@ bindsym $alt+w exec --no-startup-id rofi run -show window -show-icons
 #  bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # bindsym $mod+Ctrl+b exec $myTerm -e 'bmenu'
-bindsym $mod+Shift+b exec firefox
-bindsym $mod+Shift+e exec dolphin
-bindsym $mod+Shift+i exec sudo synaptic-pkexec
-bindsym $mod+Shift+p exec xfce4-power-manager-settings
+bindsym $mod+alt+w exec firefox
+bindsym $mod+alt+e exec dolphin
+bindsym $mod+alt+i exec sudo synaptic-pkexec
+bindsym $mod+alt+p exec xfce4-power-manager-settings
 # bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec obs
 # bindsym $mod+F5 exec $myTerm -e 'mocp'
@@ -184,7 +186,7 @@ bindsym $mod+Shift+p exec xfce4-power-manager-settings
 # bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 # bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 # bindsym $mod+Ctrl+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
-bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+bindsym $mod+shift+x --release exec --no-startup-id xkill
 
 ################################################################################
 # Apps Launched with <SUPER> + <KEYPAD 1-9>                                
@@ -227,8 +229,11 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # Screen brightness controls
 # Try to use my sh files for ajustment brightness!!!
-bindsym XF86MonBrightnessUp exec ~/.myScripts/brightness_up.sh
-bindsym XF86MonBrightnessDown exec ~/.myScripts/brightness_down.sh
+bindsym $mod+F9 exec ~/.myScripts/brightness_up.sh
+bindsym $mod+F8 exec ~/.myScripts/brightness_down.sh
+# bindsym XF86MonBrightnessUp exec ~/.myScripts/brightness_up.sh
+# bindsym XF86MonBrightnessDown exec ~/.myScripts/brightness_down.sh
+
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; $myNotify 'brightness up'"
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; $myNotify 'brightness down'"
 
@@ -245,7 +250,7 @@ bindsym XF86MonBrightnessDown exec ~/.myScripts/brightness_down.sh
 # # assign [class="Thunderbird"] $ws1
 # assign [class="Firefox"] $ws2
 # assign [class="dolphin"] $ws3
-assign [class="Synaptic"] $ws9
+assign [class="Synaptic"] $ws4
   
 ################################################################################
 # Open specific applications in floating mode                             
@@ -310,6 +315,7 @@ mode "$mode_system" {
 }
 
 # resize window (you can also use the mouse for that)
+bindsym $mod+r mode "resize"
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
@@ -334,7 +340,6 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-bindsym $mod+r mode "resize"
 
 ####### Correct for myself!!! #################################################
 # # Lock screen
@@ -345,7 +350,7 @@ bindsym $mod+r mode "resize"
 ################################################################################
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # exec --no-startup-id nitrogen --restore; sleep 1; picom --config $HOME/.config/picom/picom.conf
-exec --no-startup-id nitrogen --restore; sleep 1; picom --config $HOME/.config/compton/compton.conf
+exec --no-startup-id nitrogen --restore; sleep 1; compton --config $HOME/.config/compton.conf
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id nm-applet
 exec --no-startup-id setxkbmap -layout us,ru -option grp:caps_toggle
@@ -353,8 +358,8 @@ exec --no-startup-id setxkbmap -layout us,ru -option grp:caps_toggle
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id diodon
 # exec --no-startup-id xfce4-clipman
-exec --no-startup-id conky -c $HOME/.myScripts/conky/conkyrc1
-# exec --no-startup-id $HOME/Programs/CheckEmail/CheckEmail
+# exec --no-startup-id conky -c $HOME/.myScripts/conky/conkyrc1
+exec --no-startup-id $HOME/Programs/CheckEmail/CheckEmail
 exec --no-startup-id $HOME/.config/i3/alternating_layouts.py
 # exec --no-startup-id xrandr -s 1366x768
 # exec --no-startup-id numlockx off
@@ -386,11 +391,17 @@ bindsym $mod+Ctrl+m exec $myTerm -e 'alsamixer'
 # Theme colors                                                             
 ################################################################################
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #556064 #ABB2BF #80FFF9 #FDF6E3
+  client.focused          #009185 #009185 #80FFF9 #FDF6E3
   client.focused_inactive #2F3D44 #2F3D44 #AD69AF #454948
   client.unfocused        #2F3D44 #2F3D44 #AD69AF #454948
   client.urgent           #CB4B16 #FDF6E3 #AD69AF #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000 
+  client.placeholder      #000000 #0c0c0c #ffffff #000000
+
+  # client.focused          #556064 #ABB2BF #80FFF9 #FDF6E3
+  # client.focused_inactive #2F3D44 #2F3D44 #AD69AF #454948
+  # client.unfocused        #2F3D44 #2F3D44 #AD69AF #454948
+  # client.urgent           #CB4B16 #FDF6E3 #AD69AF #268BD2
+  # client.placeholder      #000000 #0c0c0c #ffffff #000000
 #6D1F66 purple
 #DC8CC3 pink
 #3584E4 blue

@@ -45,13 +45,44 @@ format-margin =
 format-offset =
 
 [colors]
-; Nord theme ============
-background = #282c34
-foreground = #abb2bf
-alert = #bd2c40
+; Materia Manjaro =======
+background = #263238
+foreground = #dbdcd5
+alert = #cc241d
 volume-min = #a3be8c
 volume-med = #ebcb8b
 volume-max = #bf616a
+current_screen_tab = "#585E72"
+group_names = "#dbdcd5"
+line_color_curr_tab = "#009185"
+line_color_other_tab = "#8d62a9"
+even_widgets = "#6182b8"
+window_name = "#24d2af"
+cpu = #e2a0a5
+memory = "#ffb62c"
+net_speed_up = "#24d2af"
+net_speed_down = "#91b859"
+layout_widget = "#ffffff"
+keyboard = "#39adb5"
+date_time = "#6182b8"
+; date_time = "#f2b06a"
+sys_tray = "#404555"
+; updates = "#e2e0a5"
+updates = "#ffcb6b"
+weather = "#eb7bef"
+; weather = "#ec30f3"
+; weather = "#e2e0a5"
+chord = "#d79921"
+
+; =======================
+
+; Nord theme ============
+; background = #282c34
+; foreground = #abb2bf
+; alert = #bd2c40
+; volume-min = #a3be8c
+; volume-med = #ebcb8b
+; volume-max = #bf616a
 ; =======================
 
 ; Gotham theme ==========
@@ -90,7 +121,7 @@ override-redirect = false
 bottom = false
 fixed-center = true
 width = 100%
-height = 20
+height = 25
 ;offset-x = 1%
 ;offset-y = 1%
 
@@ -112,8 +143,8 @@ border-size = 0
 ;border-bottom-size = 25
 border-color = #000000
 
-padding-left = 1
-padding-right = 1
+padding-left = 0
+padding-right = 0
 
 module-margin-left = 0
 module-margin-right = 0
@@ -131,11 +162,12 @@ font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
 font-4 = "Font Awesome 5 Brands:pixelsize=8;1"
 
 ; modules-left = i3 xwindow updates-apt
-modules-left = i3 updates-apt xwindow
+; modules-left = i3 updates-apt xwindow
+modules-left = i3 xwindow
 modules-center = 
 ; modules-right = arrow1 networkspeedup networkspeeddown arrow2 memory2 arrow3 cpu2 arrow2 pavolume arrow3 get-ip arrow5 battery wired-network xkeyboard arrow4 date
 ; modules-right = networkspeedup networkspeeddown cpu2 memory2 backlight pavolume battery wired-network wireless-network xkeyboard date2
-modules-right = networkspeedup networkspeeddown cpu2 memory2 xkeyboard date2
+modules-right = updates-apt cpu2 memory2 networkspeedup networkspeeddown xkeyboard date2
 
 ; separator =
 ; separator = " | "
@@ -145,7 +177,7 @@ separator = "  "
 
 tray-position = right
 tray-detached = false
-tray-maxsize = 20
+; tray-maxsize = 20
 tray-background = ${colors.background}
 tray-offset-x = 0
 tray-offset-y = 0
@@ -623,14 +655,14 @@ fuzzy-match = false
 ;              
 
 ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
 ws-icon-9 = 10;
 ws-icon-default = " "
 
@@ -652,9 +684,9 @@ label-mode-background = #FFBB00
 ; Default: %icon%  %name%
 ; focused = Active workspace on focused monitor
 label-focused = %icon% %name%
-label-focused-background = ${colors.background}
+label-focused-background = ${colors.line_color_curr_tab}
 label-focused-foreground = ${colors.foreground}
-label-focused-underline = #3ecfb2
+; label-focused-underline = ${colors.chord}
 ; label-focused-underline = #16A085
 ; label-focused-underline = #AD69AF
 label-focused-padding = 2
@@ -685,6 +717,7 @@ label-visible-padding = 2
 ; urgent = Workspace with urgency hint set
 label-urgent = %icon% %name%
 label-urgent-background = ${self.label-focused-background}
+; label-urgent-foreground = #cc241d
 label-urgent-foreground = #db104e
 label-urgent-padding = 2
 
@@ -1073,13 +1106,13 @@ type = internal/cpu
 ; Seconds to sleep between updates
 ; Default: 1
 interval = 1
-format-foreground = ${colors.foreground}
+format-foreground = ${colors.cpu}
 format-background = ${colors.background}
-format-prefix = " "
+format-prefix = ""
 format-connected-prefix-foreground = ${colors.foreground}
 ; format-prefix-foreground = #fefefe
-format-prefix-underline = #FF0600
-format-underline = #FF0600
+; format-prefix-underline = #FF0600
+; format-underline = #FF0600
 
 label-font = 1
 
@@ -1095,7 +1128,7 @@ format = <label>
 ;   %percentage% (default) - total cpu load
 ;   %percentage-cores% - load percentage for each core
 ;   %percentage-core[1-9]% - load percentage for specific core
-label = Cpu %percentage:3%%
+label = CPU %percentage%%
 
 ################################################################################
 
@@ -1124,11 +1157,11 @@ exec = ~/.config/polybar/scripts/popup-calendar.sh
 interval = 5
 click-left = ~/.config/polybar/scripts/popup-calendar.sh --popup &
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground}
-format-foreground = ${colors.foreground}
+format-prefix-foreground = ${colors.date_time}
+format-foreground = ${colors.date_time}
 format-background = ${colors.background}
-format-prefix-underline = #32A3ED
-format-underline = #32A3ED
+; format-prefix-underline = #32A3ED
+; format-underline = #32A3ED
 
 #################################################################
 
@@ -1324,14 +1357,14 @@ interval = 1
 ;   %mb_total%
 label = %percentage_used%%
 
-format = Mem <label>
+format = MEM <label>
 format-prefix = " "
-format-prefix-underline = #F97332
-format-prefix-foreground = ${colors.foreground}
-format-foreground = ${colors.foreground}
-; format-background = #668bd7
+format-foreground = ${colors.memory}
 format-background = ${colors.background}
-format-underline = #F97332
+; format-background = #668bd7
+; format-prefix-foreground = ${colors.memory}
+; format-underline = #F97332
+; format-prefix-underline = #F97332
 
 ################################################################################
 
@@ -1387,39 +1420,33 @@ format-online-background = ${colors.background}
 [module/networkspeedup]
 ;https://github.com/jaagr/polybar/wiki/Module:-network
 type = internal/network
-;interface = wlp3s0
-;interface = enp14s0
-;interface = enp0s31f6
-; interface = enp6s0
-interface = enp2s0
+; interface = enp2s0
+interface = wlo1
 label-connected = "%upspeed:7%"
 format-connected = <label-connected>
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground}
-format-connected-foreground = ${colors.foreground}
+format-connected-prefix = ""
+format-connected-foreground = ${colors.net_speed_down}
 format-connected-background = ${colors.background}
+; format-connected-prefix-foreground = ${colors.foreground}
 ; format-connected-background = #8d62a9
-format-connected-prefix-underline = #EBE80D
-format-connected-underline = #EBE80D
+; format-connected-prefix-underline = #EBE80D
+; format-connected-underline = #EBE80D
 
 ################################################################################
 
 [module/networkspeeddown]
 ;https://github.com/jaagr/polybar/wiki/Module:-network
 type = internal/network
-;interface = wlp3s0
-;interface = enp14s0
-;interface = enp0s31f6
-; interface = enp6s0
-interface = enp2s0
+; interface = enp2s0
+interface = wlo1
 label-connected = "%downspeed:7%"
 format-connected = <label-connected>
-format-connected-prefix = "  "
-format-connected-prefix-foreground = ${colors.foreground}
-format-connected-foreground = ${colors.foreground}
+format-connected-prefix = ""
+format-connected-foreground = ${colors.net_speed_down}
 format-connected-background = ${colors.background}
-format-connected-prefix-underline = #39EF2C
-format-connected-underline = #39EF2C
+; format-connected-prefix-foreground = ${colors.foreground}
+; format-connected-prefix-underline = #39EF2C
+; format-connected-underline = #39EF2C
 
 ################################################################################
 
@@ -1445,12 +1472,12 @@ interval = 1000
 ; interval = 60
 ; label = Repo: %output%
 label = %output%
-format-foreground = #FFBB00
-; format-foreground = ${colors.foreground}
-format-background = ${colors.background}
 format-prefix = " "
-format-prefix-foreground = #FFBB00
-format-underline = #FFBB00
+format-foreground = ${colors.updates}
+format-background = ${colors.background}
+; format-foreground = ${colors.foreground}
+; format-prefix-foreground = #FFBB00
+; format-underline = #FFBB00
 
 ################################################################################
 
@@ -1848,19 +1875,19 @@ type = internal/xkeyboard
 blacklist-0 = num lock
 
 ; format-prefix = " "
-format-prefix = "  "
-format-prefix-foreground = ${colors.foreground}
-format-prefix-background = ${colors.background}
-format-prefix-underline = #EB0DB0
-format-foreground = ${colors.foreground}
+format-prefix = " "
+format-foreground = ${colors.keyboard}
 format-background = ${colors.background}
+; format-prefix-foreground = ${colors.foreground}
+; format-prefix-background = ${colors.background}
+; format-prefix-underline = #EB0DB0
 
 label-layout = %layout%
-label-layout-underline = #EB0DB0
+; label-layout-underline = #EB0DB0
 label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-background = ${colors.background}
-label-indicator-underline = ${colors.foreground}
+label-indicator-underline = ${colors.keyboard}
 
 ################################################################################
 
@@ -1883,11 +1910,11 @@ type = internal/xwindow
 label = %title%
 label-maxlen = 50
 
-format-prefix = "  "
-format-prefix-underline = ${colors.background}
-format-underline = #3ecfb2
-format-foreground = #ffffff
+; format-prefix = ""
+; format-prefix-underline = ${colors.background}
+; format-underline = #3ecfb2
 ; format-foreground = #3ecfb2
+format-foreground = ${colors.window_name}
 format-background = ${colors.background}
 
 ###############################################################################
