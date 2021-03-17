@@ -23,33 +23,27 @@ font pango:Ubuntu 12
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 3
-new_float normal
+# new_window pixel 3
+# new_float normal
 default_border pixel 3
-default_floating_border normal
+default_floating_border pixel 1
 
 # Hide borders
 hide_edge_borders none
 
 ################################################################################
-# Keybindings                                                              
+# Keybindings
 ################################################################################
 # change borders
-bindsym $mod+u border none
-bindsym $mod+y border pixel 3
-bindsym $mod+n border normal
+bindsym $mod+Shift+u border none
+bindsym $mod+Shift+y border pixel 3
+bindsym $mod+Shift+n border normal
 
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-
-# alternatively, you can use the cursor keys:
-# bindsym $mod+Left focus left
-# bindsym $mod+Down focus down
-# bindsym $mod+Up focus up
-# bindsym $mod+Right focus right
 
 # navigate workspaces next / previous
 bindsym $mod+Right workspace next
@@ -86,21 +80,20 @@ bindsym $mod+Ctrl+Right resize grow width 5 px or 5 ppt
 
 # split in horizontal or vertical orientation
 # bindsym $mod+g split h;exec notify-send 'tile horizontally'
-bindsym $mod+g split v;exec $myNotify 'tile horizontally'
-bindsym $mod+v split h;exec $myNotify 'tile vertically'
-bindsym $mod+q split toggle
+bindsym $mod+Shift+g split v;exec $myNotify 'tile horizontally'
+bindsym $mod+Shift+v split h;exec $myNotify 'tile vertically'
+bindsym $mod+Shift+t split toggle
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
+
+# toggle tiling / floating
+bindsym $mod+Shift+f floating toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+Shift+s layout stacking
 bindsym $mod+Shift+w layout tabbed
 bindsym $mod+Shift+e layout toggle split
-
-# toggle tiling / floating
-bindsym $mod+Shift+f floating toggle
-# bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -118,15 +111,15 @@ bindsym $mod+space focus mode_toggle
 # TODO END
 
 # focus the parent container
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
- 
+
 ################################################################################
 # Workspaces
-# Define names for default workspaces                                        
-# We use variables to avoid repeating the names in multiple places         
+# Define names for default workspaces
+# We use variables to avoid repeating the names in multiple places
 ################################################################################
 set $ws1 "1"
 set $ws2 "2"
@@ -164,7 +157,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 # bindsym $mod+Shift+0 move container to workspace number $ws10
 
 ################################################################################
-# Start Applications (keybindings)                                         
+# Start Applications (keybindings)
 ################################################################################
 # start a terminal
 # set $myTerm terminator
@@ -189,15 +182,15 @@ bindsym $alt+w exec --no-startup-id rofi run -show window -show-icons
 #  bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # bindsym $mod+Ctrl+b exec $myTerm -e 'bmenu'
-bindsym $mod+$alt+w exec firefox
-bindsym $mod+$alt+u exec qutebrowser
-bindsym $mod+$alt+e exec dolphin
-bindsym $mod+$alt+a exec $myTerm -e ranger
-bindsym $mod+$alt+v exec $myTerm -e ~/.config/vifm/scripts/vifmrun
-bindsym $mod+$alt+i exec synaptic-pkexec
-bindsym $mod+$alt+p exec xfce4-power-manager-settings
-bindsym $mod+$alt+t exec "~/Programs/Telegram/Telegram -workdir /home/alexander/.local/share/TelegramDesktop/ -- %u"
-bindsym $mod+$alt+g exec ~/.myScripts/runGimpDiscreteGr.sh
+bindsym $mod+w exec firefox
+bindsym $mod+u exec qutebrowser
+bindsym $mod+e exec dolphin
+bindsym $mod+a exec $myTerm -e ranger
+bindsym $mod+v exec $myTerm -e ~/.config/vifm/scripts/vifmrun
+bindsym $mod+i exec synaptic-pkexec
+bindsym $mod+p exec xfce4-power-manager-settings
+bindsym $mod+t exec "~/Programs/Telegram/Telegram -workdir /home/alexander/.local/share/TelegramDesktop/ -- %u"
+bindsym $mod+g exec ~/.myScripts/runGimpDiscreteGr.sh
 bindsym $mod+Print --release exec --no-startup-id flameshot gui
 bindsym $mod+Shift+x --release exec --no-startup-id xkill
 # bindsym $mod+F3 exec pcmanfm
@@ -210,7 +203,7 @@ bindsym $mod+Shift+x --release exec --no-startup-id xkill
 # bindsym $mod+Ctrl+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 
 ################################################################################
-# Apps Launched with <SUPER> + <KEYPAD 1-9>                                
+# Apps Launched with <SUPER> + <KEYPAD 1-9>
 ################################################################################
 # bindsym $mod+KP_End exec $myTerm -e lynx -cfg=~/.lynx.cfg -lss=~/.lynx.lss http://www.distrowatch.com
 # bindsym $mod+KP_Down exec $myTerm -e sh ./scripts/googler-script.sh
@@ -223,7 +216,7 @@ bindsym $mod+Shift+x --release exec --no-startup-id xkill
 # bindsym $mod+KP_Page_Up exec $myTerm -e sh ./scripts/tig-script.sh
 
 ################################################################################
-# Apps Launched with <SUPER> + <SHIFT> + <KEYPAD 1-9>                      
+# Apps Launched with <SUPER> + <SHIFT> + <KEYPAD 1-9>
 ################################################################################
 # bindsym $mod+Shift+KP_1 exec $myTerm -e vifm
 # bindsym $mod+Shift+KP_2 exec $myTerm -e joplin
@@ -249,7 +242,6 @@ bindsym $mod+Shift+x --release exec --no-startup-id xkill
 # bindsym $mod+Ctrl+KP_Page_Up exec $myTerm -e wopr report.xml
 
 # Screen brightness controls
-# Try to use my sh files for ajustment brightness!!!
 bindsym $mod+F9 exec ~/.myScripts/brightness_up.sh
 bindsym $mod+F8 exec ~/.myScripts/brightness_down.sh
 # bindsym XF86MonBrightnessUp exec ~/.myScripts/brightness_up.sh
@@ -266,32 +258,32 @@ bindsym $mod+F8 exec ~/.myScripts/brightness_down.sh
 # bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 ################################################################################
-# Open applications on specific workspaces                                 
+# Open applications on specific workspaces
 ################################################################################
 # # assign [class="Thunderbird"] $ws1
 # assign [class="Firefox"] $ws2
 assign [class="dolphin"] $ws3
 assign [class="Synaptic"] $ws4
 assign [class="TelegramDesktop"] $ws6
-  
+
 ################################################################################
-# Open specific applications in floating mode                             
+# Open specific applications in floating mode
 ################################################################################
 for_window [class="Gvim"] floating enable border pixel 3
-for_window [title="alsamixer"] floating enable border pixel 1
+# for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="dolphin"] fullscreen enable
 # for_window [class="Synaptic"] fullscreen enable
 for_window [class="power-manager"] floating enable
 for_window [class="Galculator"] floating enable border pixel 1
-for_window [class="GParted"] floating enable border normal
-for_window [class="Lxappearance"] floating enable sticky enable border normal
-for_window [class="Nitrogen"] floating enable sticky enable border normal
+for_window [class="Gcolor3"] floating enable border pixel 1
+# for_window [class="GParted"] floating enable border normal
+for_window [class="Lxappearance"] floating enable sticky enable border pixel 1
+for_window [class="Nitrogen"] floating enable sticky enable border pixel 1
 for_window [class="Pavucontrol"] floating enable
-for_window [class="qt5ct"] floating enable sticky enable border normal
-for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
-for_window [class="Xfburn"] floating enable
-for_window [class="(?i)virtualbox"] floating enable border normal
-for_window [class="(?i)virtualbox"] fullscreen enable
+for_window [class="qt5ct"] floating enable sticky enable border pixel 1
+# for_window [class="Xfburn"] floating enable
+# for_window [class="(?i)virtualbox"] floating enable border normal
+# for_window [class="(?i)virtualbox"] fullscreen enable
 
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
@@ -319,7 +311,7 @@ bindsym $mod+Shift+r restart
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 ################################################################################
-# Key modes                                                                
+# Key modes
 ################################################################################
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
@@ -386,34 +378,34 @@ mode "dmenu" {
 # bindsym $mod+9 exec --no-startup-id blurlock
 
 ################################################################################
-# Autostart applications                                                   
+# Autostart applications
 ################################################################################
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id $HOME/.config/i3/alternating_layouts.py
-# exec --no-startup-id nitrogen --restore; sleep 1; picom --config $HOME/.config/picom/picom.conf
-exec --no-startup-id nitrogen --restore; sleep 1; compton --config $HOME/.config/compton.conf
-exec --no-startup-id xfce4-power-manager
-exec --no-startup-id nm-applet
-exec --no-startup-id setxkbmap -layout us,ru -option grp:caps_toggle
+exec_always --no-startup-id $HOME/.config/i3/alternating_layouts.py &
+exec --no-startup-id setxkbmap -layout us,ru -option grp:caps_toggle &
+exec --no-startup-id nitrogen --restore; sleep 1; compton --config $HOME/.config/compton.conf &
+exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+exec --no-startup-id volumeicon &
+exec --no-startup-id nm-applet &
+exec --no-startup-id xfce4-power-manager &
+exec --no-startup-id diodon &
+exec --no-startup-id conky -c $HOME/.myScripts/conky/conkyrc_i3 &
+exec --no-startup-id dropbox start -i &
 # exec --no-startup-id setxkbmap -model pc105 -layout us,ru -variant qwerty -option grp:caps_toggle
-exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id diodon
-# exec --no-startup-id xfce4-clipman
-# exec --no-startup-id conky -c $HOME/.myScripts/conky/conkyrc1
-exec --no-startup-id $HOME/Programs/CheckEmail/CheckEmail
+exec --no-startup-id $HOME/Programs/CheckEmail/CheckEmail &
+exec --no-startup-id xrdb $HOME/.Xresources &
+exec --no-startup-id udiskie &
 # exec --no-startup-id xrandr -s 1366x768
 # exec --no-startup-id numlockx off
 # exec_always --no-startup-id ff-theme-util
 # exec_always --no-startup-id setcursor
 # # exec --no-startup-id xautolock -time 10 -locker blurlock
-# exec_always --no-startup-id ff-theme-util
 # exec_always --no-startup-id fix_xcursor
 
 ################################################################################
-# Sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa    
-# -> Pulseaudio later!                                                     
+# Sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa
+# -> Pulseaudio later!
 ################################################################################
-exec --no-startup-id volumeicon
 bindsym $mod+Ctrl+m exec $myTerm -e 'alsamixer'
 # #exec --no-startup-id pulseaudio
 # #exec --no-startup-id pa-applet
@@ -428,7 +420,7 @@ bindsym $mod+Ctrl+m exec $myTerm -e 'alsamixer'
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 ################################################################################
-# Theme colors                                                             
+# Theme colors
 ################################################################################
 # class                   border  backgr. text    indic.   child_border
   client.focused          #009185 #009185 #80FFF9 #FDF6E3
@@ -437,11 +429,6 @@ bindsym $mod+Ctrl+m exec $myTerm -e 'alsamixer'
   client.urgent           #CB4B16 #FDF6E3 #AD69AF #268BD2
   client.placeholder      #000000 #0c0c0c #ffffff #000000
 
-  # client.focused          #556064 #ABB2BF #80FFF9 #FDF6E3
-  # client.focused_inactive #2F3D44 #2F3D44 #AD69AF #454948
-  # client.unfocused        #2F3D44 #2F3D44 #AD69AF #454948
-  # client.urgent           #CB4B16 #FDF6E3 #AD69AF #268BD2
-  # client.placeholder      #000000 #0c0c0c #ffffff #000000
 #6D1F66 purple
 #DC8CC3 pink
 #3584E4 blue
@@ -472,7 +459,7 @@ bindsym $mod+Ctrl+m exec $myTerm -e 'alsamixer'
 # Change the variable name at the place you want to match the color
 # of your terminal like this:
 # [example]
-# If you want your bar to have the same background color as your 
+# If you want your bar to have the same background color as your
 # terminal background change the line 362 from:
 # background  #2B2C2B
 # to:
@@ -498,7 +485,7 @@ set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
 ################################################################################
-# Settings for i3-gaps:                                                    
+# Settings for i3-gaps:
 ################################################################################
 
 # Set inner/outer gaps
@@ -513,21 +500,21 @@ gaps outer -3
 # gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
+# smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders on
+# smart_borders on
 
 # Press $mod+Shift+g to enter the gap mode.
 # Choose o or i for modifying outer/inner gaps.
 # Press one of + / - (in-/decrement for current workspace)
 # or 0 (remove gaps for current workspace). If you also press Shift
 # with these keys, the change will be global for all workspaces.
-set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-bindsym $mod+Shift+g mode "$mode_gaps"
+set $mode_gaps Gaps: (o)outer, (i)inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift+ +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift+ +|-|0 (global)
+bindsym $alt+g mode "$mode_gaps"
 
 mode "$mode_gaps" {
         bindsym o      mode "$mode_gaps_outer"

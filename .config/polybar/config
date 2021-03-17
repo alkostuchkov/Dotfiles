@@ -44,6 +44,10 @@ format-padding =
 format-margin =
 format-offset =
 
+[variables]
+my_term = alacritty
+run_update = terminator -e "sudo apt update && sudo apt upgrade && $SHELL"
+
 [colors]
 ; Materia Manjaro =======
 background = #263238
@@ -182,7 +186,7 @@ tray-background = ${colors.background}
 tray-offset-x = 0
 tray-offset-y = 0
 tray-padding = 2
-tray-scale = 1.0
+tray-scale = 1.1
 
 #i3: Make the bar appear below windows
 ;wm-restack = i3
@@ -1007,14 +1011,13 @@ format-connected-background = ${colors.background}
 
 [module/updates-apt]
 type = custom/script
-;exec = pacman -Qu | wc -l
 ; exec = checkupdates | wc -l
 exec = ~/.config/polybar/scripts/updates-apt.sh
 ; exec = expr $(apt list --upgradable 2> /dev/null | wc -l) - 1
 interval = 1000
-; interval = 60
-; label = Repo: %output%
 label = %output%
+# click-left = alacritty -e sudo apt update && sudo apt upgrade
+click-left = ${variables.run_update}
 format-prefix = " "
 format-foreground = ${colors.updates}
 format-background = ${colors.background}
