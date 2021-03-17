@@ -13,7 +13,7 @@ floating_modifier $mod
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Ubuntu 11
+font pango:Ubuntu 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -25,8 +25,8 @@ font pango:Ubuntu 11
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 new_window pixel 3
 new_float normal
-# default_border pixel 1
-# default_floating_border normal
+default_border pixel 3
+default_floating_border normal
 
 # Hide borders
 hide_edge_borders none
@@ -67,6 +67,18 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+# shrink/grow the window's width/height
+bindsym $mod+Ctrl+h resize shrink width 5 px or 5 ppt
+bindsym $mod+Ctrl+j resize grow height 5 px or 5 ppt
+bindsym $mod+Ctrl+k resize shrink height 5 px or 5 ppt
+bindsym $mod+Ctrl+l resize grow width 5 px or 5 ppt
+
+# same bindings, but for the arrow keys
+bindsym $mod+Ctrl+Left resize shrink width 5 px or 5 ppt
+bindsym $mod+Ctrl+Down resize grow height 5 px or 5 ppt
+bindsym $mod+Ctrl+Up resize shrink height 5 px or 5 ppt
+bindsym $mod+Ctrl+Right resize grow width 5 px or 5 ppt
+
 # workspace back and forth (with/without active container)
 # workspace_auto_back_and_forth yes
 # bindsym $mod+b workspace back_and_forth
@@ -74,17 +86,17 @@ bindsym $mod+Shift+Right move right
 
 # split in horizontal or vertical orientation
 # bindsym $mod+g split h;exec notify-send 'tile horizontally'
-bindsym $mod+g split h;exec $myNotify 'tile horizontally'
-bindsym $mod+v split v;exec $myNotify 'tile vertically'
+bindsym $mod+g split v;exec $myNotify 'tile horizontally'
+bindsym $mod+v split h;exec $myNotify 'tile vertically'
 bindsym $mod+q split toggle
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+shift+s layout stacking
-bindsym $mod+shift+w layout tabbed
-bindsym $mod+shift+e layout toggle split
+bindsym $mod+Shift+s layout stacking
+bindsym $mod+Shift+w layout tabbed
+bindsym $mod+Shift+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+f floating toggle
@@ -164,20 +176,29 @@ bindsym $mod+Return exec $myTerm
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run -p "Run: " -fn "Ubuntu Nerd Font 10"
+# bindsym $mod+d exec --no-startup-id dmenu_run -nb '#222B2E' -p 'Run: ' -fn 'Ubuntu-18:normal'
+bindsym $mod+Shift+d exec --no-startup-id dmenu_run -nb '#222B2E' -nf '#09DBC9' -sb '#009185' -p 'Run: ' -fn 'Ubuntu-16:normal'
+
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec rofi -modi drun,run -show drun
-bindsym $alt+r exec --no-startup-id rofi run -show drun -show-icons
+bindsym $mod+r exec --no-startup-id rofi run -show drun -show-icons
 bindsym $alt+w exec --no-startup-id rofi run -show window -show-icons
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 #  bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # bindsym $mod+Ctrl+b exec $myTerm -e 'bmenu'
-bindsym $mod+alt+w exec firefox
-bindsym $mod+alt+e exec dolphin
-bindsym $mod+alt+i exec sudo synaptic-pkexec
-bindsym $mod+alt+p exec xfce4-power-manager-settings
+bindsym $mod+$alt+w exec firefox
+bindsym $mod+$alt+u exec qutebrowser
+bindsym $mod+$alt+e exec dolphin
+bindsym $mod+$alt+a exec $myTerm -e ranger
+bindsym $mod+$alt+v exec $myTerm -e ~/.config/vifm/scripts/vifmrun
+bindsym $mod+$alt+i exec synaptic-pkexec
+bindsym $mod+$alt+p exec xfce4-power-manager-settings
+bindsym $mod+$alt+t exec "~/Programs/Telegram/Telegram -workdir /home/alexander/.local/share/TelegramDesktop/ -- %u"
+bindsym $mod+$alt+g exec ~/.myScripts/runGimpDiscreteGr.sh
+bindsym $mod+Print --release exec --no-startup-id flameshot gui
+bindsym $mod+Shift+x --release exec --no-startup-id xkill
 # bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec obs
 # bindsym $mod+F5 exec $myTerm -e 'mocp'
@@ -186,7 +207,6 @@ bindsym $mod+alt+p exec xfce4-power-manager-settings
 # bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 # bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 # bindsym $mod+Ctrl+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
-bindsym $mod+shift+x --release exec --no-startup-id xkill
 
 ################################################################################
 # Apps Launched with <SUPER> + <KEYPAD 1-9>                                
@@ -249,14 +269,17 @@ bindsym $mod+F8 exec ~/.myScripts/brightness_down.sh
 ################################################################################
 # # assign [class="Thunderbird"] $ws1
 # assign [class="Firefox"] $ws2
-# assign [class="dolphin"] $ws3
+assign [class="dolphin"] $ws3
 assign [class="Synaptic"] $ws4
+assign [class="TelegramDesktop"] $ws6
   
 ################################################################################
 # Open specific applications in floating mode                             
 ################################################################################
+for_window [class="Gvim"] floating enable border pixel 3
 for_window [title="alsamixer"] floating enable border pixel 1
-for_window [class="Synaptic"] fullscreen enable
+for_window [class="dolphin"] fullscreen enable
+# for_window [class="Synaptic"] fullscreen enable
 for_window [class="power-manager"] floating enable
 for_window [class="Galculator"] floating enable border pixel 1
 for_window [class="GParted"] floating enable border normal
@@ -312,33 +335,49 @@ mode "$mode_system" {
     # exit system mode: "Enter" or "Escape"
     bindsym Return mode "default"
     bindsym Escape mode "default"
+    bindsym $mod+0 mode "default"
 }
 
-# resize window (you can also use the mouse for that)
-bindsym $mod+r mode "resize"
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+# dmenu mode
+bindsym $alt+m mode "dmenu"
+mode "dmenu" {
+        # These bindings trigger as soon as you enter the dmenu mode
+        bindsym c exec ~/.myScripts/dmenu/dmenu-edit-configs.sh
+        bindsym k exec ~/.myScripts/dmenu/dmenu-kill.sh
+        bindsym p exec ~/.myScripts/dmenu/dmenu-passmenu.sh
+        bindsym s exec ~/.myScripts/dmenu/dmenu-search.sh
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
         bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+        bindsym $alt+m mode "default"
 }
+
+# # resize window (you can also use the mouse for that)
+# bindsym $alt+r mode "resize"
+# mode "resize" {
+        # # These bindings trigger as soon as you enter the resize mode
+#
+        # # Pressing left will shrink the window’s width.
+        # # Pressing right will grow the window’s width.
+        # # Pressing up will shrink the window’s height.
+        # # Pressing down will grow the window’s height.
+        # bindsym h resize shrink width 10 px or 10 ppt
+        # bindsym j resize grow height 10 px or 10 ppt
+        # bindsym k resize shrink height 10 px or 10 ppt
+        # bindsym l resize grow width 10 px or 10 ppt
+#
+        # # same bindings, but for the arrow keys
+        # bindsym Left resize shrink width 10 px or 10 ppt
+        # bindsym Down resize grow height 10 px or 10 ppt
+        # bindsym Up resize shrink height 10 px or 10 ppt
+        # bindsym Right resize grow width 10 px or 10 ppt
+#
+        # # back to normal: Enter or Escape or $mod+r
+        # bindsym Return mode "default"
+        # bindsym Escape mode "default"
+        # bindsym $alt+r mode "default"
+# }
 
 
 ####### Correct for myself!!! #################################################
@@ -349,6 +388,7 @@ mode "resize" {
 # Autostart applications                                                   
 ################################################################################
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id $HOME/.config/i3/alternating_layouts.py
 # exec --no-startup-id nitrogen --restore; sleep 1; picom --config $HOME/.config/picom/picom.conf
 exec --no-startup-id nitrogen --restore; sleep 1; compton --config $HOME/.config/compton.conf
 exec --no-startup-id xfce4-power-manager
@@ -360,7 +400,6 @@ exec --no-startup-id diodon
 # exec --no-startup-id xfce4-clipman
 # exec --no-startup-id conky -c $HOME/.myScripts/conky/conkyrc1
 exec --no-startup-id $HOME/Programs/CheckEmail/CheckEmail
-exec --no-startup-id $HOME/.config/i3/alternating_layouts.py
 # exec --no-startup-id xrandr -s 1366x768
 # exec --no-startup-id numlockx off
 # exec_always --no-startup-id ff-theme-util
@@ -461,62 +500,64 @@ set_from_resource $term_color15    color15
 # Settings for i3-gaps:                                                    
 ################################################################################
 
-# # Set inner/outer gaps
+# Set inner/outer gaps
+gaps inner 8
+gaps outer -3
 # gaps inner 10
 # gaps outer -4
-#
-# # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
-# # gaps inner|outer current|all set|plus|minus <px>
-# # gaps inner all set 10
-# # gaps outer all plus 5
-#
-# # Smart gaps (gaps used if only more than one container on the workspace)
-# smart_gaps on
-#
-# # Smart borders (draw borders around container only if it is not the only container on this workspace)
-# # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-# smart_borders on
-#
-# # Press $mod+Shift+g to enter the gap mode.
-# # Choose o or i for modifying outer/inner gaps.
-# # Press one of + / - (in-/decrement for current workspace)
-# # or 0 (remove gaps for current workspace). If you also press Shift
-# # with these keys, the change will be global for all workspaces.
-# set $mode_gaps Gaps: (o) outer, (i) inner
-# set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-# set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-# bindsym $mod+Shift+g mode "$mode_gaps"
-#
-# mode "$mode_gaps" {
-        # bindsym o      mode "$mode_gaps_outer"
-        # bindsym i      mode "$mode_gaps_inner"
-        # bindsym Return mode "default"
-        # bindsym Escape mode "default"
-# }
-# mode "$mode_gaps_inner" {
-        # bindsym plus  gaps inner current plus 5
-        # bindsym minus gaps inner current minus 5
-        # bindsym 0     gaps inner current set 0
-#
-        # bindsym Shift+plus  gaps inner all plus 5
-        # bindsym Shift+minus gaps inner all minus 5
-        # bindsym Shift+0     gaps inner all set 0
-#
-        # bindsym Return mode "default"
-        # bindsym Escape mode "default"
-# }
-# mode "$mode_gaps_outer" {
-        # bindsym plus  gaps outer current plus 5
-        # bindsym minus gaps outer current minus 5
-        # bindsym 0     gaps outer current set 0
-#
-        # bindsym Shift+plus  gaps outer all plus 5
-        # bindsym Shift+minus gaps outer all minus 5
-        # bindsym Shift+0     gaps outer all set 0
-#
-        # bindsym Return mode "default"
-        # bindsym Escape mode "default"
-# }
+
+# Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
+# gaps inner|outer current|all set|plus|minus <px>
+# gaps inner all set 10
+# gaps outer all plus 5
+
+# Smart gaps (gaps used if only more than one container on the workspace)
+smart_gaps on
+
+# Smart borders (draw borders around container only if it is not the only container on this workspace)
+# on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
+smart_borders on
+
+# Press $mod+Shift+g to enter the gap mode.
+# Choose o or i for modifying outer/inner gaps.
+# Press one of + / - (in-/decrement for current workspace)
+# or 0 (remove gaps for current workspace). If you also press Shift
+# with these keys, the change will be global for all workspaces.
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
 # # Start i3bar to display a workspace bar (plus the system information i3status if available)
 # bar {
 	# i3bar_command i3bar
