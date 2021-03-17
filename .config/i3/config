@@ -173,7 +173,8 @@ bindsym $mod+Return exec $myTerm
 # bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+# bindsym $mod+Shift+q kill
+bindsym $mod+Shift+c kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run -nb '#222B2E' -p 'Run: ' -fn 'Ubuntu-18:normal'
@@ -311,7 +312,7 @@ for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [urgent=latest] focus
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+q reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
@@ -388,7 +389,7 @@ mode "dmenu" {
 # Autostart applications                                                   
 ################################################################################
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id $HOME/.config/i3/alternating_layouts.py
+exec_always --no-startup-id $HOME/.config/i3/alternating_layouts.py
 # exec --no-startup-id nitrogen --restore; sleep 1; picom --config $HOME/.config/picom/picom.conf
 exec --no-startup-id nitrogen --restore; sleep 1; compton --config $HOME/.config/compton.conf
 exec --no-startup-id xfce4-power-manager
