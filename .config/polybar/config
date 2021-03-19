@@ -326,7 +326,7 @@ label-unfocused-underline =
 ; visible = Active workspace on unfocused monitor
 label-visible = %icon% %name%
 label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
+; label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = 2
 
 ; Available tokens:
@@ -336,7 +336,7 @@ label-visible-padding = 2
 ; Default: %icon%  %name%
 ; urgent = Workspace with urgency hint set
 label-urgent = %icon% %name%
-label-urgent-background = ${self.alert}
+label-urgent-background = ${colors.alert}
 ; label-urgent-foreground = #cc241d
 label-urgent-foreground = ${colors.foreground}
 label-urgent-padding = 2
