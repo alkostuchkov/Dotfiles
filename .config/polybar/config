@@ -701,7 +701,7 @@ label = "%date% %time% "
 label-padding = 0
 type = custom/script
 exec = ~/.config/polybar/scripts/popup-calendar.sh
-interval = 5
+interval = 1
 click-left = ~/.config/polybar/scripts/popup-calendar.sh --popup &
 format-prefix = " "
 format-prefix-foreground = ${colors.date_time}
@@ -1011,14 +1011,13 @@ format-connected-background = ${colors.background}
 
 [module/updates-apt]
 type = custom/script
-; exec = checkupdates | wc -l
-exec = ~/.config/polybar/scripts/updates-apt.sh
-; exec = expr $(apt list --upgradable 2> /dev/null | wc -l) - 1
-interval = 1000
+; exec = ~/.config/polybar/scripts/updates-apt.sh
+exec = ~/.myScripts/check_updates_apt.sh
+interval = 900
 label = %output%
 # click-left = alacritty -e sudo apt update && sudo apt upgrade
 click-left = ${variables.run_update}
-format-prefix = " "
+; format-prefix = " "
 format-foreground = ${colors.updates}
 format-background = ${colors.background}
 ; format-foreground = ${colors.foreground}
