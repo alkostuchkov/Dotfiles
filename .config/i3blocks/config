@@ -1,0 +1,216 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Labels:       v                                      
+
+# Colors:
+# Materia Manjaro
+# background=#263238
+# foreground=#dbdcd5
+# alert=#cc241d
+# current_screen_tab="#585E72"
+# group_names="#dbdcd5"
+# line_color_curr_tab="#009185"
+# line_color_other_tab="#8d62a9"
+# even_widgets="#6182b8"
+# window_name="#24d2af"
+# cpu=#e2a0a5
+# memory="#ffb62c"
+# net_speed_up="#24d2af"
+# net_speed_down="#91b859"
+# layout_widget="#ffffff"
+# keyboard="#39adb5"
+# date_time="#6182b8"
+# date_time2="#f2b06a"
+# sys_tray="#404555"
+# updates="#ffcb6b"
+# updates2="#e2e0a5"
+# weather="#eb7bef"
+# weather2="#ec30f3"
+# weather3="#e2e0a5"
+# chord=#d79921
+
+### Global properties ###
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+command=/usr/share/i3blocks/$BLOCK_NAME
+separator_block_width=15
+separator=true
+interval=1
+markup=none
+########################
+
+[i3-focusedwindow]
+# label=[]=
+color=#24d2af
+command=~/.config/i3blocks/scripts/i3-focusedwindow 20
+# command=~/.config/i3blocks/scripts/i3-focusedwindow
+interval=persist
+separator=false
+
+# [spacer]
+# full_text=         Invisible spacer
+# min_width=100%
+
+# Check system updates
+[apt_updates]
+color=#ffcb6b
+command=~/.myScripts/check_updates_apt.sh
+interval=900
+
+# OpenWeatherMap
+[openweathermap_simple]
+# label=
+color=#eb7bef
+command=~/.config/i3blocks/scripts/openweathermap_simple
+interval=900
+
+# # Volume indicator
+# # The first parameter sets the step (and units to display)
+# # The second parameter overrides the mixer selection
+# # See the script for details.
+# [volume]
+# label=VOL
+# # label=♪
+# instance=Master
+# #instance=PCM
+# interval=once
+# signal=10
+
+# CPU usage
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+[_cpu_usage]
+label= 
+color=#e2a0a5
+min_width=100%
+command=~/.config/i3blocks/scripts/_cpu_usage
+
+# Memory usage
+# The type defaults to "mem" if the instance is not specified.
+[ram]
+label=  
+color=#ffb62c
+command=~/.config/i3blocks/scripts/ram
+
+# [memory]
+# label=SWAP
+# instance=swap
+# separator=false
+# interval=30
+
+# # Disk usage
+# # The directory defaults to $HOME if the instance is not specified.
+# # The script may be called with a optional argument to set the alert
+# # (defaults to 10 for 10%).
+# [disk]
+# label=HOME
+# #instance=/mnt/data
+# interval=30
+
+# # Network interface monitoring
+# # If the instance is not specified, use the interface used for default route.
+# # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
+# [iface]
+# instance=enp1s6
+# color=#00FF00
+# interval=1
+# separator=true
+
+# [wifi]
+# #instance=wlp3s0
+# interval=10
+# separator=false
+
+[_bandwidth]
+# label=  
+color=#91b859
+instance=wlo1
+command=~/.config/i3blocks/scripts/_bandwidth
+
+#[load_average]
+#interval=10
+
+# # Battery indicator
+# # The battery instance defaults to 0.
+# [battery]
+# label=BAT
+# #label=⚡
+# #instance=1
+# interval=30
+
+# Add the following bindings to i3 config file:
+# Key indicators
+#
+# bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+# bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+#[keyindicator]
+#instance=CAPS
+#interval=once
+#signal=11
+
+# [keyindicator]
+# label=
+# # instance=NUM
+# # interval=once
+# # signal=11
+
+[kbdd_layout]
+label=   
+color=#39adb5
+command=~/.config/i3blocks/scripts/kbdd_layout
+interval=persist
+
+# Date Time
+[time]
+label=  
+color=#6182b8
+command=date "+%a, %d %b %H:%M:%S"
+
+# [xkblayout]
+# # label=
+# color=#39adb5
+# command=~/.config/i3blocks/scripts/xkblayout
+# interval=persist
+# separator=false
+
+# Generic media player support
+#
+# This displays "ARTIST - SONG" if a music is playing.
+# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
+#[mediaplayer]
+#instance=spotify
+#interval=5
+#signal=10
+
+# OpenVPN support
+# Support multiple VPN, with colors.
+#[openvpn]
+#interval=20
+
+# Temperature
+# Support multiple chips, though lm-sensors.
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+#[temperature]
+#label=TEMP
+#interval=10

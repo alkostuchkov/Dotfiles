@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+total_mebi=$(free --mebi | grep Mem: |  awk '{print $2}')
+used_mebi=$(free --mebi | grep Mem: |  awk '{print $3}')
+
+total_gibi=$(echo "${total_mebi}/1024" | bc -l)
+used_gibi=$(echo "${used_mebi}/1024" | bc -l)
+pct=$(echo "${used_mebi}/${total_mebi}*100" | bc -l)
+
+# full_text
+printf "%.1fGiB/%.1fGiB (%.0f%%)\n" $total_gibi $used_gibi $pct
+# short_text
+printf "%.0f%%\n" $pct
+
+case $BLOCK_BUTTON in
+    1) ~/.myScripts/top5_mem_usage.sh;;
+    3) alacritty -e htop;;
+esac
+

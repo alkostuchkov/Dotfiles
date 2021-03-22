@@ -11,7 +11,12 @@ updates=$(apt-show-versions --upgradeable | wc -l)
 # notify-send -t 3000 "Updates $updates"
 
 if [[ "${updates}" -gt 0 ]]; then
-    echo " ${updates}"
+    echo "    ${updates}"
 # else
     # echo " ${updates}"
 fi
+
+case ${BLOCK_BUTTON} in 
+    1) alacritty -e sudo apt update && sudo apt upgrade && $SHELL;;
+    2) ;;
+esac
