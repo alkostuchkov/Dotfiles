@@ -170,6 +170,8 @@ bindsym $mod+Shift+9 move container to workspace number $ws9; workspace $ws9
 # set $myTerm terminator
 set $myTerm alacritty
 bindsym $mod+Return exec $myTerm
+set $myTermExtra terminator
+bindsym $mod+Shift+Return exec $myTermExtra
 # bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window

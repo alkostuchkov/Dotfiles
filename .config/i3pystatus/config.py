@@ -37,6 +37,7 @@ colors = {
 }
 
 my_term = "alacritty"
+my_term_extra = "terminator"
 home = os.path.expanduser("~")
 
 
@@ -136,7 +137,7 @@ status.register(
     format="   {count}",
     backends=[aptget.AptGet()],
     interval=900,
-    on_leftclick=my_term + " -e sudo apt update && sudo apt upgrade && $SHELL"
+    on_leftclick=my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'"
 )
 
 status.register(
