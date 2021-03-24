@@ -98,7 +98,7 @@ status.register(
     #  format_down="")
 
 status.register(
-    "mem",
+    "my_mem",
     color=colors["memory"],
     divisor=1024**3,
     format=" {used_mem}GiB ({percent_used_mem}%)",
