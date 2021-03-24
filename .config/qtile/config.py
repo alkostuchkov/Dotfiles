@@ -131,13 +131,13 @@ keys = [
 
 # <SUPER> + <CTRL> + KEYS
     # RESIZE UP, DOWN, LEFT, RIGHT
-    Key([mod, "control"], "l", 
+    Key([mod, "control"], "l",
         lazy.layout.grow_right(),
         lazy.layout.grow(),
         lazy.layout.increase_ratio(),
         lazy.layout.delete()
     ),
-    Key([mod, "control"], "Right", 
+    Key([mod, "control"], "Right",
         lazy.layout.grow_right(),
         lazy.layout.grow(),
         lazy.layout.increase_ratio(),
@@ -184,6 +184,7 @@ keys = [
         Key([], "l", lazy.spawn(home + "/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
         Key([], "k", lazy.spawn(home + "/.myScripts/dmenu/dmenu-kill.sh"), desc="Kill chosen process"),
         Key([], "s", lazy.spawn(home + "/.myScripts/dmenu/dmenu-search.sh"), desc="Run chosen search engine"),
+        Key([], "e", lazy.spawn(home + "/.myScripts/dmenu/dmenu-unicode.sh"), desc="Choose an emoji"),
         Key([], "x", lazy.spawn(home + "/.myScripts/dmenu/dmenu-system-exit.sh"), desc="System exit menu")],
         mode="Dmenu"
     ),
@@ -326,7 +327,9 @@ colors = [["#263238", "#263238"],  # 0 panel background
           ["#e2e0a5", "#e2e0a5"],  # 14 updates
           #  ["#ffcb6b", "#ffcb6b"],  # 14 updates
           ["#eb7bef", "#eb7bef"],  # 15 weather
-          ["#d79921", "#d79921"]]  # 16 Chord
+          ["#d79921", "#d79921"],  # 16 Chord
+          ["#ffbb00", "#ffbb00"],  # 17 Dmenu background
+          ["#070800", "#070800"]]  # 18 Dmenu foreground
           #  ["#ec30f3", "#ec30f3"]]  # 15 weather
           #  ["#e2e0a5", "#e2e0a5"]]  # 15 weather
 
@@ -416,8 +419,8 @@ def init_widgets_list():
                     #  ),
             widget.Chord(
                     padding = 10,
-                    foreground = colors[16],
-                    background = colors[0],
+                    background=colors[17],
+                    foreground=colors[18],
                     fontsize=14
                     ),
             widget.CheckUpdates(
