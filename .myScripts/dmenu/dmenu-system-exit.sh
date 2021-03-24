@@ -12,9 +12,21 @@ hibernate
 reboot
 shutdown")
 
-# choice=$(echo -e "${options[@]}" | dmenu -p 'Edit config file: ' -nb '#282828' -nf '#fea63c' -sb '#d79921' -fn 'Ubuntu-18:normal')  # Gruvbox
-# choice=$(echo -e "${options[@]}" | dmenu -p 'System: ' -nb '#222B2E' -nf '#09DBC9' -sb '#009185' -fn 'Ubuntu-18:normal')  # Materia Manjaro
-choice=$(dmenu  -l 10  -nf '#09dbc9' -nb '#222b2e' -sf '#dbdcd5' -sb '#009185' -fn 'Ubuntu-16:normal' -p 'System:'   <<< "$options")
+# Colors:
+# Materia Manjaro
+nf='#09dbc9'
+nb='#222b2e'
+sf='#dbdcd5'
+sb='#009185'
+fn='Ubuntu-16:normal'
+# Gruvbox
+# nf='#fea63c'
+# nb='#282828'
+# # sf='#dbdcd5'
+# sb='#d79921'
+# fn='Sarasa Mono SC Nerd-17:normal'
+
+choice=$(dmenu  -l 10  -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'System:'   <<< "$options")
 
 case $choice in
     lock)

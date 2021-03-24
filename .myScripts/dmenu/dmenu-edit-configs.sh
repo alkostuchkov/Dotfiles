@@ -40,10 +40,24 @@ options=(
 "zsh - $HOME/.zshrc"
 "quit")
 
+# Colors:
+# Materia Manjaro
+nf='#09dbc9'
+nb='#222b2e'
+sf='#dbdcd5'
+sb='#009185'
+fn='Ubuntu-16:normal'
+# Gruvbox
+# nf='#fea63c'
+# nb='#282828'
+# # sf='#dbdcd5'
+# sb='#d79921'
+# fn='Sarasa Mono SC Nerd-17:normal'
+
 # names=$(printf '%s\n' "${options[@]}" | awk '{print $1}')
 # choice=$(printf '%s\n' "${names}" | dmenu -l 10  -nf '#09dbc9' -nb '#222b2e' -sf '#dbdcd5' -sb '#009185' -fn 'Ubuntu-16:normal' -p 'Edit config file:')
 
-choice=$(printf '%s\n' "${options[@]}" | dmenu -l 10  -nf '#09dbc9' -nb '#222b2e' -sf '#dbdcd5' -sb '#009185' -fn 'Ubuntu-16:normal' -p 'Edit config file:')
+choice=$(printf '%s\n' "${options[@]}" | dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Edit config file:')
 
 if [[ "$choice" == "quit" ]]; then
     echo "Program terminated." && exit 1
@@ -54,9 +68,4 @@ elif [[ "$choice" ]]; then
 else
     echo "Program terminated." && exit 1
 fi
-
-# Colors
-# choice=$(echo -e "${options[@]}" | dmenu -p 'Edit config file: ' -nb '#282828' -nf '#fea63c' -sb '#d79921' -fn 'Ubuntu-18:normal')  # Gruvbox
-# choice=$(echo -e "${options[@]}" | dmenu -p 'Edit config file: ' -nb '#222B2E' -nf '#09DBC9' -sb '#009185' -fn 'Sarasa Mono SC Nerd-17:normal')
-# choice=$(echo -e "${options[@]}" | dmenu -p 'Edit config file: ' -nb '#222B2E' -nf '#09DBC9' -sb '#009185' -fn 'Ubuntu-18:normal')  # Materia Manjaro
 

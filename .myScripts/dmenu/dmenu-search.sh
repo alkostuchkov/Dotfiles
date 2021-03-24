@@ -57,22 +57,36 @@ declare -a options=(
 "quit"
 )
 
+# Colors:
+# Materia Manjaro
+nf='#09dbc9'
+nb='#222b2e'
+sf='#dbdcd5'
+sb='#009185'
+fn='Ubuntu-16:normal'
+# Gruvbox
+# nf='#fea63c'
+# nb='#282828'
+# # sf='#dbdcd5'
+# sb='#d79921'
+# fn='Sarasa Mono SC Nerd-17:normal'
+
 # Picking a search engine.
-while [ -z "$engine" ]; do
+while [[ -z "$engine" ]]; do
     enginelist=$(printf '%s\n' "${options[@]}" | \
-                 dmenu -i -l 20 -nf '#09dbc9' -nb '#222b2e' \
-                 -sf '#dbdcd5' -sb '#009185' \
-                 -fn 'Ubuntu-14:normal' -p 'Choose search engine:') || exit
+                 dmenu -i -l 20 -nf ${nf} -nb ${nb} \
+                 -sf ${sf} -sb ${sb} \
+                 -fn ${fn} -p 'Choose search engine:') || exit
     engineurl=$(echo "$enginelist" | awk '{print $NF}')
     engine=$(echo "$enginelist" | awk '{print $1}')
 done
 
 # Searching the chosen engine.
-while [ -z "$query" ]; do
+while [[ -z "$query" ]]; do
     query=$(echo "$engine" | \
-            dmenu -i -l 1 -nf '#09dbc9' -nb '#222b2e' \
-            -sf '#dbdcd5' -sb '#009185' \
-            -fn 'Ubuntu-14:normal' -p 'Enter search query:') || exit
+            dmenu -i -l 1 -nf ${nf} -nb ${nb} \
+            -sf ${sf} -sb ${sb} \
+            -fn ${fn} -p 'Enter search query:') || exit
 done
 
 # Display search results in web browser

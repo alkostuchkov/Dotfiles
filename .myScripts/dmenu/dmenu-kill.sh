@@ -7,12 +7,26 @@
 # License: https://www.gitlab.com/dwt1/dmscripts/LICENSE
 # Contributors: Derek Taylor
 
+# Colors:
+# Materia Manjaro
+nf='#09dbc9'
+nb='#222b2e'
+sf='#dbdcd5'
+sb='#009185'
+fn='Ubuntu-16:normal'
+# Gruvbox
+# nf='#fea63c'
+# nb='#282828'
+# # sf='#dbdcd5'
+# sb='#d79921'
+# fn='Sarasa Mono SC Nerd-17:normal'
+
 # Running ps to get running processes and display in dmenu.
 selected="$(ps --user "$(id -u)" -F --no-headers | \
             awk '{print $1" "$2" "$11}' | \
-            dmenu -i -l 20 -nf '#09dbc9' -nb '#222b2e' \
-            -sf '#dbdcd5' -sb '#009185' \
-            -fn 'Ubuntu-14:normal' -p "Search for process to kill:")"
+            dmenu -i -l 20 -nf ${nf} -nb ${nb} \
+            -sf ${sf} -sb ${sb} \
+            -fn ${fn} -p "Search for process to kill:")"
 
 # Nested 'if' statements.  The outer 'if' statement is what to do
 # when we select one of the 'selected' options listed in dmenu.
