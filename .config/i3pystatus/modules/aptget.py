@@ -15,7 +15,8 @@ class AptGet(Backend):
 
     @property
     def updates(self):
-        output = subprocess.check_output(["apt-show-versions", "-u", "-b"]).decode("utf-8").rstrip().split("\n")
+        #  output = subprocess.check_output(["apt-show-versions", "-u", "-b"]).decode("utf-8").strip().split("\n")
+        output = subprocess.check_output(["apt-show-versions", "-u", "-b"]).decode("utf-8").splitlines()
 
         #  cache_dir = "/tmp/update-cache-" + os.getenv("USER")
         #  if not os.path.exists(cache_dir):
