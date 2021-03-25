@@ -24,8 +24,8 @@ colors = {
     "net_speed_up": "#24d2af",
     "net_speed_down": "#91b859",
     "layout_widget": "#ffffff",
-    "keyboard": "#39adb5",
-    "date_time": "#6182b8",
+    "keyboard": "#6182b8",
+    "date_time": "#39adb5",
     "date_time2": "#f2b06a",
     "sys_tray": "#404555",
     "updates": "#ffcb6b",
@@ -71,7 +71,8 @@ status.register(
 
 status.register(
     "xkblayout",
-    color=colors["keyboard"],
+    #  color=colors["keyboard"],
+    color=colors["updates2"],
     #  layouts=["🇺🇸", "🇷🇺"],
     layouts=["us", "ru"],
     format=" {symbol}",
@@ -134,10 +135,12 @@ status.register(
 status.register(
     "updates",
     color=colors["updates"],
-    format="   {count}",
+    format="  {count}",
+    #  format_working="🔃",
+    format_working="⟳ ",
     backends=[aptget.AptGet()],
     interval=900,
-    on_leftclick=my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'"
+    on_rightclick=my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'"
 )
 
 status.register(
