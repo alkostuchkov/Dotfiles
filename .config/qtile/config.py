@@ -64,7 +64,7 @@ upped_netiface = which_netiface_upped(netifaces)
 keys = [
 # <SUPER> + FUNCTION KEYS
     Key([mod], "Return", lazy.spawn(my_term), desc="Launch terminal"),
-    Key([mod, "shift"], "Return", lazy.spawn("konsole"), desc="Launch konsole"),
+    Key([mod, "shift"], "Return", lazy.spawn("terminator"), desc="Launch terminator"),
     Key([mod], "r", lazy.spawn("rofi run -show drun -show-icons"), desc="Run App Lancher"),
     Key([mod], "Print", lazy.spawn("flameshot gui"), desc="Run flameshot (take screenshot)"),
     Key([mod], "w", lazy.spawn("firefox"), desc="Launch Firefox"),
