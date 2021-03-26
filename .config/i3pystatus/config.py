@@ -71,7 +71,7 @@ status.register(
     dynamic_color=False,
     color_up=colors["net_speed_down"],
     interface="wlo1",
-    format_up="  {bytes_recv}KB/s   {bytes_sent}KB/s",
+    format_up="   {bytes_recv}KB/s    {bytes_sent}KB/s",
     hints={"markup": "pango"}
 )
 
@@ -119,12 +119,12 @@ status.register(
 status.register(
     "updates",
     color=colors["updates"],
-    format="  {count}",
+    format="    {count}",
     #  format_working="🔃",
     format_working="⟳ ",
     backends=[aptget.AptGet()],
     interval=900,
-    on_rightclick=my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'"
+    on_middleclick=my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'"
 )
 
 status.register(

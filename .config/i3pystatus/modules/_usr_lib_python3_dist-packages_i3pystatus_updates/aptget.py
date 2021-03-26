@@ -16,7 +16,8 @@ class AptGet(Backend):
     @property
     def updates(self):
         #  output = subprocess.check_output(["apt-show-versions", "-u", "-b"]).decode("utf-8").strip().split("\n")
-        output = subprocess.check_output(["apt-show-versions", "-u", "-b"]).decode("utf-8").splitlines()
+        output_str = subprocess.check_output(["apt-show-versions", "-u", "-b"]).decode("utf-8")
+        output = output_str.splitlines()
 
         #  cache_dir = "/tmp/update-cache-" + os.getenv("USER")
         #  if not os.path.exists(cache_dir):
@@ -30,7 +31,7 @@ class AptGet(Backend):
 
         #  out = "".join([line[5:] for line in out if line.startswith("Inst ")])
         #  return out.count("\n"), out
-        return len(output)
+        return len(output), output_str
 
 Backend = AptGet
 
@@ -38,5 +39,5 @@ if __name__ == "__main__":
     """
     Call this module directly; Print the update count and notification body.
     """
-    #  print("Updates: {}\n\n{}".format(*Backend().updates))
-    print("Updates: {}".format(Backend().updates))
+    print("Updates: {}\n\n{}".format(*Backend().updates))
+    #  print("Updates: {}".format(Backend().updates))

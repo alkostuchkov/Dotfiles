@@ -278,7 +278,7 @@ bindsym $mod+F8 exec ~/.myScripts/volume_down.sh
 ################################################################################
 # # assign [class="Thunderbird"] $ws1
 # assign [class="Firefox"] $ws2
-assign [class="dolphin"] $ws3
+# assign [class="dolphin"] $ws3
 assign [class="Synaptic"] $ws4
 assign [class="TelegramDesktop"] $ws6
 

@@ -122,17 +122,16 @@ class Updates(Module):
             "color": self.color_working,
         }
 
-        updates_count = self.backends[0].updates
-        #  updates_count = 0
-        #  for backend in self.backends:
-            #  name = backend.__class__.__name__
-            #  updates, notif_body = backend.updates
-            #  try:
-                #  updates_count += updates
-            #  except TypeError:
-                #  pass
-            #  self.data[name] = updates
-            #  self.notif_body[name] = notif_body or ""
+        updates_count = 0
+        for backend in self.backends:
+            name = backend.__class__.__name__
+            updates, notif_body = backend.updates
+            try:
+                updates_count += updates
+            except TypeError:
+                pass
+            self.data[name] = updates
+            self.notif_body[name] = notif_body or ""
 
         if updates_count == 0:
             self.output = {} if not self.format_no_updates else {
