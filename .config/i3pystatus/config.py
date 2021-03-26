@@ -47,39 +47,23 @@ status = Status(
 )  # pylint: disable=invalid-name
 
 status.register(
+    "my_xkblayout",
+    #  color=colors["keyboard"],
+    #  color=colors["updates2"],
+    #  "🇺🇸", "🇷🇺"],
+    layouts=["us", "ru"],
+    #  format="    {symbol}",
+    format="{flag}",
+)
+
+status.register(
     "clock",
     #  color="#888888",
     color=colors["date_time"],
     #  format=('%a, %d %b <span color="#0099ff">%H:%M:%S</span> Gomel', 'Europe/Minsk'),
-    format=(" %a, %d %b %H:%M:%S", "Europe/Minsk"),
+    format=("    %a, %d %b %H:%M:%S", "Europe/Minsk"),
     on_leftclick="gsimplecal",
     hints={"markup": "pango"})
-
-
-#  @get_module
-#  def change_lang_flag(self):
-    #  self.format="🇺🇸" if self.format == "RU" else "🇷🇺"
-    #  self.format="🇷🇺" if self.format == "RU" else "🇺🇸"
-    #  self.init()
-    #  #  self.output["format"]=
-#
-#  status.register(
-        #  "text",
-        #  text="Hello",
-        #  on_leftclick=change_text
-#  )
-
-status.register(
-    "xkblayout",
-    #  color=colors["keyboard"],
-    color=colors["updates2"],
-    #  layouts=["🇺🇸", "🇷🇺"],
-    layouts=["us", "ru"],
-    format=" {symbol}",
-    #  format="{symbol}",
-    #  on_change=change_lang_flag
-    #  on_leftclick=change_lang_flag
-)
 
 #  # Note: the network module requires PyPI package netifaces
 status.register(
@@ -87,7 +71,7 @@ status.register(
     dynamic_color=False,
     color_up=colors["net_speed_down"],
     interface="wlo1",
-    format_up=" {bytes_recv}KB/s  {bytes_sent}KB/s",
+    format_up="  {bytes_recv}KB/s   {bytes_sent}KB/s",
     hints={"markup": "pango"}
 )
 
@@ -102,7 +86,7 @@ status.register(
     "my_mem",
     color=colors["memory"],
     divisor=1024**3,
-    format=" {used_mem}GiB ({percent_used_mem}%)",
+    format="    {used_mem}GiB ({percent_used_mem}%)",
     interval=1,
     on_rightclick=my_term + " -e htop",
     on_leftclick=home + "/.myScripts/top5_mem_usage.sh"
@@ -111,7 +95,7 @@ status.register(
 status.register(
     "cpu_usage",
     color=colors["cpu"],
-    format="{usage:3}%",
+    format="   {usage:02}%",
     interval=1,
     on_rightclick=my_term + " -e htop",
     on_leftclick=home + "/.myScripts/top5_cpu_usage.sh"
