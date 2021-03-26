@@ -128,15 +128,15 @@ bindsym --whole-window $mod+button2 kill
 # Define names for default workspaces
 # We use variables to avoid repeating the names in multiple places
 ################################################################################
-set $ws1 "1:  "
-set $ws2 "2:  "
-set $ws3 "3:  "
-set $ws4 "4:  "
-set $ws5 "5:  "
-set $ws6 "6:  "
-set $ws7 "7:  "
-set $ws8 "8:  "
-set $ws9 "9:  "
+set $ws1 "1:    "
+set $ws2 "2:    "
+set $ws3 "3:    "
+set $ws4 "4:    "
+set $ws5 "5:    "
+set $ws6 "6:    "
+set $ws7 "7:    "
+set $ws8 "8:    "
+set $ws9 "9:    "
 # set $ws10 "10"
 
 # switch to workspace
@@ -589,7 +589,7 @@ bar {
     # bindsym button5 nop
 # #   font xft:URWGothic-Book 11
     # # font pango:Ubuntu, Sarasa Mono SC Nerd, FontAwesome, Icons 11
-    # font xft:Ubuntu, Sarasa Mono SC Nerd, FontAwesome, Icons 11
+    font xft:Trim, UbuntuMono Nerd Font, Sarasa Mono SC Nerd, Ubuntu, FontAwesome, Icons 11
 #
     # strip_workspace_numbers no
     # strip_workspace_name no
