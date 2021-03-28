@@ -6,6 +6,8 @@ from i3pystatus.updates import aptget
 from i3pystatus.weather import weathercom
 from i3pystatus import get_module
 import os
+import subprocess
+
 
 # Colors:
 # Materia Manjaro
@@ -36,9 +38,43 @@ colors = {
     "chord": "#d79921"
 }
 
+
+def get_all_netifaces(path_to_state="/sys/class/net/"):
+    """
+    Get all netifaces in the /sys/class/net/ and
+    add all to the list except 'lo'.
+    """
+    netifaces_list = []
+    for dir in os.listdir(path_to_state):
+        if os.path.isdir("{}{}".format(path_to_state, dir)):
+            if dir != "lo":
+                netifaces_list.append(dir)
+    return netifaces_list
+
+
+def which_netiface_upped(netifaces=[]):
+    """
+    Check which interface is upped for widget.Net.
+    Returns the first upped netiface.
+    """
+    if netifaces:
+        for netiface in netifaces:
+            state = subprocess.check_output(["cat", "{}{}{}".format(path_to_state, netiface, "/operstate")]).decode("utf-8").rstrip()
+            if state == "up":
+                return netiface
+    return None
+
+
+
 my_term = "alacritty"
 my_term_extra = "terminator"
 home = os.path.expanduser("~")
+
+# Check which network iface is upped.
+path_to_state = "/sys/class/net/"  # enp2s0/operstate"
+#  default_upped_netiface = "wlo1"
+netifaces = get_all_netifaces(path_to_state)
+upped_netiface = which_netiface_upped(netifaces)
 
 
 status = Status(
@@ -70,7 +106,7 @@ status.register(
     "network",
     dynamic_color=False,
     color_up=colors["net_speed_down"],
-    interface="wlo1",
+    interface=upped_netiface,
     format_up=" {bytes_recv}KB/s  {bytes_sent}KB/s",
     hints={"markup": "pango"}
 )
@@ -105,13 +141,13 @@ status.register(
     #  "weather",
     #  format="{condition} {current_temp}{temp_unit}[ {icon}][ Hi: {high_temp}][ Lo: {low_temp}][ {update_error}]",
     #  #  format="{city}",
-    #  interval=900,
+    #  #  interval=900,
+    #  interval=60,
     #  colorize=True,
     #  hints={"markup": "pango"},
     #  backend=weathercom.Weathercom(
         #  location_code="8493ac1c3a23de4a15e24bd8fee7a078ae89435c6079fb9b81c1d004f5a9263a",
-        #  units="imperial",
-        #  #  units="metric",
+        #  units="metric",
         #  update_error="<span color='#ff0000'>!</span>",
     #  )
 #  )
