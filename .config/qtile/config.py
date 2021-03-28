@@ -102,6 +102,7 @@ keys = [
 # <SUPER> + <SHIFT> + KEYS  (-nf #fea63c)
     Key([mod, "shift"], "d", lazy.spawn("dmenu_run -nb #222B2E -nf #09DBC9 -sb #009185 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
 #  Key([mod, "shift"], "d", lazy.spawn("dmenu_run -nb #282828 -nf #d79921 -sb #fea63c -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Gruvbox
+    Key([mod, "shift"], "y", lazy.spawn(home + "/.myScripts/start-stop_syncthing.sh"), desc="Start-Stop Syncthing (for Dropbox sync)"),
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "x", lazy.spawn("xkill"), desc="Kill not answered window"),
     Key([mod, "shift"], "r", lazy.restart(), desc="Restart qtile"),
