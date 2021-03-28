@@ -219,7 +219,15 @@ keys = [
     Key([mod], "F8", lazy.spawn(home + "/.myScripts/volume_down.sh"), desc="Volume Down"),
     Key([mod], "F9", lazy.spawn(home + "/.myScripts/volume_up.sh"), desc="Volume Up more than 100%"),
 ]
-
+# MOVE/RESIZE FLOATING WINDOW
+for key, x, y in [
+        ("Left", -10, 0),
+        ("Right", 10, 0),
+        ("Up", 0, -10),
+        ("Down", 0, 10)]:
+    keys.append(Key([mod, "shift"], key, lazy.window.move_floating(x, y)))
+    keys.append(Key([mod, "control"], key, lazy.window.resize_floating(x, y)))
+        
 #       v                   
 #        🌐♬ 🌡 🖬  ⟳ ₿   ⮋⮉🡇 🡅 ⇓⇑        
 group_names = [(" ", {"layout": "monadtall"}),  # WWW
