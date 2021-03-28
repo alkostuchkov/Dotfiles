@@ -1,13 +1,19 @@
+################################ EXPORTs ################################
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/alexander/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 export EDITOR="vim"
 export VISUAL="gvim"
-export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+
+####################### AUTOCOMPLETE AND HIGHLIGHT COLORS ######################
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7d7d7d"
+
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -68,14 +74,17 @@ export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+
+################################# PLUGINS ######################################
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git asdf)
+plugins=(zsh-autosuggestions)
+# plugins=(zsh-syntax-highlighting)
 
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -94,36 +103,64 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+
+################################# ALIASes ######################################
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # alias ls='ls --color=auto'
 alias ls='exa -g --color=always --group-directories-first'
-alias ifconfig=/sbin/ifconfig
-
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
 alias ll='ls -l'
 alias la='ls -la'
 # alias ll='ls -lh'
 # alias la='ls -lah'
 # alias lf='ls -lFh'
 
-# Load ; should be last.
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-source /usr/share/autojump/autojump.zsh 2>/dev/null
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+# confirm before overwriting something
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
 
+# switch between shells
+alias tobash="sudo chsh $USER -s /usr/bin/env bash && echo 'Now log out.'"
+alias tozsh="sudo chsh $USER -s /usr/bin/env zsh && echo 'Now log out.'"
+alias tofish="sudo chsh $USER -s /usr/bin/env fish && echo 'Now log out.'"
+
+# navigation
+alias ..='cd ..' 
+alias ...='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+
+## get top process eating memory
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+
+## get top process eating cpu ##
+alias pscpu='ps auxf | sort -nr -k 3'
+alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
+
+## git
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
+
+
+################################# PROMPT #######################################
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+source $ZSH/oh-my-zsh.sh
+
+# Load ; should be last.
+source $HOME/powerlevel10k/powerlevel10k.zsh-theme
+# source /usr/share/autojump/autojump.zsh 2>/dev/null
+# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+
+# Syntax-highlighting like in fish
+source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Run neofetch
 neofetch

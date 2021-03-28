@@ -30,3 +30,9 @@ Alacritty - deb package https://packagecloud.io/hongri_cui/packages/packages/deb
 dmenu - scrips-collection https://github.com/jukil/dmenu-scripts-collection
 Vifm - Wiki https://wiki.vifm.info/index.php/Main_Page
 Vifm - vifmimg https://github.com/cirala/vifmimg
+zsh - autosuggestions like in fish https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
+Dropbox - sync issues https://www.dropboxforum.com/t5/Dropbox-files-folders/Dropbox-stuck-syncing-for-days/td-p/396078
+Dropbox - sync issues (Fix Hardlinks) https://www.dropboxforum.com/t5/Dropbox-installs-integrations/Can-t-access-the-quot-Fix-hardlinks-quot/td-p/486556
+Dropbox - help (Troubleshoot Dropbox syncing issues) https://help.dropbox.com/installs-integrations/sync-uploads/files-not-syncing
+Dropbox - Stop Syncing Apps When You Use Dropbox!!! https://helpdeskgeek.com/help-desk/13-troubleshooting-tips-for-when-dropbox-files-are-not-syncing/
+zsh - syntax-highlighting https://github.com/zsh-users/zsh-syntax-highlighting
