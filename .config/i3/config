@@ -34,7 +34,7 @@ hide_edge_borders none
 ################################################################################
 # change borders
 bindsym $mod+Shift+u border none
-bindsym $mod+Shift+y border pixel 3
+bindsym $mod+Shift+b border pixel 3
 bindsym $mod+Shift+n border normal
 
 # change focus
@@ -206,6 +206,7 @@ bindsym $mod+t exec ~/Programs/Telegram/Telegram -workdir /home/alexander/.local
 bindsym $mod+g exec ~/Programs/AppImageApplications/GIMP.AppImage
 bindsym $mod+Print --release exec --no-startup-id flameshot gui
 bindsym $mod+Shift+x --release exec --no-startup-id xkill
+bindsym $mod+Shift+y exec ~/.myScripts/start-stop_syncthing.sh
 # bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec obs
 # bindsym $mod+F5 exec $myTerm -e 'mocp'
@@ -353,8 +354,8 @@ mode "$mode_system" {
 }
 
 # dmenu mode
-bindsym $alt+m mode "dmenu"
-mode "dmenu" {
+bindsym $alt+m mode "Dmenu"
+mode "Dmenu" {
         # These bindings trigger as soon as you enter the dmenu mode
         bindsym c exec ~/.myScripts/dmenu/dmenu-edit-configs.sh
         bindsym e exec ~/.myScripts/dmenu/dmenu-unicode.sh
