@@ -66,6 +66,8 @@ keys = [
     Key([mod], "Return", lazy.spawn(my_term), desc="Launch terminal"),
     Key([mod, "shift"], "Return", lazy.spawn("terminator"), desc="Launch terminator"),
     Key([mod], "r", lazy.spawn("rofi run -show drun -show-icons"), desc="Run App Lancher"),
+    Key([mod], "d", lazy.spawn("dmenu_run -nb #222B2E -nf #09DBC9 -sb #009185 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
+#  Key([mod], "d", lazy.spawn("dmenu_run -nb #282828 -nf #d79921 -sb #fea63c -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Gruvbox
     Key([mod], "Print", lazy.spawn("flameshot gui"), desc="Run flameshot (take screenshot)"),
     Key([mod], "w", lazy.spawn("firefox"), desc="Launch Firefox"),
     Key([mod], "u", lazy.spawn("qutebrowser"), desc="Launch qutebrowser"),
@@ -93,15 +95,8 @@ keys = [
     #  Key([mod], "Left", lazy.layout.left(), desc="Move focus left in stack pane"),
     #  Key([mod], "Right", lazy.layout.right(), desc="Move focus right in stack pane"),
     Key([mod], "space", lazy.layout.next(), desc="Switch window focus to other pane(s) of stack"),
-    # QTILE LAYOUT KEYS
-    Key([mod], "n", lazy.layout.normalize(), desc="Normalize window size ratios"),
-    Key([mod], "m", lazy.layout.maximize(), desc="Toggle window between minimum and maximum sizes"),
-    Key([mod], "d", lazy.window.toggle_minimize(), desc="Toggle window between minimumize and normal sizes"),
-    Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
 
 # <SUPER> + <SHIFT> + KEYS  (-nf #fea63c)
-    Key([mod, "shift"], "d", lazy.spawn("dmenu_run -nb #222B2E -nf #09DBC9 -sb #009185 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
-#  Key([mod, "shift"], "d", lazy.spawn("dmenu_run -nb #282828 -nf #d79921 -sb #fea63c -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Gruvbox
     Key([mod, "shift"], "y", lazy.spawn(home + "/.myScripts/start-stop_syncthing.sh"), desc="Start-Stop Syncthing (for Dropbox sync)"),
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "x", lazy.spawn("xkill"), desc="Kill not answered window"),
@@ -112,8 +107,10 @@ keys = [
     # MOVE WINDOWS UP OR DOWN IN CURRENT STACK
     Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up in current stack "),
     Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down in current stack "),
-    Key([mod, "shift"], "h", lazy.layout.swap_left(), desc="Move window left in current stack "),
-    Key([mod, "shift"], "l", lazy.layout.swap_right(), desc="Move window right in current stack "),
+    #  Key([mod, "shift"], "h", lazy.layout.swap_left(), desc="Move window left in current stack "),
+    #  Key([mod, "shift"], "l", lazy.layout.swap_right(), desc="Move window right in current stack "),
+    Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window left in current stack "),
+    Key([mod, "shift"], "l", lazy.layout.shuffle_right(), desc="Move window right in current stack "),
 
     Key([mod, "shift"], "Up", lazy.layout.shuffle_up(), desc="Move window up in current stack "),
     Key([mod, "shift"], "Down", lazy.layout.shuffle_down(), desc="Move window down in current stack "),
@@ -121,6 +118,11 @@ keys = [
     Key([mod, "shift"], "Right", lazy.layout.shuffle_right(), desc="Move window right in current stack "),
     # FLIP LAYOUT FOR MONADTALL/WIDE
     Key([mod, "shift"], "space", lazy.layout.flip(), desc="Flip main (left) panel with others"),
+    # NORMALIZE, MINIMIZE, MAXIMIZE, FULLSCREEN
+    Key([mod, "shift"], "n", lazy.layout.normalize(), desc="Normalize window size ratios"),
+    Key([mod, "shift"], "m", lazy.layout.maximize(), desc="Toggle window between minimum and maximum sizes"),
+    Key([mod, "shift"], "d", lazy.window.toggle_minimize(), desc="Toggle window between minimumize and normal sizes"),
+    Key([mod, "shift"], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
 
 # <SUPER> + <ALT> + KEYS
     Key([mod, alt], "space", lazy.spawn(home + "/.myScripts/touchpadONOFF.sh"), desc="Touchpad On/Off"),
@@ -227,19 +229,19 @@ for key, x, y in [
         ("Down", 0, 10)]:
     keys.append(Key([mod, "shift"], key, lazy.window.move_floating(x, y)))
     keys.append(Key([mod, "control"], key, lazy.window.resize_floating(x, y)))
-        
+
 #       v                   
 #        🌐♬ 🌡 🖬  ⟳ ₿   ⮋⮉🡇 🡅 ⇓⇑        
-group_names = [(" ", {"layout": "monadtall"}),  # WWW
-               (" ", {"layout": "tile"}),  # DEV
+group_names = [(" ", {"layout": "columns"}),  # WWW
+               (" ", {"layout": "columns"}),  # DEV
                #  (" ", {"layout": "monadtall"}),  # DEV
-               (" ", {"layout": "max"}),        # FM
-               (" ", {"layout": "monadtall"}),  # SYS
-               (" ", {"layout": "monadtall"}),  # VIRT
-               (" ", {"layout": "monadtall"}),  # CHAT
-               (" ", {"layout": "monadtall"}),  # GFX
-               (" ", {"layout": "max"}),        # VID
-               (" ", {"layout": "monadwide"})]  # MULT
+               (" ", {"layout": "max"}),      # FM
+               (" ", {"layout": "columns"}),  # SYS
+               (" ", {"layout": "columns"}),  # VIRT
+               (" ", {"layout": "columns"}),  # CHAT
+               (" ", {"layout": "columns"}),  # GFX
+               (" ", {"layout": "max"}),      # VID
+               (" ", {"layout": "columns"})]  # MULT
 
 groups = [Group(name, **kwargs, label="{}{}".format(name, i)) for i, (name, kwargs) in enumerate(group_names, 1)]
 
@@ -256,24 +258,25 @@ for i, group_name in enumerate(group_names, 1):
 layout_theme = {"border_width": 3,
                 "margin": 5,
                 "border_focus": "2eb398",  # Materia Manjaro
+                "border_normal": "1d2330"
                 #  "border_focus": "d79922",  # Gruvbox yellow
                 #  "border_focus": "fea63c",  # Gruvbox yellow (lighter)
-                "border_normal": "1d2330"
-                }
+}
 
 layouts = [
     #  layout.Bsp(**layout_theme),
-    #  layout.Columns(**layout_theme),
+    layout.Columns(**layout_theme, border_on_single=True),
     #  layout.RatioTile(**layout_theme),
     #  layout.VerticalTile(**layout_theme),
     #  layout.Matrix(**layout_theme),
     #  layout.Zoomy(**layout_theme),
+
+    layout.Max(**layout_theme),
     layout.MonadTall(**layout_theme),
     layout.MonadWide(**layout_theme),
-    layout.Max(**layout_theme),
-    layout.Tile(shift_windows=True, **layout_theme),
+    #  layout.Tile(shift_windows=True, **layout_theme),
+    #  layout.Stack(stacks=2, **layout_theme),
     # layout.Stack(num_stacks=2),
-    layout.Stack(stacks=2, **layout_theme),
     #  layout.TreeTab(
          #  font = my_font,
          #  fontsize=12,
@@ -412,6 +415,12 @@ def init_widgets_list():
                     foreground=colors[2],
                     background=colors[0]
                     ),
+            widget.Chord(
+                    padding = 10,
+                    background=colors[17],
+                    foreground=colors[18],
+                    fontsize=14
+                    ),
             widget.WindowName(
                     #  font=my_mono_bold_font,
                     font=my_font,
@@ -426,12 +435,6 @@ def init_widgets_list():
                     #  length=bar.STRETCH,
                     #  background=colors[0]
                     #  ),
-            widget.Chord(
-                    padding = 10,
-                    background=colors[17],
-                    foreground=colors[18],
-                    fontsize=14
-                    ),
             widget.CheckUpdates(
                     foreground=colors[14],
                     background=colors[0],
@@ -591,7 +594,7 @@ def init_widgets_list():
                     #  background=colors[0]
                     #  ),
             widget.CurrentLayoutIcon(
-                    custom_icon_paths=[home + "/.config/qtile/icons/layouts"],
+                    #  custom_icon_paths=[home + "/.config/qtile/icons/layouts"],
                     foreground=colors[10],
                     background=colors[0],
                     padding=0,
