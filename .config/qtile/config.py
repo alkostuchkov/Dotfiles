@@ -75,7 +75,7 @@ keys = [
     Key([mod], "i", lazy.spawn("synaptic-pkexec"), desc="Launch Synaptic"),
     Key([mod], "g", lazy.spawn(home + "/.myScripts/runGimpDiscreteGr.sh"), desc="Run GIMP DiscreteGraphics"),
     Key([mod], "b", lazy.spawn(home + "/Programs/SublimeText/sublime_text"), desc="Run Sublime Text"),
-    Key([mod], "p", lazy.spawn(home + "/Programs/PyCharm-Community/bin/pycharm.sh"), desc="Run PyCharm"),
+    #  Key([mod], "p", lazy.spawn(home + "/Programs/PyCharm-Community/bin/pycharm.sh"), desc="Run PyCharm"),
     Key([mod], "t", lazy.spawn(home + "/Programs/Telegram/Telegram -workdir /home/alexander/.local/share/TelegramDesktop/ -- %u"), desc="Run Telegram"),
     Key([mod], "x", lazy.spawn("xterm"), desc="Run XTerm"),
     Key([mod], "v", lazy.spawn(my_term + " -e " + home + "/.config/vifm/scripts/vifmrun"), desc="Run vifm"),
@@ -266,17 +266,16 @@ layout_theme = {"border_width": 3,
 layouts = [
     #  layout.Bsp(**layout_theme),
     layout.Columns(**layout_theme, border_on_single=True),
-    #  layout.RatioTile(**layout_theme),
-    #  layout.VerticalTile(**layout_theme),
-    #  layout.Matrix(**layout_theme),
-    #  layout.Zoomy(**layout_theme),
-
     layout.Max(**layout_theme),
     layout.MonadTall(**layout_theme),
     layout.MonadWide(**layout_theme),
     #  layout.Tile(shift_windows=True, **layout_theme),
     #  layout.Stack(stacks=2, **layout_theme),
-    # layout.Stack(num_stacks=2),
+    #  layout.Stack(num_stacks=2),
+    #  layout.RatioTile(**layout_theme),
+    #  layout.VerticalTile(**layout_theme),
+    #  layout.Matrix(**layout_theme),
+    #  layout.Zoomy(**layout_theme),
     #  layout.TreeTab(
          #  font = my_font,
          #  fontsize=12,
@@ -448,7 +447,7 @@ def init_widgets_list():
                     #  no_update_string="No updates",
                     mouse_callbacks={
                         "Button1": lambda: qtile.cmd_spawn(my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'"),
-                        "Button3": lambda: bar.draw()
+                        "Button3": lambda: qtile.cmd_spawn(home + "/.myScripts/show_updates_apt.sh")
                     },
                     #  execute=my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'",
                     #  execute=my_term + " -e sudo apt update && sudo apt upgrade && $SHELL",  # for alacritty
