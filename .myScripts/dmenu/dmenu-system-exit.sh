@@ -26,7 +26,7 @@ fn='Ubuntu-16:normal'
 # sb='#d79921'
 # fn='Sarasa Mono SC Nerd-17:normal'
 
-choice=$(dmenu  -l 10  -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'System:'   <<< "$options")
+choice=$(dmenu -i -l 10  -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'System:'   <<< "$options")
 
 case $choice in
     lock)
