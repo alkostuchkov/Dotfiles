@@ -14,7 +14,7 @@ nm-applet &
 xfce4-power-manager &
 diodon &
 conky -c ~/.myScripts/conky/conkyrc1 &
-dropbox start -i &
+# dropbox start -i &
 compton --config $HOME/.config/compton.conf &
 $HOME/Programs/CheckEmail/CheckEmail &
 xrdb $HOME/.Xresources &
