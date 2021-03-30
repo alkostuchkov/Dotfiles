@@ -111,6 +111,27 @@ plugins=(zsh-autosuggestions)
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+################################# PROMPT #######################################
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+source $ZSH/oh-my-zsh.sh
+
+# Load ; should be last.
+# source $HOME/powerlevel10k/powerlevel10k.zsh-theme
+
+# source /usr/share/autojump/autojump.zsh 2>/dev/null
+# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+
+# Syntax-highlighting like in fish
+source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Run neofetch
+neofetch
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ################################# ALIASes ######################################
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -154,25 +175,3 @@ alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
 ## git
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
 
-
-################################# PROMPT #######################################
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-source $ZSH/oh-my-zsh.sh
-
-# Load ; should be last.
-# source $HOME/powerlevel10k/powerlevel10k.zsh-theme
-
-# source /usr/share/autojump/autojump.zsh 2>/dev/null
-# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
-# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-
-# Syntax-highlighting like in fish
-source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Run neofetch
-neofetch
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
