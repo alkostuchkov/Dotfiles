@@ -80,7 +80,7 @@ bindsym $mod+Ctrl+Right resize grow width 5 px or 5 ppt
 # bindsym $mod+g split h;exec notify-send 'tile horizontally'
 bindsym $mod+Shift+g split v;exec $myNotify 'tile horizontally'
 bindsym $mod+Shift+v split h;exec $myNotify 'tile vertically'
-bindsym $mod+Shift+t split toggle
+bindsym $mod+Shift+s split toggle
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -89,7 +89,7 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f floating toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+Shift+s layout stacking
+bindsym $mod+Shift+t layout stacking
 bindsym $mod+Shift+w layout tabbed
 bindsym $mod+Shift+e layout toggle split
 
