@@ -79,6 +79,8 @@ keys = [
     Key([mod], "t", lazy.spawn(home + "/Programs/Telegram/Telegram -workdir /home/alexander/.local/share/TelegramDesktop/ -- %u"), desc="Run Telegram"),
     Key([mod], "x", lazy.spawn("xterm"), desc="Run XTerm"),
     Key([mod], "v", lazy.spawn(my_term + " -e " + home + "/.config/vifm/scripts/vifmrun"), desc="Run vifm"),
+    # TOGGLE FULLSCREEN
+    Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
     # SWITCH BETWEEN GROUPS
     Key([mod], "Right", lazy.screen.next_group(), desc="Switch to the right group"),
     Key([mod], "Left", lazy.screen.prev_group(), desc="Switch to the left group"),
@@ -118,11 +120,10 @@ keys = [
     Key([mod, "shift"], "Right", lazy.layout.shuffle_right(), desc="Move window right in current stack "),
     # FLIP LAYOUT FOR MONADTALL/WIDE
     Key([mod, "shift"], "space", lazy.layout.flip(), desc="Flip main (left) panel with others"),
-    # NORMALIZE, MINIMIZE, MAXIMIZE, FULLSCREEN
+    # NORMALIZE, MINIMIZE, MAXIMIZE
     Key([mod, "shift"], "n", lazy.layout.normalize(), desc="Normalize window size ratios"),
     Key([mod, "shift"], "m", lazy.layout.maximize(), desc="Toggle window between minimum and maximum sizes"),
     Key([mod, "shift"], "d", lazy.window.toggle_minimize(), desc="Toggle window between minimumize and normal sizes"),
-    Key([mod, "shift"], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
 
 # <SUPER> + <ALT> + KEYS
     Key([mod, alt], "space", lazy.spawn(home + "/.myScripts/touchpadONOFF.sh"), desc="Touchpad On/Off"),
