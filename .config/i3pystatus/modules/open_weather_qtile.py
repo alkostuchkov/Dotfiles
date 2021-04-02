@@ -1,4 +1,6 @@
+#!/usr/bin/env python3
 # -*- coding:utf-8 -*-
+
 # Copyright (c) 2020 Himanshu Chauhan
 # Copyright (c) 2020 Stephan Ehlers
 #
@@ -21,6 +23,8 @@
 # SOFTWARE.
 
 import time
+import schedule
+import threading
 from urllib.parse import urlencode
 
 from libqtile.widget import base
@@ -88,7 +92,8 @@ class _OpenWeatherResponseParser:
         data['weather_details'] = data.get('weather_0_description', None)
         data['humidity'] = data.get('main_humidity', None)
         data['pressure'] = data.get('main_pressure', None)
-        data['temp'] = data.get('main_temp', None)
+        #  data['temp'] = data.get('main_temp', None)
+        data['temp'] = round(data.get('main_temp', None))
 
     def _get_wind_direction(self):
         wd = self.data.get('wind_deg', None)
@@ -247,3 +252,32 @@ class OpenWeather(GenPollUrl):
         data['units_wind_speed'] = 'Km/h' if self.metric else 'm/h'
 
         return self.format.format(**data)
+
+
+def get_forecast():
+    ow = OpenWeather(
+        coordinates={"longitude": "30.9754", "latitude": "52.4345"},
+        format="{location_city}: {temp}°{units_temperature} {weather_details}",
+        #  format="{location_city}: {main_temp}°{units_temperature} {weather_details}",
+        #  language="ru"
+    )
+    response = ow.fetch(ow.url)
+    forecast = ow.parse(response)
+    return forecast
+
+
+#  def run_schedule():
+    #  schedule.every(10).seconds.do(get_forecast)
+    #  while True:
+        #  schedule.run_pending()
+        #  time.sleep(1)
+#
+#
+#  def main():
+    #  tread = threading.Thread(target=run_schedule, name=get_forecast, daemon=True)
+    #  tread.start()
+
+
+if __name__ == "__main__":
+    print(get_forecast())
+

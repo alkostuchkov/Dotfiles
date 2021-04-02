@@ -7,6 +7,9 @@ from i3pystatus.weather import weathercom
 from i3pystatus import get_module
 import os
 import subprocess
+#  import schedule
+#  import threading
+from modules import open_weather_qtile
 
 
 # Colors:
@@ -35,7 +38,9 @@ colors = {
     "weather": "#eb7bef",
     "weather2": "#ec30f3",
     "weather3": "#e2e0a5",
-    "chord": "#d79921"
+    "chord": "#d79921",
+    "active": "#00ff00",
+    "inactive": "#ff0000"
 }
 
 
@@ -65,7 +70,6 @@ def which_netiface_upped(netifaces=[]):
     return None
 
 
-
 my_term = "alacritty"
 my_term_extra = "terminator"
 home = os.path.expanduser("~")
@@ -75,6 +79,26 @@ path_to_state = "/sys/class/net/"  # enp2s0/operstate"
 #  default_upped_netiface = "wlo1"
 netifaces = get_all_netifaces(path_to_state)
 upped_netiface = which_netiface_upped(netifaces)
+
+#  syncthing_status = get_syncthing_status()
+syncthing_status = subprocess.check_output(["{}/.myScripts/get_syncthing_status.sh".format(home)]).decode("utf-8").rstrip()
+
+
+#  def get_forecast():
+    #  global forecast
+    #  forecast = subprocess.check_output(["{}/.config/i3pystatus/modules/open_weather_qtile.py".format(home)]).decode("utf-8").rstrip()
+#
+#  def run_forecast_schedule():
+    #  schedule.every(10).seconds.do(get_forecast)
+    #  while True:
+        #  schedule.run_pending()
+        #  time.sleep(1)
+#
+#  tread = threading.Thread(target=run_forecast_schedule, daemon=True)
+#  tread.start()
+
+# TODO: use try!!!!!!
+forecast = subprocess.check_output(["{}/.config/i3pystatus/modules/open_weather_qtile.py".format(home)]).decode("utf-8").rstrip()
 
 
 status = Status(
@@ -138,6 +162,10 @@ status.register(
 )
 
 #  status.register(
+    #  "weather2",
+#  )
+
+#  status.register(
     #  "weather",
     #  format="{condition} {current_temp}{temp_unit}[ {icon}][ Hi: {high_temp}][ Lo: {low_temp}][ {update_error}]",
     #  #  format="{city}",
@@ -152,6 +180,45 @@ status.register(
     #  )
 #  )
 
+@get_module
+def syncthing_change_status(self):
+    global syncthing_status
+    syncthing_status = subprocess.check_output(["{}/.myScripts/get_syncthing_status.sh".format(home)]).decode("utf-8").rstrip()
+    if syncthing_status == "active": 
+        os.system("systemctl --user stop syncthing.service")
+        syncthing_status = "inactive"
+        #  os.system(f"notify-send {syncthing_status}")
+    else:
+        os.system("systemctl --user start syncthing.service")
+        syncthing_status = "active"
+        #  os.system(f"notify-send {syncthing_status}")
+
+    self.output={
+        "full_text": "Syncthing:  ",
+        "color": colors["active"] if syncthing_status == "active" else colors["inactive"]
+    }
+
+status.register(
+    "text",
+    text="Syncthing:  ",
+    color=colors["active"] if syncthing_status == "active" else colors["inactive"],
+    on_leftclick=syncthing_change_status
+)
+
+@get_module
+def get_forecast(self):
+    global forecast
+    forecast = open_weather_qtile.get_forecast()
+    #  forecast = subprocess.check_output(["{}/.config/i3pystatus/modules/open_weather_qtile.py".format(home)]).decode("utf-8").rstrip()
+    self.output["full_text"] = "🌡" + forecast
+
+status.register(
+    "text",
+    color=colors["weather"],
+    text="🌡" + forecast,
+    on_leftclick=get_forecast
+)
+
 status.register(
     "updates",
     color=colors["updates"],
@@ -163,13 +230,13 @@ status.register(
     on_middleclick=my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'"
 )
 
-status.register(
-    "window_title",
-    color=colors["window_name"],
-    format="{class_name} - {title}",
-    hints={"markup": "pango", "separator": True},
-    max_width=40
-)
+#  status.register(
+    #  "window_title",
+    #  color=colors["window_name"],
+    #  format="{class_name} - {title}",
+    #  hints={"markup": "pango", "separator": True},
+    #  max_width=40
+#  )
 
 #  status.register(
     #  "keyboard_locks",

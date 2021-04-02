@@ -473,7 +473,7 @@ def init_widgets_list():
                     foreground=colors[15],
                     background=colors[0],
                     coordinates={"longitude": "30.9754", "latitude": "52.4345"},
-                    format="{location_city}: {main_temp}°{units_temperature}\n{weather_details}",
+                    format="{location_city}: {temp}°{units_temperature}\n{weather_details}",
                     #  format="{main_temp} °{units_temperature}\n{weather_details}",
                     update_interval=1800,
                     ),
