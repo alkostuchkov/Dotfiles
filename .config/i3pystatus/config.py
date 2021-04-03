@@ -161,7 +161,7 @@ status.register(
 
 status.register(
     "open_weather_qtile",
-    format="{location_city}: {temp}°{units_temperature} {weather_details}",
+    format="🌡{location_city}: {temp}°{units_temperature} {weather_details}",
     color=colors["weather"],
     #  coordinates={"longitude": "30.9754", "latitude": "52.4345"},
     #  language="ru",

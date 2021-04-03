@@ -206,7 +206,7 @@ bindsym $mod+t exec ~/Programs/Telegram/Telegram -workdir /home/alexander/.local
 bindsym $mod+g exec ~/Programs/AppImageApplications/GIMP.AppImage
 bindsym $mod+Print --release exec --no-startup-id flameshot gui
 bindsym $mod+Shift+x --release exec --no-startup-id xkill
-bindsym $mod+Shift+y exec ~/.myScripts/start-stop_syncthing.sh
+# bindsym $mod+Shift+y exec ~/.myScripts/start-stop_syncthing.sh
 # bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec obs
 # bindsym $mod+F5 exec $myTerm -e 'mocp'
