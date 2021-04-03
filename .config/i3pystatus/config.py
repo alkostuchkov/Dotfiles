@@ -77,9 +77,6 @@ path_to_state = "/sys/class/net/"  # enp2s0/operstate"
 netifaces = get_all_netifaces(path_to_state)
 upped_netiface = which_netiface_upped(netifaces)
 
-#  syncthing_status = get_syncthing_status()
-syncthing_status = subprocess.check_output(["{}/.myScripts/get_syncthing_status.sh".format(home)]).decode("utf-8").rstrip()
-
 
 status = Status(
     standalone=True, 
@@ -134,29 +131,14 @@ status.register(
     on_leftclick=home + "/.myScripts/top5_cpu_usage.sh"
 )
 
-@get_module
-def syncthing_change_status(self):
-    global syncthing_status
-    syncthing_status = subprocess.check_output(["{}/.myScripts/get_syncthing_status.sh".format(home)]).decode("utf-8").rstrip()
-    if syncthing_status == "active": 
-        os.system("systemctl --user stop syncthing.service")
-        syncthing_status = "inactive"
-        #  os.system(f"notify-send {syncthing_status}")
-    else:
-        os.system("systemctl --user start syncthing.service")
-        syncthing_status = "active"
-        #  os.system(f"notify-send {syncthing_status}")
-
-    self.output={
-        "full_text": "Syncthing:  ",
-        "color": colors["active"] if syncthing_status == "active" else colors["inactive"]
-    }
-
 status.register(
-    "text",
-    text="Syncthing:  ",
-    color=colors["active"] if syncthing_status == "active" else colors["inactive"],
-    on_leftclick=syncthing_change_status
+    "my_syncthing",
+    #  label="MyLabel",
+    #  inactive_color="#0000ff",
+    #  active_color="#ff00ff",
+    interval=60,
+    path_to_script="{}/.myScripts/get_syncthing_status.sh".format(home),
+    on_rightclick="xdg-open 'http://127.0.0.1:8384/'"
 )
 
 status.register(
@@ -190,4 +172,3 @@ status.register(
 
 status.run()
  
-
