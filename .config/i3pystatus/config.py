@@ -7,9 +7,6 @@ from i3pystatus.weather import weathercom
 from i3pystatus import get_module
 import os
 import subprocess
-#  import schedule
-#  import threading
-from modules import open_weather_qtile
 
 
 # Colors:
@@ -84,23 +81,6 @@ upped_netiface = which_netiface_upped(netifaces)
 syncthing_status = subprocess.check_output(["{}/.myScripts/get_syncthing_status.sh".format(home)]).decode("utf-8").rstrip()
 
 
-#  def get_forecast():
-    #  global forecast
-    #  forecast = subprocess.check_output(["{}/.config/i3pystatus/modules/open_weather_qtile.py".format(home)]).decode("utf-8").rstrip()
-#
-#  def run_forecast_schedule():
-    #  schedule.every(10).seconds.do(get_forecast)
-    #  while True:
-        #  schedule.run_pending()
-        #  time.sleep(1)
-#
-#  tread = threading.Thread(target=run_forecast_schedule, daemon=True)
-#  tread.start()
-
-# TODO: use try!!!!!!
-forecast = subprocess.check_output(["{}/.config/i3pystatus/modules/open_weather_qtile.py".format(home)]).decode("utf-8").rstrip()
-
-
 status = Status(
     standalone=True, 
     logfile="$HOME/.config/i3pystatus/i3pystatus.log"
@@ -135,13 +115,6 @@ status.register(
     hints={"markup": "pango"}
 )
 
-#  # Note: requires both netifaces and basiciw (for essid and quality)
-#  status.register(
-    #  "network",
-    #  interface="wlo1",
-    #  format_up=" {essid} ▪ {quality:.1f}% ▪ {v4}",
-    #  format_down="")
-
 status.register(
     "my_mem",
     color=colors["memory"],
@@ -160,25 +133,6 @@ status.register(
     on_rightclick=my_term + " -e htop",
     on_leftclick=home + "/.myScripts/top5_cpu_usage.sh"
 )
-
-#  status.register(
-    #  "weather2",
-#  )
-
-#  status.register(
-    #  "weather",
-    #  format="{condition} {current_temp}{temp_unit}[ {icon}][ Hi: {high_temp}][ Lo: {low_temp}][ {update_error}]",
-    #  #  format="{city}",
-    #  #  interval=900,
-    #  interval=60,
-    #  colorize=True,
-    #  hints={"markup": "pango"},
-    #  backend=weathercom.Weathercom(
-        #  location_code="8493ac1c3a23de4a15e24bd8fee7a078ae89435c6079fb9b81c1d004f5a9263a",
-        #  units="metric",
-        #  update_error="<span color='#ff0000'>!</span>",
-    #  )
-#  )
 
 @get_module
 def syncthing_change_status(self):
@@ -205,18 +159,13 @@ status.register(
     on_leftclick=syncthing_change_status
 )
 
-@get_module
-def get_forecast(self):
-    global forecast
-    forecast = open_weather_qtile.get_forecast()
-    #  forecast = subprocess.check_output(["{}/.config/i3pystatus/modules/open_weather_qtile.py".format(home)]).decode("utf-8").rstrip()
-    self.output["full_text"] = "🌡" + forecast
-
 status.register(
-    "text",
+    "open_weather_qtile",
+    format="{location_city}: {temp}°{units_temperature} {weather_details}",
     color=colors["weather"],
-    text="🌡" + forecast,
-    on_leftclick=get_forecast
+    #  coordinates={"longitude": "30.9754", "latitude": "52.4345"},
+    #  language="ru",
+    interval=1800
 )
 
 status.register(
@@ -238,21 +187,6 @@ status.register(
     #  max_width=40
 #  )
 
-#  status.register(
-    #  "keyboard_locks",
-    #  caps_on='<span bgcolor="yellow" color="black">CAPS</span>',
-    #  caps_off='',
-    #  num_on='<span bgcolor="green" color="black">NUM</span>',
-    #  num_off='',
-    #  scroll_on='<span bgcolor="blue" color="black">SCR</span>',
-    #  scroll_off='',
-    #  color="#888888",
-    #  hints={"markup": "pango"})
-
-#  status.register(
-    #  "pulseaudio",
-    #  format=" {volume}% ({db} dB)",
-    #  format_muted=" MUTE")
 
 status.run()
  

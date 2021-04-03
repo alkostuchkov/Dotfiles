@@ -1,34 +1,12 @@
-#!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
-# Copyright (c) 2020 Himanshu Chauhan
-# Copyright (c) 2020 Stephan Ehlers
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
-
 import time
-import schedule
-import threading
 from urllib.parse import urlencode
 
 from libqtile.widget import base
 from libqtile.widget.generic_poll_text import GenPollUrl
+
+from i3pystatus import IntervalModule
 
 # See documentation: https://openweathermap.org/current
 QUERY_URL = 'http://api.openweathermap.org/data/2.5/weather?'
@@ -92,7 +70,6 @@ class _OpenWeatherResponseParser:
         data['weather_details'] = data.get('weather_0_description', None)
         data['humidity'] = data.get('main_humidity', None)
         data['pressure'] = data.get('main_pressure', None)
-        #  data['temp'] = data.get('main_temp', None)
         data['temp'] = round(data.get('main_temp', None))
 
     def _get_wind_direction(self):
@@ -251,33 +228,97 @@ class OpenWeather(GenPollUrl):
         data['units_temperature'] = 'C' if self.metric else 'F'
         data['units_wind_speed'] = 'Km/h' if self.metric else 'm/h'
 
-        return self.format.format(**data)
+        #  return self.format.format(**data)
+        return data  # data is a dict
 
 
-def get_forecast():
-    ow = OpenWeather(
-        coordinates={"longitude": "30.9754", "latitude": "52.4345"},
-        format="{location_city}: {temp}°{units_temperature} {weather_details}",
-        #  format="{location_city}: {main_temp}°{units_temperature} {weather_details}",
-        #  language="ru"
+class OpenWeatherQtile(IntervalModule):
+    """ A weather widget, data provided by the OpenWeather API.
+
+    Some format options:
+        - location_city
+        - location_cityid
+        - location_country
+        - location_lat
+        - location_long
+
+        - weather
+        - weather_details
+        - units_temperature
+        - units_wind_speed
+        - isotime
+        - humidity
+        - pressure
+        - sunrise
+        - sunset
+        - temp
+        - visibility
+        - wind_speed
+        - wind_deg
+        - wind_direction
+
+        - weather_0_icon  # See: https://openweathermap.org/weather-conditions; TODO: Use icons.
+        - main_feels_like
+        - main_temp_min
+        - main_temp_max
+        - clouds_all
+    """
+
+    format="{location_city}: {main_temp}°{units_temperature} {humidity}% {weather_details}"
+    color = "#ffffff"
+    #  app_key = DEFAULT_APP_ID
+    #  cityid = None
+    #  location = None
+    #  zip = None
+    #  coordinates = None
+    #  metric = True
+    #  dateformat = "%Y-%m-%d "
+    #  timeformat = "%H:%M"
+    #  language = "en"
+
+    settings = (
+        ("format", "format string used for output."),
+        ("color", "standard color"),
+        ("app_key", 
+         """Open Weather access key. A default is provided, but
+         for prolonged use obtaining your own is suggested:
+         https://home.openweathermap.org/users/sign_up"""),
+        ("cityid", 
+         """City ID. Can be looked up on e.g.:
+         https://openweathermap.org/find
+         Takes precedence over location and coordinates.
+         Note that this is not equal to a WOEID."""),
+        ("location",
+         """Name of the city. Country name can be appended
+         like cambridge,NZ. Takes precedence over zip-code."""),
+        ("zip", """Zip code (USA) or "zip code,country code" for
+         other countries. E.g. 12345,NZ. Takes precedence over
+         coordinates."""),
+        ("coordinates",
+        """Dictionary containing latitude and longitude
+           Example: coordinates={"longitude": "77.22",
+                                 "latitude": "28.67"}"""),
+        ("metric", "True to use metric/C, False to use imperial/F"),
+        ("dateformat",
+         """Format for dates, defaults to ISO.
+         For details see: https://docs.python.org/3/library/time.html#time.strftime"""),
+        ("timeformat",
+         """Format for times, defaults to ISO.
+         For details see: https://docs.python.org/3/library/time.html#time.strftime"""),
+        ("language",
+         """Language of response. List of languages supported can
+         be seen at: https://openweathermap.org/current under
+         Multilingual support""")
     )
-    response = ow.fetch(ow.url)
-    forecast = ow.parse(response)
-    return forecast
 
+    def run(self):
+        ow = OpenWeather(coordinates={"longitude": "30.9754", "latitude": "52.4345"})
+        response = ow.fetch(ow.url)
+        #  result = ow.parse(response)
 
-#  def run_schedule():
-    #  schedule.every(10).seconds.do(get_forecast)
-    #  while True:
-        #  schedule.run_pending()
-        #  time.sleep(1)
-#
-#
-#  def main():
-    #  tread = threading.Thread(target=run_schedule, name=get_forecast, daemon=True)
-    #  tread.start()
-
-
-if __name__ == "__main__":
-    print(get_forecast())
+        self.data = ow.parse(response)
+        self.output = {
+            "full_text": self.format.format(**self.data),
+            "color": self.color
+        }
 
