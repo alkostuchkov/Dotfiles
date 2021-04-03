@@ -7,6 +7,8 @@ from libqtile.widget import base
 from libqtile.widget.generic_poll_text import GenPollUrl
 
 from i3pystatus import IntervalModule
+from i3pystatus.core.util import internet, require
+
 
 # See documentation: https://openweathermap.org/current
 QUERY_URL = 'http://api.openweathermap.org/data/2.5/weather?'
@@ -311,6 +313,7 @@ class OpenWeatherQtile(IntervalModule):
          Multilingual support""")
     )
 
+    @require(internet)
     def run(self):
         ow = OpenWeather(coordinates={"longitude": "30.9754", "latitude": "52.4345"})
         response = ow.fetch(ow.url)
