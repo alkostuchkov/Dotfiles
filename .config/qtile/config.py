@@ -526,7 +526,8 @@ def init_widgets_list():
                     foreground=colors[8],
                     background=colors[0],
                     padding=0,
-                    format="{MemUsed}M\n{MemPercent}%",
+                    format="{MemUsed: .2f}{mm}\n{MemPercent: .2f}%",
+                    measure_mem="G",
                     mouse_callbacks={
                         "Button1": lambda: qtile.cmd_spawn(home + "/.myScripts/top5_mem_usage.sh"),
                         "Button3": lambda: qtile.cmd_spawn(my_term + " -e htop")
