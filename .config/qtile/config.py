@@ -13,6 +13,7 @@ from libqtile import qtile
 from modules import memory
 from modules import arcobattery
 from modules import all_windows_count
+from modules import syncthing
 
 
 def get_all_netifaces(path_to_state="/sys/class/net/"):
@@ -340,8 +341,10 @@ colors = [["#263238", "#263238"],  # 0 panel background
           #  ["#ffcb6b", "#ffcb6b"],  # 14 updates
           ["#eb7bef", "#eb7bef"],  # 15 weather
           ["#d79921", "#d79921"],  # 16 Chord
-          ["#ffbb00", "#ffbb00"],  # 17 Dmenu background
-          ["#070800", "#070800"]]  # 18 Dmenu foreground
+          ["#ffbb00", "#ffbb00"],  # 17 Dmenu (Chord) background
+          ["#070800", "#070800"],  # 18 Dmenu (Chord) foreground
+          ["#00ff00", "#00ff00"],  # 19 Syncthing active
+          ["#ff5555", "#ff5555"]]  # 20 Syncthing inactive
           #  ["#ec30f3", "#ec30f3"]]  # 15 weather
           #  ["#e2e0a5", "#e2e0a5"]]  # 15 weather
 
@@ -456,10 +459,33 @@ def init_widgets_list():
                     update_interval=900  # 15min after cron's apt-update task
                     ),
             widget.Sep(
-                    linewidth = 1,
-                    padding = 10,
-                    foreground = colors[2],
-                    background = colors[0]
+                    linewidth=1,
+                    padding=10,
+                    foreground=colors[2],
+                    background=colors[0]
+                    ),
+            widget.TextBox(
+                    #  text="⇆ ",
+                    text="🗘 ",
+                    fontsize=16,
+                    foreground="#55ebea",
+                    background=colors[0],
+                    padding=0,
+                    ),
+            syncthing.Syncthing(
+                    path_to_script=home + "/.myScripts/get_syncthing_status.sh",
+                    label="Syncthing:\n ",
+                    update_interval=30,
+                    background=colors[0],
+                    active_color=colors[19],
+                    inactive_color=colors[20],
+                    padding=0
+                    ),
+            widget.Sep(
+                    linewidth=1,
+                    padding=10,
+                    foreground=colors[2],
+                    background=colors[0]
                     ),
             widget.TextBox(
                     #  text="⛅",
@@ -478,10 +504,10 @@ def init_widgets_list():
                     update_interval=1800,
                     ),
             widget.Sep(
-                    linewidth = 1,
-                    padding = 10,
-                    foreground = colors[2],
-                    background = colors[0]
+                    linewidth=1,
+                    padding=10,
+                    foreground=colors[2],
+                    background=colors[0]
                     ),
             widget.TextBox(
                     text="",
@@ -506,10 +532,10 @@ def init_widgets_list():
                     }
                     ),
             widget.Sep(
-                    linewidth = 1,
-                    padding = 10,
-                    foreground = colors[2],
-                    background = colors[0]
+                    linewidth=1,
+                    padding=10,
+                    foreground=colors[2],
+                    background=colors[0]
                     ),
             widget.TextBox(
                     text=" ",
@@ -534,10 +560,10 @@ def init_widgets_list():
                     }
                     ),
             widget.Sep(
-                    linewidth = 1,
-                    padding = 10,
-                    foreground = colors[2],
-                    background = colors[0]
+                    linewidth=1,
+                    padding=10,
+                    foreground=colors[2],
+                    background=colors[0]
                     ),
             widget.Net(
                     interface=upped_netiface,
@@ -553,10 +579,10 @@ def init_widgets_list():
                     padding=0
                     ),
             widget.Sep(
-                    linewidth = 1,
-                    padding = 10,
-                    foreground = colors[2],
-                    background = colors[0]
+                    linewidth=1,
+                    padding=10,
+                    foreground=colors[2],
+                    background=colors[0]
                     ),
             widget.KeyboardKbdd(
                     configured_keyboards=["🇺🇸", "🇷🇺"],
@@ -573,7 +599,7 @@ def init_widgets_list():
 
             #  widget.BatteryIcon(
                     #  theme_path=home + "/.config/qtile/icons/battery_icons_vert",
-                    #  background = colors[0],
+                    #  background=colors[0],
                     #  ),
             #  widget.BatteryIcon(
                     #  background=colors[0],
@@ -585,7 +611,7 @@ def init_widgets_list():
                     #  format="{char} {percent:2.0%}\n{hour:d}:{min:02d} {watt:.2f}W",
                     #  foreground=colors[5],
                     #  background=colors[0],
-                    #  update_interval = 5
+                    #  update_interval=5
                     #  ),
 
             #  widget.Sep(
@@ -609,21 +635,21 @@ def init_widgets_list():
                     text_format="{num}/",
                     fontsize=14,
                     padding=0,
-                    foreground = colors[10],
-                    background = colors[0]
+                    foreground=colors[10],
+                    background=colors[0]
                     ),
             all_windows_count.WindowCount(
                     text_format="{num}",
                     fontsize=14,
                     padding=0,
-                    foreground = colors[10],
-                    background = colors[0]
+                    foreground=colors[10],
+                    background=colors[0]
                     ),
             widget.Sep(
-                    linewidth = 1,
-                    padding = 10,
-                    foreground = colors[2],
-                    background = colors[0]
+                    linewidth=1,
+                    padding=10,
+                    foreground=colors[2],
+                    background=colors[0]
                     ),
             widget.TextBox(
                     text=" ",
