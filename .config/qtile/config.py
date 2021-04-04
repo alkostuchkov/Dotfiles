@@ -344,7 +344,8 @@ colors = [["#263238", "#263238"],  # 0 panel background
           ["#ffbb00", "#ffbb00"],  # 17 Dmenu (Chord) background
           ["#070800", "#070800"],  # 18 Dmenu (Chord) foreground
           ["#00ff00", "#00ff00"],  # 19 Syncthing active
-          ["#ff5555", "#ff5555"]]  # 20 Syncthing inactive
+          ["#ff5555", "#ff5555"],  # 20 Syncthing inactive
+          ["#E4C962", "#E4C962"]]  # 21 Active group
           #  ["#ec30f3", "#ec30f3"]]  # 15 weather
           #  ["#e2e0a5", "#e2e0a5"]]  # 15 weather
 
@@ -405,14 +406,14 @@ def init_widgets_list():
                     padding_y=7,
                     padding_x=3,
                     borderwidth=3,
-                    active=colors[2],
+                    active=colors[21],
                     inactive=colors[2],
                     rounded=False,
                     highlight_color=colors[1],
                     #  highlight_method="line",
                     highlight_method="block",
                     this_current_screen_border=colors[3],
-                    this_screen_border=colors [4],
+                    this_screen_border=colors[4],
                     other_current_screen_border=colors[0],
                     other_screen_border=colors[0],
                     foreground=colors[2],
