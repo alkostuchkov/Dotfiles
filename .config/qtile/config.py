@@ -412,6 +412,7 @@ def init_widgets_list():
                     highlight_color=colors[1],
                     #  highlight_method="line",
                     highlight_method="block",
+                    urgent_alert_method="block",
                     this_current_screen_border=colors[3],
                     this_screen_border=colors[4],
                     other_current_screen_border=colors[0],
@@ -526,7 +527,7 @@ def init_widgets_list():
                     foreground=colors[7],
                     background=colors[0],
                     padding=0,
-                    format="{freq_current}GHz\n{load_percent}%",
+                    format="{freq_current}GHz\n{load_percent: .0f}%",
                     mouse_callbacks={
                         "Button1": lambda: qtile.cmd_spawn(home + "/.myScripts/top5_cpu_usage.sh"),
                         "Button3": lambda: qtile.cmd_spawn(my_term + " -e htop")
@@ -553,7 +554,7 @@ def init_widgets_list():
                     foreground=colors[8],
                     background=colors[0],
                     padding=0,
-                    format="{MemUsed: .2f}{mm}\n{MemPercent: .2f}%",
+                    format="{MemUsed: .2f}{mm}\n{MemPercent: .0f}%",
                     measure_mem="G",
                     mouse_callbacks={
                         "Button1": lambda: qtile.cmd_spawn(home + "/.myScripts/top5_mem_usage.sh"),
