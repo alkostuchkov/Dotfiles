@@ -201,6 +201,7 @@ keys = [
     #  Key([alt], "e", lazy.spawn(home + "/.myScripts/dmenu/dmenu-search.sh"), desc="Run chosen search engine"),
     #  Key([alt], "k", lazy.spawn(home + "/.myScripts/on-off_conky.sh"), desc="On-Off conky"),
     Key([alt], "w", lazy.spawn("rofi run -show window -show-icons"), desc="Switch between opened windows"),
+    Key([alt], "l", lazy.spawn(home + "/.myScripts/system_exit/lock.sh"), desc="Lock"),
     Key([alt], "Tab", lazy.group.next_window(), desc="Switch to the next window"),
 
 # <CONTROL> + <ALT> + KEYS
@@ -477,7 +478,7 @@ def init_widgets_list():
             syncthing.Syncthing(
                     path_to_script=home + "/.myScripts/get_syncthing_status.sh",
                     label="Syncthing:\n ",
-                    update_interval=30,
+                    update_interval=60,
                     background=colors[0],
                     active_color=colors[19],
                     inactive_color=colors[20],
@@ -501,8 +502,8 @@ def init_widgets_list():
                     foreground=colors[15],
                     background=colors[0],
                     coordinates={"longitude": "30.9754", "latitude": "52.4345"},
+                    #  format="{location_city}: {temp}°{units_temperature}\n{weather_0_icon} {weather_details}",
                     format="{location_city}: {temp}°{units_temperature}\n{weather_details}",
-                    #  format="{main_temp} °{units_temperature}\n{weather_details}",
                     update_interval=1800,
                     ),
             widget.Sep(

@@ -146,10 +146,7 @@ if has("gui_running")
     " set guifont=Source\ Code\ Pro\ 14
     " set guifont=mononoki\ 14.5
     " set guifont=Fira\ Code\ Light\ 14
-    " set guifont=JetBrainsMono\ Regular\ 14
-    " set guifont=JetBrainsMono\ Bold\ 14
 
-    " set guifont=JetBrainsMonoNL\ Light\ 14
     " set guifont=Operator\ Mono\ Light\ 16
     " set guifont=Trim\ Mono\ Regular\ 13
 
@@ -163,7 +160,9 @@ if has("gui_running")
     " set guifont=UbuntuMono\ Nerd\ Font\ 16
     " set guifont=Sarasa\ Mono\ SC\ Nerd\ Light\ 15
     " set guifont=Iosevka\ Fixed\ SS12\ 15
-    set guifont=Sarasa\ Mono\ SC\ Nerd\ 15
+    set guifont=Sarasa\ Mono\ SC\ Nerd\ 16
+    " set guifont=JetBrainsMono\ Regular\ 14
+    " set guifont=JetBrainsMonoNL\ Light\ 14
     " set guifont=SauceCodePro\ Nerd\ Font\ 16
 
     " set guifont=JetBrainsMono\ ExtraLight\ 14
