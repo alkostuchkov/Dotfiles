@@ -11,7 +11,8 @@ from libqtile.lazy import lazy
 from libqtile import qtile
 
 from modules import memory
-from modules import arcobattery
+#  from modules import check_updates
+#  from modules import arcobattery
 from modules import all_windows_count
 from modules import syncthing
 
@@ -72,11 +73,11 @@ keys = [
     Key([mod], "Print", lazy.spawn("flameshot gui"), desc="Run flameshot (take screenshot)"),
     Key([mod], "w", lazy.spawn("firefox"), desc="Launch Firefox"),
     Key([mod], "u", lazy.spawn("qutebrowser"), desc="Launch qutebrowser"),
-    Key([mod], "e", lazy.spawn("dolphin"), desc="Launch File Manager"),
+    Key([mod], "e", lazy.spawn("dolphin"), desc="Launch File Manager Dolphin"),
+    Key([mod], "p", lazy.spawn("pcmanfm"), desc="Launch File Manager PCManFM"),
     Key([mod], "i", lazy.spawn("synaptic-pkexec"), desc="Launch Synaptic"),
     Key([mod], "g", lazy.spawn(home + "/.myScripts/runGimpDiscreteGr.sh"), desc="Run GIMP DiscreteGraphics"),
     Key([mod], "b", lazy.spawn(home + "/Programs/SublimeText/sublime_text"), desc="Run Sublime Text"),
-    #  Key([mod], "p", lazy.spawn(home + "/Programs/PyCharm-Community/bin/pycharm.sh"), desc="Run PyCharm"),
     Key([mod], "t", lazy.spawn(home + "/Programs/Telegram/Telegram -workdir /home/alexander/.local/share/TelegramDesktop/ -- %u"), desc="Run Telegram"),
     Key([mod], "x", lazy.spawn("xterm"), desc="Run XTerm"),
     Key([mod], "v", lazy.spawn(my_term + " -e " + home + "/.config/vifm/scripts/vifmrun"), desc="Run vifm"),
@@ -453,13 +454,15 @@ def init_widgets_list():
                     distro="Debian",
                     #  no_update_string="No updates",
                     mouse_callbacks={
-                        "Button1": lambda: qtile.cmd_spawn(my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'"),
-                        "Button3": lambda: qtile.cmd_spawn(home + "/.myScripts/show_updates_apt.sh")
+                        #  "Button1": lambda: qtile.cmd_spawn(my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'"),
+                        "Button3": lambda: qtile.cmd_spawn(home + "/.myScripts/show_updates_apt.sh"),
+                        "Button2": lambda: qtile.cmd_spawn(my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'")
                     },
                     #  execute=my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'",
                     #  execute=my_term + " -e sudo apt update && sudo apt upgrade && $SHELL",  # for alacritty
                     #  execute=my_term + ' -e "sudo aptitude update && sudo aptitude safe-upgrade && $SHELL"',  # for terminator
-                    update_interval=900  # 15min after cron's apt-update task
+                    #  update_interval=900  # 15min after cron's apt-update task
+                    update_interval=300  # 5min
                     ),
             widget.Sep(
                     linewidth=1,
