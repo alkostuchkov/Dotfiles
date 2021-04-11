@@ -120,7 +120,8 @@ font:
     # family: SauceCodePro Nerd Font Mono
     # family: M+ 1mn
 
-    family: Sarasa Mono SC Nerd
+    # family: Sarasa Mono SC Nerd
+    family: Source Code Pro
     # family: Iosevka Slab
     # family: Iosevka Fixed
     # family: Iosevka Term
@@ -157,7 +158,8 @@ font:
     # family: SauceCodePro Nerd Font Mono
     # family: M+ 1mn
 
-    family: Sarasa Mono SC Nerd
+    # family: Sarasa Mono SC Nerd
+    family: Source Code Pro
     # family: Iosevka Slab
     # family: Iosevka Fixed
     # family: Iosevka Term
@@ -193,7 +195,8 @@ font:
     # family: SauceCodePro Nerd Font
     # family: M+ 1mn
 
-    family: Sarasa Mono SC Nerd
+    # family: Sarasa Mono SC Nerd
+    family: Source Code Pro
     # family: Iosevka Slab
     # family: Iosevka Fixed
     # family: Iosevka Term
@@ -229,7 +232,8 @@ font:
     # family: TerminessTTF Nerd Font
     # family: SauceCodePro Nerd Font
 
-    family: Sarasa Mono SC Nerd
+    # family: Sarasa Mono SC Nerd
+    family: Source Code Pro
     # family: Iosevka Slab
     # family: Iosevka Fixed
     # family: Iosevka Term
@@ -249,7 +253,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 15.5
+  size: 14.5
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.

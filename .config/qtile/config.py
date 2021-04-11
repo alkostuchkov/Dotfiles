@@ -442,6 +442,7 @@ def init_widgets_list():
                     #  length=bar.STRETCH,
                     #  background=colors[0]
                     #  ),
+            #  check_updates.CheckUpdates(
             widget.CheckUpdates(
                     foreground=colors[14],
                     background=colors[0],
@@ -788,8 +789,9 @@ floating_layout = layout.Floating(float_rules=[
     #  Match(title="Preference"),  # Haroopad (md editor)
     #  Match(title="Close Button Action", wm_class="tixati"),  # Tixati
     Match(title="Terminator Preferences", wm_class="terminator"),
-    #  Match(wm_class="com-intellij-updater-Runner"),
     Match(title="win0", wm_class="jetbrains-pycharm-ce"),  # PyCharm
+    Match(title="Update", wm_class="com-intellij-updater-Runner"),  # PyCharm's updates
+    Match(title="License Activation", wm_class="jetbrains-pycharm-ce"),  # PyCharm
     Match(wm_class="minitube"),
     Match(wm_class="CheckEmail"),
     Match(wm_class="GParted"),
