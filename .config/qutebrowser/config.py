@@ -742,8 +742,8 @@ c.fonts.messages.error = "12pt Ubuntu"
 #config.bind("O", "spawn --userscript dmenu-open --tab")
 
 # Bindings for normal mode
-#  config.bind("M", "hint links spawn mpv {hint-url}")
-config.bind("M", "hint links spawn --detach mpv --force-window yes {hint-url}")
+config.bind("M", "hint links spawn freetube {hint-url}")
+#  config.bind("M", "hint links spawn --detach mpv --force-window yes {hint-url}")
 config.bind("Z", "hint links spawn alacritty -e youtube-dl {hint-url}")
 config.bind("t", "set-cmd-text -s :open -t")
 config.bind("xb", "config-cycle statusbar.show always never")

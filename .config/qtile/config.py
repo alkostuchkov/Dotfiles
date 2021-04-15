@@ -456,6 +456,7 @@ def init_widgets_list():
                     #  no_update_string="No updates",
                     mouse_callbacks={
                         #  "Button1": lambda: qtile.cmd_spawn(my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'"),
+                        "Button1": widget.CheckUpdates.poll,
                         "Button3": lambda: qtile.cmd_spawn(home + "/.myScripts/show_updates_apt.sh"),
                         "Button2": lambda: qtile.cmd_spawn(my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'")
                     },
@@ -790,6 +791,7 @@ floating_layout = layout.Floating(float_rules=[
     #  Match(title="Close Button Action", wm_class="tixati"),  # Tixati
     Match(title="Terminator Preferences", wm_class="terminator"),
     Match(title="win0", wm_class="jetbrains-pycharm-ce"),  # PyCharm
+    Match(title="Welcome to PyCharm", wm_class="jetbrains-pycharm-ce"),
     Match(title="Update", wm_class="com-intellij-updater-Runner"),  # PyCharm's updates
     Match(title="License Activation", wm_class="jetbrains-pycharm-ce"),  # PyCharm
     Match(wm_class="minitube"),
