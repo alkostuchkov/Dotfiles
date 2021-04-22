@@ -30,7 +30,7 @@ def get_all_netifaces(path_to_state="/sys/class/net/"):
     return netifaces_list
 
 
-def which_netiface_upped(netifaces=[]):
+def get_upped_netiface(netifaces=[]):
     """
     Check which interface is upped for widget.Net.
     Returns the first upped netiface.
@@ -59,7 +59,7 @@ my_config = home + "/.config/qtile/config.py"
 path_to_state = "/sys/class/net/"  # enp2s0/operstate"
 #  default_upped_netiface = "wlo1"
 netifaces = get_all_netifaces(path_to_state)
-upped_netiface = which_netiface_upped(netifaces)
+upped_netiface = get_upped_netiface(netifaces)
 # Counter of opened windows
 #  opened_windows_counter = 0
 
@@ -202,7 +202,6 @@ keys = [
     #  Key([alt], "e", lazy.spawn(home + "/.myScripts/dmenu/dmenu-search.sh"), desc="Run chosen search engine"),
     #  Key([alt], "k", lazy.spawn(home + "/.myScripts/on-off_conky.sh"), desc="On-Off conky"),
     Key([alt], "w", lazy.spawn("rofi run -show window -show-icons"), desc="Switch between opened windows"),
-    Key([alt], "l", lazy.spawn(home + "/.myScripts/system_exit/lock.sh"), desc="Lock"),
     Key([alt], "Tab", lazy.group.next_window(), desc="Switch to the next window"),
 
 # <CONTROL> + <ALT> + KEYS
@@ -256,6 +255,7 @@ for i, group_name in enumerate(group_names, 1):
             desc="Switch to another group"),
         Key([mod, "shift"], str(i),
             lazy.window.togroup(group_name[0]),
+            lazy.group[group_name[0]].toscreen(),  # follow the window when it moves to another group
             desc="Send current window to another group")
     ])
 
@@ -451,7 +451,7 @@ def init_widgets_list():
                     fontsize=14,
                     custom_command="apt-show-versions --upgradeable",
                     #  custom_command="apt-show-versions | grep upgradeable | wc -l",
-                    display_format=" {updates}",  # ⟳ 
+                    display_format="   {updates}",  # ⟳ 
                     distro="Debian",
                     #  no_update_string="No updates",
                     mouse_callbacks={
@@ -482,7 +482,7 @@ def init_widgets_list():
                     ),
             syncthing.Syncthing(
                     path_to_script=home + "/.myScripts/get_syncthing_status.sh",
-                    label="Syncthing:\n ",
+                    label="Syncthing\n ",
                     update_interval=60,
                     background=colors[0],
                     active_color=colors[19],
@@ -518,7 +518,7 @@ def init_widgets_list():
                     background=colors[0]
                     ),
             widget.TextBox(
-                    text="",
+                    text=" ",
                     #  text=" ",
                     fontsize=16,
                     foreground=colors[7],
@@ -546,7 +546,7 @@ def init_widgets_list():
                     background=colors[0]
                     ),
             widget.TextBox(
-                    text=" ",
+                    text="  ",
                     fontsize=16,
                     foreground=colors[8],
                     background=colors[0],
@@ -581,7 +581,7 @@ def init_widgets_list():
                     #  format="{down} ⬇⬆{up}",
                     #  format="{down} 🡇🡅{up}",
                     #  format="{down}  {up}",
-                    format="{up}\n{down}",
+                    format="{up}  \n{down}  ",
                     foreground=colors[9],
                     background=colors[0],
                     padding=0
@@ -789,6 +789,7 @@ floating_layout = layout.Floating(float_rules=[
     #  Match(title="Delete Permanently", wm_class="dolphin"),  # Dolphin (delete dialog)
     #  Match(title="Preference"),  # Haroopad (md editor)
     #  Match(title="Close Button Action", wm_class="tixati"),  # Tixati
+    Match(title="Confirm File Replacing", wm_class="pcmanfm"),
     Match(title="Terminator Preferences", wm_class="terminator"),
     Match(title="win0", wm_class="jetbrains-pycharm-ce"),  # PyCharm
     Match(title="Welcome to PyCharm", wm_class="jetbrains-pycharm-ce"),

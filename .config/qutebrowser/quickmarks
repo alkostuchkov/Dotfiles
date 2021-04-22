@@ -47,3 +47,4 @@ bash - History search http://www.michurin.net/tools/bash-history.html
 Python - Timer https://docs-python.ru/standart-library/modul-threading-python/klass-timer-modulja-threading/
 Python - Own Timer https://www.geeksforgeeks.org/start-and-stop-a-thread-in-python/
 Python - Threads https://realpython.com/intro-to-python-threading/
+Qtile - How to create an own widget http://docs.qtile.org/en/latest/manual/howto/widget.html?highlight=redraw
