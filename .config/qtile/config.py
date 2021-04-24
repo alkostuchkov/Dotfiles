@@ -10,9 +10,9 @@ from libqtile.config import Click, Drag, Group, Key, Screen, KeyChord, Match
 from libqtile.lazy import lazy
 from libqtile import qtile
 
-from modules import memory
 #  from modules import check_updates
 #  from modules import arcobattery
+from modules import memory
 from modules import all_windows_count
 from modules import syncthing
 
@@ -448,10 +448,11 @@ def init_widgets_list():
                     background=colors[0],
                     colour_have_updates=colors[14],
                     #  colour_no_updates="ffffff",
+                    font=my_nerd_font,
                     fontsize=14,
                     custom_command="apt-show-versions --upgradeable",
                     #  custom_command="apt-show-versions | grep upgradeable | wc -l",
-                    display_format="   {updates}",  # ⟳ 
+                    display_format=" {updates}",  # ⟳ 
                     distro="Debian",
                     #  no_update_string="No updates",
                     mouse_callbacks={
@@ -482,6 +483,7 @@ def init_widgets_list():
                     ),
             syncthing.Syncthing(
                     path_to_script=home + "/.myScripts/get_syncthing_status.sh",
+                    font=my_nerd_font,
                     label="Syncthing\n ",
                     update_interval=60,
                     background=colors[0],
@@ -510,6 +512,9 @@ def init_widgets_list():
                     #  format="{location_city}: {temp}°{units_temperature}\n{weather_0_icon} {weather_details}",
                     format="{location_city}: {temp}°{units_temperature}\n{weather_details}",
                     update_interval=1800,
+                    mouse_callbacks={
+                        "Button3": lambda: qtile.cmd_spawn("xdg-open https://openweathermap.org/city/627907"),
+                    }
                     ),
             widget.Sep(
                     linewidth=1,
@@ -518,8 +523,9 @@ def init_widgets_list():
                     background=colors[0]
                     ),
             widget.TextBox(
-                    text=" ",
+                    text="",
                     #  text=" ",
+                    font=my_nerd_font,
                     fontsize=16,
                     foreground=colors[7],
                     background=colors[0],
@@ -546,7 +552,8 @@ def init_widgets_list():
                     background=colors[0]
                     ),
             widget.TextBox(
-                    text="  ",
+                    text="",
+                    font=my_nerd_font,
                     fontsize=16,
                     foreground=colors[8],
                     background=colors[0],
@@ -581,7 +588,8 @@ def init_widgets_list():
                     #  format="{down} ⬇⬆{up}",
                     #  format="{down} 🡇🡅{up}",
                     #  format="{down}  {up}",
-                    format="{up}  \n{down}  ",
+                    font=my_nerd_font,
+                    format="{up} \n{down} ",
                     foreground=colors[9],
                     background=colors[0],
                     padding=0
@@ -660,7 +668,8 @@ def init_widgets_list():
                     background=colors[0]
                     ),
             widget.TextBox(
-                    text=" ",
+                    text="",
+                    font=my_nerd_font,
                     fontsize=16,
                     foreground=colors[12],
                     background=colors[0],
