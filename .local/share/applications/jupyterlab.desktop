@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=JupyterLab
+Exec=jupyter lab --notebook-dir=/home/alexander/Projects/Python/JupyterNotebook/
+Comment=JupyterLab
+Icon=/home/alexander/Pictures/Logo/jupyter_logo.png

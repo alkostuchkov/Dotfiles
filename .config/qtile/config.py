@@ -452,7 +452,7 @@ def init_widgets_list():
                     fontsize=14,
                     custom_command="apt-show-versions --upgradeable",
                     #  custom_command="apt-show-versions | grep upgradeable | wc -l",
-                    display_format=" {updates}",  # ⟳ 
+                    display_format="  {updates}",  # ⟳ 
                     distro="Debian",
                     #  no_update_string="No updates",
                     mouse_callbacks={
@@ -797,7 +797,7 @@ floating_layout = layout.Floating(float_rules=[
     #  Match(title="Properties for *", wm_class="dolphin"),
     #  Match(title="Delete Permanently", wm_class="dolphin"),  # Dolphin (delete dialog)
     #  Match(title="Preference"),  # Haroopad (md editor)
-    #  Match(title="Close Button Action", wm_class="tixati"),  # Tixati
+    Match(title="Close Button Action", wm_class="tixati"),  # Tixati
     Match(title="Confirm File Replacing", wm_class="pcmanfm"),
     Match(title="Terminator Preferences", wm_class="terminator"),
     Match(title="win0", wm_class="jetbrains-pycharm-ce"),  # PyCharm

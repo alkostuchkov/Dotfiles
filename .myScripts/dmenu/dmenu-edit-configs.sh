@@ -13,6 +13,7 @@ options=(
 "autostart_qtile - $HOME/.config/qtile/scripts/autostart.sh"
 "bash - $HOME/.bashrc"
 "conky - $HOME/.myScripts/conky/conkyrc1"
+"conky - $HOME/.myScripts/conky/conkyrc_i3"
 "compton - $HOME/.config/compton.conf"
 "dmenu-edit-configs - $HOME/.myScripts/dmenu/dmenu-edit-configs.sh"
 "dmenu-kill - $HOME/.myScripts/dmenu/dmenu-kill.sh"
