@@ -15,6 +15,7 @@ xfce4-power-manager &
 diodon &
 conky -c ~/.myScripts/conky/conkyrc1 &
 # dropbox start -i &
+~/Programs/MEGAsync/megasync &
 compton --config $HOME/.config/compton.conf &
 $HOME/Programs/CheckEmail/CheckEmail &
 xrdb $HOME/.Xresources &

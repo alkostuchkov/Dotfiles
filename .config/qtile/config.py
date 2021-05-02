@@ -450,7 +450,8 @@ def init_widgets_list():
                     #  colour_no_updates="ffffff",
                     font=my_nerd_font,
                     fontsize=14,
-                    custom_command="apt-show-versions --upgradeable",
+                    custom_command="apt-show-versions -u -b",
+                    #  custom_command="apt-show-versions --upgradeable",
                     #  custom_command="apt-show-versions | grep upgradeable | wc -l",
                     display_format="  {updates}",  # ⟳ 
                     distro="Debian",
