@@ -16,7 +16,8 @@ diodon &
 conky -c ~/.myScripts/conky/conkyrc1 &
 # dropbox start -i &
 ~/Programs/MEGAsync/megasync &
-compton --config $HOME/.config/compton.conf &
+# compton --config $HOME/.config/compton.conf &
+picom --config $HOME/.config/picom/picom.conf &
 $HOME/Programs/CheckEmail/CheckEmail &
 xrdb $HOME/.Xresources &
 # -a (--automount) -n (--notify) -t (--tray) -s (--smart-tray)
