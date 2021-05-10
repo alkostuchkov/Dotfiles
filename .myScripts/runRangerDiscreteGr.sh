@@ -14,6 +14,7 @@ notify-send -i dialog-information "$discreteCard : $turks_hex" "activated"
 # Start program (glxinfo) with discrete graphics card by DRI_PRIME=1.
 #DRI_PRIME=1 glxinfo | grep "OpenGL renderer"
 
-# Start Android Studio with discret graphics
-DRI_PRIME=1 ~/Programs/Android-Studio/bin/studio.sh
-# DRI_PRIME=1 /home/alexander/Programs/Android-Studio/bin/studio.sh
+# clear
+# DRI_PRIME=1 ranger
+alacritty -e clear
+DRI_PRIME=1 ranger
