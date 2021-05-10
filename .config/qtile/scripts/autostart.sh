@@ -1,27 +1,25 @@
 #!/usr/bin/env bash 
 
 # picom --experimental-backends &
-# picom --config $HOME/.config/picom/picom.conf &
 # compton --config $HOME/.config/compton/compton.conf &
+# compton --config $HOME/.config/compton.conf &
 # urxvtd -q -o -f &
-# /usr/bin/emacs --daemon &
 # xfce4-clipman &
+# setxkbmap -layout us,ru -option grp:caps_toggle &
+# /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &  # for Debian
 kbdd &
+/usr/lib/xfce4/notifyd/xfce4-notifyd &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &  # for Arch
+xrdb $HOME/.Xresources &
 nitrogen --restore &
-/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 volumeicon &
 nm-applet &
 xfce4-power-manager &
 diodon &
-conky -c ~/.myScripts/conky/conkyrc1 &
-# dropbox start -i &
-~/Programs/MEGAsync/megasync &
-# compton --config $HOME/.config/compton.conf &
 picom --config $HOME/.config/picom/picom.conf &
+conky -c ~/.myScripts/conky/conkyrc1 &
 $HOME/Programs/CheckEmail/CheckEmail &
-xrdb $HOME/.Xresources &
-# -a (--automount) -n (--notify) -t (--tray) -s (--smart-tray)
-# -A (--no-automount) -N (--no-notify) -T (--no-tray)
-udiskie &
-# udiskie --no-automount -n -t &
-# udiskie -a -n -t &
+udiskie &  # ~/.config/udiskie/config.yml
+megasync &
+# dropbox start -i &
+

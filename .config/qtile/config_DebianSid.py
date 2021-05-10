@@ -12,7 +12,6 @@ from libqtile import qtile
 
 #  from modules import check_updates
 #  from modules import arcobattery
-#  from modules import keyboardkbdd
 from modules import memory
 from modules import all_windows_count
 from modules import syncthing
@@ -51,7 +50,6 @@ my_term_extra = "terminator"
 #  my_term = "konsole"
 my_font = "Ubuntu"
 my_nerd_font = "Ubuntu Nerd Font"
-my_nerd_font_extra = "Sarasa Mono SC Nerd"
 my_mono_font = "Ubuntu Mono"
 my_mono_bold_font = "Ubuntu Mono Bold"
 home = os.path.expanduser("~")
@@ -77,7 +75,7 @@ keys = [
     Key([mod], "u", lazy.spawn("qutebrowser"), desc="Launch qutebrowser"),
     Key([mod], "e", lazy.spawn("dolphin"), desc="Launch File Manager Dolphin"),
     Key([mod], "p", lazy.spawn("pcmanfm"), desc="Launch File Manager PCManFM"),
-    Key([mod], "i", lazy.spawn("/usr/bin/octopi"), desc="Launch Octopi"),
+    Key([mod], "i", lazy.spawn("synaptic-pkexec"), desc="Launch Synaptic"),
     Key([mod], "g", lazy.spawn(home + "/.myScripts/runGimpDiscreteGr.sh"), desc="Run GIMP DiscreteGraphics"),
     Key([mod], "b", lazy.spawn(home + "/Programs/SublimeText/sublime_text"), desc="Run Sublime Text"),
     Key([mod], "t", lazy.spawn(home + "/Programs/Telegram/Telegram -workdir /home/alexander/.local/share/TelegramDesktop/ -- %u"), desc="Run Telegram"),
@@ -444,42 +442,29 @@ def init_widgets_list():
                     #  length=bar.STRETCH,
                     #  background=colors[0]
                     #  ),
-            widget.CheckUpdates(  # community updates
-                    padding=0,
+            #  check_updates.CheckUpdates(
+            widget.CheckUpdates(
                     foreground=colors[14],
                     background=colors[0],
                     colour_have_updates=colors[14],
                     #  colour_no_updates="ffffff",
-                    #  no_update_string="No updates",
                     font=my_nerd_font,
                     fontsize=14,
-                    custom_command="pacman -Qu",
+                    custom_command="apt-show-versions -u -b",
+                    #  custom_command="apt-show-versions --upgradeable",
+                    #  custom_command="apt-show-versions | grep upgradeable | wc -l",
                     display_format="  {updates}",  # ⟳ 
-                    distro="Arch",
-                    mouse_callbacks={
-                        #  "Button1": widget.CheckUpdates.poll,
-                        "Button3": lambda: qtile.cmd_spawn(home + "/.myScripts/show_updates_arch.sh"),
-                        "Button2": lambda: qtile.cmd_spawn(my_term_extra + " -e 'sudo pacman -Syu'")
-                    },
-                    #  update_interval=900  # 15min after cron's apt-update task
-                    update_interval=300  # 5min
-                    ),
-            widget.CheckUpdates(  # AUR updates
-                    foreground=colors[14],
-                    background=colors[0],
-                    colour_have_updates=colors[14],
-                    #  colour_no_updates="ffffff",
+                    distro="Debian",
                     #  no_update_string="No updates",
-                    font=my_nerd_font,
-                    fontsize=14,
-                    custom_command="paru -Qua",
-                    display_format="/{updates}",  # ⟳ 
-                    distro="Arch",
                     mouse_callbacks={
-                        #  "Button1": widget.CheckUpdates.poll,
-                        "Button3": lambda: qtile.cmd_spawn(home + "/.myScripts/show_updates_arch.sh"),
-                        "Button2": lambda: qtile.cmd_spawn(my_term_extra + " -e 'paru -Syua'")
+                        #  "Button1": lambda: qtile.cmd_spawn(my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'"),
+                        "Button1": widget.CheckUpdates.poll,
+                        "Button3": lambda: qtile.cmd_spawn(home + "/.myScripts/show_updates_apt.sh"),
+                        "Button2": lambda: qtile.cmd_spawn(my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'")
                     },
+                    #  execute=my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'",
+                    #  execute=my_term + " -e sudo apt update && sudo apt upgrade && $SHELL",  # for alacritty
+                    #  execute=my_term + ' -e "sudo aptitude update && sudo aptitude safe-upgrade && $SHELL"',  # for terminator
                     #  update_interval=900  # 15min after cron's apt-update task
                     update_interval=300  # 5min
                     ),
@@ -491,12 +476,11 @@ def init_widgets_list():
                     ),
             widget.TextBox(
                     #  text="⇆ ",
-                    text="🗘",
-                    font=my_nerd_font_extra,
+                    text="🗘 ",
                     fontsize=16,
                     foreground="#55ebea",
                     background=colors[0],
-                    padding=0
+                    padding=0,
                     ),
             syncthing.Syncthing(
                     path_to_script=home + "/.myScripts/get_syncthing_status.sh",
@@ -617,14 +601,9 @@ def init_widgets_list():
                     foreground=colors[2],
                     background=colors[0]
                     ),
-            #  widget.KeyboardLayout(
-            #  keyboardkbdd.KeyboardKbdd(
             widget.KeyboardKbdd(
                     configured_keyboards=["🇺🇸", "🇷🇺"],
                     #  configured_keyboards=["US", "RU"],
-                    #  display_map={"us": "🇺🇸", "ru": "🇷🇺"},
-                    #  option="grp:alt_shift_toggle",
-                    #  option="grp:caps_toggle",
                     foreground=colors[11],
                     background=colors[0],
                     fontsize=16,
@@ -819,7 +798,6 @@ floating_layout = layout.Floating(float_rules=[
     #  Match(title="Properties for *", wm_class="dolphin"),
     #  Match(title="Delete Permanently", wm_class="dolphin"),  # Dolphin (delete dialog)
     #  Match(title="Preference"),  # Haroopad (md editor)
-    Match(title="Execute File", wm_class="pcmanfm"),
     Match(title="Close Button Action", wm_class="tixati"),  # Tixati
     Match(title="Confirm File Replacing", wm_class="pcmanfm"),
     Match(title="Terminator Preferences", wm_class="terminator"),
@@ -827,13 +805,11 @@ floating_layout = layout.Floating(float_rules=[
     Match(title="Welcome to PyCharm", wm_class="jetbrains-pycharm-ce"),
     Match(title="Update", wm_class="com-intellij-updater-Runner"),  # PyCharm's updates
     Match(title="License Activation", wm_class="jetbrains-pycharm-ce"),  # PyCharm
-    Match(wm_class="nm-connection-editor"),
     Match(wm_class="megasync"),
     Match(wm_class="minitube"),
     Match(wm_class="CheckEmail"),
     Match(wm_class="GParted"),
     Match(wm_class="keepass2"),
-    Match(wm_class="pinentry-gtk-*"),
     Match(wm_class="vlc"),
     Match(wm_class="smplayer"),
     Match(wm_class="deadbeef"),
