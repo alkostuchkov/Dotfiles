@@ -16,6 +16,7 @@ from libqtile import qtile
 from modules import memory
 from modules import all_windows_count
 from modules import syncthing
+from modules import show_updates
 
 
 def get_all_netifaces(path_to_state="/sys/class/net/"):
@@ -444,8 +445,7 @@ def init_widgets_list():
                     #  length=bar.STRETCH,
                     #  background=colors[0]
                     #  ),
-            widget.CheckUpdates(  # community updates
-                    padding=0,
+            widget.CheckUpdates(
                     foreground=colors[14],
                     background=colors[0],
                     colour_have_updates=colors[14],
@@ -453,32 +453,14 @@ def init_widgets_list():
                     #  no_update_string="No updates",
                     font=my_nerd_font,
                     fontsize=14,
-                    custom_command="pacman -Qu",
+                    custom_command="paru -Qu",
                     display_format="  {updates}",  # ⟳ 
                     distro="Arch",
                     mouse_callbacks={
                         #  "Button1": widget.CheckUpdates.poll,
-                        "Button3": lambda: qtile.cmd_spawn(home + "/.myScripts/show_updates_arch.sh"),
-                        "Button2": lambda: qtile.cmd_spawn(my_term_extra + " -e 'sudo pacman -Syu'")
-                    },
-                    #  update_interval=900  # 15min after cron's apt-update task
-                    update_interval=300  # 5min
-                    ),
-            widget.CheckUpdates(  # AUR updates
-                    foreground=colors[14],
-                    background=colors[0],
-                    colour_have_updates=colors[14],
-                    #  colour_no_updates="ffffff",
-                    #  no_update_string="No updates",
-                    font=my_nerd_font,
-                    fontsize=14,
-                    custom_command="paru -Qua",
-                    display_format="/{updates}",  # ⟳ 
-                    distro="Arch",
-                    mouse_callbacks={
-                        #  "Button1": widget.CheckUpdates.poll,
-                        "Button3": lambda: qtile.cmd_spawn(home + "/.myScripts/show_updates_arch.sh"),
-                        "Button2": lambda: qtile.cmd_spawn(my_term_extra + " -e 'paru -Syua'")
+                        #  "Button3": lambda: qtile.cmd_spawn(home + "/.myScripts/show_updates_arch.sh"),
+                        "Button3": lambda: show_updates.show_updates_arch(),
+                        "Button2": lambda: qtile.cmd_spawn(my_term_extra + " -e 'paru -Syu && $SHELL'")
                     },
                     #  update_interval=900  # 15min after cron's apt-update task
                     update_interval=300  # 5min
@@ -833,7 +815,7 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class="CheckEmail"),
     Match(wm_class="GParted"),
     Match(wm_class="keepass2"),
-    Match(wm_class="pinentry-gtk-*"),
+    Match(wm_class="pinentry-gtk-2"),
     Match(wm_class="vlc"),
     Match(wm_class="smplayer"),
     Match(wm_class="deadbeef"),
