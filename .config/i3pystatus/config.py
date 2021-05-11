@@ -2,11 +2,14 @@
 
 '''
 from i3pystatus import Status
-from i3pystatus.updates import aptget
+#  from i3pystatus.updates import aptget
+from i3pystatus.updates import pacman
+from i3pystatus.updates import paru
 from i3pystatus.weather import weathercom
 from i3pystatus import get_module
 import os
 import subprocess
+from modules import show_updates
 
 
 # Colors:
@@ -108,7 +111,7 @@ status.register(
     dynamic_color=False,
     color_up=colors["net_speed_down"],
     interface=upped_netiface,
-    format_up=" {bytes_recv}KB/s  {bytes_sent}KB/s",
+    format_up="   {bytes_recv}KB/s    {bytes_sent}KB/s",
     hints={"markup": "pango"}
 )
 
@@ -116,7 +119,7 @@ status.register(
     "my_mem",
     color=colors["memory"],
     divisor=1024**3,
-    format="  {used_mem}GiB ({percent_used_mem}%)",
+    format="    {used_mem}GiB ({percent_used_mem}%)",
     interval=1,
     on_rightclick=my_term + " -e htop",
     on_leftclick=home + "/.myScripts/top5_mem_usage.sh"
@@ -125,7 +128,7 @@ status.register(
 status.register(
     "cpu_usage",
     color=colors["cpu"],
-    format=" {usage:02}%",
+    format="   {usage:02}%",
     interval=1,
     on_rightclick=my_term + " -e htop",
     on_leftclick=home + "/.myScripts/top5_cpu_usage.sh"
@@ -133,7 +136,7 @@ status.register(
 
 status.register(
     "my_syncthing",
-    #  label="MyLabel",
+    label = "Syncthing:     ",
     #  inactive_color="#0000ff",
     #  active_color="#ff00ff",
     interval=60,
@@ -153,22 +156,23 @@ status.register(
 status.register(
     "updates",
     color=colors["updates"],
-    format="   {count}",
+    format="    {count}",
     #  format_working="🔃",
     format_working="⟳ ",
-    backends=[aptget.AptGet()],
-    interval=900,
-    on_middleclick=my_term_extra + " -e 'sudo apt update && sudo apt upgrade && $SHELL'"
+    backends=[pacman.Pacman(), paru.Paru(False)],  # paru counts only AUR
+    interval=300,
+    on_rightclick=show_updates.show_updates_arch,
+    on_middleclick=my_term_extra + " -e 'sudo paru -Syu'"
 )
 
-#  status.register(
-    #  "window_title",
-    #  color=colors["window_name"],
-    #  format="{class_name} - {title}",
-    #  hints={"markup": "pango", "separator": True},
-    #  max_width=40
-#  )
-
+#  #  status.register(
+    #  #  "window_title",
+    #  #  color=colors["window_name"],
+    #  #  format="{class_name} - {title}",
+    #  #  hints={"markup": "pango", "separator": True},
+    #  #  max_width=40
+#  #  )
+#
 
 status.run()
  

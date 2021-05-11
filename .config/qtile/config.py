@@ -68,13 +68,14 @@ upped_netiface = get_upped_netiface(netifaces)
 
 keys = [
 # <SUPER> + FUNCTION KEYS
+#  Key([mod], "Return", lazy.spawn(home + "/.myScripts/runAlacrittyDiscreteGr.sh"), desc="Launch terminal"),
     Key([mod], "Return", lazy.spawn(my_term), desc="Launch terminal"),
     Key([mod, "shift"], "Return", lazy.spawn("terminator"), desc="Launch terminator"),
     Key([mod], "r", lazy.spawn("rofi run -show drun -show-icons"), desc="Run App Lancher"),
     Key([mod], "d", lazy.spawn("dmenu_run -nb #222B2E -nf #09DBC9 -sb #009185 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
 #  Key([mod], "d", lazy.spawn("dmenu_run -nb #282828 -nf #d79921 -sb #fea63c -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Gruvbox
     Key([mod], "Print", lazy.spawn("flameshot gui"), desc="Run flameshot (take screenshot)"),
-    Key([mod], "w", lazy.spawn("firefox"), desc="Launch Firefox"),
+    Key([mod], "w", lazy.spawn(home + "/.myScripts/runFirefoxDiscreteGr.sh"), desc="Launch Firefox"),
     Key([mod], "u", lazy.spawn("qutebrowser"), desc="Launch qutebrowser"),
     Key([mod], "e", lazy.spawn("dolphin"), desc="Launch File Manager Dolphin"),
     Key([mod], "p", lazy.spawn("pcmanfm"), desc="Launch File Manager PCManFM"),
