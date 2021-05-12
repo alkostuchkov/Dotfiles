@@ -81,6 +81,7 @@ keys = [
     Key([mod], "p", lazy.spawn("pcmanfm"), desc="Launch File Manager PCManFM"),
     Key([mod], "i", lazy.spawn("/usr/bin/octopi"), desc="Launch Octopi"),
     Key([mod], "g", lazy.spawn(home + "/.myScripts/runGimpDiscreteGr.sh"), desc="Run GIMP DiscreteGraphics"),
+    Key([mod], "a", lazy.spawn(home + "/.myScripts/runRangerDiscreteGr.sh"), desc="Run ranger DiscreteGraphics"),
     Key([mod], "b", lazy.spawn(home + "/Programs/SublimeText/sublime_text"), desc="Run Sublime Text"),
     Key([mod], "t", lazy.spawn(home + "/Programs/Telegram/Telegram -workdir /home/alexander/.local/share/TelegramDesktop/ -- %u"), desc="Run Telegram"),
     Key([mod], "x", lazy.spawn("xterm"), desc="Run XTerm"),

@@ -203,7 +203,8 @@ bindsym $mod+e exec dolphin
 bindsym $mod+p exec pcmanfm
 bindsym $mod+a exec $myTerm -e ranger
 bindsym $mod+v exec $myTerm -e ~/.config/vifm/scripts/vifmrun
-bindsym $mod+i exec synaptic-pkexec
+bindsym $mod+i exec /usr/bin/octopi
+# bindsym $mod+i exec synaptic-pkexec
 bindsym $mod+F6 exec xfce4-power-manager-settings
 bindsym XF86Battery exec xfce4-power-manager-settings
 bindsym XF86Display exec lxrandr

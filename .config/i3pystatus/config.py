@@ -135,16 +135,6 @@ status.register(
 )
 
 status.register(
-    "my_syncthing",
-    label = "Syncthing:     ",
-    #  inactive_color="#0000ff",
-    #  active_color="#ff00ff",
-    interval=60,
-    path_to_script="{}/.myScripts/get_syncthing_status.sh".format(home),
-    on_rightclick="xdg-open 'http://127.0.0.1:8384/'"
-)
-
-status.register(
     "open_weather",
     format="🌡{location_city}: {temp}°{units_temperature} {weather_details}",
     color=colors["weather"],
@@ -154,12 +144,23 @@ status.register(
 )
 
 status.register(
+    "my_syncthing",
+    label="Syncthing:     ",
+    #  inactive_color="#0000ff",
+    #  active_color="#ff00ff",
+    interval=60,
+    path_to_script="{}/.myScripts/get_syncthing_status.sh".format(home),
+    on_rightclick="xdg-open 'http://127.0.0.1:8384/'"
+)
+
+status.register(
     "updates",
     color=colors["updates"],
     format="    {count}",
     #  format_working="🔃",
     format_working="⟳ ",
-    backends=[pacman.Pacman(), paru.Paru(False)],  # paru counts only AUR
+    #  backends=[pacman.Pacman(), paru.Paru(False)],  # paru counts only AUR
+    backends=[paru.Paru()],
     interval=300,
     on_rightclick=show_updates.show_updates_arch,
     on_middleclick=my_term_extra + " -e 'sudo paru -Syu'"

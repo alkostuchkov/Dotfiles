@@ -82,12 +82,12 @@ ${color white}${alignc}${voffset 6}${time %A, %e %B %G}
 
 ${color white}${font neuropol x free:size=30}${alignc}${time %H:%M:%S}${font}
 ${voffset -9}
-${color white}${font OpenLogos:size=30}${alignc}J${font OpenLogos:size=35}^${font}
+${color white}${font OpenLogos:size=30}${alignc}B${font OpenLogos:size=35}^${font}
 ${voffset -30}
 ${hr 2}
 ${voffset 2}${color}${font StyleBats:size=12}O ${font}${color white}Uptime: ${color }$uptime
 ${color}${font StyleBats:size=12}Q ${font}${color white}Kernel: ${color }$kernel
-${color}${font StyleBats:size=12}9 ${font}${color white}Local: ${color }${addr wlo1}
+${color}${font StyleBats:size=12}9 ${font}${color white}Local: ${color }${addr wlan0}
 ##${color}${font StyleBats:size=12}Z ${font}${color white}Internet: ${color }${exec cat /home/inetStatus.txt}
 ${color}${font StyleBats:size=12}Z ${font}${color white}Internet: ${color }${execpi 30 ~/.myScripts/conky/get_ip.py}
 ${color}${font StyleBats:size=12}2 ${font}${color white}CPU: ${color }${execi 1 sensors | grep 'high' | cut -c 15-22}
@@ -112,11 +112,11 @@ ${color white}Root:    ${color }${fs_used /}/ ${fs_free /}/ ${fs_size /}
 ${color white}${fs_bar 3,300 /}
 ${color white}Home:    ${color }${fs_used /home}/ ${fs_free /home}/ ${fs_size /home}
 ${color white}${fs_bar 3,300 /home}
-${voffset 6}${color}${font PizzaDude Bullets:size=12}S${font}  ${color white}Download: ${color }${totaldown wlo1}
-${voffset 1}${color}${font PizzaDude Bullets:size=12}r${font}  ${color white}Input: ${color } ${downspeed wlo1}/s ${alignr}${downspeedgraph wlo1 10,130 FFFFFF FFFFFF}
+${voffset 6}${color}${font PizzaDude Bullets:size=12}S${font}  ${color white}Download: ${color }${totaldown wlan0}
+${voffset 1}${color}${font PizzaDude Bullets:size=12}r${font}  ${color white}Input: ${color } ${downspeed wlan0}/s ${alignr}${downspeedgraph wlan0 10,130 FFFFFF FFFFFF}
 
-${color}${font PizzaDude Bullets:size=12}M${font}  ${color white}Upload: ${color }${totalup wlo1}
-${voffset 1}${color}${font PizzaDude Bullets:size=12}v${font}  ${color white}Output: ${color }${upspeed wlo1} /s ${alignr}${upspeedgraph wlo1 10,130 FFFFFF FFFFFF}
+${color}${font PizzaDude Bullets:size=12}M${font}  ${color white}Upload: ${color }${totalup wlan0}
+${voffset 1}${color}${font PizzaDude Bullets:size=12}v${font}  ${color white}Output: ${color }${upspeed wlan0} /s ${alignr}${upspeedgraph wlan0 10,130 FFFFFF FFFFFF}
 ${color white}${hr 2}
 ]]
 
