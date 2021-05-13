@@ -455,9 +455,11 @@ def init_widgets_list():
                     #  no_update_string="No updates",
                     font=my_nerd_font,
                     fontsize=14,
-                    custom_command="paru -Qu",
+                    distro="Arch_checkupdates",
+                    custom_command="checkupdates+aur",
+                    #  custom_command="paru -Qu",
+                    #  distro="Arch",
                     display_format="  {updates}",  # ⟳ 
-                    distro="Arch",
                     mouse_callbacks={
                         #  "Button1": widget.CheckUpdates.poll,
                         #  "Button3": lambda: qtile.cmd_spawn(home + "/.myScripts/show_updates_arch.sh"),
