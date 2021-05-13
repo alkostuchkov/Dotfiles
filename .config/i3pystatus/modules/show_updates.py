@@ -34,7 +34,8 @@ def show_updates_arch():
         updates_community_list = []
 
         try:
-            updates_community = subprocess.check_output(["pacman", "-Q", "-u"]).decode("utf-8").strip()
+            #  updates_community = subprocess.check_output(["pacman", "-Q", "-u"]).decode("utf-8").strip()
+            updates_community = subprocess.check_output(["checkupdates"]).decode("utf-8").strip()
             updates_community_list = updates_community.splitlines()
         except subprocess.CalledProcessError:
             community_output = ""
@@ -50,7 +51,8 @@ def show_updates_arch():
         updates_aur = ""
         updates_aur_list = []
         try:
-            updates_aur = subprocess.check_output(["paru", "-Q", "-u", "-a"]).decode("utf-8").strip()
+            #  updates_aur = subprocess.check_output(["paru", "-Q", "-u", "-a"]).decode("utf-8").strip()
+            updates_aur = subprocess.check_output(["checkupdates-aur"]).decode("utf-8").strip()
             updates_aur_list = updates_aur.splitlines()
         except subprocess.CalledProcessError:
             aur_output = ""

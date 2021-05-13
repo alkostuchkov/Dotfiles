@@ -5,6 +5,7 @@ from i3pystatus import Status
 #  from i3pystatus.updates import aptget
 from i3pystatus.updates import pacman
 from i3pystatus.updates import paru
+from i3pystatus.updates import checkupdates_plus_aur
 from i3pystatus.weather import weathercom
 from i3pystatus import get_module
 import os
@@ -160,7 +161,8 @@ status.register(
     #  format_working="🔃",
     format_working="⟳ ",
     #  backends=[pacman.Pacman(), paru.Paru(False)],  # paru counts only AUR
-    backends=[paru.Paru()],
+    #  backends=[paru.Paru()],
+    backends=[checkupdates_plus_aur.CheckupdatesPlusAur()],
     interval=300,
     on_rightclick=show_updates.show_updates_arch,
     on_middleclick=my_term_extra + " -e 'sudo paru -Syu'"
