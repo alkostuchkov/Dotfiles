@@ -26,7 +26,8 @@ class CheckupdatesPlusAur(Backend):
         out = checkupdates.out
         #  if(self.aur_only):
             #  out = [line for line in out if line.startswith("aur")]
-        return len(out.split("\n")), out
+        return len(out.splitlines()), out
+        #  return len(out.split("\n")), out
         #  return out.count("\n"), out
 
 Backend = CheckupdatesPlusAur
