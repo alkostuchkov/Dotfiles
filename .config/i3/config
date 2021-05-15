@@ -89,8 +89,8 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f floating toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+Shift+t layout stacking
-bindsym $mod+Shift+w layout tabbed
+bindsym $mod+Shift+w layout stacking
+bindsym $mod+Shift+t layout tabbed
 bindsym $mod+Shift+e layout toggle split
 
 # change focus between tiling / floating windows
@@ -457,18 +457,27 @@ bindsym $mod+Ctrl+m exec $myTerm -e 'alsamixer'
 # Theme colors (for windows)
 ################################################################################
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #009185 #009185 #80FFF9 #ff5555
-  client.focused_inactive #2F3D44 #2F3D44 #AD69AF #454948
-  client.unfocused        #2F3D44 #2F3D44 #AD69AF #454948
+  client.focused          #009185 #009185 #dbdcd5 #ff5555
+  client.focused_inactive #2F3D44 #2F3D44 #dbdcd5 #454948
+  client.unfocused        #2F3D44 #2F3D44 #009185 #454948
   client.urgent           #CB4B16 #FDF6E3 #AD69AF #268BD2
   client.placeholder      #000000 #0c0c0c #ffffff #000000
+  client.background       #2B2C2B
+
+# My colors backup
+# # class                   border  backgr. text    indic.   child_border
+  # client.focused          #009185 #009185 #80FFF9 #ff5555
+  # client.focused_inactive #2F3D44 #2F3D44 #AD69AF #454948
+  # client.unfocused        #2F3D44 #2F3D44 #AD69AF #454948
+  # client.urgent           #CB4B16 #FDF6E3 #AD69AF #268BD2
+  # client.placeholder      #000000 #0c0c0c #ffffff #000000
+  # client.background       #2B2C2B
 
 #6D1F66 purple
 #DC8CC3 pink
 #3584E4 blue
 #16A085 manjaro
 #ABB2BF light grey
-  client.background       #2B2C2B
 
 # Derek Taylor's
   # client.focused          #556064 #556064 #80FFF9 #FDF6E3
