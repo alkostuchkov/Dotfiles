@@ -8,6 +8,7 @@
 # My fish config.
 
 ### EXPORTs ###
+set HOME (echo /home/$USER)
 # set -U fish_user_paths $HOME/.local/bin $HOME/Programs/AppImageApplications $fish_user_paths
 # # set fish_greeting                                # Supresses fish's intro message
 # # set fish_greeting 'Welcome to fish!'

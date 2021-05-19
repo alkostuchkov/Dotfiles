@@ -3,6 +3,7 @@
 # for examples
 
 # EXPORTs
+export HOME=$(echo /home/$USER)
 # # export PATH=$PATH:~/.local/bin/:~/.cargo/bin:~/.config/vifm/scripts
 # # export TERM="screen-256color"
 # export EDITOR="vim"
@@ -14,7 +15,7 @@
 # #export EDITOR="emacs -nw"
 # # export QT_QPA_PLATFORMTHEME="qt5ct"
 # export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-# export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="$HOME/.nvm"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

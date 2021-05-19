@@ -46,7 +46,6 @@
 
 export HOME=$(echo /home/$USER)
 export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications:$PATH
-# export PATH=~/.local/bin:~/.cargo/bin:~/.config/vifm/scripts:~/Programs/AppImageApplications:$PATH
 export EDITOR="vim"
 export VISUAL="gvim"
 export TERM="xterm-256color"
@@ -56,7 +55,7 @@ export BROWSER="firefox"
 #export EDITOR="emacs -nw"
 # export QT_QPA_PLATFORMTHEME="qt5ct"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export NVM_DIR="~/.nvm"
+export NVM_DIR="$HOME/.nvm"
 
 #export LANG=en_US.UTF8
 #export LANGUAGE=en_US:en
