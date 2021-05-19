@@ -112,7 +112,7 @@ status.register(
     dynamic_color=False,
     color_up=colors["net_speed_down"],
     interface=upped_netiface,
-    format_up="   {bytes_recv}KB/s    {bytes_sent}KB/s",
+    format_up=" {bytes_recv}KB/s  {bytes_sent}KB/s",
     hints={"markup": "pango"}
 )
 
@@ -120,7 +120,7 @@ status.register(
     "my_mem",
     color=colors["memory"],
     divisor=1024**3,
-    format="    {used_mem}GiB ({percent_used_mem}%)",
+    format="  {used_mem}GiB ({percent_used_mem}%)",
     interval=1,
     on_rightclick=my_term + " -e htop",
     on_leftclick=home + "/.myScripts/top5_mem_usage.sh"
@@ -129,7 +129,7 @@ status.register(
 status.register(
     "cpu_usage",
     color=colors["cpu"],
-    format="   {usage:02}%",
+    format=" {usage:02}%",
     interval=1,
     on_rightclick=my_term + " -e htop",
     on_leftclick=home + "/.myScripts/top5_cpu_usage.sh"
@@ -146,7 +146,7 @@ status.register(
 
 status.register(
     "my_syncthing",
-    label="Syncthing:     ",
+    label="Syncthing:  ",
     #  inactive_color="#0000ff",
     #  active_color="#ff00ff",
     interval=60,
@@ -157,7 +157,7 @@ status.register(
 status.register(
     "updates",
     color=colors["updates"],
-    format="    {count}",
+    format="  {count}",
     #  format_working="🔃",
     format_working="⟳ ",
     #  backends=[pacman.Pacman(), paru.Paru(False)],  # paru counts only AUR
