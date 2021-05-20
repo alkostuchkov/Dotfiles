@@ -45,6 +45,7 @@
 # export PATH
 
 export HOME=$(echo /home/$USER)
+
 export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications:$PATH
 export EDITOR="vim"
 export VISUAL="gvim"
@@ -59,6 +60,10 @@ export NVM_DIR="$HOME/.nvm"
 
 #export LANG=en_US.UTF8
 #export LANGUAGE=en_US:en
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
 
 # export PATH=$(echo $PATH | awk -F: '
 # { for (i = 1; i <= NF; i++) arr[$i]; }
