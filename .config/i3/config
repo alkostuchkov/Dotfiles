@@ -200,7 +200,7 @@ bindsym $mod+w exec ~/.myScripts/runFirefoxDiscreteGr.sh
 # bindsym $mod+w exec firefox
 bindsym $mod+u exec qutebrowser
 bindsym $mod+e exec dolphin
-bindsym $mod+p exec pcmanfm
+bindsym $mod+p exec thunar
 bindsym $mod+a exec $myTerm -e ranger
 bindsym $mod+v exec $myTerm -e ~/.config/vifm/scripts/vifmrun
 bindsym $mod+i exec /usr/bin/octopi
@@ -213,6 +213,30 @@ bindsym $mod+t exec ~/Programs/Telegram/Telegram -workdir /home/alexander/.local
 bindsym $mod+g exec ~/Programs/AppImageApplications/GIMP.AppImage
 bindsym $mod+Print --release exec --no-startup-id flameshot gui
 bindsym $mod+Shift+y exec ~/.myScripts/start-stop_syncthing.sh
+bindsym $mod+Menu exec xmodmap -e "keycode 135 = Super_R"  # Map the Menu button to right super
+bindsym $mod+$alt+space exec ~/.myScripts/touchpadONOFF.sh 
+# bindsym $mod+F3 exec obs
+# bindsym $mod+F5 exec $myTerm -e 'mocp'
+# bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+# bindsym Print exec --no-startup-id i3-scrot
+# bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
+# bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+# bindsym $mod+Ctrl+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
+
+################################################################################
+# Apps Launched with <SUPER> + <KEYPAD 1-9>
+################################################################################
+# bindsym $mod+KP_End exec $myTerm -e lynx -cfg=~/.lynx.cfg -lss=~/.lynx.lss http://www.distrowatch.com
+# bindsym $mod+KP_Down exec $myTerm -e sh ./scripts/googler-script.sh
+# bindsym $mod+KP_Page_Down exec $myTerm -e newsboat
+# bindsym $mod+KP_Left exec $myTerm -e rtv
+# bindsym $mod+KP_Begin exec $myTerm -e neomutt
+# bindsym $mod+KP_Right exec $myTerm -e twitch-curses
+# bindsym $mod+KP_Home exec $myTerm -e sh ./scripts/haxor-news.sh
+# bindsym $mod+KP_Up exec $myTerm -e toot curses
+# bindsym $mod+KP_Page_Up exec $myTerm -e sh ./scripts/tig-script.sh
+
+################################################################################
 # bindsym $mod+F3 exec obs
 # bindsym $mod+F5 exec $myTerm -e 'mocp'
 # bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -411,14 +435,13 @@ mode "Dmenu" {
 ################################################################################
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id $HOME/.config/i3/alternating_layouts.py &
-exec --no-startup-id xmodmap -e 'keycode 135 = Super_R' # Map the menu button to right super
-# exec --no-startup-id setxkbmap -layout us,ru -option grp:caps_toggle &
-## exec --no-startup-id setxkbmap -model pc105 -layout us,ru -variant qwerty -option grp:caps_toggle
+# # exec --no-startup-id setxkbmap -layout us,ru -option grp:caps_toggle &
+# ## exec --no-startup-id setxkbmap -model pc105 -layout us,ru -variant qwerty -option grp:caps_toggle
+# # exec --no-startup-id nitrogen --restore; sleep 1; compton --config $HOME/.config/compton.conf &
+# # exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &  # for Debian
 exec --no-startup-id nitrogen --restore; sleep 1; picom --config $HOME/.config/picom/picom.conf &
-# exec --no-startup-id nitrogen --restore; sleep 1; compton --config $HOME/.config/compton.conf &
-# exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &  # for Debian
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &  # for Arch
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &  # for Arch
 exec --no-startup-id xrdb $HOME/.Xresources &
 exec --no-startup-id volumeicon &
 exec --no-startup-id nm-applet &
@@ -428,14 +451,15 @@ exec --no-startup-id conky -c $HOME/.myScripts/conky/conkyrc_i3 &
 exec --no-startup-id $HOME/Programs/CheckEmail/CheckEmail &
 exec --no-startup-id udiskie &
 exec --no-startup-id megasync &
-# exec --no-startup-id dropbox start -i &
-# exec --no-startup-id $HOME/Programs/MEGAsync/megasync &
-# exec --no-startup-id xrandr -s 1366x768
-# exec --no-startup-id numlockx off
-# exec_always --no-startup-id ff-theme-util
-# exec_always --no-startup-id setcursor
-# # exec --no-startup-id xautolock -time 10 -locker blurlock
-# exec_always --no-startup-id fix_xcursor
+exec --no-startup-id xmodmap -e "keycode 135 = Super_R" &  # Map the menu button to right super
+# # exec --no-startup-id dropbox start -i &
+# # exec --no-startup-id $HOME/Programs/MEGAsync/megasync &
+# # exec --no-startup-id xrandr -s 1366x768
+# # exec --no-startup-id numlockx off
+# # exec_always --no-startup-id ff-theme-util
+# # exec_always --no-startup-id setcursor
+# # # exec --no-startup-id xautolock -time 10 -locker blurlock
+# # exec_always --no-startup-id fix_xcursor
 
 ################################################################################
 # Sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa

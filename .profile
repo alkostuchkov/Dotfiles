@@ -46,7 +46,7 @@
 
 export HOME=$(echo /home/$USER)
 
-export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications:$PATH
+export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications
 export EDITOR="vim"
 export VISUAL="gvim"
 export TERM="xterm-256color"
