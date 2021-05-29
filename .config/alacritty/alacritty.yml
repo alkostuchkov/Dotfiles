@@ -343,6 +343,52 @@ draw_bold_text_with_bright_colors: true
 
 ###############################################################################
 
+# Base16 Gruvbox light, soft 256 - alacritty color config
+# Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+colors:
+  # Default colors
+  primary:
+    background: '#f2e5bc'
+    foreground: '#504945'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '#f2e5bc'
+    cursor: '#504945'
+
+  # Normal colors
+  normal:
+    black:   '#f2e5bc'
+    red:     '#9d0006'
+    green:   '#79740e'
+    yellow:  '#b57614'
+    blue:    '#076678'
+    magenta: '#8f3f71'
+    cyan:    '#427b58'
+    white:   '#504945'
+
+  # Bright colors
+  bright:
+    black:   '#bdae93'
+    red:     '#9d0006'
+    green:   '#79740e'
+    yellow:  '#b57614'
+    blue:    '#076678'
+    magenta: '#8f3f71'
+    cyan:    '#427b58'
+    white:   '#282828'
+
+  indexed_colors:
+    - { index: 16, color: '#af3a03' }
+    - { index: 17, color: '#d65d0e' }
+    - { index: 18, color: '#ebdbb2' }
+    - { index: 19, color: '#d5c4a1' }
+    - { index: 20, color: '#665c54' }
+    - { index: 21, color: '#3c3836' }
+
+
+
+
 # # Colors (Material)
 # colors:
   # # Default colors
@@ -441,39 +487,39 @@ draw_bold_text_with_bright_colors: true
 
 ###############################################################################
 
-# Colors (Solarized Dark)
-colors:
-  # Default colors
-  primary:
-    background: '#002b36' # base03
-    foreground: '#839496' # base0
-
-  # Cursor colors
-  cursor:
-    text:   '#002b36' # base03
-    cursor: '#839496' # base0
-
-  # Normal colors
-  normal:
-    black:   '#073642' # base02
-    red:     '#dc322f' # red
-    green:   '#859900' # green
-    yellow:  '#b58900' # yellow
-    blue:    '#268bd2' # blue
-    magenta: '#d33682' # magenta
-    cyan:    '#2aa198' # cyan
-    white:   '#eee8d5' # base2
-
-  # Bright colors
-  bright:
-    black:   '#002b36' # base03
-    red:     '#cb4b16' # orange
-    green:   '#586e75' # base01
-    yellow:  '#657b83' # base00
-    blue:    '#839496' # base0
-    magenta: '#6c71c4' # violet
-    cyan:    '#93a1a1' # base1
-    white:   '#fdf6e3' # base3
+# # Colors (Solarized Dark)
+# colors:
+  # # Default colors
+  # primary:
+    # background: '#002b36' # base03
+    # foreground: '#839496' # base0
+#
+  # # Cursor colors
+  # cursor:
+    # text:   '#002b36' # base03
+    # cursor: '#839496' # base0
+#
+  # # Normal colors
+  # normal:
+    # black:   '#073642' # base02
+    # red:     '#dc322f' # red
+    # green:   '#859900' # green
+    # yellow:  '#b58900' # yellow
+    # blue:    '#268bd2' # blue
+    # magenta: '#d33682' # magenta
+    # cyan:    '#2aa198' # cyan
+    # white:   '#eee8d5' # base2
+#
+  # # Bright colors
+  # bright:
+    # black:   '#002b36' # base03
+    # red:     '#cb4b16' # orange
+    # green:   '#586e75' # base01
+    # yellow:  '#657b83' # base00
+    # blue:    '#839496' # base0
+    # magenta: '#6c71c4' # violet
+    # cyan:    '#93a1a1' # base1
+    # white:   '#fdf6e3' # base3
 
 ###############################################################################
 
