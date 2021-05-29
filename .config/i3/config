@@ -450,8 +450,8 @@ exec --no-startup-id diodon &
 exec --no-startup-id conky -c $HOME/.myScripts/conky/conkyrc_i3 &
 exec --no-startup-id $HOME/Programs/CheckEmail/CheckEmail &
 exec --no-startup-id udiskie &
-exec --no-startup-id megasync &
-exec --no-startup-id xmodmap -e "keycode 135 = Super_R" &  # Map the menu button to right super
+# exec --no-startup-id xmodmap -e "keycode 135 = Super_R" &  # Map the menu button to right super
+# exec --no-startup-id megasync &
 # # exec --no-startup-id dropbox start -i &
 # # exec --no-startup-id $HOME/Programs/MEGAsync/megasync &
 # # exec --no-startup-id xrandr -s 1366x768

@@ -21,6 +21,6 @@ picom --config $HOME/.config/picom/picom.conf &
 conky -c ~/.myScripts/conky/conkyrc1 &
 $HOME/Programs/CheckEmail/CheckEmail &
 udiskie &  # ~/.config/udiskie/config.yml
-megasync &
+# megasync &
 # dropbox start -i &
 
