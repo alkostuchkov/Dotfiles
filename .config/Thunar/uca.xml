@@ -1,4 +1,4 @@
-<?xml encoding="UTF-8" version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <actions>
 <action>
 	<icon>catfish</icon>
@@ -23,7 +23,7 @@
 	<icon>terminator</icon>
 	<name>Open terminal here</name>
 	<unique-id>1487167230334234-7</unique-id>
-	<command>x-terminal-emulator --working-directory %f</command>
+	<command>$TERMINAL --working-directory %f</command>
 	<description>Open terminal here</description>
 	<patterns>*</patterns>
 	<directories/>
@@ -32,7 +32,7 @@
 	<icon>terminator</icon>
 	<name>Open root terminal here</name>
 	<unique-id>1487167250821951-8</unique-id>
-	<command>gksudo &quot;x-terminal-emulator --working-directory %f&quot;</command>
+	<command>pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY $TERMINAL --working-directory %f</command>
 	<description>Open root terminal here</description>
 	<patterns>*</patterns>
 	<directories/>
@@ -51,7 +51,7 @@
 	<icon>file-manager</icon>
 	<name>Open directory as root</name>
 	<unique-id>1426920334780834-4</unique-id>
-	<command>pkexec thunar %f</command>
+	<command>pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY dbus-run-session thunar %f</command>
 	<description>Open directory as root</description>
 	<patterns>*</patterns>
 	<directories/>
@@ -60,7 +60,7 @@
 	<icon>system-users</icon>
 	<name>Сhange owner to YOU</name>
 	<unique-id>1487167286205165-9</unique-id>
-	<command>gksudo &quot;chown -hR $USER:$USER %F&quot;</command>
+	<command>pkexec &quot;chown -hR $USER:$USER %F&quot;</command>
 	<description>Сhange owner to YOU</description>
 	<patterns>*</patterns>
 	<directories/>
@@ -74,7 +74,7 @@
 	<icon>system-users</icon>
 	<name>Change owner to ROOT</name>
 	<unique-id>1487167305851005-10</unique-id>
-	<command>gksudo &quot;chown -hR root:root %F&quot;</command>
+	<command>pkexec &quot;chown -hR root:root %F&quot;</command>
 	<description>Change owner to ROOT</description>
 	<patterns>*</patterns>
 	<directories/>
@@ -88,7 +88,7 @@
 	<icon>avatar-default</icon>
 	<name>Open as root</name>
 	<unique-id>1454143890799404-3</unique-id>
-	<command>gksudo exo-open %f</command>
+	<command>pkexec exo-open %f</command>
 	<description>Open as root</description>
 	<patterns>*</patterns>
 	<other-files/>
@@ -98,7 +98,7 @@
 	<icon>geany</icon>
 	<name>Edit as root</name>
 	<unique-id>1487167329872495-11</unique-id>
-	<command>gksudo geany %f</command>
+	<command>pkexec $EDITOR %f</command>
 	<description>Edit as root</description>
 	<patterns>*</patterns>
 	<other-files/>
@@ -303,7 +303,7 @@
 	<icon>utilities-terminal</icon>
 	<name>Run in terminal</name>
 	<unique-id>1487167662174016-24</unique-id>
-	<command>chmod +x %f; x-terminal-emulator --command=&quot;./%n || exit&quot;</command>
+	<command>chmod +x %f; $TERMINAL --command=&quot;./%n || exit&quot;</command>
 	<description>Run in terminal</description>
 	<patterns>*.sh;*.py;*.pl</patterns>
 	<other-files/>
