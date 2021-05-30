@@ -18,7 +18,7 @@ set HOME (echo /home/$USER)
 # # select-editor  (~/.selected-editor)
 # set VISUAL "gvim"                                  # $VISUAL use GVim in GUI mode
 # set PATH $PATH $HOME/.cargo/bin $HOME/.config/vifm/scripts                   # PATH for exa in cargo
-# set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"  # $MANPAGER use batcat to read mans
+# set -x MANPAGER "sh -c 'col -bx | bat --theme gruvbox-light -l man -p'"  # $MANPAGER use batcat to read mans
 set __GIT_PROMPT_DIR ~/.bash-git-prompt            # Git autocomplition and prompt 
 
 source ~/.asdf/asdf.fish                  # For asdf manager 
