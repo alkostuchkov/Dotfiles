@@ -28,8 +28,8 @@ progressbar_thickness=3font
 menubar_mouse_tracking=true
 toolbutton_style=0
 double_click=true
-translucent_windows=true
-blurring=true
+translucent_windows=false
+blurring=false
 popup_blurring=true
 vertical_spin_indicators=false
 spin_button_width=32
@@ -68,6 +68,9 @@ respect_DE=true
 saturation=1.00
 scrollable_menu=true
 submenu_delay=250
+click_behavior=0
+drag_from_buttons=false
+shadowless_popup=true
 
 [GeneralColors]
 window.color=#1b2224
@@ -112,6 +115,9 @@ middle_click_scroll=false
 no_selection_tint=false
 opaque_colors=false
 scroll_jump_workaround=false
+centered_forms=false
+kinetic_scrolling=false
+noninteger_translucency=false
 
 [PanelButtonCommand]
 frame=true
