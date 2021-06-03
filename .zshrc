@@ -22,7 +22,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # # export BROWSER="qutebrowser"
 # #export EDITOR="emacs -nw"
 # # export QT_QPA_PLATFORMTHEME="qt5ct"
-# export MANPAGER "sh -c 'col -bx | bat --theme gruvbox-light -l man -p'"  # $MANPAGER use batcat to read mans
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"  # $MANPAGER use batcat to read mans
 
 # export NVM_DIR="$HOME/.nvm"
 # # export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
@@ -150,6 +150,7 @@ neofetch
 
 # alias ls='ls --color=auto'
 alias ls='exa -g --color=always --group-directories-first'
+alias bat='bat --theme gruvbox-dark'
 alias ll='ls -l'
 alias la='ls -la'
 # alias ll='ls -lh'

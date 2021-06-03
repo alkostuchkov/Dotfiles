@@ -20,6 +20,16 @@
 	<other-files/>
 </action>
 <action>
+	<icon>terminal</icon>
+	<name>Open drop down terminal here (no tab)</name>
+	<unique-id>1592815883515735-1</unique-id>
+	<command>xfce4-terminal --drop-down --working-directory %f</command>
+	<description>Open drop down terminal here (no tab)</description>
+	<patterns>*</patterns>
+	<directories/>
+	<other-files/>
+</action>
+<action>
 	<icon>terminator</icon>
 	<name>Open terminal here</name>
 	<unique-id>1487167230334234-7</unique-id>
@@ -36,16 +46,6 @@
 	<description>Open root terminal here</description>
 	<patterns>*</patterns>
 	<directories/>
-</action>
-<action>
-	<icon>terminal</icon>
-	<name>Open drop down terminal here (no tab)</name>
-	<unique-id>1592815883515735-1</unique-id>
-	<command>xfce4-terminal --drop-down --working-directory %f</command>
-	<description>Open drop down terminal here (no tab)</description>
-	<patterns>*</patterns>
-	<directories/>
-	<other-files/>
 </action>
 <action>
 	<icon>file-manager</icon>

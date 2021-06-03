@@ -1,10 +1,3 @@
-# Thanks Derek Taylor (DistroTube).
-#  ____ _____ 
-# |  _ \_   _|  Derek Taylor (DistroTube)
-# | | | || |    http://www.youtube.com/c/DistroTube
-# | |_| || |    http://www.gitlab.com/dwt1/ 
-# |____/ |_|
-#
 # My fish config.
 
 ### EXPORTs ###
@@ -18,7 +11,7 @@ set HOME (echo /home/$USER)
 # # select-editor  (~/.selected-editor)
 # set VISUAL "gvim"                                  # $VISUAL use GVim in GUI mode
 # set PATH $PATH $HOME/.cargo/bin $HOME/.config/vifm/scripts                   # PATH for exa in cargo
-# set -x MANPAGER "sh -c 'col -bx | bat --theme gruvbox-light -l man -p'"  # $MANPAGER use batcat to read mans
+# set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"  # $MANPAGER use batcat to read mans
 set __GIT_PROMPT_DIR ~/.bash-git-prompt            # Git autocomplition and prompt 
 
 source ~/.asdf/asdf.fish                  # For asdf manager 
@@ -430,6 +423,7 @@ end
 ### ALIASES ###
 # alias ls='ls --color=auto'
 alias ls='exa -g --color=always --group-directories-first'
+alias bat='bat --theme gruvbox-dark'
 alias ll='ls -l'
 alias la='ls -la'
 # alias ll='ls -lh'
@@ -439,6 +433,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias ifconfig=/sbin/ifconfig
+alias bat='bat --theme gruvbox-dark' 
 
 # confirm before overwriting something
 alias cp="cp -i"

@@ -14,7 +14,7 @@ export HOME=$(echo /home/$USER)
 # # export BROWSER="qutebrowser"
 # #export EDITOR="emacs -nw"
 # # export QT_QPA_PLATFORMTHEME="qt5ct"
-# export MANPAGER "sh -c 'col -bx | bat --theme gruvbox-light -l man -p'"  # $MANPAGER use batcat to read mans
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"  # $MANPAGER use batcat to read mans
 export NVM_DIR="$HOME/.nvm"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -94,6 +94,7 @@ if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     # alias ls='ls --color=auto'
     alias ls='exa -g --color=always --group-directories-first'
+    alias bat='bat --theme gruvbox-dark'
     alias ifconfig=/sbin/ifconfig
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'

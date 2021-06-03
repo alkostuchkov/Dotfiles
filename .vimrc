@@ -116,7 +116,7 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 " Colorscheme and GUI Settings
 "###############################################################################
 set t_Co=256
-" set background=dark
+set background=dark
 colorscheme gruvbox
 " colorscheme predawn
 " colorscheme monokai
