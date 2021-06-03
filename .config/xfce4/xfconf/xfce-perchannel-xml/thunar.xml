@@ -21,4 +21,5 @@
   <property name="last-statusbar-visible" type="bool" value="true"/>
   <property name="last-details-view-fixed-columns" type="bool" value="true"/>
   <property name="shortcuts-icon-size" type="string" value="THUNAR_ICON_SIZE_24"/>
+  <property name="misc-confirm-close-multiple-tabs" type="bool" value="false"/>
 </channel>

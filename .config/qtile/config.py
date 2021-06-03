@@ -466,8 +466,8 @@ def init_widgets_list():
                         "Button3": lambda: show_updates.show_updates_arch(),
                         "Button2": lambda: qtile.cmd_spawn(my_term_extra + " -e 'paru -Syu && $SHELL'")
                     },
-                    #  update_interval=900  # 15min after cron's apt-update task
-                    update_interval=300  # 5min
+                    update_interval=21600  # 6 hours (60*60*6)
+                    #  update_interval=300  # 5min
                     ),
             widget.Sep(
                     linewidth=1,
@@ -805,6 +805,7 @@ floating_layout = layout.Floating(float_rules=[
     #  Match(title="Properties for *", wm_class="dolphin"),
     #  Match(title="Delete Permanently", wm_class="dolphin"),  # Dolphin (delete dialog)
     #  Match(title="Preference"),  # Haroopad (md editor)
+    Match(title="About Mozilla Firefox", wm_class="Firefox"),
     Match(title="Execute File", wm_class="pcmanfm"),
     Match(title="Close Button Action", wm_class="tixati"),  # Tixati
     Match(title="Confirm File Replacing", wm_class="pcmanfm"),
