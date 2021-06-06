@@ -464,9 +464,9 @@ def init_widgets_list():
                         #  "Button1": widget.CheckUpdates.poll,
                         #  "Button3": lambda: qtile.cmd_spawn(home + "/.myScripts/show_updates_arch.sh"),
                         "Button3": lambda: show_updates.show_updates_arch(),
-                        "Button2": lambda: qtile.cmd_spawn(my_term_extra + " -e 'paru -Syu && $SHELL'")
+                        "Button2": lambda: qtile.cmd_spawn(my_term_extra + " -e 'yay -Syu && $SHELL'")
                     },
-                    update_interval=21600  # 6 hours (60*60*6)
+                    update_interval=10800  # 3 hours (60*60*3)
                     #  update_interval=300  # 5min
                     ),
             widget.Sep(

@@ -40,7 +40,7 @@ def show_updates_arch():
         except subprocess.CalledProcessError:
             community_output = ""
         else:
-            community_output = ("\n\ncommunity: {}\n{}".format(len(updates_community_list), updates_community)
+            community_output = ("\n\nCommunity: {}\n{}".format(len(updates_community_list), updates_community)
                     if updates_community_list else "")
             nonlocal amount_updates
             amount_updates += len(updates_community_list)

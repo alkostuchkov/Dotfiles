@@ -163,9 +163,9 @@ status.register(
     #  backends=[pacman.Pacman(), paru.Paru(False)],  # paru counts only AUR
     #  backends=[paru.Paru()],
     backends=[checkupdates_plus_aur.CheckupdatesPlusAur()],
-    interval=21600,  # 6 hours (60*60*6)
+    interval=10800,  # 3 hours (60*60*3)
     on_rightclick=show_updates.show_updates_arch,
-    on_middleclick=my_term_extra + " -e 'sudo paru -Syu'"
+    on_middleclick=my_term_extra + " -e 'sudo yay -Syu'"
 )
 
 #  #  status.register(

@@ -117,7 +117,6 @@
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-trash" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-statusbar" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/duplicate" "")
-; (gtk_accel_path "<Actions>/ThunarBookmarks/91eb445848b81a05d64bf02b015c9d66" "")
 ; (gtk_accel_path "<Actions>/ThunarLauncher/paste" "<Primary>v")
 ; (gtk_accel_path "<Actions>/ThunarBookmarks/a1b68566d30703f4ea4c9bb6082c9a83" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/create-folder" "<Primary><Shift>n")
