@@ -57,7 +57,6 @@ export BROWSER="firefox"
 # export QT_QPA_PLATFORMTHEME="qt5ct"
 # export MANPAGER="sh -c 'col -bx | bat -l man -p'"  # $MANPAGER use batcat to read mans
 export MANPAGER="sh -c 'col -bx | bat --theme gruvbox-dark -l man -p'"  # $MANPAGER use batcat to read mans
-
 export NVM_DIR="$HOME/.nvm"
 
 #export LANG=en_US.UTF8

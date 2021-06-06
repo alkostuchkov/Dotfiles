@@ -14,18 +14,18 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# export EDITOR="vim"
-# export VISUAL="gvim"
-# export TERM="xterm-256color"
-# export TERMINAL="alacritty"
-# export BROWSER="firefox"
-# # export BROWSER="qutebrowser"
-# #export EDITOR="emacs -nw"
-# # export QT_QPA_PLATFORMTHEME="qt5ct"
-# export MANPAGER="sh -c 'col -bx | bat -l man -p'"  # $MANPAGER use batcat to read mans
-
-# export NVM_DIR="$HOME/.nvm"
-# # export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications
+export EDITOR="vim"
+export VISUAL="gvim"
+export TERM="xterm-256color"
+export TERMINAL="alacritty"
+export BROWSER="firefox"
+# export BROWSER="qutebrowser"
+#export EDITOR="emacs -nw"
+# export QT_QPA_PLATFORMTHEME="qt5ct"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"  # $MANPAGER use batcat to read mans
+export NVM_DIR="$HOME/.nvm"
+# export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 
 ####################### AUTOCOMPLETE AND HIGHLIGHT COLORS ######################
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7d7d7d"

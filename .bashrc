@@ -4,17 +4,22 @@
 
 # EXPORTs
 export HOME=$(echo /home/$USER)
-# # export PATH=$PATH:~/.local/bin/:~/.cargo/bin:~/.config/vifm/scripts
-# # export TERM="screen-256color"
-# export EDITOR="vim"
-# export VISUAL="gvim"
-# export TERM="xterm-256color"
-# export TERMINAL="alacritty"
-# export BROWSER="firefox"
-# # export BROWSER="qutebrowser"
-# #export EDITOR="emacs -nw"
-# # export QT_QPA_PLATFORMTHEME="qt5ct"
-# export MANPAGER="sh -c 'col -bx | bat -l man -p'"  # $MANPAGER use batcat to read mans
+export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications
+export EDITOR="vim"
+export VISUAL="gvim"
+export TERM="xterm-256color"
+# export TERM="screen-256color"
+export TERMINAL="alacritty"
+export BROWSER="firefox"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"  # $MANPAGER use batcat to read mans
+# export BROWSER="qutebrowser"
+#export EDITOR="emacs -nw"
+# export QT_QPA_PLATFORMTHEME="qt5ct"
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+
 export NVM_DIR="$HOME/.nvm"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
