@@ -413,7 +413,7 @@ draw_bold_text_with_bright_colors: true
     # - { index: 21, color: '#3c3836' }
 
 ###############################################################################
-# # # Colors (Not JetBrains Dacrula dark) - alacritty color config
+# # # Colors (Not JetBrains Darcula dark) - alacritty color config
 # colors:
   # primary:
     # background: '#282a36'
@@ -469,7 +469,7 @@ draw_bold_text_with_bright_colors: true
     # white:   '#e6e6d1'
 
 ###############################################################################
-# # Colors (JetBrains Dacrula dark+++) - alacritty color config
+# # Colors (JetBrains Darcula dark+++) - alacritty color config
 colors:
   primary:
     background: '#2b2b2b'
@@ -489,24 +489,32 @@ colors:
 
   normal:
     black:   '#000000'
-    red:     '#e46768'
-    green:   '#4e8219'
-    yellow:  '#b76a18'
-    blue:    '#2f70a0'
-    magenta: '#5c4069'
-    cyan:    '#1e7272'
-    # cyan:    '#154f4f'
-    white:   '#616161'
+    red:     '#f0524f'
+    green:   '#5c962c'
+    yellow:  '#a68a0d'
+    blue:    '#3993d4'
+    magenta: '#a771bf'
+    cyan:    '#00a3a3'
+    white:   '#595959'
 
   bright:
     black:   '#000000'
-    red:     '#fb7172'
-    green:   '#5b8b2c'
-    yellow:  '#a5880f'
-    blue:    '#3892d4'
-    magenta: '#9676ac'
-    cyan:    '#0cb6a4'
-    white:   '#ffffff'
+    red:     '#ff4050'
+    green:   '#4fc414'
+    yellow:  '#e5bf00'
+    blue:    '#1fb0ff'
+    magenta: '#ed7eed'
+    cyan:    '#00e5e5'
+    white:   '#808080'
+
+# standardized palette:
+# jb-yellow      "#ffc66d"
+# jb-bluegreen   "#318495"
+# jb-magenta     "#9676ac"
+# jb-orange      "#c57825"
+# jb-red         "#8c0909"
+# jb-blue        "#7ca8c6"
+# jb-green       "#5e8759"
 
 ###############################################################################
 # # Colors (Material)
