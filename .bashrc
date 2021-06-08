@@ -98,7 +98,14 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     # alias ls='ls --color=auto'
-    alias ls='exa -g --color=always --group-directories-first'
+    # alias ls='exa -g --color=always --group-directories-first'
+    alias ls='lsd --group-dirs=first'
+    alias ll='lsd --blocks=permission,size,user,group,date,name --group-dirs=first --date="+%d %b %H:%M"'
+    alias la='ll -a'
+    alias bat='bat --theme gruvbox-dark'
+    # alias ll='ls -l'
+    # alias la='ls -la'
+
     alias bat='bat --theme gruvbox-dark'
     alias ifconfig=/sbin/ifconfig
     #alias dir='dir --color=auto'

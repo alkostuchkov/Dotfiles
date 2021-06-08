@@ -494,7 +494,8 @@ colors:
     yellow:  '#b76a18'
     blue:    '#2f70a0'
     magenta: '#5c4069'
-    cyan:    '#154f4f'
+    cyan:    '#1e7272'
+    # cyan:    '#154f4f'
     white:   '#616161'
 
   bright:
