@@ -14,6 +14,10 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# For ranger, htop and other console progs in Qtile
+unset COLUMNS
+unset LINES
+
 export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications
 export EDITOR="vim"
 export VISUAL="gvim"

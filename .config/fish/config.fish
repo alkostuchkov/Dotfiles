@@ -1,5 +1,9 @@
 # My fish config.
 
+# For ranger, htop and other console progs in Qtile
+set -e COLUMNS  # -e = --erase
+set -e LINES
+
 ### EXPORTs ###
 set HOME (echo /home/$USER)
 # set -U fish_user_paths $HOME/.local/bin $HOME/Programs/AppImageApplications $fish_user_paths

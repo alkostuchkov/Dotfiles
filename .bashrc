@@ -2,6 +2,10 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# For ranger, htop and other console progs in Qtile
+unset COLUMNS
+unset LINES
+
 # EXPORTs
 export HOME=$(echo /home/$USER)
 export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications

@@ -106,7 +106,7 @@ status.register(
     on_leftclick="gsimplecal",
     hints={"markup": "pango"})
 
-#  # Note: the network module requires PyPI package netifaces
+# Note: the network module requires PyPI package netifaces
 status.register(
     "network",
     dynamic_color=False,
