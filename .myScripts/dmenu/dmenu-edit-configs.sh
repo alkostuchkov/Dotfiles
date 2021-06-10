@@ -65,7 +65,8 @@ if [[ "$choice" == "quit" ]]; then
     echo "Program terminated." && exit 1
 elif [[ "$choice" ]]; then
     conf=$(printf '%s\n' "${choice}" | awk '{print $NF}')
-    alacritty -e vim "$conf"
+    alacritty -e $SHELL -c "vim $conf"
+    # alacritty -e vim "$conf"
     # terminator -e "vim $conf"
 else
     echo "Program terminated." && exit 1
