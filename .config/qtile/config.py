@@ -10,9 +10,9 @@ from libqtile.config import Click, Drag, Group, Key, Screen, KeyChord, Match
 from libqtile.lazy import lazy
 from libqtile import qtile
 
-#  from modules import check_updates
 #  from modules import arcobattery
 #  from modules import keyboardkbdd
+from modules import check_updates
 from modules import memory
 from modules import all_windows_count
 from modules import syncthing
@@ -26,7 +26,7 @@ def get_all_netifaces(path_to_state="/sys/class/net/"):
     """
     netifaces_list = []
     for dir in os.listdir(path_to_state):
-        if os.path.isdir("{}{}".format(path_to_state, dir)):
+        if os.path.isdir(f"{path_to_state}{dir}"):
             if dir != "lo":
                 netifaces_list.append(dir)
     return netifaces_list
@@ -39,7 +39,7 @@ def get_upped_netiface(netifaces=[]):
     """
     if netifaces:
         for netiface in netifaces:
-            state = subprocess.check_output(["cat", "{}{}{}".format(path_to_state, netiface, "/operstate")]).decode("utf-8").rstrip()
+            state = subprocess.check_output(["cat", f"{path_to_state}{netiface}/operstate"]).decode("utf-8").rstrip()
             if state == "up":
                 return netiface
     return None
@@ -55,8 +55,9 @@ my_nerd_font = "Ubuntu Nerd Font"
 my_nerd_font_extra = "Sarasa Mono SC Nerd"
 my_mono_font = "Ubuntu Mono"
 my_mono_bold_font = "Ubuntu Mono Bold"
+SHELL = os.getenv("SHELL")
 home = os.path.expanduser("~")
-my_config = home + "/.config/qtile/config.py"
+my_config = f"{home}/.config/qtile/config.py"
 
 # Check which network iface is upped.
 path_to_state = "/sys/class/net/"  # enp2s0/operstate"
@@ -68,24 +69,25 @@ upped_netiface = get_upped_netiface(netifaces)
 
 keys = [
 # <SUPER> + FUNCTION KEYS
-#  Key([mod], "Return", lazy.spawn(home + "/.myScripts/runAlacrittyDiscreteGr.sh"), desc="Launch terminal"),
+    #  Key([mod], "Return", lazy.spawn(f"{home}/.myScripts/runAlacrittyDiscreteGr.sh"), desc="Launch terminal"),
     Key([mod], "Return", lazy.spawn(my_term), desc="Launch terminal"),
     Key([mod, "shift"], "Return", lazy.spawn("terminator"), desc="Launch terminator"),
     Key([mod], "r", lazy.spawn("rofi run -show drun -show-icons"), desc="Run App Lancher"),
     Key([mod], "d", lazy.spawn("dmenu_run -nb #222B2E -nf #09DBC9 -sb #009185 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
 #  Key([mod], "d", lazy.spawn("dmenu_run -nb #282828 -nf #d79921 -sb #fea63c -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Gruvbox
     Key([mod], "Print", lazy.spawn("flameshot gui"), desc="Run flameshot (take screenshot)"),
-    Key([mod], "w", lazy.spawn(home + "/.myScripts/runFirefoxDiscreteGr.sh"), desc="Launch Firefox"),
+    Key([mod], "w", lazy.spawn(f"{home}/.myScripts/runFirefoxDiscreteGr.sh"), desc="Launch Firefox"),
     Key([mod], "u", lazy.spawn("qutebrowser"), desc="Launch qutebrowser"),
     Key([mod], "e", lazy.spawn("dolphin"), desc="Launch File Manager"),
     Key([mod], "p", lazy.spawn("thunar"), desc="Launch File Manager"),
     Key([mod], "i", lazy.spawn("/usr/bin/octopi"), desc="Launch Octopi"),
-    Key([mod], "g", lazy.spawn(home + "/.myScripts/runGimpDiscreteGr.sh"), desc="Run GIMP DiscreteGraphics"),
-    Key([mod], "a", lazy.spawn(home + "/.myScripts/runRangerDiscreteGr.sh"), desc="Run ranger DiscreteGraphics"),
-    Key([mod], "b", lazy.spawn(home + "/Programs/SublimeText/sublime_text"), desc="Run Sublime Text"),
-    Key([mod], "t", lazy.spawn(home + "/Programs/Telegram/Telegram -workdir /home/alexander/.local/share/TelegramDesktop/ -- %u"), desc="Run Telegram"),
+    Key([mod], "g", lazy.spawn(f"{home}/.myScripts/runGimpDiscreteGr.sh"), desc="Run GIMP DiscreteGraphics"),
+    #  Key([mod], "a", lazy.spawn(f"{my_term} -e {SHELL} -c {home}/.myScripts/runRangerDiscreteGr.sh"), desc="Run ranger DiscreteGraphics"),
+    Key([mod], "a", lazy.spawn(f"{my_term} -e {SHELL} -c ranger"), desc="Run ranger"),
+    Key([mod], "b", lazy.spawn(f"{home}/Programs/SublimeText/sublime_text"), desc="Run Sublime Text"),
+    Key([mod], "t", lazy.spawn(f"{home}/Programs/Telegram/Telegram -workdir /home/alexander/.local/share/TelegramDesktop/ -- %u"), desc="Run Telegram"),
     Key([mod], "x", lazy.spawn("xterm"), desc="Run XTerm"),
-    Key([mod], "v", lazy.spawn(my_term + " -e " + home + "/.config/vifm/scripts/vifmrun"), desc="Run vifm"),
+    Key([mod], "v", lazy.spawn(f"{my_term} -e {home}/.config/vifm/scripts/vifmrun"), desc="Run vifm"),
     # TOGGLE FULLSCREEN
     Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
     # SWITCH BETWEEN GROUPS
@@ -106,7 +108,7 @@ keys = [
     Key([mod], "space", lazy.layout.next(), desc="Switch window focus to other pane(s) of stack"),
 
 # <SUPER> + <SHIFT> + KEYS  (-nf #fea63c)
-    Key([mod, "shift"], "y", lazy.spawn(home + "/.myScripts/start-stop_syncthing.sh"), desc="Start-Stop Syncthing (for Dropbox sync)"),
+    Key([mod, "shift"], "y", lazy.spawn(f"{home}/.myScripts/start-stop_syncthing.sh"), desc="Start-Stop Syncthing (for Dropbox sync)"),
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "x", lazy.spawn("xkill"), desc="Kill not answered window"),
     Key([mod, "shift"], "r", lazy.restart(), desc="Restart qtile"),
@@ -133,7 +135,7 @@ keys = [
     Key([mod, "shift"], "d", lazy.window.toggle_minimize(), desc="Toggle window between minimumize and normal sizes"),
 
 # <SUPER> + <ALT> + KEYS
-    Key([mod, alt], "space", lazy.spawn(home + "/.myScripts/touchpadONOFF.sh"), desc="Touchpad On/Off"),
+    Key([mod, alt], "space", lazy.spawn(f"{home}/.myScripts/touchpadONOFF.sh"), desc="Touchpad On/Off"),
     # FLIP LAYOUT FOR BSP LAYOUT
     Key([mod, alt], "k", lazy.layout.flip_up(), desc=""),
     Key([mod, alt], "j", lazy.layout.flip_down(), desc=""),
@@ -190,22 +192,22 @@ keys = [
 
 # <ALT> + KEYS
     KeyChord([alt], "m", [
-        Key([], "c", lazy.spawn(home + "/.myScripts/dmenu/dmenu-edit-configs.sh"), desc="Run dmenu script for editing config files"),
-        Key([], "p", lazy.spawn(home + "/.myScripts/dmenu/dmenu-passmenu.sh"), desc="Run dmenu script for editing config files"),
-        Key([], "l", lazy.spawn(home + "/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
-        Key([], "k", lazy.spawn(home + "/.myScripts/dmenu/dmenu-kill.sh"), desc="Kill chosen process"),
-        Key([], "s", lazy.spawn(home + "/.myScripts/dmenu/dmenu-search.sh"), desc="Run chosen search engine"),
-        Key([], "e", lazy.spawn(home + "/.myScripts/dmenu/dmenu-unicode.sh"), desc="Choose an emoji"),
-        Key([], "x", lazy.spawn(home + "/.myScripts/dmenu/dmenu-system-exit.sh"), desc="System exit menu")],
+        Key([], "c", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-edit-configs.sh"), desc="Run dmenu script for editing config files"),
+        Key([], "p", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-passmenu.sh"), desc="Run dmenu script for editing config files"),
+        Key([], "l", lazy.spawn(f"{home}/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
+        Key([], "k", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-kill.sh"), desc="Kill chosen process"),
+        Key([], "s", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-search.sh"), desc="Run chosen search engine"),
+        Key([], "e", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-unicode.sh"), desc="Choose an emoji"),
+        Key([], "x", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-system-exit.sh"), desc="System exit menu")],
         mode="Dmenu"
     ),
-    #  Key([alt], "c", lazy.spawn(home + "/.myScripts/dmenu/dmenu-edit-configs.sh"), desc="Run dmenu script for editing config files"),
-    #  Key([alt], "p", lazy.spawn(home + "/.myScripts/dmenu/dmenu-passmenu.sh"), desc="Run dmenu script for editing config files"),
-    #  Key([alt], "s", lazy.spawn(home + "/.myScripts/dmenu/dmenu-system-exit.sh"), desc="System exit menu"),
-    #  Key([alt], "l", lazy.spawn(home + "/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
-    #  Key([alt], "t", lazy.spawn(home + "/.myScripts/dmenu/dmenu-kill.sh"), desc="Kill chosen process"),
-    #  Key([alt], "e", lazy.spawn(home + "/.myScripts/dmenu/dmenu-search.sh"), desc="Run chosen search engine"),
-    #  Key([alt], "k", lazy.spawn(home + "/.myScripts/on-off_conky.sh"), desc="On-Off conky"),
+    #  Key([alt], "c", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-edit-configs.sh"), desc="Run dmenu script for editing config files"),
+    #  Key([alt], "p", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-passmenu.sh"), desc="Run dmenu script for editing config files"),
+    #  Key([alt], "s", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-system-exit.sh"), desc="System exit menu"),
+    #  Key([alt], "l", lazy.spawn(f"{home}/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
+    #  Key([alt], "t", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-kill.sh"), desc="Kill chosen process"),
+    #  Key([alt], "e", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-search.sh"), desc="Run chosen search engine"),
+    #  Key([alt], "k", lazy.spawn(f"{home}/.myScripts/on-off_conky.sh"), desc="On-Off conky"),
     Key([alt], "w", lazy.spawn("rofi run -show window -show-icons"), desc="Switch between opened windows"),
     Key([alt], "Tab", lazy.group.next_window(), desc="Switch to the next window"),
 
@@ -217,17 +219,17 @@ keys = [
 # MULTIMEDIA KEYS
 # <Fn> + <F1-F12>
     Key([], "XF86Display", lazy.spawn("lxrandr"), desc="Run lxrandr (choose monitor)"),
-    Key([], "XF86ScreenSaver", lazy.spawn(home + "/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
+    Key([], "XF86ScreenSaver", lazy.spawn(f"{home}/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
     Key([], "XF86Battery", lazy.spawn("xfce4-power-manager-settings"), desc="Power manager settings"),
 
 # <SUPER> + <F1-F12>
     # Brightness & Volume (extra step 5)
-    Key([mod], "F2", lazy.spawn(home + "/.myScripts/brightness_down.sh"), desc="Brightness Down (5-)"),
+    Key([mod], "F2", lazy.spawn(f"{home}/.myScripts/brightness_down.sh"), desc="Brightness Down (5-)"),
                    # lazy.spawn("brightnessctl set 5-"),
-    Key([mod], "F3", lazy.spawn(home + "/.myScripts/brightness_up.sh"), desc="Brightness Up (+5)"),
+    Key([mod], "F3", lazy.spawn(f"{home}/.myScripts/brightness_up.sh"), desc="Brightness Up (+5)"),
                    # lazy.spawn("brightnessctl set +5"),
-    Key([mod], "F8", lazy.spawn(home + "/.myScripts/volume_down.sh"), desc="Volume Down"),
-    Key([mod], "F9", lazy.spawn(home + "/.myScripts/volume_up.sh"), desc="Volume Up more than 100%"),
+    Key([mod], "F8", lazy.spawn(f"{home}/.myScripts/volume_down.sh"), desc="Volume Down"),
+    Key([mod], "F9", lazy.spawn(f"{home}/.myScripts/volume_up.sh"), desc="Volume Up more than 100%"),
 ]
 # MOVE/RESIZE FLOATING WINDOW
 for key, x, y in [
@@ -447,6 +449,7 @@ def init_widgets_list():
                     #  length=bar.STRETCH,
                     #  background=colors[0]
                     #  ),
+            #  check_updates.CheckUpdates(
             widget.CheckUpdates(
                     foreground=colors[14],
                     background=colors[0],
@@ -462,9 +465,9 @@ def init_widgets_list():
                     display_format="  {updates}",  # ⟳ 
                     mouse_callbacks={
                         #  "Button1": widget.CheckUpdates.poll,
-                        #  "Button3": lambda: qtile.cmd_spawn(home + "/.myScripts/show_updates_arch.sh"),
+                        #  "Button3": lambda: qtile.cmd_spawn(f"{home}/.myScripts/show_updates_arch.sh"),
                         "Button3": lambda: show_updates.show_updates_arch(),
-                        "Button2": lambda: qtile.cmd_spawn(my_term_extra + " -e 'yay -Syu && $SHELL'")
+                        "Button2": lambda: qtile.cmd_spawn(f"{my_term_extra} -e 'yay -Syu && $SHELL'")
                     },
                     update_interval=10800  # 3 hours (60*60*3)
                     #  update_interval=300  # 5min
@@ -485,7 +488,7 @@ def init_widgets_list():
                     padding=0
                     ),
             syncthing.Syncthing(
-                    path_to_script=home + "/.myScripts/get_syncthing_status.sh",
+                    path_to_script=f"{home}/.myScripts/get_syncthing_status.sh",
                     font=my_nerd_font,
                     label="Syncthing\n ",
                     update_interval=60,
@@ -534,8 +537,9 @@ def init_widgets_list():
                     background=colors[0],
                     padding=0,
                     mouse_callbacks={
-                        "Button1": lambda: qtile.cmd_spawn(home + "/.myScripts/top5_cpu_usage.sh"),
-                        "Button3": lambda: qtile.cmd_spawn(my_term + " -e htop")
+                        "Button1": lambda: qtile.cmd_spawn(f"{home}/.myScripts/top5_cpu_usage.sh"),
+                        #  "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e htop")
+                        "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e {SHELL} -c htop")
                     }
                     ),
             widget.CPU(
@@ -544,8 +548,8 @@ def init_widgets_list():
                     padding=0,
                     format="{freq_current}GHz\n{load_percent: .0f}%",
                     mouse_callbacks={
-                        "Button1": lambda: qtile.cmd_spawn(home + "/.myScripts/top5_cpu_usage.sh"),
-                        "Button3": lambda: qtile.cmd_spawn(my_term + " -e htop")
+                        "Button1": lambda: qtile.cmd_spawn(f"{home}/.myScripts/top5_cpu_usage.sh"),
+                        "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e {SHELL} -c htop")
                     }
                     ),
             widget.Sep(
@@ -562,8 +566,8 @@ def init_widgets_list():
                     background=colors[0],
                     padding=0,
                     mouse_callbacks={
-                        "Button1": lambda: qtile.cmd_spawn(home + "/.myScripts/top5_mem_usage.sh"),
-                        "Button3": lambda: qtile.cmd_spawn(my_term + " -e htop")
+                        "Button1": lambda: qtile.cmd_spawn(f"{home}/.myScripts/top5_mem_usage.sh"),
+                        "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e {SHELL} -c htop")
                     }
                     ),
             memory.Memory(
@@ -573,8 +577,8 @@ def init_widgets_list():
                     format="{MemUsed: .2f}{mm}\n{MemPercent: .0f}%",
                     measure_mem="G",
                     mouse_callbacks={
-                        "Button1": lambda: qtile.cmd_spawn(home + "/.myScripts/top5_mem_usage.sh"),
-                        "Button3": lambda: qtile.cmd_spawn(my_term + " -e htop")
+                        "Button1": lambda: qtile.cmd_spawn(f"{home}/.myScripts/top5_mem_usage.sh"),
+                        "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e {SHELL} -c htop")
                     }
                     ),
             widget.Sep(
@@ -622,7 +626,7 @@ def init_widgets_list():
                     ),
 
             #  widget.BatteryIcon(
-                    #  theme_path=home + "/.config/qtile/icons/battery_icons_vert",
+                    #  theme_path=f"{home}/.config/qtile/icons/battery_icons_vert",
                     #  background=colors[0],
                     #  ),
             #  widget.BatteryIcon(
@@ -645,7 +649,7 @@ def init_widgets_list():
                     #  background=colors[0]
                     #  ),
             widget.CurrentLayoutIcon(
-                    #  custom_icon_paths=[home + "/.config/qtile/icons/layouts"],
+                    #  custom_icon_paths=[f"{home}/.config/qtile/icons/layouts"],
                     foreground=colors[10],
                     background=colors[0],
                     padding=0,
@@ -911,7 +915,7 @@ focus_on_window_activation = "focus"
 # Autostart!!!
 @hook.subscribe.startup_once
 def start_once():
-    subprocess.call([home + "/.config/qtile/scripts/autostart.sh"])
+    subprocess.call([f"{home}/.config/qtile/scripts/autostart.sh"])
 
 
 # Does what I wanted perfectly!!!
