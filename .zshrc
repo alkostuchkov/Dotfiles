@@ -153,16 +153,21 @@ neofetch
 # For a full list of active aliases, run `alias`.
 
 # alias ls='ls --color=auto'
-# alias ls='exa -g --color=always --group-directories-first'
 # alias ll='ls -l'
+# alias ll='ls -lh'
 # alias la='ls -la'
+# alias la='ls -lah'
+# alias lf='ls -lFh'
+alias lse='exa -g --color=always --group-directories-first'
+alias lle='lse -l'
 alias ls='lsd --group-dirs=first'
 alias ll='lsd --blocks=permission,size,user,group,date,name --group-dirs=first --date="+%d %b %H:%M"'
 alias la='ll -a'
 alias bat='bat --theme gruvbox-dark'
-# alias ll='ls -lh'
-# alias la='ls -lah'
-# alias lf='ls -lFh'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias ifconfig=/sbin/ifconfig
 
 # confirm before overwriting something
 alias cp="cp -i"
