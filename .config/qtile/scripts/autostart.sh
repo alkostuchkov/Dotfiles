@@ -25,4 +25,6 @@ xiccd &
 # /usr/bin/octopi-notifier &
 # megasync &
 # dropbox start -i &
+# # Activate discrete graphics card for further starting progs with DRI_PRIME=1
+# $HOME/.myScripts/runDiscreteGraphics.sh &
 

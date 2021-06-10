@@ -1,3 +1,3 @@
 #!/bin/bash
 
-alacritty -e clear; ranger
+alacritty -e $SHELL -c 'ranger'

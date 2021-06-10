@@ -14,8 +14,4 @@ notify-send -i dialog-information "$discreteCard : $turks_hex" "activated"
 # Start program (glxinfo) with discrete graphics card by DRI_PRIME=1.
 #DRI_PRIME=1 glxinfo | grep "OpenGL renderer"
 
-# clear
-# DRI_PRIME=1 ranger
-# alacritty -e clear
-# DRI_PRIME=1 bash -c "alacritty -e 'ranger'"
-DRI_PRIME=1 ranger
+DRI_PRIME=1 $SHELL -c 'ranger'
