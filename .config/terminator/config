@@ -292,7 +292,7 @@
   [[SauceCodePro_Nerd_14.5]]
     background_color = "#282828"
     cursor_color = "#aaaaaa"
-    font = SauceCodePro Nerd Font Mono 14.5
+    font = SauceCodePro Nerd Font 14.5
     foreground_color = "#ebdbb2"
     show_titlebar = False
     scrollbar_position = hidden
