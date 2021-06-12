@@ -67,7 +67,8 @@ set norunexec
 " Selected color scheme
 " The following line will cause issues if using vifm.vim with regular vim.
 " Either use neovim or comment out the following line.
-colorscheme distrotube_corrected
+colorscheme darcula
+" colorscheme distrotube_corrected
 " colorscheme distrotube
 " colorscheme solarized-dark_corrected
 
