@@ -118,11 +118,11 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 set t_Co=256
 set background=dark
 " colorscheme gruvbox
-" colorscheme predawn
+colorscheme predawn
 " colorscheme monokai
 " let g:solarized_termcolors=256
 " colorscheme solarized
-colorscheme darcula
+" colorscheme darcula
 
 " GUI
 set wak=no   "используем ALT как обычно, а не для вызова пункта меню

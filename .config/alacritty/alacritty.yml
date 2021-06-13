@@ -474,51 +474,90 @@ draw_bold_text_with_bright_colors: true
 
 ###############################################################################
 # # Colors (JetBrains Darcula dark+++) - alacritty color config
+# colors:
+  # primary:
+    # background: '#2b2b2b'
+    # foreground: '#a9b7c6'
+#
+  # cursor:
+    # text: CellBackground
+    # cursor: CellForeground
+  # # cursor:
+    # # text: '#2b2b2b'
+    # # cursor: '#a9b7c6'
+#
+  # selection:
+    # # text: CellForeground
+    # text: '#a9b7c6'
+    # background: '#214283'
+#
+  # normal:
+    # black:   '#000000'
+    # red:     '#f0524f'
+    # green:   '#5c962c'
+    # yellow:  '#a68a0d'
+    # blue:    '#3993d4'
+    # magenta: '#a771bf'
+    # cyan:    '#00a3a3'
+    # white:   '#595959'
+#
+  # bright:
+    # black:   '#000000'
+    # red:     '#ff4050'
+    # green:   '#4fc414'
+    # yellow:  '#e5bf00'
+    # blue:    '#1fb0ff'
+    # magenta: '#ed7eed'
+    # cyan:    '#00e5e5'
+    # white:   '#808080'
+#
+# # standardized palette:
+# # jb-yellow      "#ffc66d"
+# # jb-bluegreen   "#318495"
+# # jb-magenta     "#9676ac"
+# # jb-orange      "#c57825"
+# # jb-red         "#8c0909"
+# # jb-blue        "#7ca8c6"
+# # jb-green       "#5e8759"
+
+###############################################################################
+# Colors (Predawn) - alacritty color config
 colors:
   primary:
-    background: '#2b2b2b'
-    foreground: '#a9b7c6'
+    background: '#282828'
+    foreground: '#d5d5d5'
 
   cursor:
     text: CellBackground
-    cursor: CellForeground
+    # cursor: CellForeground
   # cursor:
     # text: '#2b2b2b'
-    # cursor: '#a9b7c6'
+    cursor: '#EB6C4E'
 
   selection:
     # text: CellForeground
-    text: '#a9b7c6'
-    background: '#214283'
+    text: '#d5d5d5'
+    background: '#646262'
 
   normal:
-    black:   '#000000'
-    red:     '#f0524f'
-    green:   '#5c962c'
-    yellow:  '#a68a0d'
-    blue:    '#3993d4'
-    magenta: '#a771bf'
-    cyan:    '#00a3a3'
-    white:   '#595959'
+    black:   '#1a1a1a'
+    red:     '#b51a20'
+    green:   '#a6cc75'
+    yellow:  '#fed33a'
+    blue:    '#81b2b1'
+    magenta: '#eb6c4e'
+    cyan:    '#81b2b1'
+    white:   '#eaeaea'
 
   bright:
-    black:   '#000000'
-    red:     '#ff4050'
-    green:   '#4fc414'
-    yellow:  '#e5bf00'
-    blue:    '#1fb0ff'
-    magenta: '#ed7eed'
-    cyan:    '#00e5e5'
-    white:   '#808080'
-
-# standardized palette:
-# jb-yellow      "#ffc66d"
-# jb-bluegreen   "#318495"
-# jb-magenta     "#9676ac"
-# jb-orange      "#c57825"
-# jb-red         "#8c0909"
-# jb-blue        "#7ca8c6"
-# jb-green       "#5e8759"
+    black:   '#666666'
+    red:     '#ff000b'
+    green:   '#c4ee94'
+    yellow:  '#e8e06d'
+    blue:    '#a5ebea'
+    magenta: '#ef8a50'
+    cyan:    '#a5ebea'
+    white:   '#ffffff'
 
 ###############################################################################
 # # Colors (Material)

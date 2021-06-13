@@ -3,6 +3,7 @@
 # For ranger, htop and other console progs in Qtile
 set -e COLUMNS  # -e = --erase
 set -e LINES
+set fish_prompt_pwd_dir_length 0
 
 ### EXPORTs ###
 set HOME (echo /home/$USER)
