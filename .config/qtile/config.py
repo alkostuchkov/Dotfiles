@@ -221,6 +221,8 @@ keys = [
     Key([], "XF86Display", lazy.spawn("lxrandr"), desc="Run lxrandr (choose monitor)"),
     Key([], "XF86ScreenSaver", lazy.spawn(f"{home}/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
     Key([], "XF86Battery", lazy.spawn("xfce4-power-manager-settings"), desc="Power manager settings"),
+    Key([mod], "F7", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle"), desc="Toggle audio mute"),
+    Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle"), desc="Toggle audio mute"),
 
 # <SUPER> + <F1-F12>
     # Brightness & Volume (extra step 5)

@@ -118,10 +118,12 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 set t_Co=256
 set background=dark
 " colorscheme gruvbox
-colorscheme predawn
+" colorscheme predawn
+" colorscheme nord
+" colorscheme materialbox
 " colorscheme monokai
 " let g:solarized_termcolors=256
-" colorscheme solarized
+colorscheme solarized
 " colorscheme darcula
 
 " GUI
@@ -231,6 +233,8 @@ call plug#begin('~/.vim/plugged')
     " Plug 'gko/vim-coloresque'
     " Plug 'etdev/vim-hexcolor'
     Plug 'ap/vim-css-color'
+    Plug 'godlygeek/tabular'
+    Plug 'plasticboy/vim-markdown'
 
     " Nice icons in the file explorer and file type status line.
     " Plug 'ryanoasis/vim-devicons'
