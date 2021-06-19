@@ -193,7 +193,9 @@ keys = [
 # <ALT> + KEYS
     KeyChord([alt], "m", [
         Key([], "c", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-edit-configs.sh"), desc="Run dmenu script for editing config files"),
-        Key([], "p", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-passmenu.sh"), desc="Run dmenu script for editing config files"),
+        Key([], "p", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-passmenu.sh"), desc="Run dmenu script for getting password"),
+        Key([], "n", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-passmenu-name.sh"), desc="Run dmenu script for getting username"),
+        Key([], "u", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-passmenu-url.sh"), desc="Run dmenu script for getting url"),
         Key([], "l", lazy.spawn(f"{home}/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
         Key([], "k", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-kill.sh"), desc="Kill chosen process"),
         Key([], "s", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-search.sh"), desc="Run chosen search engine"),

@@ -47,17 +47,17 @@ if [[ $typeit -eq 0 ]]; then
 	# pass show -c "$password" 2>/dev/null
     got_password=$(pass show $password)
     if [[ $? == 1 ]]; then
-        notify-send -t 3000 -i dialog-information "$password doesn't exist."
+        notify-send -t 5000 -i dialog-information "$password doesn't exist."
     elif [ $got_password ]; then
         for_notify=$(echo $password | cut -d "/" -f2)
         echo $got_password | xclip -selection clipboard
-        notify-send -t 3000 -i dialog-information "Copied $for_notify to clipboard.
+        notify-send -t 5000 -i dialog-information "Copied $for_notify to clipboard.
         Will clear in 30 seconds."
         sleep 30
         cat /dev/null | xclip -sel clip
-        notify-send -t 3000 -i dialog-information "Cleared."
+        notify-send -t 5000 -i dialog-information "Cleared."
     else
-        notify-send -t 3000 -i dialog-information "Bad Passphrase."
+        notify-send -t 5000 -i dialog-information "Bad Passphrase."
     fi
 else
 	pass show "$password" | { IFS= read -r pass; printf %s "$pass"; } | $xdotool
