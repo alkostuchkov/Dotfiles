@@ -45,10 +45,12 @@ password=$(printf '%s\n' "${password_files[@]}" | dmenu -i -l 10 -nf ${nf} -nb $
 
 if [[ $typeit -eq 0 ]]; then
 	# pass show -c "$password" 2>/dev/null
-    got_password=$(pass show $password)
+    all_data=$(pass show $password)  # because 'pass show' shows all data(url, username, etc) from the file
+    # got_password=$(echo $(pass show $password) | awk '{print $1}')
     if [[ $? == 1 ]]; then
         notify-send -t 5000 -i dialog-information "$password doesn't exist."
-    elif [[ $got_password ]]; then
+    elif [[ $all_data ]]; then
+        got_password=$(echo $all_data | awk '{print $1}')  # get only password from all_data
         for_notify=$(echo $password | cut -d "/" -f2)
         echo $got_password | xclip -selection clipboard
         notify-send -t 5000 -i dialog-information "Copied $for_notify to clipboard.
