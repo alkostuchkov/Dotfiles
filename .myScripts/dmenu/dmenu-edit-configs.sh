@@ -18,6 +18,8 @@ options=(
 "dmenu-edit-configs - $HOME/.myScripts/dmenu/dmenu-edit-configs.sh"
 "dmenu-kill - $HOME/.myScripts/dmenu/dmenu-kill.sh"
 "dmenu-passmenu - $HOME/.myScripts/dmenu/dmenu-passmenu.sh"
+"dmenu-passmenu-name - $HOME/.myScripts/dmenu/dmenu-passmenu-name.sh"
+"dmenu-passmenu-url - $HOME/.myScripts/dmenu/dmenu-passmenu-url.sh"
 "dmenu-search - $HOME/.myScripts/dmenu/dmenu-search.sh"
 "dmenu-system-exit - $HOME/.myScripts/dmenu/dmenu-system-exit.sh"
 "dmenu-unicode - $HOME/.myScripts/dmenu/dmenu-unicode.sh"

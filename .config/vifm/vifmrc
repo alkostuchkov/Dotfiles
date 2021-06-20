@@ -67,10 +67,10 @@ set norunexec
 " Selected color scheme
 " The following line will cause issues if using vifm.vim with regular vim.
 " Either use neovim or comment out the following line.
-colorscheme darcula
+" colorscheme darcula
 " colorscheme distrotube_corrected
 " colorscheme distrotube
-" colorscheme solarized-dark_corrected
+colorscheme solarized-dark_corrected
 
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M

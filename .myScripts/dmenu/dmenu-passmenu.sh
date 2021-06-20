@@ -48,7 +48,7 @@ if [[ $typeit -eq 0 ]]; then
     got_password=$(pass show $password)
     if [[ $? == 1 ]]; then
         notify-send -t 5000 -i dialog-information "$password doesn't exist."
-    elif [ $got_password ]; then
+    elif [[ $got_password ]]; then
         for_notify=$(echo $password | cut -d "/" -f2)
         echo $got_password | xclip -selection clipboard
         notify-send -t 5000 -i dialog-information "Copied $for_notify to clipboard.
