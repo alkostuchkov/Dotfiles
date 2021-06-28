@@ -16,6 +16,7 @@ export TERM="xterm-256color"
 export TERMINAL="alacritty"
 export BROWSER="firefox"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"  # $MANPAGER use batcat to read mans
+export RANGER_LOAD_DEFAULT_RC=FALSE  # to avoid loading ranger's config twice 
 # export BROWSER="qutebrowser"
 #export EDITOR="emacs -nw"
 # export QT_QPA_PLATFORMTHEME="qt5ct"

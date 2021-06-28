@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Avidemux
+Name=Avidemux (AppImage)
 # Exec=/home/alexander/Programs/AppImageApplications/Avidemux.appImage
 Exec="/home/alexander/.myScripts/runAvidemuxDiscreteGr.sh"
 Icon=/home/alexander/Pictures/Logo/avidemux.png

@@ -15,6 +15,7 @@ set VISUAL "gvim"
 set TERM "xterm-256color"
 set TERMINAL "alacritty"
 set BROWSER "firefox"
+set RANGER_LOAD_DEFAULT_RC FALSE  # to avoid loading ranger's config twice
 # EDITOR="vim" crontab -e                          # $EDITOR use Vim to edit crontab
 # select-editor  (~/.selected-editor)
 set PATH $PATH $HOME/.cargo/bin $HOME/.config/vifm/scripts                   # PATH for exa in cargo
@@ -522,3 +523,6 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
   # # Bottom
   # echo -n $pcolor$__fish_prompt_char $normal
 # end
+
+# opam configuration
+source /home/alexander/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true

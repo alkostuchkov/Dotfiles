@@ -44,8 +44,8 @@ else
     for_notify=$(echo $username | cut -d "/" -f2)
     echo $got_username | xclip -selection clipboard
     notify-send -t 5000 -i dialog-information "Copied $for_notify to clipboard.
-    Will clear in 30 seconds."
-    sleep 30
+    Will clear in 45 seconds."
+    sleep 45
     cat /dev/null | xclip -sel clip
     notify-send -t 5000 -i dialog-information "Cleared."
 fi
