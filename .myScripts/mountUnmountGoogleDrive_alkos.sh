@@ -1,15 +1,25 @@
-#!/bin/bash
-# Mounts GoogleDrive_auto
+#!/usr/bin/env bash
 
-google-drive-ocamlfuse -label alkos ~/GoogleDrive_alkos/ 2> ~/.myScripts/GoogleDriveStatus_alkos.txt 1> ~/.myScripts/GoogleDriveStatus_alkos.txt
-isMounted=`cat ~/.myScripts/GoogleDriveStatus_alkos.txt`
-if [ -z $isMounted ] #if not mounted (no errors - GoogleDriveStatus.txt is empty)
-	then
-		notify-send -i dialog-information "GoogleDrive_alkos mounted successfully"
-		# notify-send -i dialog-information "$isMounted"
-    else #if mounted
-		# notify-send -i dialog-information "$isMounted"
-		fusermount -u ~/GoogleDrive_alkos/  #unmount GoogleDrive
-		# echo "" > ~/.myScripts/GoogleDriveStatus.txt
-		notify-send -i dialog-information "GoogleDrive_alkos unmounted successfully"
+gdrive_name="GoogleDrive_alkos"
+gdrive_path="$HOME/GoogleDrive_alkos/"
+gdrive_statusfile_path="$HOME/.myScripts/GoogleDriveStatus_alkos.txt"
+is_mounted=$(mount | grep "$gdrive_name")
+
+if [[ "$is_mounted" ]]; then  # if mounted
+    notify-send -i dialog-information -t 3000 "$gdrive_name" "is already mounted. Try to unmount"
+    fusermount -u "$gdrive_path" 2> "$gdrive_statusfile_path" 1> "$gdrive_statusfile_path"  # try to unmount GoogleDrive
+    result_unmount=$(cat "$gdrive_statusfile_path" | cut -d":" -f3)
+    if [[ -z "$result_unmount" ]]; then
+        notify-send -i dialog-information -t 3000 "$gdrive_name" "unmounted successfully"
+    else
+        notify-send -i dialog-information -t 3000 "$gdrive_name" "Can't unmount: $result_unmount"
+    fi
+else  # if not mounted
+    google-drive-ocamlfuse -label alkos "$gdrive_path"  # try to mount GoogleDrive
+    if [[ "$?" == 0 ]]; then
+        notify-send -i dialog-information -t 3000 "$gdrive_name" "mounted successfully"
+    else
+        notify-send -i dialog-information -t 3000 "Error" "Failed to mount $gdrive_name"
+    fi
 fi
+

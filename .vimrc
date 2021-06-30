@@ -145,7 +145,7 @@ if has("gui_running")
     set noguipty
     " set guifont=Source_Code_Pro:h13:cRUSSIAN:qDRAFT
     " set gfn=JetBrains_Mono_Regular:h12:cRUSSIAN:qDRAFT
-    set guifont=Source\ Code\ Pro\ 14.5
+    " set guifont=Source\ Code\ Pro\ 14.5
     " set guifont=mononoki\ 14.5
     " set guifont=Fira\ Code\ Light\ 14
 
@@ -165,9 +165,10 @@ if has("gui_running")
     " set guifont=Sarasa\ Mono\ SC\ Nerd\ 15.5
     " set guifont=JetBrainsMono\ Regular\ 14
     " set guifont=JetBrainsMonoNL\ Light\ 14
+    " set guifont=JetBrainsMono\ Nerd\ Font\ 14
+    set guifont=JetBrainsMono\ Light\ 14
     " set guifont=SauceCodePro\ Nerd\ Font\ 16
 
-    " set guifont=JetBrainsMono\ ExtraLight\ 14
     " set guifont=Monaco\ 13
     " set guifont=Ligamonacop\ 13
 " else
@@ -234,7 +235,8 @@ call plug#begin('~/.vim/plugged')
     " Plug 'etdev/vim-hexcolor'
     Plug 'ap/vim-css-color'
     Plug 'godlygeek/tabular'
-    Plug 'plasticboy/vim-markdown'
+    " Plug 'plasticboy/vim-markdown'
+    " Plug 'iamcco/markdown-preview.vim'
 
     " Nice icons in the file explorer and file type status line.
     " Plug 'ryanoasis/vim-devicons'
@@ -595,11 +597,9 @@ inoremap <C-c>r <Esc>:right<CR>a
 nnoremap <C-c>r :right<CR>
 
 " Copy/Cut/Past from/to system buffer
-vnoremap <C-c> "+y
 vnoremap <C-x> "+d
-" map <C-p> "+p
-map <C-p> "+P
 vnoremap <C-c> "*y :let @+=@*<CR>
+map <C-p> "+p
 " vnoremap <C-c>y "+y
 " vnoremap <C-c>x "+d
 " nnoremap <C-c>p "+p

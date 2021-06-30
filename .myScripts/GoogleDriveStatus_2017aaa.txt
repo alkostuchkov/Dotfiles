@@ -1,2 +1,0 @@
-fuse: mountpoint is not empty
-fuse: if you are sure this is safe, use the 'nonempty' mount option

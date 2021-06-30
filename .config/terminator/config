@@ -33,28 +33,6 @@
     palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
     use_system_font = False
     copy_on_selection = True
-  [[Gruvbox_dark_TrimMono_13]]
-    background_color = "#282828"
-    background_darkness = 0.97
-    cursor_color = "#aaaaaa"
-    font = Trim Mono Medium 13
-    foreground_color = "#ebdbb2"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
-    use_system_font = False
-    copy_on_selection = True
-  [[Gruvbox_dark_OperatorMono_14_5]]
-    background_color = "#282828"
-    background_darkness = 0.97
-    cursor_color = "#aaaaaa"
-    font = Operator Mono weight=330 14.5
-    foreground_color = "#ebdbb2"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
-    use_system_font = False
-    copy_on_selection = True
   [[Gruvbox_dark_Hack_13_5]]
     background_color = "#282828"
     background_darkness = 0.97
@@ -92,29 +70,7 @@
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
-    font = Monaco for Powerline 13
-    foreground_color = "#ebdbb2"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
-    use_system_font = False
-    copy_on_selection = True
-  [[Gruvbox_dark_VictorMono_13]]
-    background_color = "#282828"
-    background_darkness = 0.97
-    cursor_color = "#aaaaaa"
-    font = Victor Mono 13
-    foreground_color = "#ebdbb2"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
-    use_system_font = False
-    copy_on_selection = True
-  [[Gruvbox_dark_JetBrainsMono_14]]
-    background_color = "#282828"
-    background_darkness = 0.97
-    cursor_color = "#aaaaaa"
-    font = JetBrains Mono 14
+    font = Monaco for Powerline 13.5
     foreground_color = "#ebdbb2"
     show_titlebar = False
     scrollbar_position = hidden
@@ -159,17 +115,6 @@
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
     font = Menlo for Powerline 13.5
-    foreground_color = "#ebdbb2"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
-    use_system_font = False
-    copy_on_selection = True
-  [[Gruvbox_dark_ConsolasForPowerline_14_5]]
-    background_color = "#282828"
-    background_darkness = 0.97
-    cursor_color = "#aaaaaa"
-    font = Consolas for Powerline 14.5
     foreground_color = "#ebdbb2"
     show_titlebar = False
     scrollbar_position = hidden
@@ -290,59 +235,39 @@
     use_system_font = False
     copy_on_selection = True
   [[SauceCodePro_Nerd_14.5]]
-    background_color = "#282828"
+    background_color = "#002b36"
     cursor_color = "#aaaaaa"
     font = SauceCodePro Nerd Font 14.5
-    foreground_color = "#ebdbb2"
+    foreground_color = "#839496"
     show_titlebar = False
     scrollbar_position = hidden
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     use_system_font = False
     copy_on_selection = True
   [[FiraCode_14]]
-    background_color = "#282828"
+    background_color = "#002b36"
     cursor_color = "#aaaaaa"
-    font = FiraCode Nerd Font 14
-    foreground_color = "#ebdbb2"
+    font = Fira Code 14
+    foreground_color = "#839496"
     show_titlebar = False
     scrollbar_position = hidden
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     use_system_font = False
     copy_on_selection = True
   [[FiraMono_14]]
-    background_color = "#282828"
+    background_color = "#002b36"
     cursor_color = "#aaaaaa"
     font = Fira Mono 14
-    foreground_color = "#ebdbb2"
+    foreground_color = "#839496"
     show_titlebar = False
     scrollbar_position = hidden
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     use_system_font = False
     copy_on_selection = True
   [[PTMono_15]]
     background_color = "#282828"
     cursor_color = "#aaaaaa"
     font = PT Mono 15
-    foreground_color = "#ebdbb2"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
-    use_system_font = False
-    copy_on_selection = True
-  [[Gruvbox_dark_SourceCodePro_14.5]]
-    background_color = "#282828"
-    cursor_color = "#aaaaaa"
-    font = Source Code Pro 14.5
-    foreground_color = "#ebdbb2"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
-    use_system_font = False
-    copy_on_selection = True
-  [[Gruvbox_dark_mononoki_16]]
-    background_color = "#282828"
-    cursor_color = "#aaaaaa"
-    font = mononoki 16
     foreground_color = "#ebdbb2"
     show_titlebar = False
     scrollbar_position = hidden
@@ -381,15 +306,122 @@
     palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
     use_system_font = False
     copy_on_selection = True
-  [[Gruvbox_dark_SarasaMonoSCNerd_15.5]]
-    background_color = "#282828"
-    background_darkness = 0.97
+  [[Consolas_Nerd_15_5]]
+    background_color = "#002b36"
     cursor_color = "#aaaaaa"
-    font = Sarasa Mono SC Nerd 15.5
-    foreground_color = "#ebdbb2"
+    font = Consolas NF 15.5
+    foreground_color = "#839496"
     show_titlebar = False
     scrollbar_position = hidden
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_system_font = False
+    copy_on_selection = True
+  [[JetBrainsMono_Light_14]]
+    background_color = "#002b36"
+    background_darkness = 0.97
+    cursor_color = "#aaaaaa"
+    font = JetBrains Mono Light 14
+    foreground_color = "#839496"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_system_font = False
+    copy_on_selection = True
+  [[JetBrainsMono_Nerd_14]]
+    background_color = "#002b36"
+    cursor_color = "#aaaaaa"
+    font = JetBrainsMono Nerd Font 14
+    foreground_color = "#839496"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_system_font = False
+    copy_on_selection = True
+  [[MonoidNF_13]]
+    allow_bold = False
+    background_color = "#002b36"
+    background_darkness = 0.97
+    cursor_color = "#aaaaaa"
+    font = Monoid Nerd Font Semi-Condensed 12.5
+    foreground_color = "#839496"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_system_font = False
+    copy_on_selection = True
+  [[SarasaMonoSCNerd_Light_15.5]]
+    background_color = "#002b36"
+    background_darkness = 0.97
+    cursor_color = "#aaaaaa"
+    font = Sarasa Mono SC Nerd Light 15.5
+    foreground_color = "#839496"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_system_font = False
+    copy_on_selection = True
+  [[TrimMono_14]]
+    background_color = "#002b36"
+    background_darkness = 0.97
+    cursor_color = "#aaaaaa"
+    font = Trim Mono 14
+    foreground_color = "#839496"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_system_font = False
+    copy_on_selection = True
+  [[Gintronic_14]]
+    background_color = "#002b36"
+    cursor_color = "#aaaaaa"
+    font = Gintronic 14
+    foreground_color = "#839496"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_system_font = False
+    copy_on_selection = True
+  [[MonoLisa_13]]
+    background_color = "#002b36"
+    background_darkness = 0.97
+    cursor_color = "#aaaaaa"
+    font = MonoLisa 13
+    foreground_color = "#839496"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_system_font = False
+    copy_on_selection = True
+  [[OperatorMono_15]]
+    allow_bold = False
+    background_color = "#002b36"
+    background_darkness = 0.97
+    cursor_color = "#aaaaaa"
+    font = Operator Mono weight=325 15
+    foreground_color = "#839496"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_system_font = False
+    copy_on_selection = True
+  [[mononoki_16]]
+    background_color = "#002b36"
+    cursor_color = "#aaaaaa"
+    font = mononoki 15
+    foreground_color = "#839496"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_system_font = False
+    copy_on_selection = True
+  [[SarasaMonoSCNerd_15]]
+    background_color = "#002b36"
+    cursor_color = "#aaaaaa"
+    font = Sarasa Mono SC Nerd 15
+    foreground_color = "#839496"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     use_system_font = False
     copy_on_selection = True
 [layouts]
