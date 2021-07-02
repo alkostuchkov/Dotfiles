@@ -353,7 +353,7 @@
     background_color = "#002b36"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
-    font = Sarasa Mono SC Nerd Light 15.5
+    font = Sarasa Mono SC Nerd Light 15
     foreground_color = "#839496"
     show_titlebar = False
     scrollbar_position = hidden

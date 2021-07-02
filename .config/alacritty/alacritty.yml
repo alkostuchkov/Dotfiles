@@ -112,8 +112,8 @@ font:
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
-    # family: JetBrainsMono Nerd Font
-    family: JetBrains Mono
+    family: JetBrainsMono Nerd Font
+    # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
     # family: TerminessTTF Nerd Font
@@ -140,8 +140,8 @@ font:
     # family: mononoki
 
     # The `style` can be specified to pick a specific face.
-    style: Light  # for JetBrains Mono
-    # style: Regular
+    # style: Light  # for JetBrains Mono
+    style: Regular
 
   # Bold font face
   bold:
@@ -152,8 +152,8 @@ font:
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
-    # family: JetBrainsMono Nerd Font
-    family: JetBrains Mono
+    family: JetBrainsMono Nerd Font
+    # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
     # family: TerminessTTF Nerd Font
@@ -180,8 +180,9 @@ font:
     # family: mononoki
 
     # The `style` can be specified to pick a specific face.
-    style: Medium  # for JetBrains Mono
-    # style: Bold
+    # style: Semibold  # for Sarasa Mono SC Nerd
+    # style: Medium  # for JetBrains Mono
+    style: Bold
 
   # Italic font face
   italic:
@@ -192,8 +193,8 @@ font:
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
-    # family: JetBrainsMono Nerd Font
-    family: JetBrains Mono
+    family: JetBrainsMono Nerd Font
+    # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofuritalic Nerd Font Mono
     # family: TerminessTTF Nerd Font
@@ -220,8 +221,8 @@ font:
     # family: mononoki
 
     # The `style` can be specified to pick a specific face.
-    style: Light Italic  # for JetBrains Mono
-    # style: Italic
+    # style: Light Italic  # for JetBrains Mono
+    style: Italic
 
   # Bold italic font face
   bold_italic:
@@ -233,8 +234,8 @@ font:
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
-    # family: JetBrainsMono Nerd Font
-    family: JetBrains Mono
+    family: JetBrainsMono Nerd Font
+    # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofuritalic Nerd Font Mono
     # family: TerminessTTF Nerd Font
@@ -259,12 +260,14 @@ font:
     # family: mononoki
 
     # The `style` can be specified to pick a specific face.
-    style: Medium Italic  # for JetBrains Mono
-    # style: Bold Italic
+    # style: Semibold Italic  # for Sarasa Mono SC Nerd
+    # style: Medium Italic  # for JetBrains Mono
+    style: Bold Italic
 
   # Point size
   size: 14  # for JetBrains Mono
-  # size: 14.5
+  # size: 14.5  # for SaurceCodePro Nerd
+  # size: 15.5
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.

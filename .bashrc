@@ -116,7 +116,7 @@ alias lle='lse -l'
 alias ls='lsd --group-dirs=first'
 alias ll='lsd --blocks=permission,size,user,group,date,name --group-dirs=first --date="+%d %b %H:%M"'
 alias la='ll -a'
-alias bat='bat --theme gruvbox-dark'
+# alias bat='bat --theme gruvbox-dark'  # theme moved to the ~/.config/bat/config
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'

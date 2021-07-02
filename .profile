@@ -56,8 +56,8 @@ export RANGER_LOAD_DEFAULT_RC=FALSE  # to avoid loading ranger's config twice
 # export BROWSER="qutebrowser"
 #export EDITOR="emacs -nw"
 # export QT_QPA_PLATFORMTHEME="qt5ct"
-# export MANPAGER="sh -c 'col -bx | bat -l man -p'"  # $MANPAGER use batcat to read mans
-export MANPAGER="sh -c 'col -bx | bat --theme gruvbox-dark -l man -p'"  # $MANPAGER use batcat to read mans
+# export MANPAGER="sh -c 'col -bx | bat --theme gruvbox-dark -l man -p'"  # $MANPAGER use batcat to read mans
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"  # theme moved to the ~/.config/bat/config
 export NVM_DIR="$HOME/.nvm"
 
 #export LANG=en_US.UTF8
