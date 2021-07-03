@@ -112,14 +112,13 @@ font:
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
-    family: JetBrainsMono Nerd Font
+    # family: JetBrainsMono Nerd Font
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
     # family: TerminessTTF Nerd Font
-    # family: SauceCodePro Nerd Font
     # family: SauceCodePro Nerd Font Mono
-    # family: M+ 1mn
+    family: M+ 1mn
 
     # family: Sarasa Mono SC Nerd
     # family: Source Code Pro
@@ -152,14 +151,13 @@ font:
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
-    family: JetBrainsMono Nerd Font
+    # family: JetBrainsMono Nerd Font
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
     # family: TerminessTTF Nerd Font
-    # family: SauceCodePro Nerd Font
     # family: SauceCodePro Nerd Font Mono
-    # family: M+ 1mn
+    family: M+ 1mn
 
     # family: Sarasa Mono SC Nerd
     # family: Source Code Pro
@@ -193,14 +191,13 @@ font:
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
-    family: JetBrainsMono Nerd Font
+    # family: JetBrainsMono Nerd Font
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofuritalic Nerd Font Mono
     # family: TerminessTTF Nerd Font
     # family: SauceCodePro Nerd Font Mono
-    # family: SauceCodePro Nerd Font
-    # family: M+ 1mn
+    family: M+ 1mn
 
     # family: Sarasa Mono SC Nerd
     # family: Source Code Pro
@@ -234,12 +231,13 @@ font:
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
-    family: JetBrainsMono Nerd Font
+    # family: JetBrainsMono Nerd Font
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofuritalic Nerd Font Mono
     # family: TerminessTTF Nerd Font
-    # family: SauceCodePro Nerd Font
+    # family: SauceCodePro Nerd Font Mono
+    family: M+ 1mn
 
     # family: Sarasa Mono SC Nerd
     # family: Source Code Pro
@@ -265,15 +263,16 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 14  # for JetBrains Mono
+  # size: 14  # for JetBrains Mono
   # size: 14.5  # for SaurceCodePro Nerd
   # size: 15.5
+  size: 16
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   offset:
     x: 0
-    y: 0
+    y: -4
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the right,
