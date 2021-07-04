@@ -47,6 +47,7 @@ MouseWheelZoomEnabled=true
 OpenLinksByDirectClickEnabled=false
 PasteFromClipboardEnabled=false
 PasteFromSelectionEnabled=true
+TextEditorCmd=5
 TrimLeadingSpacesInSelectedText=false
 TrimTrailingSpacesInSelectedText=false
 TripleClickMode=0

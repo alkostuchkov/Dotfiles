@@ -1,0 +1,30 @@
+:root
+{
+    /* --default-font: 'Ubuntu', serif !important; */
+    --default-font: 'Ubuntu' !important;
+    --font-monospace: 'M+ 1mn' !important;
+    --font-preview: 'M+ 1mn';
+    /* --font-preview: 'Ubuntu'; */
+    /* --font-code-preview: 'UbuntuMono Nerd Font'; */
+    --font-code-preview: 'M+ 1mn';
+    --font-code-editor: 'M+ 1mn';
+}
+
+/* preview */
+.markdown-preview-view
+{
+    font-family: var(--font-preview) !important;
+}
+
+/* in-line block for preview */
+code {
+    font-family: var(--font-code-preview) !important;
+    /* font-size: 18px !important; */
+}
+
+/* editor */
+.markdown-source-view 
+{
+    font-family: var(--font-code-editor) !important;
+}
+
