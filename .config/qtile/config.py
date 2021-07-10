@@ -200,6 +200,7 @@ keys = [
         Key([], "k", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-kill.sh"), desc="Kill chosen process"),
         Key([], "s", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-search.sh"), desc="Run chosen search engine"),
         Key([], "e", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-unicode.sh"), desc="Choose an emoji"),
+        Key([], "t", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-transcription.sh"), desc="Choose a transcription's symbol"),
         Key([], "x", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-system-exit.sh"), desc="System exit menu")],
         mode="Dmenu"
     ),

@@ -452,7 +452,10 @@ exec --no-startup-id conky -c $HOME/.myScripts/conky/conkyrc_i3 &
 exec --no-startup-id $HOME/Programs/CheckEmail/CheckEmail &
 exec --no-startup-id udiskie &
 exec --no-startup-id xiccd &
+exec --no-startup-id $HOME/.myScripts/swapMenuAndSuper_R.sh
+# exec --no-startup-id sleep 10
 # exec --no-startup-id xmodmap -e "keycode 135 = Super_R" &  # Map the menu button to right super
+
 # exec --no-startup-id megasync &
 # # exec --no-startup-id dropbox start -i &
 # # exec --no-startup-id $HOME/Programs/MEGAsync/megasync &
