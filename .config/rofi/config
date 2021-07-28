@@ -2,5 +2,6 @@
 rofi.modi: window,run,ssh,drun
 ! rofi.font: UbuntuMono Nerd Font 16
 rofi.font: Sarasa Mono SC Nerd 16
+! rofi.font: mplus Nerd Font 18
 rofi.width: 60
 rofi.theme: /usr/share/rofi/themes/lb.rasi
