@@ -820,13 +820,11 @@ floating_layout = layout.Floating(float_rules=[
     Match(title="Close Button Action", wm_class="tixati"),  # Tixati
     Match(title="Confirm File Replacing", wm_class="pcmanfm"),
     Match(title="Terminator Preferences", wm_class="terminator"),
-    #  Match(title="win0", wm_class="jetbrains-pycharm-ce"),  # PyCharm
-    #  Match(title="Welcome to PyCharm", wm_class="jetbrains-pycharm-ce"),
-    #  Match(title="License Activation", wm_class="jetbrains-pycharm-ce"),  # PyCharm
-    Match(title="win0"),  # PyCharm
-    Match(title="Welcome to PyCharm"),
+    Match(title="win0", wm_class="jetbrains-pycharm-ce"),  # PyCharm
+    Match(title="Welcome to PyCharm", wm_class="jetbrains-pycharm-ce"),
+    Match(title="License Activation", wm_class="jetbrains-pycharm-ce"),  # PyCharm
+    Match(title="Settings", wm_class="jetbrains-pycharm-ce"),  # PyCharm
     Match(title="Update", wm_class="com-intellij-updater-Runner"),  # PyCharm's updates
-    Match(title="License Activation"),  # PyCharm
     Match(wm_class="nm-connection-editor"),
     Match(wm_class="megasync"),
     Match(wm_class="minitube"),
