@@ -824,16 +824,18 @@ floating_layout = layout.Floating(float_rules=[
     Match(title="Welcome to PyCharm", wm_class="jetbrains-pycharm-ce"),
     Match(title="License Activation", wm_class="jetbrains-pycharm-ce"),  # PyCharm
     Match(title="Settings", wm_class="jetbrains-pycharm-ce"),  # PyCharm
+    Match(title="Python Interpreters", wm_class="jetbrains-pycharm-ce"),  # PyCharm
+    Match(title="Open Project", wm_class="jetbrains-pycharm-ce"),  # PyCharm
     Match(title="Update", wm_class="com-intellij-updater-Runner"),  # PyCharm's updates
     Match(wm_class="nm-connection-editor"),
     Match(wm_class="megasync"),
     Match(wm_class="minitube"),
     Match(wm_class="CheckEmail"),
-    Match(wm_class="GParted"),
-    Match(wm_class="keepass2"),
+    #  Match(wm_class="GParted"),
+    #  Match(wm_class="keepass2"),
     Match(wm_class="pinentry-gtk-2"),
-    Match(wm_class="vlc"),
-    Match(wm_class="smplayer"),
+    #  Match(wm_class="vlc"),
+    #  Match(wm_class="smplayer"),
     Match(wm_class="deadbeef"),
     Match(wm_class="galculator"),
     #  {"wmclass": "VirtualBox Manager"},
@@ -847,7 +849,7 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class="gdebi-gtk"),
     Match(wm_class="volumeicon"),
     Match(wm_class="gcolor3"),
-    Match(wm_class="gvim"),
+    #  Match(wm_class="gvim"),
     Match(wm_class="qt5ct"),
     Match(wm_class="lxappearance"),
     Match(wm_class="confirmreset"),  # gitk

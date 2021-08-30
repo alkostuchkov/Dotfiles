@@ -23,6 +23,7 @@ file:///home/alexander/Yandex.Disk Yandex.Disk
 file:///home/alexander/.dotfiles.git .dotfiles.git
 file:///home/alexander/.myScripts .myScripts
 file:///home/alexander/.config .config
+file:///home/alexander/.pyenv
 file:///home/alexander/.config/qtile qtile
 file:///home/alexander/.config/i3 i3
 file:///home/alexander/.config/i3pystatus i3pystatus

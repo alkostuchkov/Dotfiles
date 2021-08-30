@@ -215,26 +215,6 @@
     palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
     use_system_font = False
     copy_on_selection = True
-  [[Iosevka_Menlo_15]]
-    background_color = "#282828"
-    cursor_color = "#aaaaaa"
-    font = Iosevka Fixed SS04 15
-    foreground_color = "#ebdbb2"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
-    use_system_font = False
-    copy_on_selection = True
-  [[Iosevka_Term_15]]
-    background_color = "#282828"
-    cursor_color = "#aaaaaa"
-    font = Iosevka Term 15
-    foreground_color = "#ebdbb2"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
-    use_system_font = False
-    copy_on_selection = True
   [[SauceCodePro_Nerd_14.5]]
     background_color = "#002b36"
     cursor_color = "#aaaaaa"
@@ -340,17 +320,6 @@
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     use_system_font = False
     copy_on_selection = True
-  [[SarasaMonoSCNerd_Light_15.5]]
-    background_color = "#002b36"
-    background_darkness = 0.97
-    cursor_color = "#aaaaaa"
-    font = Sarasa Mono SC Nerd Light 15
-    foreground_color = "#839496"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
-    use_system_font = False
-    copy_on_selection = True
   [[TrimMono_14]]
     background_color = "#002b36"
     background_darkness = 0.97
@@ -429,6 +398,37 @@
     background_color = "#002b36"
     cursor_color = "#aaaaaa"
     font = MonacoB Nerd Font Mono 14
+    foreground_color = "#839496"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_system_font = False
+    copy_on_selection = True
+  [[SarasaMonoSCNerd_Light_15]]
+    background_color = "#002b36"
+    background_darkness = 0.97
+    cursor_color = "#aaaaaa"
+    font = Sarasa Mono SC Nerd Light 15
+    foreground_color = "#839496"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_system_font = False
+    copy_on_selection = True
+  [[Iosevka_Term_Light_15]]
+    background_color = "#002b36"
+    cursor_color = "#aaaaaa"
+    font = Iosevka Term Light 15
+    foreground_color = "#839496"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    use_system_font = False
+    copy_on_selection = True
+  [[Iosevka_Term_15]]
+    background_color = "#002b36"
+    cursor_color = "#aaaaaa"
+    font = Iosevka Term 15
     foreground_color = "#839496"
     show_titlebar = False
     scrollbar_position = hidden
