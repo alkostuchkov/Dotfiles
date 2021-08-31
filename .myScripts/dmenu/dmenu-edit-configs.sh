@@ -35,7 +35,7 @@ options=(
 "profile - $HOME/.profile"
 "qtile - $HOME/.config/qtile/config.py"
 "qutebrowser - $HOME/.config/qutebrowser/config.py"
-"rofi - $HOME/.config/rofi/config"
+"rofi - $HOME/.config/rofi/config.rasi"
 "udiskie - $HOME/.config/udiskie/config.yml"
 "vifm - $HOME/.config/vifm/vifmrc"
 "vim - $HOME/.vimrc"
