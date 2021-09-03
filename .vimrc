@@ -117,13 +117,13 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 "###############################################################################
 set t_Co=256
 set background=dark
-" colorscheme gruvbox
+colorscheme gruvbox
 " colorscheme predawn
 " colorscheme nord
 " colorscheme materialbox
 " colorscheme monokai
 " let g:solarized_termcolors=256
-colorscheme solarized
+" colorscheme solarized
 " colorscheme darcula
 
 " GUI
