@@ -15,5 +15,6 @@ notify-send -i dialog-information "$discreteCard : $turks_hex" "activated"
 #DRI_PRIME=1 glxinfo | grep "OpenGL renderer"
 
 # Start Genymotion with discret graphics
-DRI_PRIME=1 ~/Programs/genymotion/genymotion 
+DRI_PRIME=1 /usr/bin/genymotion 
+# DRI_PRIME=1 ~/Programs/genymotion/genymotion
 # DRI_PRIME=1 /home/alexander/Programs/genymotion/genymotion 
