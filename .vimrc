@@ -117,7 +117,8 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 "###############################################################################
 set t_Co=256
 set background=dark
-colorscheme gruvbox
+colorscheme gruvbox-material
+" colorscheme gruvbox
 " colorscheme predawn
 " colorscheme nord
 " colorscheme materialbox

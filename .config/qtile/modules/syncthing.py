@@ -59,7 +59,10 @@ class Syncthing(base.ThreadPoolText):
 
     def _run_webUI(self):
         """Starts Syncthing Web UI."""
-        os.system("xdg-open 'http://127.0.0.1:8384/'") 
+        #  subprocess.run(["xdg-open", "http://127.0.0.1:8384/"])
+        #  subprocess.Popen(["xdg-open", "http://127.0.0.1:8384/"])
+        #  os.system("xdg-open http://127.0.0.1:8384/ &")
+        os.system("xdg-open 'http://127.0.0.1:8384/'")
 
     def _change_status(self):
         """Turns on/off Syncthing."""
