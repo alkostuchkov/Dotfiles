@@ -15,7 +15,7 @@
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
-    font = Sarasa Mono SC Nerd 15
+    font = JetBrainsMono Nerd Font 14
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -24,10 +24,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[NotoSansMono_13]]
-    font = NotoSansMono Nerd Font 13
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = NotoSansMono Nerd Font 13
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -36,10 +36,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[Hack_13_5]]
-    font = Hack 13.5
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = Hack 13.5
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -48,10 +48,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[SFMono_13_5]]
-    font = SF Mono Extra-Condensed 13.5
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = SF Mono Extra-Condensed 13.5
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -60,10 +60,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[CodeNewRoman_14]]
-    font = "Code New Roman, 14"
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = "Code New Roman, 14"
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -72,10 +72,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[Monaco_13]]
-    font = Monaco for Powerline 13.5
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = Monaco for Powerline 13.5
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -84,10 +84,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[DejaVuSansBook_13]]
-    font = DejaVu Sans Mono for Powerline 13
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = DejaVu Sans Mono for Powerline 13
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -96,10 +96,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[InconsolataLGC_13]]
-    font = Inconsolata LGC Medium 13
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = Inconsolata LGC Medium 13
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -108,10 +108,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[Menlo_13_5]]
-    font = Menlo 13.5
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = Menlo 13.5
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -120,10 +120,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[MenloForPowerline_13_5]]
-    font = Menlo for Powerline 13.5
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = Menlo for Powerline 13.5
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -132,10 +132,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[SFMonoForPowerline_13]]
-    font = SF Mono Powerline 13
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = SF Mono Powerline 13
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -144,10 +144,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[Roboto Mono_14]]
-    font = Roboto Mono for Powerline 14
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = Roboto Mono for Powerline 14
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -156,10 +156,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[M+_1mn_15]]
-    font = M+ 1mn 15
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = M+ 1mn 15
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -168,10 +168,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[M+_1mn_cyr_15]]
-    font = mplus Nerd Font 15
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = mplus Nerd Font 15
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -179,11 +179,11 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[Grubbox_dark_M+_1m_cyr_15]]
-    font = M+ 1m 15
+  [[M+_1m_cyr_15]]
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = M+ 1m 15
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -192,10 +192,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[ComicMono_14]]
-    font = Comic Mono 14
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = Comic Mono 14
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -204,10 +204,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[Comic-Shanns_15]]
-    font = Comic Shanns 15
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = Comic Shanns 15
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -216,10 +216,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[Iosevka_Ubuntu_15]]
-    font = Iosevka Fixed SS12 15
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = Iosevka Fixed SS12 15
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -228,10 +228,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[Iosevka_SourceCodePro_15]]
-    font = Iosevka Fixed SS09 15
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = Iosevka Fixed SS09 15
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -240,10 +240,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[SauceCodePro_Nerd_14.5]]
-    font = SauceCodePro Nerd Font 14.5
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = SauceCodePro Nerd Font 14.5
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -252,10 +252,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[FiraMono_14]]
-    font = Fira Mono 14
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = Fira Mono 14
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -264,10 +264,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[PTMono_15]]
-    font = PT Mono 15
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = PT Mono 15
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -276,10 +276,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[Caskaydia_15]]
-    font = CaskaydiaCove Nerd Font Mono 15
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = CaskaydiaCove Nerd Font Mono 15
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -288,10 +288,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[CascadiaMono_14_5]]
-    font = Cascadia Mono 14.5
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = Cascadia Mono 14.5
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -300,10 +300,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[UbuntuMono_16]]
-    font = UbuntuMono Nerd Font 16
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = UbuntuMono Nerd Font 16
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -312,10 +312,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[Consolas_Nerd_15_5]]
-    font = Consolas NF 15.5
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = Consolas NF 15.5
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -324,10 +324,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[JetBrainsMono_Light_14]]
-    font = JetBrains Mono Light 14
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = JetBrains Mono Light 14
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -336,10 +336,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[JetBrainsMono_Nerd_14]]
-    font = JetBrainsMono Nerd Font 14
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = JetBrainsMono Nerd Font 14
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -348,10 +348,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[MonoidNF_13]]
-    font = Monoid Nerd Font Semi-Condensed 12.5
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = Monoid Nerd Font Semi-Condensed 12.5
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -360,10 +360,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[TrimMono_14]]
-    font = Trim Mono 14
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = Trim Mono 14
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -372,10 +372,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[Gintronic_14]]
-    font = Gintronic 14
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = Gintronic 14
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -384,10 +384,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[MonoLisa_13]]
-    font = MonoLisa 13
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = MonoLisa 13
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -396,10 +396,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[OperatorMono_15]]
-    font = Operator Mono weight=325 15
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = Operator Mono weight=325 15
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -408,10 +408,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[mononoki_16]]
-    font = mononoki 15
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = mononoki 15
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -420,10 +420,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[SarasaMonoSCNerd_15]]
-    font = Sarasa Mono SC Nerd 15
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = Sarasa Mono SC Nerd 15
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -432,10 +432,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[FiraCode_Nerd_14]]
-    font = FiraCode Nerd Font 14
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = FiraCode Nerd Font 14
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -444,10 +444,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[MonacoB_Nerd_14]]
-    font = MonacoB Nerd Font Mono 14
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = MonacoB Nerd Font Mono 14
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -456,10 +456,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[SarasaMonoSCNerd_Light_15]]
-    font = Sarasa Mono SC Nerd Light 15
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = Sarasa Mono SC Nerd Light 15
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -468,10 +468,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[Iosevka_Term_Light_15]]
-    font = Iosevka Term Light 15
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = Iosevka Term Light 15
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -480,10 +480,10 @@
     bold_is_bright = True
     copy_on_selection = True
   [[Iosevka_Term_15]]
-    font = Iosevka Term 15
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
+    font = Iosevka Term 15
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden

@@ -76,7 +76,8 @@ keys = [
     Key([mod], "d", lazy.spawn("dmenu_run -nb #222B2E -nf #09DBC9 -sb #009185 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
 #  Key([mod], "d", lazy.spawn("dmenu_run -nb #282828 -nf #d79921 -sb #fea63c -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Gruvbox
     Key([mod], "Print", lazy.spawn("flameshot gui"), desc="Run flameshot (take screenshot)"),
-    Key([mod], "w", lazy.spawn(f"{home}/.myScripts/runFirefoxDiscreteGr.sh"), desc="Launch Firefox"),
+    #  Key([mod], "w", lazy.spawn(f"{home}/.myScripts/runFirefoxDiscreteGr.sh"), desc="Launch Firefox"),
+    Key([mod], "w", lazy.spawn("/usr/bin/firefox"), desc="Launch Firefox"),
     Key([mod], "u", lazy.spawn("qutebrowser"), desc="Launch qutebrowser"),
     Key([mod], "e", lazy.spawn("dolphin"), desc="Launch File Manager"),
     Key([mod], "p", lazy.spawn("thunar"), desc="Launch File Manager"),
@@ -927,15 +928,15 @@ def start_once():
     subprocess.call([f"{home}/.config/qtile/scripts/autostart.sh"])
 
 
-# Does what I wanted perfectly!!!
-#  @hook.subscribe.client_mouse_enter
-@hook.subscribe.client_focus
-@hook.subscribe.client_new
-def focus_new_floating_window(window):
-    """ Bring a new floating window to the front. """
-    #  subprocess.check_output(["notify-send", "-i", "dialog-information", "{}".format(window.name)])
-    if window.floating:
-        window.cmd_bring_to_front()
+#  #  # Does what I wanted perfectly!!!
+#  #  #  @hook.subscribe.client_mouse_enter
+#  @hook.subscribe.client_focus
+#  @hook.subscribe.client_new
+#  def focus_new_floating_window(window):
+    #  """ Bring a new floating window to the front. """
+    #  #  subprocess.check_output(["notify-send", "-i", "dialog-information", "{}".format(window.name)])
+    #  if window.floating:
+        #  window.cmd_bring_to_front()
 
 
 # TODO: show amount of opened windows (DONE!!!)

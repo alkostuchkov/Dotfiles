@@ -62,7 +62,8 @@ conky.config = {
 
     -- Gap between borders of screen and text (расстояния от левого\правого (верхнего\нижнего) края экрана в пикселах)
     gap_x = 7,
-    gap_y = 47,
+    gap_y = 30,
+    --gap_y = 47,
 
     -- stuff after 'TEXT' will be formatted on screen (текст (кодировка, шрифт), степень прозрачности окна conky от 0 до 1)
 
