@@ -14,7 +14,7 @@ fn='Ubuntu-16:normal'
 # sb='#d79921'
 # fn='Sarasa Mono SC Nerd-17:normal'
 
-shopt -s nullglob globstar
+# shopt -s nullglob globstar
 
 if [[ -n $WAYLAND_DISPLAY ]]; then
 	dmenu=dmenu-wl
