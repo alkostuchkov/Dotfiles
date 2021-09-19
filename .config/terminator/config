@@ -47,18 +47,6 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[SFMono_13_5]]
-    background_color = "#282828"
-    background_darkness = 0.97
-    cursor_color = "#aaaaaa"
-    font = SF Mono Extra-Condensed 13.5
-    foreground_color = "#dfbf8e"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
-    use_system_font = False
-    bold_is_bright = True
-    copy_on_selection = True
   [[CodeNewRoman_14]]
     background_color = "#282828"
     background_darkness = 0.97
@@ -124,18 +112,6 @@
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
     font = Menlo for Powerline 13.5
-    foreground_color = "#dfbf8e"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
-    use_system_font = False
-    bold_is_bright = True
-    copy_on_selection = True
-  [[SFMonoForPowerline_13]]
-    background_color = "#282828"
-    background_darkness = 0.97
-    cursor_color = "#aaaaaa"
-    font = SF Mono Powerline 13
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -484,6 +460,30 @@
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
     font = Iosevka Term 15
+    foreground_color = "#dfbf8e"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[SFMono_Nerd_14]]
+    background_color = "#282828"
+    background_darkness = 0.97
+    cursor_color = "#aaaaaa"
+    font = SFMono Nerd Font 14
+    foreground_color = "#dfbf8e"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[SFMono_Nerd_Light_14]]
+    background_color = "#282828"
+    background_darkness = 0.97
+    cursor_color = "#aaaaaa"
+    font = SFMono Nerd Font Light 14
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden

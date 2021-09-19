@@ -45,6 +45,15 @@ def get_upped_netiface(netifaces=[]):
     return None
 
 
+def parse_windowname(text):
+    """Return parsed window name for WindowName widget."""
+    text_lst = text.split()
+    if len(text_lst) > 2:
+        text = text_lst[-1] + " : " + " ".join(text_lst[:-2])
+        return text.replace("—", "-")
+    return text
+
+
 mod = "mod4"
 alt = "mod1"
 my_term = "alacritty"
@@ -445,11 +454,10 @@ def init_widgets_list():
                     #  font=my_mono_bold_font,
                     font=my_font,
                     fontsize=14,
-                    #  show_state="{name}", #  show_state=False,
-                    show_state="{state}{name}", #  show_state=True,
                     foreground=colors[6],
                     background=colors[0],
-                    padding=0
+                    padding=0,
+                    parse_text=parse_windowname
                     ),
             #  widget.Spacer(
                     #  length=bar.STRETCH,
