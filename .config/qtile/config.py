@@ -49,9 +49,9 @@ def parse_windowname(text):
     """Return parsed window name for WindowName widget."""
     text_lst = text.split()
     if len(text_lst) > 2:
-        text = text_lst[-1] + " : " + " ".join(text_lst[:-2])
-        return text.replace("—", "-")
-    return text
+        #  text = text_lst[-1] + " : " + " ".join(text_lst[:-2])
+        text = f"{text_lst[-1]} : {' '.join(text_lst[:-2])}"
+    return text.replace("—", "-")
 
 
 mod = "mod4"
@@ -118,6 +118,7 @@ keys = [
     Key([mod], "space", lazy.layout.next(), desc="Switch window focus to other pane(s) of stack"),
 
 # <SUPER> + <SHIFT> + KEYS  (-nf #fea63c)
+    Key([mod, "shift"], "w", lazy.spawn(f"{home}/Programs/Tor/Browser/start-tor-browser --detach"), desc="Launch Tor"),
     Key([mod, "shift"], "y", lazy.spawn(f"{home}/.myScripts/start-stop_syncthing.sh"), desc="Start-Stop Syncthing (for Dropbox sync)"),
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "x", lazy.spawn("xkill"), desc="Kill not answered window"),
@@ -257,7 +258,7 @@ for key, x, y in [
 
 #       v                   
 #        🌐♬ 🌡 🖬  ⟳ ₿   ⮋⮉🡇 🡅 ⇓⇑        
-group_names = [(" ", {"layout": "columns"}),  # WWW
+group_names = [(" ", {"layout": "columns"}),  # WWW
                (" ", {"layout": "columns"}),  # DEV
                #  (" ", {"layout": "monadtall"}),  # DEV
                (" ", {"layout": "max"}),      # FM
@@ -824,6 +825,7 @@ floating_layout = layout.Floating(float_rules=[
     #  Match(title="Delete Permanently", wm_class="dolphin"),  # Dolphin (delete dialog)
     #  Match(title="Preference"),  # Haroopad (md editor)
     #  Match(title="About Mozilla Firefox", wm_class="Firefox"),
+    Match(title="Tor Browser", wm_class="Tor Browser"),
     Match(title="About Mozilla Firefox", wm_class="Browser"),
     Match(title="Execute File", wm_class="pcmanfm"),
     Match(title="Close Button Action", wm_class="tixati"),  # Tixati
