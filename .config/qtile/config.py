@@ -826,11 +826,14 @@ floating_layout = layout.Floating(float_rules=[
     #  Match(title="Preference"),  # Haroopad (md editor)
     #  Match(title="About Mozilla Firefox", wm_class="Firefox"),
     Match(title="Tor Browser", wm_class="Tor Browser"),
+    Match(title="О Tor Browser", wm_class="Tor Browser"),
     Match(title="About Mozilla Firefox", wm_class="Browser"),
     Match(title="Execute File", wm_class="pcmanfm"),
     Match(title="Close Button Action", wm_class="tixati"),  # Tixati
     Match(title="Confirm File Replacing", wm_class="pcmanfm"),
     Match(title="Terminator Preferences", wm_class="terminator"),
+    Match(title="win0", wm_class="jetbrains-webstorm"),  # WebStorm
+    Match(title="Import WebStorm Settings", wm_class="jetbrains-webstorm"),
     Match(title="win0", wm_class="jetbrains-pycharm-ce"),  # PyCharm
     Match(title="Welcome to PyCharm", wm_class="jetbrains-pycharm-ce"),
     Match(title="License Activation", wm_class="jetbrains-pycharm-ce"),  # PyCharm
