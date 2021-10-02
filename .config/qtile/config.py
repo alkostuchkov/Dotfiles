@@ -825,6 +825,7 @@ floating_layout = layout.Floating(float_rules=[
     #  Match(title="Delete Permanently", wm_class="dolphin"),  # Dolphin (delete dialog)
     #  Match(title="Preference"),  # Haroopad (md editor)
     #  Match(title="About Mozilla Firefox", wm_class="Firefox"),
+    Match(wm_class="BreakTimer"),
     Match(title="Tor Browser", wm_class="Tor Browser"),
     Match(title="О Tor Browser", wm_class="Tor Browser"),
     Match(title="About Mozilla Firefox", wm_class="Browser"),

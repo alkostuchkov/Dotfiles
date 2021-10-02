@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=BreakTimer (AppImage)
+Exec=/home/alexander/Programs/AppImageApplications/BreakTimer.AppImage
+Terminal=false
+GenericName=BreakTimer
+Comment=BreakTimer (AppImage)
+Type=Application
+Icon=/home/alexander/Pictures/Logo/breaktimer.png
+Categories=Office;
+StartupNotify=true
+StartupWMClass=BreakTimer
+InitialPreference=99
+

@@ -22,6 +22,7 @@ conky -c ~/.myScripts/conky/conkyrc1 &
 $HOME/Programs/CheckEmail/CheckEmail &
 udiskie &  # ~/.config/udiskie/config.yml
 xiccd &
+fluxgui &
 # /usr/bin/octopi-notifier &
 # megasync &
 # dropbox start -i &
