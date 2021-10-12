@@ -355,31 +355,31 @@ draw_bold_text_with_bright_colors: true
     # white:   '#a89984'
 
 ###############################################################################
-# Colors (Gruvbox Material Dark Medium)
-colors:
-  primary:
-    background: '#282828'
-    foreground: '#dfbf8e'
-
-  normal:
-    black:   '#665c54'
-    red:     '#ea6962'
-    green:   '#a9b665'
-    yellow:  '#e78a4e'
-    blue:    '#7daea3'
-    magenta: '#d3869b'
-    cyan:    '#89b482'
-    white:   '#dfbf8e'
-
-  bright:
-    black:   '#928374'
-    red:     '#ea6962'
-    green:   '#a9b665'
-    yellow:  '#e3a84e'
-    blue:    '#7daea3'
-    magenta: '#d3869b'
-    cyan:    '#89b482'
-    white:   '#dfbf8e'
+# # Colors (Gruvbox Material Dark Medium)
+# colors:
+  # primary:
+    # background: '#282828'
+    # foreground: '#dfbf8e'
+#
+  # normal:
+    # black:   '#665c54'
+    # red:     '#ea6962'
+    # green:   '#a9b665'
+    # yellow:  '#e78a4e'
+    # blue:    '#7daea3'
+    # magenta: '#d3869b'
+    # cyan:    '#89b482'
+    # white:   '#dfbf8e'
+#
+  # bright:
+    # black:   '#928374'
+    # red:     '#ea6962'
+    # green:   '#a9b665'
+    # yellow:  '#e3a84e'
+    # blue:    '#7daea3'
+    # magenta: '#d3869b'
+    # cyan:    '#89b482'
+    # white:   '#dfbf8e'
  
 ###############################################################################
 # # Base16 Gruvbox light, soft 256 - alacritty color config
@@ -613,34 +613,34 @@ colors:
     # white:   '#c5c8c6'
 
 ###############################################################################
-# # Colors (Material)
-# colors:
-  # # Default colors
-  # primary:
-    # background: '#263238'
-    # foreground: '#eeffff'
-#
-  # # Normal colors
-  # normal:
-    # black:   '#000000'  # Arbitrary
-    # red:     '#e53935'
-    # green:   '#91b859'
-    # yellow:  '#ffb62c'
-    # blue:    '#6182b8'
-    # magenta: '#ff5370'  # Dark pink of the original material theme
-    # cyan:    '#39adb5'
-    # white:   '#a0a0a0'  # Arbitrary
-#
-  # # Bright colors
-  # bright:
-    # black:   '#4e4e4e'  # Arbitrary
-    # red:     '#ff5370'
-    # green:   '#c3e88d'
-    # yellow:  '#ffcb6b'
-    # blue:    '#82aaff'
-    # magenta: '#f07178'  # Pink of the original material theme
-    # cyan:    '#89ddff'
-    # white:   '#ffffff'  # Arbitrary
+# Colors (Material)
+colors:
+  # Default colors
+  primary:
+    background: '#263238'
+    foreground: '#eeffff'
+
+  # Normal colors
+  normal:
+    black:   '#000000'  # Arbitrary
+    red:     '#e53935'
+    green:   '#91b859'
+    yellow:  '#ffb62c'
+    blue:    '#6182b8'
+    magenta: '#ff5370'  # Dark pink of the original material theme
+    cyan:    '#39adb5'
+    white:   '#a0a0a0'  # Arbitrary
+
+  # Bright colors
+  bright:
+    black:   '#4e4e4e'  # Arbitrary
+    red:     '#ff5370'
+    green:   '#c3e88d'
+    yellow:  '#ffcb6b'
+    blue:    '#82aaff'
+    magenta: '#f07178'  # Pink of the original material theme
+    cyan:    '#89ddff'
+    white:   '#ffffff'  # Arbitrary
 
 ###############################################################################
 # # Colors (Nord)

@@ -23,6 +23,7 @@ $HOME/Programs/CheckEmail/CheckEmail &
 udiskie &  # ~/.config/udiskie/config.yml
 xiccd &
 fluxgui &
+~/Programs/AppImageApplications/BreakTimer.AppImage &
 # /usr/bin/octopi-notifier &
 # megasync &
 # dropbox start -i &
