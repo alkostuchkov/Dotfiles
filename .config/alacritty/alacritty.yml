@@ -118,7 +118,8 @@ font:
     # family: Monofur Nerd Font
     # family: TerminessTTF Nerd Font
     # family: SauceCodePro Nerd Font Mono
-    family: M+ 1mn
+    # family: mplus Nerd Font
+    family: Iosevka
 
     # family: Sarasa Mono SC Nerd
     # family: Source Code Pro
@@ -157,7 +158,8 @@ font:
     # family: Monofur Nerd Font
     # family: TerminessTTF Nerd Font
     # family: SauceCodePro Nerd Font Mono
-    family: M+ 1mn
+    # family: mplus Nerd Font
+    family: Iosevka
 
     # family: Sarasa Mono SC Nerd
     # family: Source Code Pro
@@ -197,7 +199,8 @@ font:
     # family: Monofuritalic Nerd Font Mono
     # family: TerminessTTF Nerd Font
     # family: SauceCodePro Nerd Font Mono
-    family: M+ 1mn
+    # family: mplus Nerd Font
+    family: Iosevka
 
     # family: Sarasa Mono SC Nerd
     # family: Source Code Pro
@@ -237,7 +240,8 @@ font:
     # family: Monofuritalic Nerd Font Mono
     # family: TerminessTTF Nerd Font
     # family: SauceCodePro Nerd Font Mono
-    family: M+ 1mn
+    # family: mplus Nerd Font
+    family: Iosevka
 
     # family: Sarasa Mono SC Nerd
     # family: Source Code Pro
@@ -266,6 +270,7 @@ font:
   # size: 14  # for JetBrains Mono
   # size: 14.5  # for SaurceCodePro Nerd
   # size: 15.5
+  # size: 16.5  # for mplus Nerd Font
   size: 16
 
   # Offset is the extra space around each character. `offset.y` can be thought of

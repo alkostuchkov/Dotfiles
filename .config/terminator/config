@@ -15,7 +15,7 @@
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
-    font = JetBrainsMono Nerd Font 14
+    font = mplus Nerd Font 16
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -76,30 +76,6 @@
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
     font = Inconsolata LGC Medium 13
-    foreground_color = "#dfbf8e"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
-    use_system_font = False
-    bold_is_bright = True
-    copy_on_selection = True
-  [[Menlo_13_5]]
-    background_color = "#282828"
-    background_darkness = 0.97
-    cursor_color = "#aaaaaa"
-    font = Menlo 13.5
-    foreground_color = "#dfbf8e"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
-    use_system_font = False
-    bold_is_bright = True
-    copy_on_selection = True
-  [[MenloForPowerline_13_5]]
-    background_color = "#282828"
-    background_darkness = 0.97
-    cursor_color = "#aaaaaa"
-    font = Menlo for Powerline 13.5
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -172,18 +148,6 @@
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
     font = Comic Shanns 15
-    foreground_color = "#dfbf8e"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
-    use_system_font = False
-    bold_is_bright = True
-    copy_on_selection = True
-  [[Iosevka_Ubuntu_15]]
-    background_color = "#282828"
-    background_darkness = 0.97
-    cursor_color = "#aaaaaa"
-    font = Iosevka Fixed SS12 15
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -371,18 +335,6 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[SarasaMonoSCNerd_15]]
-    background_color = "#282828"
-    background_darkness = 0.97
-    cursor_color = "#aaaaaa"
-    font = Sarasa Mono SC Nerd 15
-    foreground_color = "#dfbf8e"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
-    use_system_font = False
-    bold_is_bright = True
-    copy_on_selection = True
   [[FiraCode_Nerd_14]]
     background_color = "#282828"
     background_darkness = 0.97
@@ -400,18 +352,6 @@
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
     font = MonacoB Nerd Font Mono 14
-    foreground_color = "#dfbf8e"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
-    use_system_font = False
-    bold_is_bright = True
-    copy_on_selection = True
-  [[SarasaMonoSCNerd_Light_15]]
-    background_color = "#282828"
-    background_darkness = 0.97
-    cursor_color = "#aaaaaa"
-    font = Sarasa Mono SC Nerd Light 15
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -496,6 +436,90 @@
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
     font = Cascadia Code PL 15
+    foreground_color = "#dfbf8e"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Menlo_14]]
+    background_color = "#282828"
+    background_darkness = 0.97
+    cursor_color = "#aaaaaa"
+    font = Menlo 14
+    foreground_color = "#dfbf8e"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[MesloLGS_Nerd_14]]
+    background_color = "#282828"
+    background_darkness = 0.97
+    cursor_color = "#aaaaaa"
+    font = MesloLGS Nerd Font Mono 14
+    foreground_color = "#dfbf8e"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Iosevka_PragmataPro_15]]
+    background_color = "#282828"
+    background_darkness = 0.97
+    cursor_color = "#aaaaaa"
+    font = Iosevka Term SS08 15
+    foreground_color = "#dfbf8e"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[PragmataPro_16]]
+    background_color = "#282828"
+    background_darkness = 0.97
+    cursor_color = "#aaaaaa"
+    font = Pragmata Pro 16
+    foreground_color = "#dfbf8e"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Iosevka_16]]
+    background_color = "#282828"
+    background_darkness = 0.97
+    cursor_color = "#aaaaaa"
+    font = Iosevka 16
+    foreground_color = "#dfbf8e"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[SarasaMonoSCNerd_16]]
+    background_color = "#282828"
+    background_darkness = 0.97
+    cursor_color = "#aaaaaa"
+    font = Sarasa Mono SC Nerd 16
+    foreground_color = "#dfbf8e"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[SarasaMonoSCNerd_Light_16]]
+    background_color = "#282828"
+    background_darkness = 0.97
+    cursor_color = "#aaaaaa"
+    font = Sarasa Mono SC Nerd Light 16
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden

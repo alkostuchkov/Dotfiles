@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=DevDocs Desktop (AppImage)
+Exec=/home/alexander/Programs/AppImageApplications/DevDocs.AppImage
+Terminal=false
+GenericName=DevDocs Desktop
+Comment=DevDocs Desktop (AppImage)
+Type=Application
+Icon=/home/alexander/Pictures/Logo/DevDocs.png
+Categories=Development;
+StartupNotify=true
+StartupWMClass=DevDocs Desktop
+InitialPreference=99
+

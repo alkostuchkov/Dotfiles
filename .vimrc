@@ -12,6 +12,7 @@ autocmd! VimEnter * :source $MYVIMRC  "for NERDCommenter
 " Showing line numbers and length
 set number
 set relativenumber
+" set linespace=3
 set wrap linebreak nolist  "Данная вариация работает как wrap,... но переносит строчки не посимвольно, а по словам
 set tw=79   "width of document (used by gd)
 set fo-=t   "don't automatically wrap text when typing
@@ -170,7 +171,8 @@ if has("gui_running")
     " set guifont=JetBrainsMono\ Nerd\ Font\ 14
     " set guifont=JetBrainsMono\ Light\ 14
     " set guifont=SauceCodePro\ Nerd\ Font\ 16
-    set guifont=mplus\ Nerd\ Font\ 16
+    " set guifont=mplus\ Nerd\ Font\ 16.5
+    set guifont=Iosevka\ 16
 
     " set guifont=Monaco\ 13
     " set guifont=Ligamonacop\ 13
