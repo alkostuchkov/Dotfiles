@@ -122,7 +122,9 @@ set background=dark
 " colorscheme gruvbox
 " colorscheme predawn
 " colorscheme nord
-colorscheme materialbox
+" colorscheme materialbox
+colorscheme material-theme
+" colorscheme onedark
 " colorscheme monokai
 " let g:solarized_termcolors=256
 " colorscheme solarized
@@ -176,8 +178,14 @@ if has("gui_running")
 
     " set guifont=Monaco\ 13
     " set guifont=Ligamonacop\ 13
-" else
+else
     " colorscheme herald
+    " colorscheme predawn
+    " colorscheme materialbox
+    " colorscheme material-theme
+    " colorscheme hybrid
+    " colorscheme hybrid_material
+    colorscheme onedark
 endif
 
 "###############################################################################
