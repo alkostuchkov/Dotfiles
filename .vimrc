@@ -238,10 +238,10 @@ call plug#begin('~/.vim/plugged')
     "#########################################
     " Other
     "#########################################
-    Plug 'gruvbox-community/gruvbox'
+    " Plug 'gruvbox-community/gruvbox'
     " Plug 'itchyny/lightline.vim'
     Plug 'vim-airline/vim-airline'
-    " Plug 'vim-airline/vim-airline-themes'
+    Plug 'vim-airline/vim-airline-themes'
     Plug 'preservim/nerdcommenter'
     Plug 'tpope/vim-surround'
     " Plug 'gko/vim-coloresque'
@@ -349,6 +349,9 @@ let g:Powerline_symbols='unicode'  "Поддержка unicode
 let g:airline#extensions#keymap#enabled = 0  "Не показывать текущий маппинг
 let g:airline#extensions#xkblayout#enabled = 0  "Про это позже расскажу
 
+let g:airline_theme='onedark'
+" let g:airline_theme='base16_material'
+
 " TODO: check these settings
 " let g:airline_powerline_fonts = 0
 " let g:airline_theme = 'bubblegum'
@@ -381,22 +384,22 @@ let g:airline#extensions#xkblayout#enabled = 0  "Про это позже рас
 "###############################################################################
 " Lightline Settings
 "###############################################################################
-let g:lightline = {
-    \ 'colorscheme': 'wombat',
-    \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'readonly', 'modified', 'filename' ] ],
-      \   'right': [ [ 'lineinfo' ],
-      \              [ 'format_encoding' ],
-      \              [ 'charhex',  ] ]
-    \ },
-      \ 'component': {
-      \   'filename': '%F%m%r%h%w %y',
-      \   'charhex': 'HEX=%02.2B',
-      \   'format_encoding': '%{&encoding}[%{&fileformat}]',
-      \   'lineinfo': '%l,%c/%L %p%%'
-      \ },
-\ }
+" let g:lightline = {
+    " \ 'colorscheme': 'wombat',
+    " \ 'active': {
+      " \   'left': [ [ 'mode', 'paste' ],
+      " \             [ 'readonly', 'modified', 'filename' ] ],
+      " \   'right': [ [ 'lineinfo' ],
+      " \              [ 'format_encoding' ],
+      " \              [ 'charhex',  ] ]
+    " \ },
+      " \ 'component': {
+      " \   'filename': '%F%m%r%h%w %y',
+      " \   'charhex': 'HEX=%02.2B',
+      " \   'format_encoding': '%{&encoding}[%{&fileformat}]',
+      " \   'lineinfo': '%l,%c/%L %p%%'
+      " \ },
+" \ }
 
 "###############################################################################
 " deoplete Settings

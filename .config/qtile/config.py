@@ -9,6 +9,7 @@ from libqtile import bar, layout, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Screen, KeyChord, Match
 from libqtile.lazy import lazy
 from libqtile import qtile
+from libqtile.backend.base import Internal
 
 #  from modules import arcobattery
 #  from modules import keyboardkbdd
@@ -940,6 +941,15 @@ focus_on_window_activation = "focus"
 @hook.subscribe.startup_once
 def start_once():
     subprocess.call([f"{home}/.config/qtile/scripts/autostart.sh"])
+
+
+#  #  @hook.subscribe.float_change
+#  #  @hook.subscribe.client_new
+#  @hook.subscribe.client_focus
+#  def set_hint(window):
+    #  window.window.set_property("IS_FLOATING", str(window.floating), type="STRING", format=8)
+    #  #  subprocess.check_output(["notify-send", "-i", "dialog-information", "{} {}".format(window.name, window.floating)])
+    #  #  window.window.set_property("IS_FLOATING", int(window.floating))
 
 
 #  #  # Does what I wanted perfectly!!!
