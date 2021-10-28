@@ -1,9 +1,9 @@
 [Appearance]
 AntiAliasFonts=true
 BoldIntense=true
-ColorScheme=Gruvbox
+ColorScheme=DarkOneNuanced
 DimmValue=128
-Font=Iosevka,16,-1,5,50,0,0,0,0,0
+Font=Iosevka Fixed,16,-1,5,50,0,0,0,0,0
 LineSpacing=0
 TabColor=invalid
 UseFontLineChararacters=false
@@ -62,7 +62,7 @@ KeyBindings=default
 HighlightScrolledLines=true
 HistoryMode=1
 HistorySize=1000
-ScrollBarPosition=1
+ScrollBarPosition=2
 ScrollFullPage=false
 
 [Terminal Features]

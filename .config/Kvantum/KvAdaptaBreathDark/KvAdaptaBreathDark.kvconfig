@@ -10,7 +10,7 @@ group_toolbar_buttons=false
 toolbar_item_spacing=0
 toolbar_interior_spacing=2
 spread_progressbar=true
-composite=true
+composite=false
 menu_shadow_depth=5
 tooltip_shadow_depth=6
 splitter_width=4
@@ -70,7 +70,7 @@ intensity=1.00
 no_inactiveness=false
 reduce_menu_opacity=0
 saturation=1.00
-shadowless_popup=false
+shadowless_popup=true
 
 [GeneralColors]
 window.color=#263238
