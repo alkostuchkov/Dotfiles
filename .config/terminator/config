@@ -203,18 +203,6 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[Caskaydia_15]]
-    background_color = "#282828"
-    background_darkness = 0.97
-    cursor_color = "#aaaaaa"
-    font = CaskaydiaCove Nerd Font Mono 15
-    foreground_color = "#dfbf8e"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
-    use_system_font = False
-    bold_is_bright = True
-    copy_on_selection = True
   [[UbuntuMono_16]]
     background_color = "#282828"
     background_darkness = 0.97
@@ -431,18 +419,6 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[CascadiaCodePL_15]]
-    background_color = "#282828"
-    background_darkness = 0.97
-    cursor_color = "#aaaaaa"
-    font = Cascadia Code PL 15
-    foreground_color = "#dfbf8e"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
-    use_system_font = False
-    bold_is_bright = True
-    copy_on_selection = True
   [[Menlo_14]]
     background_color = "#282828"
     background_darkness = 0.97
@@ -520,6 +496,54 @@
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
     font = Sarasa Mono SC Nerd Light 16
+    foreground_color = "#dfbf8e"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Cobalt Neon]]
+    background_color = "#142838"
+    background_darkness = 0.97
+    cursor_color = "#c4206f"
+    font = Cascadia Code PL 16
+    foreground_color = "#8ff586"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#142631:#ff2320:#3ba5ff:#e9e75c:#8ff586:#781aa0:#8ff586:#ba46b2:#fff688:#d4312e:#8ff586:#e9f06d:#3c7dd2:#8230a7:#6cbc67:#8ff586"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Cobalt2]]
+    background_color = "#132738"
+    background_darkness = 0.97
+    cursor_color = "#f0cc09"
+    font = Cascadia Code PL 16
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#000000:#ff0000:#38de21:#ffe50a:#1460d2:#ff005d:#00bbbb:#bbbbbb:#555555:#f40e17:#3bd01d:#edc809:#5555ff:#ff55ff:#6ae3fa:#ffffff"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[CascadiaCodePL_16]]
+    background_color = "#282828"
+    background_darkness = 0.97
+    cursor_color = "#aaaaaa"
+    font = Cascadia Code PL 16
+    foreground_color = "#dfbf8e"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Caskaydia_16]]
+    background_color = "#282828"
+    background_darkness = 0.97
+    cursor_color = "#aaaaaa"
+    font = CaskaydiaCove Nerd Font Mono 16
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden

@@ -7,6 +7,7 @@ set nocompatible " no vi-compatible
 " let &pythonthreedll='C:\Python34\libs\python34.dll'
 
 " Automatic reloading .vimrc
+autocmd! VimEnter * :redraw
 autocmd! VimEnter * :source $MYVIMRC  "for NERDCommenter
 
 " Showing line numbers and length
@@ -124,6 +125,7 @@ set background=dark
 " colorscheme nord
 " colorscheme materialbox
 colorscheme material-theme
+" colorscheme cobalt2
 " colorscheme onedark
 " colorscheme monokai
 " let g:solarized_termcolors=256
@@ -174,7 +176,9 @@ if has("gui_running")
     " set guifont=JetBrainsMono\ Light\ 14
     " set guifont=SauceCodePro\ Nerd\ Font\ 16
     " set guifont=mplus\ Nerd\ Font\ 16.5
-    set guifont=Iosevka\ 16
+    " set guifont=Iosevka\ 16
+    " set guifont=Cascadia\ Code\ PL\ SemiLight\ 17
+    set guifont=Cascadia\ Code\ PL\ 17
 
     " set guifont=Monaco\ 13
     " set guifont=Ligamonacop\ 13
@@ -186,6 +190,7 @@ else
     " colorscheme hybrid
     " colorscheme hybrid_material
     colorscheme onedark
+    " colorscheme cobalt2
 endif
 
 "###############################################################################
@@ -350,6 +355,7 @@ let g:airline#extensions#keymap#enabled = 0  "Не показывать теку
 let g:airline#extensions#xkblayout#enabled = 0  "Про это позже расскажу
 
 let g:airline_theme='onedark'
+" let g:airline_theme='cobalt2'
 " let g:airline_theme='base16_material'
 
 " TODO: check these settings
@@ -686,10 +692,6 @@ augroup END
 
 " New line
 inoremap '' <END><CR>
-
-
-
-
 
 
 
