@@ -7,8 +7,8 @@ set nocompatible " no vi-compatible
 " let &pythonthreedll='C:\Python34\libs\python34.dll'
 
 " Automatic reloading .vimrc
-autocmd! VimEnter * :redraw
 autocmd! VimEnter * :source $MYVIMRC  "for NERDCommenter
+autocmd! VimEnter * :redraw
 
 " Showing line numbers and length
 set number
@@ -178,7 +178,7 @@ if has("gui_running")
     " set guifont=mplus\ Nerd\ Font\ 16.5
     " set guifont=Iosevka\ 16
     " set guifont=Cascadia\ Code\ PL\ SemiLight\ 17
-    set guifont=Cascadia\ Code\ PL\ 17
+    set guifont=Cascadia\ Code\ PL\ 16
 
     " set guifont=Monaco\ 13
     " set guifont=Ligamonacop\ 13

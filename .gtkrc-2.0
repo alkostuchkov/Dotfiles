@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/alexander/.gtkrc-2.0.mine"
-gtk-theme-name="Qogir-manjaro-dark"
+gtk-theme-name="Adapta-Nokto-Eta-Maia"
 gtk-icon-theme-name="Flat-Remix-Green-Dark"
 gtk-font-name="Ubuntu 13"
 gtk-cursor-theme-name="Qogir-manjaro-dark"
