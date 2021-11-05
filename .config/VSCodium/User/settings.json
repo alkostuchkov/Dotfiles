@@ -1,0 +1,114 @@
+{
+  // "telemetry.enableTelemetry": false,
+  // "telemetry.enableCrashReporter": false,
+  "telemetry.telemetryLevel": "off",
+  "window.zoomLevel": 1,
+  "update.mode": "start",
+  "workbench.activityBar.visible": true,
+  "workbench.statusBar.visible": true,
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
+  "workbench.settings.editor": "json",
+  "workbench.settings.openDefaultSettings": true,
+  "workbench.settings.openDefaultKeybindings": true,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "editor.fontFamily": "'Cascadia Code PL', 'Cascadia Code PL Semilight', 'Iosevka', 'mplus Nerd Font', 'Pragmata Pro', 'JetBrains Mono Light', 'Source Code Pro', 'Consolas NF', 'JetBrains Mono', 'UbuntuMono Nerd Font', 'Menlo', 'Trim Mono', 'Code New Roman', 'Operator Mono Book', 'IBM Plex Mono'",
+  "editor.fontSize": 16.5,
+  // "editor.lineHeight": 20,
+  // "editor.tabSize": 4,
+  // "editor.fontWeight": "500",
+  // Controls the font weight. Accepts "normal" and "bold" keywords or numbers between 1 and 1000.
+  // "editor.fontWeight": "1",
+  "editor.lineNumbers": "relative",
+  "editor.fontLigatures": false,
+  "editor.autoClosingQuotes": "languageDefined",
+  "editor.mouseWheelZoom": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.formatOnType": false,
+  "editor.detectIndentation": true,
+  "editor.renderWhitespace": "selection",
+  "editor.tabSize": 2,
+  "editor.cursorBlinking": "expand",
+  "editor.wordWrap": "on",
+  // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "debug.console.fontFamily": "'Cascadia Code PL', 'Cascadia Code PL Semilight', 'mplus Nerd Font', 'JetBrains Mono Light', 'Source Code Pro', 'Consolas NF', 'JetBrains Mono', 'UbuntuMono Nerd Font', 'Menlo', 'Operator Mono Book', 'Code New Roman', 'Trim Mono', 'JetBrains Mono Light', 'IBM Plex Mono'",
+  "debug.console.fontSize": 16.5,
+  // "terminal.explorerKind": "external",
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "terminal.integrated.fontFamily": "'Cascadia Code PL', 'Cascadia Code PL Semilight', 'mplus Nerd Font', 'JetBrains Mono Light', 'Source Code Pro', 'Consolas NF', 'UbuntuMono Nerd Font', 'Menlo', 'Operator Mono Book', 'Code New Roman', 'Trim Mono', 'JetBrains Mono Light', 'IBM Plex Mono', 'Source Code Pro'",
+  "terminal.integrated.fontSize": 17,
+  "[python]": {},
+  "python.insidersChannel": "off",
+  "python.pythonPath": "/home/alexander/Projects/Python/VirtualEnvironments/py3.7/bin/python",
+  "python.formatting.provider": "yapf",
+  "code-runner.executorMap": {
+    "python": "$pythonPath -u $fullFileName"
+  },
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.saveFileBeforeRun": true,
+  "markdown-pdf.executablePath": "/usr/bin/google-chrome-stable",
+  "markdown-pdf.outputDirectory": "~/Documents/Markdown_Files/",
+  "[kivy]": {},
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-c>", "h"],
+      "commands": [":nohlsearch"]
+    },
+    {
+      "before": ["<leader>", "/"],
+      "commands": ["editor.action.commentLine"]
+    },
+    {
+      "before": ["<ESC>", "<ESC>"],
+      "commands": [":q"]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": true,
+    "<C-f>": true
+    // "<C-a>": false,
+    // "<C-f>": false
+  },
+  "markdown-preview-enhanced.previewTheme": "solarized-dark.css",
+  "window.menuBarVisibility": "toggle",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.colorTheme": "Cobalt2",
+  "workbench.iconTheme": "eq-material-theme-icons",
+  "prettier.bracketSpacing": false,
+  "prettier.arrowParens": "avoid",
+  "prettier.trailingComma": "none",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "window.title": "${activeEditorShort}${separator}${rootName}${separator}${appName}",
+  "advancedNewFile.exclude": {
+    "node_modules": true,
+    "node_modules_electron": true,
+    "dev": true,
+    "dist": true
+  },
+  "advancedNewFile.showInformationMessages": true,
+  "advancedNewFile.convenienceOptions": ["last", "current", "root"],
+  "files.exclude": {
+    "**/.idea": true
+  },
+  "liveServer.settings.CustomBrowser": "google-chrome-stable",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  }
+}
