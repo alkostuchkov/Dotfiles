@@ -120,7 +120,8 @@ font:
     # family: SauceCodePro Nerd Font Mono
     # family: mplus Nerd Font
     # family: Iosevka
-    family: Cascadia Code PL
+    # family: Cascadia Code PL
+    family: CaskaydiaCove Nerd Font
 
     # family: Sarasa Mono SC Nerd
     # family: Source Code Pro
@@ -161,7 +162,8 @@ font:
     # family: SauceCodePro Nerd Font Mono
     # family: mplus Nerd Font
     # family: Iosevka
-    family: Cascadia Code PL
+    # family: Cascadia Code PL
+    family: CaskaydiaCove Nerd Font
 
     # family: Sarasa Mono SC Nerd
     # family: Source Code Pro
@@ -203,7 +205,8 @@ font:
     # family: SauceCodePro Nerd Font Mono
     # family: mplus Nerd Font
     # family: Iosevka
-    family: Cascadia Code PL
+    # family: Cascadia Code PL
+    family: CaskaydiaCove Nerd Font
 
     # family: Sarasa Mono SC Nerd
     # family: Source Code Pro
@@ -245,7 +248,8 @@ font:
     # family: SauceCodePro Nerd Font Mono
     # family: mplus Nerd Font
     # family: Iosevka
-    family: Cascadia Code PL
+    # family: Cascadia Code PL
+    family: CaskaydiaCove Nerd Font
 
     # family: Sarasa Mono SC Nerd
     # family: Source Code Pro

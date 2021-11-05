@@ -10,7 +10,7 @@ group_toolbar_buttons=false
 toolbar_item_spacing=0
 toolbar_interior_spacing=2
 spread_progressbar=true
-composite=true
+composite=false
 menu_shadow_depth=5
 tooltip_shadow_depth=6
 splitter_width=4
@@ -57,7 +57,7 @@ submenu_overlap=0
 tooltip_delay=-1
 tree_branch_line=true
 no_window_pattern=false
-opaque=kaffeine,kmplayer,subtitlecomposer,kdenlive,vlc,smplayer,smplayer2,avidemux,avidemux2_qt4,avidemux3_qt4,avidemux3_qt5,kamoso,QtCreator,VirtualBox,trojita,dragon,digikam
+opaque=kaffeine,kmplayer,subtitlecomposer,kdenlive,vlc,smplayer,smplayer2,avidemux,avidemux2_qt4,avidemux3_qt4,avidemux3_qt5,kamoso,QtCreator,VirtualBox,VirtualBoxVM,trojita,dragon,digikam,lyx
 reduce_window_opacity=0
 respect_DE=true
 scrollable_menu=false
@@ -68,6 +68,9 @@ intensity=1.00
 no_inactiveness=false
 reduce_menu_opacity=0
 saturation=1.00
+click_behavior=0
+drag_from_buttons=false
+shadowless_popup=false
 
 [GeneralColors]
 window.color=#263238
@@ -112,6 +115,10 @@ transparent_arrow_button=true
 middle_click_scroll=false
 opaque_colors=false
 scroll_jump_workaround=false
+centered_forms=false
+kinetic_scrolling=false
+noninteger_translucency=false
+style_vertical_toolbars=false
 
 [PanelButtonCommand]
 frame=true

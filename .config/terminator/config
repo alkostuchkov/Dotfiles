@@ -539,18 +539,6 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[Caskaydia_16]]
-    background_color = "#282828"
-    background_darkness = 0.97
-    cursor_color = "#aaaaaa"
-    font = CaskaydiaCove Nerd Font Mono 16
-    foreground_color = "#dfbf8e"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
-    use_system_font = False
-    bold_is_bright = True
-    copy_on_selection = True
   [[OneHalfDark]]
     background_color = "#282c34"
     background_darkness = 0.97
@@ -608,6 +596,18 @@
     show_titlebar = False
     scrollbar_position = hidden
     palette = "#073641:#EB606B:#C3E88D:#F7EB95:#80CBC3:#FF2490:#AEDDFF:#FFFFFF:#002B36:#EB606B:#C3E88D:#F7EB95:#7DC6BF:#6C71C3:#34434D:#FFFFFF"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[CaskaydiaCove_Nerd_16]]
+    background_color = "#282828"
+    background_darkness = 0.97
+    cursor_color = "#aaaaaa"
+    font = CaskaydiaCove Nerd Font 16
+    foreground_color = "#dfbf8e"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
