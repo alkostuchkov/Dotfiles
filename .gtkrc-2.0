@@ -4,7 +4,7 @@
 include "/home/alexander/.gtkrc-2.0.mine"
 gtk-theme-name="Adapta-Nokto-Eta-Maia"
 gtk-icon-theme-name="Flat-Remix-Green-Dark"
-gtk-font-name="Ubuntu 13"
+gtk-font-name="Trim Light 14"
 gtk-cursor-theme-name="Qogir-manjaro-dark"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_BOTH
