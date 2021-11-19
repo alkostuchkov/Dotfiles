@@ -112,5 +112,7 @@
   "liveServer.settings.CustomBrowser": "google-chrome-stable",
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
-  }
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "prettier.semi": false
 }
