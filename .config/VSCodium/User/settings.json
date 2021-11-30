@@ -4,7 +4,6 @@
   "telemetry.telemetryLevel": "off",
   "window.zoomLevel": 1,
   "update.mode": "start",
-  "workbench.activityBar.visible": true,
   "workbench.statusBar.visible": true,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
@@ -114,5 +113,11 @@
     "javascript": "javascriptreact"
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "prettier.semi": false
+  "prettier.semi": false,
+  "browsersync.openBrowser": false,
+  "browsersync.options": {
+    "browser": "google-chrome-stable"
+  },
+  "editor.minimap.enabled": false,
+  "files.autoSave": "onFocusChange"
 }

@@ -1,5 +1,4 @@
 configuration {
-    theme: "~/.config/rofi/themes/lb.rasi";
     modi: "window,run,ssh,drun";
     font: "Sarasa Mono SC Nerd 17";
     show-icons: true;
@@ -72,6 +71,7 @@ configuration {
 /*	display-keys: ;*/
 /*	display-filebrowser: ;*/
 }
+@theme "~/.config/rofi/themes/lb.rasi"
 
 /* man rofi */
 /* To get a template config file, run: rofi -dump-config > config.rasi */

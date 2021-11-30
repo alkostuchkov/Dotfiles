@@ -177,5 +177,9 @@
     "key": "shift+alt+up",
     "command": "-extension.vim_cmd+alt+up",
     "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+alt+escape",
+    "command": "workbench.action.toggleActivityBarVisibility"
   }
 ]

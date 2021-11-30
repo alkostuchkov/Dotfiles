@@ -8,7 +8,7 @@ set nocompatible " no vi-compatible
 
 " Automatic reloading .vimrc
 autocmd! VimEnter * :source $MYVIMRC  "for NERDCommenter
-autocmd! VimEnter * :redraw
+" autocmd! VimEnter * :redraw
 
 " Showing line numbers and length
 set number
