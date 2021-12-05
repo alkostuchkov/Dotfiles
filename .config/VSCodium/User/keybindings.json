@@ -9,7 +9,7 @@
     "command": "-workbench.action.toggleSidebarVisibility"
   },
   {
-    "key": "shift+alt+enter",
+    "key": "ctrl+shift+enter",
     "command": "editor.action.insertLineBefore",
     "when": "editorTextFocus && !editorReadonly"
   },

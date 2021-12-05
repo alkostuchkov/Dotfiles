@@ -1,35 +1,33 @@
 :root
 {
     /* --default-font: 'Ubuntu', serif !important; */
+    /* --default-font: 'Ubuntu' !important; */
+    /* --font-monospace: 'M+ 1mn' !important; */
+    /* --font-preview: 'M+ 1mn'; */
+    /* --font-code-preview: 'M+ 1mn'; */
+    /* --font-code-editor: 'M+ 1mn'; */
     --default-font: 'Ubuntu' !important;
-    --font-monospace: 'M+ 1mn' !important;
-    /* font-size: 30px; */
-    --font-preview: 'M+ 1mn';
-    /* --font-preview: 'Ubuntu'; */
-    /* --font-code-preview: 'UbuntuMono Nerd Font'; */
-    --font-code-preview: 'M+ 1mn';
-    --font-code-editor: 'M+ 1mn';
-    --font-size-editor: 18px;
-    --font-size-preview: 20px
+    --font-monospace: 'Cascadia Mono PL' !important;
+    --font-preview: 'Cascadia Mono PL';
+    --font-code-preview: 'Cascadia Mono PL';
+    --font-code-editor: 'Cascadia Mono PL';
 }
 
 /* preview */
 .markdown-preview-view
 {
     font-family: var(--font-preview) !important;
-    font-size: var(--font-size-preview) !important;
 }
 
 /* in-line block for preview */
 code {
     font-family: var(--font-code-preview) !important;
-    font-size: var(--font-size-editor) !important;
+    /* font-size: 18px !important; */
 }
 
 /* editor */
 .markdown-source-view 
 {
     font-family: var(--font-code-editor) !important;
-    /* font-size: var(--font-size-preview) !important; */
 }
 
