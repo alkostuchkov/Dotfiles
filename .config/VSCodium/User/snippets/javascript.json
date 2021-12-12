@@ -15,7 +15,7 @@
 
   // My console.log
   "Log to the console no ;": {
-    "prefix": "log_no;",
+    "prefix": "logno;",
     "body": ["console.log($1)"],
     // "body": ["console.log($1)", "$2"],
     "description": "console.log without trailing semicolon"

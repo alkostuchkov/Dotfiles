@@ -121,7 +121,7 @@ font:
     # family: Iosevka
     # family: Iosevka Term
     # family: Sarasa Mono SC Nerd
-    # family: Cascadia Code PL
+    # family: Cascadia Mono PL
     family: CaskaydiaCove Nerd Font
     # family: Source Code Pro
     # family: SauceCodePro Nerd Font
@@ -149,7 +149,7 @@ font:
     # family: Iosevka
     # family: Iosevka Term
     # family: Sarasa Mono SC Nerd
-    # family: Cascadia Code PL
+    # family: Cascadia Mono PL
     family: CaskaydiaCove Nerd Font
     # family: Source Code Pro
     # family: SauceCodePro Nerd Font
@@ -178,7 +178,7 @@ font:
     # family: Iosevka
     # family: Iosevka Term
     # family: Sarasa Mono SC Nerd
-    # family: Cascadia Code PL
+    # family: Cascadia Mono PL
     family: CaskaydiaCove Nerd Font
     # family: Source Code Pro
     # family: SauceCodePro Nerd Font
@@ -207,7 +207,7 @@ font:
     # family: Iosevka
     # family: Iosevka Term
     # family: Sarasa Mono SC Nerd
-    # family: Cascadia Code PL
+    # family: Cascadia Mono PL
     family: CaskaydiaCove Nerd Font
     # family: Source Code Pro
     # family: SauceCodePro Nerd Font
@@ -881,8 +881,8 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 1.0
-# background_opacity: 0.80
+# background_opacity: 1.0
+window.opacity: 1.0
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
