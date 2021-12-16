@@ -181,5 +181,9 @@
   {
     "key": "ctrl+alt+escape",
     "command": "workbench.action.toggleActivityBarVisibility"
+  },
+  {
+    "key": "shift+alt+w",
+    "command": "editor.emmet.action.wrapWithAbbreviation"
   }
 ]
