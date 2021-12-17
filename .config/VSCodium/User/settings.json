@@ -88,7 +88,7 @@
     // "<C-f>": false
   },
   "markdown-preview-enhanced.previewTheme": "solarized-dark.css",
-  "window.menuBarVisibility": "toggle",
+  "window.menuBarVisibility": "compact",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "workbench.colorTheme": "Cobalt2",
   "workbench.iconTheme": "eq-material-theme-icons",
@@ -122,7 +122,9 @@
   "files.autoSave": "onFocusChange",
   "[javascript][typescript][javascriptreact][html][css]": {
     "editor.tabSize": 2
-  }
+  },
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "workbench.activityBar.visible": false
   // "[python]": {
   //   "editor.tabSize": 4
   // }

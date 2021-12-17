@@ -284,7 +284,8 @@ for i, group_name in enumerate(group_names, 1):
     ])
 
 layout_theme = {"border_width": 3,
-                "margin": 5,
+                "margin": 3,
+                #  "margin": 5,
                 "border_focus": "2eb398",  # Materia Manjaro
                 "border_normal": "1d2330"
                 #  "border_focus": "d79922",  # Gruvbox yellow

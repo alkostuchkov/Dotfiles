@@ -178,7 +178,7 @@ if has("gui_running")
     " set guifont=mplus\ Nerd\ Font\ 16.5
     " set guifont=Iosevka\ 16
     " set guifont=Cascadia\ Code\ PL\ SemiLight\ 17
-    set guifont=Cascadia\ Code\ PL\ 16
+    set guifont=Cascadia\ Code\ PL\ 16.5
 
     " set guifont=Monaco\ 13
     " set guifont=Ligamonacop\ 13
