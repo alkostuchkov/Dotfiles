@@ -185,5 +185,9 @@
   {
     "key": "shift+alt+w",
     "command": "editor.emmet.action.wrapWithAbbreviation"
+  },
+  {
+    "key": "alt",
+    "command": "workbench.action.toggleMenuBar"
   }
 ]

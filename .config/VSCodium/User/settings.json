@@ -88,10 +88,10 @@
     // "<C-f>": false
   },
   "markdown-preview-enhanced.previewTheme": "solarized-dark.css",
-  "window.menuBarVisibility": "compact",
+  "window.menuBarVisibility": "toggle",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "workbench.colorTheme": "Cobalt2",
-  "workbench.iconTheme": "eq-material-theme-icons",
+  "workbench.colorTheme": "Gruvbox DrakenLords Dark Draken",
+  "workbench.iconTheme": "gruvbox-material-icon-theme",
   "prettier.bracketSpacing": false,
   "prettier.arrowParens": "avoid",
   "prettier.trailingComma": "none",
@@ -123,8 +123,7 @@
   "[javascript][typescript][javascriptreact][html][css]": {
     "editor.tabSize": 2
   },
-  "bracket-pair-colorizer-2.depreciation-notice": false,
-  "workbench.activityBar.visible": false
+  "bracket-pair-colorizer-2.depreciation-notice": false
   // "[python]": {
   //   "editor.tabSize": 4
   // }

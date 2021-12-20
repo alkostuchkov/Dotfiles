@@ -119,7 +119,7 @@ keys = [
     Key([mod], "space", lazy.layout.next(), desc="Switch window focus to other pane(s) of stack"),
 
 # <SUPER> + <SHIFT> + KEYS  (-nf #fea63c)
-    Key([mod, "shift"], "w", lazy.spawn(f"{home}/Programs/Tor/Browser/start-tor-browser --detach"), desc="Launch Tor"),
+    Key([mod, "shift"], "w", lazy.spawn("google-chrome-stable"), desc="Launch Chrome"),
     Key([mod, "shift"], "y", lazy.spawn(f"{home}/.myScripts/start-stop_syncthing.sh"), desc="Start-Stop Syncthing (for Dropbox sync)"),
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "x", lazy.spawn("xkill"), desc="Kill not answered window"),
@@ -201,6 +201,7 @@ keys = [
         lazy.layout.increase_nmaster()
     ),
     Key([mod, "control"], "r", lazy.layout.reset()),
+    Key([mod, "control"], "w", lazy.spawn(f"{home}/Programs/Tor/Browser/start-tor-browser --detach"), desc="Launch Tor"),
 
 # <ALT> + KEYS
     KeyChord([alt], "m", [
