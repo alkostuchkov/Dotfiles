@@ -131,20 +131,15 @@
   },
   {
     "key": "ctrl+p",
-    "command": "workbench.action.quickOpen",
-    "when": "!terminalFocus"
-  },
-  {
-    "key": "ctrl+p",
     "command": "-workbench.action.quickOpen"
   },
   {
-    "key": "ctrl+c ctrl+.",
+    "key": "alt+.",
     "command": "workbench.action.increaseViewSize",
     "when": "!terminalFocus"
   },
   {
-    "key": "ctrl+c ctrl+,",
+    "key": "alt+,",
     "command": "workbench.action.decreaseViewSize",
     "when": "!terminalFocus"
   },
@@ -189,5 +184,15 @@
   {
     "key": "alt",
     "command": "workbench.action.toggleMenuBar"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "-extension.vim_ctrl+c",
+    "when": "editorTextFocus && vim.active && vim.overrideCtrlC && vim.use<C-c> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "-search.action.copyMatch",
+    "when": "fileMatchOrMatchFocus"
   }
 ]

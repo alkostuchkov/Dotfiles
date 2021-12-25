@@ -14,7 +14,7 @@
     "*.ipynb": "jupyter.notebook.ipynb"
   },
   "editor.fontFamily": "'Cascadia Mono PL', 'Cascadia Code PL Semilight', 'Iosevka', 'mplus Nerd Font', 'Pragmata Pro', 'JetBrains Mono Light', 'Source Code Pro', 'Consolas NF', 'JetBrains Mono', 'UbuntuMono Nerd Font', 'Menlo', 'Trim Mono', 'Code New Roman', 'Operator Mono Book', 'IBM Plex Mono'",
-  "editor.fontSize": 18,
+  "editor.fontSize": 17.5,
   // "editor.lineHeight": 20,
   // "editor.tabSize": 4,
   // "editor.fontWeight": "500",
@@ -35,14 +35,14 @@
   "editor.wordWrap": "on",
   // "editor.defaultFormatter": "esbenp.prettier-vscode",
   "debug.console.fontFamily": "'Cascadia Code PL', 'Cascadia Code PL Semilight', 'mplus Nerd Font', 'JetBrains Mono Light', 'Source Code Pro', 'Consolas NF', 'JetBrains Mono', 'UbuntuMono Nerd Font', 'Menlo', 'Operator Mono Book', 'Code New Roman', 'Trim Mono', 'JetBrains Mono Light', 'IBM Plex Mono'",
-  "debug.console.fontSize": 18,
+  "debug.console.fontSize": 17.5,
   // "terminal.explorerKind": "external",
   "terminal.integrated.cursorStyle": "block",
   "terminal.external.linuxExec": "alacritty",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.defaultProfile.linux": "fish",
   "terminal.integrated.fontFamily": "'Cascadia Code PL', 'Cascadia Code PL Semilight', 'mplus Nerd Font', 'JetBrains Mono Light', 'Source Code Pro', 'Consolas NF', 'UbuntuMono Nerd Font', 'Menlo', 'Operator Mono Book', 'Code New Roman', 'Trim Mono', 'JetBrains Mono Light', 'IBM Plex Mono', 'Source Code Pro'",
-  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.fontSize": 17.5,
   "[python]": {},
   "python.insidersChannel": "off",
   "python.pythonPath": "/home/alexander/Projects/Python/VirtualEnvironments/py3.7/bin/python",
@@ -66,6 +66,16 @@
       "after": ["<Esc>"]
     }
   ],
+  "vim.normalModeKeyBindings": [
+    // {
+    //   "before": [":"],
+    //   "commands": ["workbench.action.showCommands"]
+    // },
+    {
+      "before": [";"],
+      "commands": ["workbench.action.quickOpen"]
+    }
+  ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["<C-c>", "h"],
@@ -84,13 +94,14 @@
   "vim.handleKeys": {
     "<C-a>": true,
     "<C-f>": true
+    // "<C-c>": false
     // "<C-a>": false,
     // "<C-f>": false
   },
   "markdown-preview-enhanced.previewTheme": "solarized-dark.css",
   "window.menuBarVisibility": "toggle",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "workbench.colorTheme": "Gruvbox DrakenLords Dark Draken",
+  "workbench.colorTheme": "Cobalt2",
   "workbench.iconTheme": "gruvbox-material-icon-theme",
   "prettier.bracketSpacing": false,
   "prettier.arrowParens": "avoid",
@@ -123,7 +134,8 @@
   "[javascript][typescript][javascriptreact][html][css]": {
     "editor.tabSize": 2
   },
-  "bracket-pair-colorizer-2.depreciation-notice": false
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "workbench.activityBar.visible": false
   // "[python]": {
   //   "editor.tabSize": 4
   // }
