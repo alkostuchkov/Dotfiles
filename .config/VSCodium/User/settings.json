@@ -101,7 +101,7 @@
   "markdown-preview-enhanced.previewTheme": "solarized-dark.css",
   "window.menuBarVisibility": "toggle",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "workbench.colorTheme": "Cobalt2",
+  "workbench.colorTheme": "Gruvbox DrakenLords Dark",
   "workbench.iconTheme": "gruvbox-material-icon-theme",
   "prettier.bracketSpacing": false,
   "prettier.arrowParens": "avoid",

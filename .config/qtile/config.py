@@ -276,11 +276,11 @@ groups = [Group(name, **kwargs, label="{}{}".format(name, i)) for i, (name, kwar
 for i, group_name in enumerate(group_names, 1):
     keys.extend([
         Key([mod], str(i),
-            lazy.group[group_name[0]].toscreen(),
-            desc="Switch to another group"),
+            lazy.group[group_name[0]].toscreen(toggle=True),
+            desc="Switch to another group"),  # (toggle=True) to toggle groups since Qtile 0.19.0
         Key([mod, "shift"], str(i),
             lazy.window.togroup(group_name[0]),
-            lazy.group[group_name[0]].toscreen(),  # follow the window when it moves to another group
+            lazy.group[group_name[0]].toscreen(toggle=True),  # follow the window when it moves to another group
             desc="Send current window to another group")
     ])
 
