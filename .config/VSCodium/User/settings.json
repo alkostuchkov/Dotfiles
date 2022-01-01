@@ -33,7 +33,6 @@
   "editor.tabSize": 4,
   "editor.cursorBlinking": "expand",
   "editor.wordWrap": "on",
-  // "editor.defaultFormatter": "esbenp.prettier-vscode",
   "debug.console.fontFamily": "'Cascadia Code PL', 'Cascadia Code PL Semilight', 'mplus Nerd Font', 'JetBrains Mono Light', 'Source Code Pro', 'Consolas NF', 'JetBrains Mono', 'UbuntuMono Nerd Font', 'Menlo', 'Operator Mono Book', 'Code New Roman', 'Trim Mono', 'JetBrains Mono Light', 'IBM Plex Mono'",
   "debug.console.fontSize": 17.5,
   // "terminal.explorerKind": "external",
@@ -100,12 +99,13 @@
   },
   "markdown-preview-enhanced.previewTheme": "solarized-dark.css",
   "window.menuBarVisibility": "toggle",
+  // "editor.defaultFormatter": "standard.vscode-standard",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "workbench.colorTheme": "Gruvbox DrakenLords Dark",
+  "workbench.colorTheme": "Cobalt2",
   "workbench.iconTheme": "gruvbox-material-icon-theme",
   "prettier.bracketSpacing": false,
-  "prettier.arrowParens": "avoid",
   "prettier.trailingComma": "none",
+  "prettier.semi": false,
   "liveServer.settings.donotShowInfoMsg": true,
   "window.title": "${activeEditorShort}${separator}${rootName}${separator}${appName}",
   "advancedNewFile.exclude": {
@@ -124,7 +124,6 @@
     "javascript": "javascriptreact"
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "prettier.semi": false,
   "browsersync.openBrowser": false,
   "browsersync.options": {
     "browser": "google-chrome-stable"
@@ -134,8 +133,7 @@
   "[javascript][typescript][javascriptreact][html][css]": {
     "editor.tabSize": 2
   },
-  "bracket-pair-colorizer-2.depreciation-notice": false,
-  "workbench.activityBar.visible": false
+  "bracket-pair-colorizer-2.depreciation-notice": false
   // "[python]": {
   //   "editor.tabSize": 4
   // }

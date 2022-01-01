@@ -78,7 +78,7 @@ conky.config = {
 
 conky.text = [[
 ${color white}${hr 2}
-${color white}${alignc}${voffset 6}${time %A, %e %B %G}
+${color white}${alignc}${voffset 6}${time %A, %e %B %Y}
 
 ${color white}${font neuropol x free:size=30}${alignc}${time %H:%M:%S}${font}
 ${voffset -9}
