@@ -279,7 +279,8 @@
 	<icon>application-x-rar</icon>
 	<name>Make RARv4</name>
 	<unique-id>1487167126990126-3</unique-id>
-	<command>x-terminal-emulator -e rar a -hp -ma4 %f.rar %N</command>
+	<!-- <command>x-terminal-emulator -e rar a -hp -ma4 %f.rar %N</command> -->
+	<command>$TERMINAL -e rar a -hp -ma4 %f.rar %N</command>
 	<description>Make RARv4</description>
 	<patterns>*</patterns>
 	<directories/>
@@ -291,7 +292,8 @@
 	<icon>application-x-rar</icon>
 	<name>Make RARv5</name>
 	<unique-id>1487167134422335-4</unique-id>
-	<command>x-terminal-emulator -e rar a -hp -ma5 %f.rar %N</command>
+	<!-- <command>x-terminal-emulator -e rar a -hp -ma5 %f.rar %N</command> -->
+	<command>$TERMINAL -e rar a -hp -ma5 %f.rar %N</command>
 	<description>Make RARv5</description>
 	<patterns>*</patterns>
 	<directories/>

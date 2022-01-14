@@ -81,24 +81,24 @@ keys = [
 # <SUPER> + FUNCTION KEYS
     #  Key([mod], "Return", lazy.spawn(f"{home}/.myScripts/runAlacrittyDiscreteGr.sh"), desc="Launch terminal"),
     Key([mod], "Return", lazy.spawn(my_term), desc="Launch terminal"),
-    Key([mod, "shift"], "Return", lazy.spawn("terminator"), desc="Launch terminator"),
+    Key([mod, "shift"], "Return", lazy.spawn(my_term_extra), desc="Launch extra terminal"),
     Key([mod], "r", lazy.spawn("rofi run -show drun -show-icons"), desc="Run App Lancher"),
     Key([mod], "d", lazy.spawn("dmenu_run -nb #222B2E -nf #09DBC9 -sb #009185 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
 #  Key([mod], "d", lazy.spawn("dmenu_run -nb #282828 -nf #d79921 -sb #fea63c -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Gruvbox
     Key([mod], "Print", lazy.spawn("flameshot gui"), desc="Run flameshot (take screenshot)"),
-    #  Key([mod], "w", lazy.spawn(f"{home}/.myScripts/runFirefoxDiscreteGr.sh"), desc="Launch Firefox"),
     Key([mod], "w", lazy.spawn("/usr/bin/firefox"), desc="Launch Firefox"),
     Key([mod], "u", lazy.spawn("qutebrowser"), desc="Launch qutebrowser"),
     Key([mod], "e", lazy.spawn("dolphin"), desc="Launch File Manager"),
     Key([mod], "p", lazy.spawn("thunar"), desc="Launch File Manager"),
     Key([mod], "i", lazy.spawn("/usr/bin/octopi"), desc="Launch Octopi"),
-    Key([mod], "g", lazy.spawn(f"{home}/.myScripts/runGimpDiscreteGr.sh"), desc="Run GIMP DiscreteGraphics"),
-    #  Key([mod], "a", lazy.spawn(f"{my_term} -e {SHELL} -c {home}/.myScripts/runRangerDiscreteGr.sh"), desc="Run ranger DiscreteGraphics"),
     Key([mod], "a", lazy.spawn(f"{my_term} -e {SHELL} -c ranger"), desc="Run ranger"),
-    Key([mod], "b", lazy.spawn(f"{home}/Programs/SublimeText/sublime_text"), desc="Run Sublime Text"),
     Key([mod], "t", lazy.spawn(f"{home}/Programs/Telegram/Telegram -workdir /home/alexander/.local/share/TelegramDesktop/ -- %u"), desc="Run Telegram"),
-    Key([mod], "x", lazy.spawn("xterm"), desc="Run XTerm"),
     Key([mod], "v", lazy.spawn(f"{my_term} -e {home}/.config/vifm/scripts/vifmrun"), desc="Run vifm"),
+    #  Key([mod], "w", lazy.spawn(f"{home}/.myScripts/runFirefoxDiscreteGr.sh"), desc="Launch Firefox"),
+    #  Key([mod], "g", lazy.spawn(f"{home}/.myScripts/runGimpDiscreteGr.sh"), desc="Run GIMP DiscreteGraphics"),
+    #  Key([mod], "a", lazy.spawn(f"{my_term} -e {SHELL} -c {home}/.myScripts/runRangerDiscreteGr.sh"), desc="Run ranger DiscreteGraphics"),
+    #  Key([mod], "b", lazy.spawn(f"{home}/Programs/SublimeText/sublime_text"), desc="Run Sublime Text"),
+    #  Key([mod], "x", lazy.spawn("xterm"), desc="Run XTerm"),
     # TOGGLE FULLSCREEN
     Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
     # SWITCH BETWEEN GROUPS

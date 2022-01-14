@@ -134,7 +134,8 @@
   "[javascript][typescript][javascriptreact][html][css]": {
     "editor.tabSize": 2
   },
-  "bracket-pair-colorizer-2.depreciation-notice": false
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "workbench.activityBar.visible": false
   // "[python]": {
   //   "editor.tabSize": 4
   // }
