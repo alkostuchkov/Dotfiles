@@ -607,34 +607,66 @@ draw_bold_text_with_bright_colors: true
     # white:   '0xffffff'
 
 ###############################################################################
-# Colors (Material)
+# # Colors (Material)
+# colors:
+  # # Default colors
+  # primary:
+    # background: '#263238'
+    # foreground: '#eeffff'
+#
+  # # Normal colors
+  # normal:
+    # black:   '#000000'  # Arbitrary
+    # red:     '#e53935'
+    # green:   '#91b859'
+    # yellow:  '#ffb62c'
+    # blue:    '#6182b8'
+    # magenta: '#ff5370'  # Dark pink of the original material theme
+    # cyan:    '#39adb5'
+    # white:   '#a0a0a0'  # Arbitrary
+#
+  # # Bright colors
+  # bright:
+    # black:   '#4e4e4e'  # Arbitrary
+    # red:     '#ff5370'
+    # green:   '#c3e88d'
+    # yellow:  '#ffcb6b'
+    # blue:    '#82aaff'
+    # magenta: '#f07178'  # Pink of the original material theme
+    # cyan:    '#89ddff'
+    # white:   '#ffffff'  # Arbitrary
+
+###############################################################################
+# Colors (Base16-Flat)
 colors:
   # Default colors
   primary:
-    background: '#263238'
-    foreground: '#eeffff'
+    # background: '#2c3e50'
+    background: '#143448'
+    foreground: '#e0e0e0'
 
   # Normal colors
   normal:
-    black:   '#000000'  # Arbitrary
-    red:     '#e53935'
-    green:   '#91b859'
-    yellow:  '#ffb62c'
-    blue:    '#6182b8'
-    magenta: '#ff5370'  # Dark pink of the original material theme
-    cyan:    '#39adb5'
-    white:   '#a0a0a0'  # Arbitrary
+    # black:   '#2c3e50'
+    black:   '#143448'
+    red:     '#e74c3c'
+    green:   '#2ecc71'
+    yellow:  '#f1c40f'
+    blue:    '#3498db'
+    magenta: '#9b59b6'  # Dark pink of the original material theme
+    cyan:    '#1abc9c'
+    white:   '#e0e0e0'  # Arbitrary
 
   # Bright colors
   bright:
-    black:   '#4e4e4e'  # Arbitrary
-    red:     '#ff5370'
-    green:   '#c3e88d'
-    yellow:  '#ffcb6b'
-    blue:    '#82aaff'
-    magenta: '#f07178'  # Pink of the original material theme
-    cyan:    '#89ddff'
-    white:   '#ffffff'  # Arbitrary
+    black:   '#95a5a6'  # Arbitrary
+    red:     '#e74c3c'
+    green:   '#2ecc71'
+    yellow:  '#f1c40f'
+    blue:    '#3498db'
+    magenta: '#9b59b6'  # Pink of the original material theme
+    cyan:    '#1abc9c'
+    white:   '#ecf0f1'  # Arbitrary
 
 ###############################################################################
 # # Colors (One Dark)

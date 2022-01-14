@@ -106,6 +106,7 @@
   "prettier.bracketSpacing": false,
   "prettier.trailingComma": "none",
   "prettier.semi": false,
+  "prettier.arrowParens": "avoid",
   "liveServer.settings.donotShowInfoMsg": true,
   "window.title": "${activeEditorShort}${separator}${rootName}${separator}${appName}",
   "advancedNewFile.exclude": {
