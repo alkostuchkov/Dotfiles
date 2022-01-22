@@ -530,3 +530,6 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [ -f /home/alexander/node_modules/tabtab/.completions/electron-forge.fish ]; and . /home/alexander/node_modules/tabtab/.completions/electron-forge.fish
+
+# opam configuration
+source /home/alexander/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true

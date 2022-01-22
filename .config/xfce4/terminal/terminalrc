@@ -1,6 +1,6 @@
 [Configuration]
 BackgroundDarkness=0.970000
-FontName=Source Code Pro 14
+FontName=MonacoB2 Nerd Font Mono Bold 16
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBordersDefault=FALSE
@@ -32,10 +32,12 @@ MiscShowRelaunchDialog=TRUE
 MiscNewTabAdjacent=FALSE
 DropdownAlwaysShowTabs=FALSE
 DropdownHeight=60
-ColorForeground=#ebdbb2
-ColorBackground=#32302f
-ColorPalette=#282828;#cc241d;#98971a;#d79921;#458588;#b16286;#689d6a;#a89984;#928374;#fb4934;#b8bb26;#fabd2f;#83a598;#d3869b;#8ec07c;#ebdbb2
-TabActivityColor=#bf4040
+ColorPalette=#2C3E50;#E74C3C;#2ECC71;#F1C40F;#3498DB;#9B59B6;#1ABC9C;#e0e0e0;#95A5A6;#E74C3C;#2ECC71;#F1C40F;#3498DB;#9B59B6;#1ABC9C;#ECF0F1
 MiscSearchDialogOpacity=100
 MiscShowUnsafePasteDialog=TRUE
+ScrollingLines=5000
+ColorCursor=x
+ColorForeground=#e0e0e0
+ColorBackground=#2C3E50
+ColorBoldIsBright=FALSE
 
