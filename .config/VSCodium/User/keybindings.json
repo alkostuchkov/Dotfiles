@@ -144,12 +144,12 @@
     "when": "!terminalFocus"
   },
   {
-    "key": "shift+meta+a",
+    "key": "alt+a",
     "command": "cursorEnd",
     "when": "textInputFocus"
   },
   {
-    "key": "shift+meta+i",
+    "key": "alt+i",
     "command": "cursorHome",
     "when": "textInputFocus"
   },
