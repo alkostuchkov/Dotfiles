@@ -1,0 +1,7 @@
+[Scheme]
+Name=Base16-Flat-LikeCobalt2
+ColorForeground=#e0e0e0
+ColorBackground=#2c3e50
+ColorCursor=x
+ColorBoldIsBright=FALSE
+ColorPalette=#2c3e50;#e74c3c;#2ECC71;#f1c40f;#3498DB;#9B59B6;#1abc9c;#e0e0e0;#95A5A6;#e74c3c;#2ECC71;#f1c40f;#3498DB;#9B59B6;#1abc9c;#ECF0F1

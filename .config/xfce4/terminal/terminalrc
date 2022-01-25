@@ -32,12 +32,12 @@ MiscShowRelaunchDialog=TRUE
 MiscNewTabAdjacent=FALSE
 DropdownAlwaysShowTabs=FALSE
 DropdownHeight=60
-ColorPalette=#2C3E50;#E74C3C;#2ECC71;#F1C40F;#3498DB;#9B59B6;#1ABC9C;#e0e0e0;#95A5A6;#E74C3C;#2ECC71;#F1C40F;#3498DB;#9B59B6;#1ABC9C;#ECF0F1
+ColorPalette=#143448;#ff628c;#2ECC71;#ffc600;#3498DB;#9B59B6;#80ffbb;#e0e0e0;#95A5A6;#ff628c;#2ECC71;#ffc600;#3498DB;#9B59B6;#80ffbb;#ECF0F1
 MiscSearchDialogOpacity=100
 MiscShowUnsafePasteDialog=TRUE
 ScrollingLines=5000
 ColorCursor=x
 ColorForeground=#e0e0e0
-ColorBackground=#2C3E50
+ColorBackground=#143448
 ColorBoldIsBright=FALSE
 
