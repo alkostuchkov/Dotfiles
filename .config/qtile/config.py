@@ -95,6 +95,7 @@ keys = [
     Key([mod], "a", lazy.spawn(f"{my_term} -e {SHELL} -c ranger"), desc="Run ranger"),
     Key([mod], "t", lazy.spawn(f"{home}/Programs/Telegram/Telegram -workdir /home/alexander/.local/share/TelegramDesktop/ -- %u"), desc="Run Telegram"),
     Key([mod], "v", lazy.spawn(f"{my_term} -e {home}/.config/vifm/scripts/vifmrun"), desc="Run vifm"),
+    Key([mod], "c", lazy.spawn("vscodium"), desc="Launch VSCodium"),
     #  Key([mod], "w", lazy.spawn(f"{home}/.myScripts/runFirefoxDiscreteGr.sh"), desc="Launch Firefox"),
     #  Key([mod], "g", lazy.spawn(f"{home}/.myScripts/runGimpDiscreteGr.sh"), desc="Run GIMP DiscreteGraphics"),
     #  Key([mod], "a", lazy.spawn(f"{my_term} -e {SHELL} -c {home}/.myScripts/runRangerDiscreteGr.sh"), desc="Run ranger DiscreteGraphics"),

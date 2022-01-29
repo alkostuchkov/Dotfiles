@@ -608,7 +608,7 @@ draw_bold_text_with_bright_colors: true
     # white:   '0xffffff'
 
 ###############################################################################
-# # Colors (Material)
+# # Colors (Material+)
 # colors:
   # # Default colors
   # primary:
@@ -638,7 +638,7 @@ draw_bold_text_with_bright_colors: true
     # white:   '#ffffff'  # Arbitrary
 
 ###############################################################################
-# Colors (Base16-Flat)
+# Colors (Base16-Flat-LikeCobalt2)
 colors:
   # Default colors
   primary:
