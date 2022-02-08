@@ -480,10 +480,10 @@ def init_widgets_list():
                     #  no_update_string="No updates",
                     font=my_nerd_font,
                     fontsize=14,
-                    distro="Arch_checkupdates",
+                    #  distro="Arch_checkupdates",
                     custom_command="checkupdates+aur",
-                    #  custom_command="paru -Qu",
-                    #  distro="Arch",
+                    #  distro="Arch_yay",
+                    #  custom_command="yay -Qu",
                     display_format="  {updates}",  # ⟳ 
                     mouse_callbacks={
                         #  "Button1": widget.CheckUpdates.poll,
