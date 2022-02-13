@@ -144,12 +144,12 @@
     "when": "!terminalFocus"
   },
   {
-    "key": "alt+a",
+    "key": "shift+meta+a",
     "command": "cursorEnd",
     "when": "textInputFocus"
   },
   {
-    "key": "alt+i",
+    "key": "shift+meta+i",
     "command": "cursorHome",
     "when": "textInputFocus"
   },
@@ -196,16 +196,6 @@
     "when": "fileMatchOrMatchFocus"
   },
   {
-    "key": "shift+alt+up",
-    "command": "editor.action.copyLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+shift+alt+up",
-    "command": "-editor.action.copyLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
     "key": "shift+alt+down",
     "command": "editor.action.copyLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
@@ -216,13 +206,47 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
+    "key": "shift+alt+down",
+    "command": "-editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+alt+up",
+    "command": "-editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
     "key": "shift+alt+up",
     "command": "-editor.action.insertCursorAbove",
     "when": "editorTextFocus"
   },
   {
-    "key": "shift+alt+down",
-    "command": "-editor.action.insertCursorBelow",
-    "when": "editorTextFocus"
+    "key": "alt+a",
+    "command": "cursorEnd",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+i",
+    "command": "cursorHome",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.openRecent"
+  },
+  {
+    "key": "u",
+    "command": "undo",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "redo",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
   }
 ]

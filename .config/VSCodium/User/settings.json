@@ -17,9 +17,8 @@
   "editor.fontSize": 18,
   // "editor.lineHeight": 20,
   // "editor.tabSize": 4,
-  // "editor.fontWeight": "500",
   // Controls the font weight. Accepts "normal" and "bold" keywords or numbers between 1 and 1000.
-  // "editor.fontWeight": "1",
+  "editor.fontWeight": "500",
   "editor.lineNumbers": "relative",
   "editor.fontLigatures": false,
   "editor.autoClosingQuotes": "languageDefined",
