@@ -5,7 +5,7 @@ pac_updates=$?
 printf "$1"
 
 # aur_output=$(checkupdates-aur)
-aur_output=$(yay -Qu)
+aur_output=$(yay -Q -u -a)
 printf "$aur_output"
 
 if [[ $aur_output ]]; then

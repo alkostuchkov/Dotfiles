@@ -17,6 +17,46 @@ from ranger.api.commands import Command
 from ranger.core.loader import CommandLoader
 
 
+class MountC(Command):
+    """:MountC
+
+    Mounts Windows disk C.
+    """
+
+    def execute(self):
+        self.fm.run("udisksctl mount -b /dev/sda1")
+
+
+class MountD(Command):
+    """:MountD
+
+    Mounts Windows disk D.
+    """
+
+    def execute(self):
+        self.fm.run("udisksctl mount -b /dev/sda2")
+
+
+class UnmountC(Command):
+    """:UnmountC
+
+    Unmounts Windows disk C.
+    """
+
+    def execute(self):
+        self.fm.run("udisksctl unmount -b /dev/sda1")
+
+
+class UnmountD(Command):
+    """:UnmountD
+
+    Unmounts Windows disk D.
+    """
+
+    def execute(self):
+        self.fm.run("udisksctl unmount -b /dev/sda2")
+
+
 class extract_here(Command):
     def execute(self):
         """ extract selected files to current directory."""

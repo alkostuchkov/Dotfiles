@@ -53,7 +53,7 @@ def show_updates_arch():
         try:
             #  updates_aur = subprocess.check_output(["paru", "-Q", "-u", "-a"]).decode("utf-8").strip()
             #  updates_aur = subprocess.check_output(["checkupdates-aur"]).decode("utf-8").strip()
-            updates_aur = subprocess.check_output(["yay", "-Qu"]).decode("utf-8").strip()
+            updates_aur = subprocess.check_output(["yay", "-Q", "-u", "-a"]).decode("utf-8").strip()
             updates_aur_list = updates_aur.splitlines()
         except subprocess.CalledProcessError:
             aur_output = ""

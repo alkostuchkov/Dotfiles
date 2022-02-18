@@ -82,8 +82,6 @@ keys = [
 # <SUPER> + FUNCTION KEYS
     #  Key([mod], "Return", lazy.spawn(f"{home}/.myScripts/runAlacrittyDiscreteGr.sh"), desc="Launch terminal"),
     Key([mod], "Return", lazy.spawn(my_term), desc="Launch terminal"),
-    Key([mod, "shift"], "Return", lazy.spawn(my_term_extra), desc="Launch extra terminal"),
-    Key([mod, "control"], "Return", lazy.spawn("terminator"), desc="Launch terminator terminal"),
     Key([mod], "r", lazy.spawn("rofi run -show drun -show-icons"), desc="Run App Lancher"),
     Key([mod], "d", lazy.spawn("dmenu_run -nb #222B2E -nf #09DBC9 -sb #009185 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
 #  Key([mod], "d", lazy.spawn("dmenu_run -nb #282828 -nf #d79921 -sb #fea63c -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Gruvbox
@@ -123,6 +121,9 @@ keys = [
     Key([mod], "space", lazy.layout.next(), desc="Switch window focus to other pane(s) of stack"),
 
 # <SUPER> + <SHIFT> + KEYS  (-nf #fea63c)
+    Key([mod, "shift"], "Return", lazy.spawn(my_term_extra), desc="Launch extra terminal"),
+    Key([mod, "shift"], "a", lazy.spawn(f"{my_term} -e pkexec ranger"), desc="Launch ranger as root"),
+    Key([mod, "shift"], "p", lazy.spawn(f"{home}/.myScripts/run_Thunar_as_root.sh"), desc="Launch Thunar as root"),
     Key([mod, "shift"], "w", lazy.spawn("google-chrome-stable"), desc="Launch Chrome"),
     Key([mod, "shift"], "y", lazy.spawn(f"{home}/.myScripts/start-stop_syncthing.sh"), desc="Start-Stop Syncthing (for Dropbox sync)"),
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
@@ -159,6 +160,7 @@ keys = [
     Key([mod, alt], "l", lazy.layout.flip_right(), desc=""),
 
 # <SUPER> + <CTRL> + KEYS
+    Key([mod, "control"], "Return", lazy.spawn("terminator"), desc="Launch terminator terminal"),
     # RESIZE UP, DOWN, LEFT, RIGHT
     Key([mod, "control"], "l",
         lazy.layout.grow_right(),

@@ -7,7 +7,7 @@ set nocompatible " no vi-compatible
 " let &pythonthreedll='C:\Python34\libs\python34.dll'
 
 " Automatic reloading .vimrc
-autocmd! VimEnter * :source $MYVIMRC  "for NERDCommenter
+" autocmd! VimEnter * :source $MYVIMRC  "for NERDCommenter
 " autocmd! VimEnter * :redraw
 
 " Showing line numbers and length
@@ -301,7 +301,8 @@ autocmd BufEnter * call NERDTreeRefresh()
 "###############################################################################
 " NERDCommenter Settings
 "###############################################################################
-map <Leader>/ <plug>NERDCommenterToggle
+" map <Leader>/ <plug>NERDCommenterToggle
+map <C-c>/ <plug>NERDCommenterToggle
 let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
 let g:NERDCompactSexyComs = 1 " Use compact syntax for prettified multi-line comments
 let g:NERDCommentEmptyLines = 1 " Allow commenting and inverting empty lines (useful when commenting a region)
