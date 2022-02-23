@@ -6,7 +6,6 @@ mountingResult=$(udisksctl mount -b $winDisk 2>&1)
 if [[ $? = 0 ]]
 then  # if mounted successfully
     notify-send -i dialog-information -t 3000 "$(echo $mountingResult | awk '{print $1 " " $2 " " $3}')" "$(echo $mountingResult | awk '{print $4}')"
-    echo $mountingResult
 else
     # notify-send -i dialog-error -t 3000 " " "$(echo $mountingResult | cut -d"'" -f1)"
     errHead=$(echo ${mountingResult} | awk -F: '{print $1}')
