@@ -15,7 +15,7 @@
     background_color = "#263238"
     background_darkness = 0.97
     cursor_color = "#a3b3cc"
-    font = BlexMono Nerd Font Mono Medium 16.5
+    font = FiraCode Nerd Font Medium 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden
@@ -224,30 +224,6 @@
     show_titlebar = False
     scrollbar_position = hidden
     palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
-    use_system_font = False
-    bold_is_bright = True
-    copy_on_selection = True
-  [[FiraCode_Nerd_16]]
-    background_color = "#282828"
-    background_darkness = 0.97
-    cursor_color = "#aaaaaa"
-    font = FiraCode Nerd Font Medium 16
-    foreground_color = "#dfbf8e"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
-    use_system_font = False
-    bold_is_bright = True
-    copy_on_selection = True
-  [[MonacoB_Nerd_15_5]]
-    background_color = "#263238"
-    background_darkness = 0.97
-    cursor_color = "#a3b3cc"
-    font = MonacoB Nerd Font Mono 15.5
-    foreground_color = "#dcdfe4"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
@@ -587,30 +563,6 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[IBMPlexMono_16]]
-    background_color = "#263238"
-    background_darkness = 0.97
-    cursor_color = "#a3b3cc"
-    font = IBM Plex Mono Medium 16
-    foreground_color = "#dcdfe4"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
-    use_system_font = False
-    bold_is_bright = True
-    copy_on_selection = True
-  [[IBMPlexMono_Nerd_16]]
-    background_color = "#263238"
-    background_darkness = 0.97
-    cursor_color = "#a3b3cc"
-    font = BlexMono Nerd Font Mono Medium 16
-    foreground_color = "#dcdfe4"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
-    use_system_font = False
-    bold_is_bright = True
-    copy_on_selection = True
   [[UbuntuMono_19]]
     background_color = "#263238"
     background_darkness = 0.97
@@ -664,6 +616,56 @@
     use_system_font = False
   [[VictorMono_17]]
     cursor_color = "#aaaaaa"
+  [[VinMono_17]]
+    background_color = "#263238"
+    background_darkness = 0.97
+    cursor_color = "#a3b3cc"
+    font = Vin Mono Pro 17
+    foreground_color = "#dcdfe4"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[IBMPlexMono_Nerd_16_5]]
+    background_color = "#263238"
+    background_darkness = 0.97
+    cursor_color = "#a3b3cc"
+    font = BlexMono Nerd Font Mono Medium 16.5
+    foreground_color = "#dcdfe4"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[IBMPlexMono_16_5]]
+    background_color = "#263238"
+    background_darkness = 0.97
+    cursor_color = "#a3b3cc"
+    font = IBM Plex Mono Medium 16.5
+    foreground_color = "#dcdfe4"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[MonacoB_Nerd_15_5]]
+    cursor_color = "#aaaaaa"
+  [[FiraCode_Nerd_16]]
+    background_color = "#263238"
+    background_darkness = 0.97
+    cursor_color = "#a3b3cc"
+    font = FiraCode Nerd Font Medium 16
+    foreground_color = "#dcdfe4"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
 [layouts]
   [[default]]
     [[[child1]]]
