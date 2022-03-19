@@ -122,8 +122,10 @@ keys = [
 
 # <SUPER> + <SHIFT> + KEYS  (-nf #fea63c)
     Key([mod, "shift"], "Return", lazy.spawn(my_term_extra), desc="Launch extra terminal"),
-    Key([mod, "shift"], "a", lazy.spawn(f"{my_term} -e pkexec ranger"), desc="Launch ranger as root"),
-    Key([mod, "shift"], "p", lazy.spawn(f"{home}/.myScripts/run_Thunar_as_root.sh"), desc="Launch Thunar as root"),
+    #  Key([mod, "shift"], "a", lazy.spawn(f"{my_term} -e pkexec ranger"), desc="Launch ranger as root"),
+    #  Key([mod, "shift"], "a", lazy.spawn(f"{my_term} -e sudo ranger"), desc="Launch ranger as root"),
+    Key([mod, "shift"], "a", lazy.spawn(f"{home}/.myScripts/runRangerAsRoot.sh"), desc="Launch ranger as root"),
+    Key([mod, "shift"], "p", lazy.spawn(f"{home}/.myScripts/runThunarAsRoot.sh"), desc="Launch Thunar as root"),
     Key([mod, "shift"], "w", lazy.spawn("google-chrome-stable"), desc="Launch Chrome"),
     Key([mod, "shift"], "y", lazy.spawn(f"{home}/.myScripts/start-stop_syncthing.sh"), desc="Start-Stop Syncthing (for Dropbox sync)"),
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
