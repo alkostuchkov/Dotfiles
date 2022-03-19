@@ -179,7 +179,8 @@ if has("gui_running")
     " set guifont=Iosevka\ 16
     " set guifont=Cascadia\ Code\ PL\ SemiLight\ 17
     " set guifont=Cascadia\ Mono\ PL\ 16.5
-    set guifont=Recursive\ Mono\ Casual\ Static\ Medium\ 17
+    " set guifont=Recursive\ Mono\ Casual\ Static\ Medium\ 17
+    set guifont=Recursive\ Mono\ Casual\ Static\ 16
 
     " set guifont=Monaco\ 13
     " set guifont=Ligamonacop\ 13
@@ -347,7 +348,7 @@ let g:NERDCreateDefaultMappings = 0 " Cancel NERD's default mappings
 " Airline Settings
 "###############################################################################
 let g:airline_section_c = '%F%m%r%h%w %y'
-let g:airline_powerline_fonts = 1  "Включить поддержку Powerline шрифтов
+" let g:airline_powerline_fonts = 1  "Включить поддержку Powerline шрифтов
 let g:airline_section_x = 'HEX=%02.2B'
 let g:airline_section_y = '%{&encoding}[%{&fileformat}]'
 let g:airline_section_z = "\ue0a1 %l,%c/%L %p%%"

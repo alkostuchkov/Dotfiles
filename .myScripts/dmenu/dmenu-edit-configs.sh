@@ -25,6 +25,7 @@ options=(
 "dmenu-system-exit - $HOME/.myScripts/dmenu/dmenu-system-exit.sh"
 "dmenu-unicode - $HOME/.myScripts/dmenu/dmenu-unicode.sh"
 "fish - $HOME/.config/fish/config.fish"
+"fonts - $HOME/.config/fontconfig/fonts.conf"
 "homepage - $HOME/.surf/homepage.html"
 "i3 - $HOME/.config/i3/config"
 "i3blocks - $HOME/.config/i3blocks/config"

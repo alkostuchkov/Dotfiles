@@ -15,7 +15,7 @@
     background_color = "#263238"
     background_darkness = 0.97
     cursor_color = "#a3b3cc"
-    font = FiraCode Nerd Font Medium 16
+    font = CaskaydiaCove Nerd Font 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden
@@ -411,7 +411,7 @@
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
-    font = SauceCodePro Nerd Font 16
+    font = SauceCodePro Nerd Font Medium 16
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -563,18 +563,6 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[UbuntuMono_19]]
-    background_color = "#263238"
-    background_darkness = 0.97
-    cursor_color = "#a3b3cc"
-    font = UbuntuMono Nerd Font 19
-    foreground_color = "#dcdfe4"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
-    use_system_font = False
-    bold_is_bright = True
-    copy_on_selection = True
   [[RecMonoDuotone_17]]
     background_color = "#263238"
     background_darkness = 0.97
@@ -659,6 +647,18 @@
     background_darkness = 0.97
     cursor_color = "#a3b3cc"
     font = FiraCode Nerd Font Medium 16
+    foreground_color = "#dcdfe4"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[UbuntuMono_18]]
+    background_color = "#263238"
+    background_darkness = 0.97
+    cursor_color = "#a3b3cc"
+    font = UbuntuMono Nerd Font 18
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden

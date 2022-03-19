@@ -2,7 +2,7 @@
 # https://www.mankier.com/8/udiskie
 
 program_options:
-    automount: false
+    automount: true
     tray: "auto"
     notify: true
     menu: "flat"
