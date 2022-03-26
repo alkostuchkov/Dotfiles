@@ -78,6 +78,79 @@ upped_netiface = get_upped_netiface(netifaces)
 # Counter of opened windows
 #  opened_windows_counter = 0
 
+# COLORS
+# DT's colors
+#  colors = [["#282c34", "#282c34"], # panel background
+          #  ["#434758", "#434758"], # background for current screen tab
+          #  ["#ffffff", "#ffffff"], # font color for group names
+          #  ["#ff5555", "#ff5555"], # border line color for current tab
+          #  ["#8d62a9", "#8d62a9"], # border line color for other tab and odd widgets
+          #  ["#668bd7", "#668bd7"], # color for the even widgets
+          #  ["#e1acff", "#e1acff"]] # window name
+
+# My colors
+#  colors = [["#222B2E", "#222B2E"], # 0 panel background
+          #  ["#585E72", "#585E72"], # 1 background for current screen tab
+          #  ["#DBDCD5", "#DBDCD5"], # 2 font color for group names
+          #  ["#009185", "#009185"], # 3 border line color for current tab
+          #  ["#8d62a9", "#8d62a9"], # 4 border line color for other tab and odd widgets
+          #  ["#668bd7", "#668bd7"], # 5 color for the even widgets
+          #  ["#24D2AF", "#24D2AF"], # 6 window name
+          #  ["#E2A0A5", "#E2A0A5"], # 7 CPU widget
+          #  ["#F2B06A", "#F2B06A"], # 8 Memory widget
+          #  ["#03DB25", "#03DB25"], # 9 NetSpeed widget
+          #  ["#ffffff", "#ffffff"], # 10 Layout widget
+          #  ["#55EBEA", "#55EBEA"], # 11 KeyboardLayout widget
+          #  ["#F3F008", "#F3F008"], # 12 Date widget
+          #  ["#404555", "#404555"], # 13 system tray
+          #  ["#F6F806", "#F6F806"]] # 14 updates
+
+# Materia Manjaro
+colors = [["#263238", "#263238"],  # 0 panel background
+          ["#585E72", "#585E72"],  # 1 background for current screen tab
+          ["#dbdcd5", "#dbdcd5"],  # 2 font color for group names
+          ["#009185", "#009185"],  # 3 border line color for current tab
+          ["#8d62a9", "#8d62a9"],  # 4 border line color for other tab and odd widgets
+          ["#6182b8", "#6182b8"],  # 5 color for the even widgets
+          ["#24d2af", "#24d2af"],  # 6 window name
+          ["#e2a0a5", "#e2a0a5"],  # 7 CPU widget
+          ["#ffb62c", "#ffb62c"],  # 8 Memory widget
+          ["#91b859", "#91b859"],  # 9 NetSpeed widget
+          ["#ffffff", "#ffffff"],  # 10 Layout widget
+          ["#39adb5", "#39adb5"],  # 11 KeyboardLayout widget
+          ["#39adb5", "#39adb5"],  # 12 Date widget
+          #  ["#f2b06a", "#f2b06a"],  # 12 Date widget
+          ["#404555", "#404555"],  # 13 system tray
+          ["#e2e0a5", "#e2e0a5"],  # 14 updates
+          #  ["#ffcb6b", "#ffcb6b"],  # 14 updates
+          ["#eb7bef", "#eb7bef"],  # 15 weather
+          ["#d79921", "#d79921"],  # 16 Chord
+          ["#ffbb00", "#ffbb00"],  # 17 Dmenu (Chord) background
+          ["#070800", "#070800"],  # 18 Dmenu (Chord) foreground
+          ["#00ff00", "#00ff00"],  # 19 Syncthing active
+          ["#ff5555", "#ff5555"],  # 20 Syncthing inactive
+          ["#E4C962", "#E4C962"]]  # 21 Active group
+          #  ["#ec30f3", "#ec30f3"]]  # 15 weather
+          #  ["#e2e0a5", "#e2e0a5"]]  # 15 weather
+
+# Gruvbox colors
+#  colors = [["#282828", "#282828"], # 0 panel background
+          #  ["#505050", "#505050"], # 1 background for current screen tab
+          #  ["#ebdbb2", "#ebdbb2"], # 2 font color for group names
+          #  ["#d79921", "#d79921"], # 3 border line color for current tab
+          #  ["#b16286", "#b16286"], # 4 border line color for other tab and odd widgets
+          #  ["#458588", "#458588"], # 5 color for the even widgets
+          #  ["#fea63c", "#fea63c"], # 6 window name
+          #  ["#b16286", "#b16286"], # 7 CPU widget
+          #  #  ["#cc241d", "#cc241d"], # 7 CPU widget
+          #  ["#98971a", "#98971a"], # 8 Memory widget
+          #  ["#689d6a", "#689d6a"], # 9 NetSpeed widget
+          #  ["#ffffff", "#ffffff"], # 10 Layout widget
+          #  ["#458588", "#458588"], # 11 KeyboardLayout widget
+          #  ["#a89984", "#a89984"], # 12 Date widget
+          #  ["#282828", "#282828"], # 13 system tray
+          #  ["#d79921", "#d79921"]] # 14 updates
+
 keys = [
 # <SUPER> + FUNCTION KEYS
     #  Key([mod], "Return", lazy.spawn(f"{home}/.myScripts/runAlacrittyDiscreteGr.sh"), desc="Launch terminal"),
@@ -304,6 +377,27 @@ layout_theme = {"border_width": 3,
 layouts = [
     #  layout.Bsp(**layout_theme),
     layout.Columns(**layout_theme, border_on_single=True),
+    layout.TreeTab(
+         font = my_font,
+         fontsize=14,
+         bg_color=colors[0][0],
+         active_bg=colors[3][0],
+         active_fg=colors[21][0],
+         inactive_bg=colors[13][0],
+         inactive_fg=colors[2][0],
+         border_width=2,
+         #  bg_color="141414",
+         #  active_bg="90C435",
+         #  active_fg="000000",
+         #  inactive_bg="384323",
+         #  inactive_fg="a0a0a0",
+         padding_y=5,
+         sections=["FIRST", "SECOND"],
+         section_fontsize=12,
+         section_fg=colors[2][0],
+         section_top=10,
+         panel_width=320
+         ),
     layout.Max(**layout_theme),
     layout.MonadTall(**layout_theme),
     layout.MonadWide(**layout_theme),
@@ -314,94 +408,8 @@ layouts = [
     #  layout.VerticalTile(**layout_theme),
     #  layout.Matrix(**layout_theme),
     #  layout.Zoomy(**layout_theme),
-    #  layout.TreeTab(
-         #  font = my_font,
-         #  fontsize=12,
-         #  sections=["FIRST", "SECOND"],
-         #  section_fontsize=12,
-         #  bg_color="141414",
-         #  active_bg="90C435",
-         #  active_fg="000000",
-         #  inactive_bg="384323",
-         #  inactive_fg="a0a0a0",
-         #  padding_y=5,
-         #  section_top=10,
-         #  panel_width=320
-         #  ),
     #  layout.Floating(**layout_theme)
 ]
-
-# DT's colors
-#  colors = [["#282c34", "#282c34"], # panel background
-          #  ["#434758", "#434758"], # background for current screen tab
-          #  ["#ffffff", "#ffffff"], # font color for group names
-          #  ["#ff5555", "#ff5555"], # border line color for current tab
-          #  ["#8d62a9", "#8d62a9"], # border line color for other tab and odd widgets
-          #  ["#668bd7", "#668bd7"], # color for the even widgets
-          #  ["#e1acff", "#e1acff"]] # window name
-
-# My colors
-#  colors = [["#222B2E", "#222B2E"], # 0 panel background
-          #  ["#585E72", "#585E72"], # 1 background for current screen tab
-          #  ["#DBDCD5", "#DBDCD5"], # 2 font color for group names
-          #  ["#009185", "#009185"], # 3 border line color for current tab
-          #  ["#8d62a9", "#8d62a9"], # 4 border line color for other tab and odd widgets
-          #  ["#668bd7", "#668bd7"], # 5 color for the even widgets
-          #  ["#24D2AF", "#24D2AF"], # 6 window name
-          #  ["#E2A0A5", "#E2A0A5"], # 7 CPU widget
-          #  ["#F2B06A", "#F2B06A"], # 8 Memory widget
-          #  ["#03DB25", "#03DB25"], # 9 NetSpeed widget
-          #  ["#ffffff", "#ffffff"], # 10 Layout widget
-          #  ["#55EBEA", "#55EBEA"], # 11 KeyboardLayout widget
-          #  ["#F3F008", "#F3F008"], # 12 Date widget
-          #  ["#404555", "#404555"], # 13 system tray
-          #  ["#F6F806", "#F6F806"]] # 14 updates
-
-# Materia Manjaro
-colors = [["#263238", "#263238"],  # 0 panel background
-          ["#585E72", "#585E72"],  # 1 background for current screen tab
-          ["#dbdcd5", "#dbdcd5"],  # 2 font color for group names
-          ["#009185", "#009185"],  # 3 border line color for current tab
-          ["#8d62a9", "#8d62a9"],  # 4 border line color for other tab and odd widgets
-          ["#6182b8", "#6182b8"],  # 5 color for the even widgets
-          ["#24d2af", "#24d2af"],  # 6 window name
-          ["#e2a0a5", "#e2a0a5"],  # 7 CPU widget
-          ["#ffb62c", "#ffb62c"],  # 8 Memory widget
-          ["#91b859", "#91b859"],  # 9 NetSpeed widget
-          ["#ffffff", "#ffffff"],  # 10 Layout widget
-          ["#39adb5", "#39adb5"],  # 11 KeyboardLayout widget
-          ["#39adb5", "#39adb5"],  # 12 Date widget
-          #  ["#f2b06a", "#f2b06a"],  # 12 Date widget
-          ["#404555", "#404555"],  # 13 system tray
-          ["#e2e0a5", "#e2e0a5"],  # 14 updates
-          #  ["#ffcb6b", "#ffcb6b"],  # 14 updates
-          ["#eb7bef", "#eb7bef"],  # 15 weather
-          ["#d79921", "#d79921"],  # 16 Chord
-          ["#ffbb00", "#ffbb00"],  # 17 Dmenu (Chord) background
-          ["#070800", "#070800"],  # 18 Dmenu (Chord) foreground
-          ["#00ff00", "#00ff00"],  # 19 Syncthing active
-          ["#ff5555", "#ff5555"],  # 20 Syncthing inactive
-          ["#E4C962", "#E4C962"]]  # 21 Active group
-          #  ["#ec30f3", "#ec30f3"]]  # 15 weather
-          #  ["#e2e0a5", "#e2e0a5"]]  # 15 weather
-
-# Gruvbox colors
-#  colors = [["#282828", "#282828"], # 0 panel background
-          #  ["#505050", "#505050"], # 1 background for current screen tab
-          #  ["#ebdbb2", "#ebdbb2"], # 2 font color for group names
-          #  ["#d79921", "#d79921"], # 3 border line color for current tab
-          #  ["#b16286", "#b16286"], # 4 border line color for other tab and odd widgets
-          #  ["#458588", "#458588"], # 5 color for the even widgets
-          #  ["#fea63c", "#fea63c"], # 6 window name
-          #  ["#b16286", "#b16286"], # 7 CPU widget
-          #  #  ["#cc241d", "#cc241d"], # 7 CPU widget
-          #  ["#98971a", "#98971a"], # 8 Memory widget
-          #  ["#689d6a", "#689d6a"], # 9 NetSpeed widget
-          #  ["#ffffff", "#ffffff"], # 10 Layout widget
-          #  ["#458588", "#458588"], # 11 KeyboardLayout widget
-          #  ["#a89984", "#a89984"], # 12 Date widget
-          #  ["#282828", "#282828"], # 13 system tray
-          #  ["#d79921", "#d79921"]] # 14 updates
 
 ##### DEFAULT WIDGET SETTINGS #####
 widget_defaults = dict(
