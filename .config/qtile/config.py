@@ -81,32 +81,34 @@ upped_netiface = get_upped_netiface(netifaces)
 ##### COLORS #####
 # Materia Manjaro
 colors = {
-    "bg_panel": ["#263238", "#263238"],  # 0 panel background
-    "bg_current_screentab": ["#585E72", "#585E72"],  # 1 background for current screen tab
-    "fg_group_names": ["#dbdcd5", "#dbdcd5"],  # 2 font color for group names
-    "bg_current_tab": ["#009185", "#009185"],  # 3 border line color for current tab
-    "bg_other_tabs_and_odd_widgets": ["#8d62a9", "#8d62a9"],  # 4 border line color for other tab and odd widgets
-    "bg_even_widgets": ["#6182b8", "#6182b8"],  # 5 color for the even widgets
-    "fg_windowname": ["#24d2af", "#24d2af"],  # 6 window name
-    "fg_cpu": ["#e2a0a5", "#e2a0a5"],  # 7 CPU widget
-    "fg_memory": ["#ffb62c", "#ffb62c"],  # 8 Memory widget
-    "fg_netspeed": ["#91b859", "#91b859"],  # 9 NetSpeed widget
-    "fg_layout": ["#ffffff", "#ffffff"],  # 10 Layout widget
-    "fg_keyboard": ["#39adb5", "#39adb5"],  # 11 KeyboardLayout widget
-    "fg_date": ["#39adb5", "#39adb5"],  # 12 Date widget
-    "bg_systray": ["#404555", "#404555"],  # 13 system tray
-    "fg_updates": ["#e2e0a5", "#e2e0a5"],  # 14 updates
-    "fg_weather": ["#eb7bef", "#eb7bef"],  # 15 weather
-    "fg_chord": ["#d79921", "#d79921"],  # 16 Chord
-    "bg_chord_dmenu": ["#ffbb00", "#ffbb00"],  # 17 Dmenu (Chord) background
-    "fg_chord_dmenu": ["#070800", "#070800"],  # 18 Dmenu (Chord) foreground
-    "fg_syncthing_active": ["#00ff00", "#00ff00"],  # 19 Syncthing active
-    "fg_syncthing_inactive": ["#ff5555", "#ff5555"],  # 20 Syncthing inactive
-    "fg_active_group": ["#E4C962", "#E4C962"],  # 21 Active group
-    "border_focus": ["#2eb398", "#2eb398"],  # 22 Border focus
-    "border_normal": ["#1d2330", "#1d2330"],  # 23 Border normal
-    "fg_textbox": ["#55ebea", "#55ebea"]  # 24 TextBox
+    "bg_panel": ["#263238", "#263238"],  # 0 -background-
+    "bg_current_screentab": ["#585E72", "#585E72"],  # 1 -00-
+    "fg_group_names": ["#dbdcd5", "#dbdcd5"],  # 2 -00-
+    "bg_current_tab": ["#009185", "#009185"],  # 3 -00-
+    "bg_other_tabs_and_odd_widgets": ["#6182b8", "#6182b8"],  # -5-
+    "bg_even_widgets": ["#82aaff", "#82aaff"],  # 5 -13-
+    "fg_windowname": ["#24d2af", "#24d2af"],  # 6 -00-
+    "fg_cpu": ["#89ddff", "#89ddff"],  # 7 -15-
+    "fg_memory": ["#ffcb6b", "#ffcb6b"],  # 8 -12-
+    "fg_netspeed": ["#c3e88d", "#c3e88d"],  # 9 -11-
+    "fg_layout": ["#eeffff", "#eeffff"],  # 10 -foreground-
+    "fg_keyboard": ["#39adb5", "#39adb5"],  # 11 -7-
+    "fg_date": ["#39adb5", "#39adb5"],  # 12 -7-
+    "bg_systray": ["#263238", "#263238"],  # 13 -background-
+    "fg_updates": ["#e2e0a5", "#e2e0a5"],  # 14 -00-
+    "fg_weather": ["#eb7bef", "#eb7bef"],  # 15 -00-
+    # "fg_chord": ["#d79921", "#d79921"],  # 16 Chord  DON'T USED!!!
+    "bg_chord_dmenu": ["#ffcb6b", "#ffcb6b"],  # 17 -12-
+    "fg_chord_dmenu": ["#000000", "#000000"],  # 18 -1-
+    "fg_syncthing_active": ["#91b859", "#91b859"],  # 19 -3-
+    "fg_syncthing_inactive": ["#ff5370", "#ff5370"],  # 20 -10-
+    "fg_active_group": ["#e4c962", "#e4c962"],  # 21 -00-
+    "border_focus": ["#2eb398", "#2eb398"],  # 22 -00-
+    "border_normal": ["#1d2330", "#1d2330"],  # 23 -00-
+    "fg_textbox": ["#89ddff", "#89ddff"]  # 24 -15-
 }
+
+# }
 # How colors were.
 #  colors = [["#263238", "#263238"],  # 0 panel background
           #  ["#585E72", "#585E72"],  # 1 background for current screen tab
@@ -131,38 +133,38 @@ colors = {
           #  ["#070800", "#070800"],  # 18 Dmenu (Chord) foreground
           #  ["#00ff00", "#00ff00"],  # 19 Syncthing active
           #  ["#ff5555", "#ff5555"],  # 20 Syncthing inactive
-          #  ["#E4C962", "#E4C962"]]  # 21 Active group
+          #  ["#e4c962", "#e4c962"]]  # 21 Active group
           #  #  ["#ec30f3", "#ec30f3"]]  # 15 weather
           #  #  ["#e2e0a5", "#e2e0a5"]]  # 15 weather
 
 #  # Gruvbox colors
-#  colors = {
-    #  "bg_panel": ["#282828", "#282828"],  # 0 panel background
-    #  "bg_current_screentab": ["#505050", "#505050"],  # 1 background for current screen tab
-    #  "fg_group_names": ["#ebdbb2", "#ebdbb2"],  # 2 font color for group names
-    #  "bg_current_tab": ["#d79921", "#d79921"],  # 3 border line color for current tab
-    #  "bg_other_tabs_and_odd_widgets": ["#b16286", "#b16286"],  # 4 border line color for other tab and odd widgets
-    #  "bg_even_widgets": ["#458588", "#458588"],  # 5 color for the even widgets
-    #  "fg_windowname": ["#fea63c", "#fea63c"],  # 6 window name
-    #  "fg_cpu": ["#b16286", "#b16286"],  # 7 CPU widget
-    #  "fg_memory": ["#98971a", "#98971a"],  # 8 Memory widget
-    #  "fg_netspeed": ["#689d6a", "#689d6a"],  # 9 NetSpeed widget
-    #  "fg_layout": ["#ffffff", "#ffffff"],  # 10 Layout widget
-    #  "fg_keyboard": ["#458588", "#458588"],  # 11 KeyboardLayout widget
-    #  "fg_date": ["#a89984", "#a89984"],  # 12 Date widget
-    #  "bg_systray": ["#282828", "#282828"],  # 13 system tray
-    #  "fg_updates": ["#d79921", "#d79921"],  # 14 updates
-    #  "fg_weather": [],  # 15 weather
-    #  "fg_chord": [],  # 16 Chord
-    #  "bg_chord_dmenu": [],  # 17 Dmenu (Chord) background
-    #  "fg_chord_dmenu": [],  # 18 Dmenu (Chord) foreground
-    #  "fg_syncthing_active": [],  # 19 Syncthing active
-    #  "fg_syncthing_inactive": [],  # 20 Syncthing inactive
-    #  "fg_active_group": [],  # 21 Active group
-    #  "border_focus": ["#d79922", "#d79922"],  # 22 Border focus
-    #  "border_normal": ["#fea63c", "#fea63c"],  # 23 Border normal
-    #  "fg_textbox": []  # 24 TextBox
-#  }
+# colors = {
+#     "bg_panel": ["#282828", "#282828"],  # 0 -background-
+#     "bg_current_screentab": ["#585E72", "#585E72"],  # 1 -00-
+#     "fg_group_names": ["#89b482", "#89b482"],  # 2 -00-
+#     "bg_current_tab": ["#665c54", "#665c54"],  # 3 -00-
+#     "bg_other_tabs_and_odd_widgets": ["#7daea3", "#7daea3"],  # -5-
+#     "bg_even_widgets": ["#7daea3", "#7daea3"],  # 5 -13-
+#     "fg_windowname": ["#e3a84e", "#e3a84e"],  # 6 -00-
+#     "fg_cpu": ["#89b482", "#89b482"],  # 7 -15-
+#     "fg_memory": ["#e3a84e", "#e3a84e"],  # 8 -12-
+#     "fg_netspeed": ["#a9b665", "#a9b665"],  # 9 -11-
+#     "fg_layout": ["#dfbf8e", "#dfbf8e"],  # 10 -foreground-
+#     "fg_keyboard": ["#89b482", "#89b482"],  # 11 -7-
+#     "fg_date": ["#89b482", "#89b482"],  # 12 -7-
+#     "bg_systray": ["#282828", "#282828"],  # 13 -background-
+#     "fg_updates": ["#e2e0a5", "#e2e0a5"],  # 14 -00-
+#     "fg_weather": ["#d3869b", "#d3869b"],  # 15 -00-
+#     # "fg_chord": ["#d79921", "#d79921"],  # 16 Chord  DON'T USED!!!
+#     "bg_chord_dmenu": ["#e3a84e", "#e3a84e"],  # 17 -12-
+#     "fg_chord_dmenu": ["#665c54", "#665c54"],  # 18 -1-
+#     "fg_syncthing_active": ["#a9b665", "#a9b665"],  # 19 -3-
+#     "fg_syncthing_inactive": ["#ea6962", "#ea6962"],  # 20 -10-
+#     "fg_active_group": ["#e3a84e", "#e3a84e"],  # 21 -12-
+#     "border_focus": ["#d79921", "#d79921"],  # 22 -00-
+#     "border_normal": ["#1d2330", "#1d2330"],  # 23 -00-
+#     "fg_textbox": ["#89b482", "#89b482"]  # 24 -15-
+# }
 
 ##### KEYBINDINGS #####
 keys = [
@@ -186,7 +188,7 @@ keys = [
     #  Key([mod], "w", lazy.spawn(f"{home}/.myScripts/runFirefoxDiscreteGr.sh"), desc="Launch Firefox"),
     #  Key([mod], "g", lazy.spawn(f"{home}/.myScripts/runGimpDiscreteGr.sh"), desc="Run GIMP DiscreteGraphics"),
     #  Key([mod], "a", lazy.spawn(f"{my_term} -e {SHELL} -c {home}/.myScripts/runRangerDiscreteGr.sh"), desc="Run ranger DiscreteGraphics"),
-    #  Key([mod], "b", lazy.spawn(f"{home}/Programs/SublimeText/sublime_text"), desc="Run Sublime Text"),
+    Key([mod], "b", lazy.spawn(f"{home}/Programs/SublimeText/sublime_text"), desc="Run Sublime Text"),
     #  Key([mod], "x", lazy.spawn("xterm"), desc="Run XTerm"),
     # TOGGLE FULLSCREEN
     Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
@@ -220,7 +222,7 @@ keys = [
     Key([mod, "shift"], "r", lazy.restart(), desc="Restart qtile"),
     Key([mod, "shift"], "q", lazy.shutdown(), desc="Shutdown qtile"),
     # TOGGLE FLOATING LAYOUT
-    Key([mod, "shift"], "f", lazy.window.toggle_floating(), desc="Toggle floating"),
+    Key([mod, "shift"], "f", lazy.window.toggle_floating(), lazy.window.center(), desc="Toggle floating"),
     # MOVE WINDOWS UP OR DOWN IN CURRENT STACK
     Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up in current stack "),
     Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down in current stack "),
@@ -375,8 +377,10 @@ for i, group_name in enumerate(group_names, 1):
             lazy.group[group_name[0]].toscreen(toggle=True),
             desc="Switch to another group"),  # (toggle=True) to toggle groups since Qtile 0.19.0
         Key([mod, "shift"], str(i),
-            lazy.window.togroup(group_name[0]),
-            lazy.group[group_name[0]].toscreen(toggle=True),  # follow the window when it moves to another group
+            lazy.window.togroup(group_name[0], switch_group=True),
+            #  lazy.group[group_name[0]].toscreen(toggle=True),  # follow the
+            #  window when it moves to another group DOESN'T NEED ANY MORE
+            #  BECAUSE OF switch_group=True
             desc="Send current window to another group")
     ])
 
