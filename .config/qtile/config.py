@@ -12,8 +12,6 @@ from libqtile import qtile
 from libqtile.backend.base import Internal
 
 ##### IMPORTs of my modules #####
-#  from modules import arcobattery
-#  from modules import keyboardkbdd
 from modules import check_updates
 from modules import memory
 from modules import all_windows_count
@@ -75,96 +73,63 @@ path_to_state = "/sys/class/net/"  # enp2s0/operstate"
 #  default_upped_netiface = "wlo1"
 netifaces = get_all_netifaces(path_to_state)
 upped_netiface = get_upped_netiface(netifaces)
-# Counter of opened windows
-#  opened_windows_counter = 0
 
 ##### COLORS #####
 # Materia Manjaro
 colors = {
-    "bg_panel": ["#263238", "#263238"],  # 0 -background-
-    "bg_current_screentab": ["#585E72", "#585E72"],  # 1 -00-
-    "fg_group_names": ["#dbdcd5", "#dbdcd5"],  # 2 -00-
-    "bg_current_tab": ["#009185", "#009185"],  # 3 -00-
-    "bg_other_tabs_and_odd_widgets": ["#6182b8", "#6182b8"],  # -5-
-    "bg_even_widgets": ["#82aaff", "#82aaff"],  # 5 -13-
-    "fg_windowname": ["#24d2af", "#24d2af"],  # 6 -00-
-    "fg_cpu": ["#89ddff", "#89ddff"],  # 7 -15-
-    "fg_memory": ["#ffcb6b", "#ffcb6b"],  # 8 -12-
-    "fg_netspeed": ["#c3e88d", "#c3e88d"],  # 9 -11-
-    "fg_layout": ["#eeffff", "#eeffff"],  # 10 -foreground-
-    "fg_keyboard": ["#39adb5", "#39adb5"],  # 11 -7-
-    "fg_date": ["#39adb5", "#39adb5"],  # 12 -7-
-    "bg_systray": ["#263238", "#263238"],  # 13 -background-
-    "fg_updates": ["#e2e0a5", "#e2e0a5"],  # 14 -00-
-    "fg_weather": ["#eb7bef", "#eb7bef"],  # 15 -00-
-    # "fg_chord": ["#d79921", "#d79921"],  # 16 Chord  DON'T USED!!!
-    "bg_chord_dmenu": ["#ffcb6b", "#ffcb6b"],  # 17 -12-
-    "fg_chord_dmenu": ["#000000", "#000000"],  # 18 -1-
-    "fg_syncthing_active": ["#91b859", "#91b859"],  # 19 -3-
-    "fg_syncthing_inactive": ["#ff5370", "#ff5370"],  # 20 -10-
-    "fg_active_group": ["#e4c962", "#e4c962"],  # 21 -00-
-    "border_focus": ["#2eb398", "#2eb398"],  # 22 -00-
-    "border_normal": ["#1d2330", "#1d2330"],  # 23 -00-
-    "fg_textbox": ["#89ddff", "#89ddff"]  # 24 -15-
+    "bg_panel": "#263238",  # background
+    "bg_current_screentab": "#585E72",  # 00
+    "fg_group_names": "#dbdcd5",  # 00
+    "bg_current_tab": "#009185",  # 00
+    "bg_other_tabs_and_odd_widgets": "#6182b8",  # 5
+    "bg_even_widgets": "#82aaff",  # 13
+    "fg_windowname": "#24d2af",  # 00
+    "fg_cpu": "#89ddff",  # 15
+    "fg_memory": "#ffcb6b",  # 12
+    "fg_netspeed": "#c3e88d",  # 11
+    "fg_layout": "#eeffff",  # foreground
+    "fg_keyboard": "#39adb5",  # 7
+    "fg_date": "#39adb5",  # 7
+    "bg_systray": "#263238",  # background
+    "fg_updates": "#e2e0a5",  # 00
+    "fg_weather": "#eb7bef",  # 00
+    "bg_chord_dmenu": "#ffcb6b",  # 12
+    "fg_chord_dmenu": "#000000",  # 1
+    "fg_syncthing_active": "#91b859",  # 3
+    "fg_syncthing_inactive": "#ff5370",  # 10
+    "fg_active_group": "#e4c962",  # 00
+    "border_focus": "#2eb398",  # 00
+    "border_normal": "#1d2330",  # 00
+    "fg_textbox": "#89ddff"  # 15
 }
 
-# }
-# How colors were.
-#  colors = [["#263238", "#263238"],  # 0 panel background
-          #  ["#585E72", "#585E72"],  # 1 background for current screen tab
-          #  ["#dbdcd5", "#dbdcd5"],  # 2 font color for group names
-          #  ["#009185", "#009185"],  # 3 border line color for current tab
-          #  ["#8d62a9", "#8d62a9"],  # 4 border line color for other tab and odd widgets
-          #  ["#6182b8", "#6182b8"],  # 5 color for the even widgets
-          #  ["#24d2af", "#24d2af"],  # 6 window name
-          #  ["#e2a0a5", "#e2a0a5"],  # 7 CPU widget
-          #  ["#ffb62c", "#ffb62c"],  # 8 Memory widget
-          #  ["#91b859", "#91b859"],  # 9 NetSpeed widget
-          #  ["#ffffff", "#ffffff"],  # 10 Layout widget
-          #  ["#39adb5", "#39adb5"],  # 11 KeyboardLayout widget
-          #  ["#39adb5", "#39adb5"],  # 12 Date widget
-          #  #  ["#f2b06a", "#f2b06a"],  # 12 Date widget
-          #  ["#404555", "#404555"],  # 13 system tray
-          #  ["#e2e0a5", "#e2e0a5"],  # 14 updates
-          #  #  ["#ffcb6b", "#ffcb6b"],  # 14 updates
-          #  ["#eb7bef", "#eb7bef"],  # 15 weather
-          #  ["#d79921", "#d79921"],  # 16 Chord
-          #  ["#ffbb00", "#ffbb00"],  # 17 Dmenu (Chord) background
-          #  ["#070800", "#070800"],  # 18 Dmenu (Chord) foreground
-          #  ["#00ff00", "#00ff00"],  # 19 Syncthing active
-          #  ["#ff5555", "#ff5555"],  # 20 Syncthing inactive
-          #  ["#e4c962", "#e4c962"]]  # 21 Active group
-          #  #  ["#ec30f3", "#ec30f3"]]  # 15 weather
-          #  #  ["#e2e0a5", "#e2e0a5"]]  # 15 weather
-
-#  # Gruvbox colors
-# colors = {
-#     "bg_panel": ["#282828", "#282828"],  # 0 -background-
-#     "bg_current_screentab": ["#585E72", "#585E72"],  # 1 -00-
-#     "fg_group_names": ["#89b482", "#89b482"],  # 2 -00-
-#     "bg_current_tab": ["#665c54", "#665c54"],  # 3 -00-
-#     "bg_other_tabs_and_odd_widgets": ["#7daea3", "#7daea3"],  # -5-
-#     "bg_even_widgets": ["#7daea3", "#7daea3"],  # 5 -13-
-#     "fg_windowname": ["#e3a84e", "#e3a84e"],  # 6 -00-
-#     "fg_cpu": ["#89b482", "#89b482"],  # 7 -15-
-#     "fg_memory": ["#e3a84e", "#e3a84e"],  # 8 -12-
-#     "fg_netspeed": ["#a9b665", "#a9b665"],  # 9 -11-
-#     "fg_layout": ["#dfbf8e", "#dfbf8e"],  # 10 -foreground-
-#     "fg_keyboard": ["#89b482", "#89b482"],  # 11 -7-
-#     "fg_date": ["#89b482", "#89b482"],  # 12 -7-
-#     "bg_systray": ["#282828", "#282828"],  # 13 -background-
-#     "fg_updates": ["#e2e0a5", "#e2e0a5"],  # 14 -00-
-#     "fg_weather": ["#d3869b", "#d3869b"],  # 15 -00-
-#     # "fg_chord": ["#d79921", "#d79921"],  # 16 Chord  DON'T USED!!!
-#     "bg_chord_dmenu": ["#e3a84e", "#e3a84e"],  # 17 -12-
-#     "fg_chord_dmenu": ["#665c54", "#665c54"],  # 18 -1-
-#     "fg_syncthing_active": ["#a9b665", "#a9b665"],  # 19 -3-
-#     "fg_syncthing_inactive": ["#ea6962", "#ea6962"],  # 20 -10-
-#     "fg_active_group": ["#e3a84e", "#e3a84e"],  # 21 -12-
-#     "border_focus": ["#d79921", "#d79921"],  # 22 -00-
-#     "border_normal": ["#1d2330", "#1d2330"],  # 23 -00-
-#     "fg_textbox": ["#89b482", "#89b482"]  # 24 -15-
-# }
+#  # Gruvbox Material colors
+#  colors = {
+   #  "bg_panel": "#282828",  # background
+   #  "bg_current_screentab": "#585E72",  # 00
+   #  "fg_group_names": "#89b482",  # 00
+   #  "bg_current_tab": "#665c54",  # 00
+   #  "bg_other_tabs_and_odd_widgets": "#7daea3",  # 5
+   #  "bg_even_widgets": "#7daea3",  # 13
+   #  "fg_windowname": "#e3a84e",  # 00
+   #  "fg_cpu": "#89b482",  # 15
+   #  "fg_memory": "#e3a84e",  # 12
+   #  "fg_netspeed": "#a9b665",  # 11
+   #  "fg_layout": "#dfbf8e",  # foreground
+   #  "fg_keyboard": "#89b482",  # 7
+   #  "fg_date": "#89b482",  # 7
+   #  "bg_systray": "#282828",  # background
+   #  "fg_updates": "#e2e0a5",  # 00
+   #  "fg_weather": "#d3869b",  # 00
+   #  "bg_chord_dmenu": "#e3a84e",  # 12
+   #  "fg_chord_dmenu": "#665c54",  # 1
+   #  "fg_syncthing_active": "#a9b665",  # 3
+   #  "fg_syncthing_inactive": "#ea6962",  # 10
+   #  "fg_active_group": "#e3a84e",  # 12
+   #  "border_focus": "#d79921",  # 00
+   #  "border_normal": "#1d2330",  # 00
+   #  "fg_textbox": "#89b482"  # 15
+#  }
 
 ##### KEYBINDINGS #####
 keys = [
@@ -172,8 +137,8 @@ keys = [
     #  Key([mod], "Return", lazy.spawn(f"{home}/.myScripts/runAlacrittyDiscreteGr.sh"), desc="Launch terminal"),
     Key([mod], "Return", lazy.spawn(my_term), desc="Launch terminal"),
     Key([mod], "r", lazy.spawn("rofi run -show drun -show-icons"), desc="Run App Lancher"),
-    Key([mod], "d", lazy.spawn("dmenu_run -nb #222B2E -nf #09DBC9 -sb #009185 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
-#  Key([mod], "d", lazy.spawn("dmenu_run -nb #282828 -nf #d79921 -sb #fea63c -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Gruvbox
+    Key([mod], "d", lazy.spawn(f"dmenu_run -nb #263238 -nf #24d2af -sb #009185 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
+    #  Key([mod], "d", lazy.spawn("dmenu_run -nb #282828 -nf #e3a84e -sb #665c54 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Gruvbox
     Key([mod], "Print", lazy.spawn("flameshot gui"), desc="Launch flameshot (take screenshot)"),
     Key([mod], "w", lazy.spawn("/usr/bin/firefox"), desc="Launch Firefox"),
     Key([mod], "u", lazy.spawn("qutebrowser"), desc="Launch qutebrowser"),
@@ -209,7 +174,7 @@ keys = [
     #  Key([mod], "Right", lazy.layout.right(), desc="Move focus right in stack pane"),
     Key([mod], "space", lazy.layout.next(), desc="Switch window focus to other pane(s) of stack"),
 
-# <SUPER> + <SHIFT> + KEYS  (-nf #fea63c)
+# <SUPER> + <SHIFT> + KEYS
     Key([mod, "shift"], "Return", lazy.spawn(my_term_extra), desc="Launch extra terminal"),
     #  Key([mod, "shift"], "a", lazy.spawn(f"{my_term} -e pkexec ranger"), desc="Launch ranger as root"),
     #  Key([mod, "shift"], "a", lazy.spawn(f"{my_term} -e sudo ranger"), desc="Launch ranger as root"),
@@ -325,6 +290,10 @@ keys = [
     Key([alt], "Tab", lazy.group.next_window(), desc="Switch to the next window"),
 
 # <CONTROL> + <ALT> + KEYS
+    # TreeTab controls
+    Key(["control", alt], "j", lazy.layout.section_down(), desc="Move up a section in TreeTab"),
+    Key(["control", alt], "k", lazy.layout.section_up(), desc="Move down a section in TreeTab"),
+
 # <CONTROL> + <SHIFT> + KEYS
 # <ALT> + <SHIFT> + KEYS
     Key([alt, "shift"], "Tab", lazy.group.prev_window(), desc="Switch to the previous window"),
@@ -358,16 +327,18 @@ for key, x, y in [
 ##### GROUPS #####
 #       v                   
 #        🌐♬ 🌡 🖬  ⟳ ₿   ⮋⮉🡇 🡅 ⇓⇑        
-group_names = [(" ", {"layout": "columns"}),  # WWW
-               (" ", {"layout": "columns"}),  # DEV
-               #  (" ", {"layout": "monadtall"}),  # DEV
-               (" ", {"layout": "max"}),      # FM
-               (" ", {"layout": "columns"}),  # SYS
-               (" ", {"layout": "columns"}),  # VIRT
-               (" ", {"layout": "columns"}),  # CHAT
-               (" ", {"layout": "columns"}),  # GFX
-               (" ", {"layout": "max"}),      # VID
-               (" ", {"layout": "columns"})]  # MULT
+group_names = [
+    (" ", {"layout": "columns"}),  # WWW
+    (" ", {"layout": "columns"}),  # DEV
+    #  (" ", {"layout": "monadtall"}),  # DEV
+    (" ", {"layout": "max"}),      # FM
+    (" ", {"layout": "columns"}),  # SYS
+    (" ", {"layout": "columns"}),  # VIRT
+    (" ", {"layout": "columns"}),  # CHAT
+    (" ", {"layout": "columns"}),  # GFX
+    (" ", {"layout": "max"}),      # VID
+    (" ", {"layout": "columns"})   # MULT
+]
 
 groups = [Group(name, **kwargs, label="{}{}".format(name, i)) for i, (name, kwargs) in enumerate(group_names, 1)]
 
@@ -385,16 +356,11 @@ for i, group_name in enumerate(group_names, 1):
     ])
 
 ##### LAYOUTS #####
-layout_theme = {"border_width": 3,
-                "margin": 4,
-                #  "margin": 5,
-                "border_focus": colors["border_focus"][0],  # Materia Manjaro
-                "border_normal": colors["border_normal"][0]
-                #  "border_focus": "2eb398",  # Materia Manjaro
-                #  "border_normal": "1d2330"
-
-                #  "border_focus": "d79922",  # Gruvbox yellow
-                #  "border_focus": "fea63c",  # Gruvbox yellow (lighter)
+layout_theme = {
+    "border_width": 3,
+    "margin": 4,
+    "border_focus": colors["border_focus"],
+    "border_normal": colors["border_normal"]
 }
 
 layouts = [
@@ -402,30 +368,19 @@ layouts = [
     layout.TreeTab(
          font = my_font,
          fontsize=14,
-         bg_color=colors["bg_panel"][0],
-         active_bg=colors["bg_current_tab"][0],
-         active_fg=colors["fg_active_group"][0],
-         inactive_bg=colors["bg_systray"][0],
-         inactive_fg=colors["fg_group_names"][0],
-         #  bg_color=colors[0][0],
-         #  active_bg=colors[3][0],
-         #  active_fg=colors[21][0],
-         #  inactive_bg=colors[13][0],
-         #  inactive_fg=colors[2][0],
+         bg_color=colors["bg_panel"],
+         active_bg=colors["bg_current_tab"],
+         active_fg=colors["fg_active_group"],
+         inactive_bg=colors["bg_systray"],
+         inactive_fg=colors["fg_group_names"],
          border_width=2,
-         #  bg_color="141414",
-         #  active_bg="90C435",
-         #  active_fg="000000",
-         #  inactive_bg="384323",
-         #  inactive_fg="a0a0a0",
          padding_y=5,
          sections=["FIRST", "SECOND"],
          section_fontsize=12,
-         #  section_fg=colors[2][0],
-         section_fg=colors["fg_group_names"][0],
+         section_fg=colors["fg_group_names"],
          section_top=10,
          panel_width=320
-         ),
+    ),
     layout.Max(**layout_theme),
     layout.MonadTall(**layout_theme),
     layout.MonadWide(**layout_theme),
@@ -441,338 +396,236 @@ layouts = [
 ]
 
 ##### DEFAULT WIDGET SETTINGS #####
-widget_defaults = dict(
-    font=my_font,
-    fontsize=12,
-    padding=2,
-    #  background=colors[2]
-    background=colors["fg_group_names"]
-)
-extension_defaults = widget_defaults.copy()
+widget_defaults = {
+    "font": my_font,
+    "fontsize": 12,
+    "padding": 2,
+    "background": colors["bg_panel"],
+    "foreground": colors["fg_group_names"]
+}
 
 
 def init_widgets_list():
     prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
     widgets_list = [
-            widget.GroupBox(
-                    font=my_nerd_font,
-                    fontsize=14,
-                    margin_y=3,
-                    margin_x=0,
-                    #  padding_y=5,
-                    #  padding_x=3,
-                    padding_y=7,
-                    padding_x=3,
-                    borderwidth=3,
-                    active=colors["fg_active_group"],
-                    inactive=colors["fg_group_names"],
-                    #  active=colors[21],
-                    #  inactive=colors[2],
-                    rounded=False,
-                    highlight_color=colors["bg_panel"],
-                    #  highlight_color=colors[1],
-                    highlight_method="block",
-                    urgent_alert_method="block",
-                    this_current_screen_border=colors["bg_current_tab"],
-                    this_screen_border=colors["bg_other_tabs_and_odd_widgets"],
-                    other_current_screen_border=colors["bg_panel"],
-                    other_screen_border=colors["bg_panel"],
-                    foreground=colors["fg_group_names"],
-                    background=colors["bg_panel"]
-                    #  this_current_screen_border=colors[3],
-                    #  this_screen_border=colors[4],
-                    #  other_current_screen_border=colors[0],
-                    #  other_screen_border=colors[0],
-                    #  foreground=colors[2],
-                    #  background=colors[0]
-                    ),
-            widget.Chord(
-                    padding = 10,
-                    background=colors["bg_chord_dmenu"],
-                    foreground=colors["fg_chord_dmenu"],
-                    #  background=colors[17],
-                    #  foreground=colors[18],
-                    fontsize=14
-                    ),
-            widget.WindowName(
-                    #  font=my_mono_bold_font,
-                    font=my_font,
-                    fontsize=14,
-                    foreground=colors["fg_windowname"],
-                    background=colors["bg_panel"],
-                    #  foreground=colors[17],
-                    #  background=colors[18],
-                    padding=0,
-                    parse_text=parse_windowname
-                    ),
-            widget.CheckUpdates(
-                    foreground=colors["fg_updates"],
-                    background=colors["bg_panel"],
-                    colour_have_updates=colors["fg_updates"],
-                    #  foreground=colors[14],
-                    #  background=colors[0],
-                    #  colour_have_updates=colors[14],
-                    #  colour_no_updates="ffffff",
-                    #  no_update_string="No updates",
-                    font=my_nerd_font,
-                    fontsize=14,
-                    #  distro="Arch_checkupdates",
-                    custom_command="checkupdates+aur",
-                    #  distro="Arch_yay",
-                    #  custom_command="yay -Qu",
-                    display_format="  {updates}",  # ⟳ 
-                    mouse_callbacks={
-                        "Button3": lambda: show_updates.show_updates_arch(),
-                        "Button2": lambda: qtile.cmd_spawn(f"{my_term_extra} -e 'yay -Syu && $SHELL'")
-                    },
-                    update_interval=10800  # 3 hours (60*60*3)
-                    ),
-            widget.Sep(
-                    linewidth=1,
-                    padding=10,
-                    foreground=colors["fg_group_names"],
-                    background=colors["bg_panel"]
-                    #  foreground=colors[2],
-                    #  background=colors[0]
-                    ),
-            widget.TextBox(
-                    #  text="⇆ ",
-                    text="🗘",
-                    font=my_nerd_font_extra,
-                    fontsize=16,
-                    foreground=colors["fg_textbox"][0],
-                    background=colors["bg_panel"],
-                    #  foreground="#55ebea",
-                    #  background=colors[0],
-                    padding=0
-                    ),
-            syncthing.Syncthing(
-                    path_to_script=f"{home}/.myScripts/get_syncthing_status.sh",
-                    font=my_nerd_font,
-                    label="Syncthing\n ",
-                    update_interval=60,
-                    background=colors["bg_panel"],
-                    active_color=colors["fg_syncthing_active"],
-                    inactive_color=colors["fg_syncthing_inactive"],
-                    #  background=colors[0],
-                    #  active_color=colors[19],
-                    #  inactive_color=colors[20],
-                    padding=0
-                    ),
-            widget.Sep(
-                    linewidth=1,
-                    padding=10,
-                    foreground=colors["fg_group_names"],
-                    background=colors["bg_panel"]
-                    #  foreground=colors[2],
-                    #  background=colors[0]
-                    ),
-            widget.TextBox(
-                    #  text="⛅",
-                    text="🌡",
-                    fontsize=16,
-                    foreground=colors["fg_weather"],
-                    background=colors["bg_panel"],
-                    #  foreground=colors[15],
-                    #  background=colors[0],
-                    padding=0
-                    ),
-            widget.OpenWeather(
-                    foreground=colors["fg_weather"],
-                    background=colors["bg_panel"],
-                    #  foreground=colors[15],
-                    #  background=colors[0],
-                    coordinates={"longitude": "30.9754", "latitude": "52.4345"},
-                    #  format="{location_city}: {temp}°{units_temperature}\n{weather_0_icon} {weather_details}",
-                    format="{location_city}: {temp}°{units_temperature}\n{weather_details}",
-                    update_interval=1800,
-                    mouse_callbacks={
-                        "Button3": lambda: qtile.cmd_spawn("xdg-open https://openweathermap.org/city/627907"),
-                    }
-                    ),
-            widget.Sep(
-                    linewidth=1,
-                    padding=10,
-                    foreground=colors["fg_group_names"],
-                    background=colors["bg_panel"]
-                    #  foreground=colors[2],
-                    #  background=colors[0]
-                    ),
-            widget.TextBox(
-                    text="",
-                    #  text=" ",
-                    font=my_nerd_font,
-                    fontsize=16,
-                    foreground=colors["fg_cpu"],
-                    background=colors["bg_panel"],
-                    #  foreground=colors[7],
-                    #  background=colors[0],
-                    padding=0,
-                    mouse_callbacks={
-                        "Button1": lambda: qtile.cmd_spawn(f"{home}/.myScripts/top5_cpu_usage.sh"),
-                        #  "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e htop")
-                        "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e {SHELL} -c htop")
-                    }
-                    ),
-            widget.CPU(
-                    foreground=colors["fg_cpu"],
-                    background=colors["bg_panel"],
-                    #  foreground=colors[7],
-                    #  background=colors[0],
-                    padding=0,
-                    format="{freq_current}GHz\n{load_percent: .0f}%",
-                    mouse_callbacks={
-                        "Button1": lambda: qtile.cmd_spawn(f"{home}/.myScripts/top5_cpu_usage.sh"),
-                        "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e {SHELL} -c htop")
-                    }
-                    ),
-            widget.Sep(
-                    linewidth=1,
-                    padding=10,
-                    foreground=colors["fg_group_names"],
-                    background=colors["bg_panel"]
-                    #  foreground=colors[2],
-                    #  background=colors[0]
-                    ),
-            widget.TextBox(
-                    text="",
-                    font=my_nerd_font,
-                    fontsize=16,
-                    foreground=colors["fg_memory"],
-                    background=colors["bg_panel"],
-                    #  foreground=colors[8],
-                    #  background=colors[0],
-                    padding=0,
-                    mouse_callbacks={
-                        "Button1": lambda: qtile.cmd_spawn(f"{home}/.myScripts/top5_mem_usage.sh"),
-                        "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e {SHELL} -c htop")
-                    }
-                    ),
-            memory.Memory(
-                    foreground=colors["fg_memory"],
-                    background=colors["bg_panel"],
-                    #  foreground=colors[8],
-                    #  background=colors[0],
-                    padding=0,
-                    format="{MemUsed: .2f}{mm}\n{MemPercent: .0f}%",
-                    measure_mem="G",
-                    mouse_callbacks={
-                        "Button1": lambda: qtile.cmd_spawn(f"{home}/.myScripts/top5_mem_usage.sh"),
-                        "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e {SHELL} -c htop")
-                    }
-                    ),
-            widget.Sep(
-                    linewidth=1,
-                    padding=10,
-                    foreground=colors["fg_group_names"],
-                    background=colors["bg_panel"]
-                    #  foreground=colors[2],
-                    #  background=colors[0]
-                    ),
-            widget.Net(
-                    interface=upped_netiface,
-                    #  format=upped_netiface + ":{down} ↓↑{up}",
-                    #  format="{down} ⇓⇑{up}",
-                    #  format="{down} ⤋⤊{up}",
-                    #  format="{down} ⬇⬆{up}",
-                    #  format="{down} 🡇🡅{up}",
-                    #  format="{down}  {up}",
-                    font=my_nerd_font,
-                    format="{up} \n{down} ",
-                    foreground=colors["fg_netspeed"],
-                    background=colors["bg_panel"],
-                    #  foreground=colors[9],
-                    #  background=colors[0],
-                    padding=0
-                    ),
-            widget.Sep(
-                    linewidth=1,
-                    padding=10,
-                    foreground=colors["fg_group_names"],
-                    background=colors["bg_panel"]
-                    #  foreground=colors[2],
-                    #  background=colors[0]
-                    ),
-            widget.KeyboardKbdd(
-                    configured_keyboards=["🇺🇸", "🇷🇺"],
-                    #  configured_keyboards=["US", "RU"],
-                    #  display_map={"us": "🇺🇸", "ru": "🇷🇺"},
-                    #  option="grp:alt_shift_toggle",
-                    #  option="grp:caps_toggle",
-                    foreground=colors["fg_keyboard"],
-                    background=colors["bg_panel"],
-                    #  foreground=colors[11],
-                    #  background=colors[0],
-                    fontsize=16,
-                    padding=1
-                    ),
-            widget.Systray(
-                    background=colors["bg_panel"],
-                    #  background=colors[0],
-                    padding=5
-                    ),
-            widget.CurrentLayoutIcon(
-                    #  custom_icon_paths=[f"{home}/.config/qtile/icons/layouts"],
-                    foreground=colors["fg_layout"],
-                    background=colors["bg_panel"],
-                    #  foreground=colors[10],
-                    #  background=colors[0],
-                    padding=0,
-                    scale=0.6,
-                    mouse_callbacks={
-                        "Button1": qtile.cmd_next_layout,
-                        "Button3": qtile.cmd_prev_layout,
-                    }
-                    ),
-            widget.WindowCount(
-                    text_format="{num}/",
-                    fontsize=14,
-                    padding=0,
-                    foreground=colors["fg_layout"],
-                    background=colors["bg_panel"],
-                    #  foreground=colors[10],
-                    #  background=colors[0],
-                    ),
-            all_windows_count.WindowCount(
-                    text_format="{num}",
-                    fontsize=14,
-                    padding=0,
-                    foreground=colors["fg_layout"],
-                    background=colors["bg_panel"]
-                    #  foreground=colors[10],
-                    #  background=colors[0]
-                    ),
-            widget.Sep(
-                    linewidth=1,
-                    padding=10,
-                    foreground=colors["fg_group_names"],
-                    background=colors["bg_panel"]
-                    #  foreground=colors[2],
-                    #  background=colors[0]
-                    ),
-            widget.TextBox(
-                    text="",
-                    font=my_nerd_font,
-                    fontsize=16,
-                    foreground=colors["fg_date"],
-                    background=colors["bg_panel"],
-                    #  foreground=colors[12],
-                    #  background=colors[0],
-                    #  fontsize=14,
-                    padding=0,
-                    mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("gsimplecal")}
-                    ),
-            widget.Clock(
-                    foreground=colors["fg_date"],
-                    background=colors["bg_panel"],
-                    #  foreground=colors[12],
-                    #  background=colors[0],
-                    padding=3,
-                    #  mouse_callbacks={"Button1": lambda qtile: qtile.cmd_spawn("gsimplecal")},
-                    mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("gsimplecal")},
-                    format="%a, %d %b\n%H:%M:%S"
-                    ),
-]
+        widget.GroupBox(
+            font=my_nerd_font,
+            fontsize=14,
+            margin_y=3,
+            margin_x=0,
+            padding_y=7,
+            padding_x=3,
+            borderwidth=3,
+            active=colors["fg_active_group"],
+            inactive=colors["fg_group_names"],
+            rounded=False,
+            highlight_color=colors["bg_panel"],
+            highlight_method="block",
+            urgent_alert_method="block",
+            this_current_screen_border=colors["bg_current_tab"],
+            this_screen_border=colors["bg_other_tabs_and_odd_widgets"],
+            other_current_screen_border=colors["bg_panel"],
+            other_screen_border=colors["bg_panel"]
+        ),
+        widget.Chord(
+            fontsize=14,
+            padding = 10,
+            background=colors["bg_chord_dmenu"],
+            foreground=colors["fg_chord_dmenu"]
+        ),
+        widget.WindowName(
+            #  #  font=my_mono_bold_font,
+            fontsize=14,
+            foreground=colors["fg_windowname"],
+            padding=0,
+            parse_text=parse_windowname
+        ),
+        widget.CheckUpdates(
+            foreground=colors["fg_updates"],
+            colour_have_updates=colors["fg_updates"],
+            #  no_update_string="No updates",
+            font=my_nerd_font,
+            fontsize=14,
+            #  distro="Arch_checkupdates",
+            custom_command="checkupdates+aur",
+            #  distro="Arch_yay",
+            #  custom_command="yay -Qu",
+            display_format="  {updates}",  # ⟳ 
+            mouse_callbacks={
+                "Button3": lambda: show_updates.show_updates_arch(),
+                "Button2": lambda: qtile.cmd_spawn(f"{my_term_extra} -e 'yay -Syu && $SHELL'")
+            },
+            update_interval=10800  # 3 hours (60*60*3)
+        ),
+        widget.Sep(
+            linewidth=1,
+            padding=10
+        ),
+        widget.TextBox(
+            #  text="⇆ ",
+            text="🗘",
+            font=my_nerd_font,
+            fontsize=16,
+            foreground=colors["fg_textbox"],
+            padding=0
+        ),
+        syncthing.Syncthing(
+            path_to_script=f"{home}/.myScripts/get_syncthing_status.sh",
+            font=my_nerd_font,
+            label="Syncthing\n ",
+            update_interval=60,
+            active_color=colors["fg_syncthing_active"],
+            inactive_color=colors["fg_syncthing_inactive"],
+            padding=0
+        ),
+        widget.Sep(
+            linewidth=1,
+            padding=10
+        ),
+        widget.TextBox(
+            #  text="⛅",
+            text="🌡",
+            fontsize=16,
+            foreground=colors["fg_weather"],
+            padding=0
+        ),
+        widget.OpenWeather(
+            foreground=colors["fg_weather"],
+            coordinates={"longitude": "30.9754", "latitude": "52.4345"},
+            #  format="{location_city}: {temp}°{units_temperature}\n{weather_0_icon} {weather_details}",
+            format="{location_city}: {temp}°{units_temperature}\n{weather_details}",
+            update_interval=1800,
+            mouse_callbacks={
+                "Button3": lambda: qtile.cmd_spawn("xdg-open https://openweathermap.org/city/627907"),
+            }
+        ),
+        widget.Sep(
+            linewidth=1,
+            padding=10
+        ),
+        widget.TextBox(
+            text="",
+            #  text=" ",
+            font=my_nerd_font,
+            fontsize=16,
+            foreground=colors["fg_cpu"],
+            padding=0,
+            mouse_callbacks={
+                "Button1": lambda: qtile.cmd_spawn(f"{home}/.myScripts/top5_cpu_usage.sh"),
+                #  "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e htop")
+                "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e {SHELL} -c htop")
+            }
+        ),
+        widget.CPU(
+            foreground=colors["fg_cpu"],
+            padding=0,
+            format="{freq_current}GHz\n{load_percent: .0f}%",
+            mouse_callbacks={
+                "Button1": lambda: qtile.cmd_spawn(f"{home}/.myScripts/top5_cpu_usage.sh"),
+                "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e {SHELL} -c htop")
+            }
+        ),
+        widget.Sep(
+            linewidth=1,
+            padding=10
+        ),
+        widget.TextBox(
+            text="",
+            font=my_nerd_font,
+            fontsize=16,
+            foreground=colors["fg_memory"],
+            padding=0,
+            mouse_callbacks={
+                "Button1": lambda: qtile.cmd_spawn(f"{home}/.myScripts/top5_mem_usage.sh"),
+                "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e {SHELL} -c htop")
+            }
+        ),
+        memory.Memory(
+            foreground=colors["fg_memory"],
+            padding=0,
+            format="{MemUsed: .2f}{mm}\n{MemPercent: .0f}%",
+            measure_mem="G",
+            mouse_callbacks={
+                "Button1": lambda: qtile.cmd_spawn(f"{home}/.myScripts/top5_mem_usage.sh"),
+                "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e {SHELL} -c htop")
+            }
+        ),
+        widget.Sep(
+            linewidth=1,
+            padding=10
+        ),
+        widget.Net(
+            interface=upped_netiface,
+            #  format=upped_netiface + ":{down} ↓↑{up}",
+            #  format="{down} ⇓⇑{up}",
+            #  format="{down} ⤋⤊{up}",
+            #  format="{down} ⬇⬆{up}",
+            #  format="{down} 🡇🡅{up}",
+            #  format="{down}  {up}",
+            font=my_nerd_font,
+            format="{up} \n{down} ",
+            foreground=colors["fg_netspeed"],
+            padding=0
+        ),
+        widget.Sep(
+            linewidth=1,
+            padding=10
+        ),
+        widget.KeyboardKbdd(
+            configured_keyboards=["🇺🇸", "🇷🇺"],
+            #  configured_keyboards=["US", "RU"],
+            #  display_map={"us": "🇺🇸", "ru": "🇷🇺"},
+            #  option="grp:alt_shift_toggle",
+            #  option="grp:caps_toggle",
+            foreground=colors["fg_keyboard"],
+            fontsize=16,
+            padding=1
+        ),
+        widget.Systray(
+            padding=5
+        ),
+        widget.CurrentLayoutIcon(
+            #  custom_icon_paths=[f"{home}/.config/qtile/icons/layouts"],
+            foreground=colors["fg_layout"],
+            padding=0,
+            scale=0.6,
+            mouse_callbacks={
+                "Button1": qtile.cmd_next_layout,
+                "Button3": qtile.cmd_prev_layout,
+            }
+        ),
+        widget.WindowCount(
+            text_format="{num}/",
+            fontsize=14,
+            padding=0,
+            foreground=colors["fg_layout"],
+        ),
+        all_windows_count.WindowCount(
+            text_format="{num}",
+            fontsize=14,
+            padding=0,
+            foreground=colors["fg_layout"],
+        ),
+        widget.Sep(
+            linewidth=1,
+            padding=10
+        ),
+        widget.TextBox(
+            text="",
+            font=my_nerd_font,
+            fontsize=16,
+            foreground=colors["fg_date"],
+            padding=0,
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("gsimplecal")}
+        ),
+        widget.Clock(
+            foreground=colors["fg_date"],
+            padding=3,
+            #  mouse_callbacks={"Button1": lambda qtile: qtile.cmd_spawn("gsimplecal")},
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("gsimplecal")},
+            format="%a, %d %b\n%H:%M:%S"
+        )
+    ]
     return widgets_list
 
 
@@ -857,6 +710,7 @@ floating_layout = layout.Floating(float_rules=[
     Match(title="Close Button Action", wm_class="tixati"),  # Tixati
     Match(title="Confirm File Replacing", wm_class="pcmanfm"),
     Match(title="Terminator Preferences", wm_class="terminator"),
+    Match(title="Терминатор Параметры", wm_class="terminator"),
     Match(title="win0", wm_class="jetbrains-webstorm"),  # WebStorm
     Match(title="Import WebStorm Settings", wm_class="jetbrains-webstorm"),
     Match(title="win0", wm_class="jetbrains-pycharm-ce"),  # PyCharm
@@ -895,8 +749,7 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class="makebranch"),  # gitk
     Match(wm_class="maketag"),  # gitk
     Match(wm_class="ssh-askpass")  # ssh-askpass
-], border_focus=colors["bg_current_tab"][0])  # #689d6a #98971a #d79921 #fea63c #009185
-#  ], border_focus="#009185")  # #689d6a #98971a #d79921 #fea63c #009185
+], border_focus=colors["bg_current_tab"])
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
