@@ -130,7 +130,7 @@
   },
   "editor.minimap.enabled": false,
   "files.autoSave": "onFocusChange",
-  "[javascript][typescript][javascriptreact][html][css]": {
+  "[javascript][typescript][javascriptreact][html][css][haskell]": {
     "editor.tabSize": 2
   },
   "bracket-pair-colorizer-2.depreciation-notice": false,
