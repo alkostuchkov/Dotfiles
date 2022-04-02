@@ -4,7 +4,7 @@ import os
 import re
 import socket
 import subprocess
-from typing import List  # noqa: F401
+from typing import List
 from libqtile import bar, layout, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Screen, KeyChord, Match
 from libqtile.lazy import lazy
@@ -12,7 +12,6 @@ from libqtile import qtile
 from libqtile.backend.base import Internal
 
 ##### IMPORTs of my modules #####
-from modules import check_updates
 from modules import memory
 from modules import all_windows_count
 from modules import syncthing
@@ -266,6 +265,8 @@ keys = [
     Key([mod, "control"], "w", lazy.spawn(f"{home}/Programs/Tor/Browser/start-tor-browser --detach"), desc="Launch Tor"),
 
 # <ALT> + KEYS
+    # KeyChords
+    # Dmenu
     KeyChord([alt], "m", [
         Key([], "c", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-edit-configs.sh"), desc="Run dmenu script for editing config files"),
         Key([], "p", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-passmenu.sh"), desc="Run dmenu script for getting password"),
@@ -279,6 +280,15 @@ keys = [
         Key([], "x", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-system-exit.sh"), desc="System exit menu")],
         mode="Dmenu"
     ),
+    #  KeyChord([alt], "u", [
+    #  # Utils
+        #  Key([], "a", lazy.spawn("lxappearance"), desc="Run lxappearance"),
+        #  Key([], "d", lazy.spawn("lxrandr"), desc="Run lxrandr"),
+        #  Key([], "k", lazy.spawn("kvantummanager"), desc="Run kvantummanager"),
+        #  Key([], "p", lazy.spawn("pavucontrol"), desc="Run pavucontrol"),
+        #  Key([], "q", lazy.spawn("qt5ct"), desc="Run qt5ct")],
+        #  mode="Utils"
+    #  ),
     #  Key([alt], "c", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-edit-configs.sh"), desc="Run dmenu script for editing config files"),
     #  Key([alt], "p", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-passmenu.sh"), desc="Run dmenu script for editing config files"),
     #  Key([alt], "s", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-system-exit.sh"), desc="System exit menu"),
@@ -286,6 +296,7 @@ keys = [
     #  Key([alt], "t", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-kill.sh"), desc="Kill chosen process"),
     #  Key([alt], "e", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-search.sh"), desc="Run chosen search engine"),
     #  Key([alt], "k", lazy.spawn(f"{home}/.myScripts/on-off_conky.sh"), desc="On-Off conky"),
+    Key([alt], "u", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-run-utils.sh"), desc="Run choice of most used utils"),
     Key([alt], "w", lazy.spawn("rofi run -show window -show-icons"), desc="Switch between opened windows"),
     Key([alt], "Tab", lazy.group.next_window(), desc="Switch to the next window"),
 
