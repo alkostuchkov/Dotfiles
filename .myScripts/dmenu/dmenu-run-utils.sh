@@ -8,11 +8,11 @@
 # Dmenu script for running some of my more frequently used utils.
 
 options=(
-"kvantummanager - kvantummanager"
-"lxappearance - lxappearance"
-"lxarandr - lxrandr"
-"pavucontrol - pavucontrol"
-"qt5ct - qt5ct"
+"Kvantum - kvantummanager"
+"Appearance - lxappearance"
+"Display - lxrandr"
+"Sound - pavucontrol"
+"Qt5 - qt5ct"
 "quit")
 
 # Colors:

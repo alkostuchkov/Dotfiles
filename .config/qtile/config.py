@@ -217,6 +217,12 @@ keys = [
 # <SUPER> + <CTRL> + KEYS
     Key([mod, "control"], "Return", lazy.spawn("terminator"), desc="Launch terminator terminal"),
     # RESIZE UP, DOWN, LEFT, RIGHT
+    Key([mod, "control"], "i",
+        lazy.layout.shrink_main(),
+    ),
+    Key([mod, "control"], "m",
+        lazy.layout.grow_main(),
+    ),
     Key([mod, "control"], "l",
         lazy.layout.grow_right(),
         lazy.layout.grow(),
@@ -269,34 +275,19 @@ keys = [
     # Dmenu
     KeyChord([alt], "m", [
         Key([], "c", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-edit-configs.sh"), desc="Run dmenu script for editing config files"),
-        Key([], "p", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-passmenu.sh"), desc="Run dmenu script for getting password"),
-        Key([], "n", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-passmenu-name.sh"), desc="Run dmenu script for getting username"),
-        Key([], "u", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-passmenu-url.sh"), desc="Run dmenu script for getting url"),
-        Key([], "l", lazy.spawn(f"{home}/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
-        Key([], "k", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-kill.sh"), desc="Kill chosen process"),
-        Key([], "s", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-search.sh"), desc="Run chosen search engine"),
         Key([], "e", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-unicode.sh"), desc="Choose an emoji"),
+        Key([], "k", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-kill.sh"), desc="Kill chosen process"),
+        Key([], "l", lazy.spawn(f"{home}/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
+        Key([], "n", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-passmenu-name.sh"), desc="Run dmenu script for getting username"),
+        Key([], "p", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-passmenu.sh"), desc="Run dmenu script for getting password"),
+        Key([], "r", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-run-utils.sh"), desc="Run choice of most used utils"),
+        Key([], "s", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-search.sh"), desc="Run chosen search engine"),
         Key([], "t", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-transcription.sh"), desc="Choose a transcription's symbol"),
+        Key([], "u", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-passmenu-url.sh"), desc="Run dmenu script for getting url"),
         Key([], "x", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-system-exit.sh"), desc="System exit menu")],
         mode="Dmenu"
     ),
-    #  KeyChord([alt], "u", [
-    #  # Utils
-        #  Key([], "a", lazy.spawn("lxappearance"), desc="Run lxappearance"),
-        #  Key([], "d", lazy.spawn("lxrandr"), desc="Run lxrandr"),
-        #  Key([], "k", lazy.spawn("kvantummanager"), desc="Run kvantummanager"),
-        #  Key([], "p", lazy.spawn("pavucontrol"), desc="Run pavucontrol"),
-        #  Key([], "q", lazy.spawn("qt5ct"), desc="Run qt5ct")],
-        #  mode="Utils"
-    #  ),
-    #  Key([alt], "c", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-edit-configs.sh"), desc="Run dmenu script for editing config files"),
-    #  Key([alt], "p", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-passmenu.sh"), desc="Run dmenu script for editing config files"),
-    #  Key([alt], "s", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-system-exit.sh"), desc="System exit menu"),
-    #  Key([alt], "l", lazy.spawn(f"{home}/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
-    #  Key([alt], "t", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-kill.sh"), desc="Kill chosen process"),
-    #  Key([alt], "e", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-search.sh"), desc="Run chosen search engine"),
-    #  Key([alt], "k", lazy.spawn(f"{home}/.myScripts/on-off_conky.sh"), desc="On-Off conky"),
-    Key([alt], "u", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-run-utils.sh"), desc="Run choice of most used utils"),
+    Key([alt], "r", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-run-utils.sh"), desc="Run choice menu of the most used utils"),
     Key([alt], "w", lazy.spawn("rofi run -show window -show-icons"), desc="Switch between opened windows"),
     Key([alt], "Tab", lazy.group.next_window(), desc="Switch to the next window"),
 

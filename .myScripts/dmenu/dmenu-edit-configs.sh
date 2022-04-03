@@ -21,11 +21,12 @@ options=(
 "dmenu-passmenu - $HOME/.myScripts/dmenu/dmenu-passmenu.sh"
 "dmenu-passmenu-name - $HOME/.myScripts/dmenu/dmenu-passmenu-name.sh"
 "dmenu-passmenu-url - $HOME/.myScripts/dmenu/dmenu-passmenu-url.sh"
+"dmenu-run-utils - $HOME/.myScripts/dmenu/dmenu-run-utils.sh"
 "dmenu-search - $HOME/.myScripts/dmenu/dmenu-search.sh"
 "dmenu-system-exit - $HOME/.myScripts/dmenu/dmenu-system-exit.sh"
 "dmenu-unicode - $HOME/.myScripts/dmenu/dmenu-unicode.sh"
 "fish - $HOME/.config/fish/config.fish"
-"fonts - $HOME/.config/fontconfig/fonts.conf"
+"fonts.conf - $HOME/.config/fontconfig/fonts.conf"
 "homepage - $HOME/.surf/homepage.html"
 "i3 - $HOME/.config/i3/config"
 "i3blocks - $HOME/.config/i3blocks/config"
@@ -37,10 +38,10 @@ options=(
 "profile - $HOME/.profile"
 "qtile - $HOME/.config/qtile/config.py"
 "qutebrowser - $HOME/.config/qutebrowser/config.py"
-"rofi - $HOME/.config/rofi/config.rasi"
 "ranger_rc.conf - $HOME/.config/ranger/rc.conf"
 "ranger_rifle.conf - $HOME/.config/ranger/rifle.conf"
 "ranger_commands.py - $HOME/.config/ranger/commands.py"
+"rofi - $HOME/.config/rofi/config.rasi"
 "terminator - $HOME/.config/terminator/config"
 "udiskie - $HOME/.config/udiskie/config.yml"
 "vifm - $HOME/.config/vifm/vifmrc"
@@ -64,6 +65,9 @@ fn='Ubuntu-16:normal'
 # sb='#d79921'
 # fn='Sarasa Mono SC Nerd-17:normal'
 
+terminal="alacritty"
+# terminal="xfce4-terminal"
+
 # names=$(printf '%s\n' "${options[@]}" | awk '{print $1}')
 # choice=$(printf '%s\n' "${names}" | dmenu -l 10  -nf '#09dbc9' -nb '#222b2e' -sf '#dbdcd5' -sb '#009185' -fn 'Ubuntu-16:normal' -p 'Edit config file:')
 
@@ -73,7 +77,9 @@ if [[ "$choice" == "quit" ]]; then
     echo "Program terminated." && exit 1
 elif [[ "$choice" ]]; then
     conf=$(printf '%s\n' "${choice}" | awk '{print $NF}')
-    alacritty -e $SHELL -c "vim $conf"
+    $terminal -e $SHELL -c "vim $conf"
+    # alacritty -e $SHELL -c "vim $conf"
+    # $terminal -e "$SHELL -c 'vim $conf'"
     # alacritty -e vim "$conf"
     # terminator -e "vim $conf"
 else
