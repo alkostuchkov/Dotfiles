@@ -1,0 +1,47 @@
+# Colors (Base16-Flat-LikeCobalt2+)
+colors:
+  # Default colors
+  primary:
+    # background: '#2c3e50'
+    # background: '#143448'
+    background: '#213049'
+    foreground: '#e0e0e0'
+
+  # Normal colors
+  normal:
+    # black:   '#2c3e50'
+    # black:   '#143448'
+    black:   '#213049'
+    # red:     '#e74c3c'
+    red:     '#ff628c'
+    green:   '#2ecc71'
+    # green:   '#3ad900'
+    # yellow:  '#f1c40f'
+    yellow:  '#ffc600'
+    blue:    '#3498db'
+    # blue:    '#9effff'
+    # blue:    '#0088ff'
+    magenta: '#9b59b6'  # Dark pink of the original material theme
+    # cyan:    '#1abc9c'
+    cyan:    '#80ffbb'
+    # cyan:    '#a5ff90'
+    white:   '#e0e0e0'  # Arbitrary
+
+  # Bright colors
+  bright:
+    black:   '#95a5a6'  # Arbitrary
+    # red:     '#e74c3c'
+    red:     '#ff628c'
+    green:   '#2ecc71'
+    # green:   '#3ad900'
+    # yellow:  '#f1c40f'
+    yellow:  '#ffc600'
+    blue:    '#3498db'
+    # blue:    '#9effff'
+    # blue:    '#0088ff'
+    magenta: '#9b59b6'  # Pink of the original material theme
+    # cyan:    '#1abc9c'
+    cyan:    '#80ffbb'
+    # cyan:    '#a5ff90'
+    white:   '#ecf0f1'  # Arbitrary
+

@@ -128,8 +128,9 @@ set background=dark
 " colorscheme gruvbox
 " colorscheme predawn
 " colorscheme nord
-" colorscheme materialbox
-colorscheme material-theme
+" colorscheme materialbox ?
+" colorscheme material-theme
+colorscheme OceanicNext
 " colorscheme cobalt2
 " colorscheme onedark
 " colorscheme monokai

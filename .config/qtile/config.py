@@ -645,7 +645,7 @@ def init_widgets_screen2():
 
 
 def init_screens():
-    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=31))]
+    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=32))]
     # For several Monitors.
     #  return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=30)),
             #  Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1.0, size=30)),
