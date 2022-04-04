@@ -117,7 +117,12 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 "###############################################################################
 " Colorscheme and GUI Settings
 "###############################################################################
-set t_Co=256
+if has("termguicolors")
+    set termguicolors
+else
+    set t_Co=256
+endif
+
 set background=dark
 " colorscheme gruvbox-material
 " colorscheme gruvbox
@@ -191,7 +196,8 @@ else
     " colorscheme material-theme
     " colorscheme hybrid
     " colorscheme hybrid_material
-    colorscheme onedark
+    " colorscheme onedark
+    colorscheme OceanicNext
     " colorscheme cobalt2
 endif
 
@@ -357,9 +363,19 @@ let g:Powerline_symbols='unicode'  "Поддержка unicode
 let g:airline#extensions#keymap#enabled = 0  "Не показывать текущий маппинг
 let g:airline#extensions#xkblayout#enabled = 0  "Про это позже расскажу
 
-let g:airline_theme='onedark'
-" let g:airline_theme='cobalt2'
-" let g:airline_theme='base16_material'
+if has("gui_running")
+    " let g:airline_theme='cobalt2'
+    " let g:airline_theme='base16_material'
+    " let g:airline_theme="onedark"
+    " let g:airline_theme="onehalfdark"
+    let g:airline_theme="oceanicnext"
+    " let g:airline_theme="gruvbox_material"
+else
+    " let g:airline_theme="onehalfdark"
+    " let g:airline_theme="gruvbox_material"
+    let g:airline_theme="oceanicnext"
+    " let g:airline_theme="gruvbox"
+endif
 
 " TODO: check these settings
 " let g:airline_powerline_fonts = 0

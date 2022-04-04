@@ -297,6 +297,7 @@ keys = [
     Key(["control", alt], "k", lazy.layout.section_up(), desc="Move down a section in TreeTab"),
 
 # <CONTROL> + <SHIFT> + KEYS
+    Key(["control", "shift"], "Escape", lazy.spawn(f"{my_term} -e htop"), desc="Run htop"),
 # <ALT> + <SHIFT> + KEYS
     Key([alt, "shift"], "Tab", lazy.group.prev_window(), desc="Switch to the previous window"),
 
@@ -644,7 +645,7 @@ def init_widgets_screen2():
 
 
 def init_screens():
-    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=30))]
+    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=31))]
     # For several Monitors.
     #  return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=30)),
             #  Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1.0, size=30)),
