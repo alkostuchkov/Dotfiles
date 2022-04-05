@@ -278,6 +278,7 @@ keys = [
         Key([], "e", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-unicode.sh"), desc="Choose an emoji"),
         Key([], "k", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-kill.sh"), desc="Kill chosen process"),
         Key([], "l", lazy.spawn(f"{home}/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
+        Key([], "m", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-change-alacritty-colors.sh"), desc="Run dmenu script for changing colors for Alacritty"),
         Key([], "n", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-passmenu-name.sh"), desc="Run dmenu script for getting username"),
         Key([], "p", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-passmenu.sh"), desc="Run dmenu script for getting password"),
         Key([], "r", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-run-utils.sh"), desc="Run choice of most used utils"),
