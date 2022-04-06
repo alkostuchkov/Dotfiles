@@ -46,6 +46,8 @@ color_files=("${color_files[@]%.yml}")
 
 color=$(printf '%s\n' "${color_files[@]}" | dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Alacritty colors you want:')
 
+[[ -n ${color} ]] || exit
+
 is_color=$(is_color_exists ${color})
 
 if [[ ${is_color} == "true" ]]
@@ -53,8 +55,8 @@ then
     old_line=$(grep "\- ~/.config/alacritty/colors/" ${config_file})
     new_line="  - ~/.config/alacritty/colors/"${color}".yml"
     sed -i "s|${old_line}|${new_line}|" ${config_file}
-    notify-send -t 5000 -i dialog-information "Colorscheme:" "Changed to ${color}"
+    notify-send -t 5000 -i dialog-information "Colors" "changed to ${color}"
 else
-    notify-send -t 5000 -i dialog-information "Colorscheme:" "${color} doesn't exist."
+    notify-send -t 5000 -i dialog-information "Colors" "${color} doesn't exist."
 fi
 
