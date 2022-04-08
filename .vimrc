@@ -128,9 +128,14 @@ set background=dark
 " colorscheme gruvbox
 " colorscheme predawn
 " colorscheme nord
-" colorscheme materialbox ?
 " colorscheme material-theme
-colorscheme OceanicNext
+" colorscheme OceanicNext
+let g:oceanic_italic_comments = 1
+colorscheme oceanicnext
+" colorscheme ayu
+" let g:tokyonight_style = 'night' " available: night, storm
+" let g:tokyonight_enable_italic = 1
+" colorscheme tokyonight
 " colorscheme cobalt2
 " colorscheme onedark
 " colorscheme monokai
@@ -190,16 +195,9 @@ if has("gui_running")
 
     " set guifont=Monaco\ 13
     " set guifont=Ligamonacop\ 13
-else
-    " colorscheme herald
-    " colorscheme predawn
-    " colorscheme materialbox
-    " colorscheme material-theme
-    " colorscheme hybrid
-    " colorscheme hybrid_material
-    " colorscheme onedark
-    colorscheme OceanicNext
-    " colorscheme cobalt2
+" else
+    " colorscheme gruvbox
+    " " colorscheme herald
 endif
 
 "###############################################################################
@@ -364,19 +362,15 @@ let g:Powerline_symbols='unicode'  "Поддержка unicode
 let g:airline#extensions#keymap#enabled = 0  "Не показывать текущий маппинг
 let g:airline#extensions#xkblayout#enabled = 0  "Про это позже расскажу
 
-if has("gui_running")
-    " let g:airline_theme='cobalt2'
-    " let g:airline_theme='base16_material'
-    " let g:airline_theme="onedark"
-    " let g:airline_theme="onehalfdark"
-    let g:airline_theme="oceanicnext"
-    " let g:airline_theme="gruvbox_material"
-else
-    " let g:airline_theme="onehalfdark"
-    " let g:airline_theme="gruvbox_material"
-    let g:airline_theme="oceanicnext"
-    " let g:airline_theme="gruvbox"
-endif
+" let g:airline_theme='cobalt2'
+" let g:airline_theme='base16_material'
+" let g:airline_theme="onedark"
+" let g:airline_theme="onehalfdark"
+let g:airline_theme="oceanicnext"
+" let g:airline_theme="ayu"
+" let g:airline_theme="tokyonight"
+" let g:airline_theme="gruvbox_material"
+" let g:airline_theme="gruvbox"
 
 " TODO: check these settings
 " let g:airline_powerline_fonts = 0
