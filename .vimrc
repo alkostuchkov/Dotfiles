@@ -129,13 +129,16 @@ set background=dark
 " colorscheme predawn
 " colorscheme nord
 " colorscheme material-theme
-" colorscheme OceanicNext
-let g:oceanic_italic_comments = 1
-colorscheme oceanicnext
+let g:oceanic_next_terminal_italic = 1
+colorscheme OceanicNext
+" let g:oceanic_italic_comments = 1
+" colorscheme oceanicnext
 " colorscheme ayu
 " let g:tokyonight_style = 'night' " available: night, storm
 " let g:tokyonight_enable_italic = 1
 " colorscheme tokyonight
+" let g:palenight_terminal_italics=1
+" colorscheme palenight
 " colorscheme cobalt2
 " colorscheme onedark
 " colorscheme monokai
@@ -367,6 +370,7 @@ let g:airline#extensions#xkblayout#enabled = 0  "Про это позже рас
 " let g:airline_theme="onedark"
 " let g:airline_theme="onehalfdark"
 let g:airline_theme="oceanicnext"
+" let g:airline_theme="palenight"
 " let g:airline_theme="ayu"
 " let g:airline_theme="tokyonight"
 " let g:airline_theme="gruvbox_material"
