@@ -16,9 +16,10 @@ set TERM "xterm-256color"
 set TERMINAL "alacritty"
 set BROWSER "firefox"
 set RANGER_LOAD_DEFAULT_RC FALSE  # to avoid loading ranger's config twice
+set ANDROID_SDK $HOME/Programs/Android_SDK
 # EDITOR="vim" crontab -e                          # $EDITOR use Vim to edit crontab
 # select-editor  (~/.selected-editor)
-# set PATH $PATH $HOME/.cargo/bin $HOME/.config/vifm/scripts                   # PATH for exa in cargo
+# set PATH $PATH $HOME/.cargo/bin $HOME/.config/vifm/scripts $HOME/Programs/Android_SDK/platform-tools  # PATH for exa in cargo and ...
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"  # $MANPAGER use batcat to read mans
 set __GIT_PROMPT_DIR ~/.bash-git-prompt            # Git autocomplition and prompt 
 
