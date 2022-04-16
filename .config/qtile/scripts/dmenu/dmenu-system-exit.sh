@@ -4,15 +4,29 @@
 # with openrc use loginctl
 [ "$(cat /proc/1/comm)" = "systemd" ] && logind=systemctl || logind=loginctl
 
-declare options=("lock
+# declare options=("lock
+options=("lock
 switch_user
 suspend
 hibernate
 reboot
 shutdown")
 
-# choice=$(echo -e "${options[@]}" | dmenu -p 'System: ' -nb '#222B2E' -nf '#fea63c' -fn 'Ubuntu-R 12')
-choice=$(echo -e "${options[@]}" | dmenu -p 'System: ' -nb '#222B2E' -nf '#09DBC9' -sb '#009185' -fn 'Ubuntu-R 12')
+# Colors:
+# Materia Manjaro
+nf='#09dbc9'
+nb='#222b2e'
+sf='#dbdcd5'
+sb='#009185'
+fn='Ubuntu-16:normal'
+# Gruvbox
+# nf='#fea63c'
+# nb='#282828'
+# # sf='#dbdcd5'
+# sb='#d79921'
+# fn='Sarasa Mono SC Nerd-17:normal'
+
+choice=$(dmenu -i -l 10  -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'System:'   <<< "$options")
 
 case $choice in
     lock)
