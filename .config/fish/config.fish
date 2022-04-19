@@ -439,7 +439,7 @@ end
 alias lse='exa -g --color=always --group-directories-first'
 alias lle='lse -l'
 alias ls='lsd --group-dirs=first'
-alias ll='lsd --blocks=permission,size,user,group,date,name --group-dirs=first --date="+%d %b %H:%M"'
+alias ll='lsd --blocks=permission,links,user,group,size,date,name --group-dirs=first --date="+%d %b %H:%M"'
 alias la='ll -a'
 # alias bat='bat --theme gruvbox-dark '  # theme moved to the ~/.config/bat/config
 alias grep='grep --color=auto'

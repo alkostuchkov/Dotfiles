@@ -134,7 +134,7 @@
     "editor.tabSize": 2
   },
   "bracket-pair-colorizer-2.depreciation-notice": false,
-  "workbench.activityBar.visible": false
+  "react-native.packager.port": 19000
   // "[python]": {
   //   "editor.tabSize": 4
   // }
