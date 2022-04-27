@@ -128,12 +128,12 @@ set background=dark
 " colorscheme gruvbox
 " colorscheme predawn
 " colorscheme nord
+" colorscheme ayu
 " colorscheme material-theme
 let g:oceanic_next_terminal_italic = 1
 colorscheme OceanicNext
 " let g:oceanic_italic_comments = 1
 " colorscheme oceanicnext
-" colorscheme ayu
 " let g:tokyonight_style = 'night' " available: night, storm
 " let g:tokyonight_enable_italic = 1
 " colorscheme tokyonight
@@ -555,14 +555,25 @@ noremap <C-h> <C-w>h
 set splitbelow   "новое окно появляется снизу
 
 " Resize windows
-noremap <C-c>= :resize +5<CR>
-noremap <C-c>- :resize -5<CR>
-noremap <C-c>. :vertical resize +5<CR>
-noremap <C-c>, :vertical resize -5<CR>
-inoremap <C-c>= <Esc>:resize +5<CR>a
-inoremap <C-c>- <Esc>:resize -5<CR>a
-inoremap <C-c>. <Esc>:vertical resize +5<CR>a
-inoremap <C-c>, <Esc>:vertical resize -5<CR>a
+noremap <S-Down> :resize -5<CR>
+noremap <S-Up> :resize +5<CR>
+noremap <S-Left> :vertical resize -5<CR>
+noremap <S-Right> :vertical resize +5<CR>
+
+inoremap <S-Down> <Esc>:resize -5<CR>a
+inoremap <S-Up> <Esc>:resize +5<CR>a
+inoremap <S-Left> <Esc>:vertical resize -5<CR>a
+inoremap <S-Right> <Esc>:vertical resize +5<CR>a
+
+" noremap <C-c>= :resize +5<CR>
+" noremap <C-c>- :resize -5<CR>
+" noremap <C-c>. :vertical resize +5<CR>
+" noremap <C-c>, :vertical resize -5<CR>
+"
+" inoremap <C-c>= <Esc>:resize +5<CR>a
+" inoremap <C-c>- <Esc>:resize -5<CR>a
+" inoremap <C-c>. <Esc>:vertical resize +5<CR>a
+" inoremap <C-c>, <Esc>:vertical resize -5<CR>a
 
 " Switch file encoding
 set wcm=<Tab>   "WTF? but all work
@@ -659,7 +670,8 @@ nnoremap <S-l> $
 " Return from insert mode to normal
 " inoremap jk <ESC>
 " inoremap ii <ESC>l
-inoremap jj <ESC>
+" inoremap jj <ESC>
+inoremap <M-;> <ESC>
 
 " Несколько удобных биндингов для с, c++, java, python
 augroup filetype_coding
@@ -709,7 +721,7 @@ augroup END
 " inoremap (: ():<CR>
 
 " New line
-inoremap '' <END><CR>
+" inoremap '' <END><CR>
 
 
 

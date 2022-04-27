@@ -1,7 +1,7 @@
 # Colors (Garuda)
 colors:
-  name: Garuda (dr460nized)
-  author: dr460nf1r3
+  # name: Garuda (dr460nized)
+  # author: dr460nf1r3
   primary:
     background: '0x0a1124'
     foreground: '0xeec49a'

@@ -227,18 +227,6 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[DejaVuSansMonoNerdBook_15_5]]
-    background_color = "#282828"
-    background_darkness = 0.97
-    cursor_color = "#aaaaaa"
-    font = DejaVuSansMono Nerd Font 15.5
-    foreground_color = "#dfbf8e"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
-    use_system_font = False
-    bold_is_bright = True
-    copy_on_selection = True
   [[Hack_Nerd_16]]
     background_color = "#263238"
     background_darkness = 0.97
@@ -459,7 +447,7 @@
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
-    font = mononoki 17
+    font = mononoki 17.5
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -695,6 +683,42 @@
     background_darkness = 0.97
     cursor_color = "#a3b3cc"
     font = Cousine Nerd Font Mono 16
+    foreground_color = "#dcdfe4"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[DejaVuSansMonoNerdBook_16]]
+    background_color = "#282828"
+    background_darkness = 0.97
+    cursor_color = "#aaaaaa"
+    font = DejaVuSansMono Nerd Font 16
+    foreground_color = "#dfbf8e"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#665c54:#ea6962:#a9b665:#e78a4e:#7daea3:#d3869b:#89b482:#dfbf8e:#928374:#ea6962:#a9b665:#e3a84e:#7daea3:#d3869b:#89b482:#dfbf8e"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Hermit_Nerd_Medium_16]]
+    background_color = "#263238"
+    background_darkness = 0.97
+    cursor_color = "#a3b3cc"
+    font = Hurmit Nerd Font Medium 16
+    foreground_color = "#dcdfe4"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Hermit_Regular_16]]
+    background_color = "#263238"
+    background_darkness = 0.97
+    cursor_color = "#a3b3cc"
+    font = Hermit 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden
