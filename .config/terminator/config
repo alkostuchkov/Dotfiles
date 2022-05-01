@@ -5,10 +5,14 @@
 [keybindings]
   split_horiz = <Shift><Alt>h
   split_vert = <Shift><Alt>v
-  line_up = <Primary>Up
-  line_down = <Primary>Down
-  resize_up = <Primary><Shift>Up
-  resize_down = <Primary><Shift>Down
+  page_up = <Shift>Page_Up
+  page_down = <Shift>Page_Down
+  page_up_half = <Primary><Alt>Up
+  page_down_half = <Primary><Alt>Down
+  line_up = <Primary><Shift>Up
+  line_down = <Primary><Shift>Down
+  resize_up = ""
+  resize_down = ""
   full_screen = ""
   layout_launcher = <Super>l
   help = ""

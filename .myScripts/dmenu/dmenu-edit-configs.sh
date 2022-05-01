@@ -34,6 +34,7 @@ options=(
 "i3status - $HOME/.config/i3status/config"
 "i3pystatus - $HOME/.config/i3pystatus/config.py"
 "kitty - $HOME/.config/kitty/kitty.conf"
+"nvim - $HOME/.config/nvim/init.vim"
 "picom - $HOME/.config/picom/picom.conf"
 "polybar - $HOME/.config/polybar/config"
 "profile - $HOME/.profile"

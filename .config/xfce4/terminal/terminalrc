@@ -1,6 +1,6 @@
 [Configuration]
 BackgroundDarkness=0.970000
-FontName=Hermit 16
+FontName=Iosevka 18
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBordersDefault=FALSE
@@ -40,4 +40,5 @@ ColorCursor=x
 ColorForeground=#e0e0e0
 ColorBackground=#143448
 MiscRightClickAction=TERMINAL_RIGHT_CLICK_ACTION_CONTEXT_MENU
+ShortcutsNoHelpkey=TRUE
 
