@@ -9,7 +9,9 @@
   line_down = <Primary>Down
   resize_up = <Primary><Shift>Up
   resize_down = <Primary><Shift>Down
+  full_screen = ""
   layout_launcher = <Super>l
+  help = ""
 [profiles]
   [[default]]
     background_color = "#263238"

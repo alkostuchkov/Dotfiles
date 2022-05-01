@@ -8,28 +8,69 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-###############################################################################
-# EXPORTs
-###############################################################################
+# # if running bash
+# if [ -n "$BASH_VERSION" ]; then
+    # # include .bashrc if it exists
+    # if [ -f "$HOME/.bashrc" ]; then
+	# . "$HOME/.bashrc"
+    # fi
+# fi
+#
+# # set PATH so it includes user's private bin if it exists
+# if [ -d "$HOME/bin" ] ; then
+    # PATH="$HOME/bin:$PATH"
+# fi
+# PATH="/usr/local/sbin:/usr/sbin:/sbin:$PATH"
+
+# # Append "$1" to $PATH when not already in.
+# # This function API is accessible to scripts in /etc/profile.d
+# append_path () {
+    # case ":$PATH:" in
+        # *:"$1":*)
+            # ;;
+        # *)
+            # PATH="${PATH:+$PATH:}$1"
+    # esac
+# }
+# # Append our default paths
+# # append_path "/usr/local/sbin"
+# # append_path "/usr/local/bin"
+# # append_path "/usr/bin"
+# append_path "$HOME/.local/bin"
+# append_path "$HOME/.cargo/bin"
+# append_path "$HOME/.config/vifm/scripts"
+# append_path "$HOME/Programs/AppImageApplications"
+#
+# # Force PATH to be environment
+# export PATH
+
 export HOME=$(echo /home/$USER)
 
 export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications:$HOME/Programs/Android_SDK/platform-tools
 export EDITOR="vim"
-# export VISUAL="gvim"
+export VISUAL="gvim"
 export TERM="xterm-256color"
 export TERMINAL="alacritty"
 export BROWSER="firefox"
 export RANGER_LOAD_DEFAULT_RC=FALSE  # to avoid loading ranger's config twice
+export ANDROID_SDK=$HOME/Programs/Android_SDK
 # export BROWSER="qutebrowser"
 #export EDITOR="emacs -nw"
 # export QT_QPA_PLATFORMTHEME="qt5ct"
 # export MANPAGER="sh -c 'col -bx | bat --theme gruvbox-dark -l man -p'"  # $MANPAGER use batcat to read mans
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"  # theme moved to the .config/bat/config
-export ANDROID_SDK="$HOME/Programs/Android_SDK"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"  # theme moved to the ~/.config/bat/config
+export NVM_DIR="$HOME/.nvm"
+
+#export LANG=en_US.UTF8
+#export LANGUAGE=en_US:en
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
+
+# export PATH=$(echo $PATH | awk -F: '
+# { for (i = 1; i <= NF; i++) arr[$i]; }
+# END { for (i in arr) printf "%s:" , i; printf "\n"; } ')
 
 # Icons for lf file manager
 export LF_ICONS="\
@@ -507,4 +548,3 @@ ex=:\
 # *.zip=:\
 # *.zsh=:\
 # "
-

@@ -4,8 +4,11 @@
 set nocompatible " no vi-compatible
 
 " Automatic reloading config file (for NERDCommenter) -------------------------
-autocmd! VimEnter * :source $MYVIMRC  
+autocmd! VimEnter * :source ~/.config/nvim/init.vim
 " autocmd! VimEnter * :redraw
+
+" To ALWAYS use the clipboard for ALL operations (instead of '+' or '*') ------
+set clipboard+=unnamedplus
 
 " Showing line numbers and length ---------------------------------------------
 set number
@@ -249,14 +252,6 @@ let g:NERDCreateDefaultMappings = 0 " Cancel NERD's default mappings
 let mapleader = " "
 let maplocalleader = "\\"
 
-" Let Meta key (Alt) to be usefull in terminal
-let c='a'
-while c <= 'z'
-  exec "set <M-".c.">=\e".c
-  exec "imap \e".c." <M-".c.">"
-  let c = nr2char(1+char2nr(c))
-endw
-
 " Removes highlight of your last search ---------------------------------------
 noremap <C-c>h :nohlsearch<CR>
 vnoremap <C-c>h :nohlsearch<CR>
@@ -289,8 +284,8 @@ menu Encoding.utf-8      :e ++enc=utf-8 <CR>
 noremap <F11> :emenu Encoding.<TAB>
 
 " Edit & Apply changes in config file -----------------------------------------
-nnoremap <Leader>ev :tabnew $MYVIMRC<CR>
-nnoremap <Leader>sv :source $MYVIMRC<CR>
+nnoremap <Leader>ev :tabnew ~/.config/nvim/init.vim<CR>
+nnoremap <Leader>sv :source ~/.config/nvim/init.vim<CR>
 
 " Move line up/down -----------------------------------------------------------
 nnoremap <M-k> :m .-2<CR>==
@@ -404,9 +399,9 @@ augroup filetype_coding
 augroup END
 
 " Copy/Cut/Past from/to system buffer -----------------------------------------
-vnoremap <C-x> "+d
-vnoremap <C-c> "*y :let @+=@*<CR>
-map <C-p> "+p
+" vnoremap <C-x> "+d
+" vnoremap <C-c> "*y :let @+=@*<CR>
+" map <C-p> "+p
 
 " Surround the selection in "", '', () ----------------------------------------
 " vnoremap <Leader>" <ESC>`<i"<ESC>`>la"<ESC>
