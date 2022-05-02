@@ -30,11 +30,14 @@ set __GIT_PROMPT_DIR ~/.bash-git-prompt            # Git autocomplition and prom
 ############################################################################### 
 # AUTOCOMPLETE AND HIGHLIGHT COLORS
 ############################################################################### 
-set fish_color_normal brcyan
-set fish_color_autosuggestion '#7d7d7d'
-set fish_color_command brcyan
-set fish_color_error '#ff6c6b'
-set fish_color_param brcyan
+# set fish_color_normal brcyan
+# set fish_color_autosuggestion '#7d7d7d'
+# set fish_color_command brcyan
+# set fish_color_error '#ff6c6b'
+# set fish_color_param brcyan
+
+set_colorscheme_ayu_Mirage
+# set_colorscheme_ayu_Dark
 
 ###############################################################################
 # FUNCTIONS
@@ -337,6 +340,10 @@ alias pscpu='ps auxf | sort -nr -k 3'
 alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
 # git -------------------------------------------------------------------------
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
+# run some programs -----------------------------------------------------------
+alias v='vim'
+alias f='ranger'
+alias vf='vifm'
 
 ###############################################################################
 # Source

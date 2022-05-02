@@ -162,6 +162,10 @@ alias pscpu='ps auxf | sort -nr -k 3'
 alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
 # git -------------------------------------------------------------------------
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
+# run some programs -----------------------------------------------------------
+alias v='vim'
+alias f='ranger'
+alias vf='vifm'
 
 ###############################################################################
 # Source

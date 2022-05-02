@@ -131,12 +131,12 @@ font:
     # family: Monofur Nerd Font
     # family: TerminessTTF Nerd Font
     # family: mplus Nerd Font
-    # family: Iosevka
+    family: Iosevka
     # family: Iosevka Term
     # family: Sarasa Mono SC Nerd
     # family: Cascadia Mono PL
     # family: CaskaydiaCove Nerd Font Mono
-    family: Recursive Mono Casual Static
+    # family: Recursive Mono Casual Static
     # family: Hermit
     # family: Cousine Nerd Font Mono
     # family: Source Code Pro
@@ -163,12 +163,12 @@ font:
     # family: Monofur Nerd Font
     # family: TerminessTTF Nerd Font
     # family: mplus Nerd Font
-    # family: Iosevka
+    family: Iosevka
     # family: Iosevka Term
     # family: Sarasa Mono SC Nerd
     # family: Cascadia Mono PL
     # family: CaskaydiaCove Nerd Font Mono
-    family: Recursive Mono Casual Static
+    # family: Recursive Mono Casual Static
     # family: Hermit
     # family: Cousine Nerd Font Mono
     # family: Source Code Pro
@@ -195,12 +195,12 @@ font:
     # family: Monofuritalic Nerd Font Mono
     # family: TerminessTTF Nerd Font
     # family: mplus Nerd Font
-    # family: Iosevka
+    family: Iosevka
     # family: Iosevka Term
     # family: Sarasa Mono SC Nerd
     # family: Cascadia Mono PL
     # family: CaskaydiaCove Nerd Font Mono
-    family: Recursive Mono Casual Static
+    # family: Recursive Mono Casual Static
     # family: Hermit
     # family: Cousine Nerd Font Mono
     # family: Source Code Pro
@@ -227,12 +227,12 @@ font:
     # family: Monofuritalic Nerd Font Mono
     # family: TerminessTTF Nerd Font
     # family: mplus Nerd Font
-    # family: Iosevka
+    family: Iosevka
     # family: Iosevka Term
     # family: Sarasa Mono SC Nerd
     # family: Cascadia Mono PL
     # family: CaskaydiaCove Nerd Font Mono
-    family: Recursive Mono Casual Static
+    # family: Recursive Mono Casual Static
     # family: Hermit
     # family: Cousine Nerd Font Mono
     # family: Source Code Pro
@@ -249,15 +249,15 @@ font:
   # size: 14.5  # for SaurceCodePro Nerd
   # size: 15.5
   # size: 16.5  # for mplus Nerd Font
-  size: 16
   # size: 16
+  size: 18
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   offset:
     x: 0
-    # y: -4  # for mplus Nerd Font && Iosevka
-    y: 0
+    y: -4  # for mplus Nerd Font && Iosevka
+    # y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the right,
