@@ -8,7 +8,7 @@ autocmd! VimEnter * :source ~/.config/nvim/init.vim
 " autocmd! VimEnter * :redraw
 
 " To ALWAYS use the clipboard for ALL operations (instead of '+' or '*') ------
-set clipboard+=unnamedplus
+" set clipboard+=unnamedplus
 
 " Showing line numbers and length ---------------------------------------------
 set number
@@ -177,6 +177,7 @@ call plug#begin('~/.vim/plugged')
     " Code/project navigation
     "#########################################
     Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+    Plug 'vifm/vifm.vim'
     " Code and files fuzzy finder
     " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     " Plug 'junegunn/fzf.vim'
@@ -399,9 +400,9 @@ augroup filetype_coding
 augroup END
 
 " Copy/Cut/Past from/to system buffer -----------------------------------------
-" vnoremap <C-x> "+d
-" vnoremap <C-c> "*y :let @+=@*<CR>
-" map <C-p> "+p
+vnoremap <C-x> "+d
+vnoremap <C-c> "*y :let @+=@*<CR>
+map <C-p> "+p
 
 " Surround the selection in "", '', () ----------------------------------------
 " vnoremap <Leader>" <ESC>`<i"<ESC>`>la"<ESC>

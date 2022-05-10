@@ -153,6 +153,7 @@ keys = [
     Key([mod, "shift"], "Return", lazy.spawn(my_term_extra), desc="Launch extra terminal"),
     #  Key([mod, "shift"], "a", lazy.spawn(f"{my_term} -e pkexec ranger"), desc="Launch ranger as root"),
     #  Key([mod, "shift"], "a", lazy.spawn(f"{my_term} -e sudo ranger"), desc="Launch ranger as root"),
+    Key([mod, "shift"], "v", lazy.spawn(f"{home}/.myScripts/runVifmAsRoot.sh"), desc="Launch Vifm as root"),
     Key([mod, "shift"], "a", lazy.spawn(f"{home}/.myScripts/runRangerAsRoot.sh"), desc="Launch ranger as root"),
     Key([mod, "shift"], "p", lazy.spawn(f"{home}/.myScripts/runThunarAsRoot.sh"), desc="Launch Thunar as root"),
     Key([mod, "shift"], "w", lazy.spawn("google-chrome-stable"), desc="Launch Chrome"),
