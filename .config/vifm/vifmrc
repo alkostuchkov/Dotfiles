@@ -311,6 +311,10 @@ command! unzip unzip %c
 command! tar tar -czf %c.tar.gz %f
 command! untar tar -xzf %f
 
+" Copy and move (instead of copy and move) WITH menu dialog -------------------
+command! cp :yank | winrun , put
+command! mv :yank | winrun , put!
+
 command! diff vim -d %f %F
 command! run !! ./%f
 command! mkcd :mkdir %a | cd %a
@@ -403,8 +407,8 @@ nnoremap <wait> ,ud :!~/.myScripts/winD_unmount.sh<cr>
 
 " Tabs ------------------------------------------------------------------------
 nnoremap <C-t>t :tabnew<cr>
-nnoremap <f8> :tabnext<cr>
-nnoremap <f9> :tabprevious<cr>
+nnoremap <f8> :tabprevious<cr>
+nnoremap <f9> :tabnext<cr>
 
 " Move focus between panes ----------------------------------------------------
 noremap <C-k> <C-w>k
@@ -425,8 +429,10 @@ nnoremap <silent> K <tab>k<tab>
 nnoremap <f3> :!$TERMINAL -e bat --paging=always %f<cr>
 " nnoremap <f4> :edit<cr>
 nnoremap <f4> :!$TERMINAL -e vim %f &<cr>
-nnoremap <f5> :copy<cr>
-nnoremap <f6> :move<cr>
+" nnoremap <f5> :copy<cr>
+" nnoremap <f6> :move<cr>
+nnoremap <f5> :cp<cr>
+nnoremap <f6> :mv<cr>
 nnoremap <f7> :mkdir<space>
 nnoremap <f10> :q<cr>
 " nnoremap <f11> :<cr>
