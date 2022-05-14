@@ -41,11 +41,11 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[Iosevka_Term_16]]
+  [[Iosevka_Term_18]]
     background_color = "#263238"
     background_darkness = 0.97
     cursor_color = "#a3b3cc"
-    font = Iosevka Term 16
+    font = Iosevka Term 18
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden
