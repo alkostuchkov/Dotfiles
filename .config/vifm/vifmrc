@@ -37,9 +37,9 @@ colorscheme my_material
 " filextype *.pdf atril %c %i &, apvlv %c, xpdf %c
 filetype *.pdf,*.djvu
   \ {View in atril}
-  \ atril %f,
+  \ atril %f &,
   \ {View in qpdfview}
-  \ qpdfview %f,
+  \ qpdfview %f &,
   \ {View in zathura}
   \ zathura %f,
   \ {View in apvlv}
@@ -244,13 +244,13 @@ filetype */
   \ ranger %f &,
 
 " Config & exec files ---------------------------------------------------------
-filextype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.spec alacritty -e vim %f &
+filetype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs alacritty -e vim %f &
 
 " Books -----------------------------------------------------------------------
-filextype *.fb2,*.epub cr3 %f &
+filetype *.fb2,*.epub cr3 %f &
 
 " Fonts -----------------------------------------------------------------------
-filextype *.ttf,*.otf gnome-font-viewer %f &
+filetype *.ttf,*.otf gnome-font-viewer %f &
 
 " .deb ------------------------------------------------------------------------
 filextype *.deb gdebi-gtk %f &, engrampa %f &
@@ -405,10 +405,29 @@ nnoremap <wait> ,md :!~/.myScripts/winD_mount.sh<cr>
 nnoremap <wait> ,uc :!~/.myScripts/winC_unmount.sh<cr>
 nnoremap <wait> ,ud :!~/.myScripts/winD_unmount.sh<cr>
 
+" Quit ------------------------------------------------------------------------
+map <wait> <Esc><Esc> :q!<cr>
+" Quit all windows without saving
+nnoremap ,q :qa!<cr>
+" Quit all windows with saving
+nnoremap ,x :xa<cr>
+" Quit the current windows with saving
+nnoremap ,z :x<cr>
+
 " Tabs ------------------------------------------------------------------------
-nnoremap <C-t>t :tabnew<cr>
-nnoremap <f8> :tabprevious<cr>
-nnoremap <f9> :tabnext<cr>
+nnoremap ,tn :tabnew<cr>
+nnoremap ,[ :tabprevious<cr>
+nnoremap ,] :tabnext<cr>
+nnoremap ,n :tabname<space>
+nnoremap ,1 1gt
+nnoremap ,2 2gt
+nnoremap ,3 3gt
+nnoremap ,4 4gt
+nnoremap ,5 5gt
+nnoremap ,6 6gt
+nnoremap ,7 7gt
+nnoremap ,8 8gt
+nnoremap ,9 9gt
 
 " Move focus between panes ----------------------------------------------------
 noremap <C-k> <C-w>k

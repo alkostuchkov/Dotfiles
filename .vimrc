@@ -174,6 +174,7 @@ call plug#begin('~/.vim/plugged')
     " Code/project navigation
     "#########################################
     Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+    Plug 'vifm/vifm.vim'
     " Code and files fuzzy finder
     " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     " Plug 'junegunn/fzf.vim'
@@ -184,7 +185,7 @@ call plug#begin('~/.vim/plugged')
     " Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
     " Plug 'ycm-core/YouCompleteMe', { 'for': 'python' }
-    Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+    Plug 'ycm-core/YouCompleteMe'
 
     "#########################################
     " Other
@@ -246,7 +247,8 @@ let g:NERDCreateDefaultMappings = 0 " Cancel NERD's default mappings
 " Mappings
 "##############################################################################
 " <Leader> key ----------------------------------------------------------------
-let mapleader = " "
+" let mapleader = " "
+let mapleader = ","
 let maplocalleader = "\\"
 
 " Let Meta key (Alt) to be usefull in terminal
@@ -321,8 +323,19 @@ nnoremap <C-t>t :tabnew<CR>
 inoremap <C-t>t <Esc>:tabnew<CR>a
 
 " Switch between tabs
-nnoremap <F8> :tabp <CR>
-nnoremap <F9> :tabn <CR>
+nnoremap <F8> :tabfirst <CR>
+nnoremap <F9> :tablast <CR>
+nnoremap <M-[> :tabp <CR>
+nnoremap <M-]> :tabn <CR>
+nnoremap <M-1> 1gt
+nnoremap <M-2> 2gt
+nnoremap <M-3> 3gt
+nnoremap <M-4> 4gt
+nnoremap <M-5> 5gt
+nnoremap <M-6> 6gt
+nnoremap <M-7> 7gt
+nnoremap <M-8> 8gt
+nnoremap <M-9> 9gt
 
 " Go to BOL and EOL -----------------------------------------------------------
 inoremap <M-h> <ESC>0i
