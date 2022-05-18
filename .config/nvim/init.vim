@@ -314,8 +314,8 @@ nnoremap <Leader>q :qa!<CR>
 
 " Tabs ------------------------------------------------------------------------
 " Open new tab
-nnoremap <C-t>t :tabnew<CR>
-inoremap <C-t>t <Esc>:tabnew<CR>a
+nnoremap <Leader>tn :tabnew<CR>
+inoremap <Leader>tn <Esc>:tabnew<CR>a
 
 " Switch between tabs
 nnoremap <F8> :tabfirst <CR>
