@@ -29,11 +29,6 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "alt+;",
-    "command": "editor.action.commentLine",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
     "key": "ctrl+;",
     "command": "-editor.action.commentLine",
     "when": "editorTextFocus && !editorReadonly"

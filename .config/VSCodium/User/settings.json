@@ -13,8 +13,9 @@
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter.notebook.ipynb"
   },
-  "editor.fontFamily": "'Recursive Mono Casual Static', 'Cascadia Mono PL', 'Rec Mono Casual', 'Cascadia Code PL Semilight', 'Iosevka', 'mplus Nerd Font', 'Pragmata Pro', 'JetBrains Mono Light', 'Source Code Pro', 'Consolas NF', 'JetBrains Mono', 'UbuntuMono Nerd Font', 'Menlo', 'Trim Mono', 'Code New Roman', 'Operator Mono Book', 'IBM Plex Mono Medium'",
-  "editor.fontSize": 17.5,
+  "editor.fontFamily": "'Iosevka', 'Recursive Mono Casual Static', 'Cascadia Mono PL', 'Rec Mono Casual', 'Cascadia Code PL Semilight', 'Iosevka', 'mplus Nerd Font', 'Pragmata Pro', 'JetBrains Mono Light', 'Source Code Pro', 'Consolas NF', 'JetBrains Mono', 'UbuntuMono Nerd Font', 'Menlo', 'Trim Mono', 'Code New Roman', 'Operator Mono Book', 'IBM Plex Mono Medium'",
+  "editor.fontSize": 20,
+  // "editor.fontSize": 17.5,
   // "editor.lineHeight": 20,
   // "editor.tabSize": 4,
   // Controls the font weight. Accepts "normal" and "bold" keywords or numbers between 1 and 1000.
@@ -32,14 +33,14 @@
   "editor.tabSize": 4,
   "editor.cursorBlinking": "expand",
   "editor.wordWrap": "on",
-  "debug.console.fontFamily": "'Recursive Mono Casual Static', 'Cascadia Mono PL', 'Rec Mono Casual', 'Cascadia Code PL Semilight', 'mplus Nerd Font', 'JetBrains Mono Light', 'Source Code Pro', 'Consolas NF', 'JetBrains Mono', 'UbuntuMono Nerd Font', 'Menlo', 'Operator Mono Book', 'Code New Roman', 'Trim Mono', 'JetBrains Mono Light', 'IBM Plex Mono Medium'",
+  "debug.console.fontFamily": "'Iosevka', 'Recursive Mono Casual Static', 'Cascadia Mono PL', 'Rec Mono Casual', 'Cascadia Code PL Semilight', 'mplus Nerd Font', 'JetBrains Mono Light', 'Source Code Pro', 'Consolas NF', 'JetBrains Mono', 'UbuntuMono Nerd Font', 'Menlo', 'Operator Mono Book', 'Code New Roman', 'Trim Mono', 'JetBrains Mono Light', 'IBM Plex Mono Medium'",
   "debug.console.fontSize": 17.5,
   // "terminal.explorerKind": "external",
   "terminal.integrated.cursorStyle": "block",
   "terminal.external.linuxExec": "alacritty",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.defaultProfile.linux": "fish",
-  "terminal.integrated.fontFamily": "'Recursive Mono Casual Static', 'Cascadia Mono PL', 'Rec Mono Casual', 'Cascadia Code PL Semilight', 'mplus Nerd Font', 'JetBrains Mono Light', 'Source Code Pro', 'Consolas NF', 'UbuntuMono Nerd Font', 'Menlo', 'Operator Mono Book', 'Code New Roman', 'Trim Mono', 'JetBrains Mono Light', 'Source Code Pro', 'IBM Plex Mono Medium'",
+  "terminal.integrated.fontFamily": "'Iosevka', 'Recursive Mono Casual Static', 'Cascadia Mono PL', 'Rec Mono Casual', 'Cascadia Code PL Semilight', 'mplus Nerd Font', 'JetBrains Mono Light', 'Source Code Pro', 'Consolas NF', 'UbuntuMono Nerd Font', 'Menlo', 'Operator Mono Book', 'Code New Roman', 'Trim Mono', 'JetBrains Mono Light', 'Source Code Pro', 'IBM Plex Mono Medium'",
   "terminal.integrated.fontSize": 17.5,
   "[python]": {},
   "python.insidersChannel": "off",
@@ -88,7 +89,8 @@
       "commands": [":q"]
     }
   ],
-  "vim.leader": "<space>",
+  // "vim.leader": "<space>",
+  "vim.leader": ",",
   "vim.handleKeys": {
     "<C-a>": true,
     "<C-f>": true
@@ -97,7 +99,7 @@
     // "<C-f>": false
   },
   "markdown-preview-enhanced.previewTheme": "solarized-dark.css",
-  "window.menuBarVisibility": "toggle",
+  "window.menuBarVisibility": "compact",
   // "editor.defaultFormatter": "standard.vscode-standard",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "workbench.colorTheme": "Cobalt2",
