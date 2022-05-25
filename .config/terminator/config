@@ -69,7 +69,7 @@
     background_color = "#263238"
     background_darkness = 0.97
     cursor_color = "#a3b3cc"
-    font = Fira Mono 16
+    font = Fira Mono Medium 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden
@@ -501,7 +501,7 @@
     background_color = "#263238"
     background_darkness = 0.97
     cursor_color = "#a3b3cc"
-    font = FiraCode Nerd Font Mono weight=450 16
+    font = FiraCode Nerd Font weight=450 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden

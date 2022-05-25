@@ -1,2 +1,9 @@
-source ~/.vimrc
-set ideajoin
+" source ~/.vimrc
+
+" Close buffer without saving
+map <Esc><Esc> :q!<CR>
+
+" Copy/Cut/Past from/to system buffer -----------------------------------------
+vnoremap <C-x> "+d
+vnoremap <C-c> "*y :let @+=@*<CR>
+map <C-p> "+p
