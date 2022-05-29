@@ -240,7 +240,7 @@ let g:rustfmt_autosave = 1
 " YouCompleteMe Settings
 "##############################################################################
 " For Rust autocompletion
-let g:ycm_rust_src_path="~/.config/nvim/Developer/rust/src/"
+let g:ycm_rust_src_path="~/.config/nvim/Developer/rust-master/src/"
 " :nnoremap fd  :YcmCompleter GoToDefinition<CR>
 " :nnoremap bb <C-o>
 " let g:loaded_youcompleteme = 1

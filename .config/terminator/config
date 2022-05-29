@@ -677,6 +677,31 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
+  [[+Material-Palenight+]]
+    background_color = "#292d3e"
+    background_darkness = 0.97
+    cursor_color = "#ffcc00"
+    cursor_color_fg = False
+    font = UbuntuMono Nerd Font Mono 18
+    foreground_color = "#a6accd"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#2e3436:#ff5370:#c3e88d:#ffcb6b:#82aaff:#c792ea:#89ddff:#d3d7cf:#555753:#f07178:#c3e88d:#f78c6c:#729fcf:#bb80b3:#89ddff:#eeeeec"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[+Ayu mirage+]]
+    background_color = "#212733"
+    background_darkness = 0.97
+    cursor_color = "#FFD580"
+    font = UbuntuMono Nerd Font Mono 18
+    foreground_color = "#d9d7ce"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#212733:#ff3333:#bae67e:#ffd580:#5ccfe6:#d4bfff:#5ccfe6:#3d4752:#3e4b59:#ff3333:#bae67e:#ffd580:#5ccfe6:#d4bfff:#5ccfe6:#eeeeec"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
 [layouts]
   [[default]]
     [[[child1]]]
