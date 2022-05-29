@@ -333,8 +333,10 @@ nnoremap <Leader>tn :tabnew<CR>
 inoremap <Leader>tn <Esc>:tabnew<CR>a
 
 " Switch between tabs
-nnoremap <F8> :tabfirst <CR>
-nnoremap <F9> :tablast <CR>
+" nnoremap <F8> :tabfirst <CR>
+" nnoremap <F9> :tablast <CR>
+nnoremap <M-{> :tabfirst <CR>
+nnoremap <M-}> :tablast <CR>
 nnoremap <M-[> :tabp <CR>
 nnoremap <M-]> :tabn <CR>
 nnoremap <M-1> 1gt
@@ -386,7 +388,9 @@ map <F3> :colorscheme gruvbox-material<CR>
 map <F4> :colorscheme palenight<CR>
 map <F5> :colorscheme tokyonight<CR>
 map <F6> :colorscheme onehalfdark<CR>
-map <F7> :colorscheme darcula<CR>
+map <F7> :colorscheme onedark<CR>
+map <F8> :colorscheme darcula<CR>
+map <F9> :colorscheme base16-flat_Cobalt2<CR>
 " colorscheme predawn
 " colorscheme nord
 " colorscheme ayu
