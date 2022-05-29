@@ -49,7 +49,7 @@ set scrolloff=3 "when scrolling, keep cursor 3 lines away from screen border
 " Allow plugins by file type (required for plugins!) --------------------------
 filetype plugin on
 filetype indent on
-" filetype plugin indent on
+filetype plugin indent on
 
 syntax on "Enable syntax highlighting
 
@@ -186,6 +186,8 @@ call plug#begin('~/.vim/plugged')
     " Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
     " Plug 'ycm-core/YouCompleteMe', { 'for': 'python' }
     Plug 'ycm-core/YouCompleteMe'
+    Plug 'rust-lang/rust.vim'
+    Plug 'ivanceras/rust-vim-setup'
 
     "#########################################
     " Other
@@ -229,8 +231,16 @@ let g:NERDCreateDefaultMappings = 0 " Cancel NERD's default mappings
 " let g:NERDDefaultAlign = 'left' " Align line-wise comment delimiters flush left instead of following code indentation
 
 "##############################################################################
+" rust.vim Settings
+"##############################################################################
+" :help :RustFmt
+let g:rustfmt_autosave = 1
+
+"##############################################################################
 " YouCompleteMe Settings
 "##############################################################################
+" For Rust autocompletion
+let g:ycm_rust_src_path="~/.config/nvim/Developer/rust/src/"
 " :nnoremap fd  :YcmCompleter GoToDefinition<CR>
 " :nnoremap bb <C-o>
 " let g:loaded_youcompleteme = 1
