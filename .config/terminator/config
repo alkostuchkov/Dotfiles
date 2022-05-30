@@ -669,7 +669,7 @@
     background_color = "#1e2127"
     background_darkness = 0.97
     cursor_color = "#676c76"
-    font = Fira Mono Medium 16
+    font = FiraCode Nerd Font weight=450 16
     foreground_color = "#5c6370"
     show_titlebar = False
     scrollbar_position = hidden
@@ -682,7 +682,7 @@
     background_darkness = 0.97
     cursor_color = "#ffcc00"
     cursor_color_fg = False
-    font = Fira Mono Medium 16
+    font = FiraCode Nerd Font weight=450 16
     foreground_color = "#a6accd"
     show_titlebar = False
     scrollbar_position = hidden
@@ -694,7 +694,7 @@
     background_color = "#212733"
     background_darkness = 0.97
     cursor_color = "#FFD580"
-    font = Fira Mono Medium 16
+    font = FiraCode Nerd Font weight=450 16
     foreground_color = "#d9d7ce"
     show_titlebar = False
     scrollbar_position = hidden
