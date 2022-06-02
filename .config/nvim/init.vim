@@ -138,7 +138,8 @@ else
 endif
 
 set background=dark
-colorscheme OceanicNext
+colorscheme memorycolor
+" colorscheme OceanicNext
 
 " GUI -------------------------------------------------------------------------
 set wak=no   "используем ALT как обычно, а не для вызова пункта меню
@@ -351,8 +352,8 @@ nnoremap <S-h> 0
 nnoremap <S-l> $
 
 " Return from insert mode to normal -------------------------------------------
-" inoremap jj <ESC>
-inoremap <M-;> <ESC>
+inoremap jj <ESC>
+" inoremap <M-;> <ESC>
 
 " New line --------------------------------------------------------------------
 inoremap nl <END><CR>
@@ -385,7 +386,8 @@ map <F5> :colorscheme tokyonight<CR>
 map <F6> :colorscheme onehalfdark<CR>
 map <F7> :colorscheme onedark<CR>
 map <F8> :colorscheme darcula<CR>
-map <F9> :colorscheme base16-flat_Cobalt2<CR>
+map <F9> :colorscheme memorycolor<CR>
+" map <F9> :colorscheme base16-flat_Cobalt2<CR>
 " colorscheme predawn
 " colorscheme nord
 " colorscheme ayu

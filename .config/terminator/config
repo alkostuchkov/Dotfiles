@@ -657,7 +657,7 @@
     background_color = "#263238"
     background_darkness = 0.97
     cursor_color = "#a3b3cc"
-    font = FiraCode Nerd Font weight=450 16
+    font = FiraCode Nerd Font Medium 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden
@@ -669,7 +669,7 @@
     background_color = "#1e2127"
     background_darkness = 0.97
     cursor_color = "#676c76"
-    font = FiraCode Nerd Font weight=450 16
+    font = FiraCode Nerd Font Medium 16
     foreground_color = "#5c6370"
     show_titlebar = False
     scrollbar_position = hidden
@@ -682,7 +682,7 @@
     background_darkness = 0.97
     cursor_color = "#ffcc00"
     cursor_color_fg = False
-    font = FiraCode Nerd Font weight=450 16
+    font = FiraCode Nerd Font Medium 16
     foreground_color = "#a6accd"
     show_titlebar = False
     scrollbar_position = hidden
@@ -694,11 +694,23 @@
     background_color = "#212733"
     background_darkness = 0.97
     cursor_color = "#FFD580"
-    font = FiraCode Nerd Font weight=450 16
+    font = FiraCode Nerd Font Medium 16
     foreground_color = "#d9d7ce"
     show_titlebar = False
     scrollbar_position = hidden
     palette = "#212733:#ff3333:#bae67e:#ffd580:#5ccfe6:#d4bfff:#5ccfe6:#3d4752:#3e4b59:#ff3333:#bae67e:#ffd580:#5ccfe6:#d4bfff:#5ccfe6:#eeeeec"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[+MemoryColor+]]
+    background_color = "#203040"
+    background_darkness = 0.97
+    cursor_color = "#b7b0a7"
+    font = FiraCode Nerd Font Medium 16
+    foreground_color = "#e6ac73"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#000000:#e60073:#00e673:#e6e600:#66b2ff:#b366ff:#00b3b3:#f0f0f0:#000000:#ff6666:#00e673:#f0b16c:#66b2ff:#ff66ff:#00b3b3:#f0f0f0"
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True

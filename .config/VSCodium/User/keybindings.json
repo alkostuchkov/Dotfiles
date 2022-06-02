@@ -113,7 +113,7 @@
     "when": "textInputFocus"
   },
   {
-    "key": "shift+f10",
+    "key": "ctrl+f10",
     "command": "code-runner.run"
   },
   {
@@ -237,12 +237,12 @@
   {
     "key": "u",
     "command": "undo",
-    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+    "when": "!editorFocus && editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
   },
   {
     "key": "ctrl+r",
     "command": "redo",
-    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+    "when": "editorTextFocus && vim.active && !editorFocus && !inDebugRepl && vim.mode != 'Insert'"
   },
   {
     "key": "ctrl+alt+f",
@@ -253,5 +253,9 @@
     "key": "ctrl+f",
     "command": "-workbench.action.terminal.focusFind",
     "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "shift+f10",
+    "command": "rust-analyzer.run"
   }
 ]

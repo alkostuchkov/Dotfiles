@@ -1,0 +1,39 @@
+# Colors (MemoryColor)
+# author: Grigory Petrov
+colors:
+  # Default colors
+  primary:
+    background: '#203040'
+    # background: '#26394d'
+    foreground: '#e6ac73'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '#152535'
+    cursor: '#b7b0a7'
+        # cursor: '#c2b19d'
+
+  # Normal colors
+  normal:
+    # black:   '#203040'
+    black:   '#000000'
+    red:     '#e60073'
+    green:   '#00e673'
+    yellow:  '#e6e600'
+    blue:    '#66b2ff'
+    magenta: '#b366ff'
+    cyan:    '#00b3b3'
+    white:   '#f0f0f0'
+
+  # Bright colors
+  bright:
+    # black:   '#203040'
+    black:   '#000000'
+    red:     '#ff6666'
+    green:   '#00e673'
+    yellow:  '#f0b16c'
+    blue:    '#66b2ff'
+    magenta: '#ff66ff'
+    cyan:    '#00b3b3'
+    white:   '#f0f0f0'
+
