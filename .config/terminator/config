@@ -221,11 +221,11 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[M+_1m_cyr_17]]
+  [[M+_1m_cyr_18]]
     background_color = "#263238"
     background_darkness = 0.97
     cursor_color = "#a3b3cc"
-    font = M+ 1m 17
+    font = M+ 1m 18
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden
@@ -233,11 +233,11 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[M+_1mn_cyr_17]]
+  [[M+_1mn_cyr_18]]
     background_color = "#263238"
     background_darkness = 0.97
     cursor_color = "#a3b3cc"
-    font = mplus Nerd Font 17
+    font = mplus Nerd Font 18
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden
@@ -245,11 +245,11 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[M+_1mn_17]]
+  [[M+_1mn_18]]
     background_color = "#263238"
     background_darkness = 0.97
     cursor_color = "#a3b3cc"
-    font = M+ 1mn 17
+    font = M+ 1mn 18
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden
@@ -281,11 +281,11 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[Monoid_Nerd_Font_15]]
+  [[Monoid_Nerd_Font_14]]
     background_color = "#263238"
     background_darkness = 0.97
     cursor_color = "#a3b3cc"
-    font = Monoid Nerd Font Light Semi-Condensed 14
+    font = Monoid Nerd Font Mono Light Semi-Condensed 14
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden
@@ -706,7 +706,7 @@
     background_color = "#203040"
     background_darkness = 0.97
     cursor_color = "#b7b0a7"
-    font = FiraCode Nerd Font Medium 16
+    font = mplus Nerd Font 18
     foreground_color = "#e6ac73"
     show_titlebar = False
     scrollbar_position = hidden

@@ -130,8 +130,8 @@ font:
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
     # family: TerminessTTF Nerd Font
-    # family: mplus Nerd Font
-    family: Iosevka
+    family: mplus Nerd Font
+    # family: Iosevka
     # family: FiraCode Nerd Font
     # family: Iosevka Term
     # family: Sarasa Mono SC Nerd
@@ -164,8 +164,8 @@ font:
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
     # family: TerminessTTF Nerd Font
-    # family: mplus Nerd Font
-    family: Iosevka
+    family: mplus Nerd Font
+    # family: Iosevka
     # family: FiraCode Nerd Font
     # family: Iosevka Term
     # family: Sarasa Mono SC Nerd
@@ -197,8 +197,8 @@ font:
     # family: UbuntuMono Nerd Font
     # family: Monofuritalic Nerd Font Mono
     # family: TerminessTTF Nerd Font
-    # family: mplus Nerd Font
-    family: Iosevka
+    family: mplus Nerd Font
+    # family: Iosevka
     # family: FiraCode Nerd Font
     # family: Iosevka Term
     # family: Sarasa Mono SC Nerd
@@ -230,8 +230,8 @@ font:
     # family: UbuntuMono Nerd Font
     # family: Monofuritalic Nerd Font Mono
     # family: TerminessTTF Nerd Font
-    # family: mplus Nerd Font
-    family: Iosevka
+    family: mplus Nerd Font
+    # family: Iosevka
     # family: FiraCode Nerd Font
     # family: Iosevka Term
     # family: Sarasa Mono SC Nerd
@@ -250,18 +250,16 @@ font:
     style: Bold Italic
 
   # Point size
-  # size: 14  # for JetBrains Mono
-  # size: 14.5  # for SaurceCodePro Nerd
-  # size: 15.5
-  # size: 16.5  # for mplus Nerd Font
+  # size: 14  # JetBrains Mono
+  # size: 14.5  # SaurceCodePro Nerd
   # size: 16
-  size: 18 # Iosevka
+  size: 18 # Iosevka, mplus Nerd Font
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   offset:
     x: 0
-    y: -4  # for mplus Nerd Font && Iosevka
+    y: -4  # Iosevka, mplus Nerd Font
     # y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
