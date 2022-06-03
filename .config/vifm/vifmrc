@@ -307,9 +307,9 @@ mark R /
 "##############################################################################
 " Archives -------------------------------------------------------------------
 command! zip zip -9 -r %c.zip %f
-command! unzip unzip %c
-command! tar tar -czf %c.tar.gz %f
-command! untar tar -xzf %f
+command! unzip unzip %f
+command! tar tar -czvf %c.tar.gz %f
+command! untar tar -xzvf %f
 
 " Copy and move (instead of copy and move) WITH menu dialog -------------------
 command! cp :yank | winrun , put
@@ -341,6 +341,12 @@ command! resetsort
 "##############################################################################
 " Mappings
 "##############################################################################
+" Archives ---------------------------------------------------------------------
+nnoremap <wait> zp :!$TERMINAL -e zip -9 -r %c.zip %f & <cr>
+nnoremap <wait> uz :!$TERMINAL -e unzip %f & <cr>
+nnoremap <wait> tr :!$TERMINAL -e tar -czvf %c.tar.gz %f & <cr>
+nnoremap <wait> ut :!$TERMINAL -e tar -xzvf %f & <cr>
+
 " Open all images in current directory in sxiv thumbnail mode ------------------
 nnoremap sx :!sxiv -t %d & <cr>
 
