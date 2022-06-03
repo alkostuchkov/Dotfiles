@@ -157,7 +157,7 @@ function fish_prompt
 
         set_color normal
         set_color $retc
-        echo -n '─'
+ #       echo -n '─'
         set_color -o green
         echo -n '['
         set_color normal
@@ -173,7 +173,7 @@ function fish_prompt
 
     set_color $retc
     echo
-    echo -n '┬─'
+ #   echo -n '┬─'
     set_color -o green
     echo -n [
     if test "$USER" = root -o "$USER" = toor
@@ -282,19 +282,21 @@ function fish_prompt
     set_color normal
     for job in (jobs)
         set_color $retc
-        echo -n '│ '
+ #       echo -n '│ '
         set_color brown
         echo $job
     end
     set_color normal
     set_color $retc
-    echo -n '╰─>'
+ #   echo -n '╰─>'
     if test "$USER" = root -o "$USER" = toor
         set_color -o red
-        echo -n '# '
+#        echo -n '# '
+        echo -n ' >_ '
     else
         set_color -o yellow
-        echo -n '$ '
+#        echo -n '$ '
+        echo -n ' >_ '
     end
     set_color normal
 end

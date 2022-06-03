@@ -61,8 +61,13 @@
   "vim.hlsearch": true,
   "vim.insertModeKeyBindings": [
     {
-      "before": ["j", "j"],
-      "after": ["<Esc>"]
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     }
   ],
   "vim.normalModeKeyBindings": [
@@ -71,22 +76,41 @@
     //   "commands": ["workbench.action.showCommands"]
     // },
     {
-      "before": [";"],
-      "commands": ["workbench.action.quickOpen"]
+      "before": [
+        ";"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["<C-c>", "h"],
-      "commands": [":nohlsearch"]
+      "before": [
+        "<C-c>",
+        "h"
+      ],
+      "commands": [
+        ":nohlsearch"
+      ]
     },
     {
-      "before": ["<leader>", "/"],
-      "commands": ["editor.action.commentLine"]
+      "before": [
+        "<leader>",
+        "/"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
     },
     {
-      "before": ["<ESC>", "<ESC>"],
-      "commands": [":q"]
+      "before": [
+        "<ESC>",
+        "<ESC>"
+      ],
+      "commands": [
+        ":q"
+      ]
     }
   ],
   // "vim.leader": "<space>",
@@ -99,9 +123,9 @@
     // "<C-f>": false
   },
   "markdown-preview-enhanced.previewTheme": "solarized-dark.css",
-  "window.menuBarVisibility": "compact",
+  "window.menuBarVisibility": "toggle",
   // "editor.defaultFormatter": "standard.vscode-standard",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // "editor.defaultFormatter": "esbenp.prettier-vscode",
   "workbench.colorTheme": "grigoryvp memory theme",
   "workbench.iconTheme": "gruvbox-material-icon-theme",
   "prettier.bracketSpacing": false,
@@ -117,7 +141,11 @@
     "dist": true
   },
   "advancedNewFile.showInformationMessages": true,
-  "advancedNewFile.convenienceOptions": ["last", "current", "root"],
+  "advancedNewFile.convenienceOptions": [
+    "last",
+    "current",
+    "root"
+  ],
   "files.exclude": {
     "**/.idea": true
   },
@@ -136,7 +164,8 @@
     "editor.tabSize": 2
   },
   "bracket-pair-colorizer-2.depreciation-notice": false,
-  "react-native.packager.port": 19000
+  "react-native.packager.port": 19000,
+  "rust-analyzer.rustfmt.rangeFormatting.enable": true
   // "[python]": {
   //   "editor.tabSize": 4
   // }
