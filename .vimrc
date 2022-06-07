@@ -135,7 +135,8 @@ else
 endif
 
 set background=dark
-colorscheme OceanicNext
+colorscheme memorycolor
+" colorscheme OceanicNext
 
 " GUI -------------------------------------------------------------------------
 set wak=no   "используем ALT как обычно, а не для вызова пункта меню
