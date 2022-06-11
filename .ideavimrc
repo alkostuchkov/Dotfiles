@@ -1,8 +1,8 @@
 " source ~/.vimrc
 
 " Return from insert mode to normal -------------------------------------------
-" inoremap jj <ESC>
-inoremap <C-;> <ESC>l
+inoremap jj <ESC>
+" inoremap <C-;> <ESC>l
 
 " Copy/Cut/Past from/to system buffer -----------------------------------------
 vnoremap <C-x> "+d

@@ -131,6 +131,8 @@ font:
     # family: Monofur Nerd Font
     # family: TerminessTTF Nerd Font
     family: mplus Nerd Font
+    # family: M+ 1mn
+    # family: M+ 1m
     # family: Iosevka
     # family: FiraCode Nerd Font
     # family: Iosevka Term
@@ -165,6 +167,8 @@ font:
     # family: Monofur Nerd Font
     # family: TerminessTTF Nerd Font
     family: mplus Nerd Font
+    # family: M+ 1mn
+    # family: M+ 1m
     # family: Iosevka
     # family: FiraCode Nerd Font
     # family: Iosevka Term
@@ -198,6 +202,8 @@ font:
     # family: Monofuritalic Nerd Font Mono
     # family: TerminessTTF Nerd Font
     family: mplus Nerd Font
+    # family: M+ 1mn
+    # family: M+ 1m
     # family: Iosevka
     # family: FiraCode Nerd Font
     # family: Iosevka Term
@@ -231,6 +237,8 @@ font:
     # family: Monofuritalic Nerd Font Mono
     # family: TerminessTTF Nerd Font
     family: mplus Nerd Font
+    # family: M+ 1mn
+    # family: M+ 1m
     # family: Iosevka
     # family: FiraCode Nerd Font
     # family: Iosevka Term
@@ -254,7 +262,7 @@ font:
   # size: 14.5  # SaurceCodePro Nerd
   # size: 16
   # size: 18 # Iosevka
-  size: 18.5 # mplus Nerd Font
+  size: 19 # mplus Nerd Font
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
