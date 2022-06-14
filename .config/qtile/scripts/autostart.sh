@@ -20,6 +20,7 @@ diodon &
 picom --config $HOME/.config/picom/picom.conf &
 conky -c ~/.myScripts/conky/conkyrc1 &
 $HOME/Programs/CheckEmail/CheckEmail &
+birdtray &
 udiskie &  # ~/.config/udiskie/config.yml
 xiccd &
 fluxgui &

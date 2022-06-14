@@ -187,8 +187,6 @@ call plug#begin('~/.vim/plugged')
     " Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
     " Plug 'ycm-core/YouCompleteMe', { 'for': 'python' }
     Plug 'ycm-core/YouCompleteMe'
-    Plug 'rust-lang/rust.vim'
-    Plug 'ivanceras/rust-vim-setup'
 
     "#########################################
     " Other
@@ -200,6 +198,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-surround'
     " Plug 'etdev/vim-hexcolor'
     Plug 'ap/vim-css-color'
+    Plug 'luochen1990/rainbow'
 
 " Tell vim-plug we finished declaring plugins, so it can load them
 call plug#end()
@@ -232,16 +231,14 @@ let g:NERDCreateDefaultMappings = 0 " Cancel NERD's default mappings
 " let g:NERDDefaultAlign = 'left' " Align line-wise comment delimiters flush left instead of following code indentation
 
 "##############################################################################
-" rust.vim Settings
+" ranbow Settings
 "##############################################################################
-" :help :RustFmt
-let g:rustfmt_autosave = 1
+"set to 0 if you want to enable it later via :RainbowToggle
+let g:rainbow_active = 1
 
 "##############################################################################
 " YouCompleteMe Settings
 "##############################################################################
-" For Rust autocompletion
-let g:ycm_rust_src_path="~/.config/nvim/Developer/rust-master/src/"
 " :nnoremap fd  :YcmCompleter GoToDefinition<CR>
 " :nnoremap bb <C-o>
 " let g:loaded_youcompleteme = 1
