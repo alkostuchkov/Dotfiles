@@ -49,7 +49,7 @@ set scrolloff=3 "when scrolling, keep cursor 3 lines away from screen border
 " Allow plugins by file type (required for plugins!) --------------------------
 filetype plugin on
 filetype indent on
-filetype plugin indent on
+" filetype plugin indent on
 
 syntax on "Enable syntax highlighting
 
@@ -357,8 +357,11 @@ nnoremap <S-l> $
 inoremap jj <ESC>
 " inoremap <M-;> <ESC>
 
-" New line --------------------------------------------------------------------
-inoremap nl <END><CR>
+" Insert a new line above/below -----------------------------------------------
+nnoremap <M-a> O<Esc>
+nnoremap <M-Enter> o<Esc>
+inoremap <M-a> <Esc>O
+inoremap <M-Enter> <Esc>o
 
 " Aligning --------------------------------------------------------------------
 " center
@@ -372,6 +375,7 @@ inoremap <C-c>r <Esc>:right<CR>a
 nnoremap <C-c>r :right<CR>
 
 nnoremap Q <nop>
+nnoremap <Enter> <nop>
 
 " Switching colorscheme -------------------------------------------------------
 " let g:oeanic_next_terminal_italic = 1
