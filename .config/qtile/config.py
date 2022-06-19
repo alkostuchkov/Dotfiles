@@ -112,7 +112,7 @@ keys = [
     #  Key([mod], "Return", lazy.spawn(f"{home}/.myScripts/runAlacrittyDiscreteGr.sh"), desc="Launch terminal"),
     Key([mod], "Return", lazy.spawn(my_term), desc="Launch terminal"),
     Key([mod], "r", lazy.spawn("rofi run -show drun -show-icons"), desc="Run App Lancher"),
-    Key([mod], "d", lazy.spawn(f"dmenu_run -nb #263238 -nf #24d2af -sb #009185 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
+    Key([mod], "d", lazy.spawn(f"dmenu_run -nb '#263238' -nf '#24d2af' -sb '#009185' -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
     #  Key([mod], "d", lazy.spawn("dmenu_run -nb #282828 -nf #e3a84e -sb #665c54 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Gruvbox
     Key([mod], "Print", lazy.spawn("flameshot gui"), desc="Launch flameshot (take screenshot)"),
     Key([mod], "w", lazy.spawn("/usr/bin/firefox"), desc="Launch Firefox"),
@@ -158,6 +158,7 @@ keys = [
     Key([mod, "shift"], "p", lazy.spawn(f"{home}/.myScripts/runThunarAsRoot.sh"), desc="Launch Thunar as root"),
     Key([mod, "shift"], "w", lazy.spawn("google-chrome-stable"), desc="Launch Chrome"),
     Key([mod, "shift"], "y", lazy.spawn(f"{home}/.myScripts/start-stop_syncthing.sh"), desc="Start-Stop Syncthing (for Dropbox sync)"),
+    # QTILE: restart, quit WINDOW: kill, xkill
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "x", lazy.spawn("xkill"), desc="Kill not answered window"),
     Key([mod, "shift"], "r", lazy.restart(), desc="Restart qtile"),

@@ -244,7 +244,7 @@ filetype */
   \ ranger %f &,
 
 " Config & exec files ---------------------------------------------------------
-filetype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs alacritty -e vim %f &
+filetype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org alacritty -e vim %f &
 
 " Books -----------------------------------------------------------------------
 filetype *.fb2,*.epub cr3 %f &
@@ -298,6 +298,7 @@ mark p ~/Projects
 mark c ~/.config
 mark s ~/.myScripts
 mark l ~/.local/share
+mark a ~/.cache
 
 mark M /run/media
 mark R /
@@ -322,21 +323,47 @@ command! reload :write | restart
 
 " Toggle detailed/brief information about files -------------------------------
 command! togglefilesinfo
-            \ : if &viewcolumns == '-{name}..,10{}.'
-            " \ |   set viewcolumns=*{name}.,10{size}.,12{perms},10{uname},-7{gname},18{mtime}
-            \ |   set viewcolumns=*{name}..,10{size}.,12{perms},10{uname},-10{gname},18{mtime}
-            \ |   echo 'Files information: detailed'
-            \ | else
-            \ |   set viewcolumns='-{name}..,10{}.'
-            \ |   echo 'Files information: brief'
-            \ | endif
+    \ : if &viewcolumns == '-{name}..,10{}.'
+    " \ |   set viewcolumns=*{name}.,10{size}.,12{perms},10{uname},-7{gname},18{mtime}
+    \ |   set viewcolumns=*{name}..,10{size}.,12{perms},10{uname},-10{gname},18{mtime}
+    \ |   echo 'Files information: detailed'
+    \ | else
+    \ |   set viewcolumns='-{name}..,10{}.'
+    \ |   echo 'Files information: brief'
+    \ | endif
 
 " Reset sort ------------------------------------------------------------------
 command! resetsort
-            \ : if &sort != '+name'
-            \ |   set sort=+name
-            \ |   echo 'Reset sort to +name'
-            \ | endif
+    \ : if &sort != '+name'
+    \ |   set sort=+name
+    \ |   echo 'Reset sort to +name'
+    \ | endif
+
+" Open most used tabs ---------------------------------------------------------
+command! openProgrammingDirs
+    \ :tabonly
+    \ | tabnew
+    \ | tabname Rust
+    \ | cd ~/forProgramming/Rust/Books/ ~/Projects/Rust/
+    \ | tabnew
+    \ | tabname Lua
+    \ | cd ~/forProgramming/Lua/Books/ ~/Projects/Lua/
+    \ | tabnew
+    \ | tabname Haskell
+    \ | cd ~/forProgramming/Haskell/Books/ ~/Projects/Haskell/
+    \ | tabnext 1
+    \ | tabclose
+
+command! openBackupDirs
+    \ :tabonly
+    \ | tabnew
+    \ | tabname Backups
+    \ | cd ~/OS/Linux/+backup/DropboxHP/-=HP=-/ ~/.config/
+    \ | tabnew
+    \ | tabname yay
+    \ | cd ~/.cache/yay ~/.cache/yay_Backup_pkgs/
+    \ | tabnext 1
+    \ | tabclose
 
 "##############################################################################
 " Mappings

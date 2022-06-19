@@ -101,7 +101,7 @@ set statusline+=%#DiffText# " :hi to choose the color
 set statusline+=\ %M\ %F%r%h%w\ %y
 set statusline+=%= " Right side settings
 set statusline+=%#TabLineSel#
-set statusline+=HEX=%02.2B
+set statusline+=\ HEX=%02.2B
 set statusline+=\ %{&encoding}[%{&fileformat}]
 set statusline+=\ %l:%c/%L\ %p%%
 set statusline+=\ [%n]
@@ -189,7 +189,7 @@ call plug#begin('~/.config/nvim/plugged')
     " Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
     " Plug 'ycm-core/YouCompleteMe', { 'for': 'python' }
-    " Plug 'ycm-core/YouCompleteMe'
+    Plug 'ycm-core/YouCompleteMe'
 
     " LSP
     Plug 'neovim/nvim-lspconfig'
@@ -215,6 +215,8 @@ call plug#begin('~/.config/nvim/plugged')
     " Plug 'etdev/vim-hexcolor'
     Plug 'ap/vim-css-color'
     Plug 'luochen1990/rainbow'
+    Plug 'nvim-treesitter/nvim-treesitter'
+    Plug 'nvim-orgmode/orgmode'
 
 " Tell vim-plug we finished declaring plugins, so it can load them
 call plug#end()
@@ -251,6 +253,37 @@ let g:NERDCreateDefaultMappings = 0 " Cancel NERD's default mappings
 "##############################################################################
 "set to 0 if you want to enable it later via :RainbowToggle
 let g:rainbow_active = 1
+
+"##############################################################################
+" orgmode Settings
+"##############################################################################
+lua << EOF
+-- Load custom tree-sitter grammar for org filetype
+require('orgmode').setup_ts_grammar()
+
+-- Tree-sitter configuration
+require'nvim-treesitter.configs'.setup {
+  -- If TS highlights are not enabled at all, or disabled via `disable` prop, highlighting will fallback to default Vim syntax highlighting
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = {'org'}, -- Required for spellcheck, some LaTex highlights and code block highlights that do not have ts grammar
+  },
+  ensure_installed = {'org'}, -- Or run :TSUpdate org
+}
+
+-- require('orgmode').setup({
+--   org_agenda_files = {'~/Dropbox/org/*', '~/my-orgs/**/*'},
+--   org_default_notes_file = '~/Dropbox/org/refile.org',
+-- })
+EOF
+
+lua << EOF
+require'cmp'.setup({
+  sources = {
+    { name = 'orgmode' }
+  }
+})
+EOF
 
 "##############################################################################
 " YouCompleteMe Settings

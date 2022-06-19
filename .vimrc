@@ -98,7 +98,7 @@ set statusline+=%#DiffText# " :hi to choose the color
 set statusline+=\ %M\ %F%r%h%w\ %y
 set statusline+=%= " Right side settings
 set statusline+=%#TabLineSel#
-set statusline+=HEX=%02.2B
+set statusline+=\ HEX=%02.2B
 set statusline+=\ %{&encoding}[%{&fileformat}]
 set statusline+=\ %l:%c/%L\ %p%%
 set statusline+=\ [%n]

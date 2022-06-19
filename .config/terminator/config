@@ -633,7 +633,7 @@
     background_color = "#282828"
     background_darkness = 0.97
     cursor_color = "#aaaaaa"
-    font = UbuntuMono Nerd Font Mono 18
+    font = UbuntuMono Nerd Font Mono 19
     foreground_color = "#dfbf8e"
     show_titlebar = False
     scrollbar_position = hidden
@@ -645,7 +645,7 @@
     background_color = "#143448"
     background_darkness = 0.97
     cursor_color = "#e0e0e0"
-    font = UbuntuMono Nerd Font Mono 18
+    font = UbuntuMono Nerd Font Mono 19
     foreground_color = "#e0e0e0"
     show_titlebar = False
     scrollbar_position = hidden
