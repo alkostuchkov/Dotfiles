@@ -121,7 +121,7 @@ keys = [
     Key([mod], "p", lazy.spawn("thunar"), desc="Launch File Manager"),
     Key([mod], "i", lazy.spawn("/usr/bin/octopi"), desc="Launch Octopi"),
     Key([mod], "a", lazy.spawn(f"{my_term} -e {SHELL} -c ranger"), desc="Launch ranger"),
-    Key([mod], "t", lazy.spawn(f"{home}/Programs/Telegram/Telegram -workdir /home/alexander/.local/share/TelegramDesktop/ -- %u"), desc="Launch Telegram"),
+    Key([mod], "t", lazy.spawn(f"{home}/Programs/Telegram/Telegram -workdir {home}/.local/share/TelegramDesktop/ -- %u"), desc="Launch Telegram"),
     Key([mod], "v", lazy.spawn(f"{my_term} -e {home}/.config/vifm/scripts/vifmrun"), desc="Launch vifm"),
     Key([mod], "c", lazy.spawn("vscodium"), desc="Launch VSCodium"),
     Key([mod], "g", lazy.spawn("goldendict"), desc="Launch GoldenDict"),
@@ -132,7 +132,7 @@ keys = [
     #  Key([mod], "x", lazy.spawn("xterm"), desc="Run XTerm"),
     # TOGGLE FULLSCREEN
     Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
-    # SWITCH BETWEEN GROUPS
+    # SWITCH BETWEEN GROUPS (DESKTOPS)
     Key([mod], "Right", lazy.screen.next_group(), desc="Switch to the right group"),
     Key([mod], "Left", lazy.screen.prev_group(), desc="Switch to the left group"),
     # SWITCH BETWEEN LAYOUTS
@@ -173,16 +173,12 @@ keys = [
     Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window left in current stack "),
     Key([mod, "shift"], "l", lazy.layout.shuffle_right(), desc="Move window right in current stack "),
 
-    Key([mod, "shift"], "Up", lazy.layout.shuffle_up(), desc="Move window up in current stack "),
-    Key([mod, "shift"], "Down", lazy.layout.shuffle_down(), desc="Move window down in current stack "),
-    Key([mod, "shift"], "Left", lazy.layout.shuffle_left(), desc="Move window left in current stack "),
-    Key([mod, "shift"], "Right", lazy.layout.shuffle_right(), desc="Move window right in current stack "),
+    #  Key([mod, "shift"], "Up", lazy.layout.shuffle_up(), desc="Move window up in current stack "),
+    #  Key([mod, "shift"], "Down", lazy.layout.shuffle_down(), desc="Move window down in current stack "),
+    #  Key([mod, "shift"], "Left", lazy.layout.shuffle_left(), desc="Move window left in current stack "),
+    #  Key([mod, "shift"], "Right", lazy.layout.shuffle_right(), desc="Move window right in current stack "),
     # FLIP LAYOUT FOR MONADTALL/WIDE
     Key([mod, "shift"], "space", lazy.layout.flip(), desc="Flip main (left) panel with others"),
-    # NORMALIZE, MINIMIZE, MAXIMIZE
-    Key([mod, "shift"], "n", lazy.layout.normalize(), desc="Normalize window size ratios"),
-    Key([mod, "shift"], "m", lazy.layout.maximize(), desc="Toggle window between minimum and maximum sizes"),
-    Key([mod, "shift"], "d", lazy.window.toggle_minimize(), desc="Toggle window between minimumize and normal sizes"),
 
 # <SUPER> + <ALT> + KEYS
     Key([mod, alt], "space", lazy.spawn(f"{home}/.myScripts/touchpadONOFF.sh"), desc="Touchpad On/Off"),
@@ -207,44 +203,48 @@ keys = [
         lazy.layout.increase_ratio(),
         lazy.layout.delete()
     ),
-    Key([mod, "control"], "Right",
-        lazy.layout.grow_right(),
-        lazy.layout.grow(),
-        lazy.layout.increase_ratio(),
-        lazy.layout.delete()
-    ),
+    #  Key([mod, "control"], "Right",
+        #  lazy.layout.grow_right(),
+        #  lazy.layout.grow(),
+        #  lazy.layout.increase_ratio(),
+        #  lazy.layout.delete()
+    #  ),
     Key([mod, "control"], "h",
         lazy.layout.grow_left(),
         lazy.layout.shrink(),
         lazy.layout.decrease_ratio(),
         lazy.layout.add()
     ),
-    Key([mod, "control"], "Left",
-        lazy.layout.grow_left(),
-        lazy.layout.shrink(),
-        lazy.layout.decrease_ratio(),
-        lazy.layout.add()
-    ),
+    #  Key([mod, "control"], "Left",
+        #  lazy.layout.grow_left(),
+        #  lazy.layout.shrink(),
+        #  lazy.layout.decrease_ratio(),
+        #  lazy.layout.add()
+    #  ),
     Key([mod, "control"], "k",
         lazy.layout.grow_up(),
         lazy.layout.grow(),
         lazy.layout.decrease_nmaster()
     ),
-    Key([mod, "control"], "Up",
-        lazy.layout.grow_up(),
-        lazy.layout.grow(),
-        lazy.layout.decrease_nmaster()
-    ),
+    #  Key([mod, "control"], "Up",
+        #  lazy.layout.grow_up(),
+        #  lazy.layout.grow(),
+        #  lazy.layout.decrease_nmaster()
+    #  ),
     Key([mod, "control"], "j",
         lazy.layout.grow_down(),
         lazy.layout.shrink(),
         lazy.layout.increase_nmaster()
     ),
-    Key([mod, "control"], "Down",
-        lazy.layout.grow_down(),
-        lazy.layout.shrink(),
-        lazy.layout.increase_nmaster()
-    ),
+    #  Key([mod, "control"], "Down",
+        #  lazy.layout.grow_down(),
+        #  lazy.layout.shrink(),
+        #  lazy.layout.increase_nmaster()
+    #  ),
+    # NORMALIZE, MINIMIZE, MAXIMIZE
+    Key([mod, "control"], "n", lazy.layout.normalize(), desc="Normalize window size ratios"),
+    Key([mod, "control"], "d", lazy.window.toggle_minimize(), desc="Toggle window between minimumize and normal sizes"),
+    Key([mod, "control"], "m", lazy.layout.maximize(), desc="Toggle window between minimum and maximum sizes (for MonadTall/MonadWide)"),
     Key([mod, "control"], "r", lazy.layout.reset()),
     Key([mod, "control"], "w", lazy.spawn(f"{home}/Programs/Tor/Browser/start-tor-browser --detach"), desc="Launch Tor"),
 
@@ -259,34 +259,33 @@ keys = [
         Key([], "m", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-change-alacritty-colors.sh"), desc="Run dmenu script for changing colors for Alacritty"),
         Key([], "n", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-passmenu-name.sh"), desc="Run dmenu script for getting username"),
         Key([], "p", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-passmenu.sh"), desc="Run dmenu script for getting password"),
+        Key([], "u", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-passmenu-url.sh"), desc="Run dmenu script for getting url"),
         Key([], "r", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-run-utils.sh"), desc="Run choice of most used utils"),
         Key([], "s", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-search.sh"), desc="Run chosen search engine"),
         Key([], "t", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-transcription.sh"), desc="Choose a transcription's symbol"),
-        Key([], "u", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-passmenu-url.sh"), desc="Run dmenu script for getting url"),
         Key([], "x", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-system-exit.sh"), desc="System exit menu")],
         mode="Dmenu"
     ),
-    Key([alt], "r", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-run-utils.sh"), desc="Run choice menu of the most used utils"),
     Key([alt], "w", lazy.spawn("rofi run -show window -show-icons"), desc="Switch between opened windows"),
     Key([alt], "Tab", lazy.group.next_window(), desc="Switch to the next window"),
+# <ALT> + <SHIFT> + KEYS
+    Key([alt, "shift"], "Tab", lazy.group.prev_window(), desc="Switch to the previous window"),
 
 # <CONTROL> + <ALT> + KEYS
-    # TreeTab controls
+    # TREETAB CONTROLS
     Key(["control", alt], "j", lazy.layout.section_down(), desc="Move up a section in TreeTab"),
     Key(["control", alt], "k", lazy.layout.section_up(), desc="Move down a section in TreeTab"),
 
 # <CONTROL> + <SHIFT> + KEYS
     Key(["control", "shift"], "Escape", lazy.spawn(f"{my_term} -e htop"), desc="Run htop"),
-# <ALT> + <SHIFT> + KEYS
-    Key([alt, "shift"], "Tab", lazy.group.prev_window(), desc="Switch to the previous window"),
 
 # MULTIMEDIA KEYS
 # <Fn> + <F1-F12>
     Key([], "XF86Display", lazy.spawn("lxrandr"), desc="Run lxrandr (choose monitor)"),
     Key([], "XF86ScreenSaver", lazy.spawn(f"{home}/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
     Key([], "XF86Battery", lazy.spawn("xfce4-power-manager-settings"), desc="Power manager settings"),
-    Key([mod], "F7", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle"), desc="Toggle audio mute"),
     Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle"), desc="Toggle audio mute"),
+    Key([mod], "F7", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle"), desc="Toggle audio mute"),
 
 # <SUPER> + <F1-F12>
     # Brightness & Volume (extra step 5)
