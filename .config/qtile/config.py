@@ -158,10 +158,11 @@ keys = [
     Key([mod, "shift"], "p", lazy.spawn(f"{home}/.myScripts/runThunarAsRoot.sh"), desc="Launch Thunar as root"),
     Key([mod, "shift"], "w", lazy.spawn("google-chrome-stable"), desc="Launch Chrome"),
     Key([mod, "shift"], "y", lazy.spawn(f"{home}/.myScripts/start-stop_syncthing.sh"), desc="Start-Stop Syncthing (for Dropbox sync)"),
-    # QTILE: restart, quit WINDOW: kill, xkill
+    # QTILE: reload_config, restart, quit WINDOW: kill, xkill
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "x", lazy.spawn("xkill"), desc="Kill not answered window"),
     Key([mod, "shift"], "r", lazy.restart(), desc="Restart qtile"),
+    Key([mod, "shift", "control"], "r", lazy.reload_config(), desc="Reload qtile config"),
     Key([mod, "shift"], "q", lazy.shutdown(), desc="Shutdown qtile"),
     # TOGGLE FLOATING LAYOUT
     Key([mod, "shift"], "f", lazy.window.toggle_floating(), lazy.window.center(), desc="Toggle floating"),
@@ -248,6 +249,8 @@ keys = [
     Key([mod, "control"], "r", lazy.layout.reset()),
     Key([mod, "control"], "w", lazy.spawn(f"{home}/Programs/Tor/Browser/start-tor-browser --detach"), desc="Launch Tor"),
 
+# <SUPER> + <SHIFT> + <CTRL> + KEYS
+
 # <ALT> + KEYS
     # KeyChords
     # Dmenu
@@ -321,8 +324,9 @@ group_names = [
     (" ", {"layout": "columns"})   # MULT
 ]
 
-groups = [Group(name, **kwargs, label="{}{}".format(name, i)) for i, (name, kwargs) in enumerate(group_names, 1)]
-
+#  groups = [Group(name, **kwargs, label="{}{}".format(name, i)) for i, (name, kwargs) in enumerate(group_names, 1)]
+groups = [Group(name, **kwargs, label=f"{name}{i}") for i, (name, kwargs) in enumerate(group_names, 1)]
+ 
 for i, group_name in enumerate(group_names, 1):
     keys.extend([
         Key([mod], str(i),
@@ -745,6 +749,10 @@ focus_on_window_activation = "focus"
 #  focus_on_window_activation = "smart"
 #  focus_on_window_activation = "never"
 
+@hook.subscribe.client_new
+def move_new_window_to_certain_group(c):
+    if c.name == "Mozilla Thunderbird":
+        c.togroup(" ")
 
 ##### AUTOSTART #####
 @hook.subscribe.startup_once

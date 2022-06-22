@@ -25,12 +25,12 @@
 |------------------------+-------------------------------------------------------------------------|
 | M + f                  | Toggle fullscreen                                                       |
 |------------------------+-------------------------------------------------------------------------|
-| SWITCH BETWEEN GROUPS (DESKTOPS)                                                                 |
+| SWITCH BETWEEN GROUPS (WORKSPACES)                                                               |
 |------------------------+-------------------------------------------------------------------------|
-| M + Right              | Switch to the right group (desktop)                                     |
-| M + Left               | Switch to the left group (desktop)                                      |
-| M + 1..9               | Switch to the 1..9 group (desktop)                                      |
-| M + S + 1..9           | Move the current window to the 1..9 group (desktop) and follow its      |
+| M + Right              | Switch to the right group (workspace)                                   |
+| M + Left               | Switch to the left group (workspace)                                    |
+| M + 1..9               | Switch to the 1..9 group (workspace)                                    |
+| M + S + 1..9           | Move the current window to the 1..9 group (workspace) and follow its    |
 |------------------------+-------------------------------------------------------------------------|
 | SWITCH BETWEEN LAYOUTS                                                                           |
 |------------------------+-------------------------------------------------------------------------|
@@ -55,12 +55,13 @@
 | M + S + w              | Google Chrome                                                           |
 | M + S + y              | {home}/.myScripts/start-stop_syncthing.sh                               |
 |------------------------+-------------------------------------------------------------------------|
-| QTILE: restart, quit WINDOW: kill, xkill                                                         |
+| QTILE: reload_config, restart, quit WINDOW: kill, xkill                                          |
 |------------------------+-------------------------------------------------------------------------|
 | M + S + c              | Kill focused window                                                     |
 | M + S + x              | Kill not answered window                                                |
-| M + S + r              | Restart qtile                                                           |
 | M + S + q              | Shutdown qtile                                                          |
+| M + S + r              | Restart qtile                                                           |
+| M + S + C + r          | Reload qtile config                                                     |
 |------------------------+-------------------------------------------------------------------------|
 | M + S + f              | Toggle floating                                                         |
 |------------------------+-------------------------------------------------------------------------|
@@ -118,6 +119,10 @@
 | M + C + m              | Toggle window between minimum and maximum sizes (MonadTall/MonadWide)   |
 |------------------------+-------------------------------------------------------------------------|
 | M + C + r              | Reset layout                                                            |
+|------------------------+-------------------------------------------------------------------------|
+|                         <SUPER> + <SHIFT> + <CTRL> + KEYS                                        |
+|------------------------+-------------------------------------------------------------------------|
+| M + S + C + r          | Reload qtile config                                                     |
 |------------------------+-------------------------------------------------------------------------|
 |                         <ALT> + KEYS                                                             |
 |------------------------+-------------------------------------------------------------------------|
