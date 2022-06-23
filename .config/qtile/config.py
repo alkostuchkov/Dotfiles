@@ -161,8 +161,8 @@ keys = [
     # QTILE: reload_config, restart, quit WINDOW: kill, xkill
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "x", lazy.spawn("xkill"), desc="Kill not answered window"),
-    Key([mod, "shift"], "r", lazy.restart(), desc="Restart qtile"),
-    Key([mod, "shift", "control"], "r", lazy.reload_config(), desc="Reload qtile config"),
+    Key([mod, "shift", "control"], "r", lazy.restart(), desc="Restart qtile"),
+    Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload qtile config"),
     Key([mod, "shift"], "q", lazy.shutdown(), desc="Shutdown qtile"),
     # TOGGLE FLOATING LAYOUT
     Key([mod, "shift"], "f", lazy.window.toggle_floating(), lazy.window.center(), desc="Toggle floating"),
