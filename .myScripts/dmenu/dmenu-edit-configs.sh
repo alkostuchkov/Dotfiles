@@ -39,6 +39,7 @@ options=(
 "polybar - $HOME/.config/polybar/config"
 "profile - $HOME/.profile"
 "qtile - $HOME/.config/qtile/config.py"
+"Qtile_My_Keys - $HOME/.config/qtile/Qtile_My_Keys.txt"
 "qutebrowser - $HOME/.config/qutebrowser/config.py"
 "ranger_rc.conf - $HOME/.config/ranger/rc.conf"
 "ranger_rifle.conf - $HOME/.config/ranger/rifle.conf"
