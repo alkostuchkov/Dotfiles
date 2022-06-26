@@ -105,7 +105,7 @@
 | RESIZING WINDOW                                                                                 |
 |-----------------------+-------------------------------------------------------------------------|
 | M + C + i             | Shrink main window (for MonadTall/MonadWide)                            |
-| M + C + m             | Grow main window (for MonadTall/MonadWide)                              |
+| M + C + u             | Grow main window (for MonadTall/MonadWide)                              |
 |-----------------------+-------------------------------------------------------------------------|
 | M + C + j             | Grow window down                                                        |
 | M + C + k             | Grow window up                                                          |

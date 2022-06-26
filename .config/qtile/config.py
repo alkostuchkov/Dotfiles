@@ -195,7 +195,7 @@ keys = [
     Key([mod, "control"], "i",
         lazy.layout.shrink_main(),
     ),
-    Key([mod, "control"], "m",
+    Key([mod, "control"], "u",
         lazy.layout.grow_main(),
     ),
     Key([mod, "control"], "l",
