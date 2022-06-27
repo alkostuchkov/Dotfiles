@@ -423,7 +423,7 @@ def init_widgets_list():
             fontsize=14,
             foreground=colors["fg_windowname"],
             padding=0,
-            parse_text=parse_windowname
+            #  parse_text=parse_windowname
         ),
         widget.CheckUpdates(
             foreground=colors["fg_updates"],
