@@ -259,6 +259,7 @@ keys = [
     KeyChord([alt], "m", [
         Key([], "c", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-edit-configs.sh"), desc="Run dmenu script for editing config files"),
         Key([], "e", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-unicode.sh"), desc="Choose an emoji"),
+        Key([], "g", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-GoogleDrive.sh"), desc="Mount-Unmount GoogleDrive"),
         Key([], "k", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-kill.sh"), desc="Kill chosen process"),
         Key([], "l", lazy.spawn(f"{home}/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
         Key([], "m", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-change-alacritty-colors.sh"), desc="Run dmenu script for changing colors for Alacritty"),

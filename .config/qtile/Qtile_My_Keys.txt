@@ -21,6 +21,7 @@
 | M + v            | {my_term} -e {home}/.config/vifm/scripts/vifmrun               |
 | M + c            | vscodium                                                       |
 | M + g            | goldendict                                                     |
+| M + n            | Gvim (Gvim or Neovim-qt)                                       |
 | M + b            | sublime text                                                   |
 |------------------+----------------------------------------------------------------|
 | M + f            | Toggle fullscreen                                              |
@@ -131,6 +132,7 @@
 | A + m            | Dmenu KeyChord                                                 |
 |       + c        | {home}/.myScripts/dmenu/dmenu-edit-configs.sh                  |
 |       + e        | {home}/.myScripts/dmenu/dmenu-unicode.sh                       |
+|       + g        | {home}/.myScripts/dmenu/dmenu-GoogleDrive.sh                   |
 |       + k        | {home}/.myScripts/dmenu/dmenu-kill.sh                          |
 |       + l        | {home}/.myScripts/dmenu/lock.sh                                |
 |       + m        | {home}/.myScripts/dmenu/dmenu-change-alacritty-colors.sh       |
