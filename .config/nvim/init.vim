@@ -39,6 +39,7 @@ let &t_EI.="\e[1 q"  "EI = нормальный режим
 set autoindent   "при начале новой строки, отступ копируется из предыдущей
 set smartindent
 
+set mouse=a
 set noex   "не читаем файл конфигурации из текущей директории
 set stal=2   "постоянно выводим строку с табами
 set tpm=20  "максимальное количество открытых табов
@@ -48,6 +49,9 @@ set noerrorbells "instead of beeping
 set wildmenu   "красивое автодополнение
 set cmdheight=2 "Give more space for displaying messages.
 set scrolloff=3 "when scrolling, keep cursor 3 lines away from screen border
+set showmatch "for brackets
+highlight MatchParen cterm=underline ctermbg=Cyan ctermfg=none
+highlight MatchParen gui=underline guibg=Cyan guifg=none
 
 " Allow plugins by file type (required for plugins!) --------------------------
 filetype plugin on

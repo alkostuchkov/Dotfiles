@@ -7,9 +7,10 @@ unset LINES
 ###############################################################################
 export HOME=$(echo /home/$USER)
 
-# export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications:$HOME/Programs/Android_SDK/platform-tools
-export EDITOR="vim"
-# export VISUAL="gvim"
+# export
+# PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications:$HOME/.emacs.d/bin:$HOME/Programs/Android_SDK/platform-tools
+export EDITOR="vim"   #  vim is either a link to nvim    or just  vim
+export VISUAL="gvim"  # gvim is either a link to nvim-qt or just gvim
 export TERM="xterm-256color"
 export TERMINAL="alacritty"
 export BROWSER="firefox"
@@ -166,6 +167,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
 alias v='vim'
 alias f='ranger'
 alias vf='vifm'
+alias emacs="emacsclient -c -a 'emacs'"
 
 ###############################################################################
 # Source

@@ -10,10 +10,10 @@ set fish_prompt_pwd_dir_length 0
 ###############################################################################
 set HOME (echo /home/$USER)
 # set -U fish_user_paths $HOME/.local/bin $HOME/Programs/AppImageApplications $fish_user_paths
-# set PATH $PATH $HOME/.cargo/bin $HOME/.config/vifm/scripts $HOME/Programs/Android_SDK/platform-tools  # PATH for exa in cargo and ...
+# set PATH $PATH $HOME/.cargo/bin $HOME/.config/vifm/scripts $HOME/.emacs.d/bin $HOME/Programs/Android_SDK/platform-tools  # PATH for exa in cargo and ...
 
-set EDITOR "vim"
-# set VISUAL "gvim"
+set EDITOR "vim"   #  vim is either a link to nvim    or just  vim
+set VISUAL "gvim"  # gvim is either a link to nvim-qt or just gvim
 set TERM "xterm-256color"
 set TERMINAL "alacritty"
 set BROWSER "firefox"
@@ -346,6 +346,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
 alias v='vim'
 alias f='ranger'
 alias vf='vifm'
+alias emacs="emacsclient -c -a 'emacs'"
 
 ###############################################################################
 # Source

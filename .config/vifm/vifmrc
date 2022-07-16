@@ -230,6 +230,7 @@ filetype *.tudu tudu -f %c
 
 " Qt projects -----------------------------------------------------------------
 " filextype *.pro qtcreator %f &
+filextype *.pro gvim %f &
 filetype *.pro alacritty -e vim %f &
 
 " Directories -----------------------------------------------------------------
@@ -244,7 +245,9 @@ filetype */
   \ ranger %f &,
 
 " Config & exec files ---------------------------------------------------------
-filetype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org alacritty -e vim %f &
+filextype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el gvim %f &
+
+filetype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el alacritty -e vim %f &
 
 " Books -----------------------------------------------------------------------
 filetype *.fb2,*.epub cr3 %f &
@@ -361,7 +364,7 @@ command! openBackupDirs
     \ | cd ~/OS/Linux/+backup/DropboxHP/-=HP=-/ ~/.config/
     \ | tabnew
     \ | tabname yay
-    \ | cd ~/.cache/yay ~/.cache/yay_Backup_pkgs/
+    \ | cd ~/.cache/yay ~/.cache/yay_Backups/
     \ | tabnext 1
     \ | tabclose
 

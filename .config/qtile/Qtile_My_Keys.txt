@@ -1,175 +1,176 @@
-| KEYBINDINGS            | ASSOCIATED ACTION                                                      |
-|------------------------+------------------------------------------------------------------------|
-| M - MODKEY (Mod4)                                                                               |
-| A - ALT (Mod1)                                                                                  |
-| S - SHIFT                                                                                       |
-| C - CONTROL                                                                                     |
-|------------------------+------------------------------------------------------------------------|
-|                         <SUPER> + FUNCTION KEYS                                                 |
-|------------------------+------------------------------------------------------------------------|
-| M + RETURN             | terminal                                                               |
-| M + r                  | rofi (Show Apps launcher menu)                                         |
-| M + d                  | dmenu_run                                                              |
-| M + Print              | flameshot gui                                                          |
-| M + w                  | firefox                                                                |
-| M + u                  | qutebrowser                                                            |
-| M + e                  | dolphin                                                                |
-| M + p                  | thunar                                                                 |
-| M + i                  | /usr/bin/octopi OR (synaptic-exec)                                     |
-| M + a                  | {my_term} -e {SHELL} -c ranger                                         |
-| M + t                  | {h}/Pr-s/Tel-m/Telegram -workdir {h}/.local/share/TelegramDestop/ -- %u|
-| M + v                  | {my_term} -e {home}/.config/vifm/scripts/vifmrun                       |
-| M + c                  | vscodium                                                               |
-| M + g                  | goldendict                                                             |
-| M + b                  | sublime text                                                           |
-|------------------------+------------------------------------------------------------------------|
-| M + f                  | Toggle fullscreen                                                      |
-|------------------------+------------------------------------------------------------------------|
-| SWITCH BETWEEN GROUPS (WORKSPACES)                                                              |
-|------------------------+------------------------------------------------------------------------|
-| M + Right              | Switch to the right group (workspace)                                  |
-| M + Left               | Switch to the left group (workspace)                                   |
-| M + 1..9               | Switch to the 1..9 group (workspace)                                   |
-| M + S + 1..9           | Move the current window to the 1..9 group (workspace) and folow its    |
-|------------------------+------------------------------------------------------------------------|
-| SWITCH BETWEEN LAYOUTS                                                                          |
-|------------------------+------------------------------------------------------------------------|
-| M + Tab                | Switch to the next layout                                              |
-| M + S + Tab            | Switch to the previous layout                                          |
-|------------------------+------------------------------------------------------------------------|
-| CHANGE FOCUS                                                                                    |
-|------------------------+------------------------------------------------------------------------|
-| M + k                  | Move focus up in stack pane                                            |
-| M + j                  | Move focus down in stack pane                                          |
-| M + h                  | Move focus left in stack pane                                          |
-| M + l                  | Move focus right in stack pane                                         |
-|------------------------+------------------------------------------------------------------------|
-| M + SPACE              | Switch window focus to other pane(s) of stack                          |
-|------------------------+------------------------------------------------------------------------|
-|                         <SUPER> + <SHIFT> + KEYS                                                |
-|------------------------+------------------------------------------------------------------------|
-| M + S + RETURN         | extra terminal                                                         |
-| M + S + v              | {home}/.myScripts/runVifmAsRoot.sh                                     |
-| M + S + a              | {home}/.myScripts/runRangerAsRoot.sh                                   |
-| M + S + p              | {home}/.myScripts/runThunarAsRoot.sh                                   |
-| M + S + w              | Google Chrome                                                          |
-| M + S + y              | {home}/.myScripts/start-stop_syncthing.sh                              |
-|------------------------+------------------------------------------------------------------------|
-| QTILE: reload_config, restart, quit WINDOW: kill, xkill                                         |
-|------------------------+------------------------------------------------------------------------|
-| M + S + c              | Kill focused window                                                    |
-| M + S + x              | Kill not answered window                                               |
-| M + S + C + r          | Restart qtile                                                          |
-| M + S + r              | Reload qtile config                                                    |
-| M + S + q              | Shutdown qtile                                                         |
-|------------------------+------------------------------------------------------------------------|
-| M + S + f              | Toggle floating                                                        |
-|------------------------+------------------------------------------------------------------------|
-| MOVE WINDOWS UP OR DOWN IN CURRENT STACK                                                        |
-|------------------------+------------------------------------------------------------------------|
-| M + S + k              | Move window up in current stack                                        |
-| M + S + j              | Move window down in current stack                                      |
-| M + S + h              | Move window left in current stack                                      |
-| M + S + l              | Move window right in current stack                                     |
-|------------------------+------------------------------------------------------------------------|
-| MOVE FLOATING WINDOW                                                                            |
-|-----------------------+-------------------------------------------------------------------------|
-| M + S + left          | Move floating window left                                               |
-| M + S + right         | Move floating window right                                              |
-| M + S + up            | Move floating window up                                                 |
-| M + S + down          | Move floating window down                                               |
-|-----------------------+-------------------------------------------------------------------------|
-| RESIZE FLOATING WIDOW                                                                           |
-|-----------------------+-------------------------------------------------------------------------|
-| M + C + left          | Resize floating window left                                             |
-| M + C + right         | Resize floating window right                                            |
-| M + C + up            | Resize floating window up                                               |
-| M + C + down          | Resize floating window down                                             |
-|-----------------------+-------------------------------------------------------------------------|
-| M + S + SPACE         | Flip main (left) panel with others (for MonadTall/MonadWide)            |
-|-----------------------+-------------------------------------------------------------------------|
-|                        <SUPER> + <ALT> + KEYS                                                   |
-|-----------------------+-------------------------------------------------------------------------|
-| M + A + SPACE         | {home}/.myScripts/touchpadONOFF.sh                                      |
-|-----------------------+-------------------------------------------------------------------------|
-| M + A + k             | flip layout up (for BSP layout)                                         |
-| M + A + j             | flip layout down (for BSP layout)                                       |
-| M + A + h             | flip layout left (for BSP layout)                                       |
-| M + A + l             | flip layout right (for BSP layout)                                      |
-|-----------------------+-------------------------------------------------------------------------|
-|                        <SUPER> + <CTRL> + KEYS                                                  |
-|-----------------------+-------------------------------------------------------------------------|
-| M + C + RETURN        | One more extra terminal                                                 |
-| M + C + w             | Tor                                                                     |
-|-----------------------+-------------------------------------------------------------------------|
-| RESIZING WINDOW                                                                                 |
-|-----------------------+-------------------------------------------------------------------------|
-| M + C + i             | Shrink main window (for MonadTall/MonadWide)                            |
-| M + C + u             | Grow main window (for MonadTall/MonadWide)                              |
-|-----------------------+-------------------------------------------------------------------------|
-| M + C + j             | Grow window down                                                        |
-| M + C + k             | Grow window up                                                          |
-| M + C + h             | Grow window left                                                        |
-| M + C + l             | Grow window right                                                       |
-|-----------------------+-------------------------------------------------------------------------|
-| NORMALIZE, MINIIZE, MAXIMIZE                                                                    |
-|-----------------------+-------------------------------------------------------------------------|
-| M + C + n             | Normalize window size ratios                                            |
-| M + C + d             | Toggle window between minimumize and normal sizes                       |
-| M + C + m             | Toggle window between minimum and maximum sizes (MonadTall/MonadWide)   |
-|-----------------------+-------------------------------------------------------------------------|
-| M + C + r             | Reset layout                                                            |
-|-----------------------+-------------------------------------------------------------------------|
-|                        <SUPER> + <SHIFT> + <CTRL> + KEYS                                        |
-|-----------------------+-------------------------------------------------------------------------|
-| M + S + C + r         | Reload qtile config                                                     |
-|-----------------------+-------------------------------------------------------------------------|
-|                        <ALT> + KEYS                                                             |
-|-----------------------+-------------------------------------------------------------------------|
-| KEYCHORDS                                                                                       |
-|-----------------------+-------------------------------------------------------------------------|
-| A + m                 | Dmenu KeyChord                                                          |
-|       + c             | {home}/.myScripts/dmenu/dmenu-edit-configs.sh                           |
-|       + e             | {home}/.myScripts/dmenu/dmenu-unicode.sh                                |
-|       + k             | {home}/.myScripts/dmenu/dmenu-kill.sh                                   |
-|       + l             | {home}/.myScripts/dmenu/lock.sh                                         |
-|       + m             | {home}/.myScripts/dmenu/dmenu-change-alacritty-colors.sh                |
-|       + n             | {home}/.myScripts/dmenu/dmenu-passmenu-name.sh                          |
-|       + p             | {home}/.myScripts/dmenu/dmenu-passmenu.sh                               |
-|       + u             | {home}/.myScripts/dmenu/dmenu-passmenu-url.sh                           |
-|       + r             | {home}/.myScripts/dmenu/dmenu-run-utils.sh                              |
-|       + s             | {home}/.myScripts/dmenu/dmenu-search.sh                                 |
-|       + t             | {home}/.myScripts/dmenu/dmenu-transcription.sh                          |
-|       + x             | {home}/.myScripts/dmenu/dmenu-system-exit.sh                            |
-|-----------------------+-------------------------------------------------------------------------|
-| A + w                 | rofi (Show opened windows menu)                                         |
-| A + TAB               | Switch to the next window                                               |
-| A + S + TAB           | Switch to the previous window                                           |
-|-----------------------+-------------------------------------------------------------------------|
-|                        <CONTROL> + <ALT> + KEYS                                                 |
-|-----------------------+-------------------------------------------------------------------------|
-| TREETAB CONTROLS                                                                                |
-|-----------------------+-------------------------------------------------------------------------|
-| C + A + j             | Move up a section in TreeTab                                            |
-| C + A + k             | Move down a section in TreeTab                                          |
-|-----------------------+-------------------------------------------------------------------------|
-|                        <CONTROL> + <SHIFT> + KEYS                                               |
-|-----------------------+-------------------------------------------------------------------------|
-| C + S + ESC           | {my_term} -e htop                                                       |
-|-----------------------+-------------------------------------------------------------------------|
-|                        <Fn> + <F1-F12> (MULTIMEDIA KEYS)                                        |
-|-----------------------+-------------------------------------------------------------------------|
-| XF86Display           | lxrandr (choose monitor)                                                |
-| XF86ScreenSaver       | {home}/.myScripts/system_exit/lock.sh                                   |
-| XF86Battery           | xfce4-power-manager-settings                                            |
-| XF86AudioMute         | pactl set-sink-mute @DEFAULT_SINK@ toggle (Toggle audio mute)           |
-|-----------------------+-------------------------------------------------------------------------|
-|                        <SUPER> + <F1-F12>                                                       |
-|-----------------------+-------------------------------------------------------------------------|
-| M + F2                | {home}/.myScripts/brightness_down.sh                                    |
-| M + F3                | {home}/.myScripts/brightness_up.sh                                      |
-| M + F7                | pactl set-sink-mute @DEFAULT_SINK@ toggle (Toggle audio mute)           |
-| M + F8                | {home}/.myScripts/volume_down.sh                                        |
-| M + F9                | {home}/.myScripts/volume_up.sh                                          |
-|-----------------------+-------------------------------------------------------------------------|
+| KEYBINDINGS      | ASSOCIATED ACTION                                              |
+|------------------+----------------------------------------------------------------|
+| M - MODKEY (Mod4)                                                                 |
+| A - ALT (Mod1)                                                                    |
+| S - SHIFT                                                                         |
+| C - CONTROL                                                                       |
+|------------------+----------------------------------------------------------------|
+|                   <SUPER> + FUNCTION KEYS                                         |
+|------------------+----------------------------------------------------------------|
+| M + RETURN       | terminal                                                       |
+| M + r            | rofi (Show Apps launcher menu)                                 |
+| M + d            | dmenu_run                                                      |
+| M + Print        | flameshot gui                                                  |
+| M + w            | firefox                                                        |
+| M + u            | qutebrowser                                                    |
+| M + e            | dolphin                                                        |
+| M + p            | thunar                                                         |
+| M + i            | /usr/bin/octopi OR (synaptic-exec)                             |
+| M + a            | {my_term} -e {SHELL} -c ranger                                 |
+| M + t            |{h}/Pr-s/Tel-m/Tel-m -workdir {h}/.local/share/TelDesktop/ -- %u|
+| M + v            | {my_term} -e {home}/.config/vifm/scripts/vifmrun               |
+| M + c            | vscodium                                                       |
+| M + g            | goldendict                                                     |
+| M + b            | sublime text                                                   |
+|------------------+----------------------------------------------------------------|
+| M + f            | Toggle fullscreen                                              |
+|------------------+----------------------------------------------------------------|
+| SWITCH BETWEEN GROUPS (WORKSPACES)                                                |
+|------------------+----------------------------------------------------------------|
+| M + Right        | Switch to the right group (workspace)                          |
+| M + Left         | Switch to the left group (workspace)                           |
+| M + 1..9         | Switch to the 1..9 group (workspace)                           |
+| M + S + 1..9     | Move the cur. w-ow to the 1..9 group (workspace) and follow its|
+|------------------+----------------------------------------------------------------|
+| SWITCH BETWEEN LAYOUTS                                                            |
+|------------------+----------------------------------------------------------------|
+| M + Tab          | Switch to the next layout                                      |
+| M + S + Tab      | Switch to the previous layout                                  |
+|------------------+----------------------------------------------------------------|
+| CHANGE FOCUS                                                                      |
+|------------------+----------------------------------------------------------------|
+| M + k            | Move focus up in stack pane                                    |
+| M + j            | Move focus down in stack pane                                  |
+| M + h            | Move focus left in stack pane                                  |
+| M + l            | Move focus right in stack pane                                 |
+|------------------+----------------------------------------------------------------|
+| M + SPACE        | Switch window focus to other pane(s) of stack                  |
+|------------------+----------------------------------------------------------------|
+|                   <SUPER> + <SHIFT> + KEYS                                        |
+|------------------+----------------------------------------------------------------|
+| M + S + RETURN   | extra terminal                                                 |
+| M + S + v        | {home}/.myScripts/runVifmAsRoot.sh                             |
+| M + S + a        | {home}/.myScripts/runRangerAsRoot.sh                           |
+| M + S + p        | {home}/.myScripts/runThunarAsRoot.sh                           |
+| M + S + w        | Google Chrome                                                  |
+| M + S + y        | {home}/.myScripts/start-stop_syncthing.sh                      |
+|------------------+----------------------------------------------------------------|
+| QTILE: reload_config, restart, quit WINDOW: kill, xkill                           |
+|------------------+----------------------------------------------------------------|
+| M + S + c        | Kill focused window                                            |
+| M + S + x        | Kill not answered window                                       |
+| M + S + C + r    | Restart qtile                                                  |
+| M + S + r        | Reload qtile config                                            |
+| M + S + q        | Shutdown qtile                                                 |
+|------------------+----------------------------------------------------------------|
+| M + S + f        | Toggle floating                                                |
+|------------------+----------------------------------------------------------------|
+| MOVE WINDOWS UP OR DOWN IN CURRENT STACK                                          |
+|------------------+----------------------------------------------------------------|
+| M + S + k        | Move window up in current stack                                |
+| M + S + j        | Move window down in current stack                              |
+| M + S + h        | Move window left in current stack                              |
+| M + S + l        | Move window right in current stack                             |
+|------------------+----------------------------------------------------------------|
+| MOVE FLOATING WINDOW
+|------------------+----------------------------------------------------------------|
+| M + S + left     | Move floating window left                                      |
+| M + S + right    | Move floating window right                                     |
+| M + S + up       | Move floating window up                                        |
+| M + S + down     | Move floating window down                                      |
+|------------------+----------------------------------------------------------------|
+| RESIZE FLOATING WINDOW                                                            |
+|------------------+----------------------------------------------------------------|
+| M + C + left     | Resize floating window left                                    |
+| M + C + right    | Resize floating window right                                   |
+| M + C + up       | Resize floating window up                                      |
+| M + C + down     | Resize floating window down                                    |
+|------------------+----------------------------------------------------------------|
+| M + S + SPACE    | Flip main (left) panel with others (for MonadTall/MonadWide)   |
+|------------------+----------------------------------------------------------------|
+|                   <SUPER> + <ALT> + KEYS                                          |
+|------------------+----------------------------------------------------------------|
+| M + A + SPACE    | {home}/.myScripts/touchpadONOFF.sh                             |
+|------------------+----------------------------------------------------------------|
+| M + A + k        | flip layout up (for BSP layout)                                |
+| M + A + j        | flip layout down (for BSP layout)                              |
+| M + A + h        | flip layout left (for BSP layout)                              |
+| M + A + l        | flip layout right (for BSP layout)                             |
+|------------------+----------------------------------------------------------------|
+|                   <SUPER> + <CTRL> + KEYS                                         |
+|------------------+----------------------------------------------------------------|
+| M + C + RETURN   | One more extra terminal                                        |
+| M + C + w        | Tor                                                            |
+|------------------+----------------------------------------------------------------|
+|                   RESIZING WINDOW                                                 |
+|------------------+----------------------------------------------------------------|
+| M + C + i        | Shrink main window (for MonadTall/MonadWide)                   |
+| M + C + m        | Grow main window (for MonadTall/MonadWide)                     |
+|------------------+----------------------------------------------------------------|
+| M + C + j        | Grow window down                                               |
+| M + C + k        | Grow window up                                                 |
+| M + C + h        | Grow window left                                               |
+| M + C + l        | Grow window right                                              |
+|------------------+----------------------------------------------------------------|
+| NORMALIZE, MINIMIZE, MAXIMIZE                                                     |
+|------------------+----------------------------------------------------------------|
+| M + C + n        | Normalize window size ratios                                   |
+| M + C + d        | Toggle window between minimumize and normal sizes              |
+| M + C + m        | Toggle window between min and max sizes (MonadTall/MonadWide)  |
+|------------------+----------------------------------------------------------------|
+| M + C + r        | Reset layout                                                   |
+|------------------+----------------------------------------------------------------|
+|                   <SUPER> + <SHIFT> + <CTRL> + KEYS                               |
+|------------------+----------------------------------------------------------------|
+| M + S + C + r    | Reload qtile config                                            |
+|------------------+----------------------------------------------------------------|
+|                   <ALT> + KEYS                                                    |
+|------------------+----------------------------------------------------------------|
+|                         KEYCHORDS                                                 |
+|------------------+----------------------------------------------------------------|
+| A + m            | Dmenu KeyChord                                                 |
+|       + c        | {home}/.myScripts/dmenu/dmenu-edit-configs.sh                  |
+|       + e        | {home}/.myScripts/dmenu/dmenu-unicode.sh                       |
+|       + k        | {home}/.myScripts/dmenu/dmenu-kill.sh                          |
+|       + l        | {home}/.myScripts/dmenu/lock.sh                                |
+|       + m        | {home}/.myScripts/dmenu/dmenu-change-alacritty-colors.sh       |
+|       + n        | {home}/.myScripts/dmenu/dmenu-passmenu-name.sh                 |
+|       + p        | {home}/.myScripts/dmenu/dmenu-passmenu.sh                      |
+|       + u        | {home}/.myScripts/dmenu/dmenu-passmenu-url.sh                  |
+|       + r        | {home}/.myScripts/dmenu/dmenu-run-utils.sh                     |
+|       + s        | {home}/.myScripts/dmenu/dmenu-search.sh                        |
+|       + t        | {home}/.myScripts/dmenu/dmenu-transcription.sh                 |
+|       + x        | {home}/.myScripts/dmenu/dmenu-system-exit.sh                   |
+|------------------+----------------------------------------------------------------|
+| A + w            | rofi (Show opened windows menu)                                |
+| A + TAB          | Switch to the next window                                      |
+| A + S + TAB      | Switch to the previous window                                  |
+|------------------+----------------------------------------------------------------|
+|                   <CONTROL> + <ALT> + KEYS                                        |
+|------------------+----------------------------------------------------------------|
+| TREETAB CONTROLS                                                                  |
+|------------------+----------------------------------------------------------------|
+| C + A + j        | Move up a section in TreeTab                                   |
+| C + A + k        | Move down a section in TreeTab                                 |
+|------------------+----------------------------------------------------------------|
+|                   <CONTROL> + <SHIFT> + KEYS                                      |
+|------------------+----------------------------------------------------------------|
+| C + S + ESC      | {my_term} -e htop                                              |
+|------------------+----------------------------------------------------------------|
+|                   <Fn> + <F1-F12> (MULTIMEDIA KEYS)                               |
+|------------------+----------------------------------------------------------------|
+| XF86Display      | lxrandr (choose monitor)                                       |
+| XF86ScreenSaver  | {home}/.myScripts/system_exit/lock.sh                          |
+| XF86Battery      | xfce4-power-manager-settings                                   |
+| XF86AudioMute    | pactl set-sink-mute @DEFAULT_SINK@ toggle (Toggle audio mute)  |
+|------------------+----------------------------------------------------------------|
+|                   <SUPER> + <F1-F12>                                              |
+|------------------+----------------------------------------------------------------|
+| M + F2           | {home}/.myScripts/brightness_down.sh                           |
+| M + F3           | {home}/.myScripts/brightness_up.sh                             |
+| M + F7           | pactl set-sink-mute @DEFAULT_SINK@ toggle (Toggle audio mute)  |
+| M + F8           | {home}/.myScripts/volume_down.sh                               |
+| M + F9           | {home}/.myScripts/volume_up.sh                                 |
+|------------------+----------------------------------------------------------------|
+
 
