@@ -64,9 +64,9 @@ syntax on "Enable syntax highlighting
 " set fillchars+=vert:\
 
 " Real programmers don't use TABs but spaces ----------------------------------
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set shiftround
 set expandtab
 
@@ -146,30 +146,31 @@ colorscheme memorycolor
 " colorscheme OceanicNext
 
 " GUI -------------------------------------------------------------------------
-set wak=no   "используем ALT как обычно, а не для вызова пункта меню
-if has("gui_running")
-    "убираем меню и тулбар
-    set guioptions-=m
-    set guioptions-=T
-    "убираем скроллбары
-    set guioptions-=r
-    set guioptions-=l
-    "используем консольные диалоги вместо графических
-    set guioptions+=c
-    "антиалиасинг для шревтоф
-    set antialias
-    "прячем курсор
-    set mousehide
-    "Так не выводятся ненужные escape последовательности в :shell
-    set noguipty
-    " set guifont=Source_Code_Pro:h13:cRUSSIAN:qDRAFT
-    " set guifont=mplus\ Nerd\ Font\ 16.5
-    " set guifont=Iosevka\ 16
-    " set guifont=Cascadia\ Code\ PL\ SemiLight\ 17
-    " set guifont=Cascadia\ Mono\ PL\ 16.5
-    " set guifont=Recursive\ Mono\ Casual\ Static\ Medium\ 17
-    set guifont=Recursive\ Mono\ Casual\ Static\ 16
-endif
+" set wak=no   "используем ALT как обычно, а не для вызова пункта меню
+" if has("gui_running")
+    " "убираем меню и тулбар
+    " set guioptions-=m
+    " set guioptions-=T
+    " "убираем скроллбары
+    " set guioptions-=r
+    " set guioptions-=l
+    " "используем консольные диалоги вместо графических
+    " set guioptions+=c
+    " " "антиалиасинг для шревтоф
+    " " set antialias
+    " "прячем курсор
+    " set mousehide
+    " " "Так не выводятся ненужные escape последовательности в :shell
+    " " set noguipty
+"
+    " " set guifont=Source_Code_Pro:h13:cRUSSIAN:qDRAFT
+    " " set guifont=mplus\ Nerd\ Font\ 16.5
+    " " set guifont=Iosevka\ 16
+    " " set guifont=Cascadia\ Code\ PL\ SemiLight\ 17
+    " " set guifont=Cascadia\ Mono\ PL\ 16.5
+    " " set guifont=Recursive\ Mono\ Casual\ Static\ Medium\ 17
+    " set guifont=Recursive\ Mono\ Casual\ Static\ 16
+" endif
 
 "##############################################################################
 " Plugins used by vim
@@ -203,6 +204,11 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'hrsh7th/cmp-nvim-lua'
     Plug 'saadparwaiz1/cmp_luasnip'
     Plug 'L3MON4D3/LuaSnip'
+
+    Plug 'prabirshrestha/vim-lsp'
+    Plug 'prabirshrestha/asyncomplete.vim'
+    Plug 'prabirshrestha/asyncomplete-lsp.vim'
+    Plug 'mattn/vim-lsp-settings'
 
     " " For JS/JSX
     " Plug 'yuezk/vim-js'
@@ -411,6 +417,58 @@ for _, lsp in ipairs(servers) do
   }
 end
 EOF
+
+"##############################################################################
+" vim-lsp Settings
+"##############################################################################
+" vim-lsp-settings won't detect hls automatically (2020-10-26). Let's teach it:
+if (executable('haskell-language-server-wrapper'))
+  au User lsp_setup call lsp#register_server({
+      \ 'name': 'haskell-language-server-wrapper',
+      \ 'cmd': {server_info->['haskell-language-server-wrapper', '--lsp']},
+      \ 'whitelist': ['haskell'],
+      \ })
+endif
+
+" Mappings
+function! s:on_lsp_buffer_enabled() abort
+    setlocal omnifunc=lsp#complete
+    setlocal signcolumn=yes
+    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
+    nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> gr <plug>(lsp-references)
+    nmap <buffer> gf <plug>(lsp-code-action)
+    nmap <buffer> gi <plug>(lsp-implementation)
+    nmap <buffer> gt <plug>(lsp-type-definition)
+    nmap <buffer> <F2> <plug>(lsp-rename)
+    nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
+    nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
+    nmap <buffer> K <plug>(lsp-hover)
+    xmap <buffer> f <plug>(lsp-document-range-format)
+    nmap <buffer> <F5> <plug>(lsp-code-lens)
+
+    " buffer format on save
+    " autocmd BufWritePre <buffer> LspDocumentFormatSync
+endfunction
+
+" Decorations
+augroup lsp_install
+    au!
+    let g:lsp_signs_enabled = 1         " enable signs
+    let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
+    let g:lsp_signs_error = {'text': '✗'}
+    " let g:lsp_signs_warning = {'text': '‼', 'icon': '/path/to/some/icon'} " icons require GUI
+    " let g:lsp_signs_hint = {'icon': '/path/to/some/other/icon'} " icons require GUI
+    let g:lsp_signs_warning = {'text': '‼'}
+    let g:lsp_highlight_references_enabled = 1
+    highlight link LspErrorText GruvboxRedSign " requires gruvbox
+    highlight clear LspWarningLine
+    " highlight lspReference ctermfg=red guifg=red ctermbg=green guibg=green
+    highlight lspReference guibg=#303010
+
+    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
 
 "##############################################################################
 " Mappings
