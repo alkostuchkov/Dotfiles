@@ -143,6 +143,7 @@
 |       + s        | {home}/.myScripts/dmenu/dmenu-search.sh                        |
 |       + t        | {home}/.myScripts/dmenu/dmenu-transcription.sh                 |
 |       + x        | {home}/.myScripts/dmenu/dmenu-system-exit.sh                   |
+|       + w        | {home}/.myScripts/dmenu/dmenu-mountUnmountWinDisks.sh          |
 |------------------+----------------------------------------------------------------|
 | A + w            | rofi (Show opened windows menu)                                |
 | A + TAB          | Switch to the next window                                      |

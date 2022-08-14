@@ -269,7 +269,8 @@ keys = [
         Key([], "r", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-run-utils.sh"), desc="Run choice of most used utils"),
         Key([], "s", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-search.sh"), desc="Run chosen search engine"),
         Key([], "t", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-transcription.sh"), desc="Choose a transcription's symbol"),
-        Key([], "x", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-system-exit.sh"), desc="System exit menu")],
+        Key([], "x", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-system-exit.sh"), desc="System exit menu"),
+        Key([], "w", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-mountUnmountWinDisks.sh"), desc="Mount/Unmount Windows disks")],
         mode="Dmenu"
     ),
     Key([alt], "w", lazy.spawn("rofi run -show window -show-icons"), desc="Switch between opened windows"),
