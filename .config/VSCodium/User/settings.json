@@ -19,7 +19,7 @@
   // "editor.lineHeight": 20,
   // "editor.tabSize": 4,
   // Controls the font weight. Accepts "normal" and "bold" keywords or numbers between 1 and 1000.
-  // "editor.fontWeight": "500",
+  "editor.fontWeight": "500",
   "editor.lineNumbers": "relative",
   "editor.fontLigatures": false,
   "editor.autoClosingQuotes": "languageDefined",
@@ -48,11 +48,15 @@
   "python.insidersChannel": "off",
   "python.pythonPath": "/home/alexander/Projects/Python/VirtualEnvironments/py3.7/bin/python",
   "python.formatting.provider": "autopep8",
+  "python.linting.pylintEnabled": false,
+  "python.linting.enabled": true,
+  "python.linting.mypyEnabled": true
   "code-runner.executorMap": {
     "python": "$pythonPath -u $fullFileName"
   },
   "code-runner.clearPreviousOutput": true,
   "code-runner.saveFileBeforeRun": true,
+  "code-runner.runInTerminal": false,
   "markdown-pdf.executablePath": "/usr/bin/google-chrome-stable",
   "markdown-pdf.outputDirectory": "~/Documents/Markdown_Files/",
   "[kivy]": {},
