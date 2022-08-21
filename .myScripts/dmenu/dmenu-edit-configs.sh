@@ -19,6 +19,7 @@ options=(
 "dmenu-change-alacritty-colors - $HOME/.myScripts/dmenu/dmenu-change-alacritty-colors.sh"
 "dmenu-edit-configs - $HOME/.myScripts/dmenu/dmenu-edit-configs.sh"
 "dmenu-kill - $HOME/.myScripts/dmenu/dmenu-kill.sh"
+"dmenu-mountUnmountWinDisks - $HOME/.myScripts/dmenu/dmenu-mountUnmountWinDisks.sh"
 "dmenu-passmenu - $HOME/.myScripts/dmenu/dmenu-passmenu.sh"
 "dmenu-passmenu-name - $HOME/.myScripts/dmenu/dmenu-passmenu-name.sh"
 "dmenu-passmenu-url - $HOME/.myScripts/dmenu/dmenu-passmenu-url.sh"

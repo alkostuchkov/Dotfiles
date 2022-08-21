@@ -146,6 +146,7 @@
 |       + w        | {home}/.myScripts/dmenu/dmenu-mountUnmountWinDisks.sh          |
 |------------------+----------------------------------------------------------------|
 | A + w            | rofi (Show opened windows menu)                                |
+| A + F4           | ByeBye (Logout app)                                            |
 | A + TAB          | Switch to the next window                                      |
 | A + S + TAB      | Switch to the previous window                                  |
 |------------------+----------------------------------------------------------------|

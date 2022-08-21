@@ -47,7 +47,7 @@
   "[python]": {},
   "python.insidersChannel": "off",
   "python.pythonPath": "/home/alexander/Projects/Python/VirtualEnvironments/py3.7/bin/python",
-  "python.formatting.provider": "yapf",
+  "python.formatting.provider": "autopep8",
   "code-runner.executorMap": {
     "python": "$pythonPath -u $fullFileName"
   },

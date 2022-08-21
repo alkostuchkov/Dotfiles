@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# /usr/bin/system_exit
 
 # with openrc use loginctl
 [ "$(cat /proc/1/comm)" = "systemd" ] && logind=systemctl || logind=loginctl
@@ -7,6 +6,7 @@
 # declare options=("lock
 options=("lock
 switch_user
+logout
 suspend
 hibernate
 reboot
@@ -34,10 +34,12 @@ case $choice in
         # dm-tool lock
         $HOME/.myScripts/system_exit/lock.sh
         ;;
-    # logout)
-        # # i3-msg exit
+    logout)
+        # i3-msg exit
         # $HOME/.myScripts/system_exit/exit_qtile.py
-        # ;;
+        id=$(pgrep qtile)
+        kill -15 $id
+        ;;
     switch_user)
         dm-tool switch-to-greeter
         ;;
