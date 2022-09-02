@@ -12,6 +12,7 @@ set guioptions+=c
 " set mousehide
 
 GuiFont Monoid\ Nerd\ Font\ Mono:h15.5
+" GuiFont mplus\ Nerd\ Font:h20
 " GuiFont Monoid\ Nerd\ Font\ Mono:h15.5:w400
 
 set background=dark
