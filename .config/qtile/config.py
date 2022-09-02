@@ -701,15 +701,16 @@ floating_layout = layout.Floating(float_rules=[
     Match(title="Confirm File Replacing", wm_class="pcmanfm"),
     Match(title="Terminator Preferences", wm_class="terminator"),
     Match(title="Терминатор Параметры", wm_class="terminator"),
-    Match(title="win0", wm_class="jetbrains-webstorm"),  # WebStorm
-    Match(title="Import WebStorm Settings", wm_class="jetbrains-webstorm"),
-    Match(title="win0", wm_class="jetbrains-pycharm-ce"),  # PyCharm
-    Match(title="Welcome to PyCharm", wm_class="jetbrains-pycharm-ce"),
-    Match(title="License Activation", wm_class="jetbrains-pycharm-ce"),  # PyCharm
-    Match(title="Settings", wm_class="jetbrains-pycharm-ce"),  # PyCharm
-    Match(title="Python Interpreters", wm_class="jetbrains-pycharm-ce"),  # PyCharm
-    Match(title="Open Project", wm_class="jetbrains-pycharm-ce"),  # PyCharm
-    Match(title="Update", wm_class="com-intellij-updater-Runner"),  # PyCharm's updates
+    #  Match(title="win0", wm_class="jetbrains-webstorm"),  # WebStorm
+    #  Match(title="Import WebStorm Settings", wm_class="jetbrains-webstorm"),
+    Match(title="splash"),  # PyCharm
+    #  Match(title="win0", wm_class="jetbrains-pycharm-ce"),  # PyCharm
+    #  Match(title="Welcome to PyCharm", wm_class="jetbrains-pycharm-ce"),
+    #  Match(title="License Activation", wm_class="jetbrains-pycharm-ce"),  # PyCharm
+    #  Match(title="Settings", wm_class="jetbrains-pycharm-ce"),  # PyCharm
+    #  Match(title="Python Interpreters", wm_class="jetbrains-pycharm-ce"),  # PyCharm
+    #  Match(title="Open Project", wm_class="jetbrains-pycharm-ce"),  # PyCharm
+    #  Match(title="Update", wm_class="com-intellij-updater-Runner"),  # PyCharm's updates
     Match(wm_class="nm-connection-editor"),
     Match(wm_class="megasync"),
     Match(wm_class="minitube"),
