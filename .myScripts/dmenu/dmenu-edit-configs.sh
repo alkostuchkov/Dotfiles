@@ -18,6 +18,7 @@ options=(
 "compton - $HOME/.config/compton.conf"
 "dmenu-change-alacritty-colors - $HOME/.myScripts/dmenu/dmenu-change-alacritty-colors.sh"
 "dmenu-edit-configs - $HOME/.myScripts/dmenu/dmenu-edit-configs.sh"
+"dmenu-GoogleDrive - $HOME/.myScripts/dmenu/dmenu-GoogleDrive.sh"
 "dmenu-kill - $HOME/.myScripts/dmenu/dmenu-kill.sh"
 "dmenu-mountUnmountWinDisks - $HOME/.myScripts/dmenu/dmenu-mountUnmountWinDisks.sh"
 "dmenu-passmenu - $HOME/.myScripts/dmenu/dmenu-passmenu.sh"

@@ -26,7 +26,8 @@ if [[ "$choice" == "quit" ]]; then
     echo "Program terminated." && exit 1
 elif [[ "$choice" ]]; then
     drive=$(printf '%s\n' "${choice}" | awk '{print $NF}')
-    $drive
+    # $drive
+    terminator -e "$drive"
 else
     echo "Program terminated." && exit 1
 fi
