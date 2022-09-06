@@ -1,0 +1,33 @@
+# Colors (Darcula-JetBrains)
+colors:
+  # Default colors
+  primary:
+    background: '#2b2b2b'
+    foreground: '#a9b7c6'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '#2b2b2b'
+    cursor: '#a9b7c6'
+
+  # Normal colors
+  normal:
+    black:   '#000000'
+    red:     '#f0524f'
+    green:   '#5c962c'
+    yellow:  '#a68a0d'
+    blue:    '#3993d4'
+    magenta: '#a771bf'
+    cyan:    '#00a3a3'
+    white:   '#808080'
+
+  # Bright colors
+  bright:
+    black:   '#000000'
+    red:     '#ff4050'
+    green:   '#4fc414'
+    yellow:  '#e5bf00'
+    blue:    '#1fb0ff'
+    magenta: '#ed7eed'
+    cyan:    '#00e5e5'
+    white:   '#ffffff'
