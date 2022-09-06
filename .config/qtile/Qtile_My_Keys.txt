@@ -14,15 +14,17 @@
 | M + w            | firefox                                                        |
 | M + u            | qutebrowser                                                    |
 | M + e            | dolphin                                                        |
-| M + p            | thunar                                                         |
+| M + n            | thunar                                                         |
 | M + i            | /usr/bin/octopi OR (synaptic-exec)                             |
 | M + a            | {my_term} -e {SHELL} -c ranger                                 |
 | M + t            |{h}/Pr-s/Tel-m/Tel-m -workdir {h}/.local/share/TelDesktop/ -- %u|
 | M + v            | {my_term} -e {home}/.config/vifm/scripts/vifmrun               |
 | M + c            | vscodium                                                       |
+| M + p            | PyCharm                                                        |
 | M + g            | goldendict                                                     |
-| M + n            | Gvim (Gvim or Neovim-qt)                                       |
-| M + b            | sublime text                                                   |
+| M + m            | Gvim (Gvim or Neovim-qt)                                       |
+| M + s            | sublime text                                                   |
+| M + b            | brave                                                          |
 |------------------+----------------------------------------------------------------|
 | M + f            | Toggle fullscreen                                              |
 |------------------+----------------------------------------------------------------|
