@@ -142,7 +142,8 @@ else
 endif
 
 set background=dark
-colorscheme memorycolor
+colorscheme darcula
+" colorscheme memorycolor
 " colorscheme OceanicNext
 
 " GUI -------------------------------------------------------------------------
@@ -298,6 +299,7 @@ EOF
 "##############################################################################
 " YouCompleteMe Settings
 "##############################################################################
+let g:python3_host_prog = '~/Projects/Python/VirtualEnvironments/poetry_venvs/py3.10.6_forTests_MostBloated/.venv/bin/python3'
 " :nnoremap fd  :YcmCompleter GoToDefinition<CR>
 " :nnoremap bb <C-o>
 " let g:loaded_youcompleteme = 1

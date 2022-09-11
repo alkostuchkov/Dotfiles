@@ -16,4 +16,5 @@ GuiFont Monoid\ Nerd\ Font\ Mono:h15.5
 " GuiFont Monoid\ Nerd\ Font\ Mono:h15.5:w400
 
 set background=dark
-colorscheme memorycolor
+colorscheme darcula
+" colorscheme memorycolor

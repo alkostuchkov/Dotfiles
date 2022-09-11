@@ -11,7 +11,7 @@
 #  - /path/to/alacritty.yml
 
 import:
-  - ~/.config/alacritty/colors/MemoryColor.yml
+  - ~/.config/alacritty/colors/Darcula-JetBrains.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -298,7 +298,8 @@ font:
   #use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: true
+draw_bold_text_with_bright_colors: false
+# draw_bold_text_with_bright_colors: true
 
 ###############################################################################
 # # Colors (Gruvbox dark)

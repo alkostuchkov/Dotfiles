@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
 Name=Jupyter Notebook
-Exec=jupyter notebook --notebook-dir=/home/alexander/Projects/Python/JupyterNotebook/
+Exec=jupyter notebook --notebook-dir=/home/alexander/Projects/Python/
 Comment=Jupyter Notebook
 Icon=/home/alexander/Pictures/Logo/jupyter_logo.png

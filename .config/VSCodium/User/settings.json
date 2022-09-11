@@ -139,7 +139,7 @@
   "window.menuBarVisibility": "toggle",
   // "editor.defaultFormatter": "standard.vscode-standard",
   // "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "workbench.colorTheme": "grigoryvp memory theme",
+  "workbench.colorTheme": "Darcula Pycharm with Light GUI",
   "workbench.iconTheme": "gruvbox-material-icon-theme",
   "prettier.bracketSpacing": false,
   "prettier.trailingComma": "none",

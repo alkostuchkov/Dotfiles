@@ -1,7 +1,7 @@
 [Appearance]
 AntiAliasFonts=true
 BoldIntense=true
-ColorScheme=DarkOneNuanced
+ColorScheme=Breeze
 DimmValue=128
 Font=Recursive Mono Casual Static,16,-1,5,57,0,0,0,0,0,Medium
 LineSpacing=0
