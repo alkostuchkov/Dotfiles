@@ -17,6 +17,7 @@ from modules import all_windows_count
 from modules import syncthing
 from modules import show_updates
 from colors.materia_manjaro import colors
+#  from colors.darcula import colors
 #  from colors.palenight import colors
 #  from colors.gruvbox_material import colors
 
