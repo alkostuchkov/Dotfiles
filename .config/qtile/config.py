@@ -359,7 +359,7 @@ layout_theme = {
 layouts = [
     layout.Columns(**layout_theme, border_on_single=True),
     layout.TreeTab(
-         font = my_font,
+         font=my_font,
          fontsize=14,
          bg_color=colors["bg_panel"],
          active_bg=colors["bg_current_tab"],
@@ -374,7 +374,13 @@ layouts = [
          section_top=10,
          panel_width=320
     ),
-    layout.Max(**layout_theme),
+    #  layout.Max(**layout_theme),
+    layout.Max(
+      margin=0,
+      border_width=0,
+      border_focus=colors["border_focus"],
+      border_normal=colors["border_normal"]
+    ),
     layout.MonadTall(**layout_theme),
     layout.MonadWide(**layout_theme),
     #  layout.Bsp(**layout_theme),
