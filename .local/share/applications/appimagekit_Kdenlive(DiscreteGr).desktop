@@ -1,0 +1,18 @@
+[Desktop Entry]
+Name=Kdenlive
+Exec="/home/alexander/.myScripts/runKdenliveDiscreteGr.sh"
+# Exec=/home/alexander/Programs/AppImageApplications/krita-4.3.0-x86_64.appimage %F
+GenericName=Video Editor
+# MimeType=application/x-krita;image/openraster;application/x-krita-paintoppreset;
+Comment=Video Editor
+Type=Application
+Icon=kdenlive
+Categories=Qt;KDE;Video
+# X-KDE-NativeMimeType=application/x-krita
+# X-KDE-ExtraNativeMimeTypes=
+StartupNotify=true
+# X-Krita-Version=28
+StartupWMClass=Kdenlive
+# Always be the preferred handler for .kra files
+InitialPreference=99
+

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
-Exec=/home/alexander/Qt5.8.0/Tools/QtCreator/bin/qtcreator -stylesheet=/home/alexander/.config/QtProject/+Themes/Qt-Creator-Darcula-master/darcula.css
-Name=Qt Creator 5.8.0 (Community)
+Exec=/home/alexander/Qt5.8.0/Tools/QtCreator/bin/qtcreator
+Name=Qt Creator (Community)
 GenericName=The IDE of choice for Qt development.
 Icon=QtProject-qtcreator
 Terminal=false

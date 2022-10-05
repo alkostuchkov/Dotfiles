@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=CheckInternetConnection
+GenericName=CheckInternetConnection
+Comment=Light weight app for monitoring internet connection
+Icon=/home/alexander/Programs/CheckInternetConnection/CheckInternetConnection.png
+Exec=/home/alexander/Programs/CheckInternetConnection/CheckInternetConnection
+Path=/home/alexander/Programs/CheckInternetConnection/
+NoDisplay=false
+Categories=Network;
+StartupNotify=false
+Terminal=false
+
