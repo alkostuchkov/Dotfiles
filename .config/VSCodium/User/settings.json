@@ -139,7 +139,7 @@
   "window.menuBarVisibility": "toggle",
   // "editor.defaultFormatter": "standard.vscode-standard",
   // "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "workbench.colorTheme": "Base16 Tomorrow",
+  "workbench.colorTheme": "Ayu Mirage Bordered",
   "workbench.iconTheme": "gruvbox-material-icon-theme",
   "prettier.bracketSpacing": false,
   "prettier.trailingComma": "none",

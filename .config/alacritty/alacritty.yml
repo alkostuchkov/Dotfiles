@@ -11,7 +11,7 @@
 #  - /path/to/alacritty.yml
 
 import:
-  - ~/.config/alacritty/colors/Darcula-JetBrains.yml
+  - ~/.config/alacritty/colors/Ayu-Mirage-Dark.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables

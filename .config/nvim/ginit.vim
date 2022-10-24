@@ -11,10 +11,10 @@ set guioptions+=c
 " "прячем курсор
 " set mousehide
 
-GuiFont Monoid\ Nerd\ Font\ Mono:h15.5
-" GuiFont mplus\ Nerd\ Font:h20
 " GuiFont Monoid\ Nerd\ Font\ Mono:h15.5:w400
+GuiFont Monoid\ Nerd\ Font\ Mono:h15.5
 
 set background=dark
-colorscheme darcula
+colorscheme ayu
+" colorscheme darcula
 " colorscheme memorycolor

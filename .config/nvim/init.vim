@@ -142,7 +142,8 @@ else
 endif
 
 set background=dark
-colorscheme darcula
+colorscheme ayu
+" colorscheme darcula
 " colorscheme memorycolor
 " colorscheme OceanicNext
 
@@ -299,7 +300,7 @@ EOF
 "##############################################################################
 " YouCompleteMe Settings
 "##############################################################################
-let g:python3_host_prog = '~/Projects/Python/VirtualEnvironments/poetry_venvs/py3.10.x_pynvim/.venv/bin/python3'
+let g:python3_host_prog = '~/Projects/Python/Virtualenvironments/poetry_venvs/py3.10.x_pynvim/.venv/bin/python3'
 " :nnoremap fd  :YcmCompleter GoToDefinition<CR>
 " :nnoremap bb <C-o>
 " let g:loaded_youcompleteme = 1
@@ -442,12 +443,12 @@ function! s:on_lsp_buffer_enabled() abort
     nmap <buffer> gf <plug>(lsp-code-action)
     nmap <buffer> gi <plug>(lsp-implementation)
     nmap <buffer> gt <plug>(lsp-type-definition)
-    nmap <buffer> <F2> <plug>(lsp-rename)
+    " nmap <buffer> <F2> <plug>(lsp-rename)
     nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
     nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
     nmap <buffer> K <plug>(lsp-hover)
     xmap <buffer> f <plug>(lsp-document-range-format)
-    nmap <buffer> <F5> <plug>(lsp-code-lens)
+    " nmap <buffer> <F5> <plug>(lsp-code-lens)
 
     " buffer format on save
     " autocmd BufWritePre <buffer> LspDocumentFormatSync
@@ -602,7 +603,7 @@ map <F2> :colorscheme gruvbox<CR>
 map <F3> :colorscheme gruvbox-material<CR>
 map <F4> :colorscheme palenight<CR>
 map <F5> :colorscheme tokyonight<CR>
-map <F6> :colorscheme onehalfdark<CR>
+map <F6> :colorscheme ayu<CR>
 map <F7> :colorscheme onedark<CR>
 map <F8> :colorscheme darcula<CR>
 map <F9> :colorscheme memorycolor<CR>
@@ -612,7 +613,7 @@ map <F9> :colorscheme memorycolor<CR>
 " colorscheme ayu
 " colorscheme oceanicnext
 " colorscheme material-theme
-" colorscheme onedark
+" colorscheme onehalfdark
 " colorscheme solarized
 " colorscheme cobalt2
 
