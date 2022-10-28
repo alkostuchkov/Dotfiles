@@ -300,7 +300,7 @@ EOF
 "##############################################################################
 " YouCompleteMe Settings
 "##############################################################################
-let g:python3_host_prog = '~/Projects/Python/VirtualEnvironments/poetry_venvs/py3.10.x_pynvim/.venv/bin/python3'
+let g:python3_host_prog = '~/Projects/Python/Virtualenvironments/poetry_venvs/py3.10.x_pynvim/.venv/bin/python3'
 " :nnoremap fd  :YcmCompleter GoToDefinition<CR>
 " :nnoremap bb <C-o>
 " let g:loaded_youcompleteme = 1

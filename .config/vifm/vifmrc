@@ -327,8 +327,18 @@ command! reload :write | restart
 " Toggle detailed/brief information about files -------------------------------
 command! togglefilesinfo
     \ : if &viewcolumns == '-{name}..,10{}.'
+    \ |   set viewcolumns=*{name}..,10{size}.
+    \ |   echo 'Files information: detailed'
+    \ | else
+    \ |   set viewcolumns='-{name}..,10{}.'
+    \ |   echo 'Files information: brief'
+    \ | endif
+
+command! togglefilesmoreinfo
+    \ : if &viewcolumns == '-{name}..,10{}.'
     " \ |   set viewcolumns=*{name}.,10{size}.,12{perms},10{uname},-7{gname},18{mtime}
-    \ |   set viewcolumns=*{name}..,10{size}.,12{perms},10{uname},-10{gname},18{mtime}
+    " \ |   set viewcolumns=*{name}..,{ext},10{size}.,12{perms},10{uname},-10{gname},18{mtime}
+    \ |   set viewcolumns=*{name}..,10{size}.,18{mtime}
     \ |   echo 'Files information: detailed'
     \ | else
     \ |   set viewcolumns='-{name}..,10{}.'
@@ -431,6 +441,7 @@ nnoremap <wait> ,w :set wrap!<cr>
 
 " Toggle detailed/brief information about files -------------------------------
 nnoremap <wait> ,ti :togglefilesinfo<cr>
+nnoremap <wait> ,tmi :togglefilesmoreinfo<cr>
 
 " Reset sort to +name ---------------------------------------------------------
 nnoremap <wait> ,s :resetsort<cr>
@@ -500,4 +511,19 @@ nnoremap <a-i> :sync<cr>
 nnoremap <a-o> :sync %c<cr>
 " Swap panes
 nnoremap <c-u> <c-w>x
+
+" " Try to open several tabs
+" tabname Rust
+" cd ~/Documents/forProgramming/Rust/Books/ ~/Projects/Rust/
+"
+" tabnew
+" tabname Lua
+" cd ~/Documents/forProgramming/Lua/Books/ ~/Projects/Lua/
+"
+" tabnew
+" tabname Haskell
+" cd ~/Documents/forProgramming/Haskell/Books/ ~/Projects/Haskell/
+"
+" " start on the first tab
+" tabnext 1
 
