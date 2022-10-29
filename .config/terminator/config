@@ -20,7 +20,6 @@
   [[default]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = CaskaydiaCove Nerd Font Mono 16.5
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -32,7 +31,6 @@
   [[Iosevka_SourceCodePro_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Iosevka Fixed SS09 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -44,7 +42,6 @@
   [[Iosevka_Term_18]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Iosevka Term 18
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -56,7 +53,6 @@
   [[CascadiaCodePL_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Cascadia Code PL 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -65,11 +61,10 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[FiraMono_16]]
+  [[FiraMono_Nerd_17]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
-    font = Fira Mono Medium 16
+    font = FiraMono Nerd Font 17
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden
@@ -80,7 +75,6 @@
   [[PTMono_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = PT Mono 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -92,7 +86,6 @@
   [[Consolas_Nerd_17]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Consolas NF 17
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -104,7 +97,6 @@
   [[Monaco_15_5]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Monaco for Powerline 15.5
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -116,7 +108,6 @@
   [[Hack_Nerd_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Hack Nerd Font 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -128,7 +119,6 @@
   [[MesloLGS_Nerd_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = MesloLGS Nerd Font Mono 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -140,7 +130,6 @@
   [[Hack_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Hack 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -152,7 +141,6 @@
   [[Menlo_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Menlo 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -164,7 +152,6 @@
   [[JetBrainsMono_Light_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = JetBrains Mono Light 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -176,7 +163,6 @@
   [[JetBrainsMono_Nerd_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = JetBrainsMono Nerd Font 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -188,7 +174,6 @@
   [[Roboto Mono_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Roboto Mono 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -200,7 +185,6 @@
   [[SFMono_Nerd_Light_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = SFMono Nerd Font Light 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -212,7 +196,6 @@
   [[SFMono_Nerd_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = SFMono Nerd Font 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -224,7 +207,6 @@
   [[M+_1m_cyr_18]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = M+ 1m 18
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -236,7 +218,6 @@
   [[M+_1mn_cyr_18]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = mplus Nerd Font 18
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -248,7 +229,6 @@
   [[M+_1mn_18]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = M+ 1mn 18
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -260,7 +240,6 @@
   [[CodeNewRoman_17]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = "Code New Roman, 17"
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -272,7 +251,6 @@
   [[SauceCodePro_Nerd_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = SauceCodePro Nerd Font Medium 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -284,7 +262,6 @@
   [[Monoid_Nerd_Font_14]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Monoid Nerd Font Mono Light Semi-Condensed 14
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -296,7 +273,6 @@
   [[TrimMono_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Trim Mono 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -308,7 +284,6 @@
   [[MonoLisa_15]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = MonoLisa 15
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -320,7 +295,6 @@
   [[OperatorMono_17]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Operator Mono weight=325 17
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -332,7 +306,6 @@
   [[mononoki_17]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = mononoki 17.5
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -344,7 +317,6 @@
   [[Gintronic_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Gintronic 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -356,7 +328,6 @@
   [[InconsolataLGC_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Inconsolata LGC Medium 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -368,7 +339,6 @@
   [[NotoSansMono_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = NotoSansMono Nerd Font 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -380,7 +350,6 @@
   [[Iosevka_PragmataPro_17]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Iosevka Term SS08 17
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -392,7 +361,6 @@
   [[PragmataPro_17]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Pragmata Pro 17
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -401,11 +369,10 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[SarasaMonoSCNerd_17]]
+  [[SarasaMonoSCNerd_18]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
-    font = Sarasa Mono SC Nerd 17
+    font = Sarasa Mono SC Nerd 18
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden
@@ -416,7 +383,6 @@
   [[RecMonoDuotone_17]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Rec Mono Duotone 17
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -428,7 +394,6 @@
   [[RecMonoCasual_17]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Rec Mono Casual 17
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -440,7 +405,6 @@
   [[VictorMono_Nerd_Medium_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = VictorMono Nerd Font Medium 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -452,7 +416,6 @@
   [[VinMono_17]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Vin Mono Pro 17
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -464,7 +427,6 @@
   [[IBMPlexMono_Nerd_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = BlexMono Nerd Font Mono Medium 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -476,7 +438,6 @@
   [[IBMPlexMono_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = IBM Plex Mono Medium 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -488,7 +449,6 @@
   [[MonacoB_Nerd_15_5]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = MonacoB Nerd Font Mono 15.5
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -500,7 +460,6 @@
   [[FiraCode_Nerd_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = FiraCode Nerd Font weight=450 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -512,7 +471,6 @@
   [[UbuntuMono_Nerd_Font_Mono_18]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = UbuntuMono Nerd Font Mono 18
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -524,7 +482,6 @@
   [[CaskaydiaCove_Nerd_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = CaskaydiaCove Nerd Font Mono 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -536,7 +493,6 @@
   [[RecurciveMonoCasual_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Recursive Mono Casual Static Medium 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -548,7 +504,6 @@
   [[RecurciveMonoLinear_15]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Recursive Mono Linear Static 15
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -560,7 +515,6 @@
   [[AndaleMono_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Andale Mono 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -572,7 +526,6 @@
   [[Cousine_Nerd_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Cousine Nerd Font Mono 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -584,7 +537,6 @@
   [[DejaVuSansMonoNerdBook_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = DejaVuSansMono Nerd Font 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -596,7 +548,6 @@
   [[Hermit_Nerd_Medium_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Hurmit Nerd Font Medium 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -608,7 +559,6 @@
   [[Hermit_Regular_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Hermit 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -620,7 +570,6 @@
   [[Iosevka_18]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = Iosevka 18
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -632,7 +581,6 @@
   [[+GruvboxMaterial+]]
     background_color = "#282828"
     background_darkness = 0.97
-    cursor_color = "#aaaaaa"
     font = UbuntuMono Nerd Font Mono 19
     foreground_color = "#dfbf8e"
     show_titlebar = False
@@ -644,7 +592,6 @@
   [[+Cobalt2+]]
     background_color = "#143448"
     background_darkness = 0.97
-    cursor_color = "#e0e0e0"
     font = UbuntuMono Nerd Font Mono 19
     foreground_color = "#e0e0e0"
     show_titlebar = False
@@ -656,7 +603,6 @@
   [[+OceanicMaterial+]]
     background_color = "#263238"
     background_darkness = 0.97
-    cursor_color = "#a3b3cc"
     font = FiraCode Nerd Font Medium 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
@@ -668,7 +614,6 @@
   [[+One dark+]]
     background_color = "#1e2127"
     background_darkness = 0.97
-    cursor_color = "#676c76"
     font = FiraCode Nerd Font Medium 16
     foreground_color = "#5c6370"
     show_titlebar = False
@@ -680,8 +625,6 @@
   [[+Material-Palenight+]]
     background_color = "#292d3e"
     background_darkness = 0.97
-    cursor_color = "#ffcc00"
-    cursor_color_fg = False
     font = FiraCode Nerd Font Medium 16
     foreground_color = "#a6accd"
     show_titlebar = False
@@ -693,7 +636,6 @@
   [[+Ayu mirage+]]
     background_color = "#212733"
     background_darkness = 0.97
-    cursor_color = "#FFD580"
     font = FiraCode Nerd Font Medium 16
     foreground_color = "#d9d7ce"
     show_titlebar = False
@@ -705,7 +647,6 @@
   [[+MemoryColor+]]
     background_color = "#203040"
     background_darkness = 0.97
-    cursor_color = "#b7b0a7"
     font = Monoid Nerd Font Mono Light Semi-Condensed 15.5
     foreground_color = "#e6ac73"
     show_titlebar = False
