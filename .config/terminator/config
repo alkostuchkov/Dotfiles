@@ -97,7 +97,7 @@
   [[Monaco_15_5]]
     background_color = "#263238"
     background_darkness = 0.97
-    font = Monaco for Powerline 15.5
+    font = Monaco 15.5
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden
