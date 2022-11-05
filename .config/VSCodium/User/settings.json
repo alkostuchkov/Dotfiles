@@ -15,11 +15,11 @@
   },
   "editor.fontFamily": "'Monoid Nerd Font Mono', 'mplus Nerd Font', 'Iosevka', 'Recursive Mono Casual Static', 'Cascadia Mono PL', 'Rec Mono Casual', 'Cascadia Code PL Semilight', 'Iosevka', 'Pragmata Pro', 'JetBrains Mono Light', 'Source Code Pro', 'Consolas NF', 'JetBrains Mono', 'UbuntuMono Nerd Font', 'Menlo', 'Trim Mono', 'Code New Roman', 'Operator Mono Book', 'IBM Plex Mono Medium'",
   // "editor.fontSize": 22, //mplus Nerd Font
-  "editor.fontSize": 17.5,
+  "editor.fontSize": 17,
   // "editor.lineHeight": 20,
   // "editor.tabSize": 4,
   // Controls the font weight. Accepts "normal" and "bold" keywords or numbers between 1 and 1000.
-  "editor.fontWeight": "500",
+  // "editor.fontWeight": "500",
   "editor.lineNumbers": "relative",
   "editor.fontLigatures": false,
   "editor.autoClosingQuotes": "languageDefined",
@@ -41,7 +41,7 @@
   ],
   "debug.console.fontFamily": "'Monoid Nerd Font Mono', 'mplus Nerd Font', 'Iosevka', 'Recursive Mono Casual Static', 'Cascadia Mono PL', 'Rec Mono Casual', 'Cascadia Code PL Semilight', 'JetBrains Mono Light', 'Source Code Pro', 'Consolas NF', 'JetBrains Mono', 'UbuntuMono Nerd Font', 'Menlo', 'Operator Mono Book', 'Code New Roman', 'Trim Mono', 'JetBrains Mono Light', 'IBM Plex Mono Medium'",
   // "debug.console.fontSize": 22, //mplus Nerd Font
-  "debug.console.fontSize": 17.5,
+  "debug.console.fontSize": 17,
   // "terminal.explorerKind": "external",
   "terminal.integrated.cursorStyle": "block",
   "terminal.external.linuxExec": "alacritty",
@@ -49,7 +49,7 @@
   "terminal.integrated.defaultProfile.linux": "fish",
   "terminal.integrated.fontFamily": "'Monoid Nerd Font Mono', 'mplus Nerd Font', 'Iosevka', 'Recursive Mono Casual Static', 'Cascadia Mono PL', 'Rec Mono Casual', 'Cascadia Code PL Semilight', 'JetBrains Mono Light', 'Source Code Pro', 'Consolas NF', 'UbuntuMono Nerd Font', 'Menlo', 'Operator Mono Book', 'Code New Roman', 'Trim Mono', 'JetBrains Mono Light', 'Source Code Pro', 'IBM Plex Mono Medium'",
   // "terminal.integrated.fontSize": 22, //mplus Nerd Font
-  "terminal.integrated.fontSize": 17.5,
+  "terminal.integrated.fontSize": 17,
   "[python]": {},
   "python.insidersChannel": "off",
   "python.pythonPath": "/home/alexander/Projects/Python/VirtualEnvironments/py3.7/bin/python",
