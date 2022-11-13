@@ -325,10 +325,10 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[InconsolataLGC_16]]
+  [[InconsolataLGC_17]]
     background_color = "#263238"
     background_darkness = 0.97
-    font = Inconsolata LGC Medium 16
+    font = InconsolataLGC Nerd Font Mono Medium 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden
@@ -457,10 +457,10 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[FiraCode_Nerd_16]]
+  [[FiraCode_Nerd_17]]
     background_color = "#263238"
     background_darkness = 0.97
-    font = FiraCode Nerd Font weight=450 16
+    font = FiraCode Nerd Font weight=450 17
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden
@@ -648,6 +648,17 @@
     background_color = "#202734"
     background_darkness = 0.97
     font = UbuntuMono Nerd Font Mono 21
+    foreground_color = "#CBCCC6"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#191E2A:#FF3333:#BAE67E:#FFA759:#73D0FF:#FFD580:#95E6CB:#C7C7C7:#686868:#F27983:#A6CC70:#FFCC66:#5CCFE6:#FFEE99:#95E6CB:#FFFFFF"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[++Ayu mirage++]]
+    background_color = "#202734"
+    background_darkness = 0.97
+    font = InconsolataLGC Nerd Font Mono Medium 16
     foreground_color = "#CBCCC6"
     show_titlebar = False
     scrollbar_position = hidden

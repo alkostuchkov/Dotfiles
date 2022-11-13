@@ -263,8 +263,8 @@ font:
 
   # Point size
   # size: 14  # JetBrains Mono
-  # size: 14.5  # SaurceCodePro Nerd
-  size: 15.5
+  size: 14.5  # SaurceCodePro Nerd
+  # size: 15
   # size: 18 # Iosevka
   # size: 20 # mplus Nerd Font
 
