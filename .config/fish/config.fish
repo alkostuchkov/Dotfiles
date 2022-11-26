@@ -26,6 +26,7 @@ set ANDROID_SDK $HOME"/Programs/Android_SDK"
 
 set XDG_CONFIG_HOME "$HOME/.config"
 set XDG_DATA_HOME "$HOME/.local/share"
+set XDG_DATA_DIRS "$HOME/.local/share/flatpak/exports/share" "/var/lib/flatpak/exports/share"
 set XDG_CACHE_HOME "$HOME/.cache"
 
 # $EDITOR use Vim to edit crontab ---------------------------------------------

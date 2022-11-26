@@ -21,6 +21,7 @@ export ANDROID_SDK="$HOME/Programs/Android_SDK"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_DATA_DIRS="$HOME/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 # If not running interactively, don't do anything -----------------------------
@@ -179,8 +180,8 @@ source $HOME/.asdf/asdf.sh
 source $HOME/.asdf/completions/asdf.bash
 # Fuzzy finder ----------------------------------------------------------------
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-# broot -----------------------------------------------------------------------
-source /home/alexander/.config/broot/launcher/bash/br
+# # broot -----------------------------------------------------------------------
+# source /home/alexander/.config/broot/launcher/bash/br
 
 # Run neofetch ----------------------------------------------------------------
 neofetch

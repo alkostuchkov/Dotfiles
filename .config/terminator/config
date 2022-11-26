@@ -325,7 +325,7 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[InconsolataLGC_17]]
+  [[InconsolataLGC_16]]
     background_color = "#263238"
     background_darkness = 0.97
     font = InconsolataLGC Nerd Font Mono Medium 16
