@@ -5,7 +5,7 @@
 # compton --config $HOME/.config/compton.conf &
 # urxvtd -q -o -f &
 # xfce4-clipman &
-# setxkbmap -layout us,ru -option grp:caps_toggle &
+setxkbmap -layout us,ru -option grp:caps_toggle &
 # /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &  # for Debian
 xmodmap -e 'keycode 135 = Super_R' # Map the menu button to right super
 kbdd &
