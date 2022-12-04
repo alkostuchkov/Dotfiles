@@ -41,3 +41,4 @@ done
 echo "Back to the $OLDPWD (PREVIOUS DIR)..."
 cd - &>/dev/null
 
+exit 0
