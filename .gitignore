@@ -13,5 +13,6 @@ cache
 temp
 .temp
 __pycache__
+.var/app/
 
 

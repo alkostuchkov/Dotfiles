@@ -21,7 +21,10 @@ export ANDROID_SDK="$HOME/Programs/Android_SDK"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_DATA_DIRS="$HOME/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share"
+export XDG_DATA_DIRS="$HOME/.local/share/flatpak/exports/share"
+export XDG_DATA_DIRS+=":/var/lib/flatpak/exports/share"
+export XDG_DATA_DIRS+=":$HOME/.local/share/flatpak/exports/share/applications"
+export XDG_DATA_DIRS+=":/var/lib/flatpak/exports/share/applications"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 # If not running interactively, don't do anything -----------------------------
@@ -107,7 +110,8 @@ GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWCOLORHINTS=true
 # export PS1='\w$(__git_ps1 " (%s)")\$ '
-PS1='\n\[\e[01;33m\]\u\[\e[01;37m\]@\[\e[01;32m\]\h:\[\e[01;34m\]\w\[\e[01;31m\]$(__git_ps1 " (%s)")\[\e[01;33m\]\n>_ \[\e[0m\]'
+# PS1='\n \[\e[01;33m\]\u\[\e[01;37m\]@\[\e[01;32m\]\h:\[\e[01;34m\]\w\[\e[01;31m\]$(__git_ps1 " (%s)")\[\e[01;33m\]\n >_ \[\e[2m\]'
+PS1='\n \[\e[01;33m\]\u\[\e[01;37m\]@\[\e[01;32m\]\h:\[\e[01;34m\]\w\[\e[01;31m\]$(__git_ps1 " (%s)")\[\e[01;33m\]\n >_ \[\e[0m\]'
 
 ###############################################################################
 # ALIASES
