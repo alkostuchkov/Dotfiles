@@ -3,6 +3,8 @@
 # Automate adding files to git
 
 config="/usr/bin/git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME"
+target_dir=$HOME
+E_WRONG_DIR=73
 
 echo "Choose what to add:"
 echo "1) Deleted files."
@@ -18,17 +20,23 @@ case ${choice} in
   *) echo -e "Wrong choice.\nExit."; exit 1;;
 esac
 
-echo "Go to the $HOME (WHERE THE BARE GIT IS)..."
-cd ~ &>/dev/null
+echo "Go to the $target_dir (WHERE THE BARE GIT IS)..."
+cd $target_dir &>/dev/null
 
-for path in $(${config} st | grep -E "${what_to_add}" | awk '{print $2}')
+if [[ "$PWD" != "$target_dir" ]]
+then
+  echo "Wrong dir!"
+  echo "Variable $PWD links to another dir!"
+  exit $E_WRONG_DIR
+fi
+
+for path in $(${config} status | grep -E "${what_to_add}" | awk '{print $2}')
 do
   ${config} add -f ${path}
   # ${config} add -f ${path} 2>/dev/null
   # echo $path
 done
 
-# Back to the previous dir
 echo "Back to the $OLDPWD (PREVIOUS DIR)..."
 cd - &>/dev/null
 
