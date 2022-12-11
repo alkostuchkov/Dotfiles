@@ -18,7 +18,7 @@ set EDITOR "vim"   #  vim is either a link to nvim    or just  vim
 set VISUAL "gvim"  # gvim is either a link to nvim-qt or just gvim
 set TERM "xterm-256color"
 set TERMINAL "alacritty"
-set BROWSER "firefox"
+set BROWSER "brave"
 set MANPAGER "sh -c 'col -bx | bat -l man -p'"  # theme moved to the .config/bat/config
 # set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"  # $MANPAGER use batcat to read mans
 set RANGER_LOAD_DEFAULT_RC FALSE  # to avoid loading ranger's config twice

@@ -1,47 +1,49 @@
-export HOME=$(echo /home/$USER)
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-################################ EXPORTs ################################
-# If you come from bash you might have to change your $PATH.
-# # export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export PATH=$HOME/.local/bin/:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$PATH
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-# For ranger, htop and other console progs in Qtile
+# For ranger, htop and other console progs in Qtile ---------------------------
 unset COLUMNS
 unset LINES
 
-export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications
-export EDITOR="vim"
-export VISUAL="gvim"
+###############################################################################
+# EXPORTs
+###############################################################################
+export HOME=$(echo /home/$USER)
+export ZSH="$HOME/.oh-my-zsh"
+export GHCUP_INSTALL_BASE_PREFIX="$HOME/.config"  # for GHCUP
+
+# export
+PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications:$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin:$HOME/Programs/Android_SDK/platform-tools
+export EDITOR="vim"   #  vim is either a link to nvim    or just  vim
+export VISUAL="gvim"  # gvim is either a link to nvim-qt or just gvim
 export TERM="xterm-256color"
 export TERMINAL="alacritty"
-export BROWSER="firefox"
-export RANGER_LOAD_DEFAULT_RC=FALSE  # to avoid loading ranger's config twice
-# export BROWSER="qutebrowser"
-#export EDITOR="emacs -nw"
-# export QT_QPA_PLATFORMTHEME="qt5ct"
+export BROWSER="brave"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"  # $MANPAGER use batcat to read mans
-export NVM_DIR="$HOME/.nvm"
-# export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+export RANGER_LOAD_DEFAULT_RC=FALSE  # to avoid loading ranger's config twice
+export ANDROID_SDK="$HOME/Programs/Android_SDK"
 
-####################### AUTOCOMPLETE AND HIGHLIGHT COLORS ######################
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_DATA_DIRS="$HOME/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share/applications:/var/lib/flatpak/exports/share/applications"
+export XDG_CACHE_HOME="$HOME/.cache"
+
+# # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# # Initialization code that may require console input (password prompts, [y/n]
+# # confirmations, etc.) must go above this block; everything else may go below.
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  # source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
+
+###############################################################################
+# AUTOCOMPLETE AND HIGHLIGHT COLORS
+###############################################################################
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7d7d7d"
-
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="fino-time-my"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="bira"
+ZSH_THEME="bira_my"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -97,7 +99,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 
-################################# PLUGINS ######################################
+###############################################################################
+# PLUGINS
+###############################################################################
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -125,29 +129,9 @@ plugins=(zsh-autosuggestions)
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-################################# PROMPT #######################################
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-source $ZSH/oh-my-zsh.sh
-
-# Load ; should be last.
-# source $HOME/powerlevel10k/powerlevel10k.zsh-theme
-
-# source /usr/share/autojump/autojump.zsh 2>/dev/null
-# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
-# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-
-# Syntax-highlighting like in fish
-source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Run neofetch
-neofetch
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-################################# ALIASes ######################################
+###############################################################################
+# ALIASes
+###############################################################################
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -164,37 +148,73 @@ alias lle='lse -l'
 alias ls='lsd --group-dirs=first'
 alias ll='lsd --blocks=permission,links,user,group,size,date,name --group-dirs=first --date="+%d %b %H:%M"'
 alias la='ll -a'
-# alias bat='bat --theme gruvbox-dark'  # theme moved to the ~/.config/bat/config
+# alias bat='bat --theme gruvbox-dark'  # theme moved to the .config/bat/config
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias ifconfig=/sbin/ifconfig
-
-# confirm before overwriting something
+# confirm before overwriting something ----------------------------------------
 alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
-
-# switch between shells
+# switch between shells -------------------------------------------------------
 alias tobash="sudo chsh $USER -s /usr/bin/env bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /usr/bin/env zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /usr/bin/env fish && echo 'Now log out.'"
-
-# navigation
-alias ..='cd ..' 
+# navigation ------------------------------------------------------------------
+alias ..='cd ..'
 alias ...='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
-
-## get top process eating memory
+# get top process eating memory -----------------------------------------------
 alias psmem='ps auxf | sort -nr -k 4'
 alias psmem10='ps auxf | sort -nr -k 4 | head -10'
-
-## get top process eating cpu ##
+# get top process eating cpu --------------------------------------------------
 alias pscpu='ps auxf | sort -nr -k 3'
 alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
-
-## git
+# git -------------------------------------------------------------------------
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
+# run some programs -----------------------------------------------------------
+alias v='vim'
+alias f='ranger'
+alias vf='vifm'
+alias emacs="emacsclient -c -a 'emacs'"
+
+###############################################################################
+# PROMPT
+###############################################################################
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+source $ZSH/oh-my-zsh.sh
+
+# Load ; should be last.
+# source $HOME/powerlevel10k/powerlevel10k.zsh-theme
+
+# source /usr/share/autojump/autojump.zsh 2>/dev/null
+# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+
+# Syntax-highlighting like in fish
+source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+###############################################################################
+# Source
+###############################################################################
+# source ~/.git-completion.zsh
+# source ~/.git-prompt.sh
+# # asdf manager ----------------------------------------------------------------
+# source $HOME/.asdf/asdf.sh
+# source $HOME/.asdf/completions/asdf.bash
+# Fuzzy finder ----------------------------------------------------------------
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# # broot -----------------------------------------------------------------------
+# source /home/alexander/.config/broot/launcher/bash/br
+
+# Run neofetch ----------------------------------------------------------------
+neofetch
 
