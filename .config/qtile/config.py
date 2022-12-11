@@ -275,6 +275,7 @@ keys = [
         #  Key([], "t", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-transcription.sh"), desc="Choose a transcription's symbol"),
         #  Key([], "x", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-system-exit.sh"), desc="System exit menu"),
         #  Key([], "w", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-mountUnmountWinDisks.sh"), desc="Mount/Unmount Windows disks")],
+        Key([], "c", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-edit-configs.sh"), desc="Run dmenu script for editing config files"),
         Key([], "l", lazy.spawn(f"{home}/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
         Key([], "p", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-run-programs.sh"), desc="Run choice of most used utils"),
         Key([], "s", lazy.spawn(f"{home}/.myScripts/dmenu/dmenu-run-scripts.sh"), desc="Run chosen search engine"),
