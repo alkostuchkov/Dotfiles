@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
-#  ____ _____
-# |  _ \_   _|  Derek Taylor (DistroTube)
-# | | | || |    http://www.youtube.com/c/DistroTube
-# | |_| || |    http://www.gitlab.com/dwt1/
-# |____/ |_|
-#
+
 # Dmenu script for editing some of my more frequently edited config files.
 
 # declare options=("alacritty
@@ -16,19 +11,19 @@ options=(
 "conky - $HOME/.myScripts/conky/conkyrc1"
 "conky - $HOME/.myScripts/conky/conkyrc_i3"
 "compton - $HOME/.config/compton.conf"
-"dmenu-change-alacritty-colors - $HOME/.myScripts/dmenu/dmenu-change-alacritty-colors.sh"
-"dmenu-edit-configs - $HOME/.myScripts/dmenu/dmenu-edit-configs.sh"
-"dmenu-GoogleDrive - $HOME/.myScripts/dmenu/dmenu-GoogleDrive.sh"
-"dmenu-kill - $HOME/.myScripts/dmenu/dmenu-kill.sh"
-"dmenu-mountUnmountWinDisks - $HOME/.myScripts/dmenu/dmenu-mountUnmountWinDisks.sh"
-"dmenu-passmenu - $HOME/.myScripts/dmenu/dmenu-passmenu.sh"
-"dmenu-passmenu-name - $HOME/.myScripts/dmenu/dmenu-passmenu-name.sh"
-"dmenu-passmenu-url - $HOME/.myScripts/dmenu/dmenu-passmenu-url.sh"
-"dmenu-run-programs - $HOME/.myScripts/dmenu/dmenu-run-programs.sh"
-"dmenu-run-scripts - $HOME/.myScripts/dmenu/dmenu-run-scripts.sh"
-"dmenu-search - $HOME/.myScripts/dmenu/dmenu-search.sh"
-"dmenu-system-exit - $HOME/.myScripts/dmenu/dmenu-system-exit.sh"
-"dmenu-unicode - $HOME/.myScripts/dmenu/dmenu-unicode.sh"
+"dm-change-alacritty-colors - $HOME/.myScripts/dmscripts/dm-change-alacritty-colors.sh"
+"dm-edit-configs - $HOME/.myScripts/dmscripts/dm-edit-configs.sh"
+"dm-GoogleDrive - $HOME/.myScripts/dmscripts/dm-GoogleDrive.sh"
+"dm-kill - $HOME/.myScripts/dmscripts/dm-kill.sh"
+"dm-mountUnmountWinDisks - $HOME/.myScripts/dmscripts/dm-mountUnmountWinDisks.sh"
+"dm-passmenu - $HOME/.myScripts/dmscripts/dm-passmenu.sh"
+"dm-passmenu-name - $HOME/.myScripts/dmscripts/dm-passmenu-name.sh"
+"dm-passmenu-url - $HOME/.myScripts/dmscripts/dm-passmenu-url.sh"
+"dm-run-programs - $HOME/.myScripts/dmscripts/dm-run-programs.sh"
+"dm-run-scripts - $HOME/.myScripts/dmscripts/dm-run-scripts.sh"
+"dm-search - $HOME/.myScripts/dmscripts/dm-search.sh"
+"dm-system-exit - $HOME/.myScripts/dmscripts/dm-system-exit.sh"
+"dm-unicode - $HOME/.myScripts/dmscripts/dm-unicode.sh"
 "fish - $HOME/.config/fish/config.fish"
 "fonts.conf - $HOME/.config/fontconfig/fonts.conf"
 "homepage - $HOME/.surf/homepage.html"

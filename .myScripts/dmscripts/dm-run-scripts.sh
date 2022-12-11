@@ -27,7 +27,7 @@ else
 	exit 1
 fi
 
-prefix=${SCRIPTS_STORE_DIR-~/.myScripts/dmenu}
+prefix=${SCRIPTS_STORE_DIR-~/.myScripts/dmscripts}
 script_files=( "$prefix"/*.sh )
 script_files=( "${script_files[@]#"$prefix"/}" )
 # script_files=( "${script_files[@]%.sh}" )
