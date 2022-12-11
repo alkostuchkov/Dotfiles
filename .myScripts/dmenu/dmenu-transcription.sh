@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# The famous "get a menu of emojis to copy" script.
-
 # Colors:
 # Materia Manjaro
 nf='#09dbc9'
