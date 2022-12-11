@@ -55,6 +55,6 @@ text/x-qt.qml=DigiaQt-qtcreator-community.desktop;
 text/x-xsrc=DigiaQt-qtcreator-community.desktop;
 x-scheme-handler/dsc=tixati.desktop;
 x-scheme-handler/magnet=tixati.desktop;
-x-scheme-handler/tg=org.telegram.desktop.528d075a663b0e7501e6addd859b117f.desktop;
+x-scheme-handler/tg=org.telegram.desktop._528d075a663b0e7501e6addd859b117f.desktop;
 x-scheme-handler/viber=appimagekit_Viber.desktop;
 x-scheme-handler/vsls=vsls-launcher.desktop;

@@ -17,7 +17,7 @@ fn='Ubuntu-16:normal'
 is_color_exists() {
     for c in "${color_files[@]}"
     do
-        if [[ $1 == ${c} ]]
+        if [[ "$1" == "${c}" ]]
         then
             echo "true"
             return
