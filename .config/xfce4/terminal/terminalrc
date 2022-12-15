@@ -41,4 +41,5 @@ ColorForeground=#CBCCC6
 ColorBackground=#202734
 MiscRightClickAction=TERMINAL_RIGHT_CLICK_ACTION_CONTEXT_MENU
 ShortcutsNoHelpkey=TRUE
+ColorBoldIsBright=FALSE
 

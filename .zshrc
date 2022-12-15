@@ -22,7 +22,7 @@ export ANDROID_SDK="$HOME/Programs/Android_SDK"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_DATA_DIRS="$HOME/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share/applications:/var/lib/flatpak/exports/share/applications"
+# export XDG_DATA_DIRS="$HOME/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share/applications:/var/lib/flatpak/exports/share/applications"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 # # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.

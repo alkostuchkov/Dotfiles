@@ -162,7 +162,7 @@ keys = [
     Key([mod, "shift"], "a", lazy.spawn(f"{home}/.myScripts/runRangerAsRoot.sh"), desc="Launch ranger as root"),
     Key([mod, "shift"], "p", lazy.spawn(f"{home}/.myScripts/runThunarAsRoot.sh"), desc="Launch Thunar as root"),
     Key([mod, "shift"], "w", lazy.spawn("google-chrome-stable"), desc="Launch Chrome"),
-    Key([mod, "shift"], "y", lazy.spawn(f"{home}/.myScripts/start-stop_syncthing.sh"), desc="Start-Stop Syncthing (for Dropbox sync)"),
+    Key([mod, "shift"], "y", lazy.spawn(f"{home}/.config/qtile/scripts/start-stop_syncthing.sh"), desc="Start-Stop Syncthing (for Dropbox sync)"),
     # QTILE: reload_config, restart, quit WINDOW: kill, xkill
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "x", lazy.spawn("xkill"), desc="Kill not answered window"),
@@ -458,8 +458,9 @@ def init_widgets_list():
             #  custom_command="yay -Qu",
             display_format="  {updates}",  # ⟳ 
             mouse_callbacks={
-                "Button3": lambda: show_updates.show_updates_arch(),
-                "Button2": lambda: qtile.cmd_spawn(f"{my_term_extra} -e 'yay -Syu && $SHELL'")
+                "Button1": lambda: qtile.cmd_spawn(f"{home}/.config/qtile/scripts/show_updates.sh"),
+                "Button2": lambda: qtile.cmd_spawn(f"{my_term_extra} -e 'yay -Syu && $SHELL'"),
+                "Button3": lambda: show_updates.show_updates_arch()
             },
             update_interval=10800  # 3 hours (60*60*3)
         ),
@@ -476,7 +477,7 @@ def init_widgets_list():
             padding=0
         ),
         syncthing.Syncthing(
-            path_to_script=f"{home}/.myScripts/get_syncthing_status.sh",
+            path_to_script=f"{home}/.config/qtile/scripts/get_syncthing_status.sh",
             font=my_nerd_font,
             label="Syncthing\n ",
             update_interval=60,
@@ -517,7 +518,7 @@ def init_widgets_list():
             foreground=colors["fg_cpu"],
             padding=0,
             mouse_callbacks={
-                "Button1": lambda: qtile.cmd_spawn(f"{home}/.myScripts/top5_cpu_usage.sh"),
+                "Button1": lambda: qtile.cmd_spawn(f"{home}/.config/qtile/scripts/top5_cpu_usage.sh"),
                 #  "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e htop")
                 "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e {SHELL} -c htop")
             }
@@ -527,7 +528,7 @@ def init_widgets_list():
             padding=0,
             format="{freq_current}GHz\n{load_percent: .0f}%",
             mouse_callbacks={
-                "Button1": lambda: qtile.cmd_spawn(f"{home}/.myScripts/top5_cpu_usage.sh"),
+                "Button1": lambda: qtile.cmd_spawn(f"{home}/.config/qtile/scripts/top5_cpu_usage.sh"),
                 "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e {SHELL} -c htop")
             }
         ),
@@ -542,7 +543,7 @@ def init_widgets_list():
             foreground=colors["fg_memory"],
             padding=0,
             mouse_callbacks={
-                "Button1": lambda: qtile.cmd_spawn(f"{home}/.myScripts/top5_mem_usage.sh"),
+                "Button1": lambda: qtile.cmd_spawn(f"{home}/.config/qtile/scripts/top5_mem_usage.sh"),
                 "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e {SHELL} -c htop")
             }
         ),
@@ -552,7 +553,7 @@ def init_widgets_list():
             format="{MemUsed: .2f}{mm}\n{MemPercent: .0f}%",
             measure_mem="G",
             mouse_callbacks={
-                "Button1": lambda: qtile.cmd_spawn(f"{home}/.myScripts/top5_mem_usage.sh"),
+                "Button1": lambda: qtile.cmd_spawn(f"{home}/.config/qtile/scripts/top5_mem_usage.sh"),
                 "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e {SHELL} -c htop")
             }
         ),
