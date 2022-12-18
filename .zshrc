@@ -108,7 +108,7 @@ ZSH_THEME="bira_my"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git asdf)
-plugins=(zsh-autosuggestions)
+# plugins=(zsh-autosuggestions)
 # plugins=(zsh-syntax-highlighting)
 
 
@@ -187,6 +187,12 @@ alias emacs="emacsclient -c -a 'emacs'"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+###############################################################################
+# Source
+###############################################################################
 source $ZSH/oh-my-zsh.sh
 
 # Load ; should be last.
@@ -194,17 +200,14 @@ source $ZSH/oh-my-zsh.sh
 
 # source /usr/share/autojump/autojump.zsh 2>/dev/null
 # source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# # Syntax-highlighting like in fish
+# source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source $ZSH/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
-# Syntax-highlighting like in fish
-source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-###############################################################################
-# Source
-###############################################################################
 # source ~/.git-completion.zsh
 # source ~/.git-prompt.sh
 # # asdf manager ----------------------------------------------------------------
