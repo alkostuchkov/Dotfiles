@@ -5,7 +5,7 @@
   <property name="last-icon-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_75_PERCENT"/>
   <property name="last-window-maximized" type="bool" value="true"/>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_50_PERCENT"/>
-  <property name="last-details-view-column-widths" type="string" value="50,208,50,142,618,87,128,88,118,345"/>
+  <property name="last-details-view-column-widths" type="string" value="50,208,50,142,618,87,128,88,546,345,50,50,50,50"/>
   <property name="last-separator-position" type="int" value="236"/>
   <property name="last-show-hidden" type="bool" value="true"/>
   <property name="last-window-width" type="int" value="1011"/>
@@ -17,11 +17,14 @@
   <property name="last-sort-column" type="string" value="THUNAR_COLUMN_NAME"/>
   <property name="last-sort-order" type="string" value="GTK_SORT_ASCENDING"/>
   <property name="last-location-bar" type="string" value="ThunarLocationButtons"/>
-  <property name="last-menubar-visible" type="bool" value="false"/>
+  <property name="last-menubar-visible" type="bool" value="true"/>
   <property name="last-statusbar-visible" type="bool" value="true"/>
   <property name="last-details-view-fixed-columns" type="bool" value="true"/>
   <property name="shortcuts-icon-size" type="string" value="THUNAR_ICON_SIZE_24"/>
   <property name="misc-confirm-close-multiple-tabs" type="bool" value="false"/>
   <property name="last-side-pane" type="string" value="ThunarShortcutsPane"/>
   <property name="misc-text-beside-icons" type="bool" value="false"/>
+  <property name="last-image-preview-visible" type="bool" value="true"/>
+  <property name="last-splitview-separator-position" type="int" value="426"/>
+  <property name="misc-image-preview-mode" type="string" value="THUNAR_IMAGE_PREVIEW_MODE_STANDALONE"/>
 </channel>
