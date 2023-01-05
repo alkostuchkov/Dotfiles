@@ -2,12 +2,12 @@
 Version=1.0
 Type=Application
 Name=Firefox
-GenericName=Firefox (discrete graphics)
+GenericName=Firefox
 # Icon=firefox
-Icon=/home/alexander/Programs/FirefoxBeta/browser/chrome/icons/default/default128.png
-Exec=/home/alexander/.myScripts/runFirefoxDiscreteGr.sh
+Icon=/home/alexander/Programs/Firefox/browser/chrome/icons/default/default128.png
+Exec=/usr/bin/firefox
 NoDisplay=false
 Categories=Network;
-Keywords=DRI_PRIME=1
+Keywords=Firefox
 StartupNotify=false
 Terminal=false

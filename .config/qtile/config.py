@@ -162,7 +162,7 @@ keys = [
     Key([mod, "shift"], "a", lazy.spawn(f"{HOME}/.myScripts/runRangerAsRoot.sh"), desc="Launch ranger as root"),
     Key([mod, "shift"], "p", lazy.spawn(f"{HOME}/.myScripts/runThunarAsRoot.sh"), desc="Launch Thunar as root"),
     Key([mod, "shift"], "w", lazy.spawn("google-chrome-stable"), desc="Launch Chrome"),
-    Key([mod, "shift"], "y", lazy.spawn(f"{HOME}/.config/qtile/scripts/start-stop_syncthing.sh"), desc="Start-Stop Syncthing (for Dropbox sync)"),
+    #  Key([mod, "shift"], "y", lazy.spawn(f"{HOME}/.config/qtile/scripts/start-stop_syncthing.sh"), desc="Start-Stop Syncthing (for Dropbox sync)"),
     # QTILE: reload_config, restart, quit WINDOW: kill, xkill
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "x", lazy.spawn("xkill"), desc="Kill not answered window"),
