@@ -14,7 +14,8 @@
 export HOME=$(echo /home/$USER)
 
 # export GHCUP_INSTALL_BASE_PREFIX="$HOME/.config"  # for GHCUP
-# export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications:$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin:$HOME/Programs/Android_SDK/platform-tools
+# export GOPATH="$HOME/go"
+# export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications:$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin:$HOME/Programs/Android_SDK/platform-tools:$GOPATH/bin
 # export EDITOR="vim"   #  vim is either a link to nvim    or just  vim
 # export VISUAL="gvim"  # gvim is either a link to nvim-qt or just gvim
 # export TERM="xterm-256color"

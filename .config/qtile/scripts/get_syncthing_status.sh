@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-syncthing_status=$(systemctl --user status syncthing.service | grep Active | awk '{print $2}') 
+syncthing_status=$(systemctl --user status syncthing.service | grep -i 'Active' | awk '{print $2}')
 
-if [[ ${syncthing_status} == "active" ]]
-then
+if [[ ${syncthing_status} == "active" ]]; then
     # systemctl --user stop syncthing.service &
     # notify-send -i dialog-information "Syncthing service stopped"
     # echo "inactive"

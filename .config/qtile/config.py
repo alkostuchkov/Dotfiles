@@ -364,6 +364,7 @@ layout_theme = {
 }
 
 layouts = [
+    #  layout.Columns(**layout_theme, border_on_single=True),
     layout.Columns(**layout_theme, border_on_single=False, margin_on_single=False),
     layout.TreeTab(
          font=my_font,
@@ -388,6 +389,8 @@ layouts = [
       border_focus=colors["border_focus"],
       border_normal=colors["border_normal"]
     ),
+    #  layout.MonadTall(**layout_theme),
+    #  layout.MonadWide(**layout_theme),
     layout.MonadTall(**layout_theme, single_border_width=False, single_margin=False),
     layout.MonadWide(**layout_theme, single_border_width=False, single_margin=False),
     #  layout.Bsp(**layout_theme),
@@ -738,6 +741,8 @@ floating_layout = layout.Floating(float_rules=[
     Match(title="Confirm File Replacing", wm_class="pcmanfm"),
     Match(title="Terminator Preferences", wm_class="terminator"),
     Match(title="Терминатор Параметры", wm_class="terminator"),
+    Match(title="File Operation Progress", wm_class="Thunar"),
+    Match(title="Действия над файлами", wm_class="Thunar"),
     #  Match(title="win0", wm_class="jetbrains-webstorm"),  # WebStorm
     #  Match(title="Import WebStorm Settings", wm_class="jetbrains-webstorm"),
     Match(title="splash"),  # PyCharm
