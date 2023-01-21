@@ -140,7 +140,7 @@
   // "editor.defaultFormatter": "standard.vscode-standard",
   // "editor.defaultFormatter": "esbenp.prettier-vscode",
   "workbench.colorTheme": "Ayu Mirage Bordered",
-  "workbench.iconTheme": "gruvbox-material-icon-theme",
+  "workbench.iconTheme": "vscode-icons",
   "prettier.bracketSpacing": false,
   "prettier.trailingComma": "none",
   "prettier.semi": true,

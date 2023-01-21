@@ -364,8 +364,8 @@ layout_theme = {
 }
 
 layouts = [
-    #  layout.Columns(**layout_theme, border_on_single=True),
-    layout.Columns(**layout_theme, border_on_single=False, margin_on_single=False),
+    #  layout.Columns(**layout_theme, border_on_single=False, margin_on_single=False),
+    layout.Columns(**layout_theme, border_on_single=True),
     layout.TreeTab(
          font=my_font,
          fontsize=14,
@@ -389,10 +389,10 @@ layouts = [
       border_focus=colors["border_focus"],
       border_normal=colors["border_normal"]
     ),
-    #  layout.MonadTall(**layout_theme),
-    #  layout.MonadWide(**layout_theme),
-    layout.MonadTall(**layout_theme, single_border_width=False, single_margin=False),
-    layout.MonadWide(**layout_theme, single_border_width=False, single_margin=False),
+    #  layout.MonadTall(**layout_theme, single_border_width=False, single_margin=False),
+    #  layout.MonadWide(**layout_theme, single_border_width=False, single_margin=False),
+    layout.MonadTall(**layout_theme),
+    layout.MonadWide(**layout_theme),
     #  layout.Bsp(**layout_theme),
     #  layout.Tile(shift_windows=True, **layout_theme),
     #  layout.Stack(stacks=2, **layout_theme),
