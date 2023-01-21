@@ -17,10 +17,10 @@ fn='Ubuntu-16:normal'
 # shopt -s nullglob globstar
 
 if [[ -n $WAYLAND_DISPLAY ]]; then
-	dmenu=dmenu-wl
+	DMENU=dmenu-wl
 	xdotool="ydotool type --file -"
 elif [[ -n $DISPLAY ]]; then
-  dmenu=dmenu
+  DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
 	xdotool="xdotool type --clearmodifiers --file -"
 else
 	echo "Error: No Wayland or X11 display detected" >&2
@@ -33,7 +33,8 @@ password_files=( "${password_files[@]#"$prefix"/}" )
 password_files=( "${password_files[@]%.gpg}" )
 
 # password=$(printf '%s\n' "${password_files[@]}" | "$dmenu" "$@")
-username=$(printf '%s\n' "${password_files[@]}" | "$dmenu" -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Username for:')
+username=$(printf '%s\n' "${password_files[@]}" | ${DMENU} 'Username for:')
+# username=$(printf '%s\n' "${password_files[@]}" | "$dmenu" -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Username for:')
 
 [[ -n $username ]] || exit
 

@@ -67,13 +67,15 @@ fn='Ubuntu-16:normal'
 # sb='#d79921'
 # fn='Sarasa Mono SC Nerd-17:normal'
 
+DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
 terminal="alacritty"
 # terminal="xfce4-terminal"
 
 # names=$(printf '%s\n' "${options[@]}" | awk '{print $1}')
 # choice=$(printf '%s\n' "${names}" | dmenu -l 10  -nf '#09dbc9' -nb '#222b2e' -sf '#dbdcd5' -sb '#009185' -fn 'Ubuntu-16:normal' -p 'Edit config file:')
 
-choice=$(printf '%s\n' "${options[@]}" | dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Edit config file:')
+# choice=$(printf '%s\n' "${options[@]}" | dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Edit config file:')
+choice=$(printf '%s\n' "${options[@]}" | ${DMENU} 'Edit config file:')
 
 if [[ "$choice" == "quit" ]]; then
     echo "Program terminated." && exit 1

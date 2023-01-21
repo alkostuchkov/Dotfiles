@@ -16,9 +16,11 @@ fn='Ubuntu-16:normal'
 # sb='#d79921'
 # fn='Sarasa Mono SC Nerd-17:normal'
 
+DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
+
 # Get user selection via dmenu from emoji file.
-# chosen=$(cut -d ';' -f1 ~/.myScripts/dmenu/emoji |dmenu -l 20  -nf '#09dbc9' -nb '#222b2e' -sf '#dbdcd5' -sb '#009185' -fn 'Ubuntu Nerd Font Book-16:normal' -p 'Choose an icon:' | sed "s/ .*//")
-chosen=$(cut -d ';' -f1 ~/.myScripts/dmenu/emoji | dmenu -l 20 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Choose an icon:' | awk '{print $1}')
+chosen=$(cut -d ';' -f1 ~/.myScripts/dmscripts/emoji | ${DMENU} 'Choose an icon:' | awk '{print $1}')
+# chosen=$(cut -d ';' -f1 ~/.myScripts/dmscripts/emoji | dmenu -l 20 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Choose an icon:' | awk '{print $1}')
 
 # Exit if none chosen.
 [ -z "$chosen" ] && exit

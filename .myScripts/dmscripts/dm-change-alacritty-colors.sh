@@ -27,10 +27,10 @@ is_color_exists() {
 }
 
 if [[ -n $WAYLAND_DISPLAY ]]; then
-	dmenu=dmenu-wl
+	DMENU=dmenu-wl
 	xdotool="ydotool type --file -"
 elif [[ -n $DISPLAY ]]; then
-  dmenu=dmenu
+  DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
 	xdotool="xdotool type --clearmodifiers --file -"
 else
 	echo "Error: No Wayland or X11 display detected" >&2
@@ -44,7 +44,8 @@ color_files=("$prefix"/*.yml)
 color_files=("${color_files[@]#"$prefix"/}")
 color_files=("${color_files[@]%.yml}")
 
-color=$(printf '%s\n' "${color_files[@]}" | "$dmenu" -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Alacritty colors you want:')
+# color=$(printf '%s\n' "${color_files[@]}" | "$dmenu" -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Alacritty colors you want:')
+color=$(printf '%s\n' "${color_files[@]}" | ${DMENU} 'Alacritty colors you want:')
 
 [[ -n ${color} ]] || exit
 

@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
-#  ____ _____
-# |  _ \_   _|  Derek Taylor (DistroTube)
-# | | | || |    http://www.youtube.com/c/DistroTube
-# | |_| || |    http://www.gitlab.com/dwt1/
-# |____/ |_|
-#
+
 # Dmenu script for running some of my more frequently used utils.
 
 options=(
@@ -29,7 +24,10 @@ fn='Ubuntu-16:normal'
 # sb='#d79921'
 # fn='Sarasa Mono SC Nerd-17:normal'
 
-choice=$(printf '%s\n' "${options[@]}" | dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Run program:')
+DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
+
+# choice=$(printf '%s\n' "${options[@]}" | dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Run program:')
+choice=$(printf '%s\n' "${options[@]}" | ${DMENU} 'Run program:')
 
 if [[ "$choice" == "quit" ]]; then
     echo "Program terminated." && exit 1

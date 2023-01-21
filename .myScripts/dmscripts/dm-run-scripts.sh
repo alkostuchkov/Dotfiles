@@ -14,13 +14,14 @@ fn='Ubuntu-16:normal'
 # sb='#d79921'
 # fn='Sarasa Mono SC Nerd-17:normal'
 
+
 # shopt -s nullglob globstar
 
 if [[ -n "$WAYLAND_DISPLAY" ]]; then
-	dmenu=dmenu-wl
+	DMENU=dmenu-wl
 	xdotool="ydotool type --file -"
 elif [[ -n "$DISPLAY" ]]; then
-  dmenu=dmenu
+  DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
 	xdotool="xdotool type --clearmodifiers --file -"
 else
 	echo "Error: No Wayland or X11 display detected" >&2
@@ -33,8 +34,8 @@ script_files=( "${script_files[@]#"$prefix"/}" )
 # script_files=( "${script_files[@]%.sh}" )
 
 # password=$(printf '%s\n' "${password_files[@]}" | "$dmenu" "$@")
-# script_name=$(printf '%s\n' "${script_files[@]}" | dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Run script:')
-script_name=$(printf '%s\n' "${script_files[@]}" | "$dmenu" -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Run script:')
+script_name=$(printf '%s\n' "${script_files[@]}" | ${DMENU} 'Run script:')
+# script_name=$(printf '%s\n' "${script_files[@]}" | "$dmenu" -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Run script:')
 
 [[ -n "$script_name" ]] || exit
 
