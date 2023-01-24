@@ -6,7 +6,6 @@ configuration {
     /* location: 1; */
     /* yoffset: 35; */
     /* xoffset: 5; */
-    /* theme: "/usr/share/rofi/themes/lb.rasi"; */
 /* width: 70; */
     /* rofi.font: "UbuntuMono Nerd Font 16"; */
     /* rofi.font: "mplus Nerd Font 18"; */
@@ -72,6 +71,12 @@ configuration {
 /*	display-keys: ;*/
 /*	display-filebrowser: ;*/
 }
+
+/* window { */
+    /* border:           1; */
+    /* padding:          5; */
+    /* width:          80%; */
+/* } */
 @theme "~/.config/rofi/themes/lb.rasi"
 
 /* man rofi */

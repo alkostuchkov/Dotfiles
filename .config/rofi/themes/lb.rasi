@@ -35,11 +35,13 @@
     alternate-active-foreground: @active-foreground;
     active-background:           rgba ( 0, 0, 0, 0 % );
     selected-active-background:  rgba ( 170, 170, 17, 100 % );
+    lines: 15;
 }
 window {
     background-color: @background;
     border:           1;
     padding:          5;
+    /* width:          50%; */
 }
 mainbox {
     border:  0;
@@ -58,7 +60,8 @@ listview {
     border:       2px dash 0px 0px ;
     border-color: @separatorcolor;
     spacing:      2px ;
-    scrollbar:    true;
+    scrollbar:    false;
+    /* scrollbar:    true; */
     padding:      2px 0px 0px ;
 }
 element {

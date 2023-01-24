@@ -67,6 +67,7 @@ fn='Ubuntu-16:normal'
 # sb='#d79921'
 # fn='Sarasa Mono SC Nerd-17:normal'
 
+# DMENU="rofi -dmenu -theme-str 'window {width: 80%;}' -p"
 DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
 terminal="alacritty"
 # terminal="xfce4-terminal"
