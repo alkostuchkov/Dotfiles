@@ -178,7 +178,8 @@
   },
   "bracket-pair-colorizer-2.depreciation-notice": false,
   "react-native.packager.port": 19000,
-  "rust-analyzer.rustfmt.rangeFormatting.enable": true
+  "rust-analyzer.rustfmt.rangeFormatting.enable": true,
+  "vsicons.dontShowNewVersionMessage": true
   // "[python]": {
   //   "editor.tabSize": 4
   // }
