@@ -90,7 +90,7 @@ ${color}${font StyleBats:size=12}Q ${font}${color white}Kernel: ${color }$kernel
 ${color}${font StyleBats:size=12}9 ${font}${color white}Local: ${color }${addr wlan0}
 ##${color}${font StyleBats:size=12}Z ${font}${color white}Internet: ${color }${exec cat /home/inetStatus.txt}
 ##${color}${font StyleBats:size=12}Z ${font}${color white}Internet: ${color }${execpi 30 ~/.myScripts/conky/get_ip.py}
-${color}${font StyleBats:size=12}Z ${font}${color white}Internet: ${color }${execpi 30 ~/.myScripts/conky/get_ip}
+${color}${font StyleBats:size=12}Z ${font}${color white}Internet: ${color }${execpi 30 ~/.myScripts/conky/get_ip_py}
 ${color}${font StyleBats:size=12}2 ${font}${color white}CPU: ${color }${execi 1 sensors | grep 'high' | cut -c 15-22}
 #${color white}${hr 2}
 ${voffset -2}
