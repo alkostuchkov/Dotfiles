@@ -160,7 +160,8 @@ keys = [
     #  Key([mod, "shift"], "a", lazy.spawn(f"{my_term} -e sudo ranger"), desc="Launch ranger as root"),
     Key([mod, "shift"], "v", lazy.spawn(f"{HOME}/.myScripts/runVifmAsRoot.sh"), desc="Launch Vifm as root"),
     Key([mod, "shift"], "a", lazy.spawn(f"{HOME}/.myScripts/runRangerAsRoot.sh"), desc="Launch ranger as root"),
-    Key([mod, "shift"], "p", lazy.spawn(f"{HOME}/.myScripts/runThunarAsRoot.sh"), desc="Launch Thunar as root"),
+    Key([mod, "shift"], "n", lazy.spawn(f"{HOME}/.myScripts/runThunarAsRoot.sh"), desc="Launch Thunar as root"),
+    #  Key([mod, "shift"], "p", lazy.spawn(f"{HOME}/.myScripts/runThunarAsRoot.sh"), desc="Launch Thunar as root"),
     Key([mod, "shift"], "w", lazy.spawn("google-chrome-stable"), desc="Launch Chrome"),
     #  Key([mod, "shift"], "y", lazy.spawn(f"{HOME}/.config/qtile/scripts/start-stop_syncthing.sh"), desc="Start-Stop Syncthing (for Dropbox sync)"),
     # QTILE: reload_config, restart, quit WINDOW: kill, xkill

@@ -3,45 +3,55 @@
 <action>
 	<icon>catfish</icon>
 	<name>Search with Catfish</name>
+	<submenu></submenu>
 	<unique-id>1491407489088048-1</unique-id>
 	<command>catfish --hidden --path=%f</command>
 	<description>Search with Catfish</description>
+	<range></range>
 	<patterns>*</patterns>
 	<directories/>
 </action>
 <action>
 	<icon>terminator</icon>
 	<name>Open terminal here</name>
+	<submenu></submenu>
 	<unique-id>1487167230334234-7</unique-id>
 	<command>$TERMINAL --working-directory %f</command>
 	<description>Open terminal here</description>
+	<range></range>
 	<patterns>*</patterns>
 	<directories/>
 </action>
 <action>
 	<icon>terminator</icon>
 	<name>Open root terminal here</name>
+	<submenu></submenu>
 	<unique-id>1487167250821951-8</unique-id>
 	<command>pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY $TERMINAL --working-directory %f</command>
 	<description>Open root terminal here</description>
+	<range></range>
 	<patterns>*</patterns>
 	<directories/>
 </action>
 <action>
 	<icon>file-manager</icon>
 	<name>Open directory as root</name>
+	<submenu></submenu>
 	<unique-id>1426920334780834-4</unique-id>
 	<command>pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY dbus-run-session thunar %f</command>
 	<description>Open directory as root</description>
+	<range></range>
 	<patterns>*</patterns>
 	<directories/>
 </action>
 <action>
 	<icon>terminal</icon>
 	<name>Open drop down terminal here</name>
+	<submenu></submenu>
 	<unique-id>1592580767193960-1</unique-id>
 	<command>xfce4-terminal --tab --drop-down --working-directory %f</command>
 	<description>Open drop down terminal here</description>
+	<range></range>
 	<patterns>*</patterns>
 	<directories/>
 	<other-files/>
@@ -49,9 +59,11 @@
 <action>
 	<icon>terminal</icon>
 	<name>Open drop down terminal here (no tab)</name>
+	<submenu></submenu>
 	<unique-id>1592815883515735-1</unique-id>
 	<command>xfce4-terminal --drop-down --working-directory %f</command>
 	<description>Open drop down terminal here (no tab)</description>
+	<range></range>
 	<patterns>*</patterns>
 	<directories/>
 	<other-files/>
@@ -59,9 +71,11 @@
 <action>
 	<icon>system-users</icon>
 	<name>Сhange owner to YOU</name>
+	<submenu></submenu>
 	<unique-id>1487167286205165-9</unique-id>
-	<command>pkexec &quot;chown -hR $USER:$USER %F&quot;</command>
+	<command>pkexec chown -hR $USER:$USER %F</command>
 	<description>Сhange owner to YOU</description>
+	<range></range>
 	<patterns>*</patterns>
 	<directories/>
 	<audio-files/>
@@ -73,9 +87,11 @@
 <action>
 	<icon>system-users</icon>
 	<name>Change owner to ROOT</name>
+	<submenu></submenu>
 	<unique-id>1487167305851005-10</unique-id>
-	<command>pkexec &quot;chown -hR root:root %F&quot;</command>
+	<command>pkexec chown -hR root:root %F</command>
 	<description>Change owner to ROOT</description>
+	<range></range>
 	<patterns>*</patterns>
 	<directories/>
 	<audio-files/>
@@ -87,9 +103,11 @@
 <action>
 	<icon>avatar-default</icon>
 	<name>Open as root</name>
+	<submenu></submenu>
 	<unique-id>1454143890799404-3</unique-id>
 	<command>pkexec exo-open %f</command>
 	<description>Open as root</description>
+	<range></range>
 	<patterns>*</patterns>
 	<other-files/>
 	<text-files/>
@@ -97,9 +115,11 @@
 <action>
 	<icon>geany</icon>
 	<name>Edit as root</name>
+	<submenu></submenu>
 	<unique-id>1487167329872495-11</unique-id>
 	<command>pkexec $EDITOR %f</command>
 	<description>Edit as root</description>
+	<range></range>
 	<patterns>*</patterns>
 	<other-files/>
 	<text-files/>
@@ -107,27 +127,33 @@
 <action>
 	<icon>media-eject</icon>
 	<name>Mount ISO</name>
+	<submenu></submenu>
 	<unique-id>1487167346010435-12</unique-id>
 	<command>fuseiso -n -p %f %n.mount</command>
 	<description>Mount ISO</description>
+	<range></range>
 	<patterns>*.iso;*.ISO;*.bin;*.BIN;*.nrg;*.NRG;*.mdf;*.MDF</patterns>
 	<other-files/>
 </action>
 <action>
 	<icon>media-eject</icon>
 	<name>Unmount ISO</name>
+	<submenu></submenu>
 	<unique-id>1487167359149469-13</unique-id>
 	<command>fusermount -uz %f</command>
 	<description>Unmount ISO</description>
+	<range></range>
 	<patterns>*.mount</patterns>
 	<directories/>
 </action>
 <action>
 	<icon>drive-removable-media</icon>
 	<name>Mount archive</name>
+	<submenu></submenu>
 	<unique-id>1487167374506821-14</unique-id>
 	<command>/usr/lib/gvfs/gvfsd-archive file=%f</command>
 	<description>Mount archive</description>
+	<range></range>
 	<patterns>*</patterns>
 	<other-files/>
 	<text-files/>
@@ -135,54 +161,66 @@
 <action>
 	<icon>media-optical</icon>
 	<name>Convert to ISO</name>
+	<submenu></submenu>
 	<unique-id>1487167469867760-15</unique-id>
 	<command>nrg2iso %f %f.iso | mv %f.iso $(echo %f.iso | sed &apos;s|.nrg||g&apos;)</command>
 	<description>Convert to ISO</description>
+	<range></range>
 	<patterns>*.nrg;*.NRG</patterns>
 	<other-files/>
 </action>
 <action>
 	<icon>media-optical</icon>
 	<name>Convert to ISO</name>
+	<submenu></submenu>
 	<unique-id>1487167475016439-16</unique-id>
 	<command>ccd2iso %f %f.iso | mv %f.iso $(echo %f.iso | sed &apos;s|.img||g&apos;)</command>
 	<description>Convert to ISO</description>
+	<range></range>
 	<patterns>*.img;*.IMG</patterns>
 	<other-files/>
 </action>
 <action>
 	<icon>media-optical</icon>
 	<name>Convert to ISO</name>
+	<submenu></submenu>
 	<unique-id>1487167480778492-17</unique-id>
 	<command>mdf2iso %f</command>
 	<description>Convert to ISO</description>
+	<range></range>
 	<patterns>*.mdf;*.MDF</patterns>
 	<other-files/>
 </action>
 <action>
 	<icon>gnome-remote-desktop</icon>
 	<name>Start in KVM</name>
+	<submenu></submenu>
 	<unique-id>1487167514690295-18</unique-id>
 	<command>kvm --no-acpi -m 1024 %f || gksudo &apos;kvm --no-acpi -m 1024 %f&apos;</command>
 	<description>Start in KVM</description>
+	<range></range>
 	<patterns>*.iso;*.ISO;sd?;cdrom;*.vdi;*.VDI;*.vhd;*.VHD;*.vmdk;*.VMDK;*.img;*.IMG;*.raw;*.RAW;*.qcow;*.QCOW</patterns>
 	<other-files/>
 </action>
 <action>
 	<icon>gtk-media-play-ltr</icon>
 	<name>Play in audacious</name>
+	<submenu></submenu>
 	<unique-id>1487167533038699-19</unique-id>
 	<command>audacious %f</command>
 	<description>Play in audacious</description>
+	<range></range>
 	<patterns>*</patterns>
 	<audio-files/>
 </action>
 <action>
 	<icon>music-library</icon>
 	<name>Add to Playlist audacious</name>
+	<submenu></submenu>
 	<unique-id>1487167554845963-20</unique-id>
 	<command>audacious -e %F</command>
 	<description>Add to Playlist audacious</description>
+	<range></range>
 	<patterns>*</patterns>
 	<directories/>
 	<audio-files/>
@@ -190,18 +228,22 @@
 <action>
 	<icon>document-print</icon>
 	<name>Print PDF</name>
+	<submenu></submenu>
 	<unique-id>1426920334781300-26</unique-id>
 	<command>gtklp %F</command>
 	<description>Print PDF</description>
+	<range></range>
 	<patterns>*.pdf;*.PDF</patterns>
 	<other-files/>
 </action>
 <action>
 	<icon>document-print</icon>
 	<name>Print image and text</name>
+	<submenu></submenu>
 	<unique-id>1426920334781321-27</unique-id>
 	<command>gtklp %F</command>
 	<description>Print image and text</description>
+	<range></range>
 	<patterns>*</patterns>
 	<image-files/>
 	<text-files/>
@@ -209,27 +251,33 @@
 <action>
 	<icon>folder-publicshare</icon>
 	<name>Shared</name>
+	<submenu></submenu>
 	<unique-id>1487167576780227-21</unique-id>
 	<command>net usershare add %n %f &quot;&quot; Everyone:F guest_ok=y &amp;&amp; chmod 775 %f ; echo file://$(echo %f | sed &apos;s| |\%%20|g&apos;) %n.share &gt;&gt; $HOME/.config/gtk-3.0/bookmarks</command>
 	<description>Shared</description>
+	<range></range>
 	<patterns>*</patterns>
 	<directories/>
 </action>
 <action>
 	<icon>folder</icon>
 	<name>Unshared</name>
+	<submenu></submenu>
 	<unique-id>1487167589289439-22</unique-id>
 	<command>net usershare delete %n &amp;&amp; chmod 740 %f ; cat $HOME/.config/gtk-3.0/bookmarks | grep -v %n.share &gt; $HOME/.config/gtk-3.0/bookmarks.tmp &amp;&amp; mv $HOME/.config/gtk-3.0/bookmarks.tmp $HOME/.config/gtk-3.0/bookmarks</command>
 	<description>Unshared</description>
+	<range></range>
 	<patterns>*</patterns>
 	<directories/>
 </action>
 <action>
 	<icon>emblem-symbolic-link</icon>
 	<name>Make link</name>
+	<submenu></submenu>
 	<unique-id>1487167615640813-23</unique-id>
 	<command>ln -s %f %n.link</command>
 	<description>Make link</description>
+	<range></range>
 	<patterns>*</patterns>
 	<directories/>
 	<audio-files/>
@@ -241,18 +289,22 @@
 <action>
 	<icon>ghex</icon>
 	<name>Open in hex-editor</name>
+	<submenu></submenu>
 	<unique-id>1487167183545292-6</unique-id>
 	<command>ghex %f</command>
 	<description>Open in hex-editor</description>
+	<range></range>
 	<patterns>*</patterns>
 	<other-files/>
 </action>
 <action>
 	<icon>zim</icon>
 	<name>Copy way</name>
+	<submenu></submenu>
 	<unique-id>1487167159949099-5</unique-id>
 	<command>echo -n %f | xclip -selection &quot;clipboard&quot;</command>
 	<description>Copy way</description>
+	<range></range>
 	<patterns>*</patterns>
 	<directories/>
 	<audio-files/>
@@ -264,9 +316,11 @@
 <action>
 	<icon>user-info</icon>
 	<name>Determine file type</name>
+	<submenu></submenu>
 	<unique-id>1491407519497547-2</unique-id>
 	<command>file %F | zenity --text-info --title=&quot;File info&quot; --width=400 --height=200</command>
 	<description>Determine file type</description>
+	<range></range>
 	<patterns>*</patterns>
 	<directories/>
 	<audio-files/>
@@ -278,10 +332,11 @@
 <action>
 	<icon>application-x-rar</icon>
 	<name>Make RARv4</name>
+	<submenu></submenu>
 	<unique-id>1487167126990126-3</unique-id>
-	<!-- <command>x-terminal-emulator -e rar a -hp -ma4 %f.rar %N</command> -->
 	<command>$TERMINAL -e rar a -hp -ma4 %f.rar %N</command>
 	<description>Make RARv4</description>
+	<range></range>
 	<patterns>*</patterns>
 	<directories/>
 	<image-files/>
@@ -291,10 +346,11 @@
 <action>
 	<icon>application-x-rar</icon>
 	<name>Make RARv5</name>
+	<submenu></submenu>
 	<unique-id>1487167134422335-4</unique-id>
-	<!-- <command>x-terminal-emulator -e rar a -hp -ma5 %f.rar %N</command> -->
 	<command>$TERMINAL -e rar a -hp -ma5 %f.rar %N</command>
 	<description>Make RARv5</description>
+	<range></range>
 	<patterns>*</patterns>
 	<directories/>
 	<image-files/>
@@ -304,9 +360,11 @@
 <action>
 	<icon>utilities-terminal</icon>
 	<name>Run in terminal</name>
+	<submenu></submenu>
 	<unique-id>1487167662174016-24</unique-id>
 	<command>chmod +x %f; $TERMINAL --command=&quot;./%n || exit&quot;</command>
 	<description>Run in terminal</description>
+	<range></range>
 	<patterns>*.sh;*.py;*.pl</patterns>
 	<other-files/>
 	<text-files/>
@@ -314,45 +372,55 @@
 <action>
 	<icon>package-remove</icon>
 	<name>Purge package from *.desktop</name>
+	<submenu></submenu>
 	<unique-id>1484811841119620-1</unique-id>
 	<command>x-terminal-emulator --command=&quot;/usr/local/bin/my_rm_package_desktop_files.sh %F&quot;</command>
 	<description>Purge package from *.desktop</description>
+	<range></range>
 	<patterns>*.desktop</patterns>
 	<other-files/>
 </action>
 <action>
 	<icon>document-import</icon>
 	<name>Add to autostart</name>
+	<submenu></submenu>
 	<unique-id>1487167052230052-1</unique-id>
 	<command>cp %f ~/.config/autostart/</command>
 	<description>Add to autostart</description>
+	<range></range>
 	<patterns>*.desktop</patterns>
 	<other-files/>
 </action>
 <action>
 	<icon>document-export</icon>
 	<name>Remove from autostart</name>
+	<submenu></submenu>
 	<unique-id>1487167075160736-2</unique-id>
 	<command>rm ~/.config/autostart/%n</command>
 	<description>Remove from autostart</description>
+	<range></range>
 	<patterns>*.desktop</patterns>
 	<other-files/>
 </action>
 <action>
 	<icon>deb</icon>
 	<name>Unpack deb-files</name>
+	<submenu></submenu>
 	<unique-id>1491457452698861-1</unique-id>
 	<command>x-terminal-emulator -e /usr/local/bin/my_unpack_deb.sh %F</command>
 	<description>Unpack deb-files</description>
+	<range></range>
 	<patterns>*.deb</patterns>
 	<other-files/>
 </action>
 <action>
 	<icon>deb</icon>
 	<name>Make deb-package</name>
+	<submenu></submenu>
 	<unique-id>1491407586153136-4</unique-id>
 	<command>x-terminal-emulator -e /usr/local/bin/my_mk_deb.sh %F</command>
 	<description>Make deb-package</description>
+	<range></range>
 	<patterns>*</patterns>
 	<directories/>
 </action>
