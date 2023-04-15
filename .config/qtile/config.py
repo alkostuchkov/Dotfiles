@@ -334,7 +334,7 @@ group_names = [
     (" ", {"layout": "max"}),      # FM
     (" ", {"layout": "columns"}),  # SYS
     (" ", {"layout": "columns"}),  # VIRT
-    (" ", {"layout": "columns"}),  # CHAT
+    (" ", {"layout": "max"}),      # CHAT
     (" ", {"layout": "columns"}),  # GFX
     (" ", {"layout": "max"}),      # VID
     (" ", {"layout": "columns"})   # MULT
@@ -342,7 +342,7 @@ group_names = [
 
 #  groups = [Group(name, **kwargs, label="{}{}".format(name, i)) for i, (name, kwargs) in enumerate(group_names, 1)]
 groups = [Group(name, **kwargs, label=f"{name}{i}") for i, (name, kwargs) in enumerate(group_names, 1)]
- 
+
 for i, group_name in enumerate(group_names, 1):
     keys.extend([
         Key([mod], str(i),
