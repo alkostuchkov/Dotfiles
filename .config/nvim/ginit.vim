@@ -12,7 +12,8 @@ set guioptions+=c
 " set mousehide
 
 " GuiFont Monoid\ Nerd\ Font\ Mono:h15.5:w400
-GuiFont Monoid\ Nerd\ Font\ Mono:h14
+" GuiFont Monoid\ Nerd\ Font\ Mono:h14
+set guifont=mplus\ Nerd\ Font\ 18.5  " for nvim-gtk
 
 set background=dark
 colorscheme ayu
