@@ -4,7 +4,7 @@
 
 # declare options=("alacritty
 options=(
-"alacritty - $HOME/.config/alacritty/alacritty.yml"
+"alacritty - $HOME/.config/alacritty/alacritty.toml"
 "autostart_qtile - $HOME/.config/qtile/scripts/autostart.sh"
 "bash - $HOME/.bashrc"
 "bat - $HOME/.config/bat/config"
