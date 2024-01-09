@@ -7,8 +7,7 @@ show_updates_debian() {
 # Show updates for Debian Linux.
   updates=$(apt-show-versions -u -b)
 
-  if [[ -z "$updates" ]]
-  then
+  if [[ -z "$updates" ]]; then
     updates_output=
   else
     amount_updates=$(echo "$updates" | wc -l)
@@ -27,8 +26,7 @@ show_updates_arch() {
   updates_community=$(checkupdates)
   updates_aur=$(yay -Q -u -a)
 
-  if [[ -z "$updates_community" ]]
-  then
+  if [[ -z "$updates_community" ]]; then
     community_output=
   else
     updates_community_count=$(echo "$updates_community" | wc -l)
@@ -36,8 +34,7 @@ show_updates_arch() {
     let "amount_updates += $updates_community_count"
   fi
 
-  if [[ -z "$updates_aur" ]]
-  then
+  if [[ -z "$updates_aur" ]]; then
     aur_output=
   else
     updates_aur_count=$(echo "$updates_aur" | wc -l)
@@ -45,9 +42,15 @@ show_updates_arch() {
     let "amount_updates += $updates_aur_count"
   fi
 
-  notify-send -i software-update-available "Updates: $amount_updates $community_output $aur_output"
+  if [[ $amount_updates -lt 31 ]]; then
+    notify-send -i software-update-available "Updates: $amount_updates $community_output $aur_output"
+  else
+    $terminal --hold -e echo "Updates: $amount_updates $community_output $aur_output"
+    # --hold option exists for terminals: alacritty, xfce4-terminal
+  fi
 }
 
+terminal="alacritty"
 distro=$(lsb_release -a 2>/dev/null | grep -i 'distributor id' | awk '{print $3}')
 
 case $distro in
@@ -57,3 +60,4 @@ case $distro in
 esac
 
 exit 0
+
