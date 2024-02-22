@@ -1,0 +1,123 @@
+conky.config = {
+    -- Create own window instead of using desktop (required in nautilus)
+    background = true,
+    own_window = true,
+    own_window_hints = undecorated,below,skip_taskbar,sticky,skip_pager,
+    own_window_type = 'desktop', --desktop --override --normal
+    own_window_class = 'Conky',
+    own_window_title = 'Monitor Conky',
+
+    -- Use double buffering (reduces flicker, may not work for everyone) (устраняет нежелательное мерцание окна)
+    double_buffer = true,
+
+    -- fiddle with window oboje yes (сглаживание шрифтов)
+    use_spacer = right,
+    use_xft = true,
+
+    -- Update interval in seconds (частота обновления conky)
+    update_interval = 1.0,
+
+    -- Minimum size of text area (минимальный размер окна)
+    -- Maximum width of text area (максимальная ширина окна)
+    minimum_height = 5, --140, --150,
+    minimum_width = 5,
+    maximum_width = 300,
+
+    -- Draw shades? (прорисовка тени под текстом)
+    draw_shades = true,
+
+    -- Text stuff (прорисовка линий по контуру текста и границы вокруг текста)
+    draw_outline = false, --amplifies text if yes
+    draw_borders = false,
+
+    uppercase = false, -- set to yes if you want all text to be in uppercase (вывод текста в верхнeм регистре)
+
+    -- Stippled borders? (рамка вокруг conky (если есть) пунктиром или нет)
+    stippled_borders = 1,
+
+    -- border margins (размер границы в пикселах)
+    --##border_margin 1
+
+    -- border width (толщина границы окна в пикселах)
+    border_width = 1,
+
+    -- Default colors and also border colors, orange == #e5e5e5 (цвет выводимого текста и линий параметра draw_outline по-умолчанию)
+    --default_color = '#39adb5',  -- Manjaro Cyan
+    --default_color = '#e2a0a5',  -- Manjaro Magenta
+    --default_color = '#24D2AF',  -- Manjaro Green
+    default_color = '#ffb62c',  -- Manjaro Orange
+    --default_color = 'orange',
+    --default_outline_color = 'grey90',
+    default_outline_color = '#dbdcd5', -- Manjaro White
+
+    -- own_window_colour black (прозрачность вывода окна conky yes/no)
+    own_window_transparent = true,
+
+    -- Text alignment, other possible values are commented (положение на экране)
+    --alignment top_left (верхний левый угол)
+    alignment = 'top_right',
+    --alignment bottom_left (нижний левый угол)
+    --alignment bottom_right (нижний правый угол)
+
+    -- Gap between borders of screen and text (расстояния от левого\правого (верхнего\нижнего) края экрана в пикселах)
+    gap_x = 7,
+    gap_y = 47, --23, --15,
+
+    -- stuff after 'TEXT' will be formatted on screen (текст (кодировка, шрифт), степень прозрачности окна conky от 0 до 1)
+
+    override_utf8_locale = true,
+    --#xftfont Taurus:size=11.5
+    font = 'BauhausC Medium:size=13', 
+    --(gmail.png -p 1,659) (ymail.png -p 1,692)
+    --font = 'Taurus:size=11',
+    xftalpha = 1
+}
+
+conky.text = [[
+${color white}${hr 2}
+${color white}${alignc}${voffset 6}${time %A, %e %B %Y}
+
+${color white}${font neuropol x free:size=30}${alignc}${time %H:%M:%S}${font}
+${voffset -9}
+${color white}${font OpenLogos:size=30}${alignc}B${font OpenLogos:size=35}^${font}
+${voffset -30}
+${hr 2}
+${voffset 2}${color}${font StyleBats:size=12}O ${font}${color white}Uptime: ${color }$uptime
+${color}${font StyleBats:size=12}Q ${font}${color white}Kernel: ${color }$kernel
+##${color}${font StyleBats:size=12}9 ${font}${color white}Local: ${color }${addr enp1s7}
+${color}${font StyleBats:size=12}9 ${font}${color white}Local: ${color }${addr wlan0}
+##${color}${font StyleBats:size=12}Z ${font}${color white}Internet: ${color }${exec cat /home/inetStatus.txt}
+##${color}${font StyleBats:size=12}Z ${font}${color white}Internet: ${color }${execpi 30 ~/.myScripts/conky/get_ip.py}
+${color}${font StyleBats:size=12}Z ${font}${color white}Internet: ${color }${execi 60 ~/.myScripts/conky/get_ip}
+${color}${font StyleBats:size=12}2 ${font}${color white}CPU: ${color }${execi 60 sensors | grep 'high' | awk '{print $2}'}
+# ${color}${font StyleBats:size=12}2 ${font}${color white}CPU: ${color }${execi 1 sensors | grep 'CPU Temperature:' | cut -c 26-33}
+#${color white}${hr 2}
+${voffset -2}
+${color white}CPU 1: ${color}$font${cpu cpu1}% $alignr${color white}CPU 2: ${color}$font${cpu cpu2}%
+${color white}${cpubar cpu1 3,147 FFFFFF FFFFFF}$alignr${cpubar cpu2 3,147 FFFFFF FFFFFF}
+${voffset -7}
+${color}${font PizzaDude Bullets:size=12}4 ${font}${color white}Top 5                      PID      CPU%    RAM%
+${color}${top name 1} ${alignr}${TOP pid 1}   ${top cpu 1}   ${top mem 1}
+${color white}${top name 2} ${alignr}${TOP pid 2}   ${top cpu 2}   ${top mem 2}
+${top name 3} ${alignr}${TOP pid 3}   ${top cpu 3}   ${top mem 3}
+${top name 4} ${alignr}${TOP pid 4}   ${top cpu 4}   ${top mem 4}
+${top name 5} ${alignr}${TOP pid 5}   ${top cpu 5}   ${top mem 5}
+
+${color white}RAM:  ${color} $memperc%  $mem/ $memmax
+${color white}${membar 3,300}
+${color white}SWAP: ${color } $swapperc%  $swap/ $swapmax
+${color white}${swapbar 3,300}
+
+${color white}Root:    ${color }${fs_used /}/ ${fs_free /}/ ${fs_size /}
+${color white}${fs_bar 3,300 /}
+${color white}Home:    ${color }${fs_used /home}/ ${fs_free /home}/ ${fs_size /home}
+${color white}${fs_bar 3,300 /home}
+${voffset 6}${color}${font PizzaDude Bullets:size=12}S${font}  ${color white}Download: ${color }${totaldown wlan0}
+${voffset 1}${color}${font PizzaDude Bullets:size=12}r${font}  ${color white}Input: ${color } ${downspeed wlan0}/s ${alignr}${downspeedgraph enp1s7 10,130 FFFFFF FFFFFF}
+
+${color}${font PizzaDude Bullets:size=12}M${font}  ${color white}Upload: ${color }${totalup wlan0}
+${voffset 1}${color}${font PizzaDude Bullets:size=12}v${font}  ${color white}Output: ${color }${upspeed wlan0} /s ${alignr}${upspeedgraph enp1s7 10,130 FFFFFF FFFFFF}
+${color white}${hr 2}
+]]
+
+
