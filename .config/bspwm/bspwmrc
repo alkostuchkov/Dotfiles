@@ -1,0 +1,93 @@
+#! /usr/bin/env bash
+
+pgrep -f sxhkd > /dev/null || sxhkd -c $HOME/.config/bspwm/sxhkd/sxhkdrc &
+$HOME/.config/polybar/launch.sh
+
+bspc monitor -d "1  " "2  " "3  " "4  " "5  " "6  " "7  " "8  " "9  "
+
+bspc config border_width 3
+bspc config window_gap   4
+
+bspc config normal_border_color "#1d2330"
+bspc config active_border_color "#ff00ff"
+bspc config focused_border_color "#2eb398"
+bspc config presel_feedback_color "#ff0000"
+
+bspc config split_ratio          0.5
+
+bspc config focus_follows_pointer true
+bspc config pointer_modifier	super
+
+# Set the desktop layout to monocle if there’s only one tiled window in the tree.
+bspc config single_monocle	     false
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config paddingless_monocle	 true
+
+# Autostart
+run_once() {
+  for prog in "${progs[@]}"; do
+    prog_name=$(echo ${prog} | awk -F" " '{print $1}')
+    pgrep -u $USER -f "${prog_name}" > /dev/null || (${prog} &)
+    # pgrep -u $USER -fx "${prog}" > /dev/null || (${prog} &)
+  done
+}
+
+progs=(
+"sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc"
+"$HOME/.config/bspwm/scripts/subscribes.sh"
+"setxkbmap -layout us,ru -option grp:caps_toggle"
+"/usr/lib/xfce4/notifyd/xfce4-notifyd"
+"/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+# "polybar -c $HOME/.config/polybar/config.ini"
+"xrdb $HOME/.Xresources"
+"nitrogen --restore"
+"volumeicon"
+"nm-applet"
+"xfce4-power-manager"
+"xfce4-clipman"
+"picom --config $HOME/.config/picom/picom.conf"
+"conky -c $HOME/.myScripts/conky/bspwm_conkyrc"
+# "/usr/bin/python /usr/bin/udiskie"
+"udiskie"
+"xiccd"
+# "python /usr/bin/redshift-gtk"
+"redshift-gtk"
+"$HOME/Programs/CheckInternetConnection/CheckInternetConnection"
+"$HOME/Programs/AppImageApplications/BreakTimer.AppImage"
+"birdtray"
+"xsetroot -cursor_name left_ptr"
+# # "xmodmap -e \"keycode 135 = Super_R\""
+)
+run_once
+
+bspc rule -a "VirtualBox Manager" follow=on desktop='^5'
+bspc rule -a "TelegramDesktop" follow=on desktop='^6'
+bspc rule -a "ViberPC" follow=on desktop='^6'
+bspc rule -a "Gimp-2.10" follow=on desktop='^7'
+bspc rule -a "thunderbird" follow=on desktop='^9'
+# bspc rule -a "thunderbird:*:Password Required - Mozilla Thunderbird" state=floating
+# bspc rule -a Lutris state=floating follow=off rectangle=1200x700+360+190 desktop='^6'
+
+# Floating apps
+bspc rule -a "Arandr" state=floating center=on
+bspc rule -a "Deadbeef" state=floating center=on
+bspc rule -a "Galculator" state=floating center=on
+bspc rule -a "BreakTimer" state=floating center=on
+bspc rule -a "Tor Browser" state=floating center=on
+bspc rule -a "gnome-font-viewer" state=floating center=on
+bspc rule -a "xfce4-power-manager-settings" state=floating center=on
+bspc rule -a "Pavucontrol" state=floating center=on
+bspc rule -a "Gcolor3" state=floating center=on
+bspc rule -a "qt5ct" state=floating center=on
+bspc rule -a "Volumeicon" state=floating center=on
+bspc rule -a "Lxappearance" state=floating center=on
+bspc rule -a "Blueman-manager" state=floating center=on
+bspc rule -a "gdebi-gtk" state=floating center=on
+bspc rule -a "*:*:About Mozilla Firefox" state=floating center=on
+bspc rule -a "*:*:О Mozilla Firefox" state=floating center=on
+bspc rule -a "*:*:Terminator Preferences" state=floating center=on
+bspc rule -a "*:*:Терминатор Параметры" state=floating center=on
+bspc rule -a "Nm-connection-editor" state=floating center=on
+# bspc rule -a "" state=floating center=on
+

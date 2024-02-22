@@ -1,0 +1,170 @@
+# TODO export SXHKD_SHELL=/usr/bin/bash into .profile
+# to execute embedded shell scripts!!!
+
+# Personal keybindings
+# My dmenu scripts <CTRL + ALT> + KEY
+ctrl + alt + {c, p, s, x}
+  {$HOME/.myScripts/dmscripts/dm-edit-configs.sh, \
+   $HOME/.myScripts/dmscripts/dm-run-programs.sh, \
+   $HOME/.myScripts/dmscripts/dm-run-scripts.sh, \
+   $HOME/.myScripts/dmscripts/dm-system-exit.sh}
+
+# My applications <SUPER + ALT> + KEY
+# Launchers
+super + alt + {r, d}
+  {rofi run -show drun -show-icons, \
+   dmenu_run -i -l 10 -nb '#263238' -nf '#24d2af' -sb '#009185' -p 'Run: ' -fn 'Iosevka-17:normal'}
+
+# Terminals
+super + {_, alt +, shift +} Return
+  {$TERMINAL, terminator, xfce4-terminal}
+
+# Applications
+super + alt + {c, g, m, s, b, w, Print, u, e}
+  {code,goldendict,gvim,subl,brave,firefox,flameshot gui,qutebrowser,dolphin}
+
+super + alt + {v, a, n, t, p}
+  {$TERMINAL -e $HOME/.config/vifm/scripts/vifmrun, \
+   $TERMINAL -e $SHELL -c ranger, \
+   thunar, \
+   $HOME/Programs/Telegram/Telegram -workdir $HOME/.local/share/TelegramDesktop/ -- %u, \
+   $HOME/Programs/PyCharm-Community/bin/pycharm.sh}
+
+# My applications as Root <SUPER + SHIFT + ALT> + KEY
+super + shift + alt + {v, a, n}
+  {$HOME/.myScripts/runVifmAsRoot.sh, \
+   $HOME/.myScripts/runRangerAsRoot.sh, \
+   $HOME/.myScripts/runThunarAsRoot.sh}
+
+ctrl + shift + Escape
+  $TERMINAL -e $SHELL -c htop
+
+# <SUPER> + <F1-F12>
+# Brightness
+{XF86MonBrightnessUp, XF86MonBrightnessDown}
+  {xbacklight -inc 10, xbacklight -dec 10}
+
+# ALSA volume control
+super + {F9, F8, F7}
+  {$HOME/.myScripts/volume_up.sh, \
+   $HOME/.myScripts/volume_down.sh, \
+   pactl set-sink-mute @DEFAULT_SINK@ toggle}
+
+# <ALT> + <F1-F12>
+alt + F4
+  $HOME/Programs/ByeBye/ByeBye
+
+# Hotkeys BSPWM
+# Quit/Restart bspwm
+super + shift + {q, r}
+  bspc {quit, wm -r}
+
+# Reload sxhkd config
+super + shift + e
+  pkill -USR1 -x sxhkd
+
+# Close and Kill
+super + shift + {_, ctrl +} c
+	bspc node -{c, k}
+
+# Alternate between the tiled and monocle layout
+super + Tab
+  bspc desktop -l next
+
+# # send the newest marked node to the newest preselected node
+# super + y
+  # bspc node newest.marked.local -n newest.!automatic.local
+#
+# # swap the current node and the biggest node
+# super + g
+  # bspc node -s biggest
+
+# STATE/FLAGS
+# Set the window state
+# A TILDE (~) in front of the desired state which means when pressed again go to the previous state!!!
+super + {t, shift + t, shift + f, f}
+  bspc node -t ~{tiled,pseudo_tiled,floating,fullscreen}
+
+# Set the node flags
+super + ctrl + {m, o, s, p}
+  bspc node -g {marked,locked,sticky,private}
+
+# HIDE/SHOW
+# Set the focused node hidden
+alt + n
+  bspc node --flag hidden=on
+
+# Hide all local nodes
+alt + shift + n
+  for i in $(bspc query -N -n .local); \
+  do \
+    bspc node $i -g hidden=on; \
+  done
+
+# Show all hidden local nodes
+super + ctrl + n
+  for i in $(bspc query -N -n .local.hidden); \
+  do \
+    bspc node $i -g hidden=off; \
+  done
+
+# FOCUS/SWAP
+# Focus the node in the given direction
+super + {_, shift + }{h, j, k, l}
+  bspc node -{f,s} {west,south,north,east}
+
+# # focus the node for the given path jump
+# super + {p,b,comma,period}
+  # bspc node -f @{parent,brother,first,second}
+
+# Focus the next/previous node in the current desktop
+alt + {j, k}
+  bspc node -f {next,prev}.local
+
+# Focus the last node/desktop
+super + Escape
+  bspc desktop -f last
+alt + Tab
+  bspc node -f last
+
+
+# Focus the next/previous desktop in the current monitor
+super + {Left, Right}
+  bspc desktop -f {prev,next}.local
+
+# Focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+  bspc {desktop -f,node -d} focused:'^{1-9,10}' --follow
+
+# PRESELECT
+# Preselect the direction
+alt + shift + {h, j, k, l}
+  bspc node -p {west,south,north,east}
+
+# Cancel the preselection for the focused node
+alt + shift + Escape
+  bspc node -p cancel
+
+# MOVE/RESIZE
+# Resize a window by moving one of its side outward
+super + ctrl + {h, j, k, l}
+  {bspc node -z left -20 0; bspc node -z right -20 0, \
+   bspc node -z bottom 0 20; bspc node -z top 0 20, \
+   bspc node -z bottom 0 -20; bspc node -z top 0 -20, \
+   bspc node -z left 20 0; bspc node -z right 20 0}
+
+# Resize a floating window
+super + shift + {Left, Down, Up, Right}
+  {bspc node -z right -20 20, \
+   bspc node -z bottom 20 20, \
+   bspc node -z bottom 20 -20, \
+   bspc node -z right 20 20}
+
+# Move a floating window
+super + ctrl + {Left, Down, Up, Right}
+  bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# Toggle split: vertical/horizontal
+super + {_, shift + } s
+	bspc node '@parent' -R {_, -}90
+
