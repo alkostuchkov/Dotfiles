@@ -8,7 +8,7 @@ options=(
 "Display - lxrandr"
 "Sound - pavucontrol"
 "Qt5 - qt5ct"
-"quit")
+"Quit")
 
 # Colors:
 # Materia Manjaro
@@ -16,7 +16,8 @@ nf='#09dbc9'
 nb='#222b2e'
 sf='#dbdcd5'
 sb='#009185'
-fn='Ubuntu-16:normal'
+fn='Iosevka-17:normal'
+# fn='Ubuntu-16:normal'
 # Gruvbox
 # nf='#fea63c'
 # nb='#282828'

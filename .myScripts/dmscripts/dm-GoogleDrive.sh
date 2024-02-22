@@ -22,8 +22,8 @@ fn='Ubuntu-16:normal'
 # sb='#d79921'
 # fn='Sarasa Mono SC Nerd-17:normal'
 
-# choice=$(printf '%s\n' "${options[@]}" | dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Mount/Unmount:')
-choice=$(printf '%s\n' "${options[@]}" | ${DMENU} 'Mount/Unmount:')
+choice=$(printf '%s\n' "${options[@]}" | dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Mount/Unmount:')
+# choice=$(printf '%s\n' "${options[@]}" | ${DMENU} 'Mount/Unmount:')
 
 if [[ "$choice" == "quit" ]]; then
     echo "Program terminated." && exit 1

@@ -6,10 +6,13 @@
 options=(
 "alacritty - $HOME/.config/alacritty/alacritty.toml"
 "autostart_qtile - $HOME/.config/qtile/scripts/autostart.sh"
+"awesome - $HOME/.config/awesome/rc.lua"
+"awesome - $HOME/.config/awesome/themes/mymaterial/theme.lua"
 "bash - $HOME/.bashrc"
 "bat - $HOME/.config/bat/config"
-"conky - $HOME/.myScripts/conky/conkyrc1"
-"conky - $HOME/.myScripts/conky/conkyrc_i3"
+"bspwm - $HOME/.config/bspwm/bspwmrc"
+"conky - $HOME/.myScripts/conky/conkyrc"
+"conky (bspwm) - $HOME/.myScripts/conky/bspwm_conkyrc"
 "compton - $HOME/.config/compton.conf"
 "dm-change-alacritty-colors - $HOME/.myScripts/dmscripts/dm-change-alacritty-colors.sh"
 "dm-edit-configs - $HOME/.myScripts/dmscripts/dm-edit-configs.sh"
@@ -24,6 +27,9 @@ options=(
 "dm-search - $HOME/.myScripts/dmscripts/dm-search.sh"
 "dm-system-exit - $HOME/.myScripts/dmscripts/dm-system-exit.sh"
 "dm-unicode - $HOME/.myScripts/dmscripts/dm-unicode.sh"
+"dwm - $HOME/Programs/DWM/config.h"
+"dwmblocks - $HOME/Programs/DWM/dwmblocks/blocks.h"
+"dwmpatches - $HOME/Programs/DWM/patches.h"
 "fish - $HOME/.config/fish/config.fish"
 "fonts.conf - $HOME/.config/fontconfig/fonts.conf"
 "homepage - $HOME/.surf/homepage.html"
@@ -35,23 +41,30 @@ options=(
 "nvim - $HOME/.config/nvim/init.vim"
 "gvim - $HOME/.config/nvim/ginit.vim"
 "picom - $HOME/.config/picom/picom.conf"
-"polybar - $HOME/.config/polybar/config"
+"polybar config - $HOME/.config/polybar/config.ini"
+"polybar modules - $HOME/.config/polybar/modules.ini"
+"polybar colors - $HOME/.config/polybar/colors.ini"
+"polybar launch - $HOME/.config/polybar/launch.sh"
 "profile - $HOME/.profile"
 "qtile - $HOME/.config/qtile/config.py"
+"qtile.log - $HOME/.local/share/qtile/qtile.log"
 "Qtile_My_Keys - $HOME/.config/qtile/Qtile_My_Keys.txt"
 "qutebrowser - $HOME/.config/qutebrowser/config.py"
 "ranger_rc.conf - $HOME/.config/ranger/rc.conf"
 "ranger_rifle.conf - $HOME/.config/ranger/rifle.conf"
 "ranger_commands.py - $HOME/.config/ranger/commands.py"
+"redshift - $HOME/.config/redshift/redshift.conf"
 "rofi - $HOME/.config/rofi/config.rasi"
+"sxhkd - $HOME/.config/bspwm/sxhkd/sxhkdrc"
 "terminator - $HOME/.config/terminator/config"
 "udiskie - $HOME/.config/udiskie/config.yml"
 "vifm - $HOME/.config/vifm/vifmrc"
 "vim - $HOME/.vimrc"
 "xterm - $HOME/.XTerm"
 "xresources - $HOME/.Xresources"
+"xsession-errors - $HOME/.xsession-errors"
 "zsh - $HOME/.zshrc"
-"quit")
+"Quit")
 
 # Colors:
 # Materia Manjaro
@@ -59,7 +72,8 @@ nf='#09dbc9'
 nb='#222b2e'
 sf='#dbdcd5'
 sb='#009185'
-fn='Ubuntu-16:normal'
+fn='Iosevka-17:normal'
+# fn='Ubuntu-16:normal'
 # Gruvbox
 # nf='#fea63c'
 # nb='#282828'
