@@ -13,20 +13,27 @@
 ###############################################################################
 export HOME=$(echo /home/$USER)
 
+# # export LIBVA_DRIVERS_PATH="/usr/lib/xorg/modules/drivers"
+# # export LIBVA_DRIVER_NAME="vdpau"
+#export LIBVA_DRIVER_NAME="nvidia"
+# # export VDPAU_DRIVER="nvidia"
+
+export SXHKD_SHELL="/usr/bin/bash"
+
 # export GHCUP_INSTALL_BASE_PREFIX="$HOME/.config"  # for GHCUP
 # export GOPATH="$HOME/go"
 # export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications:$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin:$HOME/Programs/Android_SDK/platform-tools:$GOPATH/bin
-# export EDITOR="vim"   #  vim is either a link to nvim    or just  vim
-# export VISUAL="gvim"  # gvim is either a link to nvim-qt or just gvim
-# export TERM="xterm-256color"
-# export TERMINAL="alacritty"
-# export BROWSER="firefox"
+export EDITOR="vim"   #  vim is either a link to nvim    or just  vim
+export VISUAL="gvim"  # gvim is either a link to nvim-qt or just gvim
+export TERM="xterm-256color"
+export TERMINAL="alacritty"
+export BROWSER="brave"
 # export RANGER_LOAD_DEFAULT_RC=FALSE  # to avoid loading ranger's config twice
 # # export BROWSER="qutebrowser"
 # #export EDITOR="emacs -nw"
 # # export QT_QPA_PLATFORMTHEME="qt5ct"
 # # export MANPAGER="sh -c 'col -bx | bat --theme gruvbox-dark -l man -p'"  # $MANPAGER use batcat to read mans
-# export MANPAGER="sh -c 'col -bx | bat -l man -p'"  # theme moved to the .config/bat/config
+#export MANPAGER="sh -c 'col -bx | bat -l man -p'"  # theme moved to the .config/bat/config
 # export ANDROID_SDK="$HOME/Programs/Android_SDK"
 #
 # export XDG_CONFIG_HOME="$HOME/.config"
