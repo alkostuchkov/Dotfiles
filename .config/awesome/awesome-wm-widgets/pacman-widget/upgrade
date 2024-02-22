@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+terminal="alacritty"
+# pkexec --disable-internal-agent pacman -Syu --noconfirm
+$terminal --hold -e yay -Syu
+# $terminal -e yay -Syu && $SHELL
+
