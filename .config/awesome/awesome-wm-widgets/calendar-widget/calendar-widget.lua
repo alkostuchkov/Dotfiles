@@ -48,7 +48,7 @@ local function worker(user_args)
 
     calendar_widget:buttons(
             awful.util.table.join(
-                    awful.button({}, 1, function() cal_notify("cal "..yr) end)
+                    awful.button({}, 1, function() cal_notify("cal -m "..yr) end)
             )
     )
 
