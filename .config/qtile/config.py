@@ -5,21 +5,27 @@ import re
 import socket
 import subprocess
 from typing import List
-from libqtile import bar, layout, widget, hook
-from libqtile.config import Click, Drag, Group, Key, Screen, KeyChord, Match
+from libqtile import qtile, bar, layout, widget, hook
+from libqtile.config import (
+        Click,
+        Drag,
+        Group,
+        Key,
+        Screen,
+        KeyChord,
+        Match,
+        )
 from libqtile.lazy import lazy
-from libqtile import qtile
 from libqtile.backend.base import Internal
 
-##### IMPORTs of my modules #####
-from modules import memory
-from modules import all_windows_count
-from modules import syncthing
-from modules import show_updates
-from colors.materia_manjaro import colors
-#  from colors.darcula import colors
-#  from colors.palenight import colors
-#  from colors.gruvbox_material import colors
+##### IMPORTs from my modules #####
+from modules import (
+    colors,
+    memory,
+    all_windows_count,
+    syncthing,
+    show_updates,
+)
 
 
 def get_all_netifaces(path_to_state="/sys/class/net/"):
@@ -70,6 +76,7 @@ my_mono_bold_font = "Ubuntu Mono Bold"
 SHELL = os.getenv("SHELL")
 HOME = os.path.expanduser("~")
 my_config = f"{HOME}/.config/qtile/config.py"
+colors = colors.materia_manjaro
 
 # Check which network iface is upped.
 path_to_state = "/sys/class/net/"  # enp2s0/operstate"
@@ -79,91 +86,82 @@ upped_netiface = get_upped_netiface(netifaces)
 
 ##### COLORS #####
 # All color schemes are in dir colors. This theme is for example.
-#  # Materia Manjaro
-#  colors = {
-    #  "bg_panel": "#263238",  # background
-    #  "bg_current_screentab": "#585E72",  # 00
-    #  "fg_group_names": "#dbdcd5",  # 00 (08)
-    #  "bg_current_tab": "#009185",  # 00 (foreground)
-    #  "bg_other_tabs_and_odd_widgets": "#6182b8",  # 5
-    #  "bg_even_widgets": "#82aaff",  # 13
-    #  "fg_windowname": "#24d2af",  # 00 (06)
-    #  "fg_cpu": "#89ddff",  # 15
-    #  "fg_memory": "#ffcb6b",  # 12
-    #  "fg_netspeed": "#c3e88d",  # 11
-    #  "fg_layout": "#eeffff",  # foreground (08)
-    #  "fg_keyboard": "#39adb5",  # 7
-    #  "fg_date": "#39adb5",  # 7
-    #  "bg_systray": "#263238",  # background
-    #  "fg_updates": "#e2e0a5",  # 00
-    #  "fg_weather": "#eb7bef",  # 00 (14)
-    #  "bg_chord_dmenu": "#ffcb6b",  # 12
-    #  "fg_chord_dmenu": "#000000",  # 1
-    #  "fg_syncthing_active": "#91b859",  # 3
-    #  "fg_syncthing_inactive": "#ff5370",  # 10
-    #  "fg_active_group": "#e4c962",  # 00 (04)
-    #  "border_focus": "#2eb398",  # 00 (foreground)
-    #  "border_normal": "#1d2330",  # 00
-    #  "fg_textbox": "#89ddff"  # 15
-#  }
+# # Materia Manjaro
+# colors = {
+#     "bg_panel": "#263238",  # background
+#     "bg_current_screentab": "#585E72",  # 00
+#     "fg_group_names": "#dbdcd5",  # 00 (08)
+#     "bg_current_tab": "#009185",  # 00 (foreground)
+#     "bg_other_tabs_and_odd_widgets": "#6182b8",  # 5
+#     "bg_even_widgets": "#82aaff",  # 13
+#     "fg_windowname": "#24d2af",  # 00 (06)
+#     "fg_cpu": "#89ddff",  # 15
+#     "fg_memory": "#ffcb6b",  # 12
+#     "fg_netspeed": "#c3e88d",  # 11
+#     "fg_layout": "#eeffff",  # foreground (08)
+#     "fg_keyboard": "#39adb5",  # 7
+#     "fg_date": "#39adb5",  # 7
+#     "bg_systray": "#263238",  # background
+#     "fg_updates": "#e2e0a5",  # 00
+#     "fg_weather": "#eb7bef",  # 00 (14)
+#     "bg_chord_dmenu": "#ffcb6b",  # 12
+#     "fg_chord_dmenu": "#000000",  # 1
+#     "fg_syncthing_active": "#91b859",  # 3
+#     "fg_syncthing_inactive": "#ff5370",  # 10
+#     "fg_active_group": "#e4c962",  # 00 (04)
+#     "border_focus": "#2eb398",  # 00 (foreground)
+#     "border_normal": "#1d2330",  # 00
+#     "fg_textbox": "#89ddff"  # 15
+# }
 
 ##### KEYBINDINGS #####
 keys = [
-# <SUPER> + FUNCTION KEYS
+# <SUPER> + <ALT> + KEYS
+    Key([mod, alt], "space", lazy.spawn(f"{HOME}/.myScripts/touchpadONOFF.sh"), desc="Touchpad On/Off"),
+    #  # FLIP LAYOUT FOR BSP LAYOUT
+    #  Key([mod], "k", lazy.layout.flip_up(), desc=""),
+    #  Key([mod], "j", lazy.layout.flip_down(), desc=""),
+    #  Key([mod], "h", lazy.layout.flip_left(), desc=""),
+    #  Key([mod], "l", lazy.layout.flip_right(), desc=""),
+
     #  Key([mod], "Return", lazy.spawn(f"{HOME}/.myScripts/runAlacrittyDiscreteGr.sh"), desc="Launch terminal"),
     Key([mod], "Return", lazy.spawn(my_term), desc="Launch terminal"),
-    Key([mod], "r", lazy.spawn("rofi run -show drun -show-icons"), desc="Run App Lancher"),
-    Key([mod], "d", lazy.spawn(f"dmenu_run -i -l 10 -nb '#263238' -nf '#24d2af' -sb '#009185' -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
-    #  Key([mod], "d", lazy.spawn("dmenu_run -nb #282828 -nf #e3a84e -sb #665c54 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Gruvbox
-    Key([mod], "Print", lazy.spawn("flameshot gui"), desc="Launch flameshot (take screenshot)"),
-    Key([mod], "w", lazy.spawn("/usr/bin/firefox"), desc="Launch Firefox"),
-    Key([mod], "u", lazy.spawn("qutebrowser"), desc="Launch qutebrowser"),
-    Key([mod], "e", lazy.spawn("dolphin"), desc="Launch File Manager"),
-    Key([mod], "n", lazy.spawn("thunar"), desc="Launch File Manager"),
-    Key([mod], "i", lazy.spawn("/usr/bin/octopi"), desc="Launch Octopi"),
-    Key([mod], "a", lazy.spawn(f"{my_term} -e {SHELL} -c ranger"), desc="Launch ranger"),
-    Key([mod], "t", lazy.spawn(f"{HOME}/Programs/Telegram/Telegram -workdir {HOME}/.local/share/TelegramDesktop/ -- %u"), desc="Launch Telegram"),
-    Key([mod], "v", lazy.spawn(f"{my_term} -e {HOME}/.config/vifm/scripts/vifmrun"), desc="Launch vifm"),
-    Key([mod], "p", lazy.spawn(f"{HOME}/Programs/PyCharm-Community/bin/pycharm.sh"), desc="Launch PyCharm"),
-    Key([mod], "c", lazy.spawn("code"), desc="Launch VSCodium"),
-    Key([mod], "g", lazy.spawn("goldendict"), desc="Launch GoldenDict"),
-    Key([mod], "m", lazy.spawn("gvim"), desc="Launch GVim"),
-    Key([mod], "s", lazy.spawn(f"{HOME}/Programs/SublimeText/sublime_text"), desc="Run Sublime Text"),
-    Key([mod], "b", lazy.spawn("brave"), desc="Run Brave"),
-    #  Key([mod], "m", lazy.spawn("/usr/bin/emacsclient -c -a 'emacs'"), desc="Launch Emacsclient"),
-    #  Key([mod], "w", lazy.spawn(f"{HOME}/.myScripts/runFirefoxDiscreteGr.sh"), desc="Launch Firefox"),
-    #  Key([mod], "g", lazy.spawn(f"{HOME}/.myScripts/runGimpDiscreteGr.sh"), desc="Run GIMP DiscreteGraphics"),
-    #  Key([mod], "a", lazy.spawn(f"{my_term} -e {SHELL} -c {HOME}/.myScripts/runRangerDiscreteGr.sh"), desc="Run ranger DiscreteGraphics"),
-    #  Key([mod], "x", lazy.spawn("xterm"), desc="Run XTerm"),
-    # TOGGLE FULLSCREEN
-    Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
-    # SWITCH BETWEEN GROUPS (DESKTOPS)
-    Key([mod], "Right", lazy.screen.next_group(), desc="Switch to the right group"),
-    Key([mod], "Left", lazy.screen.prev_group(), desc="Switch to the left group"),
-    # SWITCH BETWEEN LAYOUTS
-    Key([mod], "Tab", lazy.next_layout(), desc="Switch to the next layout"),
-    Key([mod, "shift"], "Tab", lazy.prev_layout(), desc="Switch to the previous layout"),
-    # CHANGE FOCUS
-    Key([mod], "k", lazy.layout.up(), desc="Move focus up in stack pane"),
-    Key([mod], "j", lazy.layout.down(), desc="Move focus down in stack pane"),
-    Key([mod], "h", lazy.layout.left(), desc="Move focus left in stack pane"),
-    Key([mod], "l", lazy.layout.right(), desc="Move focus right in stack pane"),
-    #  Key([mod], "Up", lazy.layout.up(), desc="Move focus up in stack pane"),
-    #  Key([mod], "Down", lazy.layout.down(), desc="Move focus down in stack pane"),
-    #  Key([mod], "Left", lazy.layout.left(), desc="Move focus left in stack pane"),
-    #  Key([mod], "Right", lazy.layout.right(), desc="Move focus right in stack pane"),
-    Key([mod], "space", lazy.layout.next(), desc="Switch window focus to other pane(s) of stack"),
+    Key([mod, alt], "r", lazy.spawn("rofi run -show drun -show-icons"), desc="Run App Lancher"),
+    Key([mod, alt], "d", lazy.spawn(f"dmenu_run -i -l 10 -nb '#263238' -nf '#24d2af' -sb '#009185' -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
+    #  Key([mod, alt], "d", lazy.spawn("dmenu_run -nb #282828 -nf #e3a84e -sb #665c54 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Gruvbox
+    Key([mod, alt], "Print", lazy.spawn("flameshot gui"), desc="Launch flameshot (take screenshot)"),
+    Key([mod, alt], "w", lazy.spawn("/usr/bin/firefox"), desc="Launch Firefox"),
+    Key([mod, alt], "u", lazy.spawn("qutebrowser"), desc="Launch qutebrowser"),
+    Key([mod, alt], "e", lazy.spawn("dolphin"), desc="Launch File Manager"),
+    Key([mod, alt], "n", lazy.spawn("thunar"), desc="Launch File Manager"),
+    Key([mod, alt], "i", lazy.spawn("/usr/bin/octopi"), desc="Launch Octopi"),
+    Key([mod, alt], "a", lazy.spawn(f"{my_term} -e {SHELL} -c ranger"), desc="Launch ranger"),
+    Key([mod, alt], "t", lazy.spawn(f"{HOME}/Programs/Telegram/Telegram -workdir {HOME}/.local/share/TelegramDesktop/ -- %u"), desc="Launch Telegram"),
+    Key([mod, alt], "v", lazy.spawn(f"{my_term} -e {HOME}/.config/vifm/scripts/vifmrun"), desc="Launch vifm"),
+    Key([mod, alt], "p", lazy.spawn(f"{HOME}/Programs/PyCharm-Community/bin/pycharm.sh"), desc="Launch PyCharm"),
+    Key([mod, alt], "c", lazy.spawn("code"), desc="Launch VSCodium"),
+    Key([mod, alt], "g", lazy.spawn("goldendict"), desc="Launch GoldenDict"),
+    Key([mod, alt], "m", lazy.spawn("gvim"), desc="Launch GVim"),
+    Key([mod, alt], "s", lazy.spawn(f"{HOME}/Programs/SublimeText/sublime_text"), desc="Run Sublime Text"),
+    Key([mod, alt], "b", lazy.spawn("brave"), desc="Run Brave"),
+    #  Key([mod, alt], "m", lazy.spawn("/usr/bin/emacsclient -c -a 'emacs'"), desc="Launch Emacsclient"),
+    #  Key([mod, alt], "w", lazy.spawn(f"{HOME}/.myScripts/runFirefoxDiscreteGr.sh"), desc="Launch Firefox"),
+    #  Key([mod, alt], "g", lazy.spawn(f"{HOME}/.myScripts/runGimpDiscreteGr.sh"), desc="Run GIMP DiscreteGraphics"),
+    #  Key([mod, alt], "a", lazy.spawn(f"{my_term} -e {SHELL} -c {HOME}/.myScripts/runRangerDiscreteGr.sh"), desc="Run ranger DiscreteGraphics"),
+    #  Key([mod, alt], "x", lazy.spawn("xterm"), desc="Run XTerm"),
+
+# <SUPER> + <ALT> + <SHIFT> + KEYS
+    Key([mod, alt, "shift"], "Return", lazy.spawn(my_term_extra), desc="Launch extra terminal"),
+    #  Key([mod, alt, "shift"], "a", lazy.spawn(f"{my_term} -e pkexec ranger"), desc="Launch ranger as root"),
+    #  Key([mod, alt, "shift"], "a", lazy.spawn(f"{my_term} -e sudo ranger"), desc="Launch ranger as root"),
+    Key([mod, alt, "shift"], "v", lazy.spawn(f"{HOME}/.myScripts/runVifmAsRoot.sh"), desc="Launch Vifm as root"),
+    Key([mod, alt, "shift"], "a", lazy.spawn(f"{HOME}/.myScripts/runRangerAsRoot.sh"), desc="Launch ranger as root"),
+    Key([mod, alt, "shift"], "n", lazy.spawn(f"{HOME}/.myScripts/runThunarAsRoot.sh"), desc="Launch Thunar as root"),
+    #  Key([mod, alt, "shift"], "p", lazy.spawn(f"{HOME}/.myScripts/runThunarAsRoot.sh"), desc="Launch Thunar as root"),
+    Key([mod, alt, "shift"], "w", lazy.spawn("google-chrome-stable"), desc="Launch Chrome"),
+    #  Key([mod, alt, "shift"], "y", lazy.spawn(f"{HOME}/.config/qtile/scripts/start-stop_syncthing.sh"), desc="Start-Stop Syncthing (for Dropbox sync)"),
 
 # <SUPER> + <SHIFT> + KEYS
-    Key([mod, "shift"], "Return", lazy.spawn(my_term_extra), desc="Launch extra terminal"),
-    #  Key([mod, "shift"], "a", lazy.spawn(f"{my_term} -e pkexec ranger"), desc="Launch ranger as root"),
-    #  Key([mod, "shift"], "a", lazy.spawn(f"{my_term} -e sudo ranger"), desc="Launch ranger as root"),
-    Key([mod, "shift"], "v", lazy.spawn(f"{HOME}/.myScripts/runVifmAsRoot.sh"), desc="Launch Vifm as root"),
-    Key([mod, "shift"], "a", lazy.spawn(f"{HOME}/.myScripts/runRangerAsRoot.sh"), desc="Launch ranger as root"),
-    Key([mod, "shift"], "n", lazy.spawn(f"{HOME}/.myScripts/runThunarAsRoot.sh"), desc="Launch Thunar as root"),
-    #  Key([mod, "shift"], "p", lazy.spawn(f"{HOME}/.myScripts/runThunarAsRoot.sh"), desc="Launch Thunar as root"),
-    Key([mod, "shift"], "w", lazy.spawn("google-chrome-stable"), desc="Launch Chrome"),
-    #  Key([mod, "shift"], "y", lazy.spawn(f"{HOME}/.config/qtile/scripts/start-stop_syncthing.sh"), desc="Start-Stop Syncthing (for Dropbox sync)"),
     # QTILE: reload_config, restart, quit WINDOW: kill, xkill
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "x", lazy.spawn("xkill"), desc="Kill not answered window"),
@@ -187,13 +185,30 @@ keys = [
     # FLIP LAYOUT FOR MONADTALL/WIDE
     Key([mod, "shift"], "space", lazy.layout.flip(), desc="Flip main (left) panel with others"),
 
-# <SUPER> + <ALT> + KEYS
-    Key([mod, alt], "space", lazy.spawn(f"{HOME}/.myScripts/touchpadONOFF.sh"), desc="Touchpad On/Off"),
-    # FLIP LAYOUT FOR BSP LAYOUT
-    Key([mod, alt], "k", lazy.layout.flip_up(), desc=""),
-    Key([mod, alt], "j", lazy.layout.flip_down(), desc=""),
-    Key([mod, alt], "h", lazy.layout.flip_left(), desc=""),
-    Key([mod, alt], "l", lazy.layout.flip_right(), desc=""),
+# <SUPER> + FUNCTION KEYS
+    # TOGGLE FULLSCREEN
+    Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
+    # SWITCH BETWEEN GROUPS (DESKTOPS)
+    Key([mod], "Right", lazy.screen.next_group(), desc="Switch to the right group"),
+    Key([mod], "Left", lazy.screen.prev_group(), desc="Switch to the left group"),
+    # SWITCH BETWEEN LAYOUTS
+    Key([mod], "Tab", lazy.next_layout(), desc="Switch to the next layout"),
+    Key([mod, "shift"], "Tab", lazy.prev_layout(), desc="Switch to the previous layout"),
+    # CHANGE FOCUS
+    Key([mod], "k", lazy.layout.up(), desc="Move focus up in stack pane"),
+    Key([mod], "j", lazy.layout.down(), desc="Move focus down in stack pane"),
+    Key([mod], "h", lazy.layout.left(), desc="Move focus left in stack pane"),
+    Key([mod], "l", lazy.layout.right(), desc="Move focus right in stack pane"),
+    #  Key([mod], "Up", lazy.layout.up(), desc="Move focus up in stack pane"),
+    #  Key([mod], "Down", lazy.layout.down(), desc="Move focus down in stack pane"),
+    #  Key([mod], "Left", lazy.layout.left(), desc="Move focus left in stack pane"),
+    #  Key([mod], "Right", lazy.layout.right(), desc="Move focus right in stack pane"),
+    Key([mod], "space", lazy.layout.next(), desc="Switch window focus to other pane(s) of stack"),
+    # NORMALIZE, MINIMIZE, MAXIMIZE
+    Key([alt], "n", lazy.window.toggle_minimize(), desc="Toggle window between minimumize and normal sizes"),
+    Key([mod], "n", lazy.layout.normalize(), desc="Normalize window size ratios"),
+    Key([mod], "m", lazy.layout.maximize(), desc="Toggle window between minimum and maximum sizes (for MonadTall/MonadWide)"),
+    Key([mod], "r", lazy.layout.reset()),
 
 # <SUPER> + <CTRL> + KEYS
     Key([mod, "control"], "Return", lazy.spawn("terminator"), desc="Launch terminator terminal"),
@@ -220,39 +235,34 @@ keys = [
         lazy.layout.grow_left(),
         lazy.layout.shrink(),
         lazy.layout.decrease_ratio(),
-        lazy.layout.add()
-    ),
+        lazy.layout.add(),
+),
     #  Key([mod, "control"], "Left",
         #  lazy.layout.grow_left(),
         #  lazy.layout.shrink(),
         #  lazy.layout.decrease_ratio(),
-        #  lazy.layout.add()
+        #  lazy.layout.add(),
     #  ),
     Key([mod, "control"], "k",
         lazy.layout.grow_up(),
         lazy.layout.grow(),
-        lazy.layout.decrease_nmaster()
+        lazy.layout.decrease_nmaster(),
     ),
     #  Key([mod, "control"], "Up",
         #  lazy.layout.grow_up(),
         #  lazy.layout.grow(),
-        #  lazy.layout.decrease_nmaster()
+        #  lazy.layout.decrease_nmaster(),
     #  ),
     Key([mod, "control"], "j",
         lazy.layout.grow_down(),
         lazy.layout.shrink(),
-        lazy.layout.increase_nmaster()
+        lazy.layout.increase_nmaster(),
     ),
     #  Key([mod, "control"], "Down",
         #  lazy.layout.grow_down(),
         #  lazy.layout.shrink(),
-        #  lazy.layout.increase_nmaster()
+        #  lazy.layout.increase_nmaster(),
     #  ),
-    # NORMALIZE, MINIMIZE, MAXIMIZE
-    Key([mod, "control"], "n", lazy.layout.normalize(), desc="Normalize window size ratios"),
-    Key([mod, "control"], "d", lazy.window.toggle_minimize(), desc="Toggle window between minimumize and normal sizes"),
-    Key([mod, "control"], "m", lazy.layout.maximize(), desc="Toggle window between minimum and maximum sizes (for MonadTall/MonadWide)"),
-    Key([mod, "control"], "r", lazy.layout.reset()),
     Key([mod, "control"], "w", lazy.spawn(f"{HOME}/Programs/Tor/Browser/start-tor-browser --detach"), desc="Launch Tor"),
 
 # <SUPER> + <SHIFT> + <CTRL> + KEYS
@@ -261,21 +271,6 @@ keys = [
     # KeyChords
     # Dmenu
     KeyChord([alt], "m", [
-        #  Key([], "c", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-edit-configs.sh"), desc="Run dmenu script for editing config files"),
-        #  Key([], "e", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-unicode.sh"), desc="Choose an emoji"),
-        #  Key([], "g", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-GoogleDrive.sh"), desc="Mount-Unmount GoogleDrive"),
-        #  Key([], "k", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-kill.sh"), desc="Kill chosen process"),
-        #  Key([], "l", lazy.spawn(f"{HOME}/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
-        #  Key([], "m", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-change-alacritty-colors.sh"), desc="Run dmenu script for changing colors for Alacritty"),
-        #  Key([], "n", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-passmenu-name.sh"), desc="Run dmenu script for getting username"),
-        #  Key([], "p", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-passmenu.sh"), desc="Run dmenu script for getting password"),
-        #  Key([], "u", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-passmenu-url.sh"), desc="Run dmenu script for getting url"),
-        #  Key([], "r", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-run-programs.sh"), desc="Run choice of most used utils"),
-        #  Key([], "p", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-run-programs.sh"), desc="Run choice of most used utils"),
-        #  Key([], "s", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-search.sh"), desc="Run chosen search engine"),
-        #  Key([], "t", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-transcription.sh"), desc="Choose a transcription's symbol"),
-        #  Key([], "x", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-system-exit.sh"), desc="System exit menu"),
-        #  Key([], "w", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-mountUnmountWinDisks.sh"), desc="Mount/Unmount Windows disks")],
         Key([], "c", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-edit-configs.sh"), desc="Run dmenu script for editing config files"),
         Key([], "l", lazy.spawn(f"{HOME}/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
         Key([], "p", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-run-programs.sh"), desc="Run choice of most used utils"),
@@ -285,12 +280,17 @@ keys = [
         name="Dmenu"
     ),
     Key([alt], "w", lazy.spawn("rofi run -show window -show-icons"), desc="Switch between opened windows"),
-    Key([alt], "F4", lazy.spawn("ByeBye"), desc="Launch logout app 'ByeBye'"),
+    Key([alt], "F4", lazy.spawn(f"{HOME}/Programs/ByeBye/ByeBye"), desc="Launch logout app 'ByeBye'"),
     Key([alt], "Tab", lazy.group.next_window(), desc="Switch to the next window"),
 # <ALT> + <SHIFT> + KEYS
     Key([alt, "shift"], "Tab", lazy.group.prev_window(), desc="Switch to the previous window"),
 
 # <CONTROL> + <ALT> + KEYS
+    Key(["control", alt], "c", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-edit-configs.sh"), desc="Run dmenu script for editing config files"),
+    Key(["control", alt], "l", lazy.spawn(f"{HOME}/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
+    Key(["control", alt], "p", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-run-programs.sh"), desc="Run choice of most used utils"),
+    Key(["control", alt], "s", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-run-scripts.sh"), desc="Run chosen search engine"),
+    Key(["control", alt], "x", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-system-exit.sh"), desc="System exit menu"),
     # TREETAB CONTROLS
     Key(["control", alt], "j", lazy.layout.section_down(), desc="Move up a section in TreeTab"),
     Key(["control", alt], "k", lazy.layout.section_up(), desc="Move down a section in TreeTab"),
@@ -355,6 +355,10 @@ for i, group_name in enumerate(group_names, 1):
             #  BECAUSE OF switch_group=True
             desc="Send current window to another group")
     ])
+
+# A dict: {1: " ", 2: " ", ... } for simple access and if group_names will be
+# renamed.
+group_names_indexes = {i: group_names[0][0] for (i, group_names[0]) in enumerate(group_names, start=1)}
 
 ##### LAYOUTS #####
 layout_theme = {
@@ -457,13 +461,13 @@ def init_widgets_list():
             font=my_nerd_font,
             fontsize=14,
             #  distro="Arch_checkupdates",
-            custom_command="checkupdates+aur",
+            custom_command="checkupdates-with-aur",
             #  distro="Arch_yay",
             #  custom_command="yay -Qu",
             display_format="  {updates}",  # ⟳ 
             mouse_callbacks={
-                "Button1": lambda: qtile.cmd_spawn(f"{HOME}/.config/qtile/scripts/show_updates.sh"),
-                "Button2": lambda: qtile.cmd_spawn(f"{my_term_extra} -e 'yay -Syu && $SHELL'"),
+                "Button1": lambda: qtile.spawn(f"{HOME}/.config/qtile/scripts/show_updates.sh"),
+                "Button2": lambda: qtile.spawn(f"{my_term_extra} --hold -e 'yay -Syu'"),
                 "Button3": lambda: show_updates.show_updates_arch()
             },
             update_interval=10800  # 3 hours (60*60*3)
@@ -472,42 +476,51 @@ def init_widgets_list():
             linewidth=1,
             padding=10
         ),
-        widget.TextBox(
-            #  text="⇆ ",
-            text="🗘",
-            font=my_nerd_font,
-            fontsize=16,
-            foreground=colors["fg_textbox"],
-            padding=0
-        ),
-        syncthing.Syncthing(
-            path_to_script=f"{HOME}/.config/qtile/scripts/get_syncthing_status.sh",
-            font=my_nerd_font,
-            label="Syncthing\n ",
-            update_interval=60,
-            active_color=colors["fg_syncthing_active"],
-            inactive_color=colors["fg_syncthing_inactive"],
-            padding=0
-        ),
-        widget.Sep(
-            linewidth=1,
-            padding=10
-        ),
-        widget.TextBox(
-            #  text="⛅",
-            text="🌡",
-            fontsize=16,
-            foreground=colors["fg_weather"],
-            padding=0
-        ),
+        #  widget.TextBox(
+            #  #  text="⇆ ",
+            #  text="🗘",
+            #  font=my_nerd_font,
+            #  fontsize=16,
+            #  foreground=colors["fg_textbox"],
+            #  padding=0
+        #  ),
+        #  syncthing.Syncthing(
+            #  path_to_script=f"{HOME}/.config/qtile/scripts/get_syncthing_status.sh",
+            #  font=my_nerd_font,
+            #  label="Syncthing\n ",
+            #  update_interval=60,
+            #  active_color=colors["fg_syncthing_active"],
+            #  inactive_color=colors["fg_syncthing_inactive"],
+            #  padding=0
+        #  ),
+        #  widget.Sep(
+            #  linewidth=1,
+            #  padding=10
+        #  ),
         widget.OpenWeather(
             foreground=colors["fg_weather"],
             coordinates={"longitude": "30.9754", "latitude": "52.4345"},
-            #  format="{location_city}: {temp}°{units_temperature}\n{weather_0_icon} {weather_details}",
+            fontsize=20,
+            format="{icon}",
+            update_interval=1800,
+            mouse_callbacks={
+                "Button3": lambda: qtile.spawn("xdg-open https://openweathermap.org/city/627907"),
+            }
+        ),
+        #  widget.TextBox(
+            #  #  text="⛅",
+            #  text="🌡",
+            #  fontsize=16,
+            #  foreground=colors["fg_weather"],
+            #  padding=0
+        #  ),
+        widget.OpenWeather(
+            foreground=colors["fg_weather"],
+            coordinates={"longitude": "30.9754", "latitude": "52.4345"},
             format="{location_city}: {temp}°{units_temperature}\n{weather_details}",
             update_interval=1800,
             mouse_callbacks={
-                "Button3": lambda: qtile.cmd_spawn("xdg-open https://openweathermap.org/city/627907"),
+                "Button3": lambda: qtile.spawn("xdg-open https://openweathermap.org/city/627907"),
             }
         ),
         widget.Sep(
@@ -522,9 +535,9 @@ def init_widgets_list():
             foreground=colors["fg_cpu"],
             padding=0,
             mouse_callbacks={
-                "Button1": lambda: qtile.cmd_spawn(f"{HOME}/.config/qtile/scripts/top5_cpu_usage.sh"),
-                #  "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e htop")
-                "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e {SHELL} -c htop")
+                "Button1": lambda: qtile.spawn(f"{HOME}/.config/qtile/scripts/top5_cpu_usage.sh"),
+                #  "Button3": lambda: qtile.spawn(f"{my_term} -e htop")
+                "Button3": lambda: qtile.spawn(f"{my_term} -e {SHELL} -c htop")
             }
         ),
         widget.CPU(
@@ -532,8 +545,8 @@ def init_widgets_list():
             padding=0,
             format="{freq_current}GHz\n{load_percent: .0f}%",
             mouse_callbacks={
-                "Button1": lambda: qtile.cmd_spawn(f"{HOME}/.config/qtile/scripts/top5_cpu_usage.sh"),
-                "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e {SHELL} -c htop")
+                "Button1": lambda: qtile.spawn(f"{HOME}/.config/qtile/scripts/top5_cpu_usage.sh"),
+                "Button3": lambda: qtile.spawn(f"{my_term} -e {SHELL} -c htop")
             }
         ),
         widget.Sep(
@@ -547,8 +560,8 @@ def init_widgets_list():
             foreground=colors["fg_memory"],
             padding=0,
             mouse_callbacks={
-                "Button1": lambda: qtile.cmd_spawn(f"{HOME}/.config/qtile/scripts/top5_mem_usage.sh"),
-                "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e {SHELL} -c htop")
+                "Button1": lambda: qtile.spawn(f"{HOME}/.config/qtile/scripts/top5_mem_usage.sh"),
+                "Button3": lambda: qtile.spawn(f"{my_term} -e {SHELL} -c htop")
             }
         ),
         memory.Memory(
@@ -557,8 +570,8 @@ def init_widgets_list():
             format="{MemUsed: .2f}{mm}\n{MemPercent: .0f}%",
             measure_mem="G",
             mouse_callbacks={
-                "Button1": lambda: qtile.cmd_spawn(f"{HOME}/.config/qtile/scripts/top5_mem_usage.sh"),
-                "Button3": lambda: qtile.cmd_spawn(f"{my_term} -e {SHELL} -c htop")
+                "Button1": lambda: qtile.spawn(f"{HOME}/.config/qtile/scripts/top5_mem_usage.sh"),
+                "Button3": lambda: qtile.spawn(f"{my_term} -e {SHELL} -c htop")
             }
         ),
         widget.Sep(
@@ -595,24 +608,28 @@ def init_widgets_list():
         widget.Systray(
             padding=5
         ),
+        widget.TextBox(
+            text=" ",
+            padding=0,
+        ),
         widget.CurrentLayoutIcon(
             #  custom_icon_paths=[f"{HOME}/.config/qtile/icons/layouts"],
             foreground=colors["fg_layout"],
             padding=0,
             scale=0.6,
             mouse_callbacks={
-                "Button1": qtile.cmd_next_layout,
-                "Button3": qtile.cmd_prev_layout,
+                "Button1": qtile.next_layout,
+                "Button3": qtile.prev_layout,
             }
         ),
         widget.WindowCount(
-            text_format="{num}/",
+            text_format=" {num} /",
             fontsize=14,
             padding=0,
             foreground=colors["fg_layout"],
         ),
         all_windows_count.WindowCount(
-            text_format="{num}",
+            text_format=" {num}",
             fontsize=14,
             padding=0,
             foreground=colors["fg_layout"],
@@ -627,13 +644,13 @@ def init_widgets_list():
             fontsize=16,
             foreground=colors["fg_date"],
             padding=0,
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("gsimplecal")}
+            mouse_callbacks={"Button1": lambda: qtile.spawn("gsimplecal")}
         ),
         widget.Clock(
             foreground=colors["fg_date"],
             padding=3,
-            #  mouse_callbacks={"Button1": lambda qtile: qtile.cmd_spawn("gsimplecal")},
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn("gsimplecal")},
+            #  mouse_callbacks={"Button1": lambda qtile: qtile.spawn("gsimplecal")},
+            mouse_callbacks={"Button1": lambda: qtile.spawn("gsimplecal")},
             format="%a, %d %b\n%H:%M:%S"
         )
     ]
@@ -801,8 +818,22 @@ focus_on_window_activation = "focus"
 
 @hook.subscribe.client_new
 def move_new_window_to_certain_group(c):
+    """Moves a new window to certain grop and switchs (if you want) to that group."""
+    if c.name == "Oracle VM VirtualBox Менеджер" or c.name == "Oracle VM VirtualBox Manager":
+        c.togroup(group_names_indexes[5])
+        qtile.groups_map[group_names_indexes[5]].cmd_toscreen()
+    if c.name == "Telegram":
+        c.togroup(group_names_indexes[6])
+        qtile.groups_map[group_names_indexes[6]].cmd_toscreen()
+    if c.name == "Rakuten Viber":
+        c.togroup(group_names_indexes[6])
+        qtile.groups_map[group_names_indexes[6]].cmd_toscreen()
+    if c.name == "GNU Image Manipulation Program":
+        c.togroup(group_names_indexes[7])
+        qtile.groups_map[group_names_indexes[7]].cmd_toscreen()
     if c.name == "Mozilla Thunderbird":
-        c.togroup(" ")
+        #  c.togroup(" ")
+        c.togroup(group_names_indexes[9])
 
 ##### AUTOSTART #####
 @hook.subscribe.startup_once
@@ -821,7 +852,7 @@ def start_once():
 wmname = "LG3D"
 
 
-if __name__ in ["config", "__main__"]:
+if __name__ in ("config", "__main__"):
     screens = init_screens()
     widgets_list = init_widgets_list()
     #  widgets_screen1 = init_widgets_screen1()
@@ -847,7 +878,7 @@ if __name__ in ["config", "__main__"]:
     #  """ Bring a new floating window to the front. """
     #  #  subprocess.check_output(["notify-send", "-i", "dialog-information", "{}".format(window.name)])
     #  if window.floating:
-        #  window.cmd_bring_to_front()
+        #  window.bring_to_front()
 
 
 # TODO: show amount of opened windows (DONE!!!)
@@ -877,9 +908,9 @@ if __name__ in ["config", "__main__"]:
     #  floating_windows = []
     #  for window in qtile.currentGroup.windows:
         #  if window.floating:
-            #  window.cmd_bring_to_front()
+            #  window.bring_to_front()
             #  floating_windows.append(window)
-    #  floating_windows[-1].cmd_focus()
+    #  floating_windows[-1].focus()
 
 
 #  @hook.subscribe.client_new

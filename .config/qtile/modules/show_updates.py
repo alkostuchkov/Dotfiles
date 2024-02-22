@@ -12,7 +12,8 @@ def show_updates_debian():
     updates_list = []
     
     try:
-        updates = subprocess.check_output(["apt-show-versions", "-u", "-b"]).decode("utf-8").strip()
+        updates = subprocess.check_output(["apt-show-versions", "-u", "-b"], encoding="utf-8").strip()
+        #  updates = subprocess.check_output(["apt-show-versions", "-u", "-b"]).decode("utf-8").strip()
         updates_list = updates.splitlines()
     except subprocess.CalledProcessError:
         updates_output = ""
@@ -35,7 +36,8 @@ def show_updates_arch():
 
         try:
             #  updates_community = subprocess.check_output(["pacman", "-Q", "-u"]).decode("utf-8").strip()
-            updates_community = subprocess.check_output(["checkupdates"]).decode("utf-8").strip()
+            #  updates_community = subprocess.check_output(["checkupdates"]).decode("utf-8").strip()
+            updates_community = subprocess.check_output(["checkupdates"], encoding="utf-8").strip()
             updates_community_list = updates_community.splitlines()
         except subprocess.CalledProcessError:
             community_output = ""

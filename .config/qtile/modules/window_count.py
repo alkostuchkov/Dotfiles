@@ -22,11 +22,11 @@ from typing import Any, List, Tuple
 
 from libqtile import bar, hook
 from libqtile.widget import base
-from libqtile.command.base import expose_command
 
 
+#  [docs]
 class WindowCount(base._TextBox):
-    """A simple widget to show the number of ALL opened windows."""
+    """A simple widget to show the number of windows in the current group."""
     orientations = base.ORIENTATION_HORIZONTAL
     defaults = [
         ("font", "sans", "Text font"),
@@ -46,17 +46,31 @@ class WindowCount(base._TextBox):
     def _configure(self, qtile, bar):
         base._TextBox._configure(self, qtile, bar)
         self._setup_hooks()
+        self._wincount()
 
     def _setup_hooks(self):
-        hook.subscribe.client_killed(self._decrease_count)
-        hook.subscribe.client_new(self._increase_count)
+        hook.subscribe.client_killed(self._win_killed)
+        hook.subscribe.client_managed(self._wincount)
+        hook.subscribe.current_screen_change(self._wincount)
+        hook.subscribe.setgroup(self._wincount)
 
-    def _increase_count(self, *args):
-        self._count += 1
+    def _wincount(self, *args):
+        try:
+            self._count = len(self.qtile.current_group.windows)
+        except AttributeError:
+            self._count = 0
+
         self.update()
 
-    def _decrease_count(self, window):
-        self._count -= 1
+    def _win_killed(self, window):
+        try:
+            self._count = len(self.qtile.current_group.windows)
+        except AttributeError:
+            self._count = 0
+
+        if self._count and getattr(window, "group", None):
+            self._count -= 1
+
         self.update()
 
     def calculate_length(self):
@@ -72,7 +86,6 @@ class WindowCount(base._TextBox):
         self.text = self.text_format.format(num=self._count)
         self.bar.draw()
 
-    @expose_command
     def cmd_get(self):
         """Retrieve the current text."""
-        return self.text
+        return self.text 
