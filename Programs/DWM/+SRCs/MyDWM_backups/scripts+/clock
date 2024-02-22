@@ -1,0 +1,11 @@
+#!/usr/bin/env bash 
+
+# dte="$(date "+%d %a, %H:%M" | sed 's/  / /g')"
+dte="$(date "+%d %a, %H:%M")"
+# dte="$(date +"%a %d %B %H:%M%p"| sed 's/  / /g')"
+
+icon=" "
+# printf "^c#39adb5^ %s %s\\n" "$icon""$dte"
+printf "^c#39adb5^ %s%s\n" "$icon"                           "$dte"
+
+

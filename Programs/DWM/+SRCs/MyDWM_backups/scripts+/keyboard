@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# A dwm_bar function that displays the current keyboard layout
+# Joe Standring <git@joestandring.com>
+# GNU GPLv3
+
+# Dependencies: xorg-setxkbmap
+
+dwm_keyboard () {
+    t=$(xset -q | grep LED)
+    code=${t##*mask:  }
+
+    if [[ $code -eq "00001000" ]]; then
+        # result="🇷🇺"
+        result="RU"
+    else
+        # result="🇺🇸"
+        result="EN"
+    fi
+icon="  "
+# icon=""
+printf "^c#83eed9^ %s %s\\n" "$icon""$result"
+}
+
+dwm_keyboard
