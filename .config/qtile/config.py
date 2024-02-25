@@ -66,8 +66,8 @@ def parse_windowname(text):
 mod = "mod4"
 alt = "mod1"
 my_term = "alacritty"
-my_term_extra = "xfce4-terminal"
-#  my_term_extra = "terminator"
+#  my_term_extra = "xfce4-terminal"
+my_term_extra = "terminator"
 my_font = "Ubuntu"
 my_nerd_font = "Ubuntu Nerd Font"
 my_nerd_font_extra = "Sarasa Mono SC Nerd"
@@ -126,6 +126,7 @@ keys = [
 
     #  Key([mod], "Return", lazy.spawn(f"{HOME}/.myScripts/runAlacrittyDiscreteGr.sh"), desc="Launch terminal"),
     Key([mod], "Return", lazy.spawn(my_term), desc="Launch terminal"),
+    Key([mod, alt], "Return", lazy.spawn(my_term_extra), desc="Launch extra terminal"),
     Key([mod, alt], "r", lazy.spawn("rofi run -show drun -show-icons"), desc="Run App Lancher"),
     Key([mod, alt], "d", lazy.spawn(f"dmenu_run -i -l 10 -nb '#263238' -nf '#24d2af' -sb '#009185' -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
     #  Key([mod, alt], "d", lazy.spawn("dmenu_run -nb #282828 -nf #e3a84e -sb #665c54 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Gruvbox
@@ -151,7 +152,6 @@ keys = [
     #  Key([mod, alt], "x", lazy.spawn("xterm"), desc="Run XTerm"),
 
 # <SUPER> + <ALT> + <SHIFT> + KEYS
-    Key([mod, alt, "shift"], "Return", lazy.spawn(my_term_extra), desc="Launch extra terminal"),
     #  Key([mod, alt, "shift"], "a", lazy.spawn(f"{my_term} -e pkexec ranger"), desc="Launch ranger as root"),
     #  Key([mod, alt, "shift"], "a", lazy.spawn(f"{my_term} -e sudo ranger"), desc="Launch ranger as root"),
     Key([mod, alt, "shift"], "v", lazy.spawn(f"{HOME}/.myScripts/runVifmAsRoot.sh"), desc="Launch Vifm as root"),
@@ -211,7 +211,7 @@ keys = [
     Key([mod], "r", lazy.layout.reset()),
 
 # <SUPER> + <CTRL> + KEYS
-    Key([mod, "control"], "Return", lazy.spawn("terminator"), desc="Launch terminator terminal"),
+    Key([mod, "control"], "Return", lazy.spawn("xfce4-terminal"), desc="Launch xfce4-terminal"),
     # RESIZE UP, DOWN, LEFT, RIGHT
     Key([mod, "control"], "i",
         lazy.layout.shrink_main(),
@@ -412,7 +412,7 @@ layouts = [
 ##### DEFAULT WIDGET SETTINGS #####
 widget_defaults = {
     "font": my_font,
-    "fontsize": 12,
+    "fontsize": 14,
     "padding": 2,
     "background": colors["bg_panel"],
     "foreground": colors["fg_group_names"]
@@ -424,7 +424,7 @@ def init_widgets_list():
     widgets_list = [
         widget.GroupBox(
             font=my_nerd_font,
-            fontsize=14,
+            fontsize=16,
             margin_y=3,
             margin_x=0,
             padding_y=7,
@@ -567,7 +567,7 @@ def init_widgets_list():
         memory.Memory(
             foreground=colors["fg_memory"],
             padding=0,
-            format="{MemUsed: .2f}{mm}\n{MemPercent: .0f}%",
+            format="{MemUsed: .1f}{mm}\n{MemPercent: .0f}%",
             measure_mem="G",
             mouse_callbacks={
                 "Button1": lambda: qtile.spawn(f"{HOME}/.config/qtile/scripts/top5_mem_usage.sh"),

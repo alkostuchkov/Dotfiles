@@ -16,7 +16,7 @@ super + alt + {r, d}
    dmenu_run -i -l 10 -nb '#263238' -nf '#24d2af' -sb '#009185' -p 'Run: ' -fn 'Iosevka-17:normal'}
 
 # Terminals
-super + {_, alt +, shift +} Return
+super + {_, alt +, ctrl +} Return
   {$TERMINAL, terminator, xfce4-terminal}
 
 # Applications
