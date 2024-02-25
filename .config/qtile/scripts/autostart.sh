@@ -14,7 +14,8 @@ nitrogen --restore &
 volumeicon &
 nm-applet &
 xfce4-power-manager &
-xfce4-clipman &
+diodon &
+# xfce4-clipman &
 picom -b --config $HOME/.config/picom/picom.conf &
 conky -c ~/.myScripts/conky/conkyrc &
 udiskie &  # ~/.config/udiskie/config.yml

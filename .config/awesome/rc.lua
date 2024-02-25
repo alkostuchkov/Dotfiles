@@ -770,6 +770,7 @@ awful.rules.rules = {
           "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
           "Deadbeef",
           "Galculator",
+          "kcalc",
           "gnome-font-viewer",
           "xfce4-power-manager-settings",
           "Pavucontrol",
@@ -925,7 +926,8 @@ run_once({
     "volumeicon",
     "nm-applet",
     "xfce4-power-manager",
-    "xfce4-clipman",
+    "diodon",
+    -- "xfce4-clipman",
     "picom --config "..HOME.."/.config/picom/picom.conf",
     "conky -c "..HOME.."/.myScripts/conky/conkyrc",
     "/usr/bin/python /usr/bin/udiskie",
