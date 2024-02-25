@@ -63,6 +63,7 @@ options=(
 "xterm - $HOME/.XTerm"
 "xresources - $HOME/.Xresources"
 "xsession-errors - $HOME/.xsession-errors"
+"xxkbrc - $HOME/.xxkbrc"
 "zsh - $HOME/.zshrc"
 "Quit")
 

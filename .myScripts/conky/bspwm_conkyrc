@@ -113,10 +113,10 @@ ${color white}${fs_bar 3,300 /}
 ${color white}Home:    ${color }${fs_used /home}/ ${fs_free /home}/ ${fs_size /home}
 ${color white}${fs_bar 3,300 /home}
 ${voffset 6}${color}${font PizzaDude Bullets:size=12}S${font}  ${color white}Download: ${color }${totaldown wlan0}
-${voffset 1}${color}${font PizzaDude Bullets:size=12}r${font}  ${color white}Input: ${color } ${downspeed wlan0}/s ${alignr}${downspeedgraph enp1s7 10,130 FFFFFF FFFFFF}
+${voffset 1}${color}${font PizzaDude Bullets:size=12}r${font}  ${color white}Input: ${color } ${downspeed wlan0}/s ${alignr}${downspeedgraph wlan0 10,130 FFFFFF FFFFFF}
 
 ${color}${font PizzaDude Bullets:size=12}M${font}  ${color white}Upload: ${color }${totalup wlan0}
-${voffset 1}${color}${font PizzaDude Bullets:size=12}v${font}  ${color white}Output: ${color }${upspeed wlan0} /s ${alignr}${upspeedgraph enp1s7 10,130 FFFFFF FFFFFF}
+${voffset 1}${color}${font PizzaDude Bullets:size=12}v${font}  ${color white}Output: ${color }${upspeed wlan0} /s ${alignr}${upspeedgraph wlan0 10,130 FFFFFF FFFFFF}
 ${color white}${hr 2}
 ]]
 
