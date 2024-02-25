@@ -39,7 +39,8 @@ filetype *.pdf,*.djvu
   \ {View in atril}
   \ atril %f &,
   \ {View in qpdfview}
-  \ qpdfview %f &,
+  \ qpdfview %f &
+filextype *.pdf,*.djvu
   \ {View in zathura}
   \ zathura %f,
   \ {View in apvlv}
@@ -58,24 +59,26 @@ filetype *.ps,*.eps,*.ps.gz
   \ gv %c %i &,
 
 " Audio -----------------------------------------------------------------------
-filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus
+filextype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus
   \ {View using deadbeef}
   \ deadbeef %f %i &,
+  \ {Play using MPlayer}
+  \ mplayer %f %i &
+filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus
   \ {View using cmus}
   \ alacritty -e cmus %f &,
   \ {Play using ffplay}
-  \ ffplay -nodisp -autoexit %c,
-  \ {Play using MPlayer}
-  \ mplayer %f %i &
+  \ ffplay -nodisp -autoexit %c
 fileviewer *.mp3 mp3info
 fileviewer *.flac soxi
 
 " Video -----------------------------------------------------------------------
-filetype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
+filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
   \*.fl[icv],*.m2v,*.mov,*.webm,*.ts,*.mts,*.m4v,*.r[am],*.qt,*.divx,
   \*.as[fx]
   \ {View using smplayer}
-  \ smplayer %f %i &,
+  \ smplayer %f %i &
+filetype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
   \ {View using ffplay}
   \ ffplay -fs -autoexit %f
 fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
@@ -89,6 +92,11 @@ fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
 filetype *.html,*.htm
   \ {Open with vim}
   \ alacritty -e vim %c &,
+  \ {Open with links}
+  \ links %c &,
+  \ {Open with lynx}
+  \ lynx %c &
+filextype *.html,*.htm
   \ {Open with gvim}
   \ gvim %c &,
   \ {Open with dwb}
@@ -97,7 +105,6 @@ filetype *.html,*.htm
   \ firefox %f &,
   \ {Open with uzbl}
   \ uzbl-browser %f %i &
-filetype *.html,*.htm links, lynx
 
 " Object ----------------------------------------------------------------------
 filetype *.o nm %f | less
@@ -111,13 +118,14 @@ filetype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
   \ {View in XnViewMP}
   \ xnviewmp %f %i &,
   \ {View in ristretto}
-  \ ristretto %f &,
+  \ ristretto %f &
+filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
   \ {View in sxiv}
   \ sxiv -ia %f &,
   \ {View in imv}
   \ imv-x11 -b 1D2330 -d %d &,
   \ {View in feh}
-  \ feh %d &,
+  \ feh %d &
 fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.xpm
   \ vifmimg draw %px %py %pw %ph %c
   \ %pc
@@ -163,46 +171,54 @@ filetype *.asc
   \ !!gpg --verify %c,
 
 " Torrent ---------------------------------------------------------------------
-filetype *.torrent tixati %f &
+filextype *.torrent tixati %f &
 fileviewer *.torrent dumptorrent -v %c
 
 " FuseZipMount ----------------------------------------------------------------
-filetype *.zip,*.jar,*.war,*.ear,*.oxt,*.apkg
+filextype *.zip,*.jar,*.war,*.ear,*.oxt,*.apkg
   \ {View contents}
-  \ engrampa %f,
+  \ engrampa %f
+filetype *.zip,*.jar,*.war,*.ear,*.oxt,*.apkg
   \ {Mount with fuse-zip}
   \ FUSE_MOUNT|fuse-zip %SOURCE_FILE %DESTINATION_DIR,
   \ {View contents}
   \ zip -sf %c | less,
   \ {Extract here}
-  \ tar -xf %c,
+  \ tar -xf %c
 fileviewer *.zip,*.jar,*.war,*.ear,*.oxt zip -sf %c
 
 " ArchiveMount ----------------------------------------------------------------
-filetype *.tar,*.tar.bz2,*.tbz2,*.tgz,*.tar.gz,*.tar.xz,*.txz
+filextype *.tar,*.tar.bz2,*.tbz2,*.tgz,*.tar.gz,*.tar.xz,*.txz
   \ {View contents}
-  \ engrampa %f,
+  \ engrampa %f
+filetype *.tar,*.tar.bz2,*.tbz2,*.tgz,*.tar.gz,*.tar.xz,*.txz
   \ {Mount with archivemount}
   \ FUSE_MOUNT|archivemount %SOURCE_FILE %DESTINATION_DIR,
+  \ {View contents}
+  \ zip -sf %c | less,
+  \ {Extract here}
+  \ tar -xf %c
 fileviewer *.tgz,*.tar.gz tar -tzf %c
 fileviewer *.tar.bz2,*.tbz2 tar -tjf %c
 fileviewer *.tar.txz,*.txz xz --list %c
 fileviewer *.tar tar -tf %c
 
 " Rar2FsMount and rar archives ------------------------------------------------
-filetype *.rar
+filextype *.rar
   \ {View contents}
-  \ engrampa %f,
+  \ engrampa %f
+filetype *.rar
   \ {Mount with rar2fs}
-  \ FUSE_MOUNT|rar2fs %SOURCE_FILE %DESTINATION_DIR,
+  \ FUSE_MOUNT|rar2fs %SOURCE_FILE %DESTINATION_DIR
 fileviewer *.rar unrar v %c
 
 " Fuse7z and 7z archives ------------------------------------------------------
-filetype *.7z
+filextype *.7z
   \ {View contents}
-  \ engrampa %f,
+  \ engrampa %f
+filetype *.7z
   \ {Mount with fuse-7z}
-  \ FUSE_MOUNT|fuse-7z %SOURCE_FILE %DESTINATION_DIR,
+  \ FUSE_MOUNT|fuse-7z %SOURCE_FILE %DESTINATION_DIR
 fileviewer *.7z 7z l %c
 
 " IsoMount --------------------------------------------------------------------
@@ -221,7 +237,7 @@ filetype *.ftp
   \ FUSE_MOUNT2|curlftpfs -o ftp_port=-,,disable_eprt %PARAM %DESTINATION_DIR %FOREGROUND,
 
 " Office files ----------------------------------------------------------------
-filetype *.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx,*.ppt wps %f &, libreoffice %f &
+filextype *.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx,*.ppt wps %f &, libreoffice %f &
 fileviewer *.doc catdoc %c
 fileviewer *.docx docx2txt.pl %f -
 
@@ -234,15 +250,16 @@ filextype *.pro gvim %f &
 filetype *.pro alacritty -e vim %f &
 
 " Directories -----------------------------------------------------------------
-filetype */
+filextype */
   \ {View in dolphin}
   \ dolphin %f &,
   \ {View in thunar}
-  \ Thunar %f &,
+  \ Thunar %f &
+filextype */
   \ {View in Vifm}
   \ vifm %f &,
   \ {View in Ranger}
-  \ ranger %f &,
+  \ ranger %f &
 
 " Config & exec files ---------------------------------------------------------
 filextype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el gvim %f &
@@ -250,10 +267,10 @@ filextype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.b
 filetype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el alacritty -e vim %f &
 
 " Books -----------------------------------------------------------------------
-filetype *.fb2,*.epub cr3 %f &
+filextype *.fb2,*.epub cr3 %f &
 
 " Fonts -----------------------------------------------------------------------
-filetype *.ttf,*.otf gnome-font-viewer %f %i &
+filextype *.ttf,*.otf gnome-font-viewer %f %i &
 
 " .deb ------------------------------------------------------------------------
 filextype *.deb gdebi-gtk %f &, engrampa %f &
@@ -357,13 +374,13 @@ command! openProgrammingDirs
     \ :tabonly
     \ | tabnew
     \ | tabname Rust
-    \ | cd ~/forProgramming/Rust/Books/ ~/Projects/Rust/
+    \ | cd ~/Documents/forProgramming/Rust/Books/ ~/Projects/Rust/
     \ | tabnew
     \ | tabname Lua
-    \ | cd ~/forProgramming/Lua/Books/ ~/Projects/Lua/
+    \ | cd ~/Documents/forProgramming/Lua/Books/ ~/Projects/Lua/
     \ | tabnew
     \ | tabname Haskell
-    \ | cd ~/forProgramming/Haskell/Books/ ~/Projects/Haskell/
+    \ | cd ~/Documents/forProgramming/Haskell/Books/ ~/Projects/Haskell/
     \ | tabnext 1
     \ | tabclose
 
@@ -371,10 +388,13 @@ command! openBackupDirs
     \ :tabonly
     \ | tabnew
     \ | tabname Backups
-    \ | cd ~/OS/Linux/+backup/DropboxHP/-=HP=-/ ~/.config/
+    \ | cd ~/OS/Linux/+backup/DropboxDesktop/Desktop/ ~/.config/
     \ | tabnew
     \ | tabname yay
-    \ | cd ~/.cache/yay ~/.cache/yay_Backups/
+    \ | cd ~/.cache/yay ~/.cache/yay_Backups
+    \ | tabnew
+    \ | tabname Kernel
+    \ | cd ~/OS/Linux/+backup/Drivers/NVidia/GeForce9600GT/WorksOnLinuxKernel419/Kernel419/ /var/cache/pacman/pkg/
     \ | tabnext 1
     \ | tabclose
 
@@ -391,7 +411,7 @@ nnoremap <wait> ,xt :!$TERMINAL -e tar -xzvf %f & <cr>
 nnoremap sx :!sxiv -t %d & <cr>
 
 " Open selected images in gimp -------------------------------------------------
-nnoremap gp :!gimp %f & <cr>
+nnoremap gp :!gimp %f %i & <cr>
 
 " Start shell in current directory --------------------------------------------
 nnoremap s :shell<cr>
