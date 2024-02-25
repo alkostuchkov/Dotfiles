@@ -303,6 +303,7 @@ awful.screen.connect_for_each_screen(function(s)
               icons_extension = ".svg",
               show_hourly_forecast = true,
               show_daily_forecast = true,
+              timeout = 10800,
             }),
             cpu_widget(),
             -- sep_widget(),
@@ -390,6 +391,10 @@ globalkeys = gears.table.join(
     awful.key({ super }, "s", hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
 
+    -- Show MainMenu
+    awful.key({ super }, "w", function() mymainmenu:show() end,
+              {description = "show main menu", group = "awesome"}),
+
     -- Show/Hide Wibox
     awful.key({ super }, "b", function()
             for s in screen do
@@ -438,27 +443,6 @@ globalkeys = gears.table.join(
                                 if client.focus then client.focus:raise() end
                               end,
               {description = "focus right", group = "client"}),
-
-    -- By direction client focus with arrows
-    awful.key({ ctrl, super }, "Down", function() awful.client.focus.global_bydirection("down")
-                                         if client.focus then client.focus:raise() end
-                                       end,
-              {description = "focus down", group = "client"}),
-    awful.key({ ctrl, super }, "Up", function() awful.client.focus.global_bydirection("up")
-                                       if client.focus then client.focus:raise() end
-                                     end,
-              {description = "focus up", group = "client"}),
-    awful.key({ ctrl, super }, "Left", function() awful.client.focus.global_bydirection("left")
-                                         if client.focus then client.focus:raise() end
-                                       end,
-              {description = "focus left", group = "client"}),
-    awful.key({ ctrl, super }, "Right", function() awful.client.focus.global_bydirection("right")
-                                          if client.focus then client.focus:raise() end
-                                        end,
-              {description = "focus right", group = "client"}),
-
-    awful.key({ super }, "w", function() mymainmenu:show() end,
-              {description = "show main menu", group = "awesome"}),
 
     -- Layout manipulation
     awful.key({ super, shft }, "j", function() awful.client.swap.byidx(  1) end,
@@ -569,18 +553,21 @@ globalkeys = gears.table.join(
 )
 
 clientkeys = gears.table.join(
-    -- TODO toggle all opened clients' titlebars 
-    -- awful.key({ super,      }, "t",
-    --     function(c) awful.rules.rules[1].properties.titlebars_enabled = true end,
-    --        {description = "Show/Hide Titlebars", group="client"}),
-    awful.key({ super,      }, "t", function (c) awful.titlebar.toggle(c) end,
-              {description = "Show/Hide Titlebars", group="client"}),
     awful.key({ super,      }, "f",
         function(c)
             c.fullscreen = not c.fullscreen
             c:raise()
         end,
         {description = "toggle fullscreen", group = "client"}),
+    awful.key({ super,      }, "t",
+        function(c)
+            for _, c in ipairs(client.get()) do
+              awful.titlebar.toggle(c)
+            end
+        end,
+           {description = "Show/Hide Titlebars for All clients", group="client"}),
+    awful.key({ super, shft }, "t", function (c) awful.titlebar.toggle(c) end,
+              {description = "Show/Hide Titlebars for the current client", group="client"}),
     awful.key({ super, shft }, "x", function(c) awful.spawn("xkill") end,
               {description = "kill", group = "client"}),
     awful.key({ super, shft }, "c", function(c) c:kill() end,
@@ -611,14 +598,72 @@ clientkeys = gears.table.join(
         function(c)
             c.maximized_vertical = not c.maximized_vertical
             c:raise()
-        end ,
+        end,
         {description = "(un)maximize vertically", group = "client"}),
     awful.key({ super, ctrl }, "m",
         function(c)
             c.maximized_horizontal = not c.maximized_horizontal
             c:raise()
-        end ,
-        {description = "(un)maximize horizontally", group = "client"})
+        end,
+        {description = "(un)maximize horizontally", group = "client"}),
+    -- Move floating client
+    awful.key({ ctrl, super }, "Up",
+        function (c)
+            if c.floating then
+              c:relative_move(0, -10, 0, 0)
+            end
+        end,
+        {description = "move floating client up", group = "client"}),
+    awful.key({ ctrl, super }, "Down",
+        function (c)
+            if c.floating then
+              c:relative_move(0, 10, 0, 0)
+            end
+        end,
+        {description = "move floating client down", group = "client"}),
+    awful.key({ ctrl, super }, "Left",
+        function (c)
+            if c.floating then
+              c:relative_move(-10, 0, 0, 0)
+            end
+        end,
+        {description = "move floating client left", group = "client"}),
+    awful.key({ ctrl, super }, "Right",
+        function (c)
+            if c.floating then
+              c:relative_move(10, 0, 0, 0)
+            end
+        end,
+        {description = "move floating client right", group = "client"}),
+    -- Resize floating client
+    awful.key({ shft, super }, "Up",
+        function (c)
+            if c.floating then
+              c:relative_move(0, 0, 0, -10)
+            end
+        end,
+        {description = "resize floating client up", group = "client"}),
+    awful.key({ shft, super }, "Down",
+        function (c)
+            if c.floating then
+              c:relative_move(0, 0, 0, 10)
+            end
+        end,
+        {description = "resize floating client down", group = "client"}),
+    awful.key({ shft, super }, "Left",
+        function (c)
+            if c.floating then
+              c:relative_move(0, 0, -10, 0)
+            end
+        end,
+        {description = "resize floating client left", group = "client"}),
+    awful.key({ shft, super }, "Right",
+        function (c)
+            if c.floating then
+              c:relative_move(0, 0, 10, 0)
+            end
+        end,
+        {description = "resize floating client right", group = "client"})
 )
 
 -- Bind all key numbers to tags.
