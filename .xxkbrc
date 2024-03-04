@@ -3,8 +3,8 @@ XXkb.mainwindow.type:  tray
 XXkb.group.base: 1
 XXkb.group.alt: 2
 XXkb.mainwindow.enable:  yes
-XXkb.mainwindow.image.1: en22.xpm
-XXkb.mainwindow.image.2: ru22.xpm
+XXkb.mainwindow.image.1: us22++.xpm
+XXkb.mainwindow.image.2: ru22++.xpm
 XXkb.mainwindow.image.3:
 XXkb.mainwindow.image.4:
 XXkb.mainwindow.appicon:  yes
@@ -14,6 +14,6 @@ XXkb.controls.add_when_start: yes
 XXkb.controls.add_when_create: yes
 XXkb.controls.add_when_change: no
 XXkb.controls.focusout: no
-XXkb.mainwindow.xpm.1: en22.xpm
-XXkb.mainwindow.xpm.2: ru22.xpm
+XXkb.mainwindow.xpm.1: us22++.xpm
+XXkb.mainwindow.xpm.2: ru22++.xpm
 XXkb.mainwindow.label.enable: no

@@ -269,7 +269,7 @@ let g:rainbow_active = 1
 "##############################################################################
 " orgmode Settings
 "##############################################################################
--- lua << EOF
+lua << EOF
 -- Load custom tree-sitter grammar for org filetype
 require('orgmode').setup_ts_grammar()
 
