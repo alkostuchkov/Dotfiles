@@ -8,28 +8,47 @@ local HOME = os.getenv("HOME")
 local DIR = HOME .. "/.config/awesome/awesome-wm-widgets/pacman-widget/"
 
 local pacman_widget = {}
-local config, timer = {}, {}
+local timer = {}
 
-config.interval = 10800
-config.popup_bg_color = "#222222"
-config.popup_border_width = 1
-config.popup_border_color = "#7e7e7e"
-config.popup_height = 25
-config.popup_width = 500
--- config.polkit_agent_path = "/usr/bin/lxpolkit"
+-- config.interval = 10800
+-- config.popup_bg_color = "#222222"
+-- config.popup_border_width = 1
+-- config.popup_border_color = "#7e7e7e"
+-- config.popup_height = 25
+-- config.popup_width = 500
+-- -- config.polkit_agent_path = "/usr/bin/lxpolkit"
+--
+-- local function worker(user_args)
+    -- local args, _config = user_args or {}, {}
+    -- for prop, value in pairs(config) do
+        -- _config[prop] = args[prop] or beautiful[prop] or value
+    -- end
 
 local function worker(user_args)
-    local args, _config = user_args or {}, {}
-    for prop, value in pairs(config) do
-        _config[prop] = args[prop] or beautiful[prop] or value
-    end
+    local args = user_args or {}
 
-    -- awful.spawn.once(_config.polkit_agent_path)
+    local interval = args.interval or 10800
+    local fg_color = args.fg_color or beautiful.fg_normal
+    local bg_color = args.bg_color or beautiful.bg_color or "#00000000"
+    local popup_bg_color = args.popup_bg_color or beautiful.popup_bg_color or "#222222"
+    local popup_border_width = args.popup_border_width or beautiful.popup_border_width or 1
+    local popup_border_color = args.popup_border_color or beautiful.popup_border_color or "#7e7e7e"
+    local popup_height = args.popup_height or beautiful.popup_height or 25
+    local popup_width = args.popup_width or beautiful.popup_width or 500
+    local font_name = args.font_name or beautiful.font
+    local icon = args.icon or ""
+    local icon_size = args.icon_size or 11
+    local font_name_no_size = font_name:gsub("%s%d+$", " ")
+    local font_size_icon = font_name_no_size .. icon_size or font_name_no_size .. icon_size
+    -- local polkit_agent_path = "/usr/bin/lxpolkit"
+
+    -- awful.spawn.once(polkit_agent_path)
 
     pacman_widget = wibox.widget {
             {
                 id = "txt_icon",
-                text = " ",
+                text = icon,
+                font = font_size_icon,
                 widget = wibox.widget.textbox,
             },
             valign = "center",
@@ -37,8 +56,7 @@ local function worker(user_args)
             -- layout = wibox.container.place,
             {
                 id = "txt_updates",
-                font = "Ubuntu Nerd Font 11",
-                -- font = args.font,
+                font = font_name,
                 widget = wibox.widget.textbox
             },
             spacing = 3,
@@ -59,7 +77,7 @@ local function worker(user_args)
                   ptr = ptr - 1
               end
           elseif button == 5 then
-              if ptr < #rows.children and ((#rows.children - ptr) > _config.popup_height) then
+              if ptr < #rows.children and ((#rows.children - ptr) > popup_height) then
                   ptr = ptr + 1
                   rows.children[ptr].visible = false
               end
@@ -67,8 +85,8 @@ local function worker(user_args)
        end)
 
     local popup = awful.popup {
-        border_width = _config.popup_border_width,
-        border_color = _config.popup_border_color,
+        border_width = popup_border_width,
+        border_color = popup_border_color,
         shape = gears.shape.rounded_rect,
         visible = false,
         ontop = true,
@@ -179,9 +197,9 @@ local function worker(user_args)
         popup.visible = false
     end)
 
-    -- Check updates in _config.interval
+    -- Check updates in interval
     timer = select(2, awful.widget.watch([[bash -c "checkupdates-with-aur 2>/dev/null"]],
-        _config.interval,
+        interval,
         function(widget, stdout)
             local upgrades_tbl = {}
             for value in stdout:gmatch("([^\n]+)") do
@@ -243,8 +261,8 @@ local function worker(user_args)
                 ::continue::
             end
 
-            -- local height = popup_header_height + math.min(#upgrades_tbl, _config.popup_height) * popup_row_height
-            local height = popup_header_height + math.min(#upgrades_tbl, _config.popup_height) * (popup_row_height + 1) -- +1 corrects popup output!!!
+            -- local height = popup_header_height + math.min(#upgrades_tbl, popup_height) * popup_row_height
+            local height = popup_header_height + math.min(#upgrades_tbl, popup_height) * (popup_row_height + 1) -- +1 corrects popup output!!!
             popup:setup {
                 {
                     {
@@ -261,10 +279,10 @@ local function worker(user_args)
                         margins = 10,
                         layout = wibox.container.margin
                     },
-                    bg = _config.popup_bg_color,
+                    bg = popup_bg_color,
                     layout = wibox.container.background
                 },
-                forced_width = _config.popup_width,
+                forced_width = popup_width,
                 layout = wibox.layout.fixed.horizontal
             }
        end,
@@ -274,7 +292,7 @@ local function worker(user_args)
     -- Set fg and bg colors for pacman_widget
     local pacman_widget_clr = wibox.widget.background()
     pacman_widget_clr:set_widget(pacman_widget)
-    pacman_widget_clr:set_fg("#e2e0a5")
+    pacman_widget_clr:set_fg(fg_color)
     -- pacman_widget_clr:set_bg("#ff0000")
     -- return wibox.container.background(pacman_widget, "#ff0000")
 

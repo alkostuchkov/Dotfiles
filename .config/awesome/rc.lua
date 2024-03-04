@@ -34,7 +34,7 @@ local weather_widget = require("awesome-wm-widgets/weather-widget/weather-widget
 local cpu_widget = require("awesome-wm-widgets/cpu-widget/cpu-widget")
 local ram_widget = require("awesome-wm-widgets/ram-widget/ram-widget")
 local calendar_widget = require("awesome-wm-widgets/calendar-widget/calendar-widget")
--- local sep_widget = require("awesome-wm-widgets/sep-widget/sep-widget")
+local sep_widget = require("awesome-wm-widgets/sep-widget/sep-widget")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -290,7 +290,12 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             spacing = 12,
             -- spacing = 8,
-            pacman_widget(),
+            pacman_widget({
+              font_name = "Ubuntu Nerd Font 11",
+              icon = "",
+              icon_size = 12,
+              fg_color = "#e2e0a5",
+            }),
             -- sep_widget(),
             weather_widget({
               api_key="7834197c2338888258f8cb94ae14ef49",
@@ -298,20 +303,42 @@ awful.screen.connect_for_each_screen(function(s)
               time_format_12h = false,
               units = "metric",
               both_units_widget = false,
-              font_name = "Ubuntu Nerd Font 14",
+              font_name = "Ubuntu Nerd Font",
               icons = "VitalyGorbachev",
               icons_extension = ".svg",
               show_hourly_forecast = true,
               show_daily_forecast = true,
-              timeout = 10800,
+              timeout = 1800,
             }),
-            cpu_widget(),
-            -- sep_widget(),
-            ram_widget(),
+            cpu_widget({
+              font_name = "Ubuntu Nerd Font 10",
+              icon = "",
+              icon_size = 12,
+              fg_color = "#89ddff",
+            }),
+            -- sep_widget({
+              -- font_name = "Sarasa Mono SC Nerd 17",
+              -- icon = "|",
+              -- icon_size = 17,
+            -- }),
+            ram_widget({
+              font_name = "Ubuntu Nerd Font 10",
+              icon = " ",
+              icon_size = 12,
+              fg_color = "#ffcb6b",
+            }),
             wibox.container.margin(s.systray, 0, 0, 3, 0), -- systray in the container
             s.mylayoutbox,
             -- sep_widget(),
-            calendar_widget(),
+            calendar_widget({
+              font_name = "Ubuntu Nerd Font 10",
+              icon = " ",
+              icon_size = 12,
+              format = "%a, %d %b\n   %H:%M:%S",
+              refresh = 1,
+              fg_color = "#83eed9",
+              popup_bg_color = "#ff0000",
+            }),
         },
     }
 end)
@@ -803,13 +830,13 @@ awful.rules.rules = {
       }, properties = { floating = true, border_width = 1 } },
 
     -- Set applications to always map on the sertain tag
+    { rule_any = { class = {"dolphin", "Thunar"} },
+      properties = { screen = 1, tag = root.tags()[3] } },
+
     { rule = { class = "VirtualBox Manager" },
       properties = { screen = 1, tag = root.tags()[5] } },
 
-    { rule = { class = "TelegramDesktop" },
-      properties = { screen = 1, tag = root.tags()[6] } },
-
-    { rule = { class = "ViberPC" },
+    { rule_any = { class = {"TelegramDesktop", "ViberPC"} },
       properties = { screen = 1, tag = root.tags()[6] } },
 
     { rule = { class = "Gimp" },
@@ -817,7 +844,7 @@ awful.rules.rules = {
 
     { rule = { class = "thunderbird" },
       except = { name = "Password Required - Mozilla Thunderbird" },
-      properties = { screen = 1, tag = root.tags()[9] } },
+      properties = { screen = 1, tag = root.tags()[9], switchtotag = false } },
 
     -- -- Titlebars
     -- -- Add titlebars to normal clients and dialogs

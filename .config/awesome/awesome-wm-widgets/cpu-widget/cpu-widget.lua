@@ -11,8 +11,8 @@ local CMD = [[sh -c "grep '^cpu.' /proc/stat; ps -eo 'pid:10,pcpu:5,pmem:5,comm:
 local CMD_slim = [[grep --max-count=1 '^cpu.' /proc/stat]]
 
 local HOME = os.getenv("HOME")
-local TERMINAL = os.getenv("TERMINAL") or "alacritty"
-local SHELL = os.getenv("SHELL") or "/usr/bin/fish"
+local TERMINAL = os.getenv("TERMINAL") or "xterm"
+local SHELL = os.getenv("SHELL") or "/usr/bin/sh"
 local WIDGET_DIR = HOME.."/.config/awesome/awesome-wm-widgets/cpu-widget"
 
 local cpu_widget = {}
@@ -34,7 +34,6 @@ end
 local function starts_with(str, start)
     return str:sub(1, #start) == start
 end
-
 
 local function create_textbox(args)
     return wibox.widget {
@@ -76,6 +75,13 @@ local function create_kill_process_button()
     }
 end
 
+local function get_cpu_freq()
+  res = io.popen("cat /proc/cpuinfo | grep -i 'cpu MHz' | awk '{print $4}' | cut -d'.' -f1")
+  freq_mhz = res:read("l")
+
+  return string.format("%0.1f GHz", tonumber(freq_mhz/1000))
+end
+
 local function worker(user_args)
     local args = user_args or {}
 
@@ -83,17 +89,25 @@ local function worker(user_args)
     local step_width = args.step_width or 2
     local step_spacing = args.step_spacing or 1
     local color = args.color or beautiful.fg_normal
-    local background_color = args.background_color or "#00000000"
+    local fg_color = args.fg_color or beautiful.fg_normal
+    local bg_color = args.bg_color or beautiful.bg_color or "#00000000"
+    local popup_bg_color = args.popup_bg_color or beautiful.popup_bg_color or "#222222"
+    local popup_border_width = args.popup_border_width or beautiful.popup_border_width or 1
+    local popup_border_color = args.popup_border_color or beautiful.popup_border_color or "#7e7e7e"
     local enable_kill_button = args.enable_kill_button or false
     local process_info_max_length = args.process_info_max_length or -1
     local timeout = args.timeout or 1
+    local font_name = args.font_name or beautiful.font
+    local icon = args.icon or ""
+    local icon_size = args.icon_size or 11
+    local font_name_no_size = font_name:gsub("%s%d+$", " ")
+    local font_size_icon = font_name_no_size .. icon_size or font_name_no_size .. icon_size
 
     local cpu_widget = wibox.widget {
         { -- the first inner widget in cpu_widget
             id = "txt_icon",
-            text = " ",
-            -- font = args.font,
-            font = "Ubuntu Nerd Font 12",
+            text = icon,
+            font = font_size_icon,
             widget = wibox.widget.textbox,
         },
         valign = "center",
@@ -102,12 +116,12 @@ local function worker(user_args)
         { -- the second (contains two widgets) inner widget in cpu_widget
             {
                 id = "txt_cpu_freq",
-                font = "Ubuntu Nerd Font 10",
+                font = font_name,
                 widget = wibox.widget.textbox
             },
             {
                 id = "txt_cpu_usage",
-                font = "Ubuntu Nerd Font 10",
+                font = font_name,
                 widget = wibox.widget.textbox
             },
             -- spacing = 5,
@@ -131,8 +145,10 @@ local function worker(user_args)
         ontop = true,
         visible = false,
         shape = gears.shape.rounded_rect,
-        border_width = 1,
-        border_color = beautiful.bg_normal,
+        border_width = popup_border_width,
+        border_color = popup_border_color,
+        -- border_width = 1,
+        -- border_color = beautiful.bg_normal,
         maximum_width = 300,
         offset = { y = 5 },
         widget = {}
@@ -193,7 +209,9 @@ local function worker(user_args)
         -- local cpu_usage_perc = 100 * t / (t + idle)
         -- cpu_widget.set("2.6 GHz", cpu_usage_perc)
 
-        cpu_widget.set("2.6 GHz", string.format("    %.0f%%", diff_usage))
+        -- cpu_widget.set("2.6 GHz", string.format("    %.0f%%", diff_usage))
+        local freq = get_cpu_freq()
+        cpu_widget.set(freq, string.format("    %.0f%%", diff_usage))
     end,
     cpu_widget
     )
@@ -360,7 +378,7 @@ local function worker(user_args)
     -- Set fg and bg colors for ram_widget_icon
     local cpu_widget_clr = wibox.widget.background()
     cpu_widget_clr:set_widget(cpu_widget)
-    cpu_widget_clr:set_fg("#89ddff")
+    cpu_widget_clr:set_fg(fg_color)
 
     return cpu_widget_clr
 end

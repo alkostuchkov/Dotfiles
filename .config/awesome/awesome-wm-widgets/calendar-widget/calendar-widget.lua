@@ -29,17 +29,30 @@ end
 local function worker(user_args)
     local args = user_args or {}
 
+    local fg_color = args.fg_color or beautiful.fg_normal
+    local bg_color = args.bg_color or beautiful.bg_color or "#00000000"
+    local popup_bg_color = args.popup_bg_color or beautiful.popup_bg_color or "#222222"
+    local popup_border_width = args.popup_border_width or beautiful.popup_border_width or 1
+    local popup_border_color = args.popup_border_color or beautiful.popup_border_color or "#7e7e7e"
+    local format = args.format or "%a, %d %b\n   %H:%M:%S"
+    local refresh = args.refresh or 1
+    local font_name = args.font_name or beautiful.font
+    local icon = args.icon or " "
+    local icon_size = args.icon_size or 11
+    local font_name_no_size = font_name:gsub("%s%d+$", " ")
+    local font_size_icon = font_name_no_size .. icon_size or font_name_no_size .. icon_size
+
     local calendar_widget = wibox.widget {
       {
         id = "txt_icon",
-        text = " " ,
-        font = "Ubuntu Nerd Font 12",
+        text = icon,
+        font = font_size_icon,
         widget = wibox.widget.textbox
       },
       {
-        format = "%a, %d %b\n  %H:%M:%S",
-        refresh = 1,
-        font = "Ubuntu Nerd Font 10",
+        format = format,
+        refresh = refresh,
+        font = font_name,
         widget = wibox.widget.textclock
       },
       valign = "center",
@@ -54,7 +67,7 @@ local function worker(user_args)
 
     local calendar_widget_clr = wibox.widget.background()
     calendar_widget_clr:set_widget(calendar_widget)
-    calendar_widget_clr:set_fg("#83eed9")
+    calendar_widget_clr:set_fg(fg_color)
 
     return calendar_widget_clr
 end

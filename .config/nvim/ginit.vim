@@ -20,6 +20,6 @@ GuiFont! mplus Nerd Font:h18
 " set guifont=mplus\ Nerd\ Font\ 18  " for nvim-gtk
 
 set background=dark
-colorscheme ayu
+" colorscheme ayu
 " colorscheme darcula
-" colorscheme memorycolor
+colorscheme memorycolor

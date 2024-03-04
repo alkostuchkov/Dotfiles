@@ -142,9 +142,9 @@ else
 endif
 
 set background=dark
-colorscheme ayu
+" colorscheme ayu
 " colorscheme darcula
-" colorscheme memorycolor
+colorscheme memorycolor
 " colorscheme OceanicNext
 
 " GUI -------------------------------------------------------------------------
@@ -203,9 +203,9 @@ call plug#begin('~/.config/nvim/plugged')
     " Completion
     Plug 'hrsh7th/nvim-cmp'
     Plug 'hrsh7th/cmp-nvim-lsp'
-    Plug 'hrsh7th/cmp-nvim-lua'
-    Plug 'saadparwaiz1/cmp_luasnip'
-    Plug 'L3MON4D3/LuaSnip'
+    " Plug 'hrsh7th/cmp-nvim-lua'
+    " Plug 'saadparwaiz1/cmp_luasnip'
+    " Plug 'L3MON4D3/LuaSnip'
 
     Plug 'prabirshrestha/vim-lsp'
     Plug 'prabirshrestha/asyncomplete.vim'
@@ -269,33 +269,33 @@ let g:rainbow_active = 1
 "##############################################################################
 " orgmode Settings
 "##############################################################################
-" lua << EOF
-" -- Load custom tree-sitter grammar for org filetype
-" require('orgmode').setup_ts_grammar()
-"
-" -- Tree-sitter configuration
-" require'nvim-treesitter.configs'.setup {
-  " -- If TS highlights are not enabled at all, or disabled via `disable` prop, highlighting will fallback to default Vim syntax highlighting
-  " highlight = {
-    " enable = true,
-    " additional_vim_regex_highlighting = {'org'}, -- Required for spellcheck, some LaTex highlights and code block highlights that do not have ts grammar
-  " },
-  " ensure_installed = {'org'}, -- Or run :TSUpdate org
-" }
-"
-" -- require('orgmode').setup({
-" --   org_agenda_files = {'~/Dropbox/org/*', '~/my-orgs/**/*'},
-" --   org_default_notes_file = '~/Dropbox/org/refile.org',
-" -- })
-" EOF
-"
-" lua << EOF
-" require'cmp'.setup({
-  " sources = {
-    " { name = 'orgmode' }
-  " }
-" })
-" EOF
+-- lua << EOF
+-- Load custom tree-sitter grammar for org filetype
+require('orgmode').setup_ts_grammar()
+
+-- Tree-sitter configuration
+require'nvim-treesitter.configs'.setup {
+  -- If TS highlights are not enabled at all, or disabled via `disable` prop, highlighting will fallback to default Vim syntax highlighting
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = {'org'}, -- Required for spellcheck, some LaTex highlights and code block highlights that do not have ts grammar
+  },
+  ensure_installed = {'org'}, -- Or run :TSUpdate org
+}
+
+-- require('orgmode').setup({
+--   org_agenda_files = {'~/Dropbox/org/*', '~/my-orgs/**/*'},
+--   org_default_notes_file = '~/Dropbox/org/refile.org',
+-- })
+EOF
+
+lua << EOF
+require'cmp'.setup({
+  sources = {
+    { name = 'orgmode' }
+  }
+})
+EOF
 
 "##############################################################################
 " YouCompleteMe Settings
@@ -306,16 +306,16 @@ let g:python3_host_prog = '~/Projects/Python/Virtualenvironments/poetry_venvs/py
 " let g:loaded_youcompleteme = 1
 " let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 " let g:ycm_extra_conf_globlist = ['!~/*']
-" let g:ycm_python_binary_path = 'python3'
+let g:ycm_python_binary_path = '/usr/bin/python3'
 " let g:ycm_autoclose_preview_window_after_completion = 1
 " let g:ycm_min_num_of_chars_for_completion = 1
 
 " for python
 " let g:ycm_semantic_triggers = {'python': ['re!from\s+\S+\s+import\s']}
 
-"##############################################################################
-" LSP Settings
-"##############################################################################
+" "##############################################################################
+" " LSP Settings
+" "##############################################################################
 " lua << EOF
 " -- Set completeopt to have a better completion experience
 " vim.o.completeopt = 'menuone,noselect'
@@ -420,58 +420,58 @@ let g:python3_host_prog = '~/Projects/Python/Virtualenvironments/poetry_venvs/py
   " }
 " end
 " EOF
-"
-" "##############################################################################
-" " vim-lsp Settings
-" "##############################################################################
-" " vim-lsp-settings won't detect hls automatically (2020-10-26). Let's teach it:
-" if (executable('haskell-language-server-wrapper'))
-  " au User lsp_setup call lsp#register_server({
-      " \ 'name': 'haskell-language-server-wrapper',
-      " \ 'cmd': {server_info->['haskell-language-server-wrapper', '--lsp']},
-      " \ 'whitelist': ['haskell'],
-      " \ })
-" endif
-"
-" " Mappings
-" function! s:on_lsp_buffer_enabled() abort
-    " setlocal omnifunc=lsp#complete
-    " setlocal signcolumn=yes
-    " if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
-    " nmap <buffer> gd <plug>(lsp-definition)
-    " nmap <buffer> gr <plug>(lsp-references)
-    " nmap <buffer> gf <plug>(lsp-code-action)
-    " nmap <buffer> gi <plug>(lsp-implementation)
-    " nmap <buffer> gt <plug>(lsp-type-definition)
-    " " nmap <buffer> <F2> <plug>(lsp-rename)
-    " nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
-    " nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
-    " nmap <buffer> K <plug>(lsp-hover)
-    " xmap <buffer> f <plug>(lsp-document-range-format)
-    " " nmap <buffer> <F5> <plug>(lsp-code-lens)
-"
-    " " buffer format on save
-    " " autocmd BufWritePre <buffer> LspDocumentFormatSync
-" endfunction
-"
-" " Decorations
-" augroup lsp_install
-    " au!
-    " let g:lsp_signs_enabled = 1         " enable signs
-    " let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
-    " let g:lsp_signs_error = {'text': '✗'}
-    " " let g:lsp_signs_warning = {'text': '‼', 'icon': '/path/to/some/icon'} " icons require GUI
-    " " let g:lsp_signs_hint = {'icon': '/path/to/some/other/icon'} " icons require GUI
-    " let g:lsp_signs_warning = {'text': '‼'}
-    " let g:lsp_highlight_references_enabled = 1
-    " highlight link LspErrorText GruvboxRedSign " requires gruvbox
-    " highlight clear LspWarningLine
-    " " highlight lspReference ctermfg=red guifg=red ctermbg=green guibg=green
-    " highlight lspReference guibg=#303010
-"
-    " " call s:on_lsp_buffer_enabled only for languages that has the server registered.
-    " autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-" augroup END
+
+"##############################################################################
+" vim-lsp Settings
+"##############################################################################
+" vim-lsp-settings won't detect hls automatically (2020-10-26). Let's teach it:
+if (executable('haskell-language-server-wrapper'))
+  au User lsp_setup call lsp#register_server({
+      \ 'name': 'haskell-language-server-wrapper',
+      \ 'cmd': {server_info->['haskell-language-server-wrapper', '--lsp']},
+      \ 'whitelist': ['haskell'],
+      \ })
+endif
+
+" Mappings
+function! s:on_lsp_buffer_enabled() abort
+    setlocal omnifunc=lsp#complete
+    setlocal signcolumn=yes
+    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
+    nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> gr <plug>(lsp-references)
+    nmap <buffer> gf <plug>(lsp-code-action)
+    nmap <buffer> gi <plug>(lsp-implementation)
+    nmap <buffer> gt <plug>(lsp-type-definition)
+    " nmap <buffer> <F2> <plug>(lsp-rename)
+    nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
+    nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
+    nmap <buffer> K <plug>(lsp-hover)
+    xmap <buffer> f <plug>(lsp-document-range-format)
+    " nmap <buffer> <F5> <plug>(lsp-code-lens)
+
+    " buffer format on save
+    " autocmd BufWritePre <buffer> LspDocumentFormatSync
+endfunction
+
+" Decorations
+augroup lsp_install
+    au!
+    let g:lsp_signs_enabled = 1         " enable signs
+    let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
+    let g:lsp_signs_error = {'text': '✗'}
+    " let g:lsp_signs_warning = {'text': '‼', 'icon': '/path/to/some/icon'} " icons require GUI
+    " let g:lsp_signs_hint = {'icon': '/path/to/some/other/icon'} " icons require GUI
+    let g:lsp_signs_warning = {'text': '‼'}
+    let g:lsp_highlight_references_enabled = 1
+    highlight link LspErrorText GruvboxRedSign " requires gruvbox
+    highlight clear LspWarningLine
+    " highlight lspReference ctermfg=red guifg=red ctermbg=green guibg=green
+    highlight lspReference guibg=#303010
+
+    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
 
 "##############################################################################
 " Mappings
@@ -600,11 +600,11 @@ nnoremap <Enter> <nop>
 " let g:solarized_termcolors=256
 map <F1> :colorscheme OceanicNext<CR>
 map <F2> :colorscheme gruvbox<CR>
-map <F3> :colorscheme gruvbox-material<CR>
-map <F4> :colorscheme palenight<CR>
+" map <F3> :colorscheme gruvbox-material<CR>
+" map <F4> :colorscheme palenight<CR>
 map <F5> :colorscheme tokyonight<CR>
 map <F6> :colorscheme ayu<CR>
-map <F7> :colorscheme onedark<CR>
+" map <F7> :colorscheme onedark<CR>
 map <F8> :colorscheme darcula<CR>
 map <F9> :colorscheme memorycolor<CR>
 " map <F9> :colorscheme base16-flat_Cobalt2<CR>

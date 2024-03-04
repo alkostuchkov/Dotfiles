@@ -6,30 +6,32 @@ local wibox = require("wibox")
 
 
 local ram_widget = {}
-local config = {}
 local CMD = [[bash -c "ps axch -o cmd:17,%mem --sort=-%mem | head -5"]]
 
-config.timeout = 1
-config.popup_bg_color = "#222222"
-config.popup_border_width = 1
-config.popup_border_color = "#7e7e7e"
-config.popup_height = 6
-config.popup_width = 300
-config.font_ubuntu = "Ubuntu Nerd Font 10"
-config.terminal = os.getenv("TERMINAL") or "alacritty"
-config.shell = os.getenv("SHELL") or "/usr/bin/fish"
-
 local function worker(user_args)
-    local args, _config = user_args or {}, {}
-    for prop, value in pairs(config) do
-        _config[prop] = args[prop] or beautiful[prop] or value
-    end
+    local args = user_args or {}
+
+    local TERMINAL = os.getenv("TERMINAL") or "xterm"
+    local SHELL = os.getenv("SHELL") or "/usr/bin/sh"
+    local timeout = args.timeout or 1
+    local fg_color = args.fg_color or beautiful.fg_normal
+    local bg_color = args.bg_color or beautiful.bg_color or "#00000000"
+    local popup_bg_color = args.popup_bg_color or beautiful.popup_bg_color or "#222222"
+    local popup_border_width = args.popup_border_width or beautiful.popup_border_width or 1
+    local popup_border_color = args.popup_border_color or beautiful.popup_border_color or "#7e7e7e"
+    local popup_height = args.popup_height or beautiful.popup_height or 6
+    local popup_width = args.popup_width or beautiful.popup_width or 300
+    local font_name = args.font_name or beautiful.font
+    local icon = args.icon or " "
+    local icon_size = args.icon_size or 11
+    local font_name_no_size = font_name:gsub("%s%d+$", " ")
+    local font_size_icon = font_name_no_size .. icon_size or font_name_no_size .. icon_size
 
     ram_widget = wibox.widget {
         { -- the first inner widget in ram_widget
             id = "txt_icon",
-            text = "  ",
-            font = args.font,
+            text = icon,
+            font = font_size_icon,
             widget = wibox.widget.textbox,
         },
         valign = "center",
@@ -38,12 +40,12 @@ local function worker(user_args)
         { -- the second (contains two widgets) inner widget in ram_widget
             {
                 id = "txt_ram_usedg",
-                font = _config.font_ubuntu,
+                font = font_name,
                 widget = wibox.widget.textbox
             },
             {
                 id = "txt_ram_usedp",
-                font = _config.font_ubuntu,
+                font = font_name,
                 widget = wibox.widget.textbox
             },
             -- spacing = 5,
@@ -65,7 +67,7 @@ local function worker(user_args)
                   ptr = ptr - 1
               end
           elseif button == 5 then
-              if ptr < #rows.children and ((#rows.children - ptr) > _config.popup_height) then
+              if ptr < #rows.children and ((#rows.children - ptr) > popup_height) then
                   ptr = ptr + 1
                   rows.children[ptr].visible = false
               end
@@ -73,8 +75,8 @@ local function worker(user_args)
        end)
 
     local popup = awful.popup {
-        border_width = _config.popup_border_width,
-        border_color = _config.popup_border_color,
+        border_width = popup_border_width,
+        border_color = popup_border_color,
         shape = gears.shape.rounded_rect,
         visible = false,
         ontop = true,
@@ -102,7 +104,7 @@ local function worker(user_args)
                 end
             end),
             awful.button({}, 3, function()
-                awful.spawn(_config.terminal.." -e ".._config.shell.." -c htop")
+                awful.spawn(TERMINAL.." -e "..SHELL.." -c htop")
             end)
         )
     )
@@ -164,7 +166,7 @@ local function worker(user_args)
                 ::continue::
             end
 
-            local height = popup_header_height + math.min(#top_tbl, _config.popup_height) * (popup_row_height + 1) -- +1 corrects popup output!!!
+            local height = popup_header_height + math.min(#top_tbl, popup_height) * (popup_row_height + 1) -- +1 corrects popup output!!!
             popup:setup {
                 {
                     {
@@ -181,12 +183,12 @@ local function worker(user_args)
                         margins = 10,
                         layout = wibox.container.margin
                     },
-                    bg = _config.popup_bg_color,
+                    bg = popup_bg_color,
                     -- bg = beautiful.bg_focus,
                     layout = wibox.container.background
                 },
                 -- forced_width = 300,
-                forced_width = _config.popup_width,
+                forced_width = popup_width,
                 layout = wibox.layout.fixed.horizontal
             }
         end
@@ -203,7 +205,7 @@ local function worker(user_args)
         return string.format("%.1fG", value / 1024 / 1024)
     end
 
-    watch('bash -c "LANGUAGE=en_US.UTF-8 free | grep -z Mem.*Swap.*"', _config.timeout,
+    watch('bash -c "LANGUAGE=en_US.UTF-8 free | grep -z Mem.*Swap.*"', timeout,
         function(widget, stdout)
             total, used, free, shared, buff_cache, available, total_swap, used_swap, free_swap =
                 stdout:match('(%d+)%s*(%d+)%s*(%d+)%s*(%d+)%s*(%d+)%s*(%d+)%s*Swap:%s*(%d+)%s*(%d+)%s*(%d+)')
@@ -215,7 +217,7 @@ local function worker(user_args)
     -- Set fg and bg colors for ram_widget_icon
     local ram_widget_clr = wibox.widget.background()
     ram_widget_clr:set_widget(ram_widget)
-    ram_widget_clr:set_fg("#ffcb6b")
+    ram_widget_clr:set_fg(fg_color)
 
     return ram_widget_clr
 end
