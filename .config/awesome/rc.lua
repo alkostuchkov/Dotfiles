@@ -296,7 +296,11 @@ awful.screen.connect_for_each_screen(function(s)
               icon_size = 12,
               fg_color = "#e2e0a5",
             }),
-            -- sep_widget(),
+            -- sep_widget({
+              -- font_name = "Sarasa Mono SC Nerd 17",
+              -- icon = "|",
+              -- icon_size = 17,
+            -- }),
             weather_widget({
               api_key="7834197c2338888258f8cb94ae14ef49",
               coordinates = {52.4345, 30.9754},
@@ -310,6 +314,11 @@ awful.screen.connect_for_each_screen(function(s)
               show_daily_forecast = true,
               timeout = 1800,
             }),
+            -- sep_widget({
+              -- font_name = "Sarasa Mono SC Nerd 17",
+              -- icon = "|",
+              -- icon_size = 17,
+            -- }),
             cpu_widget({
               font_name = "Ubuntu Nerd Font 10",
               icon = "",
@@ -327,9 +336,18 @@ awful.screen.connect_for_each_screen(function(s)
               icon_size = 12,
               fg_color = "#ffcb6b",
             }),
+            -- sep_widget({
+              -- font_name = "Sarasa Mono SC Nerd 17",
+              -- icon = "|",
+              -- icon_size = 17,
+            -- }),
             wibox.container.margin(s.systray, 0, 0, 3, 0), -- systray in the container
             s.mylayoutbox,
-            -- sep_widget(),
+            -- sep_widget({
+              -- font_name = "Sarasa Mono SC Nerd 17",
+              -- icon = "|",
+              -- icon_size = 17,
+            -- }),
             calendar_widget({
               font_name = "Ubuntu Nerd Font 10",
               icon = " ",
@@ -844,7 +862,7 @@ awful.rules.rules = {
 
     { rule = { class = "thunderbird" },
       except = { name = "Password Required - Mozilla Thunderbird" },
-      properties = { screen = 1, tag = root.tags()[9], switchtotag = false } },
+      properties = { screen = 1, tag = root.tags()[9], switch_to_tags = false } },
 
     -- -- Titlebars
     -- -- Add titlebars to normal clients and dialogs
@@ -955,7 +973,8 @@ run_once({
     "volumeicon",
     "nm-applet",
     "xfce4-power-manager",
-    "diodon",
+    "clipit",
+    -- "diodon",
     -- "xfce4-clipman",
     "picom --config "..HOME.."/.config/picom/picom.conf",
     "conky -c "..HOME.."/.myScripts/conky/conkyrc",

@@ -1,0 +1,9 @@
+set font "Iosevka 17"
+set adjust-open width
+
+map <C-q> quit
+map <C-=> zoom in
+map <C--> zoom out
+map <C-0> adjust_window best-fit
+map <C-w> adjust_window width
+
