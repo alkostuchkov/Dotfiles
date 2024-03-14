@@ -6,6 +6,8 @@ set nocompatible " no vi-compatible
 " Automatic reloading config file (for NERDCommenter) -------------------------
 autocmd! VimEnter * :source ~/.config/nvim/init.vim
 autocmd VimEnter,TabEnter *.py,*.lua,*.html,*.css,*.txt :ColorHighlight
+" Не автокомментировать новые линии при переходе на новую строку
+autocmd BufEnter * set fo-=c fo-=r fo-=o
 " autocmd! VimEnter * :redraw
 
 " To ALWAYS use the clipboard for ALL operations (instead of '+' or '*') ------
