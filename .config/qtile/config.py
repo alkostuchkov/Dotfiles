@@ -75,7 +75,7 @@ my_mono_font = "Ubuntu Mono"
 my_mono_bold_font = "Ubuntu Mono Bold"
 SHELL = os.getenv("SHELL")
 HOME = os.path.expanduser("~")
-my_config = f"{HOME}/.config/qtile/config.py"
+#  my_config = f"{HOME}/.config/qtile/config.py"
 colors = colors.materia_manjaro
 
 # Check which network iface is upped.
@@ -364,8 +364,8 @@ group_names_indexes = {i: group_names[0][0] for (i, group_names[0]) in enumerate
 layout_theme = {
     "border_width": 3,
     "margin": 4,
-    "border_focus": colors["border_focus"],
-    "border_normal": colors["border_normal"]
+    "border_focus": colors.get("border_focus", "#535d6c"),
+    "border_normal": colors.get("border_normal", "#000000"),
 }
 
 layouts = [
@@ -374,16 +374,16 @@ layouts = [
     layout.TreeTab(
          font=my_font,
          fontsize=14,
-         bg_color=colors["bg_panel"],
-         active_bg=colors["bg_current_tab"],
-         active_fg=colors["fg_active_group"],
-         inactive_bg=colors["bg_systray"],
-         inactive_fg=colors["fg_group_names"],
+         bg_color=colors.get("bg_panel", "#222222"),
+         active_bg=colors.get("bg_current_tab", "#535d6c"),
+         active_fg=colors.get("fg_active_group", "#ffffff"),
+         inactive_bg=colors.get("bg_systray", "#222222"),
+         inactive_fg=colors.get("fg_group_names", "#aaaaaa"),
          border_width=2,
          padding_y=5,
          sections=["FIRST", "SECOND"],
          section_fontsize=12,
-         section_fg=colors["fg_group_names"],
+         section_fg=colors.get("fg_group_names", "#aaaaaa"),
          section_top=10,
          panel_width=320
     ),
@@ -391,8 +391,8 @@ layouts = [
     layout.Max(
       margin=0,
       border_width=0,
-      border_focus=colors["border_focus"],
-      border_normal=colors["border_normal"]
+      border_focus=colors.get("border_focus", "#535d6c"),
+      border_normal=colors.get("border_normal", "#000000")
     ),
     #  layout.MonadTall(**layout_theme, single_border_width=False, single_margin=False),
     #  layout.MonadWide(**layout_theme, single_border_width=False, single_margin=False),
@@ -414,8 +414,8 @@ widget_defaults = {
     "font": my_font,
     "fontsize": 14,
     "padding": 2,
-    "background": colors["bg_panel"],
-    "foreground": colors["fg_group_names"]
+    "background": colors.get("bg_panel", "#222222"),
+    "foreground": colors.get("fg_group_names", "#ffffff")
 }
 
 
@@ -430,33 +430,47 @@ def init_widgets_list():
             padding_y=7,
             padding_x=3,
             borderwidth=3,
-            active=colors["fg_active_group"],
-            inactive=colors["fg_group_names"],
+            active=colors.get("fg_active_group", "#ffffff"),
+            inactive=colors.get("fg_group_names", "#aaaaaa"),
             rounded=False,
-            highlight_color=colors["bg_panel"],
+            highlight_color=colors.get("bg_panel", "#222222"),
             highlight_method="block",
             urgent_alert_method="block",
-            this_current_screen_border=colors["bg_current_tab"],
-            this_screen_border=colors["bg_other_tabs_and_odd_widgets"],
-            other_current_screen_border=colors["bg_panel"],
-            other_screen_border=colors["bg_panel"]
+            this_current_screen_border=colors.get("bg_current_tab", "#535d6c"),
+            this_screen_border=colors.get("bg_other_tabs_and_odd_widgets", "#6182b8"),
+            other_current_screen_border=colors.get("bg_panel", "#222222"),
+            other_screen_border=colors.get("bg_panel", "#222222")
         ),
         widget.Chord(
             fontsize=14,
             padding = 10,
-            background=colors["bg_chord_dmenu"],
-            foreground=colors["fg_chord_dmenu"]
+            background=colors.get("bg_chord_dmenu", "#ffcb6b"),
+            foreground=colors.get("fg_chord_dmenu", "#000000")
         ),
-        widget.WindowName(
-            #  #  font=my_mono_bold_font,
+        #  widget.WindowName(
+            #  #  #  font=my_mono_bold_font,
+            #  fontsize=14,
+            #  foreground=colors["fg_windowname"],
+            #  padding=0,
+            #  #  parse_text=parse_windowname
+        #  ),
+        widget.TaskList(
             fontsize=14,
-            foreground=colors["fg_windowname"],
-            padding=0,
-            #  parse_text=parse_windowname
+            #  foreground=colors["fg_windowname"],
+            foreground=colors.get("fg_tasklist", "#ffffff"),
+            border=colors.get("bg_current_tab", "#222222"),
+            borderwidth=0,
+            highlight_method="block",
+            #  txt_floating=" ",
+            txt_maximized="🗖 ",
+            txt_minimized="🗕 ",
+            txt_floating="🗗 ",
+            icon_size=20,
+            padding_y=4,
         ),
         widget.CheckUpdates(
-            foreground=colors["fg_updates"],
-            colour_have_updates=colors["fg_updates"],
+            foreground=colors.get("fg_updates", "#ffffff"),
+            colour_have_updates=colors.get("fg_updates", "#ffffff"),
             #  no_update_string="No updates",
             font=my_nerd_font,
             fontsize=14,
@@ -498,7 +512,7 @@ def init_widgets_list():
             #  padding=10
         #  ),
         widget.OpenWeather(
-            foreground=colors["fg_weather"],
+            foreground=colors.get("fg_weather", "#ffffff"),
             coordinates={"longitude": "30.9754", "latitude": "52.4345"},
             fontsize=20,
             format="{icon}",
@@ -515,7 +529,7 @@ def init_widgets_list():
             #  padding=0
         #  ),
         widget.OpenWeather(
-            foreground=colors["fg_weather"],
+            foreground=colors.get("fg_weather", "#ffffff"),
             coordinates={"longitude": "30.9754", "latitude": "52.4345"},
             format="{location_city}: {temp}°{units_temperature}\n{weather_details}",
             update_interval=1800,
@@ -532,7 +546,7 @@ def init_widgets_list():
             #  text=" ",
             font=my_nerd_font,
             fontsize=16,
-            foreground=colors["fg_cpu"],
+            foreground=colors.get("fg_cpu", "#ffffff"),
             padding=0,
             mouse_callbacks={
                 "Button1": lambda: qtile.spawn(f"{HOME}/.config/qtile/scripts/top5_cpu_usage.sh"),
@@ -541,7 +555,7 @@ def init_widgets_list():
             }
         ),
         widget.CPU(
-            foreground=colors["fg_cpu"],
+            foreground=colors.get("fg_cpu", "#ffffff"),
             padding=0,
             format="{freq_current}GHz\n{load_percent: .0f}%",
             mouse_callbacks={
@@ -557,7 +571,7 @@ def init_widgets_list():
             text="",
             font=my_nerd_font,
             fontsize=16,
-            foreground=colors["fg_memory"],
+            foreground=colors.get("fg_memory", "#ffffff"),
             padding=0,
             mouse_callbacks={
                 "Button1": lambda: qtile.spawn(f"{HOME}/.config/qtile/scripts/top5_mem_usage.sh"),
@@ -565,7 +579,7 @@ def init_widgets_list():
             }
         ),
         memory.Memory(
-            foreground=colors["fg_memory"],
+            foreground=colors.get("fg_memory", "#ffffff"),
             padding=0,
             format="{MemUsed: .1f}{mm}\n{MemPercent: .0f}%",
             measure_mem="G",
@@ -596,25 +610,26 @@ def init_widgets_list():
             #  padding=10
         #  ),
         widget.KeyboardKbdd(
-            configured_keyboards=["🇺🇸", "🇷🇺"],
+            configured_keyboards=["🇺🇸 ", "🇷🇺 "],
             #  configured_keyboards=["US", "RU"],
             #  display_map={"us": "🇺🇸", "ru": "🇷🇺"},
             #  option="grp:alt_shift_toggle",
             #  option="grp:caps_toggle",
-            foreground=colors["fg_keyboard"],
+            foreground=colors.get("fg_keyboard", "#ffffff"),
             fontsize=16,
-            padding=1
+            padding=0,
         ),
         widget.Systray(
-            padding=5
+            padding=1,
+            icon_size=24,
         ),
         widget.TextBox(
             text=" ",
-            padding=0,
+            padding=1,
         ),
         widget.CurrentLayoutIcon(
             #  custom_icon_paths=[f"{HOME}/.config/qtile/icons/layouts"],
-            foreground=colors["fg_layout"],
+            foreground=colors.get("fg_layout", "#ffffff"),
             padding=0,
             scale=0.6,
             mouse_callbacks={
@@ -626,13 +641,13 @@ def init_widgets_list():
             text_format=" {num} /",
             fontsize=14,
             padding=0,
-            foreground=colors["fg_layout"],
+            foreground=colors.get("fg_layout", "#ffffff"),
         ),
         all_windows_count.WindowCount(
             text_format=" {num}",
             fontsize=14,
             padding=0,
-            foreground=colors["fg_layout"],
+            foreground=colors.get("fg_layout", "#ffffff"),
         ),
         widget.Sep(
             linewidth=1,
@@ -642,12 +657,12 @@ def init_widgets_list():
             text="",
             font=my_nerd_font,
             fontsize=16,
-            foreground=colors["fg_date"],
+            foreground=colors.get("fg_date", "#ffffff"),
             padding=0,
             mouse_callbacks={"Button1": lambda: qtile.spawn("gsimplecal")}
         ),
         widget.Clock(
-            foreground=colors["fg_date"],
+            foreground=colors.get("fg_date", "#ffffff"),
             padding=3,
             #  mouse_callbacks={"Button1": lambda qtile: qtile.spawn("gsimplecal")},
             mouse_callbacks={"Button1": lambda: qtile.spawn("gsimplecal")},
@@ -801,7 +816,7 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class="makebranch"),  # gitk
     Match(wm_class="maketag"),  # gitk
     Match(wm_class="ssh-askpass")  # ssh-askpass
-], border_focus=colors["bg_current_tab"])
+], border_focus=colors.get("bg_current_tab", "#535d6c"))
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
