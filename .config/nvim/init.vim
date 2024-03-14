@@ -5,6 +5,7 @@ set nocompatible " no vi-compatible
 
 " Automatic reloading config file (for NERDCommenter) -------------------------
 autocmd! VimEnter * :source ~/.config/nvim/init.vim
+autocmd VimEnter,TabEnter *.py,*.lua,*.html,*.css,*.txt :ColorHighlight
 " autocmd! VimEnter * :redraw
 
 " To ALWAYS use the clipboard for ALL operations (instead of '+' or '*') ------
@@ -36,7 +37,7 @@ let &t_EI.="\e[1 q"  "EI = нормальный режим
 "6 - просто вертикальная черта
 
 " Indents ---------------------------------------------------------------------
-set autoindent   "при начале новой строки, отступ копируется из предыдущей
+" set autoindent   "при начале новой строки, отступ копируется из предыдущей
 set smartindent
 
 set mouse=a
@@ -224,8 +225,9 @@ call plug#begin('~/.config/nvim/plugged')
     " Plug 'vim-airline/vim-airline-themes'
     Plug 'preservim/nerdcommenter'
     Plug 'tpope/vim-surround'
-    " Plug 'etdev/vim-hexcolor'
-    Plug 'ap/vim-css-color'
+    " " Plug 'etdev/vim-hexcolor'
+    " Plug 'ap/vim-css-color'
+    Plug 'chrisbra/Colorizer'
     Plug 'luochen1990/rainbow'
     Plug 'nvim-treesitter/nvim-treesitter'
     Plug 'nvim-orgmode/orgmode'
@@ -236,7 +238,7 @@ call plug#end()
 "##############################################################################
 " NERDTree Settings
 "##############################################################################
-noremap <F12> :NERDTreeToggle<CR>
+noremap <C-F12> :NERDTreeToggle<CR>
 
 " Autorefresh on tree focus
 function! NERDTreeRefresh()
@@ -265,6 +267,12 @@ let g:NERDCreateDefaultMappings = 0 " Cancel NERD's default mappings
 "##############################################################################
 "set to 0 if you want to enable it later via :RainbowToggle
 let g:rainbow_active = 1
+
+"##############################################################################
+" Colorizer Settings
+"##############################################################################
+" :let g:colorizer_auto_filetype='css,html,py,lua'
+" :let g:colorizer_auto_color = 1
 
 "##############################################################################
 " orgmode Settings
@@ -651,6 +659,9 @@ augroup END
 vnoremap <C-x> "+d
 vnoremap <C-c> "*y :let @+=@*<CR>
 map <C-p> "+p
+
+" Highlight hex colors toggle -------------------------------------------------
+noremap <F12> :ColorToggle<CR>
 
 " Surround the selection in "", '', () ----------------------------------------
 " vnoremap <Leader>" <ESC>`<i"<ESC>`>la"<ESC>
