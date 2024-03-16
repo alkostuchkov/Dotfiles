@@ -149,17 +149,17 @@ if f ~= nil then
 	mydesktop = true
 end
 
--- TODO Delete: I don't need battery-status!!!
--- Add battery status if I am using my laptop.
-if mylaptop then
-  battery_status = awful.widget.watch("battery-status", 60)
-end
+-- -- TODO Delete: I don't need battery-status!!!
+-- -- Add battery status if I am using my laptop.
+-- if mylaptop then
+  -- battery_status = awful.widget.watch("battery-status", 60)
+-- end
 
 -- {{{ User functions
 -- There is no reason to navigate next or previous in my tag list and have to pass by empty tags in route to the next tag with a client. The following two functions bypass the empty tags when navigating to next or previous.
 function view_next_tag_with_client()
     local initial_tag_index = awful.screen.focused().selected_tag.index
-    while (true) do
+    while(true) do
         awful.tag.viewnext()
         local current_tag = awful.screen.focused().selected_tag
         local current_tag_index = current_tag.index
@@ -171,7 +171,7 @@ end
 
 function view_prev_tag_with_client()
     local initial_tag_index = awful.screen.focused().selected_tag.index
-    while (true) do
+    while(true) do
         awful.tag.viewprev()
         local current_tag = awful.screen.focused().selected_tag
         local current_tag_index = current_tag.index
@@ -186,7 +186,15 @@ end
 -- Create a wibox for each screen and add it
 -- Actions for when I click on my taglist buttons
 local taglist_buttons = gears.table.join(
-    awful.button({ }, 1, function(t) t:view_only() end),
+    -- awful.button({ }, 1, function(t) t:view_only() end),
+    awful.button({ }, 1, function(t)
+                           -- Switch back like in Qtile
+                           if t ~= awful.screen.focused().selected_tag then
+                             t:view_only()
+                           else
+                             awful.tag.history.restore()
+                           end
+                         end),
     awful.button({ super }, 1, function(t)
                               if client.focus then
                                   client.focus:move_to_tag(t)
@@ -288,8 +296,8 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            spacing = 12,
-            -- spacing = 8,
+            -- spacing = 12,
+            spacing = 8,
             pacman_widget({
               font_name = "Ubuntu Nerd Font 11",
               icon = "",
@@ -352,7 +360,7 @@ awful.screen.connect_for_each_screen(function(s)
               font_name = "Ubuntu Nerd Font 10",
               icon = " ",
               icon_size = 12,
-              format = "%a, %d %b\n   %H:%M:%S",
+              format = "%a, %d %b\n  %H:%M:%S   ",
               refresh = 1,
               fg_color = "#83eed9",
               popup_bg_color = "#ff0000",
@@ -723,8 +731,11 @@ for i = 1, 9 do
                   function()
                         local screen = awful.screen.focused()
                         local tag = screen.tags[i]
-                        if tag then
-                           tag:view_only()
+                        -- Switch back like in Qtile
+                        if tag and tag ~= awful.screen.focused().selected_tag then
+                          tag:view_only()
+                        elseif tag == awful.screen.focused().selected_tag then
+                          awful.tag.history.restore()
                         end
                   end,
                   {description = "view tag #"..i, group = "tag"}),

@@ -174,6 +174,7 @@ local function worker(user_args)
                 },
                 {
                     id = 'txt',
+                    font = args.font_name .. ' 11',
                     widget = wibox.widget.textbox
                 },
                 layout = wibox.layout.fixed.horizontal,
