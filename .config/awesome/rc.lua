@@ -809,8 +809,11 @@ awful.rules.rules = {
         titlebars_enabled = false,
         screen = awful.screen.preferred,
         size_hints_honor = false,
-        --  placement = awful.placement.no_overlap+awful.placement.no_offscreen,
-        placement = awful.placement.centered+awful.placement.no_offscreen,
+        placement = awful.placement.no_overlap+awful.placement.no_offscreen+awful.placement.centered,
+        maximized_vertical   = false,
+        maximized_horizontal = false,
+        floating = false,
+        maximized = false,
       }
     },
 

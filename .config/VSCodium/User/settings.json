@@ -173,7 +173,7 @@
   },
   "editor.minimap.enabled": false,
   "files.autoSave": "onFocusChange",
-  "[javascript][typescript][javascriptreact][html][css][Haskell][haskell]": {
+  "[javascript][typescript][javascriptreact][html][css][Haskell][haskell][lua]": {
     "editor.tabSize": 2
   },
   "bracket-pair-colorizer-2.depreciation-notice": false,
