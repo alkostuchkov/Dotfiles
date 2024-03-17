@@ -273,7 +273,7 @@ keys = [
     KeyChord([alt], "m", [
         Key([], "c", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-edit-configs.sh"), desc="Run dmenu script for editing config files"),
         Key([], "l", lazy.spawn(f"{HOME}/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
-        Key([], "p", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-run-programs.sh"), desc="Run choice of most used utils"),
+        Key([], "r", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-run-programs.sh"), desc="Run choice of most used utils"),
         Key([], "s", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-run-scripts.sh"), desc="Run chosen search engine"),
         Key([], "x", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-system-exit.sh"), desc="System exit menu")],
         mode=False,

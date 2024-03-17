@@ -65,7 +65,7 @@ gaps outer -3
 # Personal keybindings
 # My dmenu scripts <CTRL + ALT> + KEY
 bindsym Control+$alt+c exec ~/.myScripts/dmscripts/dm-edit-configs.sh
-bindsym Control+$alt+p exec ~/.myScripts/dmscripts/dm-run-programs.sh
+bindsym Control+$alt+r exec ~/.myScripts/dmscripts/dm-run-programs.sh
 bindsym Control+$alt+s exec ~/.myScripts/dmscripts/dm-run-scripts.sh
 bindsym Control+$alt+x exec ~/.myScripts/dmscripts/dm-system-exit.sh
 

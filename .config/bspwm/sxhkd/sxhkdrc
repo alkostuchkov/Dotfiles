@@ -3,7 +3,7 @@
 
 # Personal keybindings
 # My dmenu scripts <CTRL + ALT> + KEY
-ctrl + alt + {c, p, s, x}
+ctrl + alt + {c, r, s, x}
   {$HOME/.myScripts/dmscripts/dm-edit-configs.sh, \
    $HOME/.myScripts/dmscripts/dm-run-programs.sh, \
    $HOME/.myScripts/dmscripts/dm-run-scripts.sh, \

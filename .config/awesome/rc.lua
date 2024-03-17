@@ -80,6 +80,7 @@ local themes = {
     "gruvbox",     -- 7
     "steamburn",   -- 8
     "mira",        -- 9
+    "myotto",      -- 10
 }
 local theme_path = AWESOME_CONFIG_DIR.."/themes/"..themes[3].."/theme.lua"
 beautiful.init(theme_path)
@@ -386,7 +387,7 @@ globalkeys = gears.table.join(
     -- My dmenu scripts <CTRL + ALT> + KEY
     awful.key({ ctrl, alt }, "c", function() awful.util.spawn(HOME.."/.myScripts/dmscripts/dm-edit-configs.sh") end,
         {description = "edit config files" , group = "dmenu scripts" }),
-    awful.key({ ctrl, alt }, "p", function() awful.util.spawn(HOME.."/.myScripts/dmscripts/dm-run-programs.sh") end,
+    awful.key({ ctrl, alt }, "r", function() awful.util.spawn(HOME.."/.myScripts/dmscripts/dm-run-programs.sh") end,
         {description = "run programs" , group = "dmenu scripts" }),
     awful.key({ ctrl, alt }, "s", function() awful.util.spawn(HOME.."/.myScripts/dmscripts/dm-run-scripts.sh") end,
         {description = "run scripts" , group = "dmenu scripts" }),
@@ -850,6 +851,7 @@ awful.rules.rules = {
           "Terminator Preferences",
           "Терминатор Параметры",
           "Сетевые соединения",
+          "splash",
         },
         role = {
           "AlarmWindow",  -- Thunderbird's calendar.
