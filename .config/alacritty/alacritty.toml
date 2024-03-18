@@ -1,4 +1,4 @@
-import = ["~/.config/alacritty/colors/Otto.toml"]
+import = ["~/.config/alacritty/colors/MemoryColor.toml"]
 # "window.opacity" = 1.0
 
 [colors]
