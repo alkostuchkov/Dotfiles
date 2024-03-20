@@ -209,7 +209,7 @@ keys = [
     Key([mod], "n", lazy.layout.normalize(), desc="Normalize window size ratios"),
     Key([mod], "m", lazy.layout.maximize(), desc="Toggle window between minimum and maximum sizes (for MonadTall/MonadWide)"),
     Key([mod], "r", lazy.layout.reset()),
-
+    Key([mod], "Escape", lazy.group.toscreen(toggle=True)),
 # <SUPER> + <CTRL> + KEYS
     Key([mod, "control"], "Return", lazy.spawn("xfce4-terminal"), desc="Launch xfce4-terminal"),
     # RESIZE UP, DOWN, LEFT, RIGHT
