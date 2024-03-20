@@ -852,6 +852,7 @@ awful.rules.rules = {
           "Терминатор Параметры",
           "Сетевые соединения",
           "splash",
+          "Update",
         },
         role = {
           "AlarmWindow",  -- Thunderbird's calendar.
