@@ -117,7 +117,7 @@ otto = {
     "fg_tasklist": "#f7f51b",
     "border_focus": "#2eb398",  # 00 (foreground)
     "border_normal": "#1d2330",  # 00
-    "fg_textbox": "#89ddff"  # 15
+    "fg_textbox": "#89ddff",  # 15
 
     "bg": "#2b3745",
     "fg": "#fafafa",
