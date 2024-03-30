@@ -288,7 +288,7 @@ keys = [
 # <CONTROL> + <ALT> + KEYS
     Key(["control", alt], "c", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-edit-configs.sh"), desc="Run dmenu script for editing config files"),
     Key(["control", alt], "l", lazy.spawn(f"{HOME}/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
-    Key(["control", alt], "p", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-run-programs.sh"), desc="Run choice of most used utils"),
+    Key(["control", alt], "r", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-run-programs.sh"), desc="Run choice of most used utils"),
     Key(["control", alt], "s", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-run-scripts.sh"), desc="Run chosen search engine"),
     Key(["control", alt], "x", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-system-exit.sh"), desc="System exit menu"),
     # TREETAB CONTROLS
@@ -341,7 +341,8 @@ group_names = [
 ]
 
 #  groups = [Group(name, **kwargs, label="{}{}".format(name, i)) for i, (name, kwargs) in enumerate(group_names, 1)]
-groups = [Group(name, **kwargs, label=f"{name}{i}") for i, (name, kwargs) in enumerate(group_names, 1)]
+groups = [Group(name, **kwargs, label=f"{i} {name}") for i, (name, kwargs) in enumerate(group_names, 1)]
+#  groups = [Group(name, **kwargs, label=f"{name}{i}") for i, (name, kwargs) in enumerate(group_names, 1)]
 
 for i, group_name in enumerate(group_names, 1):
     keys.extend([
@@ -439,7 +440,7 @@ def init_widgets_list():
             this_current_screen_border=colors.get("bg_current_tab", "#535d6c"),
             this_screen_border=colors.get("bg_other_tabs_and_odd_widgets", "#6182b8"),
             other_current_screen_border=colors.get("bg_panel", "#222222"),
-            other_screen_border=colors.get("bg_panel", "#222222")
+            other_screen_border=colors.get("bg_panel", "#222222"),
         ),
         widget.Chord(
             fontsize=14,

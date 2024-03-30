@@ -147,8 +147,11 @@ endif
 set background=dark
 " colorscheme ayu
 " colorscheme darcula
-colorscheme memorycolor
+" colorscheme memorycolor
 " colorscheme OceanicNext
+" colorscheme OceanicMaterial
+colorscheme Everforest
+" colorscheme gruvbox-material
 
 " GUI -------------------------------------------------------------------------
 " set wak=no   "используем ALT как обычно, а не для вызова пункта меню

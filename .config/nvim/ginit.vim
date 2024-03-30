@@ -22,4 +22,8 @@ GuiFont! mplus Nerd Font:h18
 set background=dark
 " colorscheme ayu
 " colorscheme darcula
-colorscheme memorycolor
+" colorscheme memorycolor
+" colorscheme OceanicNext
+" colorscheme OceanicMaterial
+colorscheme Everforest
+" colorscheme gruvbox-material
