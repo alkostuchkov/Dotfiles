@@ -27,6 +27,7 @@
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
+  "files.autoSave": "onFocusChange",
   "editor.formatOnType": false,
   "editor.detectIndentation": true,
   "editor.renderWhitespace": "selection",
@@ -179,8 +180,13 @@
   "bracket-pair-colorizer-2.depreciation-notice": false,
   "react-native.packager.port": 19000,
   "rust-analyzer.rustfmt.rangeFormatting.enable": true,
-  "vsicons.dontShowNewVersionMessage": true
-  // "[python]": {
-  //   "editor.tabSize": 4
-  // }
+  "vsicons.dontShowNewVersionMessage": true,
+  "Lua.format.enable": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.defaultFormatter": "ms-python.autopep8"
+  }
 }
