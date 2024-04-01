@@ -456,7 +456,8 @@ def init_widgets_list():
             #  #  parse_text=parse_windowname
         #  ),
         widget.TaskList(
-            fontsize=14,
+            fontsize=17,
+            font=my_nerd_font_extra,
             #  foreground=colors["fg_windowname"],
             foreground=colors.get("fg_tasklist", "#ffffff"),
             border=colors.get("bg_current_tab", "#222222"),
@@ -476,14 +477,14 @@ def init_widgets_list():
             font=my_nerd_font,
             fontsize=14,
             #  distro="Arch_checkupdates",
-            custom_command="checkupdates-with-aur",
-            #  distro="Arch_yay",
-            #  custom_command="yay -Qu",
+            #  custom_command="checkupdates-with-aur",
+            custom_command="xbps-install -nuMS",
             display_format="  {updates}",  # ⟳ 
             mouse_callbacks={
                 "Button1": lambda: qtile.spawn(f"{HOME}/.config/qtile/scripts/show_updates.sh"),
-                "Button2": lambda: qtile.spawn(f"{my_term_extra} --hold -e 'yay -Syu'"),
-                "Button3": lambda: show_updates.show_updates_arch()
+                "Button2": lambda: qtile.spawn(f"{my_term} --hold -e sudo xbps-install -Su"),
+                #  "Button2": lambda: qtile.spawn(f"{my_term} --hold -e yay -Syu"),
+                #  "Button3": lambda: show_updates.show_updates_arch()
             },
             update_interval=10800  # 3 hours (60*60*3)
         ),

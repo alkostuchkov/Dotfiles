@@ -39,16 +39,18 @@ progs=(
 "xxkb"
 "setxkbmap -layout us,ru -option grp:caps_toggle"
 "/usr/lib/xfce4/notifyd/xfce4-notifyd"
-"/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+# "/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1" # for Debian
+# "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"  # for Arch
+"/usr/libexec/polkit-gnome-authentication-agent-1" # for Void
 # "polybar -c $HOME/.config/polybar/config.ini"
 "xrdb $HOME/.Xresources"
 "nitrogen --restore"
 "volumeicon"
 "nm-applet"
 "xfce4-power-manager"
-# "xfce4-clipman"
-# "diodon"
 "clipit"
+# "diodon"
+# "xfce4-clipman"
 "picom --config $HOME/.config/picom/picom.conf"
 "conky -c $HOME/.myScripts/conky/bspwm_conkyrc"
 # "/usr/bin/python /usr/bin/udiskie"
@@ -56,11 +58,11 @@ progs=(
 "xiccd"
 # "python /usr/bin/redshift-gtk"
 "redshift-gtk"
-"$HOME/Programs/CheckInternetConnection/CheckInternetConnection"
 "$HOME/Programs/AppImageApplications/BreakTimer.AppImage"
+"$HOME/Programs/CheckInternetConnection/CheckInternetConnection"
 "birdtray"
 "xsetroot -cursor_name left_ptr"
-# # "xmodmap -e \"keycode 135 = Super_R\""
+# "xmodmap -e \"keycode 135 = Super_R\""
 )
 run_once
 

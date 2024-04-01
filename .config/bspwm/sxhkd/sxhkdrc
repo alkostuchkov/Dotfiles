@@ -15,6 +15,10 @@ super + alt + {r, d}
   {rofi run -show drun -show-icons, \
    dmenu_run -i -l 10 -nb '#263238' -nf '#24d2af' -sb '#009185' -p 'Run: ' -fn 'Iosevka-17:normal'}
 
+# TouchPad On/Off
+super + alt + Space
+  {$HOME/.myScripts/touchpadONOFF.sh}
+
 # Terminals
 super + {_, alt +, ctrl +} Return
   {$TERMINAL, terminator, xfce4-terminal}

@@ -395,6 +395,8 @@ globalkeys = gears.table.join(
         {description = "system exit" , group = "dmenu scripts" }),
 
     -- My applications <SUPER + ALT> + KEY
+    awful.key({ super, alt }, "Space", function() awful.util.spawn(HOME.."/.myScripts/touchpadONOFF.sh") end,
+        {description = "Touchpad On/Off", group = "launcher" }),
     awful.key({ super, alt }, "r", function() awful.util.spawn("rofi run -show drun -show-icons") end,
         {description = "Rofi", group = "launcher" }),
     awful.key({ super, alt }, "d", function() awful.util.spawn("dmenu_run -i -l 10 -nb '#263238' -nf '#24d2af' -sb '#009185' -p 'Run: ' -fn 'Iosevka-17:normal'") end,
@@ -983,8 +985,10 @@ end
 run_once({
     "xxkb",
     "setxkbmap -layout us,ru -option grp:caps_toggle",
-    "/usr/lib/xfce4/notifyd/xfce4-notifyd",
-    "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
+    -- "/usr/lib/xfce4/notifyd/xfce4-notifyd", -- no need on AwesomeWM
+    -- /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1, -- for Debian
+    -- "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1", -- for Arch
+    "/usr/libexec/polkit-gnome-authentication-agent-1", -- for Void
     "xrdb "..HOME.."/.Xresources",
     "nitrogen --restore",
     "volumeicon",
@@ -1001,7 +1005,6 @@ run_once({
     -- "/usr/bin/python /usr/bin/fluxgui",
     HOME.."/Programs/CheckInternetConnection/CheckInternetConnection",
     HOME.."/Programs/AppImageApplications/BreakTimer.AppImage",
-    -- HOME.."/Programs/CheckEmail/CheckEmail",
     "birdtray",
     "xmodmap -e \"keycode 135 = Super_R\"",
 }) -- entries must be comma-separated

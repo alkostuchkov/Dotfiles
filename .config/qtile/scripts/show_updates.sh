@@ -11,10 +11,15 @@ show_updates_debian() {
     updates_output=
   else
     amount_updates=$(echo "$updates" | wc -l)
-    updates_output=$(echo -e "Updates: $amount_updates\n$updates")
+    updates_output=$(echo -e "$amount_updates\n$updates")
   fi
 
-  notify-send -i software-update-available "Updates: $updates_output"
+  if [[ $amount_updates -lt 31 ]]; then
+    notify-send -i software-update-available "Updates: $updates_output"
+  else
+    $terminal --hold -e echo "Updates: $updates_output"
+    # --hold option exists for terminals: alacritty, xfce4-terminal
+  fi
 }
 
 
@@ -50,12 +55,33 @@ show_updates_arch() {
   fi
 }
 
+show_updates_void() {
+# Show updates for Void Linux.
+  updates=$(xbps-install -nuMS)
+
+  if [[ -z "$updates" ]]; then
+    updates_output=
+  else
+    amount_updates=$(echo "$updates" | wc -l)
+    updates_output=$(echo -e "$amount_updates\n\n$updates" | awk '{print $1}')
+  fi
+
+  if [[ $amount_updates -lt 31 ]]; then
+    notify-send -i software-update-available "Updates: $updates_output"
+  else
+    $terminal --hold -e echo "Updates: $updates_output"
+    # --hold option exists for terminals: alacritty, xfce4-terminal
+  fi
+}
+
+
 terminal="alacritty"
 distro=$(lsb_release -a 2>/dev/null | grep -i 'distributor id' | awk '{print $3}')
 
 case $distro in
   "Debian") show_updates_debian;;
   "Arch"|"ManjaroLinux") show_updates_arch;;
+  "VoidLinux") show_updates_void;;
   *) notify-send -i dialog-error "Error:" "Unknown distro $distro.";;
 esac
 
