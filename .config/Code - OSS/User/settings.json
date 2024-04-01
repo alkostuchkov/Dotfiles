@@ -140,7 +140,7 @@
   "window.menuBarVisibility": "toggle",
   // "editor.defaultFormatter": "standard.vscode-standard",
   // "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "workbench.colorTheme": "grigoryvp memory theme",
+  "workbench.colorTheme": "Everforest Dark",
   "workbench.iconTheme": "vscode-icons",
   "prettier.bracketSpacing": false,
   "prettier.trailingComma": "none",
