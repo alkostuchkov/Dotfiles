@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Nextcloud
+Exec=/home/alexander/Programs/AppImageApplications/Nextcloud.AppImage
+GenericName=Nextcloud
+Comment=Nextcloud
+Type=Application
+Icon=Nextcloud
+Categories=Network
+StartupNotify=true
+StartupWMClass=Nextcloud
+InitialPreference=99
+

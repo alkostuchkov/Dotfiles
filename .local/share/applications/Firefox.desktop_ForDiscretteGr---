@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Firefox
+GenericName=Firefox (discrete graphics)
+# Icon=firefox
+Icon=/home/alexander/Programs/Firefox/browser/chrome/icons/default/default128.png
+Exec=/home/alexander/.myScripts/runFirefoxDiscreteGr.sh
+NoDisplay=false
+Categories=Network;
+Keywords=DRI_PRIME=1
+StartupNotify=false
+Terminal=false

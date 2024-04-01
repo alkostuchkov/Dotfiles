@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=QOwnNotes
+Exec=/home/alexander/Programs/AppImageApplications/QOwnNotes.AppImage
+GenericName=Markdown Editor
+# MimeType=application/x-krita;image/openraster;application/x-krita-paintoppreset;
+Comment=Markdown Editor
+Type=Application
+Icon=QOwnNotes
+Categories=Qt;KDE;Development
+# X-KDE-NativeMimeType=application/x-krita
+# X-KDE-ExtraNativeMimeTypes=
+StartupNotify=true
+# X-Krita-Version=28
+StartupWMClass=QOwnNotes
+# Always be the preferred handler for .kra files
+InitialPreference=99
+

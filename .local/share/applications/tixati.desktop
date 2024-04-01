@@ -4,10 +4,11 @@ Encoding=UTF-8
 Name=Tixati
 GenericName=BitTorrent Client
 Comment=Share files over BitTorrent
-Exec=/usr/bin/tixati %U
+Exec=tixati %U
 Icon=tixati
-# Icon=tixati.png
 Terminal=false
 Type=Application
-MimeType=application/x-bittorrent;x-scheme-handler/magnet;x-scheme-handler/dsc;
+MimeType=application/x-bittorrent;application/x-magnet;x-scheme-handler/magnet;x-scheme-handler/dsc;
 Categories=Internet;Network;FileTransfer;P2P;GTK;
+X-Desktop-File-Install-Version=0.15
+

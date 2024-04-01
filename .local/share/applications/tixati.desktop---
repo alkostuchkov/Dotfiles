@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Tixati
+GenericName=BitTorrent Client
+Comment=Share files over bittorrent
+Exec=/home/alexander/.local/bin/tixati %U
+Icon=tixati
+Terminal=false
+Type=Application
+MimeType=application/x-bittorrent;x-scheme-handler/magnet;x-scheme-handler/dsc;
+Categories=Internet;Network;FileTransfer;P2P;GTK;

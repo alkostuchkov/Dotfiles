@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Obsidian
+Exec=/home/alexander/Programs/AppImageApplications/Obsidian.AppImage
+Terminal=false
+GenericName=Obsidian
+Comment=Obsidian
+Type=Application
+Icon=/home/alexander/Pictures/Logo/obsidian.png
+Categories=Office;
+StartupNotify=true
+StartupWMClass=Obsidian
+InitialPreference=99
+

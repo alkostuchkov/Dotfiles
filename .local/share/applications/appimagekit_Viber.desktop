@@ -1,0 +1,33 @@
+[Desktop Entry]
+Name=Viber
+Comment=Viber VoIP and messenger
+Exec=/home/alexander/Programs/AppImageApplications/Viber.AppImage
+Icon=viber
+Terminal=false
+Type=Application
+Categories=Network;InstantMessaging;P2P;
+MimeType=x-scheme-handler/viber;
+
+# TryExec=/home/alexander/Programs/AppImageApplications/Viber.AppImage
+X-AppImage-Old-Icon=viber
+X-AppImage-Identifier=5b0d30fbc3d6e17af1bf571f50e2800c
+Actions=Remove;
+X-AppImageLauncher-Version=2.2.0 (git commit 48662df), built on 2020-11-08 18:57:10 UTC
+
+[Desktop Action Remove]
+Name=Delete this AppImage
+Icon=AppImageLauncher
+Exec=/usr/lib/x86_64-linux-gnu/appimagelauncher/remove "/home/alexander/Programs/AppImageApplications/viber_e1c3ba9634bd41d22fb2b1847b8daae6.AppImage"
+Name[ast]=Desaniciar AppImage del sistema
+Name[cs]=Odebrat AppImage ze systému
+Name[de]=Dieses AppImage löschen
+Name[en]=Delete this AppImage
+Name[es]=Eliminar Appimage del Sistema
+Name[fr]=Supprimer l'AppImage du système
+Name[it]=Rimuovi AppImage dal sistema
+Name[nl]=AppImage deïnstalleren
+Name[pl]=Usuń AppImage z systemu
+Name[pt]=Remover AppImage do sistema
+Name[pt_BR]=Remover AppImage do sistema
+Name[ru]=Удалить AppImage из системы
+Name[zh_Hans]=从系统中移除 AppImage
