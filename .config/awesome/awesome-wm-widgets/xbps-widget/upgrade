@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+terminal="alacritty"
+$terminal --hold -e sudo xbps-install -Su
+

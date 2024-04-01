@@ -29,7 +29,8 @@ require("awful.hotkeys_popup.keys")
 
 -- {{{ Wibar
 -- My widgets
-local pacman_widget = require("awesome-wm-widgets/pacman-widget/pacman")
+-- local pacman_widget = require("awesome-wm-widgets/pacman-widget/pacman")
+local xbps_widget = require("awesome-wm-widgets/xbps-widget/xbps")
 local weather_widget = require("awesome-wm-widgets/weather-widget/weather-widget")
 local cpu_widget = require("awesome-wm-widgets/cpu-widget/cpu-widget")
 local ram_widget = require("awesome-wm-widgets/ram-widget/ram-widget")
@@ -299,7 +300,13 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             -- spacing = 12,
             spacing = 8,
-            pacman_widget({
+            -- pacman_widget({
+              -- font_name = "Ubuntu Nerd Font 11",
+              -- icon = "",
+              -- icon_size = 12,
+              -- fg_color = "#e2e0a5",
+            -- }),
+            xbps_widget({
               font_name = "Ubuntu Nerd Font 11",
               icon = "",
               icon_size = 12,
