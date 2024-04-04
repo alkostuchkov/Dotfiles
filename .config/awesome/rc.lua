@@ -886,7 +886,7 @@ awful.rules.rules = {
     { rule = { class = "Gimp" },
       properties = { screen = 1, tag = root.tags()[7] } },
 
-    { rule = { class = "thunderbird" },
+    { rule = { class = "Thunderbird" },
       except = { name = "Password Required - Mozilla Thunderbird" },
       properties = { screen = 1, tag = root.tags()[9], switch_to_tags = false } },
 

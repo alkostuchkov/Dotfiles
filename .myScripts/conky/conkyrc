@@ -82,7 +82,7 @@ ${color white}${alignc}${voffset 6}${time %A, %e %B %Y}
 
 ${color white}${font neuropol x free:size=30}${alignc}${time %H:%M:%S}${font}
 ${voffset -9}
-${color white}${font OpenLogos:size=30}${alignc}B${font OpenLogos:size=35}^${font}
+${color white}${font OpenLogos:size=35}${alignc}t${font OpenLogos:size=35}^${font}
 ${voffset -30}
 ${hr 2}
 ${voffset 2}${color}${font StyleBats:size=12}O ${font}${color white}Uptime: ${color }$uptime

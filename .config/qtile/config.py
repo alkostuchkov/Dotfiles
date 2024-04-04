@@ -75,6 +75,7 @@ my_mono_font = "Ubuntu Mono"
 my_mono_bold_font = "Ubuntu Mono Bold"
 SHELL = os.getenv("SHELL")
 HOME = os.path.expanduser("~")
+USER = os.getenv("USER")
 #  my_config = f"{HOME}/.config/qtile/config.py"
 colors = colors.materia_manjaro
 
@@ -836,7 +837,16 @@ focus_on_window_activation = "focus"
 @hook.subscribe.client_new
 def move_new_window_to_certain_group(c):
     """Moves a new window to certain grop and switchs (if you want) to that group."""
-    if c.name == "Oracle VM VirtualBox Менеджер" or c.name == "Oracle VM VirtualBox Manager":
+    if (c.name == f"{USER} - Thunar" or
+        c.name == "thunar" or
+        c.name == f"{USER} - Dolphin" or
+        c.name == "dolphin"):
+
+        c.togroup(group_names_indexes[3])
+        qtile.groups_map[group_names_indexes[3]].cmd_toscreen()
+    if (c.name == "Oracle VM VirtualBox Менеджер" or
+        c.name == "Oracle VM VirtualBox Manager"):
+
         c.togroup(group_names_indexes[5])
         qtile.groups_map[group_names_indexes[5]].cmd_toscreen()
     if c.name == "Telegram":
