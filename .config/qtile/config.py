@@ -812,6 +812,7 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class="gdebi-gtk"),
     Match(wm_class="volumeicon"),
     Match(wm_class="gcolor3"),
+    Match(wm_class="gcolor2"),
     #  Match(wm_class="gvim"),
     Match(wm_class="qt5ct"),
     Match(wm_class="lxappearance"),

@@ -847,6 +847,7 @@ awful.rules.rules = {
           "Pavucontrol",
           "gdebi-gtk",
           "Gcolor3",
+          "Gcolor2",
           "qt6ct",
           "Volumeicon",
           "Lxappearance"},
