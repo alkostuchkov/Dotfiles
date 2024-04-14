@@ -20,7 +20,8 @@ set VISUAL "gvim"  # gvim is either a link to nvim-qt or just gvim
 set TERM "xterm-256color"
 set TERMINAL "alacritty"
 set BROWSER "brave"
-set MANPAGER "sh -c 'col -bx | bat -l man -p'"  # theme moved to the .config/bat/config
+set MANPAGER "bat man -p"  # theme moved to the .config/bat/config
+# set MANPAGER "sh -c 'col -bx | bat -l man -p'"  # theme moved to the .config/bat/config
 # set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"  # $MANPAGER use batcat to read mans
 set RANGER_LOAD_DEFAULT_RC FALSE  # to avoid loading ranger's config twice
 set ANDROID_SDK $HOME"/Programs/Android_SDK"
