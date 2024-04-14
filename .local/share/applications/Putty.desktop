@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/putty
+Name=Putty
+GenericName=Free Telnet/SSH Client
+Comment=Free Telnet/SSH Client
+Keywords=Putty
+Icon=putty
+Terminal=false
+Categories=Network
+NoDisplay=false
