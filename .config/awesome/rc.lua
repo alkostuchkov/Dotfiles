@@ -996,7 +996,8 @@ run_once({
     -- "/usr/lib/xfce4/notifyd/xfce4-notifyd", -- no need on AwesomeWM
     -- /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1, -- for Debian
     -- "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1", -- for Arch
-    "/usr/libexec/polkit-gnome-authentication-agent-1", -- for Void
+    -- "/usr/libexec/polkit-gnome-authentication-agent-1", -- for Void
+    "/usr/libexec/xfce-polkit", -- for Void
     "xrdb "..HOME.."/.Xresources",
     "nitrogen --restore",
     "volumeicon",

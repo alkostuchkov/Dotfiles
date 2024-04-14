@@ -39,10 +39,9 @@ progs=(
 "xxkb"
 "setxkbmap -layout us,ru -option grp:caps_toggle"
 "/usr/lib/xfce4/notifyd/xfce4-notifyd"
-# "/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1" # for Debian
-# "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"  # for Arch
-"/usr/libexec/polkit-gnome-authentication-agent-1" # for Void
+# "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 # "polybar -c $HOME/.config/polybar/config.ini"
+"/usr/libexec/xfce-polkit" # for Void
 "xrdb $HOME/.Xresources"
 "nitrogen --restore"
 "volumeicon"
@@ -58,11 +57,11 @@ progs=(
 "xiccd"
 # "python /usr/bin/redshift-gtk"
 "redshift-gtk"
-"$HOME/Programs/AppImageApplications/BreakTimer.AppImage"
 "$HOME/Programs/CheckInternetConnection/CheckInternetConnection"
+"$HOME/Programs/AppImageApplications/BreakTimer.AppImage"
 "birdtray"
 "xsetroot -cursor_name left_ptr"
-# "xmodmap -e \"keycode 135 = Super_R\""
+# # "xmodmap -e \"keycode 135 = Super_R\""
 )
 run_once
 

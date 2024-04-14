@@ -374,7 +374,8 @@ layouts = [
     #  layout.Columns(**layout_theme, border_on_single=False, margin_on_single=False),
     layout.Columns(**layout_theme, border_on_single=True),
     layout.TreeTab(
-         font=my_font,
+         #  font=my_font,
+         font=my_nerd_font,
          fontsize=14,
          bg_color=colors.get("bg_panel", "#222222"),
          active_bg=colors.get("bg_current_tab", "#535d6c"),
@@ -413,7 +414,8 @@ layouts = [
 
 ##### DEFAULT WIDGET SETTINGS #####
 widget_defaults = {
-    "font": my_font,
+    #  "font": my_font,
+    "font": my_nerd_font,
     "fontsize": 14,
     "padding": 2,
     "background": colors.get("bg_panel", "#222222"),
