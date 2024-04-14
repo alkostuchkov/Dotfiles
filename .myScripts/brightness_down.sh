@@ -19,4 +19,5 @@
 brightnessctl set 5-
 current_brightness=$(brightnessctl get)
 notify-send -t 500 -i dialog-information "Brightness $current_brightness"
+echo ${current_brightness} > $HOME/.myScripts/current_brightness.txt
 

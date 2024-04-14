@@ -580,6 +580,10 @@ globalkeys = gears.table.join(
               {description = "+10%", group = "hotkeys"}),
     awful.key({ }, "XF86MonBrightnessDown", function() os.execute("xbacklight -dec 10") end,
               {description = "-10%", group = "hotkeys"}),
+    awful.key({ super }, "F2", function() awful.spawn(HOME.."/.myScripts/brightness_down.sh") end,
+              {description = "Brightness +5%", group = "hotkeys"}),
+    awful.key({ super }, "F3", function() awful.spawn(HOME.."/.myScripts/brightness_up.sh") end,
+              {description = "Brightness -5%", group = "hotkeys"}),
 
     -- ALSA volume control
     awful.key({ super }, "F9", function() awful.spawn(HOME.."/.myScripts/volume_up.sh") end,
@@ -1006,6 +1010,7 @@ run_once({
     "clipit",
     -- "diodon",
     -- "xfce4-clipman",
+    "$HOME/.myScripts/restore_brightness.sh",  -- for HP
     "picom --config "..HOME.."/.config/picom/picom.conf",
     "conky -c "..HOME.."/.myScripts/conky/conkyrc",
     "/usr/bin/python /usr/bin/udiskie",

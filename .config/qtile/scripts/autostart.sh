@@ -19,6 +19,7 @@ xfce4-power-manager &
 clipit &
 # diodon &
 # xfce4-clipman &
+$HOME/.myScripts/restore_brightness.sh &  # for HP
 picom -b --config $HOME/.config/picom/picom.conf &
 conky -c ~/.myScripts/conky/conkyrc &
 udiskie &  # ~/.config/udiskie/config.yml
