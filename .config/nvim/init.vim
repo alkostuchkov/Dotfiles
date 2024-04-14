@@ -551,6 +551,9 @@ nnoremap <C-o> :browse confirm e <CR>
 map <Esc><Esc> :q!<CR>
 " Quit all windows without saving
 nnoremap <Leader>q :qa!<CR>
+" Save
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>a
 
 " Tabs ------------------------------------------------------------------------
 " Open new tab
