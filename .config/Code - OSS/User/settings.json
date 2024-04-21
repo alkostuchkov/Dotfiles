@@ -55,10 +55,10 @@
   "python.insidersChannel": "off",
   "python.pythonPath": "/home/alexander/Projects/Python/VirtualEnvironments/py3.7/bin/python",
   "python.formatting.provider": "autopep8",
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": false,
-  "python.linting.mypyEnabled": false,
-  "python.linting.flake8Enabled": true,
+  // "python.linting.enabled": true,
+  // "python.linting.pylintEnabled": false,
+  // "python.linting.mypyEnabled": false,
+  // "python.linting.flake8Enabled": true,
   "code-runner.executorMap": {
     "python": "$pythonPath -u $fullFileName"
   },
