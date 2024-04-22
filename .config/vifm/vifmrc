@@ -28,7 +28,7 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 set slowfs=curlftpfs
 
 source $HOME/.config/vifm/icons.vifm
-colorscheme my_material
+colorscheme my_everforest
 
 "##############################################################################
 " File associations

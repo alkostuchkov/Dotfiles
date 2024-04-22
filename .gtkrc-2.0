@@ -2,8 +2,8 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/alexander/.gtkrc-2.0.mine"
-gtk-theme-name="Adapta-Nokto-Eta-Maia"
-gtk-icon-theme-name="Flat-Remix-Green-Dark"
+gtk-theme-name="Everforest-Dark-B"
+gtk-icon-theme-name="Everforest-Dark"
 gtk-font-name="Iosevka 15"
 gtk-cursor-theme-name="Qogir-manjaro-dark"
 gtk-cursor-theme-size=0
@@ -15,5 +15,5 @@ gtk-enable-event-sounds=1
 gtk-enable-input-feedback-sounds=1
 gtk-xft-antialias=1
 gtk-xft-hinting=1
-gtk-xft-hintstyle="hintslight"
+gtk-xft-hintstyle="hintmedium"
 gtk-xft-rgba="rgb"

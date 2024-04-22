@@ -31,6 +31,46 @@ materia_manjaro = {
     "fg_textbox": "#89ddff"  # 15
 }
 
+# Everforest
+everforest = {
+    "bg_panel": "#2d353b",
+    "bg_current_screentab": "#475258",
+    "fg_group_names": "#a7c080",
+    "bg_current_tab": "#6C7477",
+    "bg_other_tabs_and_odd_widgets": "#6182b8",
+    "bg_even_widgets": "#82aaff",
+    "fg_windowname": "#fbefd0",
+    "fg_cpu": "#7fbbb3",
+    "fg_memory": "#dbbc7f",
+    "fg_netspeed": "#83c092",
+    "fg_layout": "#d3c6aa",
+    "fg_keyboard": "#7fbbb3",
+    "fg_date": "#83c092",
+    "bg_systray": "#2d353b",
+    "fg_updates": "#f7e6bb",
+    "fg_weather": "#d699b6",
+    "bg_chord_dmenu": "#ffcb6b",
+    "fg_chord_dmenu": "#000000",
+    "fg_syncthing_active": "#83c092",
+    "fg_syncthing_inactive": "#e67e80",
+    "fg_active_group": "#dbbc7f",
+    "fg_tasklist": "#fbefd0",
+    "border_focus": "#83c092",
+    "border_normal": "#1d2330",
+    "fg_textbox": "#7fbbb3",
+
+    "bg": "#2d353b",
+    "fg": "#d3c6aa",
+    "black": "#475258",
+    "red": "#e67e80",
+    "green": "#a7c080",
+    "yellow": "#dbbc7f",
+    "blue": "#7fbbb3",
+    "magenta": "#d699b6",
+    "cyan": "#83c092",
+    "white": "#d3c6aa",
+}
+
 # Gruvbox Material
 gruvbox_material = {
    "bg_panel": "#282828",  # background
