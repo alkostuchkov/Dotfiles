@@ -35,7 +35,8 @@ materia_manjaro = {
 everforest = {
     "bg_panel": "#2d353b",
     "bg_current_screentab": "#475258",
-    "fg_group_names": "#a7c080",
+    #  "fg_group_names": "#dbbc7f",  # Like Yellow
+    "fg_group_names": "#a7c080",  # Like Green
     "bg_current_tab": "#6C7477",
     "bg_other_tabs_and_odd_widgets": "#6182b8",
     "bg_even_widgets": "#82aaff",
@@ -53,8 +54,12 @@ everforest = {
     "fg_chord_dmenu": "#000000",
     "fg_syncthing_active": "#83c092",
     "fg_syncthing_inactive": "#e67e80",
-    "fg_active_group": "#dbbc7f",
-    "fg_tasklist": "#fbefd0",
+    #  #  "fg_active_group": "#dbbc7f",
+    #  #  "fg_tasklist": "#fbefd0",
+    #  "fg_active_group": "#fff8e6",  # Like Yellow
+    #  "fg_tasklist": "#fff8e6",  # Like Yellow
+    "fg_active_group": "#eeffd0",  # Like Green
+    "fg_tasklist": "#eeffd0",  # Like Green
     "border_focus": "#83c092",
     "border_normal": "#1d2330",
     "fg_textbox": "#7fbbb3",

@@ -82,8 +82,9 @@ local themes = {
     "steamburn",   -- 8
     "mira",        -- 9
     "myotto",      -- 10
+    "myeverforest",      -- 10
 }
-local theme_path = AWESOME_CONFIG_DIR.."/themes/"..themes[3].."/theme.lua"
+local theme_path = AWESOME_CONFIG_DIR.."/themes/"..themes[11].."/theme.lua"
 beautiful.init(theme_path)
 
 -- Default modkey and other keys.
@@ -310,7 +311,8 @@ awful.screen.connect_for_each_screen(function(s)
               font_name = "Ubuntu Nerd Font 11",
               icon = "",
               icon_size = 12,
-              fg_color = "#e2e0a5",
+              -- fg_color = "#e2e0a5", -- materia
+              fg_color = "#f7e6bb", -- everforest
             }),
             -- sep_widget({
               -- font_name = "Sarasa Mono SC Nerd 17",
@@ -339,7 +341,8 @@ awful.screen.connect_for_each_screen(function(s)
               font_name = "Ubuntu Nerd Font 10",
               icon = "",
               icon_size = 12,
-              fg_color = "#89ddff",
+              -- fg_color = "#89ddff", -- materia
+              fg_color = "#7fbbb3", -- everforest
             }),
             -- sep_widget({
               -- font_name = "Sarasa Mono SC Nerd 17",
@@ -350,7 +353,8 @@ awful.screen.connect_for_each_screen(function(s)
               font_name = "Ubuntu Nerd Font 10",
               icon = " ",
               icon_size = 12,
-              fg_color = "#ffcb6b",
+              -- fg_color = "#ffcb6b", -- materia
+              fg_color = "#dbbc7f", -- everforest
             }),
             -- sep_widget({
               -- font_name = "Sarasa Mono SC Nerd 17",
@@ -370,8 +374,9 @@ awful.screen.connect_for_each_screen(function(s)
               icon_size = 12,
               format = "%a, %d %b\n  %H:%M:%S   ",
               refresh = 1,
-              fg_color = "#83eed9",
-              popup_bg_color = "#ff0000",
+              -- fg_color = "#83eed9", -- materia
+              fg_color = "#83c092", -- everforest
+              popup_bg_color = "#ff0000", -- materia
             }),
         },
     }
