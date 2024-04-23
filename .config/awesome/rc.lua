@@ -1016,7 +1016,7 @@ run_once({
     "clipit",
     -- "diodon",
     -- "xfce4-clipman",
-    -- "$HOME/.myScripts/restore_brightness.sh",  -- for HP
+    "$HOME/.myScripts/restore_brightness.sh",  -- for HP
     "picom --config "..HOME.."/.config/picom/picom.conf",
     "conky -c "..HOME.."/.myScripts/conky/conkyrc",
     "/usr/bin/python /usr/bin/udiskie",
