@@ -58,8 +58,10 @@ everforest = {
     #  #  "fg_tasklist": "#fbefd0",
     #  "fg_active_group": "#fff8e6",  # Like Yellow
     #  "fg_tasklist": "#fff8e6",  # Like Yellow
-    "fg_active_group": "#eeffd0",  # Like Green
-    "fg_tasklist": "#eeffd0",  # Like Green
+    "fg_active_group": "#d3c6aa",  # Like White
+    "fg_tasklist": "#fdfdf6",  # Like White
+    #  "fg_active_group": "#eeffd0",  # Like Green
+    #  "fg_tasklist": "#eeffd0",  # Like Green
     "border_focus": "#83c092",
     "border_normal": "#1d2330",
     "fg_textbox": "#7fbbb3",

@@ -1,5 +1,5 @@
 -------------------------------
--- My Material awesome theme --
+-- My Everforest awesome theme --
 -------------------------------
 
 local theme_assets = require("beautiful.theme_assets")
@@ -26,10 +26,13 @@ theme.systray_icon_spacing = dpi(1)
 -- -- Like Yellow
 -- theme.fg_normal = "#dbbc7f"
 -- theme.fg_focus = "#fff8e6"
--- Like Green
-theme.fg_normal = "#a7c080"
-theme.fg_focus = "#eeffd0"
--- theme.fg_focus = "#f3fbe4"
+-- Like White
+theme.fg_normal = "#d3c6aa"
+theme.fg_focus = "#fdfdf6"
+-- -- Like Green
+-- theme.fg_normal = "#a7c080"
+-- theme.fg_focus = "#eeffd0"
+-- -- -- theme.fg_focus = "#f3fbe4"
 theme.fg_urgent = theme.fg_normal
 theme.fg_minimize = theme.fg_normal
 

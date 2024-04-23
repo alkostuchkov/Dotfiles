@@ -77,7 +77,8 @@ configuration {
     /* padding:          5; */
     /* width:          80%; */
 /* } */
-@theme "~/.config/rofi/themes/lb.rasi"
+@theme "~/.config/rofi/themes/everforest.rasi"
+/*@theme "~/.config/rofi/themes/lb.rasi"*/
 
 /* man rofi */
 /* To get a template config file, run: rofi -dump-config > config.rasi */
