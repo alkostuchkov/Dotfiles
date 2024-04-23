@@ -8,6 +8,7 @@ options=(
 "autostart_qtile - $HOME/.config/qtile/scripts/autostart.sh"
 "awesome - $HOME/.config/awesome/rc.lua"
 "awesome - $HOME/.config/awesome/themes/mymaterial/theme.lua"
+"awesome - $HOME/.config/awesome/themes/myeverforest/theme.lua"
 "bash - $HOME/.bashrc"
 "bat - $HOME/.config/bat/config"
 "bspwm - $HOME/.config/bspwm/bspwmrc"
@@ -47,7 +48,8 @@ options=(
 "polybar launch - $HOME/.config/polybar/launch.sh"
 "profile - $HOME/.profile"
 "qtile - $HOME/.config/qtile/config.py"
-"qtile.log - $HOME/.local/share/qtile/qtile.log"
+"qtile - $HOME/.config/qtile/modules/colors.py"
+"qtile - $HOME/.local/share/qtile/qtile.log"
 "Qtile_My_Keys - $HOME/.config/qtile/Qtile_My_Keys.txt"
 "qutebrowser - $HOME/.config/qutebrowser/config.py"
 "ranger_rc.conf - $HOME/.config/ranger/rc.conf"
@@ -77,7 +79,7 @@ options=(
 nf='#d3c6aa'
 nb='#2d353b'
 sf='#a7c080'
-sb='#6C7477'
+sb='#475258'
 fn='Iosevka-18:normal'
 # fn='Ubuntu-16:normal'
 

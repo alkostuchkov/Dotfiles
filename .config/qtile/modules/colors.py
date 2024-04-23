@@ -35,18 +35,17 @@ materia_manjaro = {
 everforest = {
     "bg_panel": "#2d353b",
     "bg_current_screentab": "#475258",
-    #  "fg_group_names": "#dbbc7f",  # Like Yellow
-    "fg_group_names": "#a7c080",  # Like Green
-    "bg_current_tab": "#6C7477",
+    "fg_group_names": "#d3c6aa",
+    "bg_current_tab": "#475258",
     "bg_other_tabs_and_odd_widgets": "#6182b8",
     "bg_even_widgets": "#82aaff",
-    "fg_windowname": "#fbefd0",
+    "fg_windowname": "#d3c6aa",
     "fg_cpu": "#7fbbb3",
     "fg_memory": "#dbbc7f",
     "fg_netspeed": "#83c092",
-    "fg_layout": "#d3c6aa",
-    "fg_keyboard": "#7fbbb3",
     "fg_date": "#83c092",
+    "fg_keyboard": "#7fbbb3",
+    "fg_layout": "#d3c6aa",
     "bg_systray": "#2d353b",
     "fg_updates": "#f7e6bb",
     "fg_weather": "#d699b6",
@@ -54,17 +53,11 @@ everforest = {
     "fg_chord_dmenu": "#000000",
     "fg_syncthing_active": "#83c092",
     "fg_syncthing_inactive": "#e67e80",
-    #  #  "fg_active_group": "#dbbc7f",
-    #  #  "fg_tasklist": "#fbefd0",
-    #  "fg_active_group": "#fff8e6",  # Like Yellow
-    #  "fg_tasklist": "#fff8e6",  # Like Yellow
-    "fg_active_group": "#d3c6aa",  # Like White
-    "fg_tasklist": "#fdfdf6",  # Like White
-    #  "fg_active_group": "#eeffd0",  # Like Green
-    #  "fg_tasklist": "#eeffd0",  # Like Green
+    "fg_active_group": "#a7c080",
+    "fg_tasklist": "#a7c080",
     "border_focus": "#83c092",
     "border_normal": "#1d2330",
-    "fg_textbox": "#7fbbb3",
+    "fg_textbox": "#ffffff",
 
     "bg": "#2d353b",
     "fg": "#d3c6aa",

@@ -11,7 +11,7 @@
 nf='#d3c6aa'
 nb='#2d353b'
 sf='#a7c080'
-sb='#6C7477'
+sb='#475258'
 fn='Iosevka-18:normal'
 # fn='Ubuntu-16:normal'
 
