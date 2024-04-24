@@ -5,7 +5,6 @@
 # declare options=("alacritty
 options=(
 "alacritty - $HOME/.config/alacritty/alacritty.toml"
-"autostart_qtile - $HOME/.config/qtile/scripts/autostart.sh"
 "awesome - $HOME/.config/awesome/rc.lua"
 "awesome - $HOME/.config/awesome/themes/mymaterial/theme.lua"
 "awesome - $HOME/.config/awesome/themes/myeverforest/theme.lua"
@@ -48,6 +47,7 @@ options=(
 "polybar launch - $HOME/.config/polybar/launch.sh"
 "profile - $HOME/.profile"
 "qtile - $HOME/.config/qtile/config.py"
+"qtile - $HOME/.config/qtile/scripts/autostart.sh"
 "qtile - $HOME/.config/qtile/modules/colors.py"
 "qtile - $HOME/.local/share/qtile/qtile.log"
 "Qtile_My_Keys - $HOME/.config/qtile/Qtile_My_Keys.txt"
