@@ -800,6 +800,7 @@ floating_layout = layout.Floating(float_rules=[
     #  Match(wm_class="GParted"),
     #  Match(wm_class="keepass2"),
     Match(wm_class="pinentry-gtk-2"),
+    Match(title="Pinentry"),  # GPG key password entry
     #  Match(wm_class="vlc"),
     #  Match(wm_class="smplayer"),
     Match(wm_class="deadbeef"),
@@ -807,7 +808,6 @@ floating_layout = layout.Floating(float_rules=[
     #  {"wmclass": "VirtualBox Manager"},
     Match(title="branchdialog"),  # gitk
     Match(title="Open File"),
-    Match(title="pinentry"),  # GPG key password entry
     Match(wm_class="gnome-font-viewer"),
     Match(wm_class="fluxgui"),
     Match(wm_class="xfce4-power-manager-settings"),
@@ -823,7 +823,9 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class="makebranch"),  # gitk
     Match(wm_class="maketag"),  # gitk
     Match(wm_class="ssh-askpass")  # ssh-askpass
-], border_focus=colors.get("bg_current_tab", "#535d6c"))
+], border_focus=colors.get("border_focus", "#535d6c"),
+   border_normal=colors.get("border_normal", "#000000"),
+   border_width=1,)
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
