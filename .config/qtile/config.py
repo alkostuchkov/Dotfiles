@@ -782,6 +782,8 @@ floating_layout = layout.Floating(float_rules=[
     Match(title="Терминатор Параметры", wm_class="terminator"),
     Match(title="File Operation Progress", wm_class="Thunar"),
     Match(title="Действия над файлами", wm_class="Thunar"),
+    Match(title="Create Snapshot", wm_class="Timeshift-gtk"),
+    Match(title="Delete Snapshots", wm_class="Timeshift-gtk"),
     #  Match(title="win0", wm_class="jetbrains-webstorm"),  # WebStorm
     #  Match(title="Import WebStorm Settings", wm_class="jetbrains-webstorm"),
     Match(title="splash"),  # PyCharm
