@@ -130,7 +130,8 @@ keys = [
     Key([mod], "Return", lazy.spawn(my_term), desc="Launch terminal"),
     Key([mod, alt], "Return", lazy.spawn(my_term_extra), desc="Launch extra terminal"),
     Key([mod, alt], "r", lazy.spawn("rofi run -show drun -show-icons"), desc="Run App Lancher"),
-    Key([mod, alt], "d", lazy.spawn(f"dmenu_run -i -l 10 -nb '#263238' -nf '#24d2af' -sb '#009185' -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
+    Key([mod, alt], "d", lazy.spawn(f"dmenu_run -i -l 10 -nb '#2d353b' -nf '#d3c6aa' -sb '#475258' -sf '#a7c080' -p 'Run: ' -fn 'Iosevka-18:normal'"), desc="Run dmenu"),  # Everforest
+    #  Key([mod, alt], "d", lazy.spawn(f"dmenu_run -i -l 10 -nb '#263238' -nf '#24d2af' -sb '#009185' -p 'Run: ' -fn 'Iosevka-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
     #  Key([mod, alt], "d", lazy.spawn("dmenu_run -nb #282828 -nf #e3a84e -sb #665c54 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Gruvbox
     Key([mod, alt], "Print", lazy.spawn("flameshot gui"), desc="Launch flameshot (take screenshot)"),
     Key([mod, alt], "w", lazy.spawn("/usr/bin/firefox"), desc="Launch Firefox"),
@@ -784,6 +785,8 @@ floating_layout = layout.Floating(float_rules=[
     Match(title="Действия над файлами", wm_class="Thunar"),
     Match(title="Create Snapshot", wm_class="Timeshift-gtk"),
     Match(title="Delete Snapshots", wm_class="Timeshift-gtk"),
+    Match(title="Создать снимок", wm_class="Timeshift-gtk"),
+    Match(title="Удалить снимки", wm_class="Timeshift-gtk"),
     #  Match(title="win0", wm_class="jetbrains-webstorm"),  # WebStorm
     #  Match(title="Import WebStorm Settings", wm_class="jetbrains-webstorm"),
     Match(title="splash"),  # PyCharm

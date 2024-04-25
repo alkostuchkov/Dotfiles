@@ -411,8 +411,10 @@ globalkeys = gears.table.join(
         {description = "Touchpad On/Off", group = "launcher" }),
     awful.key({ super, alt }, "r", function() awful.util.spawn("rofi run -show drun -show-icons") end,
         {description = "Rofi", group = "launcher" }),
-    awful.key({ super, alt }, "d", function() awful.util.spawn("dmenu_run -i -l 10 -nb '#263238' -nf '#24d2af' -sb '#009185' -p 'Run: ' -fn 'Iosevka-17:normal'") end,
-        {description = "Dmenu", group = "launcher" }),
+    -- awful.key({ super, alt }, "d", function() awful.util.spawn("dmenu_run -i -l 10 -nb '#263238' -nf '#24d2af' -sb '#009185' -p 'Run: ' -fn 'Iosevka-18:normal'") end,
+        -- {description = "Dmenu", group = "launcher" }), -- Materia Manjaro
+    awful.key({ super, alt }, "d", function() awful.util.spawn("dmenu_run -i -l 10 -nb '#2d353b' -nf '#d3c6aa' -sb '#475258' -sf '#a7c080' -p 'Run: ' -fn 'Iosevka-18:normal'") end,
+        {description = "Dmenu", group = "launcher" }), -- Everforest
     awful.key({ super, alt }, "Print", function() awful.util.spawn("flameshot gui") end,
         {description = "FlameshotGui", group = "applications" }),
     awful.key({ super, alt }, "w", function() awful.util.spawn("/usr/bin/firefox") end,
