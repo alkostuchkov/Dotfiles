@@ -32,6 +32,7 @@ options=(
 "dwmpatches - $HOME/Programs/DWM/patches.h"
 "fish - $HOME/.config/fish/config.fish"
 "fonts.conf - $HOME/.config/fontconfig/fonts.conf"
+"helix - $HOME/.config/helix/config.toml"
 "homepage - $HOME/.surf/homepage.html"
 "i3 - $HOME/.config/i3/config"
 "i3blocks - $HOME/.config/i3blocks/config"

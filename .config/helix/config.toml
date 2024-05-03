@@ -1,0 +1,106 @@
+theme = "everforest_dark"
+
+[editor]
+# auto-save = false
+line-number = "relative"
+cursorline = true
+cursorcolumn = true
+auto-completion = true
+auto-info = true
+completion-trigger-len = 2
+color-modes = true
+true-color = true
+undercurl = true
+idle-timeout = 400
+bufferline = "multiple" # always | multiple | never
+text-width = 80
+rulers = [80]
+default-line-ending = "lf"
+insert-final-newline = true
+popup-border = "all"
+mouse = true
+middle-click-paste = true
+
+# [editor.gutters]
+# layout = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+
+[editor.statusline]
+left = [
+  "mode",
+  "spinner",
+  "version-control",
+  "read-only-indicator",
+  "file-name",
+  "file-modification-indicator",
+  "file-type",
+]
+center = ["diagnostics", "workspace-diagnostics"]
+right = [
+  "register",
+  "file-encoding",
+  "file-line-ending",
+  "position",
+  "position-percentage",
+]
+separator = "|"
+# mode.normal = "NORMAL"
+# mode.insert = "INSERT"
+# mode.select = "SELECT"
+
+[editor.soft-wrap]
+enable = true
+# max-wrap = 20 
+# max-indent-retain = 40
+# wrap-indicator = "↪ "
+# wrap-at-text-width = true # zen-mode center View.inner_area
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.whitespace.render]
+# space = "all"
+tab = "all"
+# newline = "all"
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "╎", "┆", "┊"
+skip-levels = 0
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+[keys.normal]
+"A-," = "goto_previous_buffer"
+"A-." = "goto_next_buffer"
+"A-w" = ":buffer-close"
+"A-/" = "repeat_last_motion"# 0 = "home"
+"A-x" = "extend_to_line_bounds"
+"X" = "extend_line_above"
+# "X" = ["extend_line_up", "extend_to_line_bounds"]
+
+# "C-q" = ":q!"
+# "esc" = { "esc" = [":quit!",] }
+# "esc" = { "esc" = ":quit!" }
+"C-s" = ":w"
+"C-r" = { c = ":config-reload", r = ":reload" }
+"C-q" = { q = ":quit!", w = ":write-quit!", a = ":quit-all!" }
+"C-a" = "goto_line_start"
+"C-e" = "goto_line_end"
+"C-k" = "kill_to_line_end"
+"C-u" = "kill_to_line_start"
+"C-/" = "toggle_comments"
+
+# [keys.select]
+# A-x = "extend_to_line_bounds"
+# X = ["extend_line_up", "extend_to_line_bounds"]
+
+[keys.insert]
+j = { j = "normal_mode" }
+"C-n" = "normal_mode"
+"C-a" = ["normal_mode", "goto_line_start", "insert_mode"]
+"C-e" = ["normal_mode", "goto_line_end", "append_mode"]
+
