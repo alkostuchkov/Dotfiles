@@ -7,16 +7,22 @@
     /* --font-code-preview: 'M+ 1mn'; */
     /* --font-code-editor: 'M+ 1mn'; */
     --default-font: 'Ubuntu' !important;
+    --default-font-size: 20px !important;
     --font-monospace: 'Cascadia Mono PL' !important;
-    --font-preview: 'Cascadia Mono PL';
-    --font-code-preview: 'Cascadia Mono PL';
-    --font-code-editor: 'Cascadia Mono PL';
+    --font-preview: 'Cascadia Mono PL' !important;
+    --font-code-preview: 'Cascadia Mono PL' !important;
+    --font-code-editor: 'Cascadia Mono PL' !important;
+    /* --font-monospace: 'CaskaydiaCove Nerd Font Mono' !important; */
+    /* --font-preview: 'CaskaydiaCove Nerd Font Mono' !important; */
+    /* --font-code-preview: 'CaskaydiaCove Nerd Font Mono' !important; */
+    /* --font-code-editor: 'CaskaydiaCove Nerd Font Mono' !important; */
 }
 
 /* preview */
 .markdown-preview-view
 {
     font-family: var(--font-preview) !important;
+    font-size: var(--default-font-size) !important;
 }
 
 /* in-line block for preview */
@@ -29,5 +35,6 @@ code {
 .markdown-source-view 
 {
     font-family: var(--font-code-editor) !important;
+    font-size: var(--default-font-size) !important;
 }
 
