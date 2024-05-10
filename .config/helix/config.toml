@@ -94,6 +94,9 @@ display-inlay-hints = true
 "C-u" = "kill_to_line_start"
 "C-/" = "toggle_comments"
 
+"A-ret" = ["normal_mode", "open_below", "normal_mode"]
+"A-S-ret" = ["normal_mode", "open_above", "normal_mode"]
+
 # [keys.select]
 # A-x = "extend_to_line_bounds"
 # X = ["extend_line_up", "extend_to_line_bounds"]
@@ -103,4 +106,6 @@ j = { j = "normal_mode" }
 "C-n" = "normal_mode"
 "C-a" = ["normal_mode", "goto_line_start", "insert_mode"]
 "C-e" = ["normal_mode", "goto_line_end", "append_mode"]
+"A-ret" = ["normal_mode", "open_below"]
+"A-S-ret" = ["normal_mode", "open_above"]
 
