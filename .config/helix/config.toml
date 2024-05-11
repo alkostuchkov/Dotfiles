@@ -93,6 +93,8 @@ display-inlay-hints = true
 "C-k" = "kill_to_line_end"
 "C-u" = "kill_to_line_start"
 "C-/" = "toggle_comments"
+"C-c" = "yank_to_clipboard"
+"C-v" = "paste_clipboard_after"
 
 "A-ret" = ["normal_mode", "open_below", "normal_mode"]
 "A-S-ret" = ["normal_mode", "open_above", "normal_mode"]
