@@ -111,3 +111,6 @@ j = { j = "normal_mode" }
 "A-ret" = ["normal_mode", "open_below"]
 "A-S-ret" = ["normal_mode", "open_above"]
 
+[keys.select]
+"C-a" = "goto_line_start"
+"C-e" = "goto_line_end"
