@@ -16,8 +16,9 @@ export VISUAL="gvim"  # gvim is either a link to nvim-qt or just gvim
 export TERM="xterm-256color"
 export TERMINAL="alacritty"
 export BROWSER="brave"
-export MANPAGER="bat man -p'"  # $MANPAGER use batcat to read mans
-# export MANPAGER="sh -c 'col -bx | bat -l man -p'"  # $MANPAGER use batcat to read mans
+export PAGER="bat"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"  # theme moved to the .config/bat/config
+# export MANPAGER="bat man -p'"  # $MANPAGER use batcat to read mans
 export RANGER_LOAD_DEFAULT_RC=FALSE  # to avoid loading ranger's config twice
 export ANDROID_SDK="$HOME/Programs/Android_SDK"
 

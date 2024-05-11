@@ -1,5 +1,5 @@
 # For ranger, htop and other console progs in Qtile ---------------------------
-set -e COLUMNS  # -e = --erase
+set -e COLUMNS # -e = --erase
 set -e LINES
 
 # disable shortening (~/O/Linux) entirely -------------------------------------
@@ -9,21 +9,22 @@ set fish_prompt_pwd_dir_length 0
 # EXPORTs
 ###############################################################################
 set HOME (echo /home/$USER)
-set GHCUP_INSTALL_BASE_PREFIX "$HOME/.config"  # for GHCUP
+set GHCUP_INSTALL_BASE_PREFIX "$HOME/.config" # for GHCUP
 set GOPATH "$HOME/go"
 
 set -U fish_user_paths $HOME/.local/bin $HOME/Programs/AppImageApplications $fish_user_paths
 set PATH $PATH $HOME/.cargo/bin $HOME/.config/vifm/scripts $GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin $HOME/Programs/Android_SDK/platform-tools $GOPATH/bin # PATH for exa in cargo and ...
 
-set EDITOR "vim"   #  vim is either a link to nvim    or just  vim
-set VISUAL "gvim"  # gvim is either a link to nvim-qt or just gvim
-set TERM "xterm-256color"
-set TERMINAL "alacritty"
-set BROWSER "brave"
-set MANPAGER "bat man -p"  # theme moved to the .config/bat/config
-# set MANPAGER "sh -c 'col -bx | bat -l man -p'"  # theme moved to the .config/bat/config
+set EDITOR vim #  vim is either a link to nvim    or just  vim
+set VISUAL gvim # gvim is either a link to nvim-qt or just gvim
+set TERM xterm-256color
+set TERMINAL alacritty
+set BROWSER brave
+# set MANPAGER "bat man -p"  # theme moved to the .config/bat/config
+set PAGER="bat"
+set MANPAGER "sh -c 'col -bx | bat -l man -p'" # theme moved to the .config/bat/config
 # set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"  # $MANPAGER use batcat to read mans
-set RANGER_LOAD_DEFAULT_RC FALSE  # to avoid loading ranger's config twice
+set RANGER_LOAD_DEFAULT_RC FALSE # to avoid loading ranger's config twice
 set ANDROID_SDK $HOME"/Programs/Android_SDK"
 
 set XDG_CONFIG_HOME "$HOME/.config"
@@ -35,7 +36,7 @@ set XDG_CACHE_HOME "$HOME/.cache"
 # EDITOR="vim" crontab -e
 # select-editor  (~/.selected-editor)
 
-set __GIT_PROMPT_DIR ~/.bash-git-prompt            # Git autocomplition and prompt 
+set __GIT_PROMPT_DIR ~/.bash-git-prompt # Git autocomplition and prompt 
 
 ############################################################################### 
 # AUTOCOMPLETE AND HIGHLIGHT COLORS
@@ -54,42 +55,43 @@ set_colorscheme_ayu_Mirage
 ###############################################################################
 # SET EITHER DEFAULT EMACS MODE OR VI MODE ------------------------------------
 function fish_user_key_bindings
-  fish_default_key_bindings
-  # fish_vi_key_bindings
+    fish_default_key_bindings
+    # fish_vi_key_bindings
 end
 
 function fish_greeting -d "Greeting message on shell session start up"
     # Run neofetch
-    neofetch 
+    neofetch
 end
 
 # Functions needed for !! and !$ ----------------------------------------------
 function __history_previous_command
-  switch (commandline -t)
-  case "!"
-    commandline -t $history[1]; commandline -f repaint
-  case "*"
-    commandline -i !
-  end
+    switch (commandline -t)
+        case "!"
+            commandline -t $history[1]
+            commandline -f repaint
+        case "*"
+            commandline -i !
+    end
 end
 
 function __history_previous_command_arguments
-  switch (commandline -t)
-  case "!"
-    commandline -t ""
-    commandline -f history-token-search-backward
-  case "*"
-    commandline -i '$'
-  end
+    switch (commandline -t)
+        case "!"
+            commandline -t ""
+            commandline -f history-token-search-backward
+        case "*"
+            commandline -i '$'
+    end
 end
 
 # The bindings for !! and !$ --------------------------------------------------
-if [ $fish_key_bindings = fish_vi_key_bindings ];
-  bind -Minsert ! __history_previous_command
-  bind -Minsert '$' __history_previous_command_arguments
+if [ $fish_key_bindings = fish_vi_key_bindings ]
+    bind -Minsert ! __history_previous_command
+    bind -Minsert '$' __history_previous_command_arguments
 else
-  bind ! __history_previous_command
-  bind '$' __history_previous_command_arguments
+    bind ! __history_previous_command
+    bind '$' __history_previous_command_arguments
 end
 
 # Function for creating a backup file -----------------------------------------
@@ -124,25 +126,25 @@ function fish_prompt
 
     # Colors
     # Reset
-    set ResetColor (set_color normal)       # Text Reset
+    set ResetColor (set_color normal) # Text Reset
 
     # Regular Colors
-    set Blue (set_color blue)               # Blue
-    set Green (set_color green)             # Green
-    set Yellow (set_color yellow)           # Yellow
+    set Blue (set_color blue) # Blue
+    set Green (set_color green) # Green
+    set Yellow (set_color yellow) # Yellow
     set Cyan (set_color cyan)
-    set Red (set_color red)                 # Red
+    set Red (set_color red) # Red
     set White (set_color white)
 
     # Bold
     set BBlue (set_color -o blue)
-    set BGreen (set_color -o green)         # Green
-    set BYellow (set_color -o yellow)       # Yellow
+    set BGreen (set_color -o green) # Green
+    set BYellow (set_color -o yellow) # Yellow
     set BCyan (set_color -o brcyan)
     set BRed (set_color -o red)
     set BWhite (set_color -o white)
-    set BMagenta (set_color -o magenta)      # Purple
-    set BBlack (set_color -o black)         # Black
+    set BMagenta (set_color -o magenta) # Purple
+    set BBlack (set_color -o black) # Black
 
     # # Default values for the appearance of the prompt. Configure at will.
     set GIT_PROMPT_PREFIX "("
@@ -167,7 +169,7 @@ function fish_prompt
 
         set_color normal
         set_color $retc
- #       echo -n '─'
+        #       echo -n '─'
         set_color -o green
         echo -n '['
         set_color normal
@@ -183,7 +185,7 @@ function fish_prompt
 
     set_color $retc
     echo
- #   echo -n '┬─'
+    #   echo -n '┬─'
     set_color -o green
     echo -n [
     if test "$USER" = root -o "$USER" = toor
@@ -223,7 +225,7 @@ function fish_prompt
 
     set __CURRENT_GIT_STATUS_PARAM_COUNT (count $__CURRENT_GIT_STATUS)
 
-    if not test "0" -eq $__CURRENT_GIT_STATUS_PARAM_COUNT
+    if not test 0 -eq $__CURRENT_GIT_STATUS_PARAM_COUNT
         set GIT_BRANCH $__CURRENT_GIT_STATUS[1]
         set GIT_REMOTE "$__CURRENT_GIT_STATUS[2]"
         if contains "." "$GIT_REMOTE"
@@ -246,27 +248,27 @@ function fish_prompt
 
         set STATUS "$STATUS$GIT_PROMPT_SEPARATOR"
 
-        if [ $GIT_STAGED != "0" ]
+        if [ $GIT_STAGED != 0 ]
             set STATUS "$STATUS$GIT_PROMPT_STAGED$GIT_STAGED$ResetColor"
         end
 
-        if [ $GIT_CONFLICTS != "0" ]
+        if [ $GIT_CONFLICTS != 0 ]
             set STATUS "$STATUS$GIT_PROMPT_CONFLICTS$GIT_CONFLICTS$ResetColor"
         end
 
-        if [ $GIT_CHANGED != "0" ]
+        if [ $GIT_CHANGED != 0 ]
             set STATUS "$STATUS$GIT_PROMPT_CHANGED$GIT_CHANGED$ResetColor"
         end
 
-        if [ "$GIT_UNTRACKED" != "0" ]
+        if [ "$GIT_UNTRACKED" != 0 ]
             set STATUS "$STATUS$GIT_PROMPT_UNTRACKED$GIT_UNTRACKED$ResetColor"
         end
 
-        if [ "$GIT_STASHED" != "0" ]
+        if [ "$GIT_STASHED" != 0 ]
             set STATUS "$STATUS$GIT_PROMPT_STASHED$GIT_STASHED$ResetColor"
         end
 
-        if [ "$GIT_CLEAN" = "1" ]
+        if [ "$GIT_CLEAN" = 1 ]
             set STATUS "$STATUS$GIT_PROMPT_CLEAN"
         end
 
@@ -292,20 +294,20 @@ function fish_prompt
     set_color normal
     for job in (jobs)
         set_color $retc
- #       echo -n '│ '
+        #       echo -n '│ '
         set_color brown
         echo $job
     end
     set_color normal
     set_color $retc
- #   echo -n '╰─>'
+    #   echo -n '╰─>'
     if test "$USER" = root -o "$USER" = toor
         set_color -o red
-#        echo -n '# '
+        #        echo -n '# '
         echo -n ' >_ '
     else
         set_color -o yellow
-#        echo -n '$ '
+        #        echo -n '$ '
         echo -n ' >_ '
     end
     set_color normal
@@ -339,7 +341,7 @@ alias tobash="sudo chsh $USER -s /usr/bin/env bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /usr/bin/env zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /usr/bin/env fish && echo 'Now log out.'"
 # navigation ------------------------------------------------------------------
-alias ..='cd ..' 
+alias ..='cd ..'
 alias ...='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
@@ -364,7 +366,7 @@ alias emacs="emacsclient -c -a 'emacs'"
 # asdf manager ----------------------------------------------------------------
 # source ~/.asdf/asdf.fish
 # opam configuration ----------------------------------------------------------
-source /home/alexander/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+source /home/alexander/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
 
 # # Icons for lf file manager ---------------------------------------------------
 # set LF_ICONS "\
