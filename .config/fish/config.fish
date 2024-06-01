@@ -21,7 +21,7 @@ set TERM xterm-256color
 set TERMINAL alacritty
 set BROWSER brave
 # set MANPAGER "bat man -p"  # theme moved to the .config/bat/config
-set PAGER="bat"
+set PAGER bat
 set MANPAGER "sh -c 'col -bx | bat -l man -p'" # theme moved to the .config/bat/config
 # set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"  # $MANPAGER use batcat to read mans
 set RANGER_LOAD_DEFAULT_RC FALSE # to avoid loading ranger's config twice
