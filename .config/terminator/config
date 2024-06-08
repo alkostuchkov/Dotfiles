@@ -18,13 +18,13 @@
   help = ""
 [profiles]
   [[default]]
-    background_color = "#263238"
+    background_color = "#2d353b"
     background_darkness = 0.97
-    font = Iosevka 17
-    foreground_color = "#dcdfe4"
+    font = CaskaydiaCove Nerd Font Mono 17
+    foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
-    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    palette = "#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa:#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa"
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
@@ -163,7 +163,7 @@
   [[JetBrainsMono_Nerd_16]]
     background_color = "#263238"
     background_darkness = 0.97
-    font = JetBrainsMono Nerd Font 16
+    font = JetBrainsMono Nerd Font Mono 16
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden
@@ -681,6 +681,17 @@
     show_titlebar = False
     scrollbar_position = hidden
     palette = "#000000:#e60073:#00e673:#e6e600:#66b2ff:#b366ff:#00b3b3:#f0f0f0:#000000:#ff6666:#00e673:#f0b16c:#66b2ff:#ff66ff:#00b3b3:#f0f0f0"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[+Everforest+]]
+    background_color = "#2d353b"
+    background_darkness = 0.97
+    font = Cascadia Mono 17
+    foreground_color = "#d3c6aa"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa:#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa"
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
