@@ -60,7 +60,8 @@
   // "python.linting.mypyEnabled": false,
   // "python.linting.flake8Enabled": true,
   "code-runner.executorMap": {
-    "python": "$pythonPath -u $fullFileName"
+    "python": "$pythonPath -u $fullFileName",
+    "c": "cd $dir && gcc -std=c99 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
   },
   "code-runner.clearPreviousOutput": true,
   "code-runner.saveFileBeforeRun": true,
