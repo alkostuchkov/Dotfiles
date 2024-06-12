@@ -10,19 +10,24 @@ E_WRONG_CHOICE=74
 echo "Choose what to add:"
 echo "1) Deleted files."
 echo "2) Modified files."
-echo "3) All files."
+echo "3) New files."
+echo "4) All files."
 
 read choice
 
 case ${choice} in
   1) what_to_add="deleted:";;
   2) what_to_add="modified:";;
-  3) what_to_add="deleted:|modified:";;
+  3) what_to_add="new file:";;
+  4) what_to_add="deleted:|modified:|new file:";;
   *) echo -e "Wrong choice.\nExit."; exit $E_WRONG_CHOICE;;
 esac
 
-echo "Go to the $target_dir (WHERE THE BARE GIT IS)..."
-cd $target_dir &>/dev/null
+if [[ "$PWD" != "$target_dir" ]]
+then
+  echo "Go to the $target_dir (WHERE THE BARE GIT IS)..."
+  cd $target_dir &>/dev/null
+fi
 
 if [[ "$PWD" != "$target_dir" ]]
 then
@@ -31,11 +36,13 @@ then
   exit $E_WRONG_DIR
 fi
 
-for path in $(${config} status | grep -E "${what_to_add}" | awk '{print $2}')
+for path in $(${config} status | grep -E "${what_to_add}" | awk -F: '{print $2}')
+# for path in $(${config} status | grep -E "${what_to_add}" | awk '{print $2}')
+# for path in $(${config} status | grep -E "${what_to_add}" | cut -d : -f 2)
 do
   ${config} add -f ${path}
   # ${config} add -f ${path} 2>/dev/null
-  # echo $path
+  # echo "\"$path\""
 done
 
 echo "Back to the $OLDPWD (PREVIOUS DIR)..."

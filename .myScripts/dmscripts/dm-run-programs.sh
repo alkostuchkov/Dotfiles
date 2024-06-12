@@ -7,6 +7,7 @@ options=(
 "Appearance - lxappearance"
 "Display - lxrandr"
 "Sound - pavucontrol"
+"Sound - pavucontrol-qt"
 "Qt5 - qt5ct"
 "Qt6 - qt6ct"
 "Quit")
