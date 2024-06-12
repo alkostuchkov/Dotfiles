@@ -1,0 +1,261 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "alt+escape",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "ctrl+alt+space",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "ctrl+shift+enter",
+    "command": "editor.action.insertLineBefore",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+enter",
+    "command": "-editor.action.insertLineBefore",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-emacs.C-j",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+;",
+    "command": "-editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+;",
+    "command": "-editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.selectTheme"
+  },
+  {
+    "key": "alt+j",
+    "command": "editor.action.joinLines",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-editor.action.joinLines",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+n",
+    "command": "python.execInTerminal-icon"
+  },
+  {
+    "key": "ctrl+k backspace",
+    "command": "deleteAllLeft"
+  },
+  {
+    "key": "ctrl+k delete",
+    "command": "deleteAllRight"
+  },
+  {
+    "key": "ctrl+m",
+    "command": "-markdown.extension.editing.toggleMath",
+    "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+  },
+  {
+    "key": "ctrl+m",
+    "command": "-extension.vim_ctrl+m",
+    "when": "editorTextFocus && vim.active && vim.use<C-m> && !inDebugRepl || vim.active && vim.use<C-m> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-m> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+  },
+  {
+    "key": "ctrl+m",
+    "command": "-editor.action.toggleTabFocusMode"
+  },
+  {
+    "key": "ctrl+escape",
+    "command": "workbench.action.output.toggleOutput",
+    "when": "workbench.panel.output.active"
+  },
+  {
+    "key": "ctrl+k ctrl+h",
+    "command": "-workbench.action.output.toggleOutput",
+    "when": "workbench.panel.output.active"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "-notebook.format",
+    "when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "-editor.action.formatDocument.none",
+    "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "-emojisense.quickEmojitext",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-extension.vim_ctrl+w",
+    "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "shift+f10",
+    "command": "-editor.action.showContextMenu",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+f10",
+    "command": "code-runner.run"
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "-code-runner.run"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "alt+.",
+    "command": "workbench.action.increaseViewSize",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "alt+,",
+    "command": "workbench.action.decreaseViewSize",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "shift+meta+a",
+    "command": "cursorEnd",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+meta+i",
+    "command": "cursorHome",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "-notebook.cell.copyUp",
+    "when": "notebookEditorFocused && !inputFocus"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "-notebook.cell.copyDown",
+    "when": "notebookEditorFocused && !inputFocus"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "-extension.vim_cmd+alt+down",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "-extension.vim_cmd+alt+up",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+alt+escape",
+    "command": "workbench.action.toggleActivityBarVisibility"
+  },
+  {
+    "key": "shift+alt+w",
+    "command": "editor.emmet.action.wrapWithAbbreviation"
+  },
+  {
+    "key": "alt",
+    "command": "workbench.action.toggleMenuBar"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "-extension.vim_ctrl+c",
+    "when": "editorTextFocus && vim.active && vim.overrideCtrlC && vim.use<C-c> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "-search.action.copyMatch",
+    "when": "fileMatchOrMatchFocus"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+alt+down",
+    "command": "-editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "-editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+alt+up",
+    "command": "-editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "-editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+a",
+    "command": "cursorEnd",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+i",
+    "command": "cursorHome",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.openRecent"
+  },
+  {
+    "key": "u",
+    "command": "undo",
+    "when": "!editorFocus && editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "redo",
+    "when": "editorTextFocus && vim.active && !editorFocus && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+alt+f",
+    "command": "workbench.action.terminal.focusFind",
+    "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-workbench.action.terminal.focusFind",
+    "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+f10",
+    "command": "rust-analyzer.run"
+  }
+]
