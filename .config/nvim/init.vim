@@ -153,33 +153,6 @@ set background=dark
 colorscheme Everforest
 " colorscheme gruvbox-material
 
-" GUI -------------------------------------------------------------------------
-" set wak=no   "используем ALT как обычно, а не для вызова пункта меню
-" if has("gui_running")
-    " "убираем меню и тулбар
-    " set guioptions-=m
-    " set guioptions-=T
-    " "убираем скроллбары
-    " set guioptions-=r
-    " set guioptions-=l
-    " "используем консольные диалоги вместо графических
-    " set guioptions+=c
-    " " "антиалиасинг для шревтоф
-    " " set antialias
-    " "прячем курсор
-    " set mousehide
-    " " "Так не выводятся ненужные escape последовательности в :shell
-    " " set noguipty
-"
-    " " set guifont=Source_Code_Pro:h13:cRUSSIAN:qDRAFT
-    " " set guifont=mplus\ Nerd\ Font\ 16.5
-    " " set guifont=Iosevka\ 16
-    " " set guifont=Cascadia\ Code\ PL\ SemiLight\ 17
-    " " set guifont=Cascadia\ Mono\ PL\ 16.5
-    " " set guifont=Recursive\ Mono\ Casual\ Static\ Medium\ 17
-    " set guifont=Recursive\ Mono\ Casual\ Static\ 16
-" endif
-
 "##############################################################################
 " Plugins used by vim
 " Specify a directory for plugins
@@ -192,50 +165,20 @@ call plug#begin('~/.config/nvim/plugged')
     "#########################################
     Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
     Plug 'vifm/vifm.vim'
-    " Code and files fuzzy finder
-    " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-    " Plug 'junegunn/fzf.vim'
 
     "#########################################
     " Code completion
     "#########################################
-    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    " Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
-    " Plug 'ycm-core/YouCompleteMe', { 'for': 'python' }
     Plug 'ycm-core/YouCompleteMe'
-
-    " LSP
-    Plug 'neovim/nvim-lspconfig'
-    " Completion
-    Plug 'hrsh7th/nvim-cmp'
-    Plug 'hrsh7th/cmp-nvim-lsp'
-    " Plug 'hrsh7th/cmp-nvim-lua'
-    " Plug 'saadparwaiz1/cmp_luasnip'
-    " Plug 'L3MON4D3/LuaSnip'
-
-    Plug 'prabirshrestha/vim-lsp'
-    Plug 'prabirshrestha/asyncomplete.vim'
-    Plug 'prabirshrestha/asyncomplete-lsp.vim'
-    Plug 'mattn/vim-lsp-settings'
-
-    " " For JS/JSX
-    " Plug 'yuezk/vim-js'
-    " Plug 'maxmellon/vim-jsx-pretty'
 
     "#########################################
     " Other
     "#########################################
-    " Plug 'gruvbox-community/gruvbox'
-    " Plug 'vim-airline/vim-airline'
-    " Plug 'vim-airline/vim-airline-themes'
     Plug 'preservim/nerdcommenter'
     Plug 'tpope/vim-surround'
-    " " Plug 'etdev/vim-hexcolor'
-    " Plug 'ap/vim-css-color'
     Plug 'chrisbra/Colorizer'
     Plug 'luochen1990/rainbow'
     Plug 'nvim-treesitter/nvim-treesitter'
-    Plug 'nvim-orgmode/orgmode'
 
 " Tell vim-plug we finished declaring plugins, so it can load them
 call plug#end()
@@ -280,211 +223,20 @@ let g:rainbow_active = 1
 " :let g:colorizer_auto_color = 1
 
 "##############################################################################
-" orgmode Settings
-"##############################################################################
-lua << EOF
--- Load custom tree-sitter grammar for org filetype
-require('orgmode').setup_ts_grammar()
-
--- Tree-sitter configuration
-require'nvim-treesitter.configs'.setup {
-  -- If TS highlights are not enabled at all, or disabled via `disable` prop, highlighting will fallback to default Vim syntax highlighting
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = {'org'}, -- Required for spellcheck, some LaTex highlights and code block highlights that do not have ts grammar
-  },
-  ensure_installed = {'org'}, -- Or run :TSUpdate org
-}
-
--- require('orgmode').setup({
---   org_agenda_files = {'~/Dropbox/org/*', '~/my-orgs/**/*'},
---   org_default_notes_file = '~/Dropbox/org/refile.org',
--- })
-EOF
-
-lua << EOF
-require'cmp'.setup({
-  sources = {
-    { name = 'orgmode' }
-  }
-})
-EOF
-
-"##############################################################################
 " YouCompleteMe Settings
 "##############################################################################
+let g:ycm_python_binary_path = '/usr/bin/python3'
 let g:python3_host_prog = '~/Projects/Python/Virtualenvironments/poetry_venvs/py3.10.x_pynvim/.venv/bin/python3'
 " :nnoremap fd  :YcmCompleter GoToDefinition<CR>
 " :nnoremap bb <C-o>
 " let g:loaded_youcompleteme = 1
 " let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 " let g:ycm_extra_conf_globlist = ['!~/*']
-let g:ycm_python_binary_path = '/usr/bin/python3'
 " let g:ycm_autoclose_preview_window_after_completion = 1
 " let g:ycm_min_num_of_chars_for_completion = 1
 
 " for python
 " let g:ycm_semantic_triggers = {'python': ['re!from\s+\S+\s+import\s']}
-
-" "##############################################################################
-" " LSP Settings
-" "##############################################################################
-" lua << EOF
-" -- Set completeopt to have a better completion experience
-" vim.o.completeopt = 'menuone,noselect'
-"
-" -- luasnip setup
-" local luasnip = require 'luasnip'
-"
-" -- nvim-cmp setup
-" local cmp = require 'cmp'
-" cmp.setup {
-  " completion = {
-    " autocomplete = true
-  " },
-  " snippet = {
-    " expand = function(args)
-      " require('luasnip').lsp_expand(args.body)
-    " end,
-  " },
-  " mapping = {
-    " ['<C-p>'] = cmp.mapping.select_prev_item(),
-    " ['<C-n>'] = cmp.mapping.select_next_item(),
-    " ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-    " ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    " ['<C-Space>'] = cmp.mapping.complete(),
-    " ['<C-e>'] = cmp.mapping.close(),
-    " ['<CR>'] = cmp.mapping.confirm {
-      " behavior = cmp.ConfirmBehavior.Replace,
-      " select = true,
-    " },
-    " ['<Tab>'] = function(fallback)
-      " if vim.fn.pumvisible() == 1 then
-        " vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-n>', true, true, true), 'n')
-      " elseif luasnip.expand_or_jumpable() then
-        " vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<Plug>luasnip-expand-or-jump', true, true, true), '')
-      " else
-        " fallback()
-      " end
-    " end,
-    " ['<S-Tab>'] = function(fallback)
-      " if vim.fn.pumvisible() == 1 then
-        " vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-p>', true, true, true), 'n')
-      " elseif luasnip.jumpable(-1) then
-        " vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<Plug>luasnip-jump-prev', true, true, true), '')
-      " else
-        " fallback()
-      " end
-    " end,
-  " },
-  " sources = {
-    " { name = 'nvim_lsp' },
-    " { name = 'luasnip' },
-    " { name = 'nvim_lua' },
-  " },
-" }
-" EOF
-"
-" lua << EOF
-" local nvim_lsp = require('lspconfig')
-"
-" -- Use an on_attach function to only map the following keys
-" -- after the language server attaches to the current buffer
-" local on_attach = function(client, bufnr)
-"
-  " local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-  " local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-"
-  " -- Enable completion triggered by <c-x><c-o>
-  " buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
-"
-  " -- Mappings.
-  " local opts = { noremap=true, silent=true }
-"
-  " -- See `:help vim.lsp.*` for documentation on any of the below functions
-  " buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-  " buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  " buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-  " buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  " buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-  " buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
-  " buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
-  " buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
-  " buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-  " buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  " buf_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-  " buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-  " buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
-  " buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
-  " buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
-  " buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
-  " buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
-" end
-"
-" -- Use a loop to conveniently call 'setup' on multiple servers and
-" -- map buffer local keybindings when the language server attaches
-" local servers = { 'pyright', 'rust_analyzer' }
-" for _, lsp in ipairs(servers) do
-  " nvim_lsp[lsp].setup {
-    " on_attach = on_attach,
-    " flags = {
-      " debounce_text_changes = 150,
-    " }
-  " }
-" end
-" EOF
-
-"##############################################################################
-" vim-lsp Settings
-"##############################################################################
-" vim-lsp-settings won't detect hls automatically (2020-10-26). Let's teach it:
-if (executable('haskell-language-server-wrapper'))
-  au User lsp_setup call lsp#register_server({
-      \ 'name': 'haskell-language-server-wrapper',
-      \ 'cmd': {server_info->['haskell-language-server-wrapper', '--lsp']},
-      \ 'whitelist': ['haskell'],
-      \ })
-endif
-
-" Mappings
-function! s:on_lsp_buffer_enabled() abort
-    setlocal omnifunc=lsp#complete
-    setlocal signcolumn=yes
-    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
-    nmap <buffer> gd <plug>(lsp-definition)
-    nmap <buffer> gr <plug>(lsp-references)
-    nmap <buffer> gf <plug>(lsp-code-action)
-    nmap <buffer> gi <plug>(lsp-implementation)
-    nmap <buffer> gt <plug>(lsp-type-definition)
-    " nmap <buffer> <F2> <plug>(lsp-rename)
-    nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
-    nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
-    nmap <buffer> K <plug>(lsp-hover)
-    xmap <buffer> f <plug>(lsp-document-range-format)
-    " nmap <buffer> <F5> <plug>(lsp-code-lens)
-
-    " buffer format on save
-    " autocmd BufWritePre <buffer> LspDocumentFormatSync
-endfunction
-
-" Decorations
-augroup lsp_install
-    au!
-    let g:lsp_signs_enabled = 1         " enable signs
-    let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
-    let g:lsp_signs_error = {'text': '✗'}
-    " let g:lsp_signs_warning = {'text': '‼', 'icon': '/path/to/some/icon'} " icons require GUI
-    " let g:lsp_signs_hint = {'icon': '/path/to/some/other/icon'} " icons require GUI
-    let g:lsp_signs_warning = {'text': '‼'}
-    let g:lsp_highlight_references_enabled = 1
-    highlight link LspErrorText GruvboxRedSign " requires gruvbox
-    highlight clear LspWarningLine
-    " highlight lspReference ctermfg=red guifg=red ctermbg=green guibg=green
-    highlight lspReference guibg=#303010
-
-    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
-    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-augroup END
 
 "##############################################################################
 " Mappings
@@ -528,6 +280,8 @@ noremap <F11> :emenu Encoding.<TAB>
 " Edit & Apply changes in config file -----------------------------------------
 nnoremap <Leader>ev :tabnew ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>sv :source ~/.config/nvim/init.vim<CR>
+nnoremap <Leader>eg :tabnew ~/.config/nvim/ginit.vim<CR>
+nnoremap <Leader>sg :source ~/.config/nvim/ginit.vim<CR>
 
 " Move line up/down -----------------------------------------------------------
 nnoremap <M-k> :m .-2<CR>==
@@ -578,10 +332,18 @@ nnoremap <M-8> 8gt
 nnoremap <M-9> 9gt
 
 " Go to BOL and EOL -----------------------------------------------------------
-inoremap <M-h> <ESC>0i
-inoremap <M-l> <ESC>$a
-nnoremap <S-h> 0
-nnoremap <S-l> $
+inoremap <C-a> <ESC>0i
+inoremap <C-e> <ESC>$a
+nnoremap <C-a> 0
+nnoremap <C-e> $
+
+" Delete to EOL ---------------------------------------------------------------
+nnoremap <C-k> d$
+inoremap <C-k> <ESC> d$a
+
+" Delete to BOL ---------------------------------------------------------------
+nnoremap <C-u> d0
+inoremap <C-u> <ESC> d0i
 
 " Return from insert mode to normal -------------------------------------------
 inoremap jj <ESC>
@@ -594,15 +356,15 @@ inoremap <M-a> <Esc>O
 inoremap <M-Enter> <Esc>o
 
 " Aligning --------------------------------------------------------------------
-" center
-" inoremap <C-c>c <Esc>:center<CR>a
-" nnoremap <C-c>c :center<CR>
 " left
 inoremap <C-c>l <Esc>:left<CR>a
 nnoremap <C-c>l :left<CR>
 " right
 inoremap <C-c>r <Esc>:right<CR>a
 nnoremap <C-c>r :right<CR>
+" center
+" inoremap <C-c>c <Esc>:center<CR>a
+" nnoremap <C-c>c :center<CR>
 
 nnoremap Q <nop>
 nnoremap <Enter> <nop>
@@ -633,6 +395,14 @@ map <F9> :colorscheme memorycolor<CR>
 " colorscheme solarized
 " colorscheme cobalt2
 
+" Copy/Cut/Past from/to system buffer -----------------------------------------
+vnoremap <C-x> "+d
+vnoremap <C-c> "*y :let @+=@*<CR>
+map <C-p> "+p
+
+" Highlight hex colors toggle -------------------------------------------------
+noremap <F12> :ColorToggle<CR>
+
 " Несколько удобных биндингов для с, c++, java, python ------------------------
 augroup filetype_coding
     autocmd!
@@ -662,17 +432,4 @@ augroup filetype_coding
     " au FileType c,cpp,cc,h,java,python inoremap nl <END><CR>
     " au FileType c,cpp,cc,h,java,python inoremap ~ <END>:
 augroup END
-
-" Copy/Cut/Past from/to system buffer -----------------------------------------
-vnoremap <C-x> "+d
-vnoremap <C-c> "*y :let @+=@*<CR>
-map <C-p> "+p
-
-" Highlight hex colors toggle -------------------------------------------------
-noremap <F12> :ColorToggle<CR>
-
-" Surround the selection in "", '', () ----------------------------------------
-" vnoremap <Leader>" <ESC>`<i"<ESC>`>la"<ESC>
-" vnoremap <Leader>' <ESC>`<i'<ESC>`>la'<ESC>
-" vnoremap <Leader>( <ESC>`<i(<ESC>`>la)<ESC>
 
