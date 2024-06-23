@@ -20,7 +20,7 @@
   [[default]]
     background_color = "#2d353b"
     background_darkness = 0.97
-    font = Source Code Pro 18
+    font = Sarasa Mono SC Nerd 18
     foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
@@ -160,14 +160,14 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[JetBrainsMono_Nerd_16]]
-    background_color = "#263238"
+  [[JetBrainsMono_Nerd_17]]
+    background_color = "#2d353b"
     background_darkness = 0.97
-    font = JetBrainsMono Nerd Font Mono 16
-    foreground_color = "#dcdfe4"
+    font = JetBrainsMono Nerd Font Mono 17
+    foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
-    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    palette = "#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa:#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa"
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
@@ -259,14 +259,14 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[Monoid_Nerd_Font_14]]
-    background_color = "#263238"
+  [[Monoid_Nerd_Font_15]]
+    background_color = "#2d353b"
     background_darkness = 0.97
-    font = Monoid Nerd Font Mono Light Semi-Condensed 14
-    foreground_color = "#dcdfe4"
+    font = Monoid Nerd Font Mono Light Semi-Condensed 15
+    foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
-    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    palette = "#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa:#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa"
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
@@ -370,13 +370,13 @@
     bold_is_bright = True
     copy_on_selection = True
   [[SarasaMonoSCNerd_18]]
-    background_color = "#263238"
+    background_color = "#2d353b"
     background_darkness = 0.97
     font = Sarasa Mono SC Nerd 18
-    foreground_color = "#dcdfe4"
+    foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
-    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    palette = "#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa:#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa"
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
@@ -568,13 +568,13 @@
     bold_is_bright = True
     copy_on_selection = True
   [[Iosevka_18]]
-    background_color = "#263238"
+    background_color = "#2d353b"
     background_darkness = 0.97
     font = Iosevka 18
-    foreground_color = "#dcdfe4"
+    foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
-    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    palette = "#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa:#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa"
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
@@ -688,6 +688,17 @@
     background_color = "#2d353b"
     background_darkness = 0.97
     font = Cascadia Mono 17
+    foreground_color = "#d3c6aa"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa:#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[SarasaMonoSlabSC_18]]
+    background_color = "#2d353b"
+    background_darkness = 0.97
+    font = Sarasa Mono Slab SC 18
     foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden

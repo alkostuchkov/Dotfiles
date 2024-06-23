@@ -13,9 +13,9 @@
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter.notebook.ipynb"
   },
-  // "editor.fontFamily": "'mplus Nerd Font', 'Monoid Nerd Font Mono', 'InconsolataLGC Nerd Font Mono', 'Iosevka', 'Recursive Mono Casual Static', 'Cascadia Mono PL', 'Rec Mono Casual', 'Cascadia Code PL Semilight', 'Iosevka', 'Pragmata Pro', 'JetBrains Mono Light', 'Source Code Pro', 'Consolas NF', 'JetBrains Mono', 'UbuntuMono Nerd Font', 'Menlo', 'Trim Mono', 'Code New Roman', 'Operator Mono Book', 'IBM Plex Mono Medium'",
+  // "editor.fontFamily": "'mplus Nerd Font', 'Monoid Nerd Font Mono', 'Sarasa Mono SC Nerd', 'InconsolataLGC Nerd Font Mono', 'Iosevka', 'Recursive Mono Casual Static', 'Cascadia Mono PL', 'Rec Mono Casual', 'Cascadia Code PL Semilight', 'Iosevka', 'Pragmata Pro', 'JetBrains Mono Light', 'Source Code Pro', 'Consolas NF', 'JetBrains Mono', 'UbuntuMono Nerd Font', 'Menlo', 'Trim Mono', 'Code New Roman', 'Operator Mono Book', 'IBM Plex Mono Medium'",
   "editor.fontFamily": "'mplus Nerd Font'",
-  "editor.fontSize": 22, //mplus Nerd Font
+  "editor.fontSize": 23, //mplus Nerd Font
   // "editor.fontSize": 16,
   "editor.lineHeight": 25,
   // "editor.tabSize": 4,
@@ -42,7 +42,7 @@
     }
   ],
   "debug.console.fontFamily": "'mplus Nerd Font'",
-  "debug.console.fontSize": 21, //mplus Nerd Font
+  "debug.console.fontSize": 23, //mplus Nerd Font
   // "debug.console.fontSize": 16,
   // "terminal.explorerKind": "external",
   "terminal.integrated.cursorStyle": "block",
@@ -50,7 +50,7 @@
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.defaultProfile.linux": "fish",
   "terminal.integrated.fontFamily": "'mplus Nerd Font'",
-  "terminal.integrated.fontSize": 21, //mplus Nerd Font
+  "terminal.integrated.fontSize": 23, //mplus Nerd Font
   // "terminal.integrated.fontSize": 16,
   "[python]": {},
   "python.insidersChannel": "off",

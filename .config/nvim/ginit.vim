@@ -13,11 +13,10 @@ set guioptions+=c
 " set mousehide
 
 " " GuiFont Monoid\ Nerd\ Font\ Mono:h15:w400
-" GuiFont! Sarasa Mono SC Nerd:h17
-" GuiFont! Iosevka:h17
+" GuiFont! Sarasa Mono SC Nerd:h18
+GuiFont! Iosevka:h19
 " GuiFont! mplus Nerd Font:h19
 " GuiFont! CaskaydiaCove Nerd Font Mono:h18
-GuiFont! Source Code Pro:h18
 " GuiFont UbuntuMono Nerd Font:h20
 " set guifont=mplus\ Nerd\ Font\ 18  " for nvim-gtk
 
