@@ -52,7 +52,7 @@ progress_error  = { fg = "#e67e80", bg = "#475258" }
 
 # Permissions
 permissions_t = { fg = "#7fbbb3" }
-permissions_r = { fg = "#a7c080" }
+permissions_r = { fg = "#dbbc7f" }
 permissions_w = { fg = "#e67e80" }
 permissions_x = { fg = "#a7c080" }
 permissions_s = { fg = "#7C868B" }
