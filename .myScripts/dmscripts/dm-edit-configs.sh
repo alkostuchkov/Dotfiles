@@ -66,6 +66,8 @@ options=(
 "xterm - $HOME/.XTerm"
 "xresources - $HOME/.Xresources"
 "xsession-errors - $HOME/.xsession-errors"
+"yazi keymap - $HOME/.config/yazi/keymap.toml"
+"yazi theme - $HOME/.config/yazi/theme.toml"
 "zsh - $HOME/.zshrc"
 "Quit")
 

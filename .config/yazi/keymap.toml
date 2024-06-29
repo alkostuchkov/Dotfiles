@@ -142,9 +142,17 @@ keymap = [
 	{ on = [ "w" ], run = "tasks_show", desc = "Show the tasks manager" },
 
 	# Goto
-	{ on = [ "g", "h" ],       run = "cd ~",             desc = "Go to the home directory" },
+	{ on = [ "g", "R" ],       run = "cd /",             desc = "Go to the root directory" },
+	{ on = [ "g", "M" ],       run = "cd /run/media",             desc = "Go to the /run/media directory" },
+	{ on = [ "g", "a" ],       run = "cd ~/.cache",             desc = "Go to the cache directory" },
+	{ on = [ "g", "b" ],       run = "cd ~/OS/Linux/+backup",     desc = "Go to the backup directory" },
 	{ on = [ "g", "c" ],       run = "cd ~/.config",     desc = "Go to the config directory" },
-	{ on = [ "g", "d" ],       run = "cd ~/Downloads",   desc = "Go to the downloads directory" },
+	{ on = [ "g", "d" ],       run = "cd ~/Desktop",     desc = "Go to the desktop directory" },
+	{ on = [ "g", "h" ],       run = "cd ~",             desc = "Go to the home directory" },
+	{ on = [ "g", "l" ],       run = "cd ~/.local",             desc = "Go to the local directory" },
+	{ on = [ "g", "p" ],       run = "cd ~/Projects",     desc = "Go to the projects directory" },
+	{ on = [ "g", "s" ],       run = "cd ~/.myScripts",             desc = "Go to the myScripts directory" },
+	{ on = [ "g", "w" ],       run = "cd ~/Downloads",   desc = "Go to the downloads directory" },
 	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Go to a directory interactively" },
 
 	# Help
