@@ -334,8 +334,8 @@ nnoremap <M-9> 9gt
 " Go to BOL and EOL -----------------------------------------------------------
 inoremap <C-a> <ESC>0i
 inoremap <C-e> <ESC>$a
-nnoremap <C-a> 0
-nnoremap <C-e> $
+" nnoremap <C-a> 0
+" nnoremap <C-e> $
 
 " Delete to EOL ---------------------------------------------------------------
 nnoremap <C-k> d$

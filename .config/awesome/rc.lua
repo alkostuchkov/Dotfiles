@@ -64,7 +64,7 @@ end
 
 -- {{{ Variable definitions
 local TERMINAL = "alacritty"
-local EXTRA_TERMINAL = "terminator"
+local EXTRA_TERMINAL = "kitty"
 local EDITOR = os.getenv("EDITOR") or "vim"
 local EDITOR_CMD = TERMINAL.." -e "..EDITOR
 local SHELL = os.getenv("SHELL")
@@ -429,6 +429,8 @@ globalkeys = gears.table.join(
         {description = "Ranger", group = "applications" }),
     awful.key({ super, alt }, "v", function() awful.util.spawn(TERMINAL.." -e "..HOME.."/.config/vifm/scripts/vifmrun") end,
         {description = "Vifm", group = "applications" }),
+    awful.key({ super, alt }, "y", function() awful.util.spawn(EXTRA_TERMINAL.." -e "..SHELL.." -c yazi") end,
+        {description = "Yazi", group = "applications" }),
     awful.key({ super, alt }, "t", function() awful.util.spawn(HOME.."/Programs/Telegram/Telegram -workdir "..HOME.."/.local/share/TelegramDesktop/ -- %u") end,
         {description = "Telegram", group = "applications" }),
     awful.key({ super, alt }, "p", function() awful.util.spawn(HOME.."/Programs/PyCharm-Community/bin/pycharm.sh") end,
@@ -455,6 +457,8 @@ globalkeys = gears.table.join(
         {description = "Vifm as Root", group = "applications" }),
     awful.key({ super, shft, alt }, "a", function() awful.util.spawn(HOME.."/.myScripts/runRangerAsRoot.sh") end,
         {description = "Ranger as Root", group = "applications" }),
+    awful.key({ super, shft, alt }, "y", function() awful.util.spawn(HOME.."/.myScripts/runYaziAsRoot.sh") end,
+        {description = "Yazi as Root", group = "applications" }),
     awful.key({ super, shft, alt }, "n", function() awful.util.spawn(HOME.."/.myScripts/runThunarAsRoot.sh") end,
         {description = "Thunar as Root", group = "applications" }),
     -- Personal keybindings }}}
