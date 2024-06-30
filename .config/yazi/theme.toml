@@ -96,12 +96,13 @@ hovered = { underline = true }
 
 [which]
 mask            = { bg = "#475258" }
-cand            = { fg = "#a7c080" }
+cand            = { fg = "#f7e6bb" }
 rest            = { fg = "#ff0000" }
-desc            = { fg = "#e67e80" }
+# desc            = { fg = "#e67e80" }
+desc            = { fg = "#d699b6" }
 separator       = " "
 # separator       = "  "
-separator_style = { fg = "#475258" }
+separator_style = { fg = "#d3c6aa" }
 
 # : 
 
