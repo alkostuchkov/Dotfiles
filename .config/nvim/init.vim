@@ -165,6 +165,9 @@ call plug#begin('~/.config/nvim/plugged')
     "#########################################
     Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
     Plug 'vifm/vifm.vim'
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'DreamMaoMao/yazi.nvim'
 
     "#########################################
     " Code completion
@@ -282,6 +285,9 @@ nnoremap <Leader>ev :tabnew ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>sv :source ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>eg :tabnew ~/.config/nvim/ginit.vim<CR>
 nnoremap <Leader>sg :source ~/.config/nvim/ginit.vim<CR>
+
+
+nnoremap <Leader>gy :Yazi<CR>
 
 " Move line up/down -----------------------------------------------------------
 nnoremap <M-k> :m .-2<CR>==

@@ -68,6 +68,7 @@ options=(
 "xsession-errors - $HOME/.xsession-errors"
 "yazi keymap - $HOME/.config/yazi/keymap.toml"
 "yazi theme - $HOME/.config/yazi/theme.toml"
+"yazi - $HOME/.config/yazi/yazi.toml"
 "zsh - $HOME/.zshrc"
 "Quit")
 
