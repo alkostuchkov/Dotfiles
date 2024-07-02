@@ -85,8 +85,8 @@ inactive = {}
 # : Tasks 
 
 [tasks]
-border  = { fg = "#504945" }
-title   = {}
+border  = { fg = "#d3c6aa" }
+title   = { fg = "#a7c080" }
 hovered = { underline = true }
 
 # : 
