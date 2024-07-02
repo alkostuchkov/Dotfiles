@@ -14,8 +14,8 @@ set guioptions+=c
 
 " " GuiFont Monoid\ Nerd\ Font\ Mono:h15:w400
 " GuiFont! Sarasa Mono SC Nerd:h18
-" GuiFont! Iosevka:h19
-GuiFont! mplus Nerd Font:h20
+GuiFont! Iosevka:h19
+" GuiFont! mplus Nerd Font:h20
 " GuiFont! CaskaydiaCove Nerd Font Mono:h18
 " GuiFont UbuntuMono Nerd Font:h20
 " set guifont=mplus\ Nerd\ Font\ 18  " for nvim-gtk
