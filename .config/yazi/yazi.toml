@@ -39,8 +39,11 @@ rules = [
   { mime = "{audio,video}/*", use = [ "open", "play", "reveal" ] },
 	{ mime = "inode/x-empty",   use = [ "edit", "reveal" ] },
 
-	{ mime = "application/{,g}zip", use = [ "extract", "reveal" ] },
-	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", use = [ "extract", "reveal" ] },
+	{ mime = "application/{,g}zip", use = [ "reveal", "extract" ] },
+	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", use = [ "reveal", "extract" ] },
+
+	# { mime = "application/{,g}zip", use = [ "extract", "reveal" ] },
+	# { mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", use = [ "extract", "reveal" ] },
 
 	{ mime = "application/{json,x-ndjson}", use = [ "edit", "reveal" ] },
 	{ mime = "*/javascript", use = [ "edit", "reveal" ] },
