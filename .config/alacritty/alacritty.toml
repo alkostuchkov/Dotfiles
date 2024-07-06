@@ -18,24 +18,29 @@ TERM = "xterm-256color"
 size = 20
 
 [font.bold]
-family = "mplus Nerd Font"
+# family = "mplus Nerd Font"
+family = "Sarasa Mono SC Nerd"
 style = "Bold"
 
 [font.bold_italic]
-family = "mplus Nerd Font"
+# family = "mplus Nerd Font"
+family = "Sarasa Mono SC Nerd"
 style = "Bold Italic"
 
 [font.italic]
-family = "mplus Nerd Font"
+# family = "mplus Nerd Font"
+family = "Sarasa Mono SC Nerd"
 style = "Italic"
 
 [font.normal]
-family = "mplus Nerd Font"
+# family = "mplus Nerd Font"
+family = "Sarasa Mono SC Nerd"
 style = "Regular"
 
 [font.offset]
 x = 0
-y = -8
+# y = -8 # mplus Nerd Font
+y = -3
 
 [[keyboard.bindings]]
 action = "Copy"
