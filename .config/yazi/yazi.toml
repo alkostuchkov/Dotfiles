@@ -29,6 +29,9 @@ play = [
 	{ run = 'mpv --force-window "%1"', orphan = true, for = "windows" },
 	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
 ]
+show_font = [
+	{ run = 'gnome-font-viewer "$1"', orphan = true, desc = "Show font", for = "linux" },
+]
 
 [open]
 rules = [
@@ -38,6 +41,9 @@ rules = [
 	{ mime = "image/*",         use = [ "open", "reveal" ] },
   { mime = "{audio,video}/*", use = [ "open", "play", "reveal" ] },
 	{ mime = "inode/x-empty",   use = [ "edit", "reveal" ] },
+
+  { mime = "font/*",   use = [ "show_font", "open", "reveal" ] },
+  { mime = "application/vnd.ms-opentype",   use = [ "show_font", "open", "reveal" ] },
 
 	{ mime = "application/{,g}zip", use = [ "reveal", "extract" ] },
 	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", use = [ "reveal", "extract" ] },

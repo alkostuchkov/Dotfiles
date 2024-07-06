@@ -314,17 +314,6 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[Gintronic_16]]
-    background_color = "#263238"
-    background_darkness = 0.97
-    font = Gintronic 16
-    foreground_color = "#dcdfe4"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
-    use_system_font = False
-    bold_is_bright = True
-    copy_on_selection = True
   [[InconsolataLGC_16]]
     background_color = "#263238"
     background_darkness = 0.97
@@ -372,7 +361,7 @@
   [[SarasaMonoSCNerd_18]]
     background_color = "#2d353b"
     background_darkness = 0.97
-    font = Sarasa Mono SC Nerd 18
+    font = Sarasa Mono SC Nerd Light 18
     foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
@@ -673,17 +662,6 @@
     palette = "#191E2A:#FF3333:#BAE67E:#FFA759:#73D0FF:#FFD580:#95E6CB:#C7C7C7:#686868:#F27983:#A6CC70:#FFCC66:#5CCFE6:#FFEE99:#95E6CB:#FFFFFF"
     use_system_font = False
     copy_on_selection = True
-  [[+MemoryColor+]]
-    background_color = "#203040"
-    background_darkness = 0.97
-    font = Monoid Nerd Font Mono Light Semi-Condensed 15.5
-    foreground_color = "#e6ac73"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#000000:#e60073:#00e673:#e6e600:#66b2ff:#b366ff:#00b3b3:#f0f0f0:#000000:#ff6666:#00e673:#f0b16c:#66b2ff:#ff66ff:#00b3b3:#f0f0f0"
-    use_system_font = False
-    bold_is_bright = True
-    copy_on_selection = True
   [[+Everforest+]]
     background_color = "#2d353b"
     background_darkness = 0.97
@@ -706,6 +684,18 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
+  [[CourierNew_17]]
+    background_color = "#2d353b"
+    background_darkness = 0.97
+    font = Courier Primal 17
+    foreground_color = "#d3c6aa"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa:#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[+MemoryColor+]]
 [layouts]
   [[default]]
     [[[child1]]]
