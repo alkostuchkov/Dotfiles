@@ -2,6 +2,9 @@
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
 # "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
+[preview]
+tab_size        = 22
+
 [opener]
 edit = [
 	# { run = '${EDITOR:=vi} "$@"', desc = "$EDITOR", block = true, for = "unix" },
