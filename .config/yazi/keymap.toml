@@ -8,6 +8,18 @@ keymap = [
   # Go to the shell
   { on = [ "<C-s>" ], run = 'shell "$SHELL" --block --confirm' },
 
+# Archives (create/extract)
+  { on = [ "<A-a>", "c" ], exec = """shell 'engrampa --add "$@"' --block --confirm""", desc = "Create an archive" },
+  { on = [ "<A-a>", "x" ], exec = """shell 'engrampa -f "$@"' --block --confirm""", desc = "Extract an archive" },
+  # { on = [ "<A-c>", "t" ], exec = """
+    # shell 'printf "Archive Name: "; read name; tar -czvf "$name.tar.gz" "$@"' --block --confirm
+# """, desc = "Create tar.gz archive" },
+  # { on = [ "<A-c>", "z" ], exec = """
+    # shell 'printf "Archive Name: "; read name; zip -9 -r "$name.zip" "$@"' --block --confirm
+# """, desc = "Create zip archive" },
+  # { on = [ "<A-u>", "t" ], exec = """shell 'tar -xzvf "$@"' --block --confirm""", desc = "Extract tar.gz archive" },
+  # { on = [ "<A-u>", "z" ], exec = """shell 'unzip "$@"' --block --confirm""", desc = "Extract zip archive" },
+
 	{ on = [ "<Esc>" ], run = "escape",             desc = "Exit visual mode, clear selected, or cancel search" },
 	{ on = [ "<C-[>" ], run = "escape",             desc = "Exit visual mode, clear selected, or cancel search" },
 	{ on = [ "q" ],     run = "quit",               desc = "Exit the process" },
