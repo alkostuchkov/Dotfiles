@@ -20,14 +20,14 @@ size = 20
 [font.bold]
 # family = "mplus Nerd Font"
 family = "Sarasa Mono SC Nerd"
-# style = "Bold"
-style = "Semibold"
+style = "Bold"
+# style = "Semibold"
 
 [font.bold_italic]
 # family = "mplus Nerd Font"
 family = "Sarasa Mono SC Nerd"
-style = "Semibold Italic"
-# style = "Bold Italic"
+# style = "Semibold Italic"
+style = "Bold Italic"
 
 [font.italic]
 # family = "mplus Nerd Font"
@@ -37,8 +37,8 @@ style = "Italic"
 [font.normal]
 # family = "mplus Nerd Font"
 family = "Sarasa Mono SC Nerd"
-style = "Light"
-# style = "Regular"
+# style = "Light"
+style = "Regular"
 
 [font.offset]
 x = 0
@@ -130,5 +130,5 @@ general = "Alacritty"
 instance = "Alacritty"
 
 [window.padding]
-x = 0
+x = 3
 y = 0

@@ -20,7 +20,7 @@
   [[default]]
     background_color = "#2d353b"
     background_darkness = 0.97
-    font = FiraCode Nerd Font 17
+    font = FiraCode Nerd Font weight=450 17
     foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
@@ -559,7 +559,7 @@
   [[Iosevka_18]]
     background_color = "#2d353b"
     background_darkness = 0.97
-    font = Iosevka 18
+    font = IosevkaCC 18
     foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden

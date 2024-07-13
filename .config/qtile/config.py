@@ -217,6 +217,7 @@ keys = [
     Key([mod], "Escape", lazy.group.toscreen(toggle=True)),
 # <SUPER> + <CTRL> + KEYS
     Key([mod, "control"], "Return", lazy.spawn("xfce4-terminal"), desc="Launch xfce4-terminal"),
+    Key([mod, "shift"], "Return", lazy.spawn("terminator"), desc="Launch terminator"),
     # RESIZE UP, DOWN, LEFT, RIGHT
     Key([mod, "control"], "i",
         lazy.layout.shrink_main(),

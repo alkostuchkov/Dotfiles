@@ -449,6 +449,8 @@ globalkeys = gears.table.join(
         {description = "Extra Terminal", group = "applications" }),
     awful.key({ super, ctrl }, "Return", function() awful.util.spawn("xfce4-terminal") end,
         {description = "xfce4-terminal", group = "applications" }),
+    awful.key({ super, shft }, "Return", function() awful.util.spawn("terminator") end,
+        {description = "terminator", group = "applications" }),
     awful.key({ ctrl, shft }, "Escape", function() awful.util.spawn(TERMINAL.." -e "..SHELL.." -c htop") end,
         {description = "htop", group = "applications" }),
 
