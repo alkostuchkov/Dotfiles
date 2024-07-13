@@ -794,6 +794,7 @@ floating_layout = layout.Floating(float_rules=[
     #  Match(title="Import WebStorm Settings", wm_class="jetbrains-webstorm"),
     Match(title="splash"),  # PyCharm
     Match(title="Update"),  # PyCharm
+    Match(title="Compress"),  # Engrampa create archive dialog
     #  Match(title="win0", wm_class="jetbrains-pycharm-ce"),  # PyCharm
     #  Match(title="Welcome to PyCharm", wm_class="jetbrains-pycharm-ce"),
     #  Match(title="License Activation", wm_class="jetbrains-pycharm-ce"),  # PyCharm

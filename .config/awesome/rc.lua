@@ -882,6 +882,7 @@ awful.rules.rules = {
           "Сетевые соединения",
           "splash",
           "Update",
+          "Compress", -- Engrampa compress dialog
         },
         role = {
           "AlarmWindow",  -- Thunderbird's calendar.
