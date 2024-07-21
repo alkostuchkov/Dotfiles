@@ -14,7 +14,7 @@ set guioptions+=c
 
 " " GuiFont Monoid\ Nerd\ Font\ Mono:h15:w400
 " GuiFont! Sarasa Mono SC Nerd:h19:l
-GuiFont! Sarasa Mono SC Nerd:h20
+GuiFont! Sarasa Mono SC Nerd:h19
 " GuiFont! Iosevka:h19
 " GuiFont! mplus Nerd Font:h20
 " GuiFont! CaskaydiaCove Nerd Font Mono:h18

@@ -9,8 +9,8 @@ keymap = [
   { on = [ "<C-s>" ], run = 'shell "$SHELL" --block --confirm' },
 
 # Archives (create/extract)
-  { on = [ "<A-a>", "c" ], exec = """shell 'engrampa --add "$@"' --block --confirm""", desc = "Create an archive" },
-  { on = [ "<A-a>", "x" ], exec = """shell 'engrampa -f "$@"' --block --confirm""", desc = "Extract an archive" },
+  { on = [ "<A-a>", "c" ], run = """shell 'engrampa --add "$@"' --block --confirm""", desc = "Create an archive" },
+  { on = [ "<A-a>", "x" ], run = """shell 'engrampa -f "$@"' --block --confirm""", desc = "Extract an archive" },
   # { on = [ "<A-c>", "t" ], exec = """
     # shell 'printf "Archive Name: "; read name; tar -czvf "$name.tar.gz" "$@"' --block --confirm
 # """, desc = "Create tar.gz archive" },
