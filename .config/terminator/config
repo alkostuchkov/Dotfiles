@@ -20,7 +20,7 @@
   [[default]]
     background_color = "#2d353b"
     background_darkness = 0.97
-    font = FiraCode Nerd Font weight=450 17
+    font = Source Code Pro 18
     foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
@@ -94,17 +94,6 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[Monaco_15_5]]
-    background_color = "#263238"
-    background_darkness = 0.97
-    font = Monaco 15.5
-    foreground_color = "#dcdfe4"
-    show_titlebar = False
-    scrollbar_position = hidden
-    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
-    use_system_font = False
-    bold_is_bright = True
-    copy_on_selection = True
   [[Hack_Nerd_16]]
     background_color = "#263238"
     background_darkness = 0.97
@@ -116,14 +105,14 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[MesloLGS_Nerd_16]]
-    background_color = "#263238"
+  [[MesloLGM_Nerd_17]]
+    background_color = "#2d353b"
     background_darkness = 0.97
-    font = MesloLGS Nerd Font Mono 16
-    foreground_color = "#dcdfe4"
+    font = MesloLGS Nerd Font Mono 17
+    foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
-    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    palette = "#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa:#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa"
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
@@ -138,10 +127,10 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[Menlo_16]]
+  [[Menlo_17]]
     background_color = "#263238"
     background_darkness = 0.97
-    font = Menlo 16
+    font = MesloLGL Nerd Font Mono 17
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden
@@ -149,14 +138,14 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[JetBrainsMono_16]]
-    background_color = "#263238"
+  [[JetBrainsMono_17]]
+    background_color = "#2d353b"
     background_darkness = 0.97
-    font = JetBrains Mono 16
-    foreground_color = "#dcdfe4"
+    font = JetBrains Mono 17
+    foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
-    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    palette = "#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa:#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa"
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
@@ -182,25 +171,25 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[SFMono_Nerd_Light_16]]
-    background_color = "#263238"
+  [[SFMono_Nerd_Light_17]]
+    background_color = "#2d353b"
     background_darkness = 0.97
-    font = SFMono Nerd Font Light 16
-    foreground_color = "#dcdfe4"
+    font = SFMono Nerd Font Light 17
+    foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
-    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    palette = "#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa:#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa"
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[SFMono_Nerd_16]]
-    background_color = "#263238"
+  [[SFMono_Nerd_17]]
+    background_color = "#2d353b"
     background_darkness = 0.97
-    font = SFMono Nerd Font 16
-    foreground_color = "#dcdfe4"
+    font = SFMono Nerd Font 17
+    foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
-    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    palette = "#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa:#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa"
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
@@ -435,14 +424,14 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[MonacoB_Nerd_15_5]]
-    background_color = "#263238"
+  [[MonacoB_Nerd_17]]
+    background_color = "#2d353b"
     background_darkness = 0.97
-    font = MonacoB Nerd Font Mono 15.5
-    foreground_color = "#dcdfe4"
+    font = MonacoB Nerd Font Mono 17
+    foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
-    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    palette = "#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa:#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa"
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
@@ -523,14 +512,14 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[DejaVuSansMonoNerdBook_16]]
-    background_color = "#263238"
+  [[DejaVuSansMonoNerdBook_17]]
+    background_color = "#2d353b"
     background_darkness = 0.97
-    font = DejaVuSansMono Nerd Font 16
-    foreground_color = "#dcdfe4"
+    font = DejaVuSansMono Nerd Font Mono 17
+    foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
-    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    palette = "#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa:#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa"
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
