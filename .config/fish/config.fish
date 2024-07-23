@@ -53,6 +53,10 @@ set_colorscheme_ayu_Mirage
 ###############################################################################
 # FUNCTIONS
 ###############################################################################
+function man
+    command man "$argv" | eval $MANPAGER
+end
+
 # SET EITHER DEFAULT EMACS MODE OR VI MODE ------------------------------------
 function fish_user_key_bindings
     fish_default_key_bindings
