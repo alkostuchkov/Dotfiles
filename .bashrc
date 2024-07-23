@@ -143,6 +143,7 @@ alias lle='lse -l'
 alias ls='lsd --group-dirs=first'
 alias ll='lsd --blocks=permission,links,user,group,size,date,name --group-dirs=first --date="+%d %b %H:%M"'
 alias la='ll -a'
+alias tree='lsd --tree'
 # alias bat='bat --theme gruvbox-dark'  # theme moved to the .config/bat/config
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'

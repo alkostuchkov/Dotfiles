@@ -63,6 +63,7 @@ options=(
 "udiskie - $HOME/.config/udiskie/config.yml"
 "vifm - $HOME/.config/vifm/vifmrc"
 "vim - $HOME/.vimrc"
+"wezterm - $HOME/.wezterm.lua"
 "xterm - $HOME/.XTerm"
 "xresources - $HOME/.Xresources"
 "xsession-errors - $HOME/.xsession-errors"
