@@ -42,6 +42,16 @@ config.keys = {
   { key = 'PageDown', mods = 'CTRL|SHIFT', action = act.ScrollByPage(1) },
   { key = 'Home', mods = 'CTRL|SHIFT', action = act.ScrollToTop },
   { key = 'End', mods = 'CTRL|SHIFT', action = act.ScrollToBottom },
+  {
+    key = 'z',
+    mods = 'CTRL|SHIFT|',
+    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
+  },
+  {
+    key = 'x',
+    mods = 'CTRL|SHIFT|',
+    action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
+  },
 }
 -- -- timeout_milliseconds defaults to 1000 and can be omitted
 -- config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
