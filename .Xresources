@@ -5,11 +5,17 @@
 ! #include "/home/alexander/Xresources-themes/nord.Xresources"
 
 ! Xft settings ----------------------------------------------------------------
-Xft.dpi:        96
-Xft.antialias:  true
-Xft.rgba:       rgb
-Xft.hinting:    true
-Xft.hintstyle:  hintslight
+Xft.antialias: 1
+Xft.hinting: 1
+Xft.rgba: rgb
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+! Xft.dpi:        96
+! Xft.antialias:  true
+! Xft.rgba:       rgb
+! Xft.hinting:    true
+! Xft.hintstyle:  hintslight
 
 ! XTerm -----------------------------------------------------------------------
 XTerm*renderFont: true

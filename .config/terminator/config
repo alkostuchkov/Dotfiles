@@ -141,7 +141,7 @@
   [[Menlo_17]]
     background_color = "#263238"
     background_darkness = 0.97
-    font = Menlo 17
+    font = BitstreamVeraSansMono Nerd Font Mono 17
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden
