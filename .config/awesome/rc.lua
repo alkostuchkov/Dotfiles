@@ -429,7 +429,7 @@ globalkeys = gears.table.join(
         {description = "Ranger", group = "applications" }),
     awful.key({ super, alt }, "v", function() awful.util.spawn(TERMINAL.." -e "..HOME.."/.config/vifm/scripts/vifmrun") end,
         {description = "Vifm", group = "applications" }),
-    awful.key({ super, alt }, "y", function() awful.util.spawn(EXTRA_TERMINAL.." -e "..SHELL.." -c 'yazi --cwd-file ~/.config/yazi/cwd (cat ~/.config/yazi/cwd)'") end,
+    awful.key({ super, alt }, "y", function() awful.util.spawn(TERMINAL.." -e "..SHELL.." -c 'yazi --cwd-file ~/.config/yazi/cwd (cat ~/.config/yazi/cwd)'") end,
         {description = "Yazi", group = "applications" }),
     awful.key({ super, alt }, "t", function() awful.util.spawn(HOME.."/Programs/Telegram/Telegram -workdir "..HOME.."/.local/share/TelegramDesktop/ -- %u") end,
         {description = "Telegram", group = "applications" }),
