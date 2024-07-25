@@ -63,7 +63,7 @@ end
 -- }}}
 
 -- {{{ Variable definitions
-local TERMINAL = "alacritty"
+local TERMINAL = "wezterm"
 local EXTRA_TERMINAL = "kitty"
 local EDITOR = os.getenv("EDITOR") or "vim"
 local EDITOR_CMD = TERMINAL.." -e "..EDITOR
