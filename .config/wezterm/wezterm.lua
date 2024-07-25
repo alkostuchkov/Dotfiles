@@ -21,10 +21,12 @@ config.colors = {
 
 -- config.font = wezterm.font("DejaVuSansMono Nerd Font Mono")
 -- config.font = wezterm.font("DejaVu Sans Mono")
-config.font = wezterm.font("MesloLGS Nerd Font Mono")
+-- config.font = wezterm.font("MesloLGS Nerd Font Mono")
+-- config.font = wezterm.font("Hack Nerd Font Mono")
+config.font = wezterm.font("Consolas")
 -- config.font = wezterm.font("Menlo")
 -- config.font = wezterm.font("Source Code Pro")
-config.font_size = 18
+config.font_size = 20
 
 config.enable_tab_bar = false
 

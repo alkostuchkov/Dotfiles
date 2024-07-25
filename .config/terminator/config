@@ -83,10 +83,10 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[Consolas_Nerd_17]]
+  [[Consolas_Nerd_19]]
     background_color = "#263238"
     background_darkness = 0.97
-    font = Consolas NF 17
+    font = Consolas NF 19
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden
@@ -94,14 +94,25 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[Hack_Nerd_16]]
+  [[Consolas_19]]
     background_color = "#263238"
     background_darkness = 0.97
-    font = Hack Nerd Font 16
+    font = Consolas 19
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden
     palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    use_system_font = False
+    bold_is_bright = True
+    copy_on_selection = True
+  [[Hack_Nerd_17]]
+    background_color = "#2d353b"
+    background_darkness = 0.97
+    font = Hack Nerd Font Mono 17
+    foreground_color = "#d3c6aa"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa:#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa"
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
@@ -116,14 +127,14 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[Hack_16]]
-    background_color = "#263238"
+  [[Hack_17]]
+    background_color = "#2d353b"
     background_darkness = 0.97
-    font = Hack 16
-    foreground_color = "#dcdfe4"
+    font = Hack 17
+    foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
-    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
+    palette = "#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa:#475258:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa"
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True

@@ -8,6 +8,10 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+man() {
+    command man "$@" | eval ${MANPAGER}
+}
+
 ###############################################################################
 # EXPORTs
 ###############################################################################
@@ -26,7 +30,7 @@ export SXHKD_SHELL="/usr/bin/bash"
 export EDITOR="vim"   #  vim is either a link to nvim    or just  vim
 export VISUAL="gvim"  # gvim is either a link to nvim-qt or just gvim
 export TERM="xterm-256color"
-export TERMINAL="alacritty"
+export TERMINAL="wezterm"
 export BROWSER="brave"
 # export RANGER_LOAD_DEFAULT_RC=FALSE  # to avoid loading ranger's config twice
 # # export BROWSER="qutebrowser"
