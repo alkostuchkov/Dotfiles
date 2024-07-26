@@ -336,6 +336,7 @@ nnoremap <M-7> 7gt
 nnoremap <M-8> 8gt
 nnoremap <M-9> 9gt
 
+" Like in a terminal
 " Go to BOL and EOL -----------------------------------------------------------
 inoremap <C-a> <ESC>I
 inoremap <C-e> <ESC>A
@@ -343,14 +344,27 @@ inoremap <C-e> <ESC>A
 " nnoremap <C-e> $
 
 " Delete to EOL ---------------------------------------------------------------
-" nnoremap <C-k> d$
-" inoremap <C-k> <ESC> d$a
 nnoremap <C-k> D$
 inoremap <C-k> <ESC> D$a
 
 " Delete to BOL ---------------------------------------------------------------
 nnoremap <C-u> d0
 inoremap <C-u> <ESC> d0i
+
+" Movements -------------------------------------------------------------------
+" By a char
+inoremap <C-f> <ESC> la
+inoremap <C-b> <ESC> hi
+" By a word
+inoremap <M-f> <ESC> wa
+inoremap <M-b> <ESC> bi
+
+" Deleting --------------------------------------------------------------------
+" By a char
+inoremap <C-d> <ESC> xi
+" By a word
+inoremap <C-w> <ESC> dbi
+inoremap <M-d> <ESC> dea
 
 " Return from insert mode to normal -------------------------------------------
 inoremap jj <ESC>
