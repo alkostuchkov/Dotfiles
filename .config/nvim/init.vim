@@ -286,7 +286,6 @@ nnoremap <Leader>sv :source ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>eg :tabnew ~/.config/nvim/ginit.vim<CR>
 nnoremap <Leader>sg :source ~/.config/nvim/ginit.vim<CR>
 
-
 nnoremap <Leader>gy :Yazi<CR>
 
 " Move line up/down -----------------------------------------------------------
@@ -338,14 +337,16 @@ nnoremap <M-8> 8gt
 nnoremap <M-9> 9gt
 
 " Go to BOL and EOL -----------------------------------------------------------
-inoremap <C-a> <ESC>0i
-inoremap <C-e> <ESC>$a
+inoremap <C-a> <ESC>I
+inoremap <C-e> <ESC>A
 " nnoremap <C-a> 0
 " nnoremap <C-e> $
 
 " Delete to EOL ---------------------------------------------------------------
-nnoremap <C-k> d$
-inoremap <C-k> <ESC> d$a
+" nnoremap <C-k> d$
+" inoremap <C-k> <ESC> d$a
+nnoremap <C-k> D$
+inoremap <C-k> <ESC> D$a
 
 " Delete to BOL ---------------------------------------------------------------
 nnoremap <C-u> d0
@@ -384,11 +385,11 @@ nnoremap <Enter> <nop>
 " let g:solarized_termcolors=256
 map <F1> :colorscheme OceanicNext<CR>
 map <F2> :colorscheme gruvbox<CR>
-" map <F3> :colorscheme gruvbox-material<CR>
-" map <F4> :colorscheme palenight<CR>
+map <F3> :colorscheme Everforest<CR>
+map <F4> :colorscheme palenight<CR>
 map <F5> :colorscheme tokyonight<CR>
 map <F6> :colorscheme ayu<CR>
-" map <F7> :colorscheme onedark<CR>
+map <F7> :colorscheme onedark<CR>
 map <F8> :colorscheme darcula<CR>
 map <F9> :colorscheme memorycolor<CR>
 " map <F9> :colorscheme base16-flat_Cobalt2<CR>
