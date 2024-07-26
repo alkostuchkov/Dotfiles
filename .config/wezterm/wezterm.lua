@@ -17,6 +17,7 @@ config.colors = {
   brights = { "#475258", "#e67e80", "#a7c080", "#dbbc7f", "#7fbbb3", "#d699b6", "#83c092", "#d3c6aa" },
 }
 
+-- config.font = wezterm.font("JetbrainsMono Nerd Font Mono")
 -- config.font = wezterm.font("DejaVuSansMono Nerd Font Mono")
 -- config.font = wezterm.font("DejaVu Sans Mono")
 config.font = wezterm.font("MesloLGS Nerd Font Mono")
@@ -57,7 +58,7 @@ config.keys = {
   },
   { -- Create new tab
     key = 't',
-    mods = 'CTRL',
+    mods = 'CTRL|SHIFT',
     action = act.SpawnTab 'CurrentPaneDomain',
     -- action = act.SpawnTab 'DefaultDomain',
     -- action = act.SpawnTab { DomainName = 'unix' },
@@ -90,7 +91,7 @@ config.keys = {
   -- { key = '[', mods = 'CTRL', action = wezterm.action.ActivateTabRelativeNoWrap(-1) },
   { -- Rename current tab
     key = 't',
-    mods = 'CTRL|SHIFT',
+    mods = 'ALT|SHIFT',
     action = act.PromptInputLine {
       description = 'Enter new name for tab',
       action = wezterm.action_callback(function(window, pane, line)
