@@ -1,7 +1,7 @@
 "##############################################################################
 " General settings
 "##############################################################################
-set nocompatible " no vi-compatible
+" set nocompatible " no vi-compatible (Nvim is always "nocompatible".)
 
 " Automatic reloading config file (for NERDCommenter) -------------------------
 autocmd! VimEnter * :source ~/.config/nvim/init.vim
@@ -19,7 +19,7 @@ set relativenumber
 " set linespace=3
 set wrap linebreak nolist  "Данная вариация работает как wrap,... но
 " переносит строчки не посимвольно, а по словам
-set tw=79   "width of document (used by gd)
+set textwidth=79   "width of document (used by gd)
 set fo-=t   "don't automatically wrap text when typing
 set colorcolumn=80
 highlight ColorColumn ctermbg=233
@@ -43,9 +43,9 @@ let &t_EI.="\e[1 q"  "EI = нормальный режим
 set smartindent
 
 set mouse=a
-set noex   "не читаем файл конфигурации из текущей директории
-set stal=2   "постоянно выводим строку с табами
-set tpm=20  "максимальное количество открытых табов
+set noexrc   "не читаем файл конфигурации из текущей директории
+set showtabline=2   "постоянно выводим строку с табами
+set tabpagemax=20  "максимальное количество открытых табов
 set history=50
 set undolevels=50
 set noerrorbells "instead of beeping
@@ -181,7 +181,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tpope/vim-surround'
     Plug 'chrisbra/Colorizer'
     Plug 'luochen1990/rainbow'
-    Plug 'nvim-treesitter/nvim-treesitter'
+    " Plug 'nvim-treesitter/nvim-treesitter'
 
 " Tell vim-plug we finished declaring plugins, so it can load them
 call plug#end()
@@ -255,10 +255,10 @@ vnoremap <C-c>h :nohlsearch<CR>
 inoremap <C-c>h :nohlsearch<CR>
 
 " Bind Ctrl+<movement> keys to move around the windows ------------------------
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
-noremap <C-h> <C-w>h
+noremap <C-M-j> <C-w>j
+noremap <C-M-k> <C-w>k
+noremap <C-M-l> <C-w>l
+noremap <C-M-h> <C-w>h
 set splitbelow   "новое окно появляется снизу
 
 " Resize windows --------------------------------------------------------------
