@@ -246,8 +246,8 @@ let g:python3_host_prog = '~/Projects/Python/Virtualenvironments/poetry_venvs/py
 "##############################################################################
 " <Leader> key ----------------------------------------------------------------
 " let mapleader = " "
-let mapleader = ","
-let maplocalleader = "\\"
+let mapleader = " "
+let maplocalleader = " "
 
 " Removes highlight of your last search ---------------------------------------
 noremap <C-c>h :nohlsearch<CR>
