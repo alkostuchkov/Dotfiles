@@ -1,5 +1,4 @@
-return {
-  "folke/which-key.nvim",
+require("which-key").setup({
   event = "VeryLazy",
   init = function()
     vim.o.timeout = true
@@ -10,4 +9,4 @@ return {
     -- or leave it empty to use the default settings
     -- refer to the configuration section below
   },
-}
+})
