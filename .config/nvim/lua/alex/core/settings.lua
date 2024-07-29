@@ -83,7 +83,6 @@ opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 g.showmode = true -- показывать текущий режим
 g.showcmd = true -- показывать незавершенные команды в статусбаре
 g.laststatus = 2 -- always show statusline
-g.statusline = "%!Hello"
 -- g.statusline = "%#DiffText#\ %M\ %F%r%h%w\ %y%=%#TabLineSel#\ HEX=%02.2B\ %{&encoding}[%{&fileformat}]\ %l:%c/%L\ %p%%\ [%n]"
 
 -- Encoding
@@ -118,22 +117,3 @@ opt.fillchars = {
     foldsep = "│",
     foldclose = "▸"
 }
-
--- vim.g.did_load_filetypes = 1
--- vim.g.formatoptions = "qrn1"
--- vim.opt.showmode = false
--- vim.opt.updatetime = 100
--- vim.wo.signcolumn = "yes"
--- vim.opt.scrolloff = 8
--- vim.opt.wrap = false
--- vim.wo.linebreak = true
--- vim.opt.virtualedit = "block"
--- vim.opt.undofile = true
--- vim.opt.shell = "/bin/zsh"
---
--- -- Mouse
--- vim.opt.mouse = "a"
--- vim.opt.mousefocus = true
-
--- vim.cmd([[highlight clear LineNr]])
--- vim.cmd([[highlight clear SignColumn]])
