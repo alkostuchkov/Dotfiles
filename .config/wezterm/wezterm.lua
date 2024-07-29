@@ -22,7 +22,7 @@ config.colors = {
 -- config.font = wezterm.font("DejaVu Sans Mono")
 config.font = wezterm.font("MesloLGS Nerd Font Mono")
 -- config.font = wezterm.font("Hack Nerd Font Mono")
--- config.font = wezterm.font("Consolas")
+-- config.font = wezterm.font("Consolas NF")
 -- config.font = wezterm.font("Menlo")
 -- config.font = wezterm.font("Source Code Pro")
 config.font_size = 19
@@ -38,6 +38,12 @@ config.default_cursor_style = 'SteadyBlock'
 -- Keybindings
 local act = wezterm.action
 config.keys = {
+  -- Toggle full screen
+  {
+    key = 'Enter',
+    mods = 'SHIFT|CTRL',
+    action = wezterm.action.ToggleFullScreen,
+  },
   -- Scrolling
   { key = 'UpArrow', mods = 'CTRL|SHIFT', action = act.ScrollByLine(-1) },
   { key = 'DownArrow', mods = 'CTRL|SHIFT', action = act.ScrollByLine(1) },
