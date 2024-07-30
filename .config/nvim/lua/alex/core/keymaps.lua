@@ -49,7 +49,7 @@ keymap.set('i', '<C-s>', '<Esc>:w<CR>a')
 -- keymap.set('n', '<C-M-j>', ':wincmd j<CR>')
 -- keymap.set('n', '<C-M-h>', ':wincmd h<CR>')
 -- keymap.set('n', '<C-M-l>', ':wincmd l<CR>')
-keymap.set('n', '<leader>/', ':CommentToggle<CR>')
+-- keymap.set('n', '<leader>/', ':CommentToggle<CR>')
 
 -- resize windows
 keymap.set('n', '<leader>s<Up>', ':resize +2<CR>')
