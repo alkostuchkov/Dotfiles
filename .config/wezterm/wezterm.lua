@@ -41,8 +41,8 @@ config.keys = {
   -- Toggle full screen
   {
     key = 'Enter',
-    mods = 'SHIFT|CTRL',
-    action = wezterm.action.ToggleFullScreen,
+    mods = 'ALT',
+    action = 'DisableDefaultAssignment',
   },
   -- Scrolling
   { key = 'UpArrow', mods = 'CTRL|SHIFT', action = act.ScrollByLine(-1) },
