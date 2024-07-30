@@ -42,7 +42,7 @@ config.keys = {
   {
     key = 'Enter',
     mods = 'ALT',
-    action = 'DisableDefaultAssignment',
+    action = act.DisableDefaultAssignment,
   },
   -- Scrolling
   { key = 'UpArrow', mods = 'CTRL|SHIFT', action = act.ScrollByLine(-1) },
