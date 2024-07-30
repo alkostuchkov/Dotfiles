@@ -57,43 +57,31 @@ keymap.set('n', '<leader>s<Down>', ':resize -2<CR>')
 keymap.set('n', '<leader>s<Left>', ':vertical resize -2<CR>')
 keymap.set('n', '<leader>s<Right>', ':vertical resize +2<CR>')
 
--- keymap.set('i', '<Up>', '<Esc>:resize +2<CR>a')
--- keymap.set('i', '<Down>', '<Esc>:resize -2<CR>a')
--- keymap.set('i', '<Left>', '<Esc>:vertical resize -2<CR>a')
--- keymap.set('i', '<Right>', '<Esc>:vertical resize +2<CR>a')
+-- like in a terminal
+-- movements
+-- go to BOL and EOL
+keymap.set("i", "<C-a>", "<Esc>I", { desc = "Go to BOL (Insert mode)" })
+keymap.set("i", "<C-e>", "<Esc>A", { desc = "Go to EOL (Insert mode)" })
+
+-- move forward/backward by a char
+keymap.set("i", "<C-f>", "<Right>", { desc = "Go forward by a char (Insert mode)" })
+keymap.set("i", "<C-b>", "<Left>", { desc = "Go backward by a char (Insert mode)" })
+-- move forward/backward by a word
+keymap.set("i", "<M-f>", "<Esc> wi", { desc = "Go forward by a word (Insert mode)" })
+keymap.set("i", "<M-b>", "<Esc> bi", { desc = "Go backward by a word (Insert mode)" })
+
+-- delete to EOL
+keymap.set("i", "<C-k>", "<Esc> d$a", { desc = "Delete to EOL (Insert mode)" })
+-- keymap.set("n", "<C-k>", "D", { desc = "Delete to EOL (Normal mode)" })
+
+-- delete backward by a char (<C-h> = backspace by default)
+keymap.set("i", "<C-d>", "<Del>", { desc = "Delete backward by a char (Insert mode)" })
+-- delete backward by a word
+keymap.set("i", "<C-w>", "<Esc> dbi", { desc = "Delete backward by a word from end to begin (Insert mode)" })
+keymap.set("i", "<M-d>", "<Esc> dea", { desc = "Delete backward by a word from begin to end (Insert mode)" })
 
 -- Edit & Apply changes in config files
 -- vim.keymap.set('n', '<leader>ev', ':tabnew ~/.config/nvim/init.lua<CR>')
 -- -- vim.keymap.set('n', '<leader>sv', ':source ~/.config/nvim/init.lua<CR>')
 -- vim.keymap.set('n', '<leader>sv', ':source %<CR>')
-
--- - like in a terminal
--- - go to BOL and EOL
--- eymap.set("i", "<C-a>", "<Esc>I", { desc = "Go to BOL (Insert mode)" })
--- eymap.set("i", "<C-e>", "<Esc>A", { desc = "Go to EOL (Insert mode)" })
--- - keymap.set("n", "<C-a>", "0", { desc = "Go to BOL (Normal mode)" })
--- - keymap.set("n", "<C-e>", "$", { desc = "Go to EOL (Normal mode)" })
--- 
--- - delete to EOL
--- eymap.set("n", "<C-k>", "D", { desc = "Delete to EOL (Normal mode)" })
--- eymap.set("i", "<C-k>", "<Esc> d$a", { desc = "Delete to EOL (Insert mode)" })
--- 
--- - delete to BOL
--- eymap.set("n", "<C-u>", "d0", { desc = "Delete to BOL (Normal mode)" })
--- eymap.set("i", "<C-u>", "<Esc> d0i", { desc = "Delete to BOL (Insert mode)" })
--- 
--- - movements
--- - by a char
--- eymap.set("i", "<C-f>", "<Esc> la", { desc = "Go forward by a char (Insert mode)" })
--- eymap.set("i", "<C-b>", "<Esc> hi", { desc = "Go backward by a char (Insert mode)" })
--- - by a word
--- eymap.set("i", "<M-f>", "<Esc> wa", { desc = "Go forward by a word (Insert mode)" })
--- eymap.set("i", "<M-b>", "<Esc> bi", { desc = "Go backward by a word (Insert mode)" })
--- 
--- - deleting
--- - by a char
--- eymap.set("i", "<C-d>", "<Esc> xi", { desc = "Delete backward by a char (Insert mode)" })
--- - by a word
--- eymap.set("i", "<C-w>", "<Esc> dbi", { desc = "Delete backward by a word from end to begin (Insert mode)" })
--- eymap.set("i", "<M-d>", "<Esc> dea", { desc = "Delete backward by a word from begin to end (Insert mode)" })
 

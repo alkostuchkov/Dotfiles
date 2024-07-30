@@ -35,8 +35,8 @@ bo.autoindent = true -- copy indent from current line when starting new one
 bo.shiftwidth = 2 -- 2 spaces for indent width
 bo.tabstop = 2 -- 2 spaces for tabs (prettier default)
 bo.expandtab = true -- expand tab to spaces
--- bo.smartindent = true
--- bo.softtabstop = 2
+bo.smartindent = true
+bo.softtabstop = 2
 
 bo.syntax = "ON"
 -- Данная вариация работает как wrap,... но переносит строчки не посимвольно, а по словам

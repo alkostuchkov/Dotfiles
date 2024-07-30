@@ -18,8 +18,8 @@ set guioptions+=c
 " GuiFont! MonacoB2 Nerd Font Mono:h17
 " GuiFont MesloLGS Nerd Font Mono:h19
 " GuiFont Hack Nerd Font Mono:h18
-GuiFont Consolas:h20
-" GuiFont Consolas NF:h20
+" GuiFont Consolas:h20
+GuiFont Consolas NF:h20
 " GuiFont! Iosevka:h19
 " GuiFont! mplus Nerd Font:h20
 " GuiFont! CaskaydiaCove Nerd Font Mono:h18
