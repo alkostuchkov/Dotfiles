@@ -11,22 +11,29 @@ keymap.set("n", "<leader>=", "<C-a>", { desc = "Increment number" }) -- incremen
 keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
 
 -- window management
-keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
-keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
-keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
+keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })     -- split window vertically
+keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })   -- split window horizontally
+keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })      -- make split windows equal width & height
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
 
 -- tabs
-keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
+keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })        -- open new tab
 keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
-keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
-keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
--- keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
-keymap.set("n", "<leader>tf", ":tabfirst <CR>", { desc = "Go to first tab" }) -- go to first tab
-keymap.set("n", "<leader>tl", ":tablast <CR>", { desc = "Go to last tab" }) -- go to last tab
-for _, i in ipairs({1, 2, 3, 4, 5, 6, 7, 8, 9}) do
+keymap.set("n", "<leader>tf", ":tabfirst <CR>", { desc = "Go to first tab" })      -- go to first tab
+keymap.set("n", "<leader>tl", ":tablast <CR>", { desc = "Go to last tab" })        -- go to last tab
+-- keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
+-- keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
+keymap.set("n", "<Tab>", "<cmd>tabn<CR>", { desc = "Go to next tab" })                          --  go to next tab
+keymap.set("n", "<S-Tab>", "<cmd>tabp<CR>", { desc = "Go to previous tab" })                    --  go to previous tab
+keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
+
+for _, i in ipairs({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }) do
   keymap.set("n", "<leader>t" .. i, i .. "gt", { desc = "Go to tab " .. i }) -- go to 1, 2, 3, 4, 5, 6, 7, 8, 9 tab
 end
+
+-- buffers
+keymap.set("n", "<leader>bx", "<cmd>BufferLinePickClose<cr>", { desc = "Close current buffer" })
+-- keymap.set("n", "<leader>bx", "<cmd>bdelete<CR>", { desc = "Close current buffer" }) -- close current buffer
 
 -- insert a new line above/below
 keymap.set("n", "<M-S-Enter>", "O<Esc>", { desc = "Insert a new line above (Normal mode)" })
@@ -35,27 +42,23 @@ keymap.set("i", "<M-S-Enter>", "<Esc>O", { desc = "Insert a new line above (Inse
 keymap.set("i", "<M-Enter>", "<Esc>o", { desc = "Insert a new line below (Insert mode)" })
 
 -- easier moving of code blocks (doesn't lose selection)
-  keymap.set('v', '<', '<gv', { desc = "Move block >" })
-  keymap.set('v', '>', '>gv', { desc = "Move block <" })
+keymap.set("v", "<", "<gv", { desc = "Move block >" })
+keymap.set("v", ">", ">gv", { desc = "Move block <" })
 
 -- close buffer without saving
-keymap.set('n', '<ESC><ESC>', ':q!<CR>', { desc = "Close buffer without saving" })
+keymap.set("n", "<Esc><Esc>", ":q!<CR>", { desc = "Close buffer without saving" })
+keymap.set("n", "<leader>q<Esc>", ":q!<CR>", { desc = "Close without saving" })
+keymap.set("n", "<leader>qw", ":qw!<CR>", { desc = "Close with saving" })
+keymap.set("n", "<leader>qa", ":qa<CR>", { desc = "Close all" })
 -- save
-keymap.set('n', '<C-s>', ':w<CR>')
-keymap.set('i', '<C-s>', '<Esc>:w<CR>a')
-
--- navigation
--- keymap.set('n', '<C-M-k>', ':wincmd k<CR>')
--- keymap.set('n', '<C-M-j>', ':wincmd j<CR>')
--- keymap.set('n', '<C-M-h>', ':wincmd h<CR>')
--- keymap.set('n', '<C-M-l>', ':wincmd l<CR>')
--- keymap.set('n', '<leader>/', ':CommentToggle<CR>')
+keymap.set("n", "<C-s>", ":w<CR>")
+keymap.set("i", "<C-s>", "<Esc>:w<CR>a")
 
 -- resize windows
-keymap.set('n', '<leader>s<Up>', ':resize +2<CR>')
-keymap.set('n', '<leader>s<Down>', ':resize -2<CR>')
-keymap.set('n', '<leader>s<Left>', ':vertical resize -2<CR>')
-keymap.set('n', '<leader>s<Right>', ':vertical resize +2<CR>')
+keymap.set("n", "<leader>s<Up>", ":resize +2<CR>")
+keymap.set("n", "<leader>s<Down>", ":resize -2<CR>")
+keymap.set("n", "<leader>s<Left>", ":vertical resize -2<CR>")
+keymap.set("n", "<leader>s<Right>", ":vertical resize +2<CR>")
 
 -- like in a terminal
 -- movements
@@ -72,7 +75,6 @@ keymap.set("i", "<M-b>", "<Esc> bi", { desc = "Go backward by a word (Insert mod
 
 -- delete to EOL
 keymap.set("i", "<C-k>", "<Esc> d$a", { desc = "Delete to EOL (Insert mode)" })
--- keymap.set("n", "<C-k>", "D", { desc = "Delete to EOL (Normal mode)" })
 
 -- delete backward by a char (<C-h> = backspace by default)
 keymap.set("i", "<C-d>", "<Del>", { desc = "Delete backward by a char (Insert mode)" })
@@ -80,8 +82,9 @@ keymap.set("i", "<C-d>", "<Del>", { desc = "Delete backward by a char (Insert mo
 keymap.set("i", "<C-w>", "<Esc> dbi", { desc = "Delete backward by a word from end to begin (Insert mode)" })
 keymap.set("i", "<M-d>", "<Esc> dea", { desc = "Delete backward by a word from begin to end (Insert mode)" })
 
--- Edit & Apply changes in config files
--- vim.keymap.set('n', '<leader>ev', ':tabnew ~/.config/nvim/init.lua<CR>')
--- -- vim.keymap.set('n', '<leader>sv', ':source ~/.config/nvim/init.lua<CR>')
--- vim.keymap.set('n', '<leader>sv', ':source %<CR>')
-
+-- navigation
+-- keymap.set('n', '<C-M-k>', ':wincmd k<CR>')
+-- keymap.set('n', '<C-M-j>', ':wincmd j<CR>')
+-- keymap.set('n', '<C-M-h>', ':wincmd h<CR>')
+-- keymap.set('n', '<C-M-l>', ':wincmd l<CR>')
+-- keymap.set('n', '<leader>/', ':CommentToggle<CR>')
