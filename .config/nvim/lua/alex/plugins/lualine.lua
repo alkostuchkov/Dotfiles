@@ -53,15 +53,20 @@ return {
     lualine.setup({
       options = {
         theme = my_lualine_theme,
+        component_separators = '|',
+        section_separators = { left = '', right = '' }
       },
       sections = {
-	lualine_c = {
-	  {
-	    "filename",
-	    file_status = true,
-	    path = 1,
-	  }
-	},
+        lualine_a = {
+          { 'mode', separator = { left = '' } } --, right_padding = 10 }
+        },
+        lualine_c = {
+          {
+            "filename",
+            file_status = true,
+            path = 1,
+          }
+        },
         lualine_x = {
           {
             lazy_status.updates,
@@ -71,6 +76,9 @@ return {
           { "encoding" },
           { "fileformat" },
           { "filetype" },
+        },
+        lualine_z = {
+          { 'location', separator = { right = '' } } --, left_padding = 10 }
         },
       },
     })
