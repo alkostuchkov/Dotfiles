@@ -11,9 +11,9 @@ return {
         json = { "prettier" },
         yaml = { "prettier" },
         markdown = { "prettier" },
-        lua = { "stylua" },
-        -- python = { "isort", "black" },
-        python = { "autopep8" },
+        -- lua = { "stylua" },
+        -- -- python = { "isort", "black" },
+        -- python = { "autopep8" },
       },
       format_on_save = {
         lsp_fallback = true,

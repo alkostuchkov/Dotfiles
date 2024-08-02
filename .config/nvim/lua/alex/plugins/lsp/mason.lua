@@ -39,10 +39,10 @@ return {
     mason_tool_installer.setup({
       ensure_installed = {
         "prettier", -- prettier formatter
-        "stylua", -- lua formatter
-        "autopep8", -- python formatter
+        -- "stylua", -- lua formatter
+        -- "autopep8", -- python formatter
         "pylint", -- python linter
-        "mypy", -- python linter
+        -- "mypy",   -- python linter
       },
     })
   end,
