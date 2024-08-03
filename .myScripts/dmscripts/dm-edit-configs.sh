@@ -97,10 +97,9 @@ fn='Iosevka-18:normal'
 
 # DMENU="rofi -dmenu -theme-str 'window {width: 80%;}' -p"
 DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
-terminal="alacritty"
-# editor="hx"
-editor="vim"
-# terminal="xfce4-terminal"
+
+terminal=${TERMINAL-"xterm"}
+editor=${EDITOR-"vi"}
 
 # names=$(printf '%s\n' "${options[@]}" | awk '{print $1}')
 # choice=$(printf '%s\n' "${names}" | dmenu -l 10  -nf '#09dbc9' -nb '#222b2e' -sf '#dbdcd5' -sb '#009185' -fn 'Ubuntu-16:normal' -p 'Edit config file:')
@@ -112,11 +111,11 @@ if [[ "$choice" == "quit" ]]; then
     echo "Program terminated." && exit 1
 elif [[ "$choice" ]]; then
     conf=$(printf '%s\n' "${choice}" | awk '{print $NF}')
-    gvim $conf  # gvim is either a link to neovim-qt or just gvim
+    # gvim $conf  # gvim is either a link to neovim-qt or just gvim
     # # $terminal -e $SHELL -c "vim $conf"
     # # alacritty -e $SHELL -c "vim $conf"
     # # $terminal -e "$SHELL -c 'vim $conf'"
-    # $terminal -e $editor $conf
+    $terminal -e $editor $conf
     # # alacritty -e vim "$conf"
     # # terminator -e "vim $conf"
 else
