@@ -32,8 +32,8 @@ for _, i in ipairs({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }) do
 end
 
 -- buffers
-keymap.set("n", "<leader>bx", "<cmd>BufferLinePickClose<cr>", { desc = "Close current buffer" })
--- keymap.set("n", "<leader>bx", "<cmd>bdelete<CR>", { desc = "Close current buffer" }) -- close current buffer
+-- keymap.set("n", "<leader>bx", "<cmd>BufferLinePickClose<cr>", { desc = "Close current buffer" })
+keymap.set("n", "<leader>bx", "<cmd>bdelete<CR>", { desc = "Close current buffer" }) -- close current buffer
 
 -- insert a new line above/below
 keymap.set("n", "<M-S-Enter>", "O<Esc>", { desc = "Insert a new line above (Normal mode)" })
