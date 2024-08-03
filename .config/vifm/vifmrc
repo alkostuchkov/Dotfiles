@@ -66,7 +66,7 @@ filextype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus
   \ mplayer %f %i &
 filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus
   \ {View using cmus}
-  \ alacritty -e cmus %f &,
+  \ $TERMINAL -e cmus %f &,
   \ {Play using ffplay}
   \ ffplay -nodisp -autoexit %c
 fileviewer *.mp3 mp3info
@@ -91,12 +91,14 @@ fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
 " Web -------------------------------------------------------------------------
 filetype *.html,*.htm
   \ {Open with vim}
-  \ alacritty -e vim %c &,
+  \ $TERMINAL -e vim %c &,
   \ {Open with links}
   \ links %c &,
   \ {Open with lynx}
   \ lynx %c &
 filextype *.html,*.htm
+  \ {Open with vim}
+  \ $TERMINAL -e vim %c &,
   \ {Open with gvim}
   \ gvim %c &,
   \ {Open with dwb}
@@ -246,8 +248,8 @@ filetype *.tudu tudu -f %c
 
 " Qt projects -----------------------------------------------------------------
 " filextype *.pro qtcreator %f &
-filextype *.pro gvim %f &
-filetype *.pro alacritty -e vim %f &
+filextype *.pro $TERMINAL -e vim %f &
+filetype *.pro $TERMINAL -e vim %f &
 
 " Directories -----------------------------------------------------------------
 filextype */
@@ -264,15 +266,15 @@ filextype */
 " Config & exec files ---------------------------------------------------------
 filextype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el/
   \ {View in gvim}
-  \ gvim %f %i &,
-" filextype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el gvim %f &
+  \ $TERMINAL -e vim %f &,
+" filextype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el $TERMINAL -e vim %f &
 
 filetype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el/
   \ {View in vim}
-  \ alacritty -e vim %f %i &,
+  \ $TERMINAL -e vim %f %i &,
   \ {View in Helix}
-  \ alacritty -e hx %f %i &,
-" filetype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el alacritty -e vim %f &
+  \ $TERMINAL -e hx %f %i &,
+" filetype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el $TERMINAL -e vim %f &
 
 " Books -----------------------------------------------------------------------
 filextype *.fb2,*.epub cr3 %f %i &
