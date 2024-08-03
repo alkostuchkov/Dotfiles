@@ -412,10 +412,14 @@ command! openBackupDirs
 " Mappings
 "##############################################################################
 " Archives ---------------------------------------------------------------------
-nnoremap <wait> ,cz :!$TERMINAL -e zip -9 -r %c.zip %f & <cr>
-nnoremap <wait> ,xz :!$TERMINAL -e unzip %f & <cr>
-nnoremap <wait> ,ct :!$TERMINAL -e tar -czvf %c.tar.gz %f & <cr>
-nnoremap <wait> ,xt :!$TERMINAL -e tar -xzvf %f & <cr>
+nnoremap <wait> ,cz :!alacritty -e zip -9 -r %c.zip %f & <cr>
+nnoremap <wait> ,xz :!alacritty -e unzip %f & <cr>
+nnoremap <wait> ,ct :!alacritty -e tar -czvf %c.tar.gz %f & <cr>
+nnoremap <wait> ,xt :!alacritty -e tar -xzvf %f & <cr>
+" nnoremap <wait> ,cz :zip <cr>
+" nnoremap <wait> ,xz :unzip <cr>
+" nnoremap <wait> ,ct :tar <cr>
+" nnoremap <wait> ,xt :untar <cr>
 
 " Open all images in current directory in sxiv thumbnail mode ------------------
 nnoremap sx :!sxiv -t %d & <cr>
