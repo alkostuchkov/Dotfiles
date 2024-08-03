@@ -76,17 +76,17 @@ local HOME = os.getenv("HOME")
 local AWESOME_CONFIG_DIR = HOME .. "/.config/awesome"
 -- Themes define colours, icons, font and wallpapers.
 local themes = {
-  "default",        -- 1
-  "gtk",            -- 2
-  "mymaterial",     -- 3
-  "sky",            -- 4
-  "xresources",     -- 5
-  "zenburn",        -- 6
-  "gruvbox",        -- 7
-  "steamburn",      -- 8
-  "mira",           -- 9
-  "myotto",         -- 10
-  "myeverforest",   -- 10
+  "default",      -- 1
+  "gtk",          -- 2
+  "mymaterial",   -- 3
+  "sky",          -- 4
+  "xresources",   -- 5
+  "zenburn",      -- 6
+  "gruvbox",      -- 7
+  "steamburn",    -- 8
+  "mira",         -- 9
+  "myotto",       -- 10
+  "myeverforest", -- 10
 }
 local theme_path = AWESOME_CONFIG_DIR .. "/themes/" .. themes[11] .. "/theme.lua"
 beautiful.init(theme_path)
@@ -207,10 +207,10 @@ local taglist_buttons = gears.table.join(
   awful.button({ super }, 1, function(t)
     if client.focus then
       client.focus:move_to_tag(t)
-      t:view_only()                             -- Follow to the client to the chosen tag
+      t:view_only() -- Follow to the client to the chosen tag
     end
   end),
-  awful.button({}, 3, awful.tag.viewtoggle)    -- (Un)Fold all clients (Show Desktop)
+  awful.button({}, 3, awful.tag.viewtoggle) -- (Un)Fold all clients (Show Desktop)
 )
 
 -- Actions for when I click on my tasklist buttons (started apps on the bar)
@@ -254,24 +254,24 @@ awful.screen.connect_for_each_screen(function(s)
   awful.tag(
     { "1  ", "2  ", "3  ", "4  ", "5  ", "6  ", "7  ", "8  ", "9  " },
     s,
-    {                            -- for every tag its own layout: { awful.layout.layouts[i], }
-      awful.layout.layouts[1],   -- tile -> 1
-      awful.layout.layouts[1],   -- tile -> 2
-      awful.layout.layouts[2],   -- max  -> 3
-      awful.layout.layouts[1],   -- tile -> 4
-      awful.layout.layouts[1],   -- tile -> 5
-      awful.layout.layouts[2],   -- max  -> 6
-      awful.layout.layouts[1],   -- tile -> 7
-      awful.layout.layouts[2],   -- max  -> 8
-      awful.layout.layouts[1],   -- tile -> 9
+    {                          -- for every tag its own layout: { awful.layout.layouts[i], }
+      awful.layout.layouts[1], -- tile -> 1
+      awful.layout.layouts[1], -- tile -> 2
+      awful.layout.layouts[2], -- max  -> 3
+      awful.layout.layouts[1], -- tile -> 4
+      awful.layout.layouts[1], -- tile -> 5
+      awful.layout.layouts[2], -- max  -> 6
+      awful.layout.layouts[1], -- tile -> 7
+      awful.layout.layouts[2], -- max  -> 8
+      awful.layout.layouts[1], -- tile -> 9
     })
 
   -- Create a promptbox for each screen
   s.mypromptbox = awful.widget.prompt()
   -- Create an imagebox widget which will contain an icon indicating which layout we're using.
   -- We need one layoutbox per screen.
-  s.mylayoutbox = awful.widget.layoutbox(s)   -- To switch between layouts
-  s.mylayoutbox:buttons(gears.table.join(     -- by clicking on the layout's icon
+  s.mylayoutbox = awful.widget.layoutbox(s) -- To switch between layouts
+  s.mylayoutbox:buttons(gears.table.join(   -- by clicking on the layout's icon
     awful.button({}, 1, function() awful.layout.inc(1) end),
     awful.button({}, 3, function() awful.layout.inc(-1) end)))
   -- Create a taglist widget
@@ -297,13 +297,13 @@ awful.screen.connect_for_each_screen(function(s)
   -- Add widgets to the wibox
   s.mywibox:setup {
     layout = wibox.layout.align.horizontal,
-    {     -- Left widgets
+    { -- Left widgets
       layout = wibox.layout.fixed.horizontal,
       s.mytaglist,
       s.mypromptbox,
     },
-    s.mytasklist,     -- Middle widget
-    {                 -- Right widgets
+    s.mytasklist, -- Middle widget
+    {             -- Right widgets
       layout = wibox.layout.fixed.horizontal,
       -- spacing = 12,
       spacing = 8,
@@ -318,7 +318,7 @@ awful.screen.connect_for_each_screen(function(s)
         icon = "",
         icon_size = 12,
         -- fg_color = "#e2e0a5", -- materia
-        fg_color = "#f7e6bb",       -- everforest
+        fg_color = "#f7e6bb", -- everforest
       }),
       -- sep_widget({
       -- font_name = "Sarasa Mono SC Nerd 17",
@@ -348,7 +348,7 @@ awful.screen.connect_for_each_screen(function(s)
         icon = "",
         icon_size = 12,
         -- fg_color = "#89ddff", -- materia
-        fg_color = "#7fbbb3",       -- everforest
+        fg_color = "#7fbbb3", -- everforest
       }),
       -- sep_widget({
       -- font_name = "Sarasa Mono SC Nerd 17",
@@ -360,14 +360,14 @@ awful.screen.connect_for_each_screen(function(s)
         icon = " ",
         icon_size = 12,
         -- fg_color = "#ffcb6b", -- materia
-        fg_color = "#dbbc7f",       -- everforest
+        fg_color = "#dbbc7f", -- everforest
       }),
       -- sep_widget({
       -- font_name = "Sarasa Mono SC Nerd 17",
       -- icon = "|",
       -- icon_size = 17,
       -- }),
-      wibox.container.margin(s.systray, 0, 0, 3, 0),       -- systray in the container
+      wibox.container.margin(s.systray, 0, 0, 3, 0), -- systray in the container
       s.mylayoutbox,
       -- sep_widget({
       -- font_name = "Sarasa Mono SC Nerd 17",
@@ -381,8 +381,8 @@ awful.screen.connect_for_each_screen(function(s)
         format = "%a, %d %b\n  %H:%M:%S   ",
         refresh = 1,
         -- fg_color = "#83eed9", -- materia
-        fg_color = "#83c092",             -- everforest
-        popup_bg_color = "#ff0000",       -- materia
+        fg_color = "#83c092",       -- everforest
+        popup_bg_color = "#ff0000", -- materia
       }),
     },
   }
@@ -420,9 +420,11 @@ globalkeys = gears.table.join(
   -- awful.key({ super, alt }, "d", function() awful.util.spawn("dmenu_run -i -l 10 -nb '#263238' -nf '#24d2af' -sb '#009185' -p 'Run: ' -fn 'Iosevka-18:normal'") end,
   -- {description = "Dmenu", group = "launcher" }), -- Materia Manjaro
   awful.key({ super, alt }, "d",
-    function() awful.util.spawn(
-      "dmenu_run -i -l 10 -nb '#2d353b' -nf '#d3c6aa' -sb '#475258' -sf '#a7c080' -p 'Run: ' -fn 'Iosevka-18:normal'") end,
-    { description = "Dmenu", group = "launcher" }),    -- Everforest
+    function()
+      awful.util.spawn(
+        "dmenu_run -i -l 10 -nb '#2d353b' -nf '#d3c6aa' -sb '#475258' -sf '#a7c080' -p 'Run: ' -fn 'Iosevka-18:normal'")
+    end,
+    { description = "Dmenu", group = "launcher" }), -- Everforest
   awful.key({ super, alt }, "Print", function() awful.util.spawn("flameshot gui") end,
     { description = "FlameshotGui", group = "applications" }),
   awful.key({ super, alt }, "w", function() awful.util.spawn("/usr/bin/firefox") end,
@@ -435,16 +437,22 @@ globalkeys = gears.table.join(
     { description = "Thunar", group = "applications" }),
   awful.key({ super, alt }, "a", function() awful.util.spawn(TERMINAL .. " -e " .. SHELL .. " -c ranger") end,
     { description = "Ranger", group = "applications" }),
-  awful.key({ super, alt }, "v", function() awful.util.spawn(TERMINAL .. " -e " .. HOME ..
-      "/.config/vifm/scripts/vifmrun") end,
+  awful.key({ super, alt }, "v", function()
+      awful.util.spawn(TERMINAL .. " -e " .. HOME ..
+        "/.config/vifm/scripts/vifmrun")
+    end,
     { description = "Vifm", group = "applications" }),
   awful.key({ super, alt }, "y",
-    function() awful.util.spawn(TERMINAL ..
-      " -e " .. SHELL .. " -c 'yazi --cwd-file ~/.config/yazi/cwd (cat ~/.config/yazi/cwd)'") end,
+    function()
+      awful.util.spawn(TERMINAL ..
+        " -e " .. SHELL .. " -c 'yazi --cwd-file ~/.config/yazi/cwd (cat ~/.config/yazi/cwd)'")
+    end,
     { description = "Yazi", group = "applications" }),
   awful.key({ super, alt }, "t",
-    function() awful.util.spawn(HOME ..
-      "/Programs/Telegram/Telegram -workdir " .. HOME .. "/.local/share/TelegramDesktop/ -- %u") end,
+    function()
+      awful.util.spawn(HOME ..
+        "/Programs/Telegram/Telegram -workdir " .. HOME .. "/.local/share/TelegramDesktop/ -- %u")
+    end,
     { description = "Telegram", group = "applications" }),
   awful.key({ super, alt }, "p", function() awful.util.spawn(HOME .. "/Programs/PyCharm-Community/bin/pycharm.sh") end,
     { description = "PyCharm", group = "applications" }),
@@ -464,6 +472,8 @@ globalkeys = gears.table.join(
     { description = "xfce4-terminal", group = "applications" }),
   awful.key({ super, shft }, "Return", function() awful.util.spawn("terminator") end,
     { description = "terminator", group = "applications" }),
+  awful.key({ ctrl, alt }, "Return", function() awful.util.spawn("alacritty") end,
+    { description = "alacritty", group = "applications" }),
   awful.key({ ctrl, shft }, "Escape", function() awful.util.spawn(TERMINAL .. " -e " .. SHELL .. " -c htop") end,
     { description = "htop", group = "applications" }),
 
@@ -801,7 +811,7 @@ for i = 1, 9 do
           local tag = client.focus.screen.tags[i]
           if tag then
             client.focus:move_to_tag(tag)
-            tag:view_only()                   -- Follow to the client to the chosen tag
+            tag:view_only() -- Follow to the client to the chosen tag
           end
         end
       end,
@@ -821,15 +831,15 @@ for i = 1, 9 do
   )
 end
 
-clientbuttons = gears.table.join(    -- Button clicks on client
-  awful.button({}, 1, function(c)    -- Activate client
+clientbuttons = gears.table.join( -- Button clicks on client
+  awful.button({}, 1, function(c) -- Activate client
     c:emit_signal("request::activate", "mouse_click", { raise = true })
   end),
-  awful.button({ super }, 1, function(c)   -- Move client
+  awful.button({ super }, 1, function(c) -- Move client
     c:emit_signal("request::activate", "mouse_click", { raise = true })
     awful.mouse.client.move(c)
   end),
-  awful.button({ super }, 3, function(c)   -- Resize client
+  awful.button({ super }, 3, function(c) -- Resize client
     c:emit_signal("request::activate", "mouse_click", { raise = true })
     awful.mouse.client.resize(c)
   end)
@@ -867,15 +877,15 @@ awful.rules.rules = {
   {
     rule_any = {
       instance = {
-        "DTA",     -- Firefox addon DownThemAll.
-        "copyq",   -- Includes session name in class.
+        "DTA",   -- Firefox addon DownThemAll.
+        "copyq", -- Includes session name in class.
         "pinentry",
       },
       class = {
         "Arandr",
         "Blueman-manager",
         "BreakTimer",
-        "Tor Browser",   -- Needs a fixed window size to avoid fingerprinting by screen size.
+        "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
         "Deadbeef",
         "Galculator",
         "kcalc",
@@ -894,7 +904,7 @@ awful.rules.rules = {
       -- Note that the name property shown in xprop might be set slightly after creation of the client
       -- and the name shown there might not match defined rules here.
       name = {
-        "Event Tester",   -- xev.
+        "Event Tester", -- xev.
         "About Mozilla Firefox",
         "О Mozilla Firefox",
         "Terminator Preferences",
@@ -902,12 +912,12 @@ awful.rules.rules = {
         "Сетевые соединения",
         "splash",
         "Update",
-        "Compress",   -- Engrampa compress dialog
+        "Compress", -- Engrampa compress dialog
       },
       role = {
-        "AlarmWindow",     -- Thunderbird's calendar.
-        "ConfigManager",   -- Thunderbird's about:config.
-        "pop-up",          -- e.g. Google Chrome's (detached) Developer Tools.
+        "AlarmWindow",   -- Thunderbird's calendar.
+        "ConfigManager", -- Thunderbird's about:config.
+        "pop-up",        -- e.g. Google Chrome's (detached) Developer Tools.
         "Preferences",
         "setup",
       },
@@ -1000,20 +1010,20 @@ client.connect_signal("request::titlebars", function(c)
   )
 
   awful.titlebar(c):setup {
-    {     -- Left
+    { -- Left
       awful.titlebar.widget.iconwidget(c),
       buttons = buttons,
       layout  = wibox.layout.fixed.horizontal
     },
-    {         -- Middle
-      {       -- Title
+    {   -- Middle
+      { -- Title
         align  = "center",
         widget = awful.titlebar.widget.titlewidget(c)
       },
       buttons = buttons,
       layout  = wibox.layout.flex.horizontal
     },
-    {     -- Right
+    { -- Right
       awful.titlebar.widget.floatingbutton(c),
       awful.titlebar.widget.maximizedbutton(c),
       awful.titlebar.widget.stickybutton(c),
@@ -1049,7 +1059,7 @@ run_once({
   -- /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1, -- for Debian
   -- "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1", -- for Arch
   -- "/usr/libexec/polkit-gnome-authentication-agent-1", -- for Void
-  "/usr/libexec/xfce-polkit",   -- for Void
+  "/usr/libexec/xfce-polkit", -- for Void
   "xrdb " .. HOME .. "/.Xresources",
   "nitrogen --restore",
   "volumeicon",
@@ -1058,7 +1068,7 @@ run_once({
   "clipit",
   -- "diodon",
   -- "xfce4-clipman",
-  "$HOME/.myScripts/restore_brightness.sh",   -- for HP
+  "$HOME/.myScripts/restore_brightness.sh", -- for HP
   "picom --config " .. HOME .. "/.config/picom/picom.conf",
   "conky -c " .. HOME .. "/.myScripts/conky/conkyrc",
   "/usr/bin/python /usr/bin/udiskie",

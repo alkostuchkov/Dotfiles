@@ -19,31 +19,36 @@ size = 19
 
 [font.bold]
 # family = "mplus Nerd Font"
-family = "Sarasa Mono SC Nerd"
+# family = "Sarasa Mono SC Nerd"
+family = "Consolas NF"
 style = "Bold"
 # style = "Semibold"
 
 [font.bold_italic]
 # family = "mplus Nerd Font"
-family = "Sarasa Mono SC Nerd"
+# family = "Sarasa Mono SC Nerd"
 # style = "Semibold Italic"
+family = "Consolas NF"
 style = "Bold Italic"
 
 [font.italic]
 # family = "mplus Nerd Font"
-family = "Sarasa Mono SC Nerd"
+# family = "Sarasa Mono SC Nerd"
+family = "Consolas NF"
 style = "Italic"
 
 [font.normal]
 # family = "mplus Nerd Font"
-family = "Sarasa Mono SC Nerd"
+# family = "Sarasa Mono SC Nerd"
+family = "Consolas NF"
 # style = "Light"
 style = "Regular"
 
 [font.offset]
 x = 0
 # y = -8 # mplus Nerd Font
-y = -3
+# y = -3 # Sarasa Mono SC Nerd
+y = 0
 
 [[keyboard.bindings]]
 action = "Copy"
