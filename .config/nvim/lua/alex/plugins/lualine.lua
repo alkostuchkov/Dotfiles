@@ -73,12 +73,13 @@ return {
             cond = lazy_status.has_updates,
             color = { fg = "#ff9e64" },
           },
+          { "%02.2B" },
           { "encoding" },
           { "fileformat" },
           { "filetype" },
         },
         lualine_z = {
-          { 'location', separator = { right = '' } } --, left_padding = 10 }
+          { "location", separator = { right = "" } } --, left_padding = 10 }
         },
       },
     })

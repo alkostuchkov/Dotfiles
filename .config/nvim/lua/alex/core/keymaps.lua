@@ -48,7 +48,7 @@ keymap.set("v", ">", ">gv", { desc = "Move block <" })
 -- close buffer without saving
 keymap.set("n", "<Esc><Esc>", ":q!<CR>", { desc = "Close buffer without saving" })
 keymap.set("n", "<leader>q<Esc>", ":q!<CR>", { desc = "Close without saving" })
-keymap.set("n", "<leader>qw", ":qw!<CR>", { desc = "Close with saving" })
+keymap.set("n", "<leader>qw", ":wq!<CR>", { desc = "Close with saving" })
 keymap.set("n", "<leader>qa", ":qa<CR>", { desc = "Close all" })
 -- save
 keymap.set("n", "<C-s>", ":w<CR>")
