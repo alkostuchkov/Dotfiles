@@ -116,12 +116,12 @@ filetype *.[1-8] man ./%c
 fileviewer *.[1-8] man ./%c | col -b
 
 " Images ----------------------------------------------------------------------
-filetype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
   \ {View in XnViewMP}
   \ xnviewmp %f %i &,
   \ {View in ristretto}
   \ ristretto %f &
-filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+filetype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
   \ {View in sxiv}
   \ sxiv -ia %f &,
   \ {View in imv}
@@ -431,6 +431,9 @@ nnoremap gp :!gimp %f %i & <cr>
 " Start shell in current directory --------------------------------------------
 nnoremap s :shell<cr>
 
+" nohlsearch ------------------------------------------------------------------
+nnoremap ,nh :nohlsearch<cr>
+
 " Display sorting dialog ------------------------------------------------------
 nnoremap S :sort<cr>
 
@@ -500,6 +503,8 @@ nnoremap ,,z :x<cr>
 nnoremap ,to :tabnew<cr>
 nnoremap ,tx :tabclose<cr>
 nnoremap ,tp :tabprevious<cr>
+nnoremap <S-Tab> :tabprevious<cr>
+nnoremap <Tab> :tabnext<cr>
 nnoremap ,tn :tabnext<cr>
 nnoremap ,tr :tabname<space>
 nnoremap ,t1 1gt
