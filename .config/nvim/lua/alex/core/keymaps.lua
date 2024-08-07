@@ -19,13 +19,11 @@ keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }
 -- tabs
 keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })        -- open new tab
 keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
-keymap.set("n", "<leader>tf", ":tabfirst <CR>", { desc = "Go to first tab" })      -- go to first tab
+-- keymap.set("n", "<leader>tf", ":tabfirst <CR>", { desc = "Go to first tab" })      -- go to first tab
 keymap.set("n", "<leader>tl", ":tablast <CR>", { desc = "Go to last tab" })        -- go to last tab
--- keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
--- keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
-keymap.set("n", "<Tab>", "<cmd>tabn<CR>", { desc = "Go to next tab" })                          --  go to next tab
-keymap.set("n", "<S-Tab>", "<cmd>tabp<CR>", { desc = "Go to previous tab" })                    --  go to previous tab
-keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
+keymap.set("n", "<Tab>", "<cmd>tabn<CR>", { desc = "Go to next tab" })             --  go to next tab
+keymap.set("n", "<S-Tab>", "<cmd>tabp<CR>", { desc = "Go to previous tab" })       --  go to previous tab
+-- keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
 for _, i in ipairs({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }) do
   keymap.set("n", "<leader>t" .. i, i .. "gt", { desc = "Go to tab " .. i }) -- go to 1, 2, 3, 4, 5, 6, 7, 8, 9 tab
@@ -83,8 +81,7 @@ keymap.set("i", "<C-w>", "<Esc> dbi", { desc = "Delete backward by a word from e
 keymap.set("i", "<M-d>", "<Esc> dea", { desc = "Delete backward by a word from begin to end (Insert mode)" })
 
 -- navigation
--- keymap.set('n', '<C-M-k>', ':wincmd k<CR>')
--- keymap.set('n', '<C-M-j>', ':wincmd j<CR>')
--- keymap.set('n', '<C-M-h>', ':wincmd h<CR>')
--- keymap.set('n', '<C-M-l>', ':wincmd l<CR>')
--- keymap.set('n', '<leader>/', ':CommentToggle<CR>')
+keymap.set('n', '<C-k>', ':wincmd k<CR>')
+keymap.set('n', '<C-j>', ':wincmd j<CR>')
+keymap.set('n', '<C-h>', ':wincmd h<CR>')
+keymap.set('n', '<C-l>', ':wincmd l<CR>')
