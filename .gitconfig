@@ -1,5 +1,9 @@
 # Это файл конфигурации пользователя Git.
 [user]
+# Пожалуйста, адаптируйте и раскомментируйте следующие строки:
+#	user = alkostuchkov
+#	email = alkostuchkov@gmail.com
+[user]
 	name = alkostuchkov
 	email = alkostuchkov@gmail.com
 [core]
@@ -11,10 +15,4 @@
 	ci = commit
 	st = status
 	logda = log --oneline --graph --decorate --all
-[init]
-	defaultBranch = master
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+	lgda = log --graph --decorate --all
