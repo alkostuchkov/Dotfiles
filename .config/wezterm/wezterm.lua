@@ -27,6 +27,8 @@ config.font = wezterm.font("MesloLGS Nerd Font Mono")
 -- config.font = wezterm.font("Source Code Pro")
 config.font_size = 19
 
+config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
+
 config.enable_tab_bar = false
 
 config.window_padding = {
