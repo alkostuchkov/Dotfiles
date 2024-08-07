@@ -98,7 +98,7 @@ filetype *.html,*.htm
   \ lynx %c &
 filextype *.html,*.htm
   \ {Open with vim}
-  \ $TERMINAL -e vim %c &,
+  \ wezterm start --always-new-process --cwd %d -e vim %c &,
   \ {Open with gvim}
   \ gvim %c &,
   \ {Open with dwb}
@@ -248,7 +248,7 @@ filetype *.tudu tudu -f %c
 
 " Qt projects -----------------------------------------------------------------
 " filextype *.pro qtcreator %f &
-filextype *.pro $TERMINAL -e vim %f &
+filextype *.pro wezterm start --always-new-process --cwd %d -e vim %f &
 filetype *.pro $TERMINAL -e vim %f &
 
 " Directories -----------------------------------------------------------------
@@ -266,8 +266,9 @@ filextype */
 " Config & exec files ---------------------------------------------------------
 filextype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el/
   \ {View in gvim}
-  \ $TERMINAL -e vim %f &,
-" filextype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el $TERMINAL -e vim %f &
+  \ wezterm start --always-new-process --cwd %d -e vim %f &,
+" filextype
+" *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el wezterm -e vim %f &
 
 filetype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el/
   \ {View in vim}
