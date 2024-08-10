@@ -4,6 +4,7 @@
 set vicmd=nvim
 set syscalls
 set trash
+set trashdir="~/.local/share/vifm/Trash"
 set history=100
 set nofollowlinks
 set sortnumbers
@@ -35,12 +36,14 @@ colorscheme my_everforest
 "##############################################################################
 " Pdf, Djvu -------------------------------------------------------------------
 " filextype *.pdf atril %c %i &, apvlv %c, xpdf %c
-filetype *.pdf,*.djvu
-  \ {View in atril}
-  \ atril %f &,
-  \ {View in qpdfview}
-  \ qpdfview %f &
 filextype *.pdf,*.djvu
+  \ {View in atril}
+  \ atril %f %i &,
+  \ {View in qpdfview}
+  \ qpdfview %f %i &,
+  \ {View in zathura}
+  \ zathura %f %i &,
+filetype *.pdf,*.djvu
   \ {View in zathura}
   \ zathura %f,
   \ {View in apvlv}
@@ -89,13 +92,6 @@ fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
   \ vifmimg clear
 
 " Web -------------------------------------------------------------------------
-filetype *.html,*.htm
-  \ {Open with vim}
-  \ $TERMINAL -e vim %c &,
-  \ {Open with links}
-  \ links %c &,
-  \ {Open with lynx}
-  \ lynx %c &
 filextype *.html,*.htm
   \ {Open with vim}
   \ wezterm start --always-new-process --cwd %d -e vim %c &,
@@ -107,6 +103,13 @@ filextype *.html,*.htm
   \ firefox %f &,
   \ {Open with uzbl}
   \ uzbl-browser %f %i &
+filetype *.html,*.htm
+  \ {Open with vim}
+  \ $TERMINAL -e vim %c &,
+  \ {Open with links}
+  \ links %c &,
+  \ {Open with lynx}
+  \ lynx %c &
 
 " Object ----------------------------------------------------------------------
 filetype *.o nm %f | less
@@ -260,6 +263,8 @@ filextype */
 filextype */
   \ {View in Vifm}
   \ vifm %f &,
+  \ {View in Yazi}
+  \ yazi %f &,
   \ {View in Ranger}
   \ ranger %f &
 
@@ -267,8 +272,6 @@ filextype */
 filextype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el/
   \ {View in gvim}
   \ wezterm start --always-new-process --cwd %d -e vim %f &,
-" filextype
-" *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el wezterm -e vim %f &
 
 filetype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el/
   \ {View in vim}
@@ -278,7 +281,12 @@ filetype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.ba
 " filetype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el $TERMINAL -e vim %f &
 
 " Books -----------------------------------------------------------------------
-filextype *.fb2,*.epub cr3 %f %i &
+" filextype *.fb2,*.epub cr3 %f %i &
+filextype *.fb2,*.epub
+  \ {View in cr3}
+  \ cr3 %f %i &,
+  \ {View in FBReader}
+  \ FBReader %f %i &,
 
 " Fonts -----------------------------------------------------------------------
 filextype *.ttf,*.otf gnome-font-viewer %f %i &
@@ -298,8 +306,8 @@ filextype *.deb gdebi-gtk %f &, engrampa %f %i &
 " fileviewer *.c,*.h highlight -O ansi -s dante %c
 "
 " Or leave it for automatic detection -----------------------------------------
-"
-" fileviewer *[^/] pygmentize -O style=monokai -f console256 -g
+
+fileviewer *[^/] pygmentize -O style=monokai -f console256 -g
 
 " Displaying pictures in terminal ---------------------------------------------
 "
@@ -478,8 +486,8 @@ nnoremap <wait> ,ev :write | edit $MYVIFMRC | restart<cr>
 nnoremap <wait> ,w :set wrap!<cr>
 
 " Toggle detailed/brief information about files -------------------------------
-nnoremap <wait> ,ti :togglefilesinfo<cr>
-nnoremap <wait> ,tmi :togglefilesmoreinfo<cr>
+nnoremap <wait> ,it :togglefilesinfo<cr>
+nnoremap <wait> ,im :togglefilesmoreinfo<cr>
 
 " Reset sort to +name ---------------------------------------------------------
 nnoremap <wait> ,s :resetsort<cr>
@@ -502,9 +510,9 @@ nnoremap ,,z :x<cr>
 " Tabs ------------------------------------------------------------------------
 nnoremap ,to :tabnew<cr>
 nnoremap ,tx :tabclose<cr>
+" nnoremap <S-Tab> :tabprevious<cr>
+" nnoremap <Tab> :tabnext<cr>
 nnoremap ,tp :tabprevious<cr>
-nnoremap <S-Tab> :tabprevious<cr>
-nnoremap <Tab> :tabnext<cr>
 nnoremap ,tn :tabnext<cr>
 nnoremap ,tr :tabname<space>
 nnoremap ,t1 1gt
@@ -521,12 +529,14 @@ nnoremap ,t9 9gt
 noremap <C-k> <C-w>k
 noremap <C-j> <C-w>j
 noremap <C-h> <C-w>h
-noremap <BS> <C-w>h
+" noremap <BS> <C-w>h
 noremap <C-l> <C-w>l
 
 " Adjust pane size (left for decreasing, right for increasing) ----------------
 nnoremap <left> <C-w><
 nnoremap <right> <C-w>>
+nnoremap <up> <C-w>-
+nnoremap <down> <C-w>+
 
 " Moving cursor in another pane -----------------------------------------------
 nnoremap <silent> J <tab>j<tab>
