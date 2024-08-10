@@ -22,6 +22,11 @@ return {
       comment_chunk_text_object = "ic",
       -- Hook function to call before commenting takes place
       hook = nil
+      -- hook = function()
+      --   if vim.api.nvim_buf_get_option(0, "filetype") == "rc" then
+      --     vim.api.nvim_buf_set_option(0, "commentstring", '" %s')
+      --   end
+      -- end
     })
   end,
 }
