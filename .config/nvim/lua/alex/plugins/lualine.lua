@@ -53,18 +53,20 @@ return {
     lualine.setup({
       options = {
         theme = my_lualine_theme,
-        component_separators = '|',
-        section_separators = { left = '', right = '' }
+        component_separators = "|",
+        section_separators = { left = "", right = "" }
+        -- section_separators = { left = "", right = "" }
       },
       sections = {
         lualine_a = {
-          { 'mode', separator = { left = '' } } --, right_padding = 10 }
+          { "mode", separator = { left = "" } } --, right_padding = 10 }
+          -- { 'mode', separator = { left = "" } } --, right_padding = 10 }
         },
         lualine_c = {
           {
             "filename",
             file_status = true,
-            path = 1,
+            path = 3,
           }
         },
         lualine_x = {
@@ -79,7 +81,8 @@ return {
           { "filetype" },
         },
         lualine_z = {
-          { "location", separator = { right = "" } } --, left_padding = 10 }
+          { "location", separator = { right = "" } } --, left_padding = 10 }
+          -- { "location", separator = { right = "" } } --, left_padding = 10 }
         },
       },
     })

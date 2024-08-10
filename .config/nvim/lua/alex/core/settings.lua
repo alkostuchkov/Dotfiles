@@ -58,7 +58,7 @@ opt.history = 50
 opt.undolevels = 50
 g.noerrorbells = true -- instead of beeping
 opt.wildmenu = true   -- красивое автодополнение
-opt.cmdheight = 2     -- Give more space for displaying messages.
+-- opt.cmdheight = 2     -- Give more space for displaying messages.
 opt.scrolloff = 3     -- when scrolling, keep cursor 3 lines away from screen border
 opt.showmatch = true  -- for brackets
 
