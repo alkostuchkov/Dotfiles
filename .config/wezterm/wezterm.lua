@@ -25,17 +25,17 @@ config.font = wezterm.font("MesloLGS Nerd Font Mono")
 -- config.font = wezterm.font("Consolas NF")
 -- config.font = wezterm.font("Menlo")
 -- config.font = wezterm.font("Source Code Pro")
-config.font_size = 19
+config.font_size = 18
 
-config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
+config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
 config.enable_tab_bar = false
 
 config.window_padding = {
   left = 4,
   right = 1,
-  top = 0,
-  bottom = 0,
+  top = 1,
+  bottom = 1,
 }
 
 config.window_decorations = "RESIZE"
