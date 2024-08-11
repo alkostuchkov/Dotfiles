@@ -37,11 +37,16 @@ vim.cmd([[
 -- 6 - просто вертикальная черта
 
 -- tabs & indentation
-opt.autoindent = false -- copy indent from current line when starting new one
-opt.shiftwidth = 2     -- 2 spaces for indent width
-opt.tabstop = 2        -- 2 spaces for tabs (prettier default)
-opt.expandtab = true   -- expand tab to spaces
+opt.autoindent = true -- copy indent from current line when starting new one
 opt.smartindent = true
+-- disable auto-comments on new line (2 lines below)
+vim.cmd("autocmd BufEnter * set formatoptions-=cro")
+vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
+-- opt.formatoptions:remove({ "c", "r", "o" }) -- doesn't work
+
+opt.shiftwidth = 2   -- 2 spaces for indent width
+opt.tabstop = 2      -- 2 spaces for tabs (prettier default)
+opt.expandtab = true -- expand tab to spaces
 opt.softtabstop = 2
 
 opt.syntax = "ON"

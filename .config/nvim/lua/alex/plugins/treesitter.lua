@@ -23,7 +23,7 @@ return {
       -- ensure these language parsers are installed
       ensure_installed = {
         "bash",
-	"fish",
+        "fish",
         "c",
         "cpp",
         "python",
