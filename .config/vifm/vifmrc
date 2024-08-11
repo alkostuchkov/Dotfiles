@@ -339,7 +339,8 @@ mark s ~/.myScripts
 mark l ~/.local/share
 mark a ~/.cache
 
-mark M /run/media
+" mark M /run/media
+mark M /media
 mark R /
 
 "##############################################################################
@@ -470,14 +471,16 @@ nnoremap cc cw<c-u>
 nnoremap A cw
 
 " Open console in current directory -------------------------------------------
-" nnoremap <wait> ,t :!$TERMINAL &<cr>
+" nnoremap <wait> ,ot :!$TERMINAL &<cr>
+nnoremap <wait> ,ot :!wezterm start --always-new-process --cwd %d &<cr>
+
 
 " Reload ----------------------------------------------------------------------
 nnoremap <wait> ,r :reload<cr>
 
 " Open bookmarks --------------------------------------------------------------
 nnoremap <wait> ,b :bmarks<cr>
-nnoremap <wait> ,bt :bmarks<space>
+nnoremap <wait> ,bf :bmarks<space>
 
 " Open editor to edit vifmrc and apply settings after returning to vifm -------
 nnoremap <wait> ,ev :write | edit $MYVIFMRC | restart<cr>
@@ -508,10 +511,10 @@ nnoremap ,,x :xa<cr>
 nnoremap ,,z :x<cr>
 
 " Tabs ------------------------------------------------------------------------
-nnoremap ,to :tabnew<cr>
-nnoremap ,tx :tabclose<cr>
 " nnoremap <S-Tab> :tabprevious<cr>
 " nnoremap <Tab> :tabnext<cr>
+nnoremap ,to :tabnew<cr>
+nnoremap ,tx :tabclose<cr>
 nnoremap ,tp :tabprevious<cr>
 nnoremap ,tn :tabnext<cr>
 nnoremap ,tr :tabname<space>
