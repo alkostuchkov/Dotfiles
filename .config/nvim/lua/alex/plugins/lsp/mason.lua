@@ -33,6 +33,7 @@ return {
         "clangd",
         "lua_ls",
         "pyright",
+        "gopls",
       },
     })
 
