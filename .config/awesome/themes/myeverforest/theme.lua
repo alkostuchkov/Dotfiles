@@ -17,7 +17,8 @@ theme.font = "Sarasa Mono SC Nerd 12"
 theme.taglist_font = "Ubuntu Nerd Font 12"
 
 theme.bg_normal = "#2d353b"
-theme.bg_focus = "#475258"
+theme.bg_focus = "#5b656b"
+-- theme.bg_focus = "#475258"
 theme.bg_urgent = "#e67e80"
 -- theme.bg_minimize = "#3c4a4f"
 theme.bg_systray = theme.bg_normal
