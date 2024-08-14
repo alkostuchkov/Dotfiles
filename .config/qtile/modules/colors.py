@@ -34,7 +34,8 @@ materia_manjaro = {
 # Everforest
 everforest = {
     "bg_panel": "#2d353b",
-    "bg_current_screentab": "#475258",
+    "bg_current_screentab": "#5b656b",
+    # "bg_current_screentab": "#475258",
     #  "fg_group_names": "#fbefd0",
     "fg_group_names": "#d3c6aa",
     "bg_current_tab": "#475258",
