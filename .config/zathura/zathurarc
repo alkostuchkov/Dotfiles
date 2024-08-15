@@ -1,7 +1,9 @@
 set font "Iosevka 17"
 set adjust-open width
+set window-title-basename true
+set statusbar-home-tilde true
+# set statusbar-basename true
 
-map <C-q> quit
 map <C-=> zoom in
 map <C--> zoom out
 map <C-0> adjust_window best-fit

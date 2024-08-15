@@ -39,15 +39,15 @@ colorscheme my_everforest
 filextype *.pdf,*.djvu
   \ {View in atril}
   \ atril %f %i &,
+  \ {View in zathura}
+  \ zathura %c %i &,
   \ {View in qpdfview}
   \ qpdfview %f %i &,
-  \ {View in zathura}
-  \ zathura %f %i &,
 filetype *.pdf,*.djvu
   \ {View in zathura}
-  \ zathura %f,
+  \ zathura %c %i &,
   \ {View in apvlv}
-  \ apvlv %f
+  \ apvlv %c &
 fileviewer *.pdf
   \ vifmimg pdfpreview %px %py %pw %ph %c
   \ %pc
@@ -57,7 +57,7 @@ fileviewer *.pdf
 " PostScript ------------------------------------------------------------------
 filetype *.ps,*.eps,*.ps.gz
   \ {View in zathura}
-  \ zathura %f,
+  \ zathura %c %i,
   \ {View in gv}
   \ gv %c %i &,
 
@@ -93,10 +93,10 @@ fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
 
 " Web -------------------------------------------------------------------------
 filextype *.html,*.htm
-  \ {Open with vim}
-  \ wezterm start --always-new-process --cwd %d -e vim %c &,
   \ {Open with gvim}
   \ gvim %c &,
+  \ {Open with vim}
+  \ wezterm start --always-new-process --cwd %d -e vim %c &,
   \ {Open with dwb}
   \ dwb %f %i &,
   \ {Open with firefox}
@@ -271,9 +271,13 @@ filextype */
 " Config & exec files ---------------------------------------------------------
 filextype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el/
   \ {View in gvim}
-  \ wezterm start --always-new-process --cwd %d -e vim %f &,
+  \ gvim %f &,
+"  \ {View in gvim}
+"  \ wezterm start --always-new-process --cwd %d -e vim %f &,
 
 filetype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el/
+  \ {View in vim}
+  \ wezterm start --always-new-process --cwd %d -e vim %f &,
   \ {View in vim}
   \ $TERMINAL -e vim %f %i &,
   \ {View in Helix}

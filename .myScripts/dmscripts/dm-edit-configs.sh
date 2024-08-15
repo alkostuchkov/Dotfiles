@@ -39,8 +39,9 @@ options=(
 "i3status - $HOME/.config/i3status/config"
 "i3pystatus - $HOME/.config/i3pystatus/config.py"
 "kitty - $HOME/.config/kitty/kitty.conf"
-"nvim - $HOME/.config/nvim/init.vim"
 "gvim - $HOME/.config/nvim/ginit.vim"
+"nvim-qt - $HOME/.config/nvim-qt/nvim-qt.conf"
+"nvim - $HOME/.config/nvim/init.vim"
 "picom - $HOME/.config/picom/picom.conf"
 "polybar config - $HOME/.config/polybar/config.ini"
 "polybar modules - $HOME/.config/polybar/modules.ini"
@@ -70,6 +71,7 @@ options=(
 "yazi keymap - $HOME/.config/yazi/keymap.toml"
 "yazi theme - $HOME/.config/yazi/theme.toml"
 "yazi - $HOME/.config/yazi/yazi.toml"
+"zathura - $HOME/.config/zathura/zathurarc"
 "zsh - $HOME/.zshrc"
 "Quit")
 
@@ -111,11 +113,11 @@ if [[ "$choice" == "quit" ]]; then
     echo "Program terminated." && exit 1
 elif [[ "$choice" ]]; then
     conf=$(printf '%s\n' "${choice}" | awk '{print $NF}')
-    # gvim $conf  # gvim is either a link to neovim-qt or just gvim
+    gvim $conf  # gvim is either a link to neovim-qt or just gvim
+    # $terminal -e $editor $conf
     # # $terminal -e $SHELL -c "vim $conf"
     # # alacritty -e $SHELL -c "vim $conf"
     # # $terminal -e "$SHELL -c 'vim $conf'"
-    $terminal -e $editor $conf
     # # alacritty -e vim "$conf"
     # # terminator -e "vim $conf"
 else
