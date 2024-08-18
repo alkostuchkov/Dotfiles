@@ -1,2 +1,2 @@
-require("alex.core.settings")
-require("alex.core.keymaps")
+require("alex/core/settings")
+require("alex/core/keymaps")

@@ -28,6 +28,7 @@ return {
         "cpp",
         "python",
         "lua",
+        "go",
         "json",
         "yaml",
         "toml",

@@ -373,7 +373,7 @@ alias emacs="emacsclient -c -a 'emacs'"
 # opam configuration ----------------------------------------------------------
 source /home/alexander/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
 # Fuzzy finder ----------------------------------------------------------------
-source /usr/share/fzf/key-bindings.fish
+# source /usr/share/fzf/key-bindings.fish
 
 ### key-bindings.fish ###
 #     ____      ____

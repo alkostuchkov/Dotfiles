@@ -81,10 +81,14 @@ keymap.set("i", "<C-w>", "<Esc> dbi", { desc = "Delete backward by a word from e
 keymap.set("i", "<M-d>", "<Esc> dea", { desc = "Delete backward by a word from begin to end (Insert mode)" })
 
 -- navigation
-keymap.set('n', '<C-k>', ':wincmd k<CR>')
-keymap.set('n', '<C-j>', ':wincmd j<CR>')
-keymap.set('n', '<C-h>', ':wincmd h<CR>')
-keymap.set('n', '<C-l>', ':wincmd l<CR>')
+keymap.set("n", "<C-k>", ":wincmd k<CR>")
+keymap.set("n", "<C-j>", ":wincmd j<CR>")
+keymap.set("n", "<C-h>", ":wincmd h<CR>")
+keymap.set("n", "<C-l>", ":wincmd l<CR>")
+
+-- move lines up/down
+keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- usefull replacement example
 keymap.set("v", "<C-r>", "\"hy:%s/<C-r>h//gc<left><left><left>", { desc = "Replace selected" })

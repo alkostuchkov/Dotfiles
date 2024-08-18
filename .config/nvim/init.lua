@@ -1,2 +1,2 @@
-require("alex.core")
-require("alex.lazy")
+require("alex/core")
+require("alex/lazy")
