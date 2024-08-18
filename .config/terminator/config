@@ -20,7 +20,7 @@
   [[default]]
     background_color = "#2d353b"
     background_darkness = 0.97
-    font = Source Code Pro 18
+    font = Terminus (TTF) Medium 21
     foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
@@ -72,11 +72,11 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[PTMono_16]]
-    background_color = "#263238"
+  [[Terminus_21]]
+    background_color = "#2d353b"
     background_darkness = 0.97
-    font = PT Mono 16
-    foreground_color = "#dcdfe4"
+    font = Terminus (TTF) Medium 21
+    foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
     palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#dcdfe4"
