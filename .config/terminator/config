@@ -20,7 +20,7 @@
   [[default]]
     background_color = "#2d353b"
     background_darkness = 0.97
-    font = IntelOneMono Nerd Font 20
+    font = Consolas NF 20
     foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
