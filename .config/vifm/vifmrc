@@ -93,10 +93,10 @@ fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
 
 " Web -------------------------------------------------------------------------
 filextype *.html,*.htm
-  \ {Open with gvim}
-  \ gvim %c &,
   \ {Open with vim}
   \ wezterm start --always-new-process --cwd %d -e vim %c &,
+  \ {Open with gvim}
+  \ gvim %c &,
   \ {Open with dwb}
   \ dwb %f %i &,
   \ {Open with firefox}
@@ -182,7 +182,7 @@ fileviewer *.torrent dumptorrent -v %c
 " FuseZipMount ----------------------------------------------------------------
 filextype *.zip,*.jar,*.war,*.ear,*.oxt,*.apkg
   \ {View contents}
-  \ engrampa %f
+  \ engrampa %f &
 filetype *.zip,*.jar,*.war,*.ear,*.oxt,*.apkg
   \ {Mount with fuse-zip}
   \ FUSE_MOUNT|fuse-zip %SOURCE_FILE %DESTINATION_DIR,
@@ -195,7 +195,7 @@ fileviewer *.zip,*.jar,*.war,*.ear,*.oxt zip -sf %c
 " ArchiveMount ----------------------------------------------------------------
 filextype *.tar,*.tar.bz2,*.tbz2,*.tgz,*.tar.gz,*.tar.xz,*.txz
   \ {View contents}
-  \ engrampa %f
+  \ engrampa %f &
 filetype *.tar,*.tar.bz2,*.tbz2,*.tgz,*.tar.gz,*.tar.xz,*.txz
   \ {Mount with archivemount}
   \ FUSE_MOUNT|archivemount %SOURCE_FILE %DESTINATION_DIR,
@@ -211,7 +211,7 @@ fileviewer *.tar tar -tf %c
 " Rar2FsMount and rar archives ------------------------------------------------
 filextype *.rar
   \ {View contents}
-  \ engrampa %f
+  \ engrampa %f &
 filetype *.rar
   \ {Mount with rar2fs}
   \ FUSE_MOUNT|rar2fs %SOURCE_FILE %DESTINATION_DIR
@@ -220,7 +220,7 @@ fileviewer *.rar unrar v %c
 " Fuse7z and 7z archives ------------------------------------------------------
 filextype *.7z
   \ {View contents}
-  \ engrampa %f
+  \ engrampa %f &
 filetype *.7z
   \ {Mount with fuse-7z}
   \ FUSE_MOUNT|fuse-7z %SOURCE_FILE %DESTINATION_DIR
@@ -269,19 +269,20 @@ filextype */
   \ ranger %f &
 
 " Config & exec files ---------------------------------------------------------
-filextype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el/
+filextype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.go,*.org,*.el/
+  \ {View in gvim}
+  \ wezterm start --always-new-process --cwd %d -e vim %f &,
   \ {View in gvim}
   \ gvim %f &,
-"  \ {View in gvim}
-"  \ wezterm start --always-new-process --cwd %d -e vim %f &,
 
-filetype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el/
+filetype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.go,*.org,*.el/
   \ {View in vim}
   \ wezterm start --always-new-process --cwd %d -e vim %f &,
   \ {View in vim}
   \ $TERMINAL -e vim %f %i &,
   \ {View in Helix}
   \ $TERMINAL -e hx %f %i &,
+
 " filetype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.org,*.el $TERMINAL -e vim %f &
 
 " Books -----------------------------------------------------------------------
@@ -364,6 +365,15 @@ command! diff vim -d %f %F
 command! run !! ./%f
 command! mkcd :mkdir %a | cd %a
 command! reload :write | restart
+
+" Create a file or a dir (for dir last char must be '/')
+command! create :
+\|  let $last_char = expand(system("str=\"%a\"; echo \"${str: -1}\""))
+\|  if $last_char == "/"
+\|    mkdir "%a"
+\|  else
+\|    touch "%a"
+\|  endif
 
 " Toggle detailed/brief information about files -------------------------------
 command! togglefilesinfo
@@ -558,6 +568,7 @@ nnoremap <f4> :!$TERMINAL -e vim %f &<cr>
 nnoremap <f5> :cp<cr>
 nnoremap <f6> :mv<cr>
 nnoremap <f7> :mkdir<space>
+nnoremap a :create<space>
 nnoremap <f10> :q<cr>
 " nnoremap <f11> :<cr>
 " nnoremap <f12> :<cr>

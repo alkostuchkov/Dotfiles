@@ -20,7 +20,7 @@
   [[default]]
     background_color = "#2d353b"
     background_darkness = 0.97
-    font = Terminus (TTF) Medium 21
+    font = IntelOneMono Nerd Font 20
     foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
@@ -116,10 +116,10 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[MesloLGM_Nerd_17]]
+  [[MesloLGS_Nerd_18]]
     background_color = "#2d353b"
     background_darkness = 0.97
-    font = MesloLGS Nerd Font Mono 17
+    font = MesloLGS Nerd Font Mono 18
     foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
