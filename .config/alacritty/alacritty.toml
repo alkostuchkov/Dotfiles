@@ -15,13 +15,13 @@ unfocused_hollow = true
 TERM = "xterm-256color"
 
 [font]
-size = 17
+size = 16
 
 [font.bold]
 # family = "mplus Nerd Font"
 # family = "Sarasa Mono SC Nerd"
 # family = "Consolas NF"
-family = "JetBrainsMono Nerd Font Mono"
+family = "JetBrainsMono Nerd Font"
 style = "Bold"
 # style = "Semibold"
 
@@ -30,21 +30,21 @@ style = "Bold"
 # family = "Sarasa Mono SC Nerd"
 # style = "Semibold Italic"
 # family = "Consolas NF"
-family = "JetBrainsMono Nerd Font Mono"
+family = "JetBrainsMono Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
 # family = "mplus Nerd Font"
 # family = "Sarasa Mono SC Nerd"
 # family = "Consolas NF"
-family = "JetBrainsMono Nerd Font Mono"
+family = "JetBrainsMono Nerd Font"
 style = "Italic"
 
 [font.normal]
 # family = "mplus Nerd Font"
 # family = "Sarasa Mono SC Nerd"
 # family = "Consolas NF"
-family = "JetBrainsMono Nerd Font Mono"
+family = "JetBrainsMono Nerd Font"
 # style = "Light"
 style = "Regular"
 
