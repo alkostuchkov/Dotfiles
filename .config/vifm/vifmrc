@@ -444,6 +444,8 @@ nnoremap <wait> ,xt :!alacritty -e tar -xzvf %f & <cr>
 " nnoremap <wait> ,xz :unzip <cr>
 " nnoremap <wait> ,ct :tar <cr>
 " nnoremap <wait> ,xt :untar <cr>
+nnoremap <wait> ,ac :!engrampa --add %f &<cr>
+nnoremap <wait> ,ax :!engrampa -f %f &<cr>
 
 " Open all images in current directory in sxiv thumbnail mode ------------------
 nnoremap sx :!sxiv -t %d & <cr>
