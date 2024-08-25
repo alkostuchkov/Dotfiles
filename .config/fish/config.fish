@@ -18,7 +18,7 @@ set PATH $PATH $HOME/.cargo/bin $HOME/.config/vifm/scripts $GHCUP_INSTALL_BASE_P
 set EDITOR vim #  vim is either a link to nvim    or just  vim
 set VISUAL gvim # gvim is either a link to nvim-qt or just gvim
 set TERM xterm-256color
-set TERMINAL wezterm
+set TERMINAL kitty
 set BROWSER brave
 # set MANPAGER "bat man -p"  # theme moved to the .config/bat/config
 set PAGER bat
