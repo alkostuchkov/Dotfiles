@@ -20,7 +20,7 @@
   [[default]]
     background_color = "#2d353b"
     background_darkness = 0.97
-    font = Consolas NF 20
+    font = Consolas NF 19
     foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
@@ -116,10 +116,10 @@
     use_system_font = False
     bold_is_bright = True
     copy_on_selection = True
-  [[MesloLGS_Nerd_18]]
+  [[MesloLGS_Nerd_17]]
     background_color = "#2d353b"
     background_darkness = 0.97
-    font = MesloLGS Nerd Font Mono 18
+    font = MesloLGS Nerd Font 17
     foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden
@@ -141,7 +141,7 @@
   [[Menlo_17]]
     background_color = "#263238"
     background_darkness = 0.97
-    font = BitstreamVeraSansMono Nerd Font Mono 17
+    font = Menlo for Powerline 17
     foreground_color = "#dcdfe4"
     show_titlebar = False
     scrollbar_position = hidden

@@ -17,16 +17,17 @@ config.colors = {
   brights = { "#475258", "#e67e80", "#a7c080", "#dbbc7f", "#7fbbb3", "#d699b6", "#83c092", "#d3c6aa" },
 }
 
--- config.font = wezterm.font("JetbrainsMono Nerd Font")
+config.font = wezterm.font("JetbrainsMono Nerd Font")
 -- config.font = wezterm.font("DejaVuSansMono Nerd Font Mono")
 -- config.font = wezterm.font("DejaVuSansM Nerd Font")
 -- config.font = wezterm.font("DejaVu Sans Mono")
-config.font = wezterm.font("MesloLGS Nerd Font")
+-- config.font = wezterm.font("MesloLGS Nerd Font")
 -- config.font = wezterm.font("Hack Nerd Font Mono")
 -- config.font = wezterm.font("Consolas NF")
 -- config.font = wezterm.font("Menlo")
 -- config.font = wezterm.font("Source Code Pro")
 config.font_size = 17
+-- config.line_height = 1.1
 
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
