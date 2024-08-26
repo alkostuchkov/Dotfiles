@@ -163,7 +163,7 @@
   [[JetBrainsMono_Nerd_17]]
     background_color = "#2d353b"
     background_darkness = 0.97
-    font = JetBrainsMono Nerd Font Mono 17
+    font = JetBrainsMono Nerd Font 17
     foreground_color = "#d3c6aa"
     show_titlebar = False
     scrollbar_position = hidden

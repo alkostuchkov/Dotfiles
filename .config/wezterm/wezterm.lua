@@ -17,7 +17,12 @@ config.colors = {
   brights = { "#475258", "#e67e80", "#a7c080", "#dbbc7f", "#7fbbb3", "#d699b6", "#83c092", "#d3c6aa" },
 }
 
-config.font = wezterm.font("JetbrainsMono Nerd Font")
+-- config.font = wezterm.font(
+--   "JetBrainsMono NF",
+--   { weight = "Regular", italic = false }
+-- )
+config.font = wezterm.font("JetBrainsMono NF")
+-- config.font = wezterm.font("JetBrainsMono NF Light")
 -- config.font = wezterm.font("DejaVuSansMono Nerd Font Mono")
 -- config.font = wezterm.font("DejaVuSansM Nerd Font")
 -- config.font = wezterm.font("DejaVu Sans Mono")
@@ -26,18 +31,53 @@ config.font = wezterm.font("JetbrainsMono Nerd Font")
 -- config.font = wezterm.font("Consolas NF")
 -- config.font = wezterm.font("Menlo")
 -- config.font = wezterm.font("Source Code Pro")
+
 config.font_size = 17
 -- config.line_height = 1.1
+-- config.cell_width = 1
+
+config.bold_brightens_ansi_colors = true
+config.freetype_load_target = "Light"
+config.freetype_render_target = "HorizontalLcd"
+
+-- config.font_rules = {
+--   {
+--     intensity = "Bold",
+--     italic = true,
+--     font = wezterm.font {
+--       family = "JetBrainsMono NF",
+--       weight = "Bold",
+--       style = "Italic",
+--     },
+--   },
+--   {
+--     intensity = "Bold",
+--     italic = false,
+--     font = wezterm.font {
+--       family = "JetBrainsMono NF",
+--       weight = "Bold",
+--       style = "Normal",
+--     },
+--   },
+--   {
+--     intensity = "Normal",
+--     italic = true,
+--     font = wezterm.font {
+--       family = "JetBrainsMono NF",
+--       style = "Italic",
+--     },
+--   },
+-- }
 
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
 config.enable_tab_bar = false
 
 config.window_padding = {
-  left = 4,
-  right = 1,
-  top = 1,
-  bottom = 1,
+  left = 0,
+  right = 0,
+  top = 0,
+  bottom = 0,
 }
 
 config.window_decorations = "RESIZE"
