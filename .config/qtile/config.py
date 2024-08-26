@@ -65,9 +65,10 @@ def parse_windowname(text):
 ##### VARIABLES #####
 mod = "mod4"
 alt = "mod1"
-my_term = "kitty"
+my_term = "alacritty"
 #  my_term_extra = "xfce4-terminal"
 my_term_extra = "wezterm"
+onemore_term = "kitty"
 my_font = "Ubuntu"
 my_nerd_font = "Ubuntu Nerd Font"
 my_nerd_font_extra = "Sarasa Mono SC Nerd"
@@ -219,7 +220,7 @@ keys = [
 # <SUPER> + <CTRL> + KEYS
     Key([mod, "control"], "Return", lazy.spawn("xfce4-terminal"), desc="Launch xfce4-terminal"),
     Key([mod, "shift"], "Return", lazy.spawn("terminator"), desc="Launch terminator"),
-    Key(["control", alt], "Return", lazy.spawn("alacritty"), desc="Launch alacritty"),
+    Key(["control", alt], "Return", lazy.spawn(onemore_term), desc="Launch onemore_term"),
     # RESIZE UP, DOWN, LEFT, RIGHT
     Key([mod, "control"], "i",
         lazy.layout.shrink_main(),

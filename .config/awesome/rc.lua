@@ -67,8 +67,9 @@ end
 -- }}}
 
 -- {{{ Variable definitions
-local TERMINAL = "kitty"
+local TERMINAL = "alacritty"
 local EXTRA_TERMINAL = "wezterm"
+local ONEMORE_TERMINAL = "kitty"
 local EDITOR = os.getenv("EDITOR") or "vim"
 local EDITOR_CMD = TERMINAL .. " -e " .. EDITOR
 local SHELL = os.getenv("SHELL")
@@ -474,8 +475,8 @@ globalkeys = gears.table.join(
     { description = "xfce4-terminal", group = "applications" }),
   awful.key({ super, shft }, "Return", function() awful.util.spawn("terminator") end,
     { description = "terminator", group = "applications" }),
-  awful.key({ ctrl, alt }, "Return", function() awful.util.spawn("alacritty") end,
-    { description = "alacritty", group = "applications" }),
+  awful.key({ ctrl, alt }, "Return", function() awful.util.spawn(ONEMORE_TERMINAL) end,
+    { description = "Onemore Terminal", group = "applications" }),
   awful.key({ ctrl, shft }, "Escape", function() awful.util.spawn(TERMINAL .. " -e " .. SHELL .. " -c htop") end,
     { description = "htop", group = "applications" }),
 
