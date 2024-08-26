@@ -53,7 +53,7 @@ x = 0
 # y = -8 # mplus Nerd Font
 # y = -3 # Sarasa Mono SC Nerd
 # y = 0
-y = 1
+y = 2
 
 [[keyboard.bindings]]
 action = "Copy"
@@ -140,5 +140,5 @@ general = "Alacritty"
 instance = "Alacritty"
 
 [window.padding]
-x = 3
+x = 6
 y = 1
