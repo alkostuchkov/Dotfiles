@@ -100,7 +100,7 @@ fn='Iosevka-18:normal'
 # DMENU="rofi -dmenu -theme-str 'window {width: 80%;}' -p"
 DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
 
-TERMINAL="alacritty"
+# TERMINAL="alacritty"
 terminal=${TERMINAL-"xterm"}
 editor=${EDITOR-"vi"}
 
