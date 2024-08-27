@@ -21,12 +21,12 @@ config.colors = {
 --   "JetBrainsMono NF",
 --   { weight = "Regular", italic = false }
 -- )
-config.font = wezterm.font("JetBrainsMono NF")
+-- config.font = wezterm.font("JetBrainsMono NF")
 -- config.font = wezterm.font("JetBrainsMono NF Light")
 -- config.font = wezterm.font("DejaVuSansMono Nerd Font Mono")
 -- config.font = wezterm.font("DejaVuSansM Nerd Font")
 -- config.font = wezterm.font("DejaVu Sans Mono")
--- config.font = wezterm.font("MesloLGS Nerd Font")
+config.font = wezterm.font("MesloLGS Nerd Font")
 -- config.font = wezterm.font("Hack Nerd Font Mono")
 -- config.font = wezterm.font("Consolas NF")
 -- config.font = wezterm.font("Menlo")
