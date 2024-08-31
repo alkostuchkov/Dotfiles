@@ -1,9 +1,10 @@
 [Desktop Entry]
 Encoding=UTF-8
 Terminal=0
+Exec=/usr/bin/xnviewmp %f
 # Exec=/usr/bin/xnviewmp %F
 # Icon=/opt/xnviewmp/xnview.png
-Exec=/home/alexander/Programs/AppImageApplications/XnView_MP.AppImage %F
+# Exec=/home/alexander/Programs/AppImageApplications/XnView_MP.AppImage %f
 Icon=xnview
 Type=Application
 Categories=Graphics;

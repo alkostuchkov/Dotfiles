@@ -120,6 +120,8 @@ fileviewer *.[1-8] man ./%c | col -b
 
 " Images ----------------------------------------------------------------------
 filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+  \ {View in qView}
+  \ qview %f %i &,
   \ {View in XnViewMP}
   \ xnviewmp %f %i &,
   \ {View in ristretto}
@@ -350,8 +352,8 @@ mark s ~/.myScripts
 mark l ~/.local/share
 mark a ~/.cache
 
-" mark M /run/media
-mark M /media
+mark M /run/media
+" mark M /media
 mark R /
 
 "##############################################################################
