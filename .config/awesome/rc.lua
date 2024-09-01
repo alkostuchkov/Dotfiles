@@ -455,7 +455,7 @@ globalkeys = gears.table.join(
         "/Programs/Telegram/Telegram -workdir " .. HOME .. "/.local/share/TelegramDesktop/ -- %u")
     end,
     { description = "Telegram", group = "applications" }),
-  awful.key({ super, alt }, "p", function() awful.util.spawn(HOME .. "/Programs/PyCharm-Community/bin/pycharm.sh") end,
+  awful.key({ super, alt }, "p", function() awful.util.spawn(HOME .. "/Programs/PyCharm-Community/bin/pycharm") end,
     { description = "PyCharm", group = "applications" }),
   awful.key({ super, alt }, "c", function() awful.util.spawn("code") end,
     { description = "VSCode", group = "applications" }),
