@@ -52,7 +52,7 @@ style = "Regular"
 x = 0
 # y = -8 # mplus Nerd Font
 # y = -3 # Sarasa Mono SC Nerd
-y = -1
+y = -4
 # y = 2 # Consolas NF
 
 [[keyboard.bindings]]

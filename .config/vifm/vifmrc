@@ -271,7 +271,7 @@ filextype */
   \ ranger %f &
 
 " Config & exec files ---------------------------------------------------------
-filextype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.go,*.org,*.el,*.toml,*.yml,*.lock/
+filextype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.go,*.org,*.el,*.toml,*.yml,*.lock,*.sql/
   \ {View in vim}
   \ alacritty -e vim %f %i &,
   \ {View in gvim}
@@ -281,7 +281,7 @@ filextype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.b
   \ {View in vim (kitty terminal)}
   \ kitty -e vim %f %i,
 
-filetype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.go,*.org,*.el,*.toml,*.yml,*.lock/
+filetype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.backup,*info,*.md,*.dat,*.xml,*.Xresources,*.asm,*.py,*.c,*.cpp,*.h,*.awk,*bash*,*.git*,*.zsh,*zshrc,*.profile,*.log,*.desktop,*.vifm,*.vim,*.rs,*.hs,*.lua,*.go,*.org,*.el,*.toml,*.yml,*.lock,*.sql/
   \ {View in vim}
   \ alacritty -e vim %f %i &,
   \ {View in vim (wezterm terminal)}
@@ -460,6 +460,9 @@ nnoremap sx :!sxiv -t %d & <cr>
 
 " Open selected images in gimp -------------------------------------------------
 nnoremap gp :!gimp %f %i & <cr>
+
+" Open selected files in gvim --------------------------------------------------
+nnoremap gv :!gvim %f %i & <cr>
 
 " Start shell in current directory --------------------------------------------
 nnoremap s :shell<cr>
