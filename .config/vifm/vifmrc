@@ -123,7 +123,7 @@ filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
   \ {View in qView}
   \ qview %f %i &,
   \ {View in XnViewMP}
-  \ xnviewmp %f %i &,
+  \ xnviewmp %F %i &,
   \ {View in ristretto}
   \ ristretto %f &
 filetype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
@@ -374,6 +374,9 @@ command! run !! ./%f
 command! mkcd :mkdir %a | cd %a
 command! reload :write | restart
 
+" Edit image in XnViewMP (cause file not found) -------------------------------
+command! editimage :!xnviewmp (echo %d/%c)
+
 " Create a file or a dir (for dir last char must be '/')
 command! create :
 \|  let $last_char = expand(system("str=\"%a\"; echo \"${str: -1}\""))
@@ -463,6 +466,9 @@ nnoremap gp :!gimp %f %i & <cr>
 
 " Open selected files in gvim --------------------------------------------------
 nnoremap gv :!gvim %f %i & <cr>
+
+" Open selected files in xnviewmp ----------------------------------------------
+nnoremap ge :editimage <cr>
 
 " Start shell in current directory --------------------------------------------
 nnoremap s :shell<cr>
