@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=LibreWolf
+GenericName=LibreWolf
+Icon=/home/alexander/.local/share/icons/LibreWolf-logo.png
+# Exec=/usr/bin/librewolf
+Exec=/home/alexander/Programs/AppImageApplications/LibreWolf.x86_64.AppImage
+NoDisplay=false
+Categories=Network;
+Keywords=LibreWolf
+StartupNotify=false
+Terminal=false
