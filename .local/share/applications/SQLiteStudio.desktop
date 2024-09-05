@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=3.4.4
+Type=Application
+Name=SQLiteStudio
+GenericName=SQLiteStudio
+Icon=/home/alexander/Programs/SQLiteStudio/assets/appicon.png
+Exec=/home/alexander/Programs/SQLiteStudio/sqlitestudio
+NoDisplay=false
+Categories=Development;
+Keywords=SQLiteStudio
+StartupNotify=false
+Terminal=false
