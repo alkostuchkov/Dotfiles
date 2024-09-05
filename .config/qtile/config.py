@@ -798,6 +798,8 @@ floating_layout = layout.Floating(float_rules=[
     Match(title="splash"),  # PyCharm
     Match(title="Update"),  # PyCharm
     Match(title="Compress"),  # Engrampa create archive dialog
+    Match(wm_class="java"),  # DBeaver
+    Match(wm_class="Java"),  # DBeaver
     #  Match(title="win0", wm_class="jetbrains-pycharm-ce"),  # PyCharm
     #  Match(title="Welcome to PyCharm", wm_class="jetbrains-pycharm-ce"),
     #  Match(title="License Activation", wm_class="jetbrains-pycharm-ce"),  # PyCharm

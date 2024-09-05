@@ -902,6 +902,8 @@ awful.rules.rules = {
         "Volumeicon",
         "Xfce4-notifyd",
         "Pinentry",
+        "java",
+        "Java",
         "Lxappearance" },
 
       -- Note that the name property shown in xprop might be set slightly after creation of the client
