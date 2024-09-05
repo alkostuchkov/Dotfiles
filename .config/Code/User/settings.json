@@ -14,10 +14,10 @@
     "*.ipynb": "jupyter.notebook.ipynb"
   },
   // "editor.fontFamily": "'mplus Nerd Font', 'Monoid Nerd Font Mono', 'Sarasa Mono SC Nerd', 'InconsolataLGC Nerd Font Mono', 'Iosevka', 'Recursive Mono Casual Static', 'Cascadia Mono PL', 'Rec Mono Casual', 'Cascadia Code PL Semilight', 'Iosevka', 'Pragmata Pro', 'JetBrains Mono Light', 'Source Code Pro', 'Consolas NF', 'JetBrains Mono', 'UbuntuMono Nerd Font', 'Menlo', 'Trim Mono', 'Code New Roman', 'Operator Mono Book', 'IBM Plex Mono Medium'",
-  "editor.fontFamily": "'MesloLGS Nerd Font Mono'",
+  "editor.fontFamily": "'JetBrainsMono NF'",
   "editor.fontSize": 19, //mplus Nerd Font
   // "editor.fontSize": 16,
-  "editor.lineHeight": 25, //mplus Nerd Font
+  // "editor.lineHeight": 25, //mplus Nerd Font
 
   // "editor.tabSize": 4,
   // Controls the font weight. Accepts "normal" and "bold" keywords or numbers between 1 and 1000.
@@ -42,7 +42,7 @@
       "color": "red"
     }
   ],
-  "debug.console.fontFamily": "'MesloLGS Nerd Font Mono'",
+  "debug.console.fontFamily": "'JetBrainsMono NF'",
   "debug.console.fontSize": 19, //mplus Nerd Font
   // "debug.console.fontSize": 16,
   // "terminal.explorerKind": "external",
@@ -50,7 +50,7 @@
   "terminal.external.linuxExec": "alacritty",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.defaultProfile.linux": "fish",
-  "terminal.integrated.fontFamily": "'MesloLGS Nerd Font Mono'",
+  "terminal.integrated.fontFamily": "'JetBrainsMono NF'",
   "terminal.integrated.fontSize": 19, //mplus Nerd Font
   // "terminal.integrated.fontSize": 16,
   "[python]": {},
