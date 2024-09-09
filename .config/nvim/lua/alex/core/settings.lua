@@ -6,6 +6,7 @@ local opt = vim.opt                  -- local
 -- local bo = vim.bo                    -- buffer-scoped
 -- local api = vim.api
 
+opt.linespace = 4 -- only for GUI (nvim-qt), for Consolas NF
 -- line numbers
 opt.number = true
 opt.relativenumber = true
