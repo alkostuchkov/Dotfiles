@@ -15,4 +15,9 @@ temp
 __pycache__
 .var/app/
 
+# Databases
+*.db
+*.db3
+*.sqlite
+*.sqlite3
 
