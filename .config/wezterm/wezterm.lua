@@ -24,7 +24,7 @@ config.colors = {
 -- config.font = wezterm.font("JetBrainsMono NF")
 -- config.font = wezterm.font("JetBrainsMono NF Light")
 -- config.font = wezterm.font("DejaVuSansMono Nerd Font Mono")
-config.font = wezterm.font("DejaVuSansM Nerd Font")
+-- config.font = wezterm.font("DejaVuSansM Nerd Font")
 -- config.font = wezterm.font("DejaVu Sans Mono")
 -- config.font = wezterm.font("MesloLGS Nerd Font")
 -- config.font = wezterm.font("Hack Nerd Font")
@@ -32,12 +32,12 @@ config.font = wezterm.font("DejaVuSansM Nerd Font")
 -- config.font = wezterm.font("FiraCode Nerd Font")
 -- config.font = wezterm.font("FiraCode Nerd Font Ret")
 -- config.font = wezterm.font("FiraCode Nerd Font Light")
--- config.font = wezterm.font("Consolas NF")
+config.font = wezterm.font("Consolas NF")
 -- config.font = wezterm.font("Menlo")
 -- config.font = wezterm.font("Source Code Pro")
 
-config.font_size = 17
--- config.line_height = 1.1
+config.font_size = 19
+config.line_height = 1.15
 -- config.cell_width = 1
 
 config.bold_brightens_ansi_colors = true
