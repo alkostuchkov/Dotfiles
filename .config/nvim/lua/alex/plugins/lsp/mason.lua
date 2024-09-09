@@ -42,6 +42,8 @@ return {
         "prettier", -- prettier formatter
         -- "stylua", -- lua formatter
         -- "autopep8", -- python formatter
+        -- "black", -- python formatter
+        -- "isort", -- python formatter
         "pylint", -- python linter
         -- "mypy",   -- python linter
       },

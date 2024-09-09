@@ -6,6 +6,7 @@ application/msword-template=appimagekit_wps-office-wps.desktop;
 application/pdf=appimagekit_wps-office-pdf.desktop;
 application/powerpoint=appimagekit_wps-office-wpp.desktop;
 application/rtf=appimagekit_wps-office-wps.desktop;
+application/sql=DbSchema.desktop;dbeaver-ce.desktop;
 application/vnd.ms-excel=appimagekit_wps-office-et.desktop;
 application/vnd.ms-powerpoint=appimagekit_wps-office-wpp.desktop;
 application/vnd.ms-word=appimagekit_wps-office-wps.desktop;
