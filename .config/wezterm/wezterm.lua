@@ -37,7 +37,7 @@ config.font = wezterm.font("Consolas NF")
 -- config.font = wezterm.font("Source Code Pro")
 
 config.font_size = 19
-config.line_height = 1.15
+config.line_height = 1.15 -- for Consolas NF
 -- config.cell_width = 1
 
 config.bold_brightens_ansi_colors = true

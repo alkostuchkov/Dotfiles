@@ -52,7 +52,7 @@ style = "Regular"
 x = 0
 # y = -8 # mplus Nerd Font
 # y = -3 # Sarasa Mono SC Nerd
-y = -1
+y = -1 # JetBrainsMono Nerd Font
 # y = 2 # Consolas NF
 
 [[keyboard.bindings]]
@@ -92,25 +92,25 @@ key = "Copy"
 action = "ScrollPageUp"
 key = "PageUp"
 mode = "~Alt"
-mods = "Shift"
+mods = "Control|Shift"
 
 [[keyboard.bindings]]
 action = "ScrollPageDown"
 key = "PageDown"
 mode = "~Alt"
-mods = "Shift"
+mods = "Control|Shift"
 
 [[keyboard.bindings]]
 action = "ScrollToTop"
 key = "Home"
 mode = "~Alt"
-mods = "Shift"
+mods = "Control|Shift"
 
 [[keyboard.bindings]]
 action = "ScrollToBottom"
 key = "End"
 mode = "~Alt"
-mods = "Shift"
+mods = "Control|Shift"
 
 [[keyboard.bindings]]
 action = "ScrollLineUp"
