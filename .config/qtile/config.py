@@ -7,25 +7,25 @@ import subprocess
 from typing import List
 from libqtile import qtile, bar, layout, widget, hook
 from libqtile.config import (
-        Click,
-        Drag,
-        Group,
-        Key,
-        Screen,
-        KeyChord,
-        Match,
-        )
+    Click,
+    Drag,
+    Group,
+    Key,
+    Screen,
+    KeyChord,
+    Match,
+)
 from libqtile.lazy import lazy
 from libqtile.backend.base import Internal
 
 ##### IMPORTs from my modules #####
 from modules import (
-        colors,
-        memory,
-        all_windows_count,
-        syncthing,
-        show_updates,
-        )
+    colors,
+    memory,
+    all_windows_count,
+    syncthing,
+    show_updates,
+)
 
 
 def get_all_netifaces(path_to_state="/sys/class/net/"):
@@ -400,7 +400,7 @@ layouts = [
     ),
     #  layout.Max(**layout_theme),
     layout.Max(
-      margin=0,
+      margin=4,
       border_width=0,
       border_focus=colors.get("border_focus", "#535d6c"),
       border_normal=colors.get("border_normal", "#000000")
@@ -705,7 +705,11 @@ def init_screens():
         top=bar.Bar(
           widgets=init_widgets_screen1(),
           opacity=1.0,
-          size=32)),
+          # border_width=[0, 0, 1, 0],
+          # border_color=colors.get("bg_panel", "#222222"),
+          # margin=[0, 0, 1, 0],
+          # size=32)),
+          size=35)),
       #  Screen(
         #  top=bar.Bar(
           #  widgets=init_widgets_screen2(),
