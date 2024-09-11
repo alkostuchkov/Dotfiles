@@ -94,8 +94,5 @@ keymap.set("v", "<C-Down>", ":m '>+1<CR>gv=gv")
 keymap.set("i", "<C-Up>", "<Esc>:m .-2<CR>==gi")
 keymap.set("i", "<C-Down>", "<Esc>:m .+1<CR>==gi")
 
--- keymap.set({ "n", "v" }, "<C-Up>", ":m '<-2<CR>gv=gv")
--- keymap.set({ "n", "v" }, "<C-Down>", ":m '>+1<CR>gv=gv")
-
 -- usefull replacement example
 keymap.set("v", "<C-r>", "\"hy:%s/<C-r>h//gc<left><left><left>", { desc = "Replace selected" })
