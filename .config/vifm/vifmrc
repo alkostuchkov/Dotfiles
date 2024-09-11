@@ -446,7 +446,7 @@ command! openBackupDirs
 "##############################################################################
 " Mappings
 "##############################################################################
-" Archives ---------------------------------------------------------------------
+" Archives --------------------------------------------------------------------
 nnoremap <wait> ,cz :!alacritty -e zip -9 -r %c.zip %f & <cr>
 nnoremap <wait> ,xz :!alacritty -e unzip %f & <cr>
 nnoremap <wait> ,ct :!alacritty -e tar -czvf %c.tar.gz %f & <cr>
@@ -458,20 +458,23 @@ nnoremap <wait> ,xt :!alacritty -e tar -xzvf %f & <cr>
 nnoremap <wait> ,ac :!engrampa --add %f &<cr>
 nnoremap <wait> ,ax :!engrampa -f %f &<cr>
 
-" Open all images in current directory in sxiv thumbnail mode ------------------
-nnoremap sx :!sxiv -t %d & <cr>
+" Open all images in current directory in sxiv thumbnail mode -----------------
+nnoremap sx :!sxiv -t %d &<cr>
 
-" Open selected images in gimp -------------------------------------------------
-nnoremap gp :!gimp %f %i & <cr>
+" Open selected images in gimp ------------------------------------------------
+nnoremap gp :!gimp %f %i &<cr>
 
-" Open selected files in gvim --------------------------------------------------
-nnoremap gv :!gvim %f %i & <cr>
+" Open selected files in gvim -------------------------------------------------
+nnoremap gv :!gvim %f %i &<cr>
 
-" Open selected files in xnviewmp ----------------------------------------------
-nnoremap ge :editimage <cr>
+" Open selected files in xnviewmp ---------------------------------------------
+nnoremap ge :editimage<cr>
 
 " Start shell in current directory --------------------------------------------
 nnoremap s :shell<cr>
+
+" Open poetry shell (.venv) ---------------------------------------------------
+nnoremap ,ps :!poetry shell<cr>
 
 " nohlsearch ------------------------------------------------------------------
 nnoremap ,nh :nohlsearch<cr>
@@ -504,8 +507,8 @@ nnoremap cc cw<c-u>
 nnoremap A cw
 
 " Open console in current directory -------------------------------------------
-" nnoremap <wait> ,ot :!$TERMINAL &<cr>
-nnoremap <wait> ,ot :!wezterm start --always-new-process --cwd %d &<cr>
+nnoremap <wait> ,ot :!$TERMINAL &<cr>
+" nnoremap <wait> ,ot :!wezterm start --always-new-process --cwd %d &<cr>
 
 
 " Reload ----------------------------------------------------------------------
