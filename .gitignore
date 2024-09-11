@@ -8,12 +8,14 @@
 .vscode
 
 #  Temp / Cache
+__pycache__
 cache
 .cache
-temp
-.temp
-__pycache__
 .var/app/
+.temp
+temp
+.tmp
+tmp
 
 # Databases
 *.db
