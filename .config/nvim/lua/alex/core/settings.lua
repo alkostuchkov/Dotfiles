@@ -81,7 +81,8 @@ opt.smartcase = true  -- if you include mixed case in your search, assumes you w
 -- Disable backup and swap files - they trigger too many events for file system watchers
 g.nobackup = true
 g.nowritebackup = true
-g.noswapfile = true
+opt.swapfile = false
+-- g.noswapfile = true
 
 -- backspace
 -- Influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode
