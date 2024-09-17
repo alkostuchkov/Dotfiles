@@ -933,6 +933,11 @@ awful.rules.rules = {
 
   -- Set applications to always map on the sertain tag
   {
+    rule_any = { class = { "Brave-browser", "Mozilla Firefox" } },
+    properties = { screen = 1, tag = root.tags()[1] }
+  },
+
+  {
     rule_any = { class = { "dolphin", "Thunar" } },
     properties = { screen = 1, tag = root.tags()[3] }
   },

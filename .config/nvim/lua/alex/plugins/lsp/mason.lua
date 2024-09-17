@@ -45,6 +45,7 @@ return {
         -- "black", -- python formatter
         -- "isort", -- python formatter
         "pylint", -- python linter
+        "flake8", -- python linter
         -- "mypy",   -- python linter
       },
     })
