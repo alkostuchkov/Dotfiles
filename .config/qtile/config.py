@@ -401,7 +401,7 @@ layouts = [
     #  layout.Max(**layout_theme),
     layout.Max(
       margin=4,
-      border_width=0,
+      border_width=3,
       border_focus=colors.get("border_focus", "#535d6c"),
       border_normal=colors.get("border_normal", "#000000")
     ),
