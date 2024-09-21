@@ -858,9 +858,13 @@ focus_on_window_activation = "focus"
 #  focus_on_window_activation = "smart"
 #  focus_on_window_activation = "never"
 
+
 @hook.subscribe.client_new
 def move_new_window_to_certain_group(c):
-    """Moves a new window to certain grop and switchs (if you want) to that group."""
+    """
+    Moves a new window to certain group
+    and switchs (if you want) to that group.
+    """
     if c.name in ("New Tab - Brave", "brave-browser", "Brave-browser"):
         c.togroup(group_names_indexes[1])
         qtile.groups_map[group_names_indexes[1]].cmd_toscreen()
@@ -882,9 +886,11 @@ def move_new_window_to_certain_group(c):
         #  c.togroup(" ")
         c.togroup(group_names_indexes[9])
 
+
 ##### AUTOSTART #####
 @hook.subscribe.startup_once
 def start_once():
+    """ Autostart programs. """
     subprocess.call([f"{HOME}/.config/qtile/scripts/autostart.sh"])
 
 
