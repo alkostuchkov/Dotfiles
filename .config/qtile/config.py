@@ -861,22 +861,18 @@ focus_on_window_activation = "focus"
 @hook.subscribe.client_new
 def move_new_window_to_certain_group(c):
     """Moves a new window to certain grop and switchs (if you want) to that group."""
-    if (c.name == f"{USER} - Thunar" or
-        c.name == "thunar" or
-        c.name == f"{USER} - Dolphin" or
-        c.name == "dolphin"):
-
+    if c.name in ("New Tab - Brave", "brave-browser", "Brave-browser"):
+        c.togroup(group_names_indexes[1])
+        qtile.groups_map[group_names_indexes[1]].cmd_toscreen()
+    if c.name in (f"{USER} - Thunar", "thunar",
+                  f"{USER} - Dolphin", "dolphin"):
         c.togroup(group_names_indexes[3])
         qtile.groups_map[group_names_indexes[3]].cmd_toscreen()
-    if (c.name == "Oracle VM VirtualBox Менеджер" or
-        c.name == "Oracle VM VirtualBox Manager"):
-
+    if c.name in ("Oracle VM VirtualBox Менеджер",
+                  "Oracle VM VirtualBox Manager"):
         c.togroup(group_names_indexes[5])
         qtile.groups_map[group_names_indexes[5]].cmd_toscreen()
-    if c.name == "Telegram":
-        c.togroup(group_names_indexes[6])
-        qtile.groups_map[group_names_indexes[6]].cmd_toscreen()
-    if c.name == "Rakuten Viber":
+    if c.name in ("Telegram", "Rakuten Viber"):
         c.togroup(group_names_indexes[6])
         qtile.groups_map[group_names_indexes[6]].cmd_toscreen()
     if c.name == "GNU Image Manipulation Program":
@@ -970,83 +966,3 @@ if __name__ in ("config", "__main__"):
     #  transient = window.window.get_wm_transient_for()
     #  if dialog or transient:
         #  window.floating = True
-
-
-###############################################################################
-# New EXAMPLE from qtile 0.17.0 for float_rules[]!!!
-#
-# rules specified in `layout.Floating`'s `float_rules` are now evaluated with
-# AND-semantics instead of OR-semantics, i.e. if you specify 2 different
-# property rules, both have to match
-#
-#  from libqtile.config import Match
-#      Match(title=WM_NAME, wm_class=WM_CLASS, role=WM_WINDOW_ROLE)
-#
-#
-#  Match(wm_type="utility"),
-#  Match(wm_type="notification"),
-#  Match(wm_type="toolbar"),
-#  Match(wm_type="splash"),
-#  Match(wm_type="dialog"),
-#  Match(wm_class="file_progress"),
-#  Match(wm_class="confirm"),
-#  Match(wm_class="dialog"),
-#  Match(wm_class="download"),
-#  Match(wm_class="error"),
-#  Match(wm_class="notification"),
-#  Match(wm_class="splash"),
-#  Match(wm_class="toolbar"),
-#  Match(func=lambda c: c.has_fixed_size()),
-###############################################################################
-
-
-# float_rules for qtile version < 0.17.0
-#  floating_layout = layout.Floating(float_rules=[
-    #  # Run the utility of `xprop` to see the wm class and name of an X client.
-    #  {"wname": "synaptic"},  # Synaptic (Preinstall dialog)
-    #  {"wname": "Summary"},  # Synaptic (Summary dialog)
-    #  {"wmclass": "Polkit-gnome-authentication-agent-1"},  # Polkit-gnome-authentication-agent-1
-    #  {"wname": "Properties for *"},  # Dolphin (properties dialog)
-    #  {"wname": "Delete Permanently"},  # Dolphin (delete dialog)
-    #  {"wname": "Preference"},  # Haroopad (md editor)
-    #  {"wname": "Terminator Preferences"},
-    #  {"wname": "Close Button Action"},  # Tixati
-    #  {"wmclass": "com-intellij-updater-Runner"},
-    #  {"wmclass": "minitube"},
-    #  {"wmclass": "CheckEmail"},
-    #  {"wmclass": "GParted"},
-    #  {"wmclass": "keepass2"},
-    #  {"wmclass": "vlc"},
-    #  {"wmclass": "smplayer"},
-    #  {"wmclass": "deadbeef"},
-    #  {"wmclass": "galculator"},
-    #  #  {"wmclass": "VirtualBox Manager"},
-    #  {"wname": "win0"},  # PyCharm
-    #  {"wmclass": "gnome-font-viewer"},
-    #  {"wmclass": "fluxgui"},
-    #  {"wmclass": "xfce4-power-manager-settings"},
-    #  {"wmclass": "pavucontrol"},
-    #  {"wmclass": "gdebi-gtk"},
-    #  {"wmclass": "volumeicon"},
-    #  {"wmclass": "gcolor3"},
-    #  {"wmclass": "gvim"},
-    #  {"wmclass": "qt5ct"},
-    #  {"wmclass": "lxappearance"},
-    #  {"wmclass": "confirm"},
-    #  {"wmclass": "dialog"},
-    #  {"wmclass": "download"},
-    #  {"wmclass": "error"},
-    #  {"wmclass": "file_progress"},
-    #  {"wmclass": "notification"},
-    #  {"wmclass": "splash"},
-    #  {"wmclass": "toolbar"},
-    #  {"wmclass": "confirmreset"},  # gitk
-    #  {"wmclass": "makebranch"},  # gitk
-    #  {"wmclass": "maketag"},  # gitk
-    #  {"wname": "branchdialog"},  # gitk
-    #  {'wname': 'Open File'},
-    #  {"wname": "pinentry"},  # GPG key password entry
-    #  {"wmclass": "ssh-askpass"},  # ssh-askpass
-#  ])
-
-

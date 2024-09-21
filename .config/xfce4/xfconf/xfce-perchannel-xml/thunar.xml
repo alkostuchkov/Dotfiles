@@ -8,8 +8,8 @@
   <property name="last-details-view-column-widths" type="string" value="50,208,50,142,618,87,128,88,622,345,120,148,50,149"/>
   <property name="last-separator-position" type="int" value="236"/>
   <property name="last-show-hidden" type="bool" value="false"/>
-  <property name="last-window-width" type="int" value="1344"/>
-  <property name="last-window-height" type="int" value="714"/>
+  <property name="last-window-width" type="int" value="1358"/>
+  <property name="last-window-height" type="int" value="725"/>
   <property name="misc-single-click" type="bool" value="false"/>
   <property name="misc-middle-click-in-tab" type="bool" value="true"/>
   <property name="last-details-view-visible-columns" type="string" value="THUNAR_COLUMN_DATE_MODIFIED,THUNAR_COLUMN_GROUP,THUNAR_COLUMN_NAME,THUNAR_COLUMN_OWNER,THUNAR_COLUMN_PERMISSIONS,THUNAR_COLUMN_SIZE,THUNAR_COLUMN_TYPE"/>
