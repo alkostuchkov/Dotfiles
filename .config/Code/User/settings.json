@@ -14,8 +14,8 @@
     "*.ipynb": "jupyter.notebook.ipynb"
   },
   // "editor.fontFamily": "'mplus Nerd Font', 'Monoid Nerd Font Mono', 'Sarasa Mono SC Nerd', 'InconsolataLGC Nerd Font Mono', 'Iosevka', 'Recursive Mono Casual Static', 'Cascadia Mono PL', 'Rec Mono Casual', 'Cascadia Code PL Semilight', 'Iosevka', 'Pragmata Pro', 'JetBrains Mono Light', 'Source Code Pro', 'Consolas NF', 'JetBrains Mono', 'UbuntuMono Nerd Font', 'Menlo', 'Trim Mono', 'Code New Roman', 'Operator Mono Book', 'IBM Plex Mono Medium'",
-  "editor.fontFamily": "'JetBrainsMono NF'",
-  "editor.fontSize": 19, //mplus Nerd Font
+  "editor.fontFamily": "'Mononoki Nerd Font'",
+  "editor.fontSize": 21, //mplus Nerd Font
   // "editor.fontSize": 16,
   // "editor.lineHeight": 25, //mplus Nerd Font
 
@@ -42,16 +42,16 @@
       "color": "red"
     }
   ],
-  "debug.console.fontFamily": "'JetBrainsMono NF'",
-  "debug.console.fontSize": 19, //mplus Nerd Font
+  "debug.console.fontFamily": "'Mononoki Nerd Font'",
+  "debug.console.fontSize": 21, //mplus Nerd Font
   // "debug.console.fontSize": 16,
   // "terminal.explorerKind": "external",
   "terminal.integrated.cursorStyle": "block",
   "terminal.external.linuxExec": "alacritty",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.defaultProfile.linux": "fish",
-  "terminal.integrated.fontFamily": "'JetBrainsMono NF'",
-  "terminal.integrated.fontSize": 19, //mplus Nerd Font
+  "terminal.integrated.fontFamily": "'Mononoki Nerd Font'",
+  "terminal.integrated.fontSize": 21, //mplus Nerd Font
   // "terminal.integrated.fontSize": 16,
   "[python]": {},
   "python.insidersChannel": "off",
@@ -164,5 +164,8 @@
     "editor.formatOnSave": true,
     "editor.formatOnType": false,
     "editor.defaultFormatter": "ms-python.autopep8"
-  }
+  },
+  "dart.flutterSdkPath": "/home/alexander/.local/share/flutter",
+  "dart.flutterHotReloadOnSave": "all",
+  "dart.hotReloadOnSave": "manual"
 }
