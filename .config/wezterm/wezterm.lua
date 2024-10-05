@@ -28,7 +28,7 @@ config.colors = {
 -- config.font = wezterm.font("DejaVu Sans Mono")
 -- config.font = wezterm.font("MesloLGS Nerd Font")
 -- config.font = wezterm.font("Hack Nerd Font")
-config.font = wezterm.font("Mononoki Nerd Font")
+-- config.font = wezterm.font("Mononoki Nerd Font")
 -- config.font = wezterm.font("Iosevka")
 -- config.font = wezterm.font("FiraMono Nerd Font")
 -- config.font = wezterm.font("FiraCode Nerd Font")
@@ -38,7 +38,27 @@ config.font = wezterm.font("Mononoki Nerd Font")
 -- config.font = wezterm.font("Menlo")
 -- config.font = wezterm.font("Source Code Pro")
 
-config.font_size = 19
+config.font = wezterm.font { family = "FiraMono Nerd Font" }
+config.font_rules = {
+  {
+    intensity = "Bold",
+    italic = true,
+    font = wezterm.font {
+      family = "Fira Mono",
+      weight = "Bold",
+      style = "Italic",
+    },
+  },
+  {
+    intensity = "Normal",
+    italic = true,
+    font = wezterm.font {
+      family = "Fira Mono",
+      style = "Italic",
+    },
+  },
+}
+config.font_size = 18
 -- config.line_height = 1.10 -- for Hack Nerd Font
 -- config.line_height = 1.15 -- for Consolas NF
 -- config.line_height = 1.05 -- for Mononoki Nerd Font
@@ -48,35 +68,6 @@ config.font_size = 19
 config.bold_brightens_ansi_colors = true
 config.freetype_load_target = "Light"
 config.freetype_render_target = "HorizontalLcd"
-
--- config.font_rules = {
---   {
---     intensity = "Bold",
---     italic = true,
---     font = wezterm.font {
---       family = "JetBrainsMono NF",
---       weight = "Bold",
---       style = "Italic",
---     },
---   },
---   {
---     intensity = "Bold",
---     italic = false,
---     font = wezterm.font {
---       family = "JetBrainsMono NF",
---       weight = "Bold",
---       style = "Normal",
---     },
---   },
---   {
---     intensity = "Normal",
---     italic = true,
---     font = wezterm.font {
---       family = "JetBrainsMono NF",
---       style = "Italic",
---     },
---   },
--- }
 
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
@@ -98,6 +89,17 @@ config.default_cursor_style = "SteadyBlock"
 -- Keybindings
 local act = wezterm.action
 config.keys = {
+  -- Switch between tabs
+  {
+    key = "Tab",
+    mods = "CTRL",
+    action = act.DisableDefaultAssignment,
+  },
+  {
+    key = "Tab",
+    mods = "CTRL|SHIFT",
+    action = act.DisableDefaultAssignment,
+  },
   -- Toggle full screen
   {
     key = "Enter",

@@ -21,6 +21,7 @@ size = 16
 # family = "mplus Nerd Font"
 # family = "Sarasa Mono SC Nerd"
 # family = "Consolas NF"
+# family = "FiraMono Nerd Font"
 family = "JetBrainsMono Nerd Font"
 style = "Bold"
 # style = "Semibold"
@@ -30,6 +31,7 @@ style = "Bold"
 # family = "Sarasa Mono SC Nerd"
 # style = "Semibold Italic"
 # family = "Consolas NF"
+# family = "Fira Mono"
 family = "JetBrainsMono Nerd Font"
 style = "Bold Italic"
 
@@ -37,6 +39,7 @@ style = "Bold Italic"
 # family = "mplus Nerd Font"
 # family = "Sarasa Mono SC Nerd"
 # family = "Consolas NF"
+# family = "Fira Mono"
 family = "JetBrainsMono Nerd Font"
 style = "Italic"
 
@@ -44,12 +47,14 @@ style = "Italic"
 # family = "mplus Nerd Font"
 # family = "Sarasa Mono SC Nerd"
 # family = "Consolas NF"
+# family = "FiraMono Nerd Font"
 family = "JetBrainsMono Nerd Font"
 # style = "Light"
 style = "Regular"
 
 [font.offset]
 x = 0
+# y = 0
 # y = -8 # mplus Nerd Font
 # y = -3 # Sarasa Mono SC Nerd
 y = -1 # JetBrainsMono Nerd Font
