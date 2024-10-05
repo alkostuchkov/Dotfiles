@@ -29,6 +29,7 @@ config.colors = {
 -- config.font = wezterm.font("MesloLGS Nerd Font")
 -- config.font = wezterm.font("Hack Nerd Font")
 config.font = wezterm.font("Mononoki Nerd Font")
+-- config.font = wezterm.font("Iosevka")
 -- config.font = wezterm.font("FiraMono Nerd Font")
 -- config.font = wezterm.font("FiraCode Nerd Font")
 -- config.font = wezterm.font("FiraCode Nerd Font Ret")
@@ -40,7 +41,8 @@ config.font = wezterm.font("Mononoki Nerd Font")
 config.font_size = 19
 -- config.line_height = 1.10 -- for Hack Nerd Font
 -- config.line_height = 1.15 -- for Consolas NF
-config.line_height = 1.05 -- for Mononoki Nerd Font
+-- config.line_height = 1.05 -- for Mononoki Nerd Font
+-- config.line_height = 0.90 -- for Iosevka
 -- config.cell_width = 1
 
 config.bold_brightens_ansi_colors = true
