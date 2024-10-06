@@ -470,6 +470,12 @@ nnoremap gp :!gimp %f %i &<cr>
 " Open selected files in gvim -------------------------------------------------
 nnoremap gv :!gvim %f %i &<cr>
 
+" Open selected files in vim (kitty) ------------------------------------------
+nnoremap gi :!kitty -e vim %f %i &<cr>
+
+" Open selected files in vim (wezterm) ----------------------------------------
+nnoremap gw :!wezterm start --always-new-process --cwd %d -e vim %c &<cr>
+
 " Open selected files in xnviewmp ---------------------------------------------
 nnoremap ge :editimage<cr>
 
@@ -477,11 +483,14 @@ nnoremap ge :editimage<cr>
 nnoremap s :shell<cr>
 
 " Open poetry shell (.venv) ---------------------------------------------------
-nnoremap <wait> ,op :!$TERMINAL -e poetry shell &<cr>
+nnoremap <wait> ,,pt :!$TERMINAL -e poetry shell &<cr>
+nnoremap <wait> ,,pw :!wezterm start --always-new-process --cwd %d -e poetry shell &<cr>
+nnoremap <wait> ,,pk :!kitty -e poetry shell &<cr>
 
 " Open console in current directory -------------------------------------------
-nnoremap <wait> ,ot :!$TERMINAL &<cr>
-" nnoremap <wait> ,ot :!wezterm start --always-new-process --cwd %d &<cr>
+nnoremap <wait> ,,t :!$TERMINAL &<cr>
+nnoremap <wait> ,,w :!wezterm start --always-new-process --cwd %d &<cr>
+nnoremap <wait> ,,k :!kitty %i &<cr>
 
 " nohlsearch ------------------------------------------------------------------
 nnoremap ,nh :nohlsearch<cr>
@@ -589,7 +598,7 @@ nnoremap <f4> :!$TERMINAL -e vim %f &<cr>
 nnoremap <f5> :cp<cr>
 nnoremap <f6> :mv<cr>
 nnoremap <f7> :mkdir<space>
-nnoremap a :create<space>
+nnoremap <c-a> :create<space>
 nnoremap <f10> :q<cr>
 " nnoremap <f11> :<cr>
 " nnoremap <f12> :<cr>
