@@ -34,6 +34,7 @@ return {
         "lua_ls",
         "pyright",
         "gopls",
+        "ast_grep", -- Dart (Flutter)
       },
     })
 
@@ -47,6 +48,7 @@ return {
         "pylint", -- python linter
         "flake8", -- python linter
         -- "mypy",   -- python linter
+        "ast_grep", -- Dart (Flutter)
       },
     })
   end,
