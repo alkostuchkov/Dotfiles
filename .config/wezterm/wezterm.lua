@@ -38,7 +38,8 @@ config.colors = {
 -- config.font = wezterm.font("Menlo")
 -- config.font = wezterm.font("Source Code Pro")
 
-config.font = wezterm.font { family = "FiraMono Nerd Font" }
+-- config.font = wezterm.font { family = "FiraMono Nerd Font" }
+config.font = wezterm.font { family = "Fira Mono" }
 config.font_rules = {
   {
     intensity = "Bold",
