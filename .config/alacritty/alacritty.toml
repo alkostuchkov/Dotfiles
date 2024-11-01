@@ -1,5 +1,6 @@
-import = ["~/.config/alacritty/colors/everforest_dark.toml"]
 # "window.opacity" = 1.0
+[general]
+import = ["~/.config/alacritty/colors/everforest_dark.toml"]
 
 [colors]
 draw_bold_text_with_bright_colors = false
