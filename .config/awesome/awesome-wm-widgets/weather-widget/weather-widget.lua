@@ -145,10 +145,10 @@ local function worker(user_args)
     local units = args.units or 'metric'
     local time_format_12h = args.time_format_12h
     local both_units_widget = args.both_units_widget or false
-    local show_hourly_forecast = args.show_hourly_forecast
-    local show_daily_forecast = args.show_daily_forecast
     local icon_pack_name = args.icons or 'weather-underground-icons'
     local icons_extension = args.icons_extension or '.png'
+    local show_daily_forecast = args.show_daily_forecast or false
+    local show_hourly_forecast = args.show_hourly_forecast or false
     local timeout = args.timeout or 120
 
     local ICONS_DIR = WIDGET_DIR .. '/icons/' .. icon_pack_name .. '/'

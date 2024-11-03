@@ -32,6 +32,7 @@ require("awful.hotkeys_popup.keys")
 -- local pacman_widget = require("awesome-wm-widgets/pacman-widget/pacman")
 local xbps_widget = require("awesome-wm-widgets/xbps-widget/xbps")
 local weather_widget = require("awesome-wm-widgets/weather-widget/weather-widget")
+local weather_api_widget = require("awesome-wm-widgets/weather-api-widget/weather-api-widget")
 local cpu_widget = require("awesome-wm-widgets/cpu-widget/cpu-widget")
 local ram_widget = require("awesome-wm-widgets/ram-widget/ram-widget")
 local calendar_widget = require("awesome-wm-widgets/calendar-widget/calendar-widget")
@@ -327,7 +328,23 @@ awful.screen.connect_for_each_screen(function(s)
       -- icon_size = 17,
       -- }),
       weather_widget({
-        api_key = "7834197c2338888258f8cb94ae14ef49",
+        -- api_key = "7834197c2338888258f8cb94ae14ef49",
+        api_key = "49fffeb8289eb5345f3b2caf03bf3777",
+        coordinates = { 52.4345, 30.9754 },
+        time_format_12h = false,
+        units = "metric",
+        both_units_widget = false,
+        font_name = "Ubuntu Nerd Font",
+        icons = "VitalyGorbachev",
+        icons_extension = ".svg",
+        show_hourly_forecast = true,
+        -- show_hourly_forecast = false,
+        show_daily_forecast = true,
+        -- timeout = 1800,
+        timeout = 3600,
+      }),
+      weather_api_widget({
+        api_key = "69266794b403496387c163813240311",
         coordinates = { 52.4345, 30.9754 },
         time_format_12h = false,
         units = "metric",
@@ -337,7 +354,8 @@ awful.screen.connect_for_each_screen(function(s)
         icons_extension = ".svg",
         show_hourly_forecast = true,
         show_daily_forecast = true,
-        timeout = 1800,
+        -- timeout = 1800,
+        timeout = 3600,
       }),
       -- sep_widget({
       -- font_name = "Sarasa Mono SC Nerd 17",
