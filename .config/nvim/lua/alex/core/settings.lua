@@ -45,10 +45,10 @@ vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
 -- opt.formatoptions:remove({ "c", "r", "o" }) -- doesn't work
 
-opt.shiftwidth = 2   -- 2 spaces for indent width
-opt.tabstop = 2      -- 2 spaces for tabs (prettier default)
+opt.shiftwidth = 4   -- 2 spaces for indent width
+opt.tabstop = 4      -- 2 spaces for tabs (prettier default)
 opt.expandtab = true -- expand tab to spaces
-opt.softtabstop = 2
+opt.softtabstop = 4
 
 opt.syntax = "ON"
 -- Данная вариация работает как wrap,... но переносит строчки не посимвольно, а по словам

@@ -347,13 +347,15 @@ mark d ~/Desktop
 mark w ~/Downloads
 mark b ~/OS/Linux/+backup
 mark p ~/Projects
+mark r ~/Programs
+mark f ~/forProgramming
 mark c ~/.config
 mark s ~/.myScripts
 mark l ~/.local/share
 mark a ~/.cache
 
-mark M /run/media
-" mark M /media
+" mark M /run/media
+mark M /media
 mark R /
 
 "##############################################################################
