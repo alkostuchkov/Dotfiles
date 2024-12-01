@@ -16,7 +16,7 @@ unfocused_hollow = true
 TERM = "xterm-256color"
 
 [font]
-size = 16
+size = 15
 
 [font.bold]
 # family = "mplus Nerd Font"
@@ -62,7 +62,7 @@ x = 0
 # y = 0
 # y = -8 # mplus Nerd Font
 # y = -3 # Sarasa Mono SC Nerd
-y = -1 # JetBrainsMono Nerd Font
+y = -2 # JetBrainsMono Nerd Font
 # y = 2 # Consolas NF
 
 [[keyboard.bindings]]

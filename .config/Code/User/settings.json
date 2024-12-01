@@ -169,5 +169,14 @@
   "dart.flutterSdkPath": "/home/alexander/.local/share/flutter",
   "dart.flutterHotReloadOnSave": "all",
   "dart.hotReloadOnSave": "manual",
-  "editor.inlayHints.fontFamily": "Fira Mono"
+  "editor.inlayHints.fontFamily": "Fira Mono",
+  "colorize.include": [
+    "**/*.css",
+    "**/*.scss",
+    "**/*.sass",
+    "**/*.less",
+    "**/*.styl",
+    "**/*.py",
+    "**/*.kv"
+  ]
 }

@@ -38,7 +38,7 @@
 	<name>Open WezTerm here</name>
 	<submenu></submenu>
 	<unique-id>1721922767742048-1</unique-id>
-	<command>$TERMINAL start --cwd %f</command>
+	<command>wezterm-gui start --cwd %f</command>
 	<description>Open WezTerm here</description>
 	<range></range>
 	<patterns>*</patterns>
@@ -49,7 +49,7 @@
 	<name>Open WezTerm as Root here</name>
 	<submenu></submenu>
 	<unique-id>1721922876119763-2</unique-id>
-	<command>pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY $TERMINAL start --cwd %f</command>
+	<command>pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY wezterm-gui start --cwd %f</command>
 	<description>Open WezTerm as Root here</description>
 	<range></range>
 	<patterns>*</patterns>

@@ -62,12 +62,12 @@ filetype *.ps,*.eps,*.ps.gz
   \ gv %c %i &,
 
 " Audio -----------------------------------------------------------------------
-filextype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus
+filextype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus,*.aac
   \ {View using deadbeef}
   \ deadbeef %f %i &,
   \ {Play using MPlayer}
   \ mplayer %f %i &
-filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus
+filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus,*.aac
   \ {View using cmus}
   \ $TERMINAL -e cmus %f &,
   \ {Play using ffplay}
@@ -178,7 +178,7 @@ filetype *.asc
   \ !!gpg --verify %c,
 
 " Torrent ---------------------------------------------------------------------
-filextype *.torrent tixati %f &
+filextype *.torrent qbittorrent %f %i &, tixati %f &
 fileviewer *.torrent dumptorrent -v %c
 
 " FuseZipMount ----------------------------------------------------------------
