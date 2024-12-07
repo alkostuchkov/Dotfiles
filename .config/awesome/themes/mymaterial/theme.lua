@@ -13,7 +13,8 @@ local home = os.getenv("HOME")
 local theme = {}
 theme.dir = home.."/.config/awesome/themes"
 
-theme.font = "Sarasa Mono SC Nerd 12"
+-- theme.font = "Sarasa Mono SC Nerd 12"
+theme.font = "Iosevka 12"
 theme.taglist_font = "Ubuntu Nerd Font 12"
 
 theme.bg_normal = "#263238"
