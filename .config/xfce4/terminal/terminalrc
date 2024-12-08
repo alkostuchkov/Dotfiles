@@ -1,6 +1,6 @@
 [Configuration]
 BackgroundDarkness=0.970000
-FontName=JetBrains Mono Regular 16
+FontName=MesloLGS Nerd Font 17
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBordersDefault=FALSE
@@ -41,5 +41,5 @@ ColorForeground=#d3c6aa
 ColorBackground=#2d353b
 MiscRightClickAction=TERMINAL_RIGHT_CLICK_ACTION_CONTEXT_MENU
 ShortcutsNoHelpkey=TRUE
-ColorBoldIsBright=FALSE
+ColorBoldIsBright=TRUE
 
