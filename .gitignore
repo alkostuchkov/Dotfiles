@@ -23,3 +23,6 @@ tmp
 *.sqlite
 *.sqlite3
 
+# Virtualenvironments
+.venv
+venv
