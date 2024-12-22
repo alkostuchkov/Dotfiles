@@ -70,8 +70,8 @@ end
 
 -- {{{ Variable definitions
 local TERMINAL = "wezterm"
-local EXTRA_TERMINAL = "kitty"
-local ONEMORE_TERMINAL = "alacritty"
+local EXTRA_TERMINAL = "alacritty"
+local ONEMORE_TERMINAL = "kitty"
 local EDITOR = os.getenv("EDITOR") or "vim"
 local EDITOR_CMD = TERMINAL .. " -e " .. EDITOR
 local SHELL = os.getenv("SHELL")
