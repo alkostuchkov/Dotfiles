@@ -69,9 +69,9 @@ end
 -- }}}
 
 -- {{{ Variable definitions
-local TERMINAL = "alacritty"
-local EXTRA_TERMINAL = "wezterm"
-local ONEMORE_TERMINAL = "kitty"
+local TERMINAL = "wezterm"
+local EXTRA_TERMINAL = "kitty"
+local ONEMORE_TERMINAL = "alacritty"
 local EDITOR = os.getenv("EDITOR") or "vim"
 local EDITOR_CMD = TERMINAL .. " -e " .. EDITOR
 local SHELL = os.getenv("SHELL")
