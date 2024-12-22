@@ -100,7 +100,7 @@ fn='Iosevka-18:normal'
 # DMENU="rofi -dmenu -theme-str 'window {width: 80%;}' -p"
 DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
 
-# TERMINAL="alacritty"
+TERMINAL="wezterm"
 terminal=${TERMINAL-"xterm"}
 editor=${EDITOR-"vi"}
 
@@ -114,8 +114,8 @@ if [[ "$choice" == "quit" ]]; then
     echo "Program terminated." && exit 1
 elif [[ "$choice" ]]; then
     conf=$(printf '%s\n' "${choice}" | awk '{print $NF}')
-    gvim $conf  # gvim is either a link to neovim-qt or just gvim
-    # $terminal -e $editor $conf
+    # gvim $conf  # gvim is either a link to neovim-qt or just gvim
+    $terminal -e $editor $conf
     # # $terminal -e $SHELL -c "vim $conf"
     # # alacritty -e $SHELL -c "vim $conf"
     # # $terminal -e "$SHELL -c 'vim $conf'"
