@@ -40,6 +40,7 @@ options=(
 "i3pystatus - $HOME/.config/i3pystatus/config.py"
 "kitty - $HOME/.config/kitty/kitty.conf"
 "gvim - $HOME/.config/nvim/ginit.vim"
+"micro - $HOME/.config/micro/settings.json"
 "nvim-qt - $HOME/.config/nvim-qt/nvim-qt.conf"
 "nvim - $HOME/.config/nvim/init.vim"
 "picom - $HOME/.config/picom/picom.conf"
