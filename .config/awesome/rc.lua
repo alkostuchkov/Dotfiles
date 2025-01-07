@@ -962,7 +962,8 @@ awful.rules.rules = {
   },
 
   {
-    rule = { class = "VirtualBox Manager" },
+    -- rule = { class = "VirtualBox Manager" },
+    rule_any = { class = { "VirtualBox Manager", "virt-manager", "Virt-manager" } },
     properties = { screen = 1, tag = root.tags()[5] }
   },
 

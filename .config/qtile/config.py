@@ -873,7 +873,9 @@ def move_new_window_to_certain_group(c):
         c.togroup(group_names_indexes[3])
         qtile.groups_map[group_names_indexes[3]].cmd_toscreen()
     if c.name in ("Oracle VM VirtualBox Менеджер",
-                  "Oracle VM VirtualBox Manager"):
+                  "Oracle VM VirtualBox Manager",
+                  "virt-manager",
+                  "Virt-manager",):
         c.togroup(group_names_indexes[5])
         qtile.groups_map[group_names_indexes[5]].cmd_toscreen()
     if c.name in ("Telegram", "Rakuten Viber"):
