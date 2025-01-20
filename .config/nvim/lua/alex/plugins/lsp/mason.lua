@@ -28,27 +28,27 @@ return {
       -- list of servers for mason to install
       ensure_installed = {
         "bashls",
-        "html",
-        "cssls",
-        "clangd",
+        -- "html",
+        -- "cssls",
+        -- "clangd",
         "lua_ls",
         "pyright",
-        "gopls",
-        "ast_grep", -- Dart (Flutter)
+        -- "gopls",
+        -- "ast_grep", -- Dart (Flutter)
       },
     })
 
     mason_tool_installer.setup({
       ensure_installed = {
-        "prettier", -- prettier formatter
-        -- "stylua", -- lua formatter
-        -- "autopep8", -- python formatter
-        -- "black", -- python formatter
-        -- "isort", -- python formatter
+        -- "prettier", -- prettier formatter
+        -- -- "stylua", -- lua formatter
+        -- -- "autopep8", -- python formatter
+        -- -- "black", -- python formatter
+        -- -- "isort", -- python formatter
         "pylint", -- python linter
         "flake8", -- python linter
         -- "mypy",   -- python linter
-        "ast_grep", -- Dart (Flutter)
+        -- "ast_grep", -- Dart (Flutter)
       },
     })
   end,
