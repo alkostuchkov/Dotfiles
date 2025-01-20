@@ -179,6 +179,8 @@ alias v='vim'
 alias f='ranger'
 alias vf='vifm'
 alias emacs="emacsclient -c -a 'emacs'"
+# poetry python (activate environment) ------------------------------------------------------------------
+alias ap="source \"\$(poetry env info --path)/bin/activate\""
 
 ###############################################################################
 # Source
