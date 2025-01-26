@@ -8,9 +8,9 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-man() {
-    command man "$@" | eval ${MANPAGER}
-}
+# man() {
+#     command man "$@" | eval ${MANPAGER}
+# }
 
 ###############################################################################
 # EXPORTs

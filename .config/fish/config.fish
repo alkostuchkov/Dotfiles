@@ -20,7 +20,6 @@ set VISUAL gvim # gvim is either a link to nvim-qt or just gvim
 set TERM xterm-256color
 set TERMINAL alacritty
 set BROWSER brave
-# set MANPAGER "bat man -p"  # theme moved to the .config/bat/config
 set PAGER bat
 set MANPAGER "sh -c 'col -bx | bat -l man -p'" # theme moved to the .config/bat/config
 # set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"  # $MANPAGER use batcat to read mans
@@ -53,9 +52,9 @@ set_colorscheme_ayu_Mirage
 ###############################################################################
 # FUNCTIONS
 ###############################################################################
-function man
-    command man "$argv" | eval $MANPAGER
-end
+# function man
+#     command man "$argv" | eval $MANPAGER
+# end
 
 # SET EITHER DEFAULT EMACS MODE OR VI MODE ------------------------------------
 function fish_user_key_bindings
