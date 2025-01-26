@@ -16,10 +16,10 @@ echo "4) All files."
 read choice
 
 case ${choice} in
-  1) what_to_add="deleted:";;
-  2) what_to_add="modified:";;
-  3) what_to_add="new file:";;
-  4) what_to_add="deleted:|modified:|new file:";;
+  1) what_to_add="deleted:|удалено:";;
+  2) what_to_add="modified:|изменено";;
+  3) what_to_add="new file:|новый файл";;
+  4) what_to_add="deleted:|modified:|new file:|удалено:|изменено:|новый файл:";;
   *) echo -e "Wrong choice.\nExit."; exit $E_WRONG_CHOICE;;
 esac
 
