@@ -2,9 +2,11 @@
 unset COLUMNS
 unset LINES
 
-man() {
-    command man "$@" | eval ${MANPAGER}
-}
+# # this is in .profile
+# man() {
+#     command man "$@" | eval ${MANPAGER}
+# }
+
 ###############################################################################
 # EXPORTs
 ###############################################################################

@@ -37,11 +37,12 @@ export BROWSER="brave"
 # #export EDITOR="emacs -nw"
 # # export QT_QPA_PLATFORMTHEME="qt5ct"
 # # export MANPAGER="sh -c 'col -bx | bat --theme gruvbox-dark -l man -p'"  # $MANPAGER use batcat to read mans
-export PAGER="bat"
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"  # theme moved to the .config/bat/config
-# export MANPAGER="bat man -p"  # theme moved to the .config/bat/config
+
+# export PAGER="bat"
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"  # theme moved to the .config/bat/config
+# # export MANPAGER="bat man -p"  # theme moved to the .config/bat/config
 # export ANDROID_SDK="$HOME/Programs/Android_SDK"
-#
+
 # export XDG_CONFIG_HOME="$HOME/.config"
 # export XDG_DATA_HOME="$HOME/.local/share"
 # export XDG_DATA_DIRS="$HOME/.local/share/flatpak/exports/share"
