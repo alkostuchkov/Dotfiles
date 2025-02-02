@@ -623,7 +623,7 @@ def init_widgets_list():
             #  padding=10
         #  ),
         widget.KeyboardKbdd(
-            configured_keyboards=["🇺🇸 ", "🇷🇺 "],
+            configured_keyboards=["🇺🇸 ", "🇷🇺 ", "🇧🇾"],
             #  configured_keyboards=["US", "RU"],
             #  display_map={"us": "🇺🇸", "ru": "🇷🇺"},
             #  option="grp:alt_shift_toggle",
