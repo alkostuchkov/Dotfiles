@@ -1084,7 +1084,7 @@ end
 
 run_once({
   "xxkb",
-  "setxkbmap -layout us,ru -option grp:caps_toggle",
+  "setxkbmap -layout us,ru,by -option grp:caps_toggle",
   -- "/usr/lib/xfce4/notifyd/xfce4-notifyd", -- no need on AwesomeWM
   -- /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1, -- for Debian
   -- "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1", -- for Arch

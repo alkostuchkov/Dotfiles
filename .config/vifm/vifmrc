@@ -475,7 +475,7 @@ nnoremap gv :!gvim %f %i &<cr>
 " Open selected files in vim (different terminals) ----------------------------
 nnoremap ga :!alacritty -e vim %f &<cr>
 nnoremap gk :!kitty -e vim %f %i &<cr>
-nnoremap gw :!wezterm start --always-new-process --cwd %d -e vim %c &<cr>
+nnoremap gw :!wezterm start --always-new-process --cwd %d -e vim %f &<cr>
 
 " Open selected files as root in vim (different terminals) --------------------
 nnoremap gra :!pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY alacritty --working-directory %d -e vim %f %i &<cr>

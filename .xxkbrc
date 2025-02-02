@@ -1,3 +1,4 @@
+# XXkb.image.path: /home/alexander/.xxkb/
 XXkb.image.path: /usr/share/xxkb/
 XXkb.mainwindow.type:  tray
 XXkb.group.base: 1
@@ -5,7 +6,7 @@ XXkb.group.alt: 2
 XXkb.mainwindow.enable:  yes
 XXkb.mainwindow.image.1: us22++.xpm
 XXkb.mainwindow.image.2: ru22++.xpm
-XXkb.mainwindow.image.3:
+XXkb.mainwindow.image.3: by22++.xpm
 XXkb.mainwindow.image.4:
 XXkb.mainwindow.appicon:  yes
 XXkb.mainwindow.geometry:  22x22+1+1
@@ -16,4 +17,14 @@ XXkb.controls.add_when_change: no
 XXkb.controls.focusout: no
 XXkb.mainwindow.xpm.1: us22++.xpm
 XXkb.mainwindow.xpm.2: ru22++.xpm
+XXkb.mainwindow.xpm.3: by22++.xpm
+XXkb.mainwindow.xpm.4:
 XXkb.mainwindow.label.enable: no
+# XXkb.mainwindow.label.enable: yes
+# XXkb.mainwindow.label.font: Iosevka 15
+# XXkb.mainwindow.label.text.1: US
+# XXkb.mainwindow.label.text.2: RU
+# XXkb.mainwindow.label.text.3: BY
+# XXkb.mainwindow.label.background: #000000
+# XXkb.mainwindow.label.foreground: #ffffff
+XXkb.controls.two_state: no
