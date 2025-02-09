@@ -865,11 +865,15 @@ def move_new_window_to_certain_group(c):
     Moves a new window to certain group
     and switchs (if you want) to that group.
     """
-    if c.name in ("New Tab - Brave", "brave-browser", "Brave-browser"):
+    if c.name in ("New Tab - Brave",
+                  "brave-browser",
+                  "Brave-browser",
+                  "Mozilla Firefox",
+                  "firefox",):
         c.togroup(group_names_indexes[1])
         qtile.groups_map[group_names_indexes[1]].cmd_toscreen()
     if c.name in (f"{USER} - Thunar", "thunar",
-                  f"{USER} - Dolphin", "dolphin"):
+                  f"{USER} - Dolphin", "dolphin",):
         c.togroup(group_names_indexes[3])
         qtile.groups_map[group_names_indexes[3]].cmd_toscreen()
     if c.name in ("Oracle VM VirtualBox Менеджер",
