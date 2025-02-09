@@ -472,16 +472,6 @@ nnoremap gp :!gimp %f %i &<cr>
 " Open selected files in gvim -------------------------------------------------
 nnoremap gv :!gvim %f %i &<cr>
 
-" Open selected files in vim (different terminals) ----------------------------
-nnoremap ga :!alacritty -e vim %f &<cr>
-nnoremap gk :!kitty -e vim %f %i &<cr>
-nnoremap gw :!wezterm start --always-new-process --cwd %d -e vim %f &<cr>
-
-" Open selected files as root in vim (different terminals) --------------------
-nnoremap gra :!pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY alacritty --working-directory %d -e vim %f %i &<cr>
-nnoremap grk :!pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY kitty -d %d -e vim %f %i &<cr>
-nnoremap grw :!pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY wezterm-gui start --cwd %d -e vim %f %i &<cr>
-
 " Open selected files in xnviewmp ---------------------------------------------
 nnoremap ge :editimage<cr>
 
@@ -504,6 +494,16 @@ nnoremap <wait> ,,rt :!pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY $TERMI
 nnoremap <wait> ,,ra :!pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY alacritty &<cr>
 nnoremap <wait> ,,rw :!pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY wezterm-gui start --cwd %d %i &<cr>
 nnoremap <wait> ,,rk :!pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY kitty %i &<cr>
+
+" Open selected files in vim (different terminals) ----------------------------
+nnoremap ,,va :!alacritty -e vim %f &<cr>
+nnoremap ,,vk :!kitty -e vim %f %i &<cr>
+nnoremap ,,vw :!wezterm start --always-new-process --cwd %d -e vim %f &<cr>
+
+" Open selected files as root in vim (different terminals) --------------------
+nnoremap ,,rva :!pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY alacritty --working-directory %d -e vim %f %i &<cr>
+nnoremap ,,rvk :!pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY kitty -d %d -e vim %f %i &<cr>
+nnoremap ,,rvw :!pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY wezterm-gui start --cwd %d -e vim %f %i &<cr>
 
 " nohlsearch ------------------------------------------------------------------
 nnoremap ,nh :nohlsearch<cr>
