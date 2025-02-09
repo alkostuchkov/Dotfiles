@@ -2,6 +2,9 @@
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
 
+-- For calendar_widget
+os.setlocale(os.getenv("LANG"))
+
 -- Standard awesome library
 local gears = require("gears") --Utilities such as color parsing and objects
 local awful = require("awful") --Everything related to window managment
