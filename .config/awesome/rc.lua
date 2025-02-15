@@ -349,7 +349,8 @@ awful.screen.connect_for_each_screen(function(s)
       -- }),
       weather_api_widget({
         api_key = "69266794b403496387c163813240311",
-        coordinates = { 52.4345, 30.9754 },
+        -- coordinates = { 52.4345, 30.9754 },
+        coordinates = { 52.44, 30.98 },
         time_format_12h = false,
         units = "metric",
         both_units_widget = false,

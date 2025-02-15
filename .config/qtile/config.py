@@ -65,9 +65,9 @@ def parse_windowname(text):
 ##### VARIABLES #####
 mod = "mod4"
 alt = "mod1"
-my_term = "alacritty"
+my_term = "wezterm"
 #  my_term_extra = "xfce4-terminal"
-my_term_extra = "wezterm"
+my_term_extra = "alacritty"
 onemore_term = "kitty"
 my_font = "Ubuntu"
 my_nerd_font = "Ubuntu Nerd Font"
