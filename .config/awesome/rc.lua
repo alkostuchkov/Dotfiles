@@ -3,7 +3,7 @@
 pcall(require, "luarocks.loader")
 
 -- For calendar_widget
-os.setlocale(os.getenv("LANG"))
+-- os.setlocale(os.getenv("LANG"))
 
 -- Standard awesome library
 local gears = require("gears") --Utilities such as color parsing and objects
@@ -350,6 +350,7 @@ awful.screen.connect_for_each_screen(function(s)
       weather_api_widget({
         api_key = "69266794b403496387c163813240311",
         -- coordinates = { 52.4345, 30.9754 },
+        -- coordinates = { 53.9, 27.57 }, -- Minsk
         coordinates = { 52.44, 30.98 },
         time_format_12h = false,
         units = "metric",

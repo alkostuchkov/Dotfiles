@@ -41,9 +41,9 @@ local function show_warning(message)
     }
 end
 
-if SYS_LANG ~= LANG then
-    show_warning("Your language is not supported yet. Language set to English")
-end
+-- if SYS_LANG ~= LANG then
+--     show_warning("Your language is not supported yet. Language set to English")
+-- end
 
 local weather_api_widget = {}
 local warning_shown = false
