@@ -5,7 +5,14 @@
 # compton --config $HOME/.config/compton.conf &
 # diodon &
 # /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
-/usr/bin/kbdd &
+/usr/bin/xxkb &
+# BUG:
+# Doesn't work any more because of dbus-next?
+# /usr/bin/kbdd &
+# Qtile 0.30.0, released 2025-01-06:
+#     !!! breaking changes !!!
+#       - dbus-fast is now required for dbus support.
+#         dbus-next was removed as the package is unmaintained.
 setxkbmap -layout us,ru,by -option grp:caps_toggle &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 # /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &  # for Arch
