@@ -623,22 +623,20 @@ def init_widgets_list():
             #  padding=10
         #  ),
         # BUG:
-# Doesn't work any more because of dbus-next?
-# /usr/bin/kbdd &
 # Qtile 0.30.0, released 2025-01-06:
 #     !!! breaking changes !!!
 #       - dbus-fast is now required for dbus support.
 #         dbus-next was removed as the package is unmaintained.
-        # widget.KeyboardKbdd(
-        #     configured_keyboards=["🇺🇸 ", "🇷🇺 ", "🇧🇾"],
-        #     #  configured_keyboards=["US", "RU"],
-        #     #  display_map={"us": "🇺🇸", "ru": "🇷🇺"},
-        #     #  option="grp:alt_shift_toggle",
-        #     #  option="grp:caps_toggle",
-        #     foreground=colors.get("fg_keyboard", "#ffffff"),
-        #     fontsize=16,
-        #     padding=0,
-        # ),
+        widget.KeyboardKbdd(
+            configured_keyboards=["🇺🇸 ", "🇷🇺 ", "🇧🇾 "],
+            #  configured_keyboards=["US", "RU"],
+            #  display_map={"us": "🇺🇸", "ru": "🇷🇺"},
+            #  option="grp:alt_shift_toggle",
+            #  option="grp:caps_toggle",
+            foreground=colors.get("fg_keyboard", "#ffffff"),
+            fontsize=16,
+            padding=0,
+        ),
         widget.Systray(
             padding=1,
             icon_size=24,
