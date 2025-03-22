@@ -296,6 +296,8 @@ filetype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.ba
 " Books -----------------------------------------------------------------------
 " filextype *.fb2,*.epub cr3 %f %i &
 filextype *.fb2,*.epub
+  \ {View in Foliate}
+  \ foliate %f %i &,
   \ {View in cr3}
   \ cr3 %f %i &,
   \ {View in FBReader}
