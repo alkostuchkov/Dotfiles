@@ -628,7 +628,7 @@ def init_widgets_list():
 #       - dbus-fast is now required for dbus support.
 #         dbus-next was removed as the package is unmaintained.
         widget.KeyboardKbdd(
-            configured_keyboards=["🇺🇸 ", "🇷🇺 ", "🇧🇾 "],
+            configured_keyboards=["🇺🇸 ", "🇷🇺 ", "🇧🇾 ", "🏴󠁧󠁢󠁥󠁮󠁧󠁿 "],  # + Łacinka
             #  configured_keyboards=["US", "RU"],
             #  display_map={"us": "🇺🇸", "ru": "🇷🇺"},
             #  option="grp:alt_shift_toggle",

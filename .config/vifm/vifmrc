@@ -96,7 +96,7 @@ filextype *.html,*.htm
   \ {Open with gvim}
   \ gvim %c &,
   \ {Open with vim}
-  \ wezterm start --always-new-process --cwd %d -e vim %c &,
+  \ wezterm start --always-new-process --cwd %d -e vim %c %i &,
   \ {Open with dwb}
   \ dwb %f %i &,
   \ {Open with firefox}
@@ -253,7 +253,7 @@ filetype *.tudu tudu -f %c
 
 " Qt projects -----------------------------------------------------------------
 " filextype *.pro qtcreator %f &
-filextype *.pro wezterm start --always-new-process --cwd %d -e vim %f &
+filextype *.pro wezterm start --always-new-process --cwd %d -e vim %f %i &
 filetype *.pro $TERMINAL -e vim %f &
 
 " Directories -----------------------------------------------------------------
@@ -277,7 +277,7 @@ filextype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.b
   \ {View in gvim}
   \ gvim %f &,
   \ {View in vim (wezterm terminal)}
-  \ wezterm start --always-new-process --cwd %d -e vim %f &,
+  \ wezterm start --always-new-process --cwd %d -e vim %f %i &,
   \ {View in vim (kitty terminal)}
   \ kitty -e vim %f %i,
 
@@ -285,7 +285,7 @@ filetype *.conf,*rc,*.txt,*.yml,*.json,config,*.fish,*.sh,*.ini,*.css,*.bak,*.ba
   \ {View in vim}
   \ alacritty -e vim %f %i &,
   \ {View in vim (wezterm terminal)}
-  \ wezterm start --always-new-process --cwd %d -e vim %f &,
+  \ wezterm start --always-new-process --cwd %d -e vim %f %i &,
   \ {View in vim (kitty terminal)}
   \ kitty -e vim %f %i &,
   \ {View in Helix}
@@ -489,7 +489,7 @@ nnoremap <wait> ,,pw :!wezterm start --always-new-process --cwd %d -e poetry she
 nnoremap <wait> ,,t :!$TERMINAL &<cr>
 nnoremap <wait> ,,a :!alacritty &<cr>
 nnoremap <wait> ,,k :!kitty %i &<cr>
-nnoremap <wait> ,,w :!wezterm start --always-new-process --cwd %d &<cr>
+nnoremap <wait> ,,w :!wezterm start --always-new-process --cwd %d %i &<cr>
 
 " Open console as root in current directory -----------------------------------
 nnoremap <wait> ,,rt :!pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY $TERMINAL &<cr>
@@ -500,7 +500,7 @@ nnoremap <wait> ,,rk :!pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY kitty 
 " Open selected files in vim (different terminals) ----------------------------
 nnoremap ,,va :!alacritty -e vim %f &<cr>
 nnoremap ,,vk :!kitty -e vim %f %i &<cr>
-nnoremap ,,vw :!wezterm start --always-new-process --cwd %d -e vim %f &<cr>
+nnoremap ,,vw :!wezterm start --always-new-process --cwd %d -e vim %f %i &<cr>
 
 " Open selected files as root in vim (different terminals) --------------------
 nnoremap ,,rva :!pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY alacritty --working-directory %d -e vim %f %i &<cr>
