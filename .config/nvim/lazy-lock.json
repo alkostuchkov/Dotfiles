@@ -43,7 +43,7 @@
   "todo-comments.nvim": { "branch": "main", "commit": "304a8d204ee787d2544d8bc23cd38d2f929e7cc5" },
   "toggleterm.nvim": { "branch": "main", "commit": "50ea089fc548917cc3cc16b46a8211833b9e3c7c" },
   "trouble.nvim": { "branch": "main", "commit": "85bedb7eb7fa331a2ccbecb9202d8abba64d37b3" },
-  "vifm.vim": { "branch": "master", "commit": "e5321c4399db69bf8ccfd2d880aae97a2ca44715" },
+  "vifm.vim": { "branch": "master", "commit": "4db901cca609a7e761831fff807332dc96b9d998" },
   "vim-maximizer": { "branch": "master", "commit": "2e54952fe91e140a2e69f35f22131219fcd9c5f1" },
   "vim-python-virtualenv": { "branch": "main", "commit": "82730c6060be1ac3ac9bcbd3690704c1b5236329" },
   "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" },
