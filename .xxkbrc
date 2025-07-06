@@ -4,10 +4,12 @@ XXkb.mainwindow.type:  tray
 XXkb.group.base: 1
 XXkb.group.alt: 2
 XXkb.mainwindow.enable:  yes
+# XXkb.mainwindow.image.1: by22++Ł.xpm
 XXkb.mainwindow.image.1: us22++.xpm
 XXkb.mainwindow.image.2: ru22++.xpm
 XXkb.mainwindow.image.3: by22++.xpm
-XXkb.mainwindow.image.4: by22++Ł.xpm
+XXkb.mainwindow.image.4:
+# XXkb.mainwindow.image.4: by22++Ł.xpm
 XXkb.mainwindow.appicon:  yes
 XXkb.mainwindow.geometry:  22x22+1+1
 XXkb.button.enable:  no
@@ -15,10 +17,12 @@ XXkb.controls.add_when_start: yes
 XXkb.controls.add_when_create: yes
 XXkb.controls.add_when_change: no
 XXkb.controls.focusout: no
+# XXkb.mainwindow.xpm.1: by22++Ł.xpm
 XXkb.mainwindow.xpm.1: us22++.xpm
 XXkb.mainwindow.xpm.2: ru22++.xpm
 XXkb.mainwindow.xpm.3: by22++.xpm
-XXkb.mainwindow.xpm.4: by22++Ł.xpm
+XXkb.mainwindow.xpm.4:
+# XXkb.mainwindow.xpm.4: by22++Ł.xpm
 XXkb.mainwindow.label.enable: no
 # XXkb.mainwindow.label.enable: yes
 # XXkb.mainwindow.label.font: Iosevka 15

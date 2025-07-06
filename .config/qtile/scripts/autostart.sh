@@ -12,7 +12,8 @@
 #       - dbus-fast is now required for dbus support.
 #         dbus-next was removed as the package is unmaintained.
 # setxkbmap -layout us,ru,by -option grp:caps_toggle &
-setxkbmap -layout us,ru,by,by -variant ,,,latin -option grp:caps_toggle &  # Łacinka
+setxkbmap -layout by,ru,by -variant latin,, -option grp:caps_toggle &  # Łacinka
+# setxkbmap -layout us,ru,by,by -variant ,,,latin -option grp:caps_toggle &  # Łacinka
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 # /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &  # for Arch
 # /usr/libexec/polkit-gnome-authentication-agent-1 &  # for Void

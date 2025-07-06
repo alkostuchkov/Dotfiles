@@ -92,7 +92,7 @@ local themes = {
   "steamburn",    -- 8
   "mira",         -- 9
   "myotto",       -- 10
-  "myeverforest", -- 10
+  "myeverforest", -- 11
 }
 local theme_path = AWESOME_CONFIG_DIR .. "/themes/" .. themes[11] .. "/theme.lua"
 beautiful.init(theme_path)
@@ -260,7 +260,7 @@ awful.screen.connect_for_each_screen(function(s)
   awful.tag(
     { "1  ", "2  ", "3  ", "4  ", "5  ", "6  ", "7  ", "8  ", "9  " },
     s,
-    {                          -- for every tag its own layout: { awful.layout.layouts[i], }
+    { -- for every tag its own layout: { awful.layout.layouts[i], }
       awful.layout.layouts[1], -- tile -> 1
       awful.layout.layouts[1], -- tile -> 2
       awful.layout.layouts[2], -- max  -> 3
@@ -1090,7 +1090,8 @@ end
 run_once({
   "xxkb",
   -- "setxkbmap -layout us,ru,by -option grp:caps_toggle",
-  "setxkbmap -layout us,ru,by,by -variant ,,,latin -option grp:caps_toggle", -- Łacinka
+  "setxkbmap -layout by,ru,by -variant latin,, -option grp:caps_toggle", -- Łacinka
+  -- "setxkbmap -layout us,ru,by,by -variant ,,,latin -option grp:caps_toggle", -- Łacinka
   -- "/usr/lib/xfce4/notifyd/xfce4-notifyd", -- no need on AwesomeWM
   -- /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1, -- for Debian
   -- "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1", -- for Arch
