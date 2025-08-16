@@ -647,8 +647,9 @@ def init_widgets_list():
             text=" ",
             padding=1,
         ),
-        widget.CurrentLayoutIcon(
-            #  custom_icon_paths=[f"{HOME}/.config/qtile/icons/layouts"],
+        widget.CurrentLayout(
+            # custom_icon_paths=[f"{HOME}/.config/qtile/icons/layouts"],
+            mode="icon",
             foreground=colors.get("fg_layout", "#ffffff"),
             padding=0,
             scale=0.6,
