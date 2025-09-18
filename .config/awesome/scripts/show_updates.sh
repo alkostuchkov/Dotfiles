@@ -74,6 +74,25 @@ show_updates_void() {
   fi
 }
 
+show_updates_openSUSE() {
+# Show updates for openSUSE Linux.
+  updates=$(zypper --no-refresh lu --best-effort | grep "v  |" | awk '{print $3}')
+
+  if [[ -z "$updates" ]]; then
+    updates_output=
+  else
+    amount_updates=$(echo "$updates" | wc -l)
+    updates_output=$(echo -e "$amount_updates\n\n$updates" | awk '{print $1}')
+  fi
+
+  if [[ $amount_updates -lt 31 ]]; then
+    notify-send -i software-update-available "Updates: $updates_output"
+  else
+    $terminal --hold -e echo "Updates: $updates_output"
+    # --hold option exists for terminals: alacritty, xfce4-terminal
+  fi
+}
+
 
 terminal="alacritty"
 distro=$(lsb_release -a 2>/dev/null | grep -i 'distributor id' | awk '{print $3}')
@@ -82,6 +101,7 @@ case $distro in
   "Debian") show_updates_debian;;
   "Arch"|"ManjaroLinux") show_updates_arch;;
   "VoidLinux") show_updates_void;;
+  "openSUSE") show_updates_openSUSE;;
   *) notify-send -i dialog-error "Error:" "Unknown distro $distro.";;
 esac
 

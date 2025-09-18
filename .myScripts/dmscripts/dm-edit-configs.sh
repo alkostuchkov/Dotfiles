@@ -30,6 +30,7 @@ options=(
 "dwm - $HOME/Programs/DWM/config.h"
 "dwmblocks - $HOME/Programs/DWM/dwmblocks/blocks.h"
 "dwmpatches - $HOME/Programs/DWM/patches.h"
+"fastboot-neofetch - $HOME/.config/fastfetch/config.jsonc"
 "fish - $HOME/.config/fish/config.fish"
 "fonts.conf - $HOME/.config/fontconfig/fonts.conf"
 "helix - $HOME/.config/helix/config.toml"

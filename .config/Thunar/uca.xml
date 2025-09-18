@@ -56,6 +56,18 @@
 	<directories/>
 </action>
 <action>
+	<icon>nvim</icon>
+	<name>Open in NeoVim</name>
+	<submenu></submenu>
+	<unique-id>1755980725441684-1</unique-id>
+	<command>wezterm-gui start --cwd %f vim %f</command>
+	<description>Open in NeoVim (WezTerm)</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
 	<icon>file-manager</icon>
 	<name>Open directory as root</name>
 	<submenu></submenu>

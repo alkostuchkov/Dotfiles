@@ -1,5 +1,5 @@
-# XXkb.image.path: /home/alexander/.xxkb/
-XXkb.image.path: /usr/share/xxkb/
+XXkb.image.path: /home/alexander/.xxkb/
+# XXkb.image.path: /usr/share/xxkb/
 XXkb.mainwindow.type:  tray
 XXkb.group.base: 1
 XXkb.group.alt: 2

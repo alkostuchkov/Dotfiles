@@ -930,6 +930,8 @@ awful.rules.rules = {
         "Pinentry",
         "java",
         "Java",
+        "Lazarus",
+        "lazarus",
         "Lxappearance" },
 
       -- Note that the name property shown in xprop might be set slightly after creation of the client
@@ -1107,7 +1109,7 @@ run_once({
   "clipit",
   -- "diodon",
   -- "xfce4-clipman",
-  "$HOME/.myScripts/restore_brightness.sh", -- for HP
+  -- "$HOME/.myScripts/restore_brightness.sh", -- for HP
   "picom --config " .. HOME .. "/.config/picom/picom.conf",
   "conky -c " .. HOME .. "/.myScripts/conky/conkyrc",
   "/usr/bin/python /usr/bin/udiskie",
