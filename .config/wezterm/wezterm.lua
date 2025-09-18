@@ -59,7 +59,7 @@ config.font_rules = {
     },
   },
 }
-config.font_size = 17.5
+config.font_size = 16.5
 -- config.line_height = 1.10 -- for Hack Nerd Font
 -- config.line_height = 1.15 -- for Consolas NF
 -- config.line_height = 1.05 -- for Mononoki Nerd Font
