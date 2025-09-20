@@ -1,0 +1,43 @@
+#!/bin/sh
+
+# Start the first polkit agent that exists
+for i in /usr/lib/polkit-gnome-authentication-agent-1 \
+         /usr/libexec/polkit-gnome-authentication-agent-1 \
+         /usr/libexec/xfce-polkit \
+         /usr/lib64/libexec/polkit-kde-authentication-agent-1 \
+         /usr/lib/polkit-mate/polkit-mate-authentication-agent-1 \
+         /usr/lib64/kde4/libexec/polkit-kde-authentication-agent-1; do
+	if [ -x $i ]; then
+		$i &
+		break # One is enough
+	fi
+done;
+
+# # Start xscreensaver daemon
+# [ -x /usr/bin/xscreensaver ] && /usr/bin/xscreensaver > /dev/null &
+
+
+if [ "$(cat /proc/1/comm)" = "systemd" ]; then
+    # Pass environment variables to systemd --user session (to fix bsc#1179237)
+    if command -v dbus-update-activation-environment >/dev/null 2>&1; then
+        dbus-update-activation-environment --systemd --all
+    fi
+fi
+
+xxkb &
+setxkbmap -layout by,ru,by -variant latin,, -option grp:caps_toggle &
+xrdb ~/.Xresources &
+nitrogen --restore &
+volumeicon &
+nm-applet &
+xfce4-power-manager &
+/usr/libexec/polkit-gnome-authentication-agent-1 &
+parcellite &
+picom --config ~/.config/picom/picom.conf &
+conky -c ~/.myScripts/conky/conkyrc &
+/usr/bin/python /usr/bin/udiskie &
+xiccd &
+python3 /usr/bin/redshift-gtk &
+~/Programs/CheckInternetConnection/CheckInternetConnection &
+~/Programs/AppImageApplications/BreakTimer.AppImage &
+birdtray &
