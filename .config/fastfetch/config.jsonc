@@ -19,16 +19,41 @@
     "cursor",
     "terminal",
     // "terminalfont",
-    "cpu",
+    // "cpu",
+    {
+      "type": "cpu",
+      "format": "{name}({cores-physical}C/{cores-logical}T) {freq-max}"
+      // "format": "{name} ({cores-physical}C/{cores-logical}T) {freq-max}"
+    },
     "gpu",
-    "memory",
+    // "memory",
+    {
+       "type": "memory",
+       "format": "{percentage} {used}/{total}"
+    },
     "swap",
-    "disk",
+    // "disk",
+    {
+       "type": "disk",
+       "format": "{size-used}/{size-available}/{size-total} {filesystem}"
+    },
     // "localip",
     // "battery",
     // "poweradapter",
     // "locale",
     "break",
     "colors"
-  ]
+  ],
+  // "logo": "none",
+    "logo": {
+        "type": "auto",        // Logo type: auto, builtin, small, file, etc.
+        // "source": "void",      // Built-in logo name or file path
+        // "width": 65,           // Width in characters
+        // "height": 35,          // Height in characters
+        "padding": {
+            "top": 0,          // Top padding
+            "left": 0,         // Left padding
+            "right": 1         // Right padding
+        },
+    },
 }
