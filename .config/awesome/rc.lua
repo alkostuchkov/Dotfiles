@@ -1106,7 +1106,8 @@ run_once({
   "volumeicon",
   "nm-applet",
   "xfce4-power-manager",
-  "clipit",
+  "parcellite",
+  -- "clipit",
   -- "diodon",
   -- "xfce4-clipman",
   -- "$HOME/.myScripts/restore_brightness.sh", -- for HP

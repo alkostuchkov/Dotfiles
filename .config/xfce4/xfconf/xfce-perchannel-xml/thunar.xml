@@ -5,9 +5,9 @@
   <property name="last-icon-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_75_PERCENT"/>
   <property name="last-window-maximized" type="bool" value="false"/>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_50_PERCENT"/>
-  <property name="last-details-view-column-widths" type="string" value="50,208,50,142,618,87,128,88,550,345,120,50,50,407"/>
+  <property name="last-details-view-column-widths" type="string" value="50,208,50,142,618,87,128,88,550,345,120,121,50,407"/>
   <property name="last-separator-position" type="int" value="216"/>
-  <property name="last-show-hidden" type="bool" value="false"/>
+  <property name="last-show-hidden" type="bool" value="true"/>
   <property name="last-window-width" type="int" value="1344"/>
   <property name="last-window-height" type="int" value="714"/>
   <property name="misc-single-click" type="bool" value="false"/>
@@ -32,6 +32,9 @@
   <property name="last-focused-tab-left" type="int" value="0"/>
   <property name="last-focused-tab-right" type="int" value="0"/>
   <property name="last-tabs-left" type="array">
+    <value type="string" value="file:///home/alexander/Projects/Lazarus"/>
+  </property>
+  <property name="last-tabs-right" type="array">
     <value type="string" value="file:///home/alexander"/>
   </property>
 </channel>
