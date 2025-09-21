@@ -356,8 +356,8 @@ mark s ~/.myScripts
 mark l ~/.local/share
 mark a ~/.cache
 
-" mark M /run/media
-mark M /media
+mark M /run/media
+" mark M /media
 mark R /
 
 "##############################################################################

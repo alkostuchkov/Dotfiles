@@ -27,12 +27,12 @@ parcellite &
 # clipit &
 # diodon &
 # xfce4-clipman &
-$HOME/.myScripts/restore_brightness.sh &  # for HP
+# $HOME/.myScripts/restore_brightness.sh &  # for HP
 picom -b --config $HOME/.config/picom/picom.conf &
 conky -c ~/.myScripts/conky/conkyrc &
 udiskie &  # ~/.config/udiskie/config.yml
 xiccd &
-python /usr/bin/redshift-gtk &
+# python /usr/bin/redshift-gtk &
 $HOME/Programs/AppImageApplications/BreakTimer.AppImage &
 $HOME/Programs/CheckInternetConnection/CheckInternetConnection &
 birdtray &

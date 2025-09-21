@@ -1115,7 +1115,7 @@ run_once({
   "conky -c " .. HOME .. "/.myScripts/conky/conkyrc",
   "/usr/bin/python /usr/bin/udiskie",
   "xiccd",
-  "python /usr/bin/redshift-gtk",
+  -- "python /usr/bin/redshift-gtk",
   -- "/usr/bin/python /usr/bin/fluxgui",
   HOME .. "/Programs/CheckInternetConnection/CheckInternetConnection",
   HOME .. "/Programs/AppImageApplications/BreakTimer.AppImage",
