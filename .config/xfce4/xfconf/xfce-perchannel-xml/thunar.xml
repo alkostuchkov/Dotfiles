@@ -32,6 +32,6 @@
   <property name="last-focused-tab-left" type="int" value="0"/>
   <property name="last-focused-tab-right" type="int" value="0"/>
   <property name="last-tabs-left" type="array">
-    <value type="string" value="file:///home/alexander"/>
+    <value type="string" value="file:///home/alexander/Projects/Lazarus/DerekBanas_Tutorial"/>
   </property>
 </channel>
