@@ -4,18 +4,31 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
--- my Everforest colorscheme
+-- my One-Dark colorscheme
 config.colors = {
-  foreground = "#d3c6aa",
-  background = "#2d353b",
-  cursor_bg = "#d3c6aa",
-  cursor_border = "#d3c6aa",
-  cursor_fg = "#475258",
-  selection_bg = "#475258",
-  selection_fg = "#a7c080",
-  ansi = { "#475258", "#e67e80", "#a7c080", "#dbbc7f", "#7fbbb3", "#d699b6", "#83c092", "#d3c6aa" },
-  brights = { "#475258", "#e67e80", "#a7c080", "#dbbc7f", "#7fbbb3", "#d699b6", "#83c092", "#d3c6aa" },
+  foreground = "#abb2bf",
+  background = "#282c34",
+  cursor_bg = "#abb2bf",
+  cursor_border = "#abb2bf",
+  cursor_fg = "#A8ADBA",
+  selection_bg = "#A8ADBA",
+  selection_fg = "#2d353b",
+  ansi = { "#282c34", "#e06c75", "#98c379", "#d19a66", "#61afef", "#c678dd", "#56b6c2", "#d3c6aa" },
+  brights = { "#5c6370", "#e06c75", "#98c379", "#d19a66", "#61afef", "#c678dd", "#56b6c2", "#ffffff" },
 }
+
+-- -- my Everforest colorscheme
+-- config.colors = {
+--   foreground = "#d3c6aa",
+--   background = "#2d353b",
+--   cursor_bg = "#d3c6aa",
+--   cursor_border = "#d3c6aa",
+--   cursor_fg = "#475258",
+--   selection_bg = "#475258",
+--   selection_fg = "#a7c080",
+--   ansi = { "#475258", "#e67e80", "#a7c080", "#dbbc7f", "#7fbbb3", "#d699b6", "#83c092", "#d3c6aa" },
+--   brights = { "#475258", "#e67e80", "#a7c080", "#dbbc7f", "#7fbbb3", "#d699b6", "#83c092", "#d3c6aa" },
+-- }
 
 -- config.font = wezterm.font(
 --   "JetBrainsMono NF",
@@ -75,7 +88,8 @@ config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 config.enable_tab_bar = false
 
 config.window_padding = {
-  left = 7,
+  left = 0,
+  -- left = 7,
   right = 0,
   top = 0,
   bottom = 0,
