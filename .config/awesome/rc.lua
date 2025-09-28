@@ -34,6 +34,7 @@ require("awful.hotkeys_popup.keys")
 -- {{{ Wibar
 -- My widgets
 -- local pacman_widget = require("awesome-wm-widgets/pacman-widget/pacman")
+-- local zypper_widget = require("awesome-wm-widgets/zypper-widget/zypper")
 local xbps_widget = require("awesome-wm-widgets/xbps-widget/xbps")
 -- local weather_widget = require("awesome-wm-widgets/weather-widget/weather-widget")
 local weather_api_widget = require("awesome-wm-widgets/weather-api-widget/weather-api-widget")
@@ -327,6 +328,13 @@ awful.screen.connect_for_each_screen(function(s)
         -- fg_color = "#e2e0a5", -- materia
         fg_color = "#f7e6bb", -- everforest
       }),
+      -- zypper_widget({
+      --   font_name = "Ubuntu Nerd Font 11",
+      --   icon = "",
+      --   icon_size = 12,
+      --   -- fg_color = "#e2e0a5", -- materia
+      --   fg_color = "#f7e6bb", -- everforest
+      -- }),
       -- -- sep_widget({
       -- -- font_name = "Sarasa Mono SC Nerd 17",
       -- -- icon = "|",

@@ -1,5 +1,5 @@
 -------------------------------
--- My Everforest awesome theme --
+-- My Blue awesome theme --
 -------------------------------
 
 local theme_assets = require("beautiful.theme_assets")
