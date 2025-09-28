@@ -93,8 +93,9 @@ local themes = {
   "mira",         -- 9
   "myotto",       -- 10
   "myeverforest", -- 11
+  "myblue",       -- 12
 }
-local theme_path = AWESOME_CONFIG_DIR .. "/themes/" .. themes[11] .. "/theme.lua"
+local theme_path = AWESOME_CONFIG_DIR .. "/themes/" .. themes[12] .. "/theme.lua"
 beautiful.init(theme_path)
 
 -- Default modkey and other keys.
