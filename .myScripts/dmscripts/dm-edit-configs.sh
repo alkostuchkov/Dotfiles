@@ -8,6 +8,7 @@ options=(
 "awesome - $HOME/.config/awesome/rc.lua"
 "awesome - $HOME/.config/awesome/themes/mymaterial/theme.lua"
 "awesome - $HOME/.config/awesome/themes/myeverforest/theme.lua"
+"awesome - $HOME/.config/awesome/themes/myblue/theme.lua"
 "bash - $HOME/.bashrc"
 "bat - $HOME/.config/bat/config"
 "bspwm - $HOME/.config/bspwm/bspwmrc"

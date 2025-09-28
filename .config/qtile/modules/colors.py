@@ -77,6 +77,35 @@ everforest = {
     "white": "#d3c6aa",
 }
 
+# MyBlue
+myblue = {
+    "bg_panel": "#32343D",
+    "bg_current_screentab": "#5b656b",
+    "fg_group_names": "#CFD6DF",
+    "bg_current_tab": "#3D5E87",
+    "bg_other_tabs_and_odd_widgets": "#6182b8",
+    "bg_even_widgets": "#82aaff",
+    "fg_windowname": "#d3c6aa",
+    "fg_cpu": "#7fbbb3",
+    "fg_memory": "#dbbc7f",
+    "fg_netspeed": "#83c092",
+    "fg_date": "#83c092",
+    "fg_keyboard": "#7fbbb3",
+    "fg_layout": "#d3c6aa",
+    "bg_systray": "#2d353b",
+    "fg_updates": "#f7e6bb",
+    "fg_weather": "#d699b6",
+    "bg_chord_dmenu": "#ffcb6b",
+    "fg_chord_dmenu": "#000000",
+    "fg_syncthing_active": "#83c092",
+    "fg_syncthing_inactive": "#e67e80",
+    "fg_active_group": "#F9F9F9",
+    "fg_tasklist": "#F9F9F9",
+    "border_focus": "#92BAEB",
+    "border_normal": "#1d2330",
+    "fg_textbox": "#ffffff",
+}
+
 # Gruvbox Material
 gruvbox_material = {
    "bg_panel": "#282828",  # background

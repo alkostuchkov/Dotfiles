@@ -78,7 +78,8 @@ SHELL = os.getenv("SHELL")
 HOME = os.path.expanduser("~")
 USER = os.getenv("USER")
 #  my_config = f"{HOME}/.config/qtile/config.py"
-colors = colors.everforest
+colors = colors.myblue
+# colors = colors.everforest
 #  colors = colors.materia_manjaro
 
 # Check which network iface is upped.
