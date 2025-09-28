@@ -14,7 +14,7 @@ show_updates_debian() {
     updates_output=$(echo -e "$amount_updates\n$updates")
   fi
 
-  if [[ $amount_updates -lt 31 ]]; then
+  if [[ $amount_updates -lt 26 ]]; then
     notify-send -i software-update-available "Updates: $updates_output"
   else
     $terminal --hold -e echo "Updates: $updates_output"
@@ -47,7 +47,7 @@ show_updates_arch() {
     let "amount_updates += $updates_aur_count"
   fi
 
-  if [[ $amount_updates -lt 31 ]]; then
+  if [[ $amount_updates -lt 26 ]]; then
     notify-send -i software-update-available "Updates: $amount_updates $community_output $aur_output"
   else
     $terminal --hold -e echo "Updates: $amount_updates $community_output $aur_output"
@@ -66,7 +66,7 @@ show_updates_void() {
     updates_output=$(echo -e "$amount_updates\n\n$updates" | awk '{print $1}')
   fi
 
-  if [[ $amount_updates -lt 31 ]]; then
+  if [[ $amount_updates -lt 26 ]]; then
     notify-send -i software-update-available "Updates: $updates_output"
   else
     $terminal --hold -e echo "Updates: $updates_output"
@@ -85,7 +85,7 @@ show_updates_openSUSE() {
     updates_output=$(echo -e "$amount_updates\n\n$updates" | awk '{print $1}')
   fi
 
-  if [[ $amount_updates -lt 31 ]]; then
+  if [[ $amount_updates -lt 26 ]]; then
     notify-send -i software-update-available "Updates: $updates_output"
   else
     $terminal --hold -e echo "Updates: $updates_output"
