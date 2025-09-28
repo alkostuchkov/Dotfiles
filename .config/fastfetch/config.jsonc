@@ -17,7 +17,13 @@
     "de",
     "wm",
     "wmtheme",
-    "theme",
+    // "theme",
+    {
+      "type": "theme",
+      "format": "{theme2}"
+      // "format": "{theme1}{theme2}"
+      // "format": "{theme1} {theme2} {theme3}"
+    },
     // "icons",
     // "font",
     "cursor",
@@ -31,7 +37,8 @@
     {
       "type": "cpu",
       // "format": "{freq-max}",
-      "format": "{name}({cores-physical}C/{cores-logical}T) {freq-max}"
+      "format": "{name}({cores-physical}C/{cores-logical}T)"
+      // "format": "{name}({cores-physical}C/{cores-logical}T) {freq-max}"
     },
     "gpu",
     // "memory",
@@ -53,16 +60,16 @@
     "break",
     "colors"
   ],
-  "logo": "none",
-    // "logo": {
-    //     "type": "auto",        // Logo type: auto, builtin, small, file, etc.
-    //     // "source": "void",      // Built-in logo name or file path
-    //     // "width": 65,           // Width in characters
-    //     // "height": 35,          // Height in characters
-    //     "padding": {
-    //         "top": 0,          // Top padding
-    //         "left": 0,         // Left padding
-    //         "right": 1         // Right padding
-    //     },
-    // },
+  // "logo": "none",
+    "logo": {
+        "type": "auto",        // Logo type: auto, builtin, small, file, etc.
+        // "source": "void",      // Built-in logo name or file path
+        // "width": 7,           // Width in characters
+        // "height": 18,          // Height in characters
+        "padding": {
+            "top": 0,          // Top padding
+            "left": 0,         // Left padding
+            "right": 1         // Right padding
+        },
+    },
 }
