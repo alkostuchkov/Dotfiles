@@ -1,7 +1,7 @@
 configuration {
     modi: "window,run,ssh,drun";
     /* font: "Sarasa Mono SC Nerd 17"; */
-    font: "Iosevka 17";
+    font: "Iosevka 16";
     show-icons: true;
     /* location: 1; */
     /* yoffset: 35; */
@@ -77,8 +77,10 @@ configuration {
     /* padding:          5; */
     /* width:          80%; */
 /* } */
-@theme "~/.config/rofi/themes/everforest.rasi"
+@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+//@theme "~/.config/rofi/themes/everforest.rasi"
 /*@theme "~/.config/rofi/themes/lb.rasi"*/
 
 /* man rofi */
 /* To get a template config file, run: rofi -dump-config > config.rasi */
+
