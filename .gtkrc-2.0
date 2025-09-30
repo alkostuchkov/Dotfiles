@@ -6,7 +6,7 @@ include "/home/alexander/.gtkrc-2.0.mine"
 # gtk-icon-theme-name="Yaru-sage-dark"
 gtk-theme-name="Qogir-dark"
 gtk-icon-theme-name="Sardi"
-gtk-font-name="Iosevka 15"
+gtk-font-name="Iosevka 14"
 gtk-cursor-theme-name="Qogir-white-cursors"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_BOTH_HORIZ

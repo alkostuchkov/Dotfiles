@@ -293,8 +293,10 @@ keys = [
     Key([alt], "w", lazy.spawn("rofi run -show window -show-icons"), desc="Switch between opened windows"),
     Key([alt], "F4", lazy.spawn(f"{HOME}/Programs/ByeBye/ByeBye"), desc="Launch logout app 'ByeBye'"),
     Key([alt], "Tab", lazy.group.next_window(), desc="Switch to the next window"),
+    Key([alt], "k", lazy.group.next_window(), desc="Switch to the next window"),
 # <ALT> + <SHIFT> + KEYS
     Key([alt, "shift"], "Tab", lazy.group.prev_window(), desc="Switch to the previous window"),
+    Key([alt], "j", lazy.group.prev_window(), desc="Switch to the previous window"),
 
 # <CONTROL> + <ALT> + KEYS
     Key(["control", alt], "c", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-edit-configs.sh"), desc="Run dmenu script for editing config files"),
