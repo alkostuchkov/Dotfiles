@@ -26,7 +26,8 @@ theme.bg_systray = theme.bg_normal
 theme.systray_icon_spacing = dpi(1)
 
 -- theme.fg_normal = "#B8CCE2"
-theme.fg_normal = "#95B4D7"
+theme.fg_normal = "#abb2bf"
+-- theme.fg_normal = "#95B4D7"
 theme.fg_focus = "#F9F9F9"
 theme.fg_urgent = theme.fg_normal
 theme.fg_minimize = theme.fg_normal
