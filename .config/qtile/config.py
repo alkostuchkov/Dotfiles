@@ -293,11 +293,12 @@ keys = [
     ),
     Key([alt], "w", lazy.spawn("rofi run -show window -show-icons"), desc="Switch between opened windows"),
     Key([alt], "F4", lazy.spawn(f"{HOME}/Programs/ByeBye/ByeBye"), desc="Launch logout app 'ByeBye'"),
-    Key([alt], "Tab", lazy.group.next_window(), desc="Switch to the next window"),
-    Key([alt], "k", lazy.group.next_window(), desc="Switch to the next window"),
+    Key([alt], "Tab", lazy.group.next_window(), lazy.window.bring_to_front(), desc="Switch to the next window and bring it to front"),
+    Key([alt], "k", lazy.group.next_window(), lazy.window.bring_to_front(), desc="Switch to the next window and bring it to front"),
 # <ALT> + <SHIFT> + KEYS
-    Key([alt, "shift"], "Tab", lazy.group.prev_window(), desc="Switch to the previous window"),
-    Key([alt], "j", lazy.group.prev_window(), desc="Switch to the previous window"),
+    Key([alt, "shift"], "Tab", lazy.group.prev_window(), lazy.window.bring_to_front(), desc="Switch to the previous window and bring it to front"),
+    Key([alt], "j", lazy.group.prev_window(), lazy.window.bring_to_front(),
+        desc="Switch to the previous window and bring it to front"),
 
 # <CONTROL> + <ALT> + KEYS
     Key(["control", alt], "c", lazy.spawn(f"{HOME}/.myScripts/dmscripts/dm-edit-configs.sh"), desc="Run dmenu script for editing config files"),
@@ -494,6 +495,7 @@ def init_widgets_list():
             fontsize=14,
             #  distro="Arch_checkupdates",
             #  custom_command="checkupdates-with-aur",
+            #  custom_command="dnf list --upgrades -q",
             custom_command="xbps-install -nuMS",
             display_format="  {updates}",  # ⟳ 
             mouse_callbacks={
@@ -785,7 +787,8 @@ mouse = [
          start=lazy.window.get_position()),
     Drag([mod], "Button3", lazy.window.set_size_floating(),
          start=lazy.window.get_size()),
-    #  Click([mod], "Button2", lazy.window.bring_to_front())
+    # Click([], "Button1", lazy.window.bring_to_front())
+    Click([mod], "Button2", lazy.window.bring_to_front())
 ]
 
 ##### MY FLOATING APPS #####
@@ -827,6 +830,8 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class="megasync"),
     Match(wm_class="minitube"),
     Match(wm_class="CheckEmail"),
+    Match(wm_class="Lazarus"),
+    Match(wm_class="lazarus"),
     #  Match(wm_class="GParted"),
     #  Match(wm_class="keepass2"),
     Match(wm_class="pinentry-gtk-2"),
@@ -848,6 +853,7 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class="gcolor2"),
     #  Match(wm_class="gvim"),
     Match(wm_class="qt5ct"),
+    Match(wm_class="qt6ct"),
     Match(wm_class="lxappearance"),
     Match(wm_class="confirmreset"),  # gitk
     Match(wm_class="makebranch"),  # gitk
@@ -862,8 +868,9 @@ dgroups_app_rules = []  # type: List
 main = None  # WARNING: this is deprecated and will be removed soon
 follow_mouse_focus = True
 cursor_warp = False
-bring_front_click = False
-#  bring_front_click = "floating_only"
+# bring_front_click = "floating_only"
+bring_front_click = True
+float_kept_above = False
 auto_fullscreen = True
 focus_on_window_activation = "focus"
 #  focus_on_window_activation = "urgent"
@@ -894,6 +901,10 @@ def move_new_window_to_certain_group(c):
                   "Virt-manager",):
         c.togroup(group_names_indexes[5])
         qtile.groups_map[group_names_indexes[5]].cmd_toscreen()
+    # if c.name in ("Lazarus",
+    #               "lazarus",):
+    #     c.togroup(group_names_indexes[4])
+    #     qtile.groups_map[group_names_indexes[4]].cmd_toscreen()
     if c.name in ("Telegram", "Rakuten Viber"):
         c.togroup(group_names_indexes[6])
         qtile.groups_map[group_names_indexes[6]].cmd_toscreen()
