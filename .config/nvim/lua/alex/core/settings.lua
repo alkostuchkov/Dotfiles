@@ -8,14 +8,14 @@ local opt = vim.opt                  -- local
 
 -- opt.linespace = 4 -- only for GUI (nvim-qt), for Consolas NF
 -- line numbers
-opt.number = true
-opt.relativenumber = true
+opt.number = on
+opt.relativenumber = on
 
 opt.textwidth = 79
 opt.colorcolumn = "+1"
 -- vim.cmd([[highlight ColorColumn ctermbg=233]])
-opt.cursorline = true
-opt.cursorcolumn = true
+opt.cursorline = on
+opt.cursorcolumn = on
 opt.whichwrap = "<,>,[,],h,l" -- не останавливаться курсору на конце строки
 
 -- При редактировании файла всегда переходить на последнюю известную
@@ -38,8 +38,8 @@ vim.cmd([[
 -- 6 - просто вертикальная черта
 
 -- tabs & indentation
-opt.autoindent = true -- copy indent from current line when starting new one
-opt.smartindent = true
+opt.autoindent = on -- copy indent from current line when starting new one
+opt.smartindent = on
 -- disable auto-comments on new line (2 lines below)
 vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
@@ -47,42 +47,43 @@ vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
 
 opt.shiftwidth = 4   -- 2 spaces for indent width
 opt.tabstop = 4      -- 2 spaces for tabs (prettier default)
-opt.expandtab = true -- expand tab to spaces
+opt.expandtab = on -- expand tab to spaces
 opt.softtabstop = 4
 
 opt.syntax = "ON"
 -- Данная вариация работает как wrap,... но переносит строчки не посимвольно, а по словам
-opt.wrap = true
-opt.linebreak = true
-g.nolist = true
+-- opt.wrap = on
+-- opt.linebreak = on
+-- g.nolist = on
+opt.wrap = off
 
 opt.mouse = "a"
-g.noexrc = true     -- не читаем файл конфигурации из текущей директории
+g.noexrc = on     -- не читаем файл конфигурации из текущей директории
 opt.showtabline = 2 -- постоянно выводим строку с табами
 opt.tabpagemax = 20 -- максимальное количество открытых табов
 opt.history = 50
 opt.undolevels = 50
-g.noerrorbells = true -- instead of beeping
-opt.wildmenu = true   -- красивое автодополнение
+g.noerrorbells = on -- instead of beeping
+opt.wildmenu = on   -- красивое автодополнение
 -- opt.cmdheight = 2     -- Give more space for displaying messages.
 opt.scrolloff = 3     -- when scrolling, keep cursor 3 lines away from screen border
-opt.showmatch = true  -- for brackets
+opt.showmatch = on  -- for brackets
 
 -- split windows
-opt.splitbelow = true -- split horizontal window to the bottom
-opt.splitright = true -- split vertical window to the right
+opt.splitbelow = on -- split horizontal window to the bottom
+opt.splitright = on -- split vertical window to the right
 
 -- search settings
-opt.hlsearch = true
-opt.incsearch = true
-opt.ignorecase = true -- ignore case when searching
-opt.smartcase = true  -- if you include mixed case in your search, assumes you want case-sensitive
+opt.hlsearch = on
+opt.incsearch = on
+opt.ignorecase = on -- ignore case when searching
+opt.smartcase = on  -- if you include mixed case in your search, assumes you want case-sensitive
 
 -- Disable backup and swap files - they trigger too many events for file system watchers
-g.nobackup = true
-g.nowritebackup = true
-opt.swapfile = false
--- g.noswapfile = true
+g.nobackup = on
+g.nowritebackup = on
+opt.swapfile = off
+-- g.noswapfile = on
 
 -- backspace
 -- Influences the working of <BS>, <Del>, CTRL-W and CTRL-U in Insert mode
@@ -93,8 +94,8 @@ opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 
 
 -- statusline
-opt.showmode = true -- показывать текущий режим
-opt.showcmd = true  -- показывать незавершенные команды в статусбаре
+opt.showmode = on -- показывать текущий режим
+opt.showcmd = on  -- показывать незавершенные команды в статусбаре
 opt.laststatus = 2  -- always show statusline
 -- opt.statusline = "%#DiffText#\ %M\ %F%r%h%w\ %y%=%#TabLineSel#\ HEX=%02.2B\ %{&encoding}[%{&fileformat}]\ %l:%c/%L\ %p%%\ [%n]"
 
@@ -109,10 +110,10 @@ opt.langmap =
 opt.iminsert = 0        -- Язык ввода при старте Вима - Английский
 opt.imsearch = 0        -- Аналогично настраивается режим поиска
 
-opt.autochdir = true    -- текущий каталог всегда совпадает с содержимым активного окна
+opt.autochdir = on    -- текущий каталог всегда совпадает с содержимым активного окна
 g.browsedir = "current" -- browsedir    "last", "buffer" or "current": which directory used for the file browser
 
-opt.termguicolors = true
+opt.termguicolors = on
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
 opt.signcolumn = "yes"  -- show sign column so that text doesn't shift
 -- vim.cmd([[highlight clear SignColumn]])
