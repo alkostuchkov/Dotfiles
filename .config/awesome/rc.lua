@@ -513,6 +513,8 @@ globalkeys = gears.table.join(
     { description = "terminator", group = "applications" }),
   awful.key({ ctrl, alt }, "Return", function() awful.util.spawn(ONEMORE_TERMINAL) end,
     { description = "Onemore Terminal", group = "applications" }),
+  awful.key({ super, alt }, "h", function() awful.util.spawn("ghostty") end,
+    { description = "Ghostty Terminal", group = "applications" }),
   awful.key({ ctrl, shft }, "Escape", function() awful.util.spawn(TERMINAL .. " -e " .. SHELL .. " -c htop") end,
     { description = "htop", group = "applications" }),
 

@@ -224,6 +224,7 @@ keys = [
     Key([mod, "control"], "Return", lazy.spawn("xfce4-terminal"), desc="Launch xfce4-terminal"),
     Key([mod, "shift"], "Return", lazy.spawn("terminator"), desc="Launch terminator"),
     Key(["control", alt], "Return", lazy.spawn(onemore_term), desc="Launch onemore_term"),
+    Key([mod, alt], "h", lazy.spawn("ghostty"), desc="Launch Ghostty terminal"),
     # RESIZE UP, DOWN, LEFT, RIGHT
     Key([mod, "control"], "i",
         lazy.layout.shrink_main(),
@@ -911,7 +912,8 @@ def move_new_window_to_certain_group(c):
     if c.name == "GNU Image Manipulation Program":
         c.togroup(group_names_indexes[7])
         qtile.groups_map[group_names_indexes[7]].cmd_toscreen()
-    if c.name == "Mozilla Thunderbird":
+    if c.name in ("Mozilla Thunderbird",
+                  "Thunderbird",):
         #  c.togroup(" ")
         c.togroup(group_names_indexes[9])
 
