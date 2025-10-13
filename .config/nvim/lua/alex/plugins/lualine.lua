@@ -5,16 +5,29 @@ return {
     local lualine = require("lualine")
     local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
+    -- MyBlue colors
     local colors = {
-      blue = "#7fbbb3",
-      green = "#a7c080",
-      violet = "#d699b6",
-      yellow = "#dbbc7f",
-      red = "#e67e80",
-      fg = "#c3ccdc",
+      blue = "#61afef",
+      green = "#98c379",
+      violet = "#c678dd",
+      yellow = "#d19a66",
+      red = "#e06c75",
+      fg = "#abb2bf",
       bg = "#475258",
       inactive_bg = "#2d353b",
     }
+
+    -- Everforest colors
+    -- local colors = {
+    --   blue = "#7fbbb3",
+    --   green = "#a7c080",
+    --   violet = "#d699b6",
+    --   yellow = "#dbbc7f",
+    --   red = "#e67e80",
+    --   fg = "#c3ccdc",
+    --   bg = "#475258",
+    --   inactive_bg = "#2d353b",
+    -- }
 
     local my_lualine_theme = {
       normal = {
