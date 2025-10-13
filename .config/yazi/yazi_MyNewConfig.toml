@@ -1,17 +1,16 @@
 # A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
-"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+# "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
 [mgr]
-# ratio          = [ 1, 4, 3 ]
-ratio          = [ 2, 4, 3 ]
+ratio          = [ 1, 4, 3 ]
 sort_by        = "alphabetical"
 sort_sensitive = false
 sort_reverse 	 = false
 sort_dir_first = true
 sort_translit  = false
 linemode       = "none"
-show_hidden    = true
+show_hidden    = false
 show_symlink   = true
 scrolloff      = 5
 mouse_events   = [ "click", "scroll" ]
@@ -72,33 +71,103 @@ audio = [
 	{ run = 'mpv --force-window "%1"', orphan = true, for = "windows" },
 	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
 ]
-image = [
-	{ run = 'qview "$@"', orphan = true, desc = "qView", for = "unix" },
-	{ run = 'gimp "$@"', orphan = true, desc = "GIMP", for = "unix" },
-	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
-]
-torrent = [
-	{ run = 'qbittorrent "$@"', orphan = true, desc = "qBittorrent", for = "unix" },
-	{ run = 'tixati "$@"', orphan = true, desc = "Tixati", for = "unix" },
-	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
-]
-font = [
-	{ run = 'gnome-font-viewer "$1"', orphan = true, desc = "Show font", for = "linux" },
-]
-archive = [
-	{ run = 'engrampa "$1"', orphan = true, desc = "Show archive (Engrampa)", for = "linux" },
-    { run = 'engrampa --add "$@"', block = true, desc = "Create archive (Engrampa)", for = "linux" },
-    { run = 'engrampa -f "$@"', block = true, desc = "Extract archive (Engrampa)", for = "linux" },
-	{ run = 'unar "$1"', desc = "Extract here (unar)", for = "unix" },
-	{ run = 'unar "%1"', desc = "Extract here (unar)", for = "windows" },
-]
+# image = [
+# 	{ run = 'qview "$@"', orphan = true, desc = "qView", for = "unix" },
+# 	{ run = 'gimp "$@"', orphan = true, desc = "GIMP", for = "unix" },
+# 	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
+# ]
+[[opener.image]]
+run = 'qview "$@"'
+orphan = true
+desc = "qView"
+for = "unix"
+
+[[opener.image]]
+run = 'gimp "$@"'
+orphan = true
+desc = "GIMP"
+for = "unix" 
+
+[[opener.image]]
+run = '''mediainfo "$1"; echo "Press enter to exit"; read _'''
+block = true
+desc = "Show media info"
+for = "unix" 
+
+# torrent = [
+# 	{ run = 'qbittorrent "$@"', orphan = true, desc = "qBittorrent", for = "unix" },
+# 	{ run = 'tixati "$@"', orphan = true, desc = "Tixati", for = "unix" },
+# 	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
+# ]
+[[opener.torrent]]
+run = 'qbittorrent "$@"'
+orphan = true
+desc = "qBittorrent"
+for = "unix"
+
+[[opener.torrent]]
+run = 'tixati "$@"'
+orphan = true
+desc = "Tixati"
+for = "unix"
+
+[[opener.torrent]]
+run = '''mediainfo "$1"; echo "Press enter to exit"; read _'''
+block = true
+desc = "Show media info"
+for = "unix"
+
+# font = [
+# 	{ run = 'gnome-font-viewer "$1"', orphan = true, desc = "Show font", for = "linux" },
+# ]
+[[opener.font]]
+run = 'gnome-font-viewer "$1"'
+orphan = true
+desc = "Show font"
+for = "linux"
+
+# archive = [
+# 	{ run = 'engrampa "$1"', orphan = true, desc = "Show archive (Engrampa)", for = "linux" },
+#     { run = 'engrampa --add "$@"', block = true, desc = "Create archive (Engrampa)",  for = "linux" },
+    # { run = 'engrampa -f "$@"',    block = true, desc = "Extract archive (Engrampa)", for = "linux" },
+	# { run = 'unar "$1"',                         desc = "Extract here (unar)", for = "unix" },
+# 	{ run = 'unar "%1"',                         desc = "Extract here (unar)", for = "windows" },
+# ]
+[[opener.archive]]
+run = 'engrampa "$1"'
+orphan = true
+desc = "Show archive (Engrampa)"
+for = "linux" 
+
+[[opener.archive]]
+run = 'engrampa --add "$@"'
+block = true
+desc = "Create archive (Engrampa)"
+for = "linux" 
+
+[[opener.archive]]
+run = 'engrampa -f "$@"'
+block = true
+desc = "Extract archive (Engrampa)"
+for = "linux" 
+
+[[opener.archive]]
+run = 'unar "$1"'
+desc = "Extract here (unar)"
+for = "unix" 
+
+[[opener.archive]]
+run = 'unar "%1"'
+desc = "Extract here (unar)"
+for = "windows" 
+
 pdf_djvu = [
-	{ run = 'zathura "$1"', orphan = true, desc = "Zathura", for = "linux" },
+	{ run = 'zathura "$1"',  orphan = true, desc = "Zathura",  for = "linux" },
 	{ run = 'qpdfview "$1"', orphan = true, desc = "qpdfview", for = "linux" },
 ]
 ebook = [
 	{ run = 'FBReader "$1"', orphan = true, desc = "FBReader", for = "linux" },
-	{ run = 'foliate "$1"', orphan = true, desc = "Foliate", for = "linux" },
+	{ run = 'foliate "$1"',  orphan = true, desc = "Foliate",  for = "linux" },
 	{ run = 'bookworm "$1"', orphan = true, desc = "Bookworm", for = "linux" },
 ]
 
