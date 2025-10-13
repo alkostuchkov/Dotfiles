@@ -46,6 +46,7 @@ set __GIT_PROMPT_DIR ~/.bash-git-prompt # Git autocomplition and prompt
 # set fish_color_error '#ff6c6b'
 # set fish_color_param brcyan
 
+# set_colorscheme_Tomorrow_Night
 set_colorscheme_ayu_Mirage
 # set_colorscheme_ayu_Dark
 
@@ -55,6 +56,16 @@ set_colorscheme_ayu_Mirage
 # function man
 #     command man "$argv" | eval $MANPAGER
 # end
+
+# Shell wrapper for Yazi ------------------------------------------------------
+function y
+	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	yazi $argv --cwd-file="$tmp"
+	if read -z cwd < "$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+		builtin cd -- "$cwd"
+	end
+	rm -f -- "$tmp"
+end
 
 # SET EITHER DEFAULT EMACS MODE OR VI MODE ------------------------------------
 function fish_user_key_bindings
@@ -325,6 +336,7 @@ end
 # alias la='ls -la'
 # alias la='ls -lah'
 # alias lf='ls -lFh'
+alias cd='z'  # for Zoxide
 alias lse='exa -g --color=always --group-directories-first'
 alias lle='lse -l'
 alias ls='lsd --group-dirs=first'
@@ -576,3 +588,5 @@ function fzf_key_bindings
 end
 ### end: key-bindings.fish ###
 fzf_key_bindings
+
+zoxide init fish | source

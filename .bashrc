@@ -41,6 +41,17 @@ case $- in
 esac
 
 ###############################################################################
+# Shell wrapper for Yazi 
+###############################################################################
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
+###############################################################################
 # HIST...
 ###############################################################################
 # don't put duplicate lines or lines starting with space in the history ------
@@ -142,6 +153,7 @@ fi
 # alias la='ls -la'
 # alias la='ls -lah'
 # alias lf='ls -lFh'
+alias cd='z'  # for Zoxide
 alias lse='exa -g --color=always --group-directories-first'
 alias lle='lse -l'
 alias ls='lsd --group-dirs=first'
@@ -203,6 +215,7 @@ source /usr/share/fzf/key-bindings.bash
 # Run neofetch ----------------------------------------------------------------
 neofetch
 
+eval "$(zoxide init bash)"
 # ### key-bindings.bash ###
 # #     ____      ____
 # #    / __/___  / __/

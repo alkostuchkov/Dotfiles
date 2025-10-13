@@ -40,6 +40,17 @@ export XDG_CACHE_HOME="$HOME/.cache"
 # fi
 
 ###############################################################################
+# Shell wrapper for Yazi 
+###############################################################################
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
+###############################################################################
 # AUTOCOMPLETE AND HIGHLIGHT COLORS
 ###############################################################################
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7d7d7d"
@@ -150,6 +161,7 @@ plugins=(git asdf)
 # alias la='ls -la'
 # alias la='ls -lah'
 # alias lf='ls -lFh'
+alias cd='z'  # for Zoxide
 alias lse='exa -g --color=always --group-directories-first'
 alias lle='lse -l'
 alias ls='lsd --group-dirs=first'
@@ -233,6 +245,7 @@ source /usr/share/fzf/key-bindings.zsh
 # Run neofetch ----------------------------------------------------------------
 neofetch
 
+eval "$(zoxide init zsh)"
 # ### key-bindings.zsh ###
 # #     ____      ____
 # #    / __/___  / __/
