@@ -484,7 +484,7 @@ nnoremap s :shell<cr>
 " Open poetry shell (.venv) ---------------------------------------------------
 nnoremap <wait> ,,pa :!alacritty -e poetry shell &<cr>
 nnoremap <wait> ,,pk :!kitty -e poetry shell %i &<cr>
-nnoremap <wait> ,,pw :!wezterm start --always-new-process --cwd %d -e poetry shell &<cr>
+nnoremap <wait> ,,pw :!wezterm start --always-new-process --cwd %d -e poetry shell %i &<cr>
 
 " Open console in current directory -------------------------------------------
 nnoremap <wait> ,,t :!$TERMINAL &<cr>

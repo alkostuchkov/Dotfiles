@@ -10,13 +10,21 @@ keymap = [
 	# Archives (create/extract)
 	{ on = [ "<A-a>", "c" ], run = """shell 'engrampa --add "$@"' --block --confirm""", desc = "Create an archive" },
 	{ on = [ "<A-a>", "x" ], run = """shell 'engrampa -f "$@"' --block --confirm""", desc = "Extract an archive" },
+	#  Open console in the current directory
+	{ on = [ "<A-c>", "a" ], run = """shell 'alacritty' --orphan""", desc = "alacritty" },
+	{ on = [ "<A-c>", "k" ], run = """shell 'kitty' --orphan""", desc = "kitty" },
+	{ on = [ "<A-c>", "w" ], run = """shell 'wezterm start --cwd $@' --orphan""", desc = "wezterm" },
+	# { on = [ "<A-c>", "w" ], run = """shell 'wezterm start --always-new-process --cwd $@' --orphan""", desc = "Run WezTerm" },
+	{ on = [ "<A-c>", "<S-a>" ], run = """shell 'pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY alacritty --working-directory $@' --orphan""", desc = "alacritty as root" },
+	{ on = [ "<A-c>", "<S-k>" ], run = """shell 'pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY kitty --working-directory $@' --orphan""", desc = "kitty as root" },
+	{ on = [ "<A-c>", "<S-w>" ], run = """shell 'pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY wezterm start --cwd $@' --orphan""", desc = "wezterm as root" },
 
-	{ on = "<Esc>", run = "escape",             desc = "Exit visual mode, clear selection, or cancel search" },
-	{ on = "<C-[>", run = "escape",             desc = "Exit visual mode, clear selection, or cancel search" },
-	{ on = "q",     run = "quit",               desc = "Quit the process" },
+	{ on = "<Esc>", run = "escape", desc = "Exit visual mode, clear selection, or cancel search" },
+	{ on = "<C-[>", run = "escape", desc = "Exit visual mode, clear selection, or cancel search" },
+	{ on = "q",     run = "quit", desc = "Quit the process" },
 	{ on = "Q",     run = "quit --no-cwd-file", desc = "Quit without outputting cwd-file" },
-	{ on = "<C-c>", run = "close",              desc = "Close the current tab, or quit if it's last" },
-	{ on = "<C-z>", run = "suspend",            desc = "Suspend the process" },
+	{ on = "<C-c>", run = "close", desc = "Close the current tab, or quit if it's last" },
+	{ on = "<C-z>", run = "suspend", desc = "Suspend the process" },
 
 	# Hopping
 	{ on = "k", run = "arrow prev", desc = "Previous file" },

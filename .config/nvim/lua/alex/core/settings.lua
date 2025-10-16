@@ -11,7 +11,7 @@ local opt = vim.opt                  -- local
 opt.number = on
 opt.relativenumber = on
 
-opt.textwidth = 79
+-- opt.textwidth = 79
 opt.colorcolumn = "+1"
 -- vim.cmd([[highlight ColorColumn ctermbg=233]])
 opt.cursorline = on
