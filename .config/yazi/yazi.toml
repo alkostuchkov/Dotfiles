@@ -40,8 +40,8 @@ edit = [
 	{ run = 'code -w %*', block = true,  desc = "code (block)",   for = "windows" },
 ]
 open = [
-	{ run = 'xdg-open "$1"', desc = "System default", for = "linux" },
-	{ run = 'open "$@"', desc = "Open", for = "macos" },
+	{ run = 'xdg-open "$1"',                desc = "System default", for = "linux" },
+	{ run = 'open "$@"',                    desc = "Open", for = "macos" },
 	{ run = 'start "" "%1"', orphan = true, desc = "Open", for = "windows" },
 ]
 reveal = [
@@ -55,75 +55,76 @@ reveal = [
 # 	{ run = 'unar "%1"', desc = "Extract here", for = "windows" },
 # ]
 video = [
-	{ run = 'smplayer "$@"', orphan = true, desc = "SMplayer", for = "unix" },
-	{ run = 'vlc "$@"', orphan = true, desc = "VLC", for = "unix" },
-	{ run = 'mpv --force-window "$@"', desc = "mpv", orphan = true, for = "unix" },
-	{ run = 'avidemux "$@"', desc = "Avidemux", orphan = true, for = "unix" },
-	{ run = 'mpv --force-window "%1"', orphan = true, for = "windows" },
+	{ run = 'smplayer "$@"',           orphan = true, desc = "SMplayer", for = "unix" },
+	{ run = 'vlc "$@"',                orphan = true, desc = "VLC",      for = "unix" },
+	{ run = 'mpv --force-window "$@"', orphan = true, desc = "mpv",      for = "unix" },
+	{ run = 'avidemux "$@"',           orphan = true, desc = "Avidemux", for = "unix" },
+	{ run = 'mpv --force-window "%1"', orphan = true,                    for = "windows" },
 	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
 ]
 audio = [
-	{ run = 'deadbeef "$@"', orphan = true, desc = "DeaDBeeF", for = "unix" },
-	{ run = 'smplayer "$@"', orphan = true, desc = "SMplayer", for = "unix" },
-	{ run = 'vlc "$@"', orphan = true, desc = "VLC", for = "unix" },
-	{ run = 'mpv --force-window "$@"', desc = "mpv", orphan = true, for = "unix" },
-	{ run = 'audacity "$@"', orphan = true, desc = "Audacity", for = "unix" },
-	{ run = 'soundconverter "$@"', orphan = true, desc = "SoundConverter", for = "unix" },
-	{ run = 'mpv --force-window "%1"', orphan = true, for = "windows" },
+	{ run = 'deadbeef "$@"',           orphan = true, desc = "DeaDBeeF",       for = "unix" },
+	{ run = 'smplayer "$@"',           orphan = true, desc = "SMplayer",       for = "unix" },
+	{ run = 'vlc "$@"',                orphan = true, desc = "VLC",            for = "unix" },
+	{ run = 'mpv --force-window "$@"', orphan = true, desc = "mpv",            for = "unix" },
+	{ run = 'audacity "$@"',           orphan = true, desc = "Audacity",       for = "unix" },
+	{ run = 'soundconverter "$@"',     orphan = true, desc = "SoundConverter", for = "unix" },
+	{ run = 'mpv --force-window "%1"', orphan = true,                          for = "windows" },
 	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
 ]
 image = [
 	{ run = 'qview "$@"', orphan = true, desc = "qView", for = "unix" },
-	{ run = 'gimp "$@"', orphan = true, desc = "GIMP", for = "unix" },
+	{ run = 'gimp "$@"',  orphan = true, desc = "GIMP",  for = "unix" },
 	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
 ]
 torrent = [
 	{ run = 'qbittorrent "$@"', orphan = true, desc = "qBittorrent", for = "unix" },
-	{ run = 'tixati "$@"', orphan = true, desc = "Tixati", for = "unix" },
+	{ run = 'tixati "$@"',      orphan = true, desc = "Tixati",      for = "unix" },
 	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
 ]
 font = [
 	{ run = 'gnome-font-viewer "$1"', orphan = true, desc = "Show font", for = "linux" },
 ]
 archive = [
-	{ run = 'engrampa "$1"', orphan = true, desc = "Show archive (Engrampa)", for = "linux" },
-    { run = 'engrampa --add "$@"', block = true, desc = "Create archive (Engrampa)", for = "linux" },
-    { run = 'engrampa -f "$@"', block = true, desc = "Extract archive (Engrampa)", for = "linux" },
-	{ run = 'unar "$1"', desc = "Extract here (unar)", for = "unix" },
-	{ run = 'unar "%1"', desc = "Extract here (unar)", for = "windows" },
+	{ run = 'engrampa "$1"', orphan = true,      desc = "Show archive (Engrampa)",    for = "linux" },
+    { run = 'engrampa --add "$@"', block = true, desc = "Create archive (Engrampa)",  for = "linux" },
+    { run = 'engrampa -f "$@"',    block = true, desc = "Extract archive (Engrampa)", for = "linux" },
+	{ run = 'unar "$1"',                         desc = "Extract here (unar)",        for = "unix" },
+	{ run = 'unar "%1"',                         desc = "Extract here (unar)",        for = "windows" },
 ]
 pdf_djvu = [
-	{ run = 'zathura "$1"', orphan = true, desc = "Zathura", for = "linux" },
+	{ run = 'zathura "$1"',  orphan = true, desc = "Zathura",  for = "linux" },
 	{ run = 'qpdfview "$1"', orphan = true, desc = "qpdfview", for = "linux" },
 ]
 ebook = [
 	{ run = 'FBReader "$1"', orphan = true, desc = "FBReader", for = "linux" },
-	{ run = 'foliate "$1"', orphan = true, desc = "Foliate", for = "linux" },
+	{ run = 'foliate "$1"',  orphan = true, desc = "Foliate",  for = "linux" },
 	{ run = 'bookworm "$1"', orphan = true, desc = "Bookworm", for = "linux" },
 ]
 
 [open]
 rules = [
-	{ name = "*/", use = [ "edit", "open", "reveal" ] },
-    { name = "{*.epub,*.fb2}", use = [ "ebook", "open", "reveal" ] },
-    { name = "{*.pdf,*.djvu}", use = [ "pdf_djvu", "open", "reveal" ] },
-    { name = "*.torrent", use = [ "torrent", "open", "reveal" ] },
+	# { name = "*/",              use = [ "open", "edit", "reveal" ] },
+	{ name = "*/",              use = [ "reveal", "edit", "open" ] },
+    { name = "{*.epub,*.fb2}",  use = [ "ebook", "open", "reveal" ] },
+    { name = "{*.pdf,*.djvu}",  use = [ "pdf_djvu", "open", "reveal" ] },
+    { name = "*.torrent",       use = [ "torrent", "open", "reveal" ] },
 
-    { mime = "font/*",   use = [ "font", "open", "reveal" ] },
+    { mime = "font/*",                      use = [ "font", "open", "reveal" ] },
     { mime = "application/vnd.ms-opentype", use = [ "font", "open", "reveal" ] },
-	{ mime = "text/*",          use = [ "edit", "reveal" ] },
-	{ mime = "image/*",         use = [ "image", "open", "reveal" ] },
+	{ mime = "text/*",                      use = [ "edit", "reveal" ] },
+	{ mime = "image/*",                     use = [ "image", "open", "reveal" ] },
     # { mime = "{audio,video}/*", use = [ "open", "video", "reveal" ] },
-    { mime = "video/*", use = [ "video", "open", "reveal" ] },
-    { mime = "audio/*", use = [ "audio", "open", "reveal" ] },
-	{ mime = "inode/x-empty",   use = [ "edit", "reveal" ] },
+    { mime = "video/*",                     use = [ "video", "open", "reveal" ] },
+    { mime = "audio/*",                     use = [ "audio", "open", "reveal" ] },
+	{ mime = "inode/x-empty",               use = [ "edit", "reveal" ] },
 
 	# { mime = "application/{,g}zip", use = [ "archive", "extract", "reveal" ] },
     # { mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", use = [ "archive", "extract", "reveal" ] },
-	{ mime = "application/{,g}zip", use = [ "archive", "reveal" ] },
+	{ mime = "application/{,g}zip",                            use = [ "archive", "reveal" ] },
 	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", use = [ "archive", "reveal" ] },
-	{ mime = "application/{json,x-ndjson}", use = [ "edit", "reveal" ] },
-	{ mime = "*/javascript", use = [ "edit", "reveal" ] },
+	{ mime = "application/{json,x-ndjson}",                    use = [ "edit", "reveal" ] },
+	{ mime = "*/javascript",                                   use = [ "edit", "reveal" ] },
 
 	{ name = "*", use = [ "open", "reveal" ] },
 ]
