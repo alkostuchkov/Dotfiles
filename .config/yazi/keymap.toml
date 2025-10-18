@@ -2,7 +2,7 @@
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
 "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 
-[mgr]
+[mgr]  # File list
 
 keymap = [
 	# Go to the shell
@@ -180,7 +180,7 @@ keymap = [
 	{ on = "<F1>", run = "help", desc = "Open help" },
 ]
 
-[tasks]
+[tasks]  # Task manager
 
 keymap = [
 	{ on = "<Esc>", run = "close", desc = "Close task manager" },
@@ -202,7 +202,7 @@ keymap = [
 	{ on = "<F1>", run = "help", desc = "Open help" },
 ]
 
-[spot]
+[spot]  # File information spotter
 
 keymap = [
 	{ on = "<Esc>", run = "close", desc = "Close the spot" },
@@ -228,7 +228,7 @@ keymap = [
 	{ on = "<F1>", run = "help", desc = "Open help" },
 ]
 
-[pick]
+[pick]  # Pick component. e.g. "open with" for files
 
 keymap = [
 	{ on = "<Esc>",   run = "close",          desc = "Cancel pick" },
@@ -247,7 +247,7 @@ keymap = [
 	{ on = "<F1>", run = "help", desc = "Open help" },
 ]
 
-[input]
+[input]  # Input component. e.g. create, rename, etc
 
 keymap = [
 	{ on = "<C-c>",   run = "close",          desc = "Cancel input" },
@@ -329,7 +329,7 @@ keymap = [
 	{ on = "<F1>", run = "help", desc = "Open help" },
 ]
 
-[confirm]
+[confirm]  # Confirmation dialog. e.g. remove, overwrite, etc
 
 keymap = [
 	{ on = "<Esc>",   run = "close",          desc = "Cancel the confirm" },
@@ -351,7 +351,7 @@ keymap = [
 	{ on = "<F1>", run = "help", desc = "Open help" },
 ]
 
-[cmp]
+[cmp]  # Completion component. e.g. "cd" path completion
 
 keymap = [
 	{ on = "<C-c>",   run = "close",                                      desc = "Cancel completion" },
@@ -372,7 +372,7 @@ keymap = [
 	{ on = "<F1>", run = "help", desc = "Open help" },
 ]
 
-[help]
+[help]  # Help menu
 
 keymap = [
 	{ on = "<Esc>", run = "escape", desc = "Clear the filter, or hide the help" },

@@ -37,7 +37,7 @@ picom --config ~/.config/picom/picom.conf &
 conky -c ~/.myScripts/conky/conkyrc &
 /usr/bin/python /usr/bin/udiskie &
 xiccd &
-python3 /usr/bin/redshift-gtk &
+# python3 /usr/bin/redshift-gtk &
 ~/Programs/CheckInternetConnection/CheckInternetConnection &
-~/Programs/AppImageApplications/BreakTimer.AppImage &
-birdtray &
+# ~/Programs/AppImageApplications/BreakTimer.AppImage &
+# birdtray &

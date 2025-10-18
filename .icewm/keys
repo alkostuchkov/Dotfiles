@@ -12,11 +12,23 @@
 key "Alt+Ctrl+t"			xterm
 key "Super+Enter"			wezterm
 key "Super+Shift+Enter"	    alacritty
+key "Super+Alt+h"			ghostty
 key "Super+Alt+n"			thunar
 key "Super+Alt+v"			wezterm -e vifmrun
+key "Super+Alt+y"			wezterm -e yazi --cwd-file ~/.config/yazi/cwd (cat ~/.config/yazi/cwd)
+key "Super+Alt+t"			~/Programs/Telegram/Telegram -- %u
+key "Super+Alt+w"			/usr/bin/firefox
+key "Super+Alt+r"			rofi run -show drun -show-icons
+key "Super+Alt+d"           dmenu_run -i -l 10 -nb #32343D -nf #CFD6DF -sb #3D5E87 -sf #F9F9F9 -p Run:  -fn Iosevka-17:normal
 
-key "Super+Shift+Alt+v"     ~/.myScripts/runVifmAsRoot.sh
+key "Ctrl+Alt+c"           ~/.myScripts/dmscripts/dm-edit-configs.sh
+key "Ctrl+Alt+s"           ~/.myScripts/dmscripts/dm-run-scripts.sh
+key "Ctrl+Alt+r"           ~/.myScripts/dmscripts/dm-run-programs.sh
+key "Ctrl+Alt+x"           ~/.myScripts/dmscripts/dm-system-exit.sh
+
 key "Super+Shift+Alt+n"     ~/.myScripts/runThunarAsRoot.sh
+key "Super+Shift+Alt+v"     ~/.myScripts/runVifmAsRoot.sh
+key "Super+Shift+Alt+y"     ~/.myScripts/runYaziAsRoot.sh
 
 key "Super+Shift+r"         icesh restart
 
