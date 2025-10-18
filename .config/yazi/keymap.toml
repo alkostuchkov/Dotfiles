@@ -11,13 +11,25 @@ prepend_keymap = [
     # { on = [ "<A-p>", "m" ],     run  = "plugin toggle-pane min-preview", desc = "Show or hide the preview pane" },
     # { on = [ "<A-p>", "<S-m>" ], run  = "plugin toggle-pane max-preview", desc = "Maximize or restore the preview pane" },
 	{ on = [ "!" ], run = 'shell "$SHELL" --block', desc = "Open $SHELL here" },
+	# Archives (create/extract)
+	{ on = [ "<A-a>", "c" ], run = """shell 'engrampa --add "$@"' --block --confirm""", desc = "Create archive (Engrampa)" },
+	{ on = [ "<A-a>", "x" ], run = """shell 'engrampa -f "$@"' --block --confirm""",    desc = "Extract here (Engrampa)" },
+
+	{ on = [ "<A-a>", "a" ], run = "plugin ouch",                desc = "Create archive (ouch)" },
+    { on = [ "<A-a>", "e" ], run = """shell 'ouch d -y "$@"'""", desc = "Extract here (ouch)" },
+
+	# { on = [ "<A-a>", "a" ], run = "plugin compress",      desc = "Archive selected files" },
+	# { on = [ "<A-a>", "p" ], run = "plugin compress -p",   desc = "Archive selected files (password)" },
+	# { on = [ "<A-a>", "h" ], run = "plugin compress -ph",  desc = "Archive selected files (password+header)" },
+	# { on = [ "<A-a>", "l" ], run = "plugin compress -l",   desc = "Archive selected files (compression level)" },
+	# { on = [ "<A-a>", "u" ], run = "plugin compress -phl", desc = "Archive selected files (password+header+level)" },
 ]
 keymap = [
 	# Go to the shell
 	# { on = [ "<C-s>" ],      run = 'shell "$SHELL" --block --confirm' },
-	# Archives (create/extract)
-	{ on = [ "<A-a>", "c" ], run = """shell 'engrampa --add "$@"' --block --confirm""", desc = "Create an archive" },
-	{ on = [ "<A-a>", "x" ], run = """shell 'engrampa -f "$@"' --block --confirm""",    desc = "Extract an archive" },
+	# # Archives (create/extract)
+	# { on = [ "<A-a>", "c" ], run = """shell 'engrampa --add "$@"' --block --confirm""", desc = "Create an archive" },
+	# { on = [ "<A-a>", "x" ], run = """shell 'engrampa -f "$@"' --block --confirm""",    desc = "Extract an archive" },
 	#  Open console in the current directory
 	{ on = [ "<A-c>", "a" ], run = """shell 'alacritty' --orphan""", desc = "alacritty" },
 	{ on = [ "<A-c>", "k" ], run = """shell 'kitty' --orphan""",     desc = "kitty" },
