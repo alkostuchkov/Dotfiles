@@ -46,7 +46,8 @@ open = [
 ]
 reveal = [
     { run = 'engrampa --add "$@"', block = true, desc = "Create archive (Engrampa)",  for = "linux" },
-	{ run = 'xdg-open "$(dirname "$1")"', desc = "Other File Manager", for = "linux" },
+	{ run = 'thunar "$(dirname "$1")"', desc = "Thunar", for = "linux" },
+	# { run = 'xdg-open "$(dirname "$1")"', desc = "Other File Manager", for = "linux" },
 	{ run = 'open -R "$1"', desc = "Reveal", for = "macos" },
 	{ run = 'explorer /select, "%1"', orphan = true, desc = "Reveal", for = "windows" },
 	{ run = '''exiftool "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF", for = "unix" },
@@ -112,7 +113,8 @@ bulk-rename = [
 rules = [
 	# { name = "*/",              use = [ "open", "edit", "reveal" ] },
 	{ name = "bulk-rename.txt", use = [ "bulk-rename" ] },
-	{ name = "*/",              use = [ "reveal", "edit", "open" ] },
+	{ name = "*/",              use = [ "reveal", "open" ] },
+	# { name = "*/",              use = [ "reveal", "edit", "open" ] },
     { name = "{*.lua,*.txt}",   use = [ "edit", "reveal" ] },
     { name = "{*.epub,*.fb2}",  use = [ "ebook", "open", "reveal" ] },
     { name = "{*.pdf,*.djvu}",  use = [ "pdf_djvu", "open", "reveal" ] },
