@@ -85,9 +85,10 @@ options=(
 "xterm - $HOME/.XTerm"
 "xresources - $HOME/.Xresources"
 "xsession-errors - $HOME/.xsession-errors"
+"yazi - $HOME/.config/yazi/yazi.toml"
+"yazi init - $HOME/.config/yazi/init.lua"
 "yazi keymap - $HOME/.config/yazi/keymap.toml"
 "yazi theme - $HOME/.config/yazi/theme.toml"
-"yazi - $HOME/.config/yazi/yazi.toml"
 "zathura - $HOME/.config/zathura/zathurarc"
 "zsh - $HOME/.zshrc"
 "Quit")

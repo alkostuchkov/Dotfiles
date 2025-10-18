@@ -101,11 +101,19 @@ ebook = [
 	{ run = 'foliate "$1"',  orphan = true, desc = "Foliate",  for = "linux" },
 	{ run = 'bookworm "$1"', orphan = true, desc = "Bookworm", for = "linux" },
 ]
+bulk-rename = [
+    { run   = 'wezterm start --always-new-process -e vim "$@"', block = true },
+]
 
 [open]
+# prepend_rules = [
+# 	{ name = "bulk-rename.txt", use = [ "bulk-rename" ] },
+# ]
 rules = [
 	# { name = "*/",              use = [ "open", "edit", "reveal" ] },
+	{ name = "bulk-rename.txt", use = [ "bulk-rename" ] },
 	{ name = "*/",              use = [ "reveal", "edit", "open" ] },
+    { name = "{*.lua,*.txt}",   use = [ "edit", "reveal" ] },
     { name = "{*.epub,*.fb2}",  use = [ "ebook", "open", "reveal" ] },
     { name = "{*.pdf,*.djvu}",  use = [ "pdf_djvu", "open", "reveal" ] },
     { name = "*.torrent",       use = [ "torrent", "open", "reveal" ] },
