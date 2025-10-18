@@ -45,6 +45,7 @@ open = [
 	{ run = 'start "" "%1"', orphan = true, desc = "Open", for = "windows" },
 ]
 reveal = [
+    { run = 'engrampa --add "$@"', block = true, desc = "Create archive (Engrampa)",  for = "linux" },
 	{ run = 'xdg-open "$(dirname "$1")"', desc = "Other File Manager", for = "linux" },
 	{ run = 'open -R "$1"', desc = "Reveal", for = "macos" },
 	{ run = 'explorer /select, "%1"', orphan = true, desc = "Reveal", for = "windows" },
@@ -87,7 +88,6 @@ font = [
 ]
 archive = [
 	{ run = 'engrampa "$1"', orphan = true,      desc = "Show archive (Engrampa)",    for = "linux" },
-    { run = 'engrampa --add "$@"', block = true, desc = "Create archive (Engrampa)",  for = "linux" },
     { run = 'engrampa -f "$@"',    block = true, desc = "Extract archive (Engrampa)", for = "linux" },
 	{ run = 'unar "$1"',                         desc = "Extract here (unar)",        for = "unix" },
 	{ run = 'unar "%1"',                         desc = "Extract here (unar)",        for = "windows" },

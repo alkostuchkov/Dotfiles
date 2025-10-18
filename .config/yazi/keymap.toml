@@ -10,10 +10,11 @@ prepend_keymap = [
     { on = [ "<A-p>", "p" ], run  = "plugin toggle-pane min-parent",  desc = "Show or hide the parent pane" },
     # { on = [ "<A-p>", "m" ],     run  = "plugin toggle-pane min-preview", desc = "Show or hide the preview pane" },
     # { on = [ "<A-p>", "<S-m>" ], run  = "plugin toggle-pane max-preview", desc = "Maximize or restore the preview pane" },
+	{ on = [ "!" ], run = 'shell "$SHELL" --block', desc = "Open $SHELL here" },
 ]
 keymap = [
 	# Go to the shell
-	{ on = [ "<C-s>" ],      run = 'shell "$SHELL" --block --confirm' },
+	# { on = [ "<C-s>" ],      run = 'shell "$SHELL" --block --confirm' },
 	# Archives (create/extract)
 	{ on = [ "<A-a>", "c" ], run = """shell 'engrampa --add "$@"' --block --confirm""", desc = "Create an archive" },
 	{ on = [ "<A-a>", "x" ], run = """shell 'engrampa -f "$@"' --block --confirm""",    desc = "Extract an archive" },
