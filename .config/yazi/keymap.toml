@@ -1,9 +1,16 @@
 # A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
 "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
+# keymap.toml
 
 [mgr]  # File list
 
+prepend_keymap = [
+    { on = [ "<A-p>", "v" ], run  = "plugin toggle-pane min-preview", desc = "Show or hide the preview pane" },
+    { on = [ "<A-p>", "p" ], run  = "plugin toggle-pane min-parent",  desc = "Show or hide the parent pane" },
+    # { on = [ "<A-p>", "m" ],     run  = "plugin toggle-pane min-preview", desc = "Show or hide the preview pane" },
+    # { on = [ "<A-p>", "<S-m>" ], run  = "plugin toggle-pane max-preview", desc = "Maximize or restore the preview pane" },
+]
 keymap = [
 	# Go to the shell
 	{ on = [ "<C-s>" ],      run = 'shell "$SHELL" --block --confirm' },
