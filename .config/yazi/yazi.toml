@@ -46,6 +46,7 @@ open = [
 ]
 reveal = [
     { run = 'engrampa --add "$@"', block = true, desc = "Create archive (Engrampa)",  for = "linux" },
+	{ run = 'ouch compress "$1" "$1.zip"', desc = "Create archive (ouch)",                for = "linux" },
 	{ run = 'thunar "$(dirname "$1")"', desc = "Thunar", for = "linux" },
 	# { run = 'xdg-open "$(dirname "$1")"', desc = "Other File Manager", for = "linux" },
 	{ run = 'open -R "$1"', desc = "Reveal", for = "macos" },
