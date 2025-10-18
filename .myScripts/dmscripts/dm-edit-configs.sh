@@ -44,6 +44,14 @@ options=(
 "i3blocks - $HOME/.config/i3blocks/config"
 "i3status - $HOME/.config/i3status/config"
 "i3pystatus - $HOME/.config/i3pystatus/config.py"
+"icewm keys - $HOME/.icewm/keys"
+"icewm menu - $HOME/.icewm/menu"
+"icewm prefoverride - $HOME/.icewm/prefoverride"
+"icewm startup - $HOME/.icewm/startup"
+"icewm taskbar - $HOME/.icewm/taskbar"
+"icewm toolbar - $HOME/.icewm/toolbar"
+"icewm theme - $HOME/.icewm/theme"
+"icewm winoptions - $HOME/.icewm/winoptions"
 "kitty - $HOME/.config/kitty/kitty.conf"
 "micro - $HOME/.config/micro/settings.json"
 "mimeapps - $HOME/.config/mimeapps.list"
@@ -96,7 +104,7 @@ options=(
 # nb='#2d353b'
 # sf='#a7c080'
 # sb='#475258'
-fn='Iosevka-18:normal'
+fn='Iosevka-17:normal'
 # fn='Ubuntu-16:normal'
 
 # MyBlue
