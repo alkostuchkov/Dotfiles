@@ -24,7 +24,18 @@
 # background = #123abc
 
 gtk-titlebar = false
-theme = OneHalfDark
+# theme = OneHalfDark
+# theme = Tomorrow Night
+# theme = Tomorrow Night Burns
+# theme = Tomorrow Night Eighties
+# theme = tokyonight
+# theme = tokyonight-storm
+# theme = tokyonight_moon
+# theme = tokyonight_night
+
+# theme = BlulocoDark
+theme = Everblush
+# theme = ForestBlue
 
 font-family = Fira Mono
 font-family-bold = Fira Mono
@@ -58,5 +69,18 @@ keybind = ctrl+shift+up=scroll_page_lines:-1
 # quick-terminal-position = bottom
 keybind = ctrl+tab=unbind
 keybind = ctrl+shift+tab=unbind
+
+keybind = ctrl+1=goto_tab:1
+keybind = ctrl+2=goto_tab:2
+keybind = ctrl+3=goto_tab:3
+keybind = ctrl+4=goto_tab:4
+keybind = ctrl+5=goto_tab:5
+keybind = ctrl+6=goto_tab:6
+keybind = ctrl+7=goto_tab:7
+keybind = ctrl+8=goto_tab:8
+keybind = ctrl+9=goto_tab:9
+keybind = ctrl+[=previous_tab
+keybind = ctrl+]=next_tab
+keybind = ctrl+shift+]=last_tab
 
 quit-after-last-window-closed = true
