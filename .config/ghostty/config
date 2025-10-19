@@ -24,8 +24,9 @@
 # background = #123abc
 
 gtk-titlebar = false
-# theme = OneHalfDark
+theme = OneHalfDark
 # theme = Tomorrow Night
+# theme = Garuda
 # theme = Tomorrow Night Burns
 # theme = Tomorrow Night Eighties
 # theme = tokyonight
@@ -34,7 +35,7 @@ gtk-titlebar = false
 # theme = tokyonight_night
 
 # theme = BlulocoDark
-theme = Everblush
+# theme = Everblush
 # theme = ForestBlue
 
 font-family = Fira Mono
