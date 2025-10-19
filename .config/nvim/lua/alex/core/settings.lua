@@ -52,10 +52,10 @@ opt.softtabstop = 4
 
 opt.syntax = "ON"
 -- Данная вариация работает как wrap,... но переносит строчки не посимвольно, а по словам
--- opt.wrap = true
--- opt.linebreak = true
--- g.nolist = true
-opt.wrap = false
+opt.wrap = true
+opt.linebreak = true
+g.nolist = true
+-- opt.wrap = false
 
 opt.mouse = "a"
 g.noexrc = true     -- не читаем файл конфигурации из текущей директории

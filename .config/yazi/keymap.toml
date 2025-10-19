@@ -33,10 +33,12 @@ keymap = [
 	#  Open console in the current directory
 	{ on = [ "<A-c>", "a" ], run = """shell 'alacritty' --orphan""", desc = "alacritty" },
 	{ on = [ "<A-c>", "k" ], run = """shell 'kitty' --orphan""",     desc = "kitty" },
+	{ on = [ "<A-c>", "g" ], run = """shell 'ghostty' --orphan""",   desc = "ghostty" },
 	{ on = [ "<A-c>", "w" ], run = """shell 'wezterm start --cwd $@' --orphan""", desc = "wezterm" },
 	# { on = [ "<A-c>", "w" ], run = """shell 'wezterm start --always-new-process --cwd $@' --orphan""", desc = "Run WezTerm" },
 	{ on = [ "<A-c>", "<S-a>" ], run = """shell 'pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY alacritty --working-directory $@' --orphan""", desc = "alacritty as root" },
 	{ on = [ "<A-c>", "<S-k>" ], run = """shell 'pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY kitty --working-directory $@' --orphan""", desc = "kitty as root" },
+	{ on = [ "<A-c>", "<S-g>" ], run = """shell 'pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY ghostty --working-directory=$@' --orphan""", desc = "ghostty as root" },
 	{ on = [ "<A-c>", "<S-w>" ], run = """shell 'pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY wezterm start --cwd $@' --orphan""", desc = "wezterm as root" },
 
 	{ on = "<Esc>", run = "escape",  desc = "Exit visual mode, clear selection, or cancel search" },

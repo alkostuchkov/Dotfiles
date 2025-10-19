@@ -72,7 +72,7 @@ config.font_rules = {
     },
   },
 }
-config.font_size = 16.5
+config.font_size = 16.0
 -- config.line_height = 1.10 -- for Hack Nerd Font
 -- config.line_height = 1.15 -- for Consolas NF
 -- config.line_height = 1.05 -- for Mononoki Nerd Font
@@ -130,12 +130,12 @@ config.keys = {
   { key = "End",       mods = "CTRL|SHIFT", action = act.ScrollToBottom },
   -- Split
   { -- horizontal
-    key = "z",
+    key = "x",
     mods = "CTRL|SHIFT",
     action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
   },
   { -- vertical
-    key = "x",
+    key = "z",
     mods = "CTRL|SHIFT",
     action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
   },
