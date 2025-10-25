@@ -55,7 +55,6 @@ opt.syntax = "ON"
 opt.wrap = true
 opt.linebreak = true
 g.nolist = true
--- opt.wrap = false
 
 opt.mouse = "a"
 g.noexrc = true     -- не читаем файл конфигурации из текущей директории

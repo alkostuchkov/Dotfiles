@@ -495,7 +495,7 @@ globalkeys = gears.table.join(
     { description = "PyCharm", group = "applications" }),
   awful.key({ super, alt }, "c", function() awful.util.spawn("code") end,
     { description = "VSCode", group = "applications" }),
-  awful.key({ super, alt }, "g", function() awful.util.spawn("goldendict") end,
+  awful.key({ super, alt }, "g", function() awful.util.spawn("goldendict-ng") end,
     { description = "Goldendict", group = "applications" }),
   awful.key({ super, alt }, "m", function() awful.util.spawn(TERMINAL .. " -e vim") end,
     { description = "Vim", group = "applications" }),
