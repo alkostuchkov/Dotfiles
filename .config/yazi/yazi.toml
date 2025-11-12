@@ -101,8 +101,8 @@ pdf_djvu = [
 	{ run = 'qpdfview "$1"', orphan = true, desc = "qpdfview", for = "linux" },
 ]
 ebook = [
+    { run = 'foliate "$1"',  orphan = true, desc = "Foliate",  for = "linux" },
 	{ run = 'FBReader "$1"', orphan = true, desc = "FBReader", for = "linux" },
-	{ run = 'foliate "$1"',  orphan = true, desc = "Foliate",  for = "linux" },
 	{ run = 'bookworm "$1"', orphan = true, desc = "Bookworm", for = "linux" },
 ]
 bulk-rename = [
@@ -118,7 +118,7 @@ rules = [
 	{ name = "bulk-rename.txt", use = [ "bulk-rename" ] },
 	{ name = "*/",              use = [ "reveal", "open" ] },
 	# { name = "*/",              use = [ "reveal", "edit", "open" ] },
-    { name = "{*.lua,*.txt}",   use = [ "edit", "reveal" ] },
+    { name = "{*.lua,*.txt,*.sh}",   use = [ "edit", "reveal" ] },
     { name = "{*.epub,*.fb2}",  use = [ "ebook", "open", "reveal" ] },
     { name = "{*.pdf,*.djvu}",  use = [ "pdf_djvu", "open", "reveal" ] },
     { name = "*.torrent",       use = [ "torrent", "open", "reveal" ] },

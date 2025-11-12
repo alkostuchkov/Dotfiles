@@ -52,6 +52,7 @@ config.colors = {
 -- config.font = wezterm.font("Source Code Pro")
 
 -- config.font = wezterm.font { family = "FiraMono Nerd Font" }
+-- config.font = wezterm.font { family = "FiraCode Nerd Font" }
 config.font = wezterm.font { family = "Fira Mono" }
 config.font_rules = {
   {

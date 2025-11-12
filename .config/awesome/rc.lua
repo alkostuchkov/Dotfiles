@@ -942,8 +942,8 @@ awful.rules.rules = {
         "Pinentry",
         "java",
         "Java",
-        "Lazarus",
         "lazarus",
+        "Lazarus",
         "Lxappearance" },
 
       -- Note that the name property shown in xprop might be set slightly after creation of the client
@@ -970,6 +970,43 @@ awful.rules.rules = {
     },
     properties = { floating = true, border_width = 1 }
   },
+-- Rules for Lazarus floating windows
+  {
+    rule_any = {
+      -- class = { "Lazarus", "lazarus" },
+      name = { "Сообщения", "Messages" },
+    },
+    properties = {
+      floating = true,
+      border_width = 1,
+      placement = awful.placement.no_overlap + awful.placement.no_offscreen + awful.placement.bottom_right,
+    }
+  },
+  {
+    rule_any = {
+      -- class = { "Lazarus", "lazarus" },
+      name = { "Инспектор объектов", "Object Inspector" },
+    },
+-- Редактор исходного кода
+-- Сообщения
+    properties = {
+      floating = true,
+      border_width = 1,
+      placement = awful.placement.no_overlap + awful.placement.no_offscreen + awful.placement.bottom_left,
+    }
+  },
+  {
+    rule_any = {
+      -- class = { "Lazarus", "lazarus" },
+      name = { "Редактор исходного кода", "Source Editor" },
+    },
+    properties = {
+      floating = true,
+      border_width = 1,
+      placement = awful.placement.no_overlap + awful.placement.no_offscreen + awful.placement.right,
+    }
+  },
+-- Rules for Lazarus floating windows
 
   -- Set applications to always map on the sertain tag
   {
