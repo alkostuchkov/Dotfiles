@@ -38,15 +38,29 @@ theme = OneHalfDark
 # theme = Everblush
 # theme = ForestBlue
 
-font-family = FiraCode Nerd Font
-font-family-bold = FiraCode Nerd Font
-font-family-italic = Fira Mono
-font-family-bold-italic = Fira Mono
+font-family = JetbrainsMonoNerdFont
+font-family-bold = JetbrainsMonoNerdFont
+font-family-italic = JetbrainsMonoNerdFont
+font-family-bold-italic = JetbrainsMonoNerdFont
+
+# font-family = mplus Nerd Font
+# font-family-bold = mplus Nerd Font
+# font-family-italic = mplus Nerd Font
+# font-family-bold-italic = mplus Nerd Font
+
+# font-family = FiraCode Nerd Font
+# font-family-bold = FiraCode Nerd Font
+# font-family-italic = Fira Mono
+# font-family-bold-italic = Fira Mono
 
 font-style = Regular
 font-style-bold = Bold
 font-style-italic = Italic
 font-style-bold-italic = Bold-Italic
+
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig   
 
 # font-family = Fira Mono
 # font-family-bold = Fira Mono
