@@ -21,7 +21,8 @@ local naughty = require("naughty")
 naughty.config.defaults["icon_size"] = 100
 naughty.config.defaults["timeout"] = 5
 -- naughty.config.defaults["font"] = "Sarasa Mono SC Nerd 13"
-naughty.config.defaults["font"] = "Iosevka 13"
+naughty.config.defaults["font"] = "Ubuntu 13"
+-- naughty.config.defaults["font"] = "Iosevka 13"
 naughty.config.defaults["border_width"] = 1
 
 local menubar = require("menubar")

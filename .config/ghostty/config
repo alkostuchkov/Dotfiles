@@ -38,10 +38,10 @@ theme = OneHalfDark
 # theme = Everblush
 # theme = ForestBlue
 
-font-family = JetbrainsMonoNerdFont
-font-family-bold = JetbrainsMonoNerdFont
-font-family-italic = JetbrainsMonoNerdFont
-font-family-bold-italic = JetbrainsMonoNerdFont
+font-family = JetbrainsMono Nerd Font
+font-family-bold = JetbrainsMono Nerd Font
+font-family-italic = JetbrainsMono Nerd Font
+font-family-bold-italic = JetbrainsMono Nerd Font
 
 # font-family = mplus Nerd Font
 # font-family-bold = mplus Nerd Font
@@ -57,6 +57,11 @@ font-style = Regular
 font-style-bold = Bold
 font-style-italic = Italic
 font-style-bold-italic = Bold-Italic
+
+# font-style = Light
+# font-style-bold = SemiBold
+# font-style-italic = Italic
+# font-style-bold-italic = SemiBold Italic
 
 font-feature = -calt
 font-feature = -liga

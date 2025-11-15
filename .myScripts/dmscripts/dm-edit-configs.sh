@@ -124,7 +124,8 @@ sb='#3D5E87'
 # DMENU="rofi -dmenu -theme-str 'window {width: 80%;}' -p"
 DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
 
-TERMINAL="wezterm"
+# TERMINAL="wezterm"
+TERMINAL="ghostty"
 terminal=${TERMINAL-"xterm"}
 editor=${EDITOR-"vi"}
 

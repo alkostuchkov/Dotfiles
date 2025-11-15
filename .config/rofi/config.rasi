@@ -1,7 +1,8 @@
 configuration {
     modi: "window,run,ssh,drun";
     /* font: "Sarasa Mono SC Nerd 17"; */
-    font: "Iosevka 16";
+    // font: "Iosevka 16";
+    font: "JetbrainsMono Nerd Font 16";
     show-icons: true;
     /* location: 1; */
     /* yoffset: 35; */
