@@ -5,7 +5,7 @@ declare options=(
 "mount D - $HOME/.myScripts/winD_mount.sh"
 "unmount C - $HOME/.myScripts/winC_unmount.sh"
 "unmount D - $HOME/.myScripts/winD_unmount.sh"
-"quit")
+)
 
 # Colors:
 # # Materia Manjaro
@@ -19,8 +19,8 @@ declare options=(
 # nb='#2d353b'
 # sf='#a7c080'
 # sb='#475258'
-fn='Iosevka-18:normal'
-# fn='Ubuntu-16:normal'
+# fn='Iosevka-18:normal'
+fn='Ubuntu-17:normal'
 
 # MyBlue
 nf='#CFD6DF'

@@ -10,7 +10,7 @@ options=(
 "Sound - pavucontrol-qt"
 "Qt5 - qt5ct"
 "Qt6 - qt6ct"
-"Quit")
+)
 
 # Colors:
 # # Materia Manjaro
@@ -24,8 +24,8 @@ options=(
 # nb='#2d353b'
 # sf='#a7c080'
 # sb='#475258'
-fn='Iosevka-18:normal'
-# fn='Ubuntu-16:normal'
+# fn='Iosevka-18:normal'
+fn='Ubuntu-17:normal'
 
 # MyBlue
 nf='#CFD6DF'

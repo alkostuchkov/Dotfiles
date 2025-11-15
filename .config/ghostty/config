@@ -53,15 +53,15 @@ font-family-bold-italic = JetbrainsMono Nerd Font
 # font-family-italic = Fira Mono
 # font-family-bold-italic = Fira Mono
 
-font-style = Regular
-font-style-bold = Bold
-font-style-italic = Italic
-font-style-bold-italic = Bold-Italic
-
-# font-style = Light
-# font-style-bold = SemiBold
+# font-style = Regular
+# font-style-bold = Bold
 # font-style-italic = Italic
-# font-style-bold-italic = SemiBold Italic
+# font-style-bold-italic = Bold-Italic
+
+font-style = Light
+font-style-bold = SemiBold
+font-style-italic = Italic
+font-style-bold-italic = SemiBold Italic
 
 font-feature = -calt
 font-feature = -liga

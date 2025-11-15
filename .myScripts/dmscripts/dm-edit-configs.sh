@@ -105,8 +105,9 @@ options=(
 # nb='#2d353b'
 # sf='#a7c080'
 # sb='#475258'
-fn='Iosevka-17:normal'
-# fn='Ubuntu-16:normal'
+# fn='Iosevka-17:normal'
+fn='Ubuntu-17:normal'
+# fn='JetbrainsMono-16:normal'
 
 # MyBlue
 nf='#CFD6DF'
