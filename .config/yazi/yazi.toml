@@ -31,10 +31,10 @@ ueberzug_offset = [ 0, 0, 0, 0 ]
 
 [opener]
 edit = [
+    { run = 'ghostty -e vim "$@"', orphan = true, desc = "Neovim (Ghostty)", for = "unix" },
     { run = 'wezterm start --always-new-process -e vim "$@"', orphan = true, desc = "Neovim (WezTerm)", for = "unix" },
 	{ run = 'alacritty -e vim "$@"', orphan = true, desc = "Neovim (Alacritty)", for = "unix" },
 	{ run = 'kitty -e vim "$@"', orphan = true, desc = "Neovim (Kitty)", for = "unix" },
-	{ run = 'ghostty -e vim "$@"', orphan = true, desc = "Neovim (Ghostty)", for = "unix" },
 	{ run = 'alacritty -e micro "$@"', orphan = true, desc = "micro", for = "unix" },
 	{ run = 'code %*',    orphan = true, desc = "code",           for = "windows" },
 	{ run = 'code -w %*', block = true,  desc = "code (block)",   for = "windows" },

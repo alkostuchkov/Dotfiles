@@ -2,7 +2,7 @@
 Name=Telegram
 Comment=New era of messaging
 TryExec=/home/alexander/Programs/Telegram/Telegram
-Exec=/home/alexander/Programs/Telegram/Telegram -- %u
+Exec=/home/alexander/Programs/Telegram/Telegram -- %U
 Icon=org.telegram.desktop
 Terminal=false
 StartupWMClass=TelegramDesktop

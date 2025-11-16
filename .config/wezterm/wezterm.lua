@@ -4,19 +4,82 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
--- my One-Dark colorscheme
+-- -- my Cobalt2 colorscheme
+-- config.colors = {
+--   foreground = "#e0e0e0",
+--   background = "#213049",
+--   cursor_bg = "#ecf0f1",
+--   cursor_border = "#ecf0f1",
+--   cursor_fg = "#213049",
+--   selection_bg = "#e0e0e0",
+--   selection_fg = "#213049",
+--   brights = {
+--     "#95a5a6",
+--     "#ff628c",
+--     "#2ecc71",
+--     "#ffc600",
+--     "#3498db",
+--     "#9b59b6",
+--     "#80ffbb",
+--     "#ecf0f1",
+--   },
+--   ansi = {
+--     "#213049",
+--     "#ff628c",
+--     "#2ecc71",
+--     "#ffc600",
+--     "#3498db",
+--     "#9b59b6",
+--     "#80ffbb",
+--     "#e0e0e0",
+--   },
+-- }
+
+-- my MemoryColor colorscheme
 config.colors = {
-  foreground = "#abb2bf",
-  background = "#282c34",
-  cursor_bg = "#abb2bf",
-  cursor_border = "#abb2bf",
-  cursor_fg = "#282c34",
-  selection_bg = "#A8ADBA",
-  selection_fg = "#2d353b",
-  ansi = { "#282c34", "#e06c75", "#98c379", "#d19a66", "#61afef", "#c678dd", "#56b6c2", "#d3c6aa" },
-  brights = { "#5c6370", "#e06c75", "#98c379", "#d19a66", "#61afef", "#c678dd", "#56b6c2", "#ffffff" },
+  foreground = "#e6ac73",
+  background = "#203040",
+  cursor_bg = "#b7b0a7",
+  cursor_border = "#b7b0a7",
+  cursor_fg = "#152535",
+  selection_bg = "#e6ac73",
+  selection_fg = "#203040",
+  brights = {
+    "#000000",
+    "#ff6666",
+    "#00e673",
+    "#f0b16c",
+    "#66b2ff",
+    "#ff66ff",
+    "#00b3b3",
+    "#f0f0f0",
+  },
+  ansi = {
+    "#000000",
+    -- "#e60073",  -- default red
+    "#F14199",
+    "#00e673",
+    "#e6e600",
+    "#66b2ff",
+    "#b366ff",
+    "#00b3b3",
+    "#f0f0f0",
+  },
 }
 
+-- -- my One-Dark colorscheme
+-- config.colors = {
+--   foreground = "#abb2bf",
+--   background = "#282c34",
+--   cursor_bg = "#abb2bf",
+--   cursor_border = "#abb2bf",
+--   cursor_fg = "#282c34",
+--   selection_bg = "#A8ADBA",
+--   selection_fg = "#2d353b",
+--   ansi = { "#282c34", "#e06c75", "#98c379", "#d19a66", "#61afef", "#c678dd", "#56b6c2", "#d3c6aa" },
+--   brights = { "#5c6370", "#e06c75", "#98c379", "#d19a66", "#61afef", "#c678dd", "#56b6c2", "#ffffff" },
+-- }
+--
 -- -- my Everforest colorscheme
 -- config.colors = {
 --   foreground = "#d3c6aa",
@@ -90,7 +153,7 @@ config.enable_tab_bar = false
 
 config.window_padding = {
   -- left = 0,
-  left = 7,
+  left = 3,
   right = 0,
   top = 0,
   bottom = 0,
