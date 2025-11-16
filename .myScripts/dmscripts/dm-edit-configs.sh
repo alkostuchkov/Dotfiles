@@ -106,8 +106,8 @@ options=(
 # sf='#a7c080'
 # sb='#475258'
 # fn='Iosevka-17:normal'
-fn='Ubuntu-17:normal'
-# fn='JetbrainsMono-16:normal'
+# fn='Ubuntu-17:normal'
+fn='JetbrainsMonoNerdFont-16:normal'
 
 # MyBlue
 nf='#CFD6DF'
