@@ -1041,7 +1041,8 @@ awful.rules.rules = {
   {
     rule = { class = "Thunderbird" },
     except = { name = "Password Required - Mozilla Thunderbird" },
-    properties = { screen = 1, tag = root.tags()[9], switch_to_tags = false }
+    -- properties = { screen = 1, tag = root.tags()[9], switch_to_tags = false }
+    properties = { screen = 1, tag = root.tags()[9], switchtotag = false }
   },
 
   -- -- Titlebars
@@ -1147,6 +1148,7 @@ run_once({
   "xxkb",
   -- "setxkbmap -layout us,ru,by -option grp:caps_toggle",
   "setxkbmap -layout by,ru,by -variant latin,, -option grp:caps_toggle", -- Łacinka
+  -- "setxkbmap -option ctrl:swap_lalt_lctl_lwin", -- swapping for Emacs
   -- "setxkbmap -layout us,ru,by,by -variant ,,,latin -option grp:caps_toggle", -- Łacinka
   -- "/usr/lib/xfce4/notifyd/xfce4-notifyd", -- no need on AwesomeWM
   -- /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1, -- for Debian
@@ -1172,5 +1174,8 @@ run_once({
   HOME .. "/Programs/CheckInternetConnection/CheckInternetConnection",
   HOME .. "/Programs/AppImageApplications/BreakTimer.AppImage",
   "birdtray",
-  "xmodmap -e \"keycode 135 = Super_R\"",
+  -- "xmodmap -e \"keycode 135 = Super_R\"",
+  -- "xmodmap -e \"keycode 37 = Super_L\"",   -- Super_L -> Control_L
+  -- "xmodmap -e \"keycode 133 = Alt_L\"",    -- Alt_L -> Super_L
+  -- "xmodmap -e \"keycode 64 = Control_L\"", -- Map the menu button to right super
 }) -- entries must be comma-separated

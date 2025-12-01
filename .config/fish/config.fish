@@ -13,7 +13,7 @@ set GHCUP_INSTALL_BASE_PREFIX "$HOME/.config" # for GHCUP
 set GOPATH "$HOME/go"
 
 set -U fish_user_paths $HOME/.local/bin $HOME/Programs/AppImageApplications $fish_user_paths
-set PATH $PATH $HOME/.cargo/bin $HOME/.config/vifm/scripts $GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin $HOME/Programs/Android_SDK/platform-tools $GOPATH/bin # PATH for exa in cargo and ...
+set PATH $PATH $HOME/.cargo/bin $HOME/.config/vifm/scripts $HOME/.config/emacs/bin $GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin $HOME/Programs/Android_SDK/platform-tools $GOPATH/bin # PATH for exa in cargo and ...
 
 set EDITOR vim #  vim is either a link to nvim    or just  vim
 set VISUAL gvim # gvim is either a link to nvim-qt or just gvim
