@@ -4,9 +4,9 @@
 include "/home/alexander/.gtkrc-2.0.mine"
 # gtk-theme-name="Yaru-sage-dark"
 # gtk-icon-theme-name="Yaru-sage-dark"
-gtk-theme-name="Qogir-light"
+gtk-theme-name="Qogir-dark"
 gtk-icon-theme-name="Sardi"
-gtk-font-name="JetBrainsMono Nerd Font 13"
+gtk-font-name="Ubuntu 13"
 gtk-cursor-theme-name="Qogir-white-cursors"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_BOTH_HORIZ

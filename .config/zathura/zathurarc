@@ -1,4 +1,5 @@
-set font "Iosevka 16"
+set font "JetbrainsMono Nerd Font 15"
+# set font "Iosevka 16"
 set adjust-open width
 set window-title-basename true
 set statusbar-home-tilde true
