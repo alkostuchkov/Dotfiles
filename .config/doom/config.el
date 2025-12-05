@@ -37,8 +37,9 @@
 ;;
 ;; (setq doom-font (font-spec :family "JetbrainsMono Nerd Font" :size 12 :weight 'semi-light)
 ;;      doom-variable-pitch-font (font-spec :family "Ubuntu" :size 13))
-(setq doom-font (font-spec :family "JetbrainsMono Nerd Font" :size 20 :weight 'Regular)
-     doom-variable-pitch-font (font-spec :family "Ubuntu" :size 13))
+(setq doom-font (font-spec :family "JetbrainsMono Nerd Font" :size 21 :weight 'Regular)
+      doom-variable-pitch-font (font-spec :family "Ubuntu" :size 15)
+      doom-big-font (font-spec :family "JetbrainsMono Nerd Font" :size 24 :weight 'Regular))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -48,19 +49,39 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
+;; (setq doom-theme 'doom-one)
 (setq doom-theme 'doom-palenight)
 ;; (setq doom-theme 'doom-tokyo-night)
 ;; (setq doom-theme 'doom-ayu-mirage)
-;; (setq doom-theme 'doom-one)
+(after! doom-themes
+  (setq doom-themes-enable-bold t
+        doom-themes-enable-italic t))
+(custom-set-faces!
+  '(font-lock-comment-face :slant italic))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type 'relative)
 
+;; To prevent Doom Emacs from automatically inserting a comment character in a new line after a commented line
+(setq +evil-want-o/O-to-continue-comments nil)
+
 ;; Disable backup (~), .saves, auto-save
 (setq make-backup-files nil)
 (setq auto-save-list-file-name nil)
 (setq auto-save-default nil)
+
+;; ;; my_settings files
+;; (add-to-list 'load-path (expand-file-name "my_settings" "~/.config/doom/"))
+;; ;; (add-to-list 'load-path (expand-file-name "my_settings" user-emacs-directory))
+;; (require  'my_keybindings)
+
+;; KEYBINDINGS
+;; (map! :leader
+;;       :desc "Switch from insert to normal mode"
+;;       "j j" #'evil-force-normal-state)
+(map! (:after evil
+      :i "jj" #'evil-normal-state))
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
