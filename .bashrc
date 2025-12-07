@@ -15,6 +15,10 @@ export GOPATH="$HOME/go"
 
 # export
 PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications:$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin:$HOME/Programs/Android_SDK/platform-tools:$GOPATH/bin:$HOME/.config/emacs/bin
+
+# export EDITOR="emacsclient -t -a ''"              # $EDITOR use Emacs in terminal
+# export VISUAL="emacsclient -c -a emacs"           # $VISUAL use Emacs in GUI mode
+
 export EDITOR="vim"   #  vim is either a link to nvim    or just  vim
 export VISUAL="gvim"  # gvim is either a link to nvim-qt or just gvim
 export TERM="xterm-256color"
@@ -146,6 +150,10 @@ fi
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+alias emacs="emacsclient -c -a 'emacs'" # GUI versions of Emacs
+alias em="/usr/bin/emacs -nw" # Terminal version of Emacs
+alias rem="killall emacs || echo 'Emacs server not running'; /usr/bin/emacs --daemon" # Kill Emacs and restart daemon..
 
 # alias ls='ls --color=auto'
 # alias ll='ls -l'
