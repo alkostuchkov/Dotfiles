@@ -343,6 +343,7 @@ alias rem="killall emacs || echo 'Emacs server not running'; /usr/bin/emacs --da
 # alias la='ls -la'
 # alias la='ls -lah'
 # alias lf='ls -lFh'
+alias gb="~/.myScripts/gitbare_autoadding_files.sh" # Autoadd files to gitbare (dotfiles) repo
 alias cd='z'  # for Zoxide
 alias lse='exa -g --color=always --group-directories-first'
 alias lle='lse -l'

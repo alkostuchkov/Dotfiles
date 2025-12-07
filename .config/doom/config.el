@@ -76,17 +76,9 @@
 ;; ;; (add-to-list 'load-path (expand-file-name "my_settings" user-emacs-directory))
 ;; (require  'my_keybindings)
 
-;; KEYBINDINGS
-;; (map! :leader
-;;       :desc "Switch from insert to normal mode"
-;;       "j j" #'evil-force-normal-state)
-(map! (:after evil
-      :i "jj" #'evil-normal-state))
-
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Documents/org/")
-
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -119,3 +111,8 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+;; my_settings files
+;; (add-to-list 'load-path (expand-file-name "my_settings" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "my_settings" "~/.config/doom/"))
+(require  'my-keybindings)
