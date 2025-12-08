@@ -49,8 +49,8 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-;; (setq doom-theme 'doom-one)
-(setq doom-theme 'doom-palenight)
+(setq doom-theme 'doom-one)
+;; (setq doom-theme 'doom-palenight)
 ;; (setq doom-theme 'doom-tokyo-night)
 ;; (setq doom-theme 'doom-ayu-mirage)
 (after! doom-themes
@@ -71,10 +71,8 @@
 (setq auto-save-list-file-name nil)
 (setq auto-save-default nil)
 
-;; ;; my_settings files
-;; (add-to-list 'load-path (expand-file-name "my_settings" "~/.config/doom/"))
-;; ;; (add-to-list 'load-path (expand-file-name "my_settings" user-emacs-directory))
-;; (require  'my_keybindings)
+;; Width for evil-shift-left(right) > <
+(setq evil-shift-width 2)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -111,6 +109,13 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+;; PACKAGES
+(use-package! drag-stuff
+   :defer t
+   :init
+  (map! "<M-up>"    #'drag-stuff-up
+        "<M-down>"  #'drag-stuff-down))
 
 ;; my_settings files
 ;; (add-to-list 'load-path (expand-file-name "my_settings" user-emacs-directory))
