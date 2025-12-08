@@ -24,8 +24,8 @@
 # background = #123abc
 
 gtk-titlebar = false
-theme = MemoryColor
-# theme = Cobalt2
+# theme = MemoryColor
+theme = Cobalt2
 # theme = OneHalfDark
 # theme = Tomorrow Night
 # theme = Garuda
@@ -40,10 +40,10 @@ theme = MemoryColor
 # theme = Everblush
 # theme = ForestBlue
 
-font-family = JetbrainsMono Nerd Font
-font-family-bold = JetbrainsMono Nerd Font
-font-family-italic = JetbrainsMono Nerd Font
-font-family-bold-italic = JetbrainsMono Nerd Font
+font-family = JetBrainsMono Nerd Font
+font-family-bold = JetBrainsMono Nerd Font
+font-family-italic = JetBrainsMono Nerd Font
+font-family-bold-italic = JetBrainsMono Nerd Font
 
 # font-family = mplus Nerd Font
 # font-family-bold = mplus Nerd Font
@@ -101,6 +101,9 @@ keybind = ctrl+shift+up=scroll_page_lines:-1
 # quick-terminal-position = bottom
 keybind = ctrl+tab=unbind
 keybind = ctrl+shift+tab=unbind
+
+keybind = ctrl+enter=unbind
+keybind = ctrl+shift+enter=unbind
 
 keybind = ctrl+1=goto_tab:1
 keybind = ctrl+2=goto_tab:2
