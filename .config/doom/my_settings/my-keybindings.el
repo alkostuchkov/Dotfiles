@@ -497,12 +497,51 @@
 ;; (global-set-key (kbd "C-j") 'reindent-then-newline-and-indent)
 
 ;; KEYBINDINGS
-;; (map! :leader
-;;       :desc "Switch from insert to normal mode"
-;;       "j j" #'evil-force-normal-state)
 ;;; Code:
+;; Tabs
+(map! :leader
+      (:prefix ("t" . "tabs")
+       :desc "Tab new"      "o" #'tab-new
+       :desc "Tab next"     "]" #'tab-next
+       :desc "Tab previous" "[" #'tab-previous
+       :desc "Tab last"     "}" #'tab-last
+       :desc "Tab close"    "x" #'tab-close
+       :desc "Tab dired other tab"  :map 'override "d" #'dired-other-tab
+       :desc "Tab list"             :map 'override "l" #'tab-list
+       :desc "Tab switch"           :map 'override "s" #'tab-switch
+       :desc "Tab buffer other tab" :map 'override "b" #'switch-to-buffer-other-tab))
+
+;; Windows
+(map! :leader
+      (:prefix ("w" . "windows")
+       :desc "Increase width"  :map 'override "<right>" #'evil-window-increase-width
+       :desc "Decrease width"  :map 'override "<left>"  #'evil-window-decrease-width
+       :desc "Increase height" :map 'override "<up>"    #'evil-window-increase-height
+       :desc "Decrease height" :map 'override "<down>"  #'evil-window-decrease-height))
+
+;; Treemacs
+(map! :leader
+      (:prefix ("e" . "treemacs")
+       :desc "Treemacs toggle"        "e" #'+treemacs/toggle
+       :desc "Treemacs show dotfiles" "." #'treemacs-toggle-show-dotfiles
+       :desc "treemacs find file"     "/" #'treemacs-find-file
+       :desc "Treemacs root up"       "h" #'treemacs-root-up
+       :desc "Treemacs root down"     "l" #'treemacs-root-down
+       :desc "Treemacs create file"   "a" #'treemacs-create-file
+       :desc "Treemacs create dir"    "c" #'treemacs-create-dir
+       :desc "Treemacs delete file"   "d" #'treemacs-delete-file
+       :desc "Treemacs delete fileS"  "D" #'treemacs-delete-marked-files
+       :desc "Treemacs mark/unmark"   "t" #'treemacs-mark-or-unmark-path-at-point
+       :desc "Treemacs reset marks"   "R" #'treemacs-reset-marks
+       :desc "Treemacs rename"        "r" #'treemacs-rename-file))
+
+;; Switch to normal mode
 (map! :after evil
-      :i "jj" #'evil-normal-state)
+      :i "jj" #'evil-force-normal-state)
+
+;; Save buffer
+(map! :map 'override "C-s" #'save-buffer)
+;; (map! :map 'override "C-h" #'evil-backward-char)
 
 (provide 'my-keybindings)
 ;;; my-keybindings.el ends here

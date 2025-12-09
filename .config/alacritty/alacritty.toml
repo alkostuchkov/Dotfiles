@@ -1,6 +1,6 @@
 # "window.opacity" = 1.0
 [general]
-import = ["~/.config/alacritty/colors/MemoryColor.toml"]
+import = ["~/.config/alacritty/colors/Base16-Flat-LikeCobalt2+.toml"]
 
 [colors]
 draw_bold_text_with_bright_colors = false
@@ -24,7 +24,8 @@ size = 15.5  # JetBrainsMono Nerd Font
 # family = "Consolas NF"
 # family = "FiraMono Nerd Font"
 # family = "JetBrainsMono Nerd Font"
-family = "Fira Mono"
+family = "FiraCode Nerd Font"
+# family = "Fira Mono"
 style = "Bold"
 # style = "Semibold"
 
@@ -51,7 +52,8 @@ style = "Italic"
 # family = "Consolas NF"
 # family = "FiraMono Nerd Font"
 # family = "JetBrainsMono Nerd Font"
-family = "Fira Mono"
+family = "FiraCode Nerd Font"
+# family = "Fira Mono"
 # style = "Light"
 style = "Regular"
 
