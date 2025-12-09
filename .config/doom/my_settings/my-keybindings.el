@@ -510,6 +510,8 @@
        :desc "Tab list"             :map 'override "l" #'tab-list
        :desc "Tab switch"           :map 'override "s" #'tab-switch
        :desc "Tab buffer other tab" :map 'override "b" #'switch-to-buffer-other-tab))
+(map! :map 'override "C-<tab>" #'tab-next)
+(map! :map 'override "C-S-<tab>" #'tab-previous)
 
 ;; Windows
 (map! :leader
@@ -518,6 +520,12 @@
        :desc "Decrease width"  :map 'override "<left>"  #'evil-window-decrease-width
        :desc "Increase height" :map 'override "<up>"    #'evil-window-increase-height
        :desc "Decrease height" :map 'override "<down>"  #'evil-window-decrease-height))
+
+;; Editing like in terminal
+(map! :map 'override :i "C-d" #'evil-delete-char)
+(map! :map 'override :i "C-h" #'evil-delete-backward-char)
+(map! :map 'override :i "C-k" #'kill-line)
+;; (map! :map 'override :i "C-w" #'evil-delete-backward-word)
 
 ;; Treemacs
 (map! :leader
