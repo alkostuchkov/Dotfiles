@@ -521,18 +521,37 @@
        :desc "Increase height" :map 'override "<up>"    #'evil-window-increase-height
        :desc "Decrease height" :map 'override "<down>"  #'evil-window-decrease-height))
 
+;; ;; Dired
+;; (map! :leader
+;;       (:prefix ("d" . "dired")
+;;        :desc "Dired"          "d" #'dired
+;;        :desc "Dired mark"     "t" #'dired-mark
+;;        :desc "Dired unmark"   "T" #'dired-unmark
+;;        :desc "Dired undo"     "u" #'dired-undo
+;;        ;; :desc "Dired readin"     "}" #'dired-readin
+;;        :desc "Dired upcase"   "C" #'dired-upcase
+;;        :desc "Dired downcase" "c" #'dired-downcase
+;;        :desc "Dired copy"     "y" #'dired-do-copy
+;;        :desc "Dired info"     "i" #'dired-do-info
+;;        :desc "Dired compress" "a" #'dired-compress))
+
 ;; Editing like in terminal
 (map! :map 'override :i "C-d" #'evil-delete-char)
 (map! :map 'override :i "C-h" #'evil-delete-backward-char)
 (map! :map 'override :i "C-k" #'kill-line)
 ;; (map! :map 'override :i "C-w" #'evil-delete-backward-word)
 
+;; Disable the active search highlightings w=
+(map! :leader
+      (:prefix ("n" . "nohl")
+       :desc "nohighlight search" "h" #'evil-ex-nohighlight))
+
 ;; Treemacs
 (map! :leader
       (:prefix ("e" . "treemacs")
        :desc "Treemacs toggle"        "e" #'+treemacs/toggle
        :desc "Treemacs show dotfiles" "." #'treemacs-toggle-show-dotfiles
-       :desc "treemacs find file"     "/" #'treemacs-find-file
+       :desc "Treemacs find file"     "/" #'treemacs-find-file
        :desc "Treemacs root up"       "h" #'treemacs-root-up
        :desc "Treemacs root down"     "l" #'treemacs-root-down
        :desc "Treemacs create file"   "a" #'treemacs-create-file
