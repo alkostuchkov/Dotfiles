@@ -521,19 +521,19 @@
        :desc "Increase height" :map 'override "<up>"    #'evil-window-increase-height
        :desc "Decrease height" :map 'override "<down>"  #'evil-window-decrease-height))
 
-;; ;; Dired
-;; (map! :leader
-;;       (:prefix ("d" . "dired")
-;;        :desc "Dired"          "d" #'dired
-;;        :desc "Dired mark"     "t" #'dired-mark
-;;        :desc "Dired unmark"   "T" #'dired-unmark
-;;        :desc "Dired undo"     "u" #'dired-undo
-;;        ;; :desc "Dired readin"     "}" #'dired-readin
-;;        :desc "Dired upcase"   "C" #'dired-upcase
-;;        :desc "Dired downcase" "c" #'dired-downcase
-;;        :desc "Dired copy"     "y" #'dired-do-copy
-;;        :desc "Dired info"     "i" #'dired-do-info
-;;        :desc "Dired compress" "a" #'dired-compress))
+;; Dired
+(map! :leader
+      (:prefix ("d" . "dired")
+       :desc "Dired"             "d" #'dired
+       ;; :desc "Dired mark"     "t" #'dired-mark
+       ;; :desc "Dired unmark"   "T" #'dired-unmark
+       ;; :desc "Dired readin"     "}" #'dired-readin
+       :desc "Dired undo"        "u" #'dired-undo
+       :desc "Dired upcase"      "C" #'dired-upcase
+       :desc "Dired downcase"    "c" #'dired-downcase
+       :desc "Dired copy"        "y" #'dired-do-copy
+       :desc "Dired create file" "a" #'dired-create-empty-file
+       :desc "Dired info"        "i" #'dired-do-info))
 
 ;; Editing like in terminal
 (map! :map 'override :i "C-d" #'evil-delete-char)

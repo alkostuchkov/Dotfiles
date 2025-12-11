@@ -32,7 +32,7 @@ ueberzug_offset = [ 0, 0, 0, 0 ]
 [opener]
 edit = [
     { run = 'ghostty -e vim "$@"', orphan = true, desc = "Neovim (Ghostty)", for = "unix" },
-    { run = 'doom emacs "$@"', orphan = true, desc = "Doom Emacs", for = "unix" },
+    { run = '~/.config/emacs/bin/doom emacs "$@"', orphan = true, desc = "Doom Emacs", for = "unix" },
     { run = 'emacs "$@"', orphan = true, desc = "Emacsclient", for = "unix" },
     { run = 'wezterm start --always-new-process -e vim "$@"', orphan = true, desc = "Neovim (WezTerm)", for = "unix" },
 	{ run = 'alacritty -e vim "$@"', orphan = true, desc = "Neovim (Alacritty)", for = "unix" },
