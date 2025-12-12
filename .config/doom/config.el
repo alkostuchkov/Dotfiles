@@ -15,13 +15,13 @@
 ;; (setq-default vterm-shell "/bin/fish")
 ;; (setq-default explicit-shell-file-name "/bin/fish")
 
-;; Disable confirm on exit
-(setq confirm-kill-emacs nil) 
-
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
 ;; (setq user-full-name "John Doe"
 ;;       user-mail-address "john@doe.com")
+
+;; Disable confirm on exit
+(setq confirm-kill-emacs nil) 
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -46,13 +46,22 @@
 ;; refresh your font settings. If Emacs still can't find your font, it likely
 ;; wasn't installed correctly. Font issues are rarely Doom issues!
 
+;; My config files
+;; (add-to-list 'load-path (expand-file-name "my_settings" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "my_settings" "~/.config/doom/"))
+(add-to-list 'load-path (expand-file-name "themes" "~/.config/doom/"))
+(require  'my-keybindings)
+(require  'cobalt-theme)
+
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+;; (require )
+;; (setq doom-theme 'doom-one)
 ;; (setq doom-theme 'doom-palenight)
 ;; (setq doom-theme 'doom-tokyo-night)
 ;; (setq doom-theme 'doom-ayu-mirage)
+(setq doom-theme 'cobalt)
 (after! doom-themes
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
@@ -116,8 +125,3 @@
    :init
   (map! "<M-up>"    #'drag-stuff-up
         "<M-down>"  #'drag-stuff-down))
-
-;; my_settings files
-;; (add-to-list 'load-path (expand-file-name "my_settings" user-emacs-directory))
-(add-to-list 'load-path (expand-file-name "my_settings" "~/.config/doom/"))
-(require  'my-keybindings)
