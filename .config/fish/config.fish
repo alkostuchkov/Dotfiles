@@ -34,6 +34,9 @@ set XDG_DATA_HOME "$HOME/.local/share"
 # set XDG_DATA_DIRS "$HOME/.local/share/flatpak/exports/share" "/var/lib/flatpak/exports/share"
 set XDG_CACHE_HOME "$HOME/.cache"
 
+# For stack (Haskell) get version of system ghci
+set ghci_ver (ghci --version | awk {'print $NF'})
+
 # $EDITOR use Vim to edit crontab ---------------------------------------------
 # EDITOR="vim" crontab -e
 # select-editor  (~/.selected-editor)
@@ -336,6 +339,9 @@ end
 alias emacs="emacsclient -c -a 'emacs'" # GUI versions of Emacs
 alias em="/usr/bin/emacs -nw" # Terminal version of Emacs
 alias rem="killall emacs || echo 'Emacs server not running'; /usr/bin/emacs --daemon" # Kill Emacs and restart daemon..
+
+# For stack (Haskell) get version of system ghci
+alias stack="stack --resolver ghc-$ghci_ver"
 
 # alias ls='ls --color=auto'
 # alias ll='ls -l'

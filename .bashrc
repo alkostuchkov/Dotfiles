@@ -38,6 +38,9 @@ export XDG_DATA_HOME="$HOME/.local/share"
 # export XDG_DATA_DIRS+=":/var/lib/flatpak/exports/share/applications"
 export XDG_CACHE_HOME="$HOME/.cache"
 
+# For stack (Haskell) get version of system ghci
+export ghci_ver=$(ghci --version | awk {'print $NF'})
+
 # If not running interactively, don't do anything -----------------------------
 case $- in
     *i*) ;;
@@ -154,6 +157,9 @@ fi
 alias emacs="emacsclient -c -a 'emacs'" # GUI versions of Emacs
 alias em="/usr/bin/emacs -nw" # Terminal version of Emacs
 alias rem="killall emacs || echo 'Emacs server not running'; /usr/bin/emacs --daemon" # Kill Emacs and restart daemon..
+
+# For stack (Haskell) get version of system ghci
+alias stack="stack --resolver ghc-$ghci_ver"
 
 # alias ls='ls --color=auto'
 # alias ll='ls -l'
