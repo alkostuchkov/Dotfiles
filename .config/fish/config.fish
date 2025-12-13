@@ -35,7 +35,9 @@ set XDG_DATA_HOME "$HOME/.local/share"
 set XDG_CACHE_HOME "$HOME/.cache"
 
 # For stack (Haskell) get version of system ghci
-set ghci_ver (ghci --version | awk {'print $NF'})
+if [ -n /usr/bin/ghci ]
+    set ghci_ver (ghci --version | awk {'print $NF'})
+end
 
 # $EDITOR use Vim to edit crontab ---------------------------------------------
 # EDITOR="vim" crontab -e

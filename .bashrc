@@ -39,7 +39,9 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 # For stack (Haskell) get version of system ghci
-export ghci_ver=$(ghci --version | awk {'print $NF'})
+if [ -n /usr/bin/ghci ]; then
+    export ghci_ver=$(ghci --version | awk {'print $NF'})
+fi
 
 # If not running interactively, don't do anything -----------------------------
 case $- in
