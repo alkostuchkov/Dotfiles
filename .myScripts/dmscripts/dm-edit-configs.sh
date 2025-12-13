@@ -128,8 +128,8 @@ DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
 # TERMINAL="wezterm"
 TERMINAL="ghostty"
 terminal=${TERMINAL-"xterm"}
-# editor=${EDITOR-"vi"}
-editor="emacsclient"
+editor=${EDITOR-"vi"}
+# editor="emacsclient"
 
 # names=$(printf '%s\n' "${options[@]}" | awk '{print $1}')
 # choice=$(printf '%s\n' "${names}" | dmenu -l 10  -nf '#09dbc9' -nb '#222b2e' -sf '#dbdcd5' -sb '#009185' -fn 'Ubuntu-16:normal' -p 'Edit config file:')

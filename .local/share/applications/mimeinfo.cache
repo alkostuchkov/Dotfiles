@@ -50,7 +50,6 @@ application/x-code-oss-workspace=code.desktop;
 application/x-designer=DigiaQt-qtcreator-community.desktop;
 application/x-krita=appimagekit_Krita(DiscreteGr).desktop;
 application/x-krita-paintoppreset=appimagekit_Krita(DiscreteGr).desktop;
-application/x-magnet=tixati.desktop;
 application/x-msexcel=appimagekit_wps-office-et.desktop;
 application/x-mspowerpoint=appimagekit_wps-office-wpp.desktop;
 application/x-msword=appimagekit_wps-office-wps.desktop;

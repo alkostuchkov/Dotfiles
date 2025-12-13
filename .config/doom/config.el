@@ -15,36 +15,13 @@
 ;; (setq-default vterm-shell "/bin/fish")
 ;; (setq-default explicit-shell-file-name "/bin/fish")
 
-;; Some functionality uses this to identify you, e.g. GPG configuration, email
-;; clients, file templates and snippets. It is optional.
-;; (setq user-full-name "John Doe"
-;;       user-mail-address "john@doe.com")
-
 ;; Disable confirm on exit
 (setq confirm-kill-emacs nil) 
 
-;; Doom exposes five (optional) variables for controlling fonts in Doom:
-;;
-;; - `doom-font' -- the primary font to use
-;; - `doom-variable-pitch-font' -- a non-monospace font (where applicable)
-;; - `doom-big-font' -- used for `doom-big-font-mode'; use this for
-;;   presentations or streaming.
-;; - `doom-symbol-font' -- for symbols
-;; - `doom-serif-font' -- for the `fixed-pitch-serif' face
-;;
-;; See 'C-h v doom-font' for documentation and more examples of what they
-;; accept. For example:
-;;
-;; (setq doom-font (font-spec :family "JetbrainsMono Nerd Font" :size 12 :weight 'semi-light)
-;;      doom-variable-pitch-font (font-spec :family "Ubuntu" :size 13))
+;; Font
 (setq doom-font (font-spec :family "JetbrainsMono Nerd Font" :size 21 :weight 'Regular)
       doom-variable-pitch-font (font-spec :family "Ubuntu" :size 15)
       doom-big-font (font-spec :family "JetbrainsMono Nerd Font" :size 24 :weight 'Regular))
-;;
-;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
-;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
-;; refresh your font settings. If Emacs still can't find your font, it likely
-;; wasn't installed correctly. Font issues are rarely Doom issues!
 
 ;; My config files
 ;; (add-to-list 'load-path (expand-file-name "my_settings" user-emacs-directory))
@@ -53,10 +30,7 @@
 (require  'my-keybindings)
 (require  'cobalt-theme)
 
-;; There are two ways to load a theme. Both assume the theme is installed and
-;; available. You can either set `doom-theme' or manually load a theme with the
-;; `load-theme' function. This is the default:
-;; (require )
+;; Theme
 ;; (setq doom-theme 'doom-one)
 ;; (setq doom-theme 'doom-palenight)
 ;; (setq doom-theme 'doom-tokyo-night)
@@ -68,11 +42,11 @@
 (custom-set-faces!
   '(font-lock-comment-face :slant italic))
 
-;; This determines the style of line numbers in effect. If set to `nil', line
-;; numbers are disabled. For relative line numbers, set this to `relative'.
+;; This determines the style of line numbers in effect.
 (setq display-line-numbers-type 'relative)
 
-;; To prevent Doom Emacs from automatically inserting a comment character in a new line after a commented line
+;; To prevent Doom Emacs from automatically inserting a comment character
+;; in a new line after a commented line.
 (setq +evil-want-o/O-to-continue-comments nil)
 
 ;; Disable backup (~), .saves, auto-save
@@ -119,7 +93,8 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-;; PACKAGES
+;; Packages
+;; Move line up/down.
 (use-package! drag-stuff
    :defer t
    :init
