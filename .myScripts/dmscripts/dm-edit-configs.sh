@@ -28,6 +28,7 @@ options=(
 "dm-search - $HOME/.myScripts/dmscripts/dm-search.sh"
 "dm-system-exit - $HOME/.myScripts/dmscripts/dm-system-exit.sh"
 "dm-unicode - $HOME/.myScripts/dmscripts/dm-unicode.sh"
+"dm-wanna-read - $HOME/.myScripts/dmscripts/dm-wanna-read.sh"
 "dwm - $HOME/Programs/DWM/config.h"
 "dwmblocks - $HOME/Programs/DWM/dwmblocks/blocks.h"
 "dwmpatches - $HOME/Programs/DWM/patches.h"

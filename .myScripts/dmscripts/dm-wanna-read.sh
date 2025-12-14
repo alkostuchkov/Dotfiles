@@ -85,7 +85,8 @@ get_bookname() {
     bookname=$(ls "$dirpath" | ${DMENU} 'Choose book:')
     check_input "$bookname"
 
-    while [[ -d "$dirpath$bookname" ]]; do
+    # while [[ -d "$dirpath$bookname" ]]; do
+    until [[ -f "$dirpath$bookname" ]]; do
         dirpath=$dirpath$bookname/
         get_bookname "$dirpath"
     done
