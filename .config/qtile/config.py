@@ -615,6 +615,22 @@ def init_widgets_list():
             linewidth=1,
             padding=10
         ),
+         widget.NetUP(
+            up_foreground=colors.get("fg_netspeed", "#ffffff"),
+            down_foreground=colors.get("fg_syncthing_inactive", "#ff0000"),
+            up_string="🟢 ",
+            down_string="🔴 ",
+            # up_string=" 🟢 🌏 ✅ ",
+            # down_string=" 🔴 🚫 🌐 ❌ ",
+            host="google.com",
+            update_interval=30,
+            display_fmt="{0}",
+            padding=0,
+         ),
+        # widget.Sep(
+        #     linewidth=1,
+        #     padding=10
+        # ),
         #  widget.Net(
             #  interface=upped_netiface,
             #  #  format=upped_netiface + ":{down} ↓↑{up}",
