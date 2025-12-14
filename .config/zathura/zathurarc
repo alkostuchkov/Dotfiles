@@ -5,6 +5,7 @@ set window-title-basename true
 set statusbar-home-tilde true
 set selection-clipboard clipboard
 # set statusbar-basename true
+set database sqlite
 
 map <C-=> zoom in
 map <C--> zoom out
