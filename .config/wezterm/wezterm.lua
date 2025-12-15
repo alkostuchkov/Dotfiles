@@ -4,68 +4,68 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
--- -- my Cobalt2 colorscheme
--- config.colors = {
---   foreground = "#e0e0e0",
---   background = "#213049",
---   cursor_bg = "#ecf0f1",
---   cursor_border = "#ecf0f1",
---   cursor_fg = "#213049",
---   selection_bg = "#e0e0e0",
---   selection_fg = "#213049",
---   brights = {
---     "#95a5a6",
---     "#ff628c",
---     "#2ecc71",
---     "#ffc600",
---     "#3498db",
---     "#9b59b6",
---     "#80ffbb",
---     "#ecf0f1",
---   },
---   ansi = {
---     "#213049",
---     "#ff628c",
---     "#2ecc71",
---     "#ffc600",
---     "#3498db",
---     "#9b59b6",
---     "#80ffbb",
---     "#e0e0e0",
---   },
--- }
-
--- my MemoryColor colorscheme
+-- my Cobalt2 colorscheme
 config.colors = {
-  foreground = "#e6ac73",
-  background = "#203040",
-  cursor_bg = "#b7b0a7",
-  cursor_border = "#b7b0a7",
-  cursor_fg = "#152535",
-  selection_bg = "#e6ac73",
-  selection_fg = "#203040",
+  foreground = "#e0e0e0",
+  background = "#213049",
+  cursor_bg = "#ecf0f1",
+  cursor_border = "#ecf0f1",
+  cursor_fg = "#213049",
+  selection_bg = "#e0e0e0",
+  selection_fg = "#213049",
   brights = {
-    "#000000",
-    "#ff6666",
-    "#00e673",
-    "#f0b16c",
-    "#66b2ff",
-    "#ff66ff",
-    "#00b3b3",
-    "#f0f0f0",
+    "#95a5a6",
+    "#ff628c",
+    "#2ecc71",
+    "#ffc600",
+    "#3498db",
+    "#9b59b6",
+    "#80ffbb",
+    "#ecf0f1",
   },
   ansi = {
-    "#000000",
-    -- "#e60073",  -- default red
-    "#F14199",
-    "#00e673",
-    "#e6e600",
-    "#66b2ff",
-    "#b366ff",
-    "#00b3b3",
-    "#f0f0f0",
+    "#213049",
+    "#ff628c",
+    "#2ecc71",
+    "#ffc600",
+    "#3498db",
+    "#9b59b6",
+    "#80ffbb",
+    "#e0e0e0",
   },
 }
+
+-- -- my MemoryColor colorscheme
+-- config.colors = {
+--   foreground = "#e6ac73",
+--   background = "#203040",
+--   cursor_bg = "#b7b0a7",
+--   cursor_border = "#b7b0a7",
+--   cursor_fg = "#152535",
+--   selection_bg = "#e6ac73",
+--   selection_fg = "#203040",
+--   brights = {
+--     "#000000",
+--     "#ff6666",
+--     "#00e673",
+--     "#f0b16c",
+--     "#66b2ff",
+--     "#ff66ff",
+--     "#00b3b3",
+--     "#f0f0f0",
+--   },
+--   ansi = {
+--     "#000000",
+--     -- "#e60073",  -- default red
+--     "#F14199",
+--     "#00e673",
+--     "#e6e600",
+--     "#66b2ff",
+--     "#b366ff",
+--     "#00b3b3",
+--     "#f0f0f0",
+--   },
+-- }
 
 -- -- my One-Dark colorscheme
 -- config.colors = {
@@ -97,7 +97,7 @@ config.colors = {
 --   "JetBrainsMono NF",
 --   { weight = "Regular", italic = false }
 -- )
--- config.font = wezterm.font("JetBrainsMono NF")
+-- config.font = wezterm.font("JetBrainsMono Nerd Font")
 -- config.font = wezterm.font("JetBrainsMono NF Light")
 -- config.font = wezterm.font("DejaVuSansMono Nerd Font Mono")
 -- config.font = wezterm.font("DejaVuSansM Nerd Font")
@@ -106,16 +106,14 @@ config.colors = {
 -- config.font = wezterm.font("Hack Nerd Font")
 -- config.font = wezterm.font("Mononoki Nerd Font")
 -- config.font = wezterm.font("Iosevka")
--- config.font = wezterm.font("FiraMono Nerd Font")
--- config.font = wezterm.font("FiraCode Nerd Font")
 -- config.font = wezterm.font("FiraCode Nerd Font Ret")
 -- config.font = wezterm.font("FiraCode Nerd Font Light")
 -- config.font = wezterm.font("Consolas NF")
 -- config.font = wezterm.font("Menlo")
 -- config.font = wezterm.font("Source Code Pro")
 
--- config.font = wezterm.font { family = "FiraMono Nerd Font" }
--- config.font = wezterm.font { family = "FiraCode Nerd Font" }
+-- -- config.font = wezterm.font { family = "FiraMono Nerd Font" }
+-- -- config.font = wezterm.font { family = "FiraCode Nerd Font" }
 config.font = wezterm.font { family = "Fira Mono" }
 config.font_rules = {
   {
@@ -149,7 +147,8 @@ config.freetype_render_target = "HorizontalLcd"
 
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
-config.enable_tab_bar = false
+config.enable_tab_bar = true
+-- config.use_fancy_tab_bar = false
 
 config.window_padding = {
   -- left = 0,
@@ -168,18 +167,18 @@ config.default_cursor_style = "SteadyBlock"
 -- Keybindings
 local act = wezterm.action
 config.keys = {
-  -- Switch between tabs
+  -- Disable Switch between tabs
   {
     key = "Tab",
     mods = "CTRL",
     action = act.DisableDefaultAssignment,
   },
-  {
+  { -- Disable
     key = "Tab",
     mods = "CTRL|SHIFT",
     action = act.DisableDefaultAssignment,
   },
-  -- Toggle full screen
+  -- Disable Toggle full screen
   {
     key = "Enter",
     mods = "ALT",
@@ -231,7 +230,8 @@ config.keys = {
     action = wezterm.action.EmitEvent("switch-to-right"),
   },
   -- Show TabNavigator
-  { key = "F9", mods = "ALT",  action = wezterm.action.ShowTabNavigator },
+  { key = "F9", mods = "CTRL",  action = wezterm.action.ShowTabNavigator },
+  -- { key = "F9", mods = "ALT",  action = wezterm.action.ShowTabNavigator },
   { key = "]",  mods = "CTRL", action = wezterm.action.ActivateTabRelative(1) },
   { key = "[",  mods = "CTRL", action = wezterm.action.ActivateTabRelative(-1) },
   -- { key = ']', mods = 'CTRL', action = wezterm.action.ActivateTabRelativeNoWrap(1) },
