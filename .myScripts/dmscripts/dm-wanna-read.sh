@@ -4,9 +4,9 @@
 
 options=(
 "$HOME/Documents/Books/"
-"$HOME/Documents/Books/Родная_мова/Кнігі/"
-"$HOME/Documents/Books/Родная_мова/Падручнікі/"
-"$HOME/Documents/Books/Родная_мова/Слоўнікі/"
+"$HOME/Documents/Books/Rodnaja_mova/Knihi/"
+"$HOME/Documents/Books/Rodnaja_mova/Padručniki/"
+"$HOME/Documents/Books/Rodnaja_mova/Sloŭniki/"
 "$HOME/Documents/Books/Programming/Algorithms/"
 "$HOME/Documents/Books/Programming/Android/"
 "$HOME/Documents/Books/Programming/ASM/"

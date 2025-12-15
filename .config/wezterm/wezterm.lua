@@ -97,7 +97,7 @@ config.colors = {
 --   "JetBrainsMono NF",
 --   { weight = "Regular", italic = false }
 -- )
--- config.font = wezterm.font("JetBrainsMono Nerd Font")
+config.font = wezterm.font("JetBrainsMono Nerd Font")
 -- config.font = wezterm.font("JetBrainsMono NF Light")
 -- config.font = wezterm.font("DejaVuSansMono Nerd Font Mono")
 -- config.font = wezterm.font("DejaVuSansM Nerd Font")
@@ -112,28 +112,28 @@ config.colors = {
 -- config.font = wezterm.font("Menlo")
 -- config.font = wezterm.font("Source Code Pro")
 
--- -- config.font = wezterm.font { family = "FiraMono Nerd Font" }
--- -- config.font = wezterm.font { family = "FiraCode Nerd Font" }
-config.font = wezterm.font { family = "Fira Mono" }
-config.font_rules = {
-  {
-    intensity = "Bold",
-    italic = true,
-    font = wezterm.font {
-      family = "Fira Mono",
-      weight = "Bold",
-      style = "Italic",
-    },
-  },
-  {
-    intensity = "Normal",
-    italic = true,
-    font = wezterm.font {
-      family = "Fira Mono",
-      style = "Italic",
-    },
-  },
-}
+-- -- -- config.font = wezterm.font { family = "FiraMono Nerd Font" }
+-- -- -- config.font = wezterm.font { family = "FiraCode Nerd Font" }
+-- config.font = wezterm.font { family = "Fira Mono" }
+-- config.font_rules = {
+--   {
+--     intensity = "Bold",
+--     italic = true,
+--     font = wezterm.font {
+--       family = "Fira Mono",
+--       weight = "Bold",
+--       style = "Italic",
+--     },
+--   },
+--   {
+--     intensity = "Normal",
+--     italic = true,
+--     font = wezterm.font {
+--       family = "Fira Mono",
+--       style = "Italic",
+--     },
+--   },
+-- }
 config.font_size = 16.0
 -- config.line_height = 1.10 -- for Hack Nerd Font
 -- config.line_height = 1.15 -- for Consolas NF
@@ -148,6 +148,7 @@ config.freetype_render_target = "HorizontalLcd"
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
 config.enable_tab_bar = true
+config.hide_tab_bar_if_only_one_tab = true
 -- config.use_fancy_tab_bar = false
 
 config.window_padding = {
