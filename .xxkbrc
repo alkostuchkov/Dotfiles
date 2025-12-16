@@ -6,8 +6,8 @@ XXkb.group.alt: 2
 XXkb.mainwindow.enable:  yes
 # XXkb.mainwindow.image.1: by22++Ł.xpm
 XXkb.mainwindow.image.1: us22++.xpm
-XXkb.mainwindow.image.2: ru22++.xpm
-XXkb.mainwindow.image.3: by22++.xpm
+XXkb.mainwindow.image.2: by22++.xpm
+XXkb.mainwindow.image.3: ru22++.xpm
 XXkb.mainwindow.image.4:
 # XXkb.mainwindow.image.4: by22++Ł.xpm
 XXkb.mainwindow.appicon:  yes

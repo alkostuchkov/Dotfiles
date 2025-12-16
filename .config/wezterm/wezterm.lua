@@ -151,15 +151,15 @@ config.enable_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
 -- config.use_fancy_tab_bar = false
 
-config.window_padding = {
-  -- left = 0,
-  left = 3,
-  right = 0,
-  top = 0,
-  bottom = 0,
-}
+-- config.window_padding = {
+--   left = 0,
+--   -- left = 3,
+--   right = 0,
+--   top = 0,
+--   bottom = 0,
+-- }
 
-config.window_decorations = "RESIZE"
+-- config.window_decorations = "RESIZE"
 config.window_background_opacity = 1.0
 -- config.window_background_image = '/home/alexander/Pictures/Wallpapers/NewWallpapers/0313.jpg'
 -- config.text_background_opacity = 0.3

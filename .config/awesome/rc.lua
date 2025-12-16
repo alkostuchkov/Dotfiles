@@ -1148,7 +1148,7 @@ end
 run_once({
   "xxkb",
   -- "setxkbmap -layout us,ru,by -option grp:caps_toggle",
-  "setxkbmap -layout by,ru,by -variant latin,, -option grp:caps_toggle", -- Łacinka
+  "setxkbmap -layout by,by,ru -variant latin,, -option grp:caps_toggle", -- Łacinka
   -- "setxkbmap -option ctrl:swap_lalt_lctl_lwin", -- swapping for Emacs
   "/usr/bin/emacs --daemon", 
   -- "setxkbmap -layout us,ru,by,by -variant ,,,latin -option grp:caps_toggle", -- Łacinka
