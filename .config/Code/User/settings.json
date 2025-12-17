@@ -14,8 +14,8 @@
     "*.ipynb": "jupyter.notebook.ipynb"
   },
   // "editor.fontFamily": "'mplus Nerd Font', 'Monoid Nerd Font Mono', 'Sarasa Mono SC Nerd', 'InconsolataLGC Nerd Font Mono', 'Iosevka', 'Recursive Mono Casual Static', 'Cascadia Mono PL', 'Rec Mono Casual', 'Cascadia Code PL Semilight', 'Iosevka', 'Pragmata Pro', 'JetBrains Mono Light', 'Source Code Pro', 'Consolas NF', 'JetBrains Mono', 'UbuntuMono Nerd Font', 'Menlo', 'Trim Mono', 'Code New Roman', 'Operator Mono Book', 'IBM Plex Mono Medium'",
-  "editor.fontFamily": "'FiraMono Nerd Font'",
-  "editor.fontSize": 20, //mplus Nerd Font
+  "editor.fontFamily": "'JetBrainsMono Nerd Font'",
+  "editor.fontSize": 18, //mplus Nerd Font
   // "editor.fontWeight": "normal",
   // "editor.fontSize": 16,
   // "editor.lineHeight": 25, //mplus Nerd Font
@@ -43,16 +43,16 @@
       "color": "red"
     }
   ],
-  "debug.console.fontFamily": "'Fira Mono Nerd Font'",
-  "debug.console.fontSize": 20, //mplus Nerd Font
+  "debug.console.fontFamily": "'JetBrainsMono Nerd Font'",
+  "debug.console.fontSize": 16, //mplus Nerd Font
   // "debug.console.fontSize": 16,
   // "terminal.explorerKind": "external",
   "terminal.integrated.cursorStyle": "block",
   "terminal.external.linuxExec": "alacritty",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.defaultProfile.linux": "fish",
-  "terminal.integrated.fontFamily": "'FiraMono Nerd Font'",
-  "terminal.integrated.fontSize": 20, //mplus Nerd Font
+  "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
+  "terminal.integrated.fontSize": 16, //mplus Nerd Font
   // "terminal.integrated.fontSize": 16,
   "[python]": {},
   "python.insidersChannel": "off",
@@ -120,7 +120,7 @@
   "window.menuBarVisibility": "toggle",
   // "editor.defaultFormatter": "standard.vscode-standard",
   // "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "workbench.colorTheme": "Everforest Dark",
+  "workbench.colorTheme": "Cobalt2",
   "workbench.iconTheme": "vscode-icons",
   "prettier.bracketSpacing": false,
   "prettier.trailingComma": "none",

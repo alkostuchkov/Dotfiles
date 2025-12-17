@@ -54,3 +54,4 @@
 ;; (unpin! t)
 (package! lsp-pascal)
 (package! drag-stuff)
+(package! sly-quicklisp)

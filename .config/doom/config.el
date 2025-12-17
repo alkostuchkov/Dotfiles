@@ -28,14 +28,14 @@
 (add-to-list 'load-path (expand-file-name "my_settings" "~/.config/doom/"))
 (add-to-list 'load-path (expand-file-name "themes" "~/.config/doom/"))
 (require  'my-keybindings)
-(require  'cobalt-theme)
+;; (require  'cobalt-theme)
 
 ;; Theme
-;; (setq doom-theme 'doom-one)
+(setq doom-theme 'doom-one)
 ;; (setq doom-theme 'doom-palenight)
 ;; (setq doom-theme 'doom-tokyo-night)
 ;; (setq doom-theme 'doom-ayu-mirage)
-(setq doom-theme 'cobalt)
+;; (setq doom-theme 'cobalt)
 (after! doom-themes
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t))
@@ -100,3 +100,5 @@
    :init
   (map! "<M-up>"    #'drag-stuff-up
         "<M-down>"  #'drag-stuff-down))
+
+(setq inferior-lisp-program "/usr/bin/sbcl")
