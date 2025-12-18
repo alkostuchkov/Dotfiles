@@ -11,8 +11,18 @@ man() {
 ###############################################################################
 export HOME=$(echo /home/$USER)
 export ZSH="$HOME/.oh-my-zsh"
-export GHCUP_INSTALL_BASE_PREFIX="$HOME/.config"  # for GHCUP
 export GOPATH="$HOME/go"
+export GHCUP_INSTALL_BASE_PREFIX="$HOME/"  # for GHCUP
+# For stack (Haskell) get version of system ghci
+ghci_path=$(whereis ghci | awk -F: '{print $NF}' | cut -d" " -f2)
+if [ -n "$ghci_path" ]; then
+    export ghci_ver=$($ghci_path --version | awk '{print $NF}')
+    # export ghci_ver=$(echo $($ghci_path --version | awk '{print $NF}'))
+    alias stack="stack --resolver ghc-$ghci_ver"
+fi
+# if [ -n /usr/bin/ghci ]; then
+#     export ghci_ver=$(ghci --version | awk {'print $NF'})
+# fi
 
 # export
 PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications:$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin:$HOME/Programs/Android_SDK/platform-tools:$GOPATH/bin:$HOME/.config/emacs/bin
@@ -35,11 +45,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 # export XDG_DATA_DIRS="$HOME/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share/applications:/var/lib/flatpak/exports/share/applications"
 export XDG_CACHE_HOME="$HOME/.cache"
-
-# For stack (Haskell) get version of system ghci
-if [ -n /usr/bin/ghci ]; then
-    export ghci_ver=$(ghci --version | awk {'print $NF'})
-fi
 
 # # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # # Initialization code that may require console input (password prompts, [y/n]
@@ -167,9 +172,6 @@ plugins=(git asdf)
 alias emacs="emacsclient -c -a 'emacs'" # GUI versions of Emacs
 alias em="/usr/bin/emacs -nw" # Terminal version of Emacs
 alias rem="killall emacs || echo 'Emacs server not running'; /usr/bin/emacs --daemon" # Kill Emacs and restart daemon..
-
-# For stack (Haskell) get version of system ghci
-alias stack="stack --resolver ghc-$ghci_ver"
 
 # alias ls='ls --color=auto'
 # alias ll='ls -l'

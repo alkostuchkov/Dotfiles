@@ -9,8 +9,23 @@ set fish_prompt_pwd_dir_length 0
 # EXPORTs
 ###############################################################################
 set HOME (echo /home/$USER)
-set GHCUP_INSTALL_BASE_PREFIX "$HOME/.config" # for GHCUP
 set GOPATH "$HOME/go"
+set GHCUP_INSTALL_BASE_PREFIX "$HOME/" # for GHCUP
+# For stack (Haskell) get version of system ghci
+if [ -f "$HOME/.ghcup/bin/ghci" ]
+    set ghci_path "$HOME/.ghcup/bin/ghci"    
+else if [ -f "/usr/bin/ghci" ]
+    set ghci_path "/usr/bin/ghci"    
+end
+if [ -n "$ghci_path" ]
+    set ghci_ver ($ghci_path --version | awk '{print $NF}')
+    alias stack="stack --resolver ghc-$ghci_ver"
+end
+# set ghci_path (whereis ghci | awk -F: '{print $NF}' | cut -d" " -f2)
+# if [ -n "$ghci_path" ]
+#     set ghci_ver ($ghci_path --version | awk '{print $NF}')
+#     alias stack="stack --resolver ghc-$ghci_ver"
+# end
 
 set -U fish_user_paths $HOME/.local/bin $HOME/Programs/AppImageApplications $fish_user_paths
 set PATH $PATH $HOME/.cargo/bin $HOME/.config/vifm/scripts $HOME/.config/emacs/bin $GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin $HOME/Programs/Android_SDK/platform-tools $GOPATH/bin # PATH for exa in cargo and ...
@@ -33,11 +48,6 @@ set XDG_CONFIG_HOME "$HOME/.config"
 set XDG_DATA_HOME "$HOME/.local/share"
 # set XDG_DATA_DIRS "$HOME/.local/share/flatpak/exports/share" "/var/lib/flatpak/exports/share"
 set XDG_CACHE_HOME "$HOME/.cache"
-
-# For stack (Haskell) get version of system ghci
-if [ -n /usr/bin/ghci ]
-    set ghci_ver (ghci --version | awk {'print $NF'})
-end
 
 # $EDITOR use Vim to edit crontab ---------------------------------------------
 # EDITOR="vim" crontab -e

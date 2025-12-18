@@ -10,8 +10,17 @@ man() {
 # EXPORTs
 ###############################################################################
 export HOME=$(echo /home/$USER)
-export GHCUP_INSTALL_BASE_PREFIX="$HOME/.config"  # for GHCUP
 export GOPATH="$HOME/go"
+export GHCUP_INSTALL_BASE_PREFIX="$HOME/.config"  # for GHCUP
+# For stack (Haskell) get version of system ghci
+ghci_path=$(whereis ghci | awk -F: '{print $NF}' | cut -d" " -f2)
+if [ -n "$ghci_path" ]; then
+    export ghci_ver=$($ghci_path --version | awk '{print $NF}')
+    alias stack="stack --resolver ghc-$ghci_ver"
+fi
+# if [ -n /usr/bin/ghci ]; then
+#     export ghci_ver=$(ghci --version | awk {'print $NF'})
+# fi
 
 # export
 PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications:$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin:$HOME/Programs/Android_SDK/platform-tools:$GOPATH/bin:$HOME/.config/emacs/bin
@@ -37,11 +46,6 @@ export XDG_DATA_HOME="$HOME/.local/share"
 # export XDG_DATA_DIRS+=":$HOME/.local/share/flatpak/exports/share/applications"
 # export XDG_DATA_DIRS+=":/var/lib/flatpak/exports/share/applications"
 export XDG_CACHE_HOME="$HOME/.cache"
-
-# For stack (Haskell) get version of system ghci
-if [ -n /usr/bin/ghci ]; then
-    export ghci_ver=$(ghci --version | awk {'print $NF'})
-fi
 
 # If not running interactively, don't do anything -----------------------------
 case $- in
