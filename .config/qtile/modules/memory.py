@@ -25,7 +25,8 @@ from libqtile.widget import base
 __all__ = ["Memory"]
 
 
-class Memory(base.ThreadPoolText):
+# class Memory(base.ThreadPoolText):
+class Memory(base.BackgroundPoll):
     """Displays memory/swap usage
 
     MemUsed: Returns memory in use
@@ -65,7 +66,7 @@ class Memory(base.ThreadPoolText):
         self.calc_mem = self.measures[self.measure_mem]
         self.calc_swap = self.measures[self.measure_swap]
 
-    def poll(self):
+    async def apoll(self):
         mem = psutil.virtual_memory()
         swap = psutil.swap_memory()
         val = {}

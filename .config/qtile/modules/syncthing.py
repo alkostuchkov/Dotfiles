@@ -25,7 +25,8 @@ from libqtile.widget import base
 __all__ = ["Syncthing"]
 
 
-class Syncthing(base.ThreadPoolText):
+# class Syncthing(base.ThreadPoolText):
+class Syncthing(base.BackgroundPoll):
     """Displays and change Syncthing status."""
 
     orientations = base.ORIENTATION_HORIZONTAL
@@ -73,7 +74,7 @@ class Syncthing(base.ThreadPoolText):
             #  os.system("notify-send -i dialog-information 'Syncthing service started'")
         self._get_status()
 
-    def poll(self):
+    async def apoll(self):
         self._get_status()
         val = {}
         val["label"] = self.label

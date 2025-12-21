@@ -624,7 +624,7 @@ def init_widgets_list():
             # up_string=" 🟢 🌏 ✅ ",
             # down_string=" 🔴 🚫 🌐 ❌ ",
             host="google.com",
-            update_interval=30,
+            update_interval=10,
             display_fmt="{0}",
             padding=0,
          ),
