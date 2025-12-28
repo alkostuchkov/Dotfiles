@@ -66,7 +66,6 @@ def parse_windowname(text):
 mod = "mod4"
 alt = "mod1"
 my_term = "wezterm"
-#  my_term_extra = "xfce4-terminal"
 my_term_extra = "alacritty"
 onemore_term = "kitty"
 my_font = "Ubuntu"
@@ -556,6 +555,7 @@ def init_widgets_list():
             foreground=colors.get("fg_weather", "#ffffff"),
             coordinates={"longitude": "30.9754", "latitude": "52.4345"},
             format="{location_city}: {temp}°{units_temperature}\n{weather_details}",
+            # language="be",
             update_interval=1800,
             mouse_callbacks={
                 "Button3": lambda: qtile.spawn("xdg-open https://openweathermap.org/city/627907"),
@@ -616,18 +616,18 @@ def init_widgets_list():
             linewidth=1,
             padding=10
         ),
-         widget.NetUP(
-            up_foreground=colors.get("fg_netspeed", "#ffffff"),
-            down_foreground=colors.get("fg_syncthing_inactive", "#ff0000"),
-            up_string="🟢 ",
-            down_string="🔴 ",
-            # up_string=" 🟢 🌏 ✅ ",
-            # down_string=" 🔴 🚫 🌐 ❌ ",
-            host="google.com",
-            update_interval=10,
-            display_fmt="{0}",
-            padding=0,
-         ),
+         # widget.NetUP(
+         #    up_foreground=colors.get("fg_netspeed", "#ffffff"),
+         #    down_foreground=colors.get("fg_syncthing_inactive", "#ff0000"),
+         #    up_string="🟢 ",
+         #    down_string="🔴 ",
+         #    # up_string=" 🟢 🌏 ✅ ",
+         #    # down_string=" 🔴 🚫 🌐 ❌ ",
+         #    host="google.com",
+         #    update_interval=10,
+         #    display_fmt="{0}",
+         #    padding=0,
+         # ),
         # widget.Sep(
         #     linewidth=1,
         #     padding=10
@@ -854,8 +854,8 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class="lazarus"),
     #  Match(wm_class="GParted"),
     #  Match(wm_class="keepass2"),
-    Match(wm_class="pinentry-gtk-2"),
-    Match(title="Pinentry"),  # GPG key password entry
+    Match(wm_class="Pinentry"),  # GPG key password entry
+    Match(wm_class="pinentry"),  # GPG key password entry
     #  Match(wm_class="vlc"),
     #  Match(wm_class="smplayer"),
     Match(wm_class="deadbeef"),

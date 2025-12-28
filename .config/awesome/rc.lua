@@ -451,7 +451,9 @@ globalkeys = gears.table.join(
   awful.key({ super, alt }, "Space", function() awful.util.spawn(HOME .. "/.myScripts/touchpadONOFF.sh") end,
     { description = "Touchpad On/Off", group = "launcher" }),
   awful.key({ super, alt }, "r", function() awful.util.spawn("rofi run -show drun -show-icons") end,
-    { description = "Rofi", group = "launcher" }),
+    { description = "Rofi (programs)", group = "launcher" }),
+  awful.key({ alt }, "w", function() awful.util.spawn("rofi run -show window -show-icons") end,
+    { description = "Rofi (windows)", group = "launcher" }),
   -- awful.key({ super, alt }, "d", function() awful.util.spawn("dmenu_run -i -l 10 -nb '#263238' -nf '#24d2af' -sb '#009185' -p 'Run: ' -fn 'Iosevka-18:normal'") end,
   -- {description = "Dmenu", group = "launcher" }), -- Materia Manjaro
   awful.key({ super, alt }, "d",
@@ -484,8 +486,9 @@ globalkeys = gears.table.join(
     { description = "Vifm", group = "applications" }),
   awful.key({ super, alt }, "y",
     function()
-      awful.util.spawn(TERMINAL ..
-        " -e " .. SHELL .. " -c 'yazi --cwd-file ~/.config/yazi/cwd (cat ~/.config/yazi/cwd)'")
+      -- awful.util.spawn(TERMINAL ..
+      --   " -e " .. SHELL .. " -c 'yazi --cwd-file ~/.config/yazi/cwd (cat ~/.config/yazi/cwd)'")
+      awful.util.spawn("ghostty -e \"" .. SHELL .. " -c 'yazi --cwd-file ~/.config/yazi/cwd (cat ~/.config/yazi/cwd)'\"")
     end,
     { description = "Yazi", group = "applications" }),
   awful.key({ super, alt }, "t",

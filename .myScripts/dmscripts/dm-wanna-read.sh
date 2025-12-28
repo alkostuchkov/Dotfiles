@@ -6,7 +6,7 @@ options=(
 "$HOME/Documents/Books/"
 "$HOME/Documents/Books/Rodnaja_mova/Knihi/"
 "$HOME/Documents/Books/Rodnaja_mova/Padručniki/"
-"$HOME/Documents/Books/Rodnaja_mova/Sloŭniki/"
+"$HOME/Documents/Books/Rodnaja_mova/Słoŭniki/"
 "$HOME/Documents/Books/Programming/Algorithms/"
 "$HOME/Documents/Books/Programming/Android/"
 "$HOME/Documents/Books/Programming/ASM/"
