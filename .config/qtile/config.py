@@ -23,6 +23,7 @@ from modules import (
     colors,
     memory,
     all_windows_count,
+    # open_weather,
     syncthing,
     show_updates,
 )
@@ -139,7 +140,7 @@ keys = [
     #  Key([mod, alt], "d", lazy.spawn(f"dmenu_run -i -l 10 -nb '#263238' -nf '#24d2af' -sb '#009185' -p 'Run: ' -fn 'Iosevka-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
     #  Key([mod, alt], "d", lazy.spawn("dmenu_run -nb #282828 -nf #e3a84e -sb #665c54 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Gruvbox
     Key([mod, alt], "Print", lazy.spawn("flameshot gui"), desc="Launch flameshot (take screenshot)"),
-    Key([mod, alt], "w", lazy.spawn("/usr/bin/firefox"), desc="Launch Firefox"),
+    Key([mod, alt], "w", lazy.spawn("firefox"), desc="Launch Firefox"),
     Key([mod, alt], "u", lazy.spawn("qutebrowser"), desc="Launch qutebrowser"),
     Key([mod, alt], "e", lazy.spawn("dolphin"), desc="Launch File Manager"),
     # Key([mod, alt], "n", lazy.spawn("thunar"), desc="Launch File Manager"),
@@ -537,26 +538,24 @@ def init_widgets_list():
         #  ),
         widget.OpenWeather(
             foreground=colors.get("fg_weather", "#ffffff"),
-            coordinates={"longitude": "30.9754", "latitude": "52.4345"},
             fontsize=20,
+            # app_key="69266794b403496387c163813240311",
+            # city_id=627907,
+            # location="Homyel', BY",
+            coordinates={"latitude": "52.434", "longitude": "30.975"},
             format="{icon}",
+            language="be",
             update_interval=1800,
             mouse_callbacks={
                 "Button3": lambda: qtile.spawn("xdg-open https://openweathermap.org/city/627907"),
             }
         ),
-        #  widget.TextBox(
-            #  #  text="⛅",
-            #  text="🌡",
-            #  fontsize=16,
-            #  foreground=colors["fg_weather"],
-            #  padding=0
-        #  ),
         widget.OpenWeather(
             foreground=colors.get("fg_weather", "#ffffff"),
-            coordinates={"longitude": "30.9754", "latitude": "52.4345"},
+            # app_key="69266794b403496387c163813240311",
+            coordinates={"latitude": "52.434", "longitude": "30.975"},
             format="{location_city}: {temp}°{units_temperature}\n{weather_details}",
-            # language="be",
+            language="be",
             update_interval=1800,
             mouse_callbacks={
                 "Button3": lambda: qtile.spawn("xdg-open https://openweathermap.org/city/627907"),
@@ -831,6 +830,8 @@ floating_layout = layout.Floating(float_rules=[
     Match(title="Действия над файлами", wm_class="Thunar"),
     Match(title="Create Snapshot", wm_class="Timeshift-gtk"),
     Match(title="Delete Snapshots", wm_class="Timeshift-gtk"),
+    Match(title="Стварыць здымак", wm_class="Timeshift-gtk"),
+    Match(title="Выдаліць здымкі", wm_class="Timeshift-gtk"),
     Match(title="Создать снимок", wm_class="Timeshift-gtk"),
     Match(title="Удалить снимки", wm_class="Timeshift-gtk"),
     #  Match(title="win0", wm_class="jetbrains-webstorm"),  # WebStorm

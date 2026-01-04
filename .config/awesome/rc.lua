@@ -467,7 +467,7 @@ globalkeys = gears.table.join(
     { description = "Dmenu", group = "launcher" }),
   awful.key({ super, alt }, "Print", function() awful.util.spawn("flameshot gui") end,
     { description = "FlameshotGui", group = "applications" }),
-  awful.key({ super, alt }, "w", function() awful.util.spawn("/usr/bin/firefox") end,
+  awful.key({ super, alt }, "w", function() awful.util.spawn("firefox") end,
     { description = "Firefox", group = "applications" }),
   awful.key({ super, alt }, "u", function() awful.util.spawn("qutebrowser") end,
     { description = "Qutebrowser", group = "applications" }),
