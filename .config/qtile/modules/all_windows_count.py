@@ -1,34 +1,15 @@
-# Copyright (c) 2020 elParaguayo
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
+from __future__ import annotations
 
-from typing import Any, List, Tuple
+from typing import Any
 
 from libqtile import bar, hook
-from libqtile.widget import base
 from libqtile.command.base import expose_command
+from libqtile.widget import base
 
 
 class WindowCount(base._TextBox):
     """A simple widget to show the number of ALL opened windows."""
-    orientations = base.ORIENTATION_HORIZONTAL
-    defaults = [
+    defaults: list[tuple[str, Any, str]] = [
         ("font", "sans", "Text font"),
         ("fontsize", None, "Font pixel size. Calculated if None."),
         ("fontshadow", None, "font shadow color, default is None(no shadow)"),
@@ -72,7 +53,12 @@ class WindowCount(base._TextBox):
         self.text = self.text_format.format(num=self._count)
         self.bar.draw()
 
-    @expose_command
-    def cmd_get(self):
+    def calculate_length(self):
+        if self._count or self.show_zero:
+            return base._TextBox.calculate_length(self)
+        return 0
+
+    @expose_command()
+    def get(self):
         """Retrieve the current text."""
         return self.text

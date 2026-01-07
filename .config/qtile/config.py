@@ -23,7 +23,8 @@ from modules import (
     colors,
     memory,
     all_windows_count,
-    # open_weather,
+    window_count,
+    open_weather,
     syncthing,
     show_updates,
 )
@@ -550,11 +551,12 @@ def init_widgets_list():
                 "Button3": lambda: qtile.spawn("xdg-open https://openweathermap.org/city/627907"),
             }
         ),
-        widget.OpenWeather(
+        open_weather.OpenWeather(
             foreground=colors.get("fg_weather", "#ffffff"),
             # app_key="69266794b403496387c163813240311",
             coordinates={"latitude": "52.434", "longitude": "30.975"},
-            format="{location_city}: {temp}°{units_temperature}\n{weather_details}",
+            format="Гомель: {temp}°{units_temperature}\n{weather_details}",
+            # format="{location_city}: {temp}°{units_temperature}\n{weather_details}",
             language="be",
             update_interval=1800,
             mouse_callbacks={
@@ -684,7 +686,13 @@ def init_widgets_list():
                 "Button3": qtile.prev_layout,
             }
         ),
-        widget.WindowCount(
+        # widget.WindowCount(
+        #     text_format=" {num} /",
+        #     fontsize=14,
+        #     padding=0,
+        #     foreground=colors.get("fg_layout", "#ffffff"),
+        # ),
+        window_count.WindowCount(
             text_format=" {num} /",
             fontsize=14,
             padding=0,
@@ -832,6 +840,7 @@ floating_layout = layout.Floating(float_rules=[
     Match(title="Delete Snapshots", wm_class="Timeshift-gtk"),
     Match(title="Стварыць здымак", wm_class="Timeshift-gtk"),
     Match(title="Выдаліць здымкі", wm_class="Timeshift-gtk"),
+    Match(title="Аднавіць здымак", wm_class="Timeshift-gtk"),
     Match(title="Создать снимок", wm_class="Timeshift-gtk"),
     Match(title="Удалить снимки", wm_class="Timeshift-gtk"),
     #  Match(title="win0", wm_class="jetbrains-webstorm"),  # WebStorm
