@@ -67,6 +67,7 @@ video = [
 	{ run = 'vlc "$@"',                orphan = true, desc = "VLC",      for = "unix" },
 	{ run = 'mpv --force-window "$@"', orphan = true, desc = "mpv",      for = "unix" },
 	{ run = 'avidemux "$@"',           orphan = true, desc = "Avidemux", for = "unix" },
+	{ run = 'soundconverter "$@"', orphan = true, desc = "SoundConverter", for = "unix" },
 	{ run = 'mpv --force-window "%1"', orphan = true,                    for = "windows" },
 	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
 ]
