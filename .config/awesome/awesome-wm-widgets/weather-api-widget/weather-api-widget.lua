@@ -26,7 +26,7 @@ end
 -- default language is ENglish
 local LANG = gears.filesystem.file_readable(WIDGET_DIR .. "/" .. "locale/" ..
                                       SYS_LANG .. ".lua") and SYS_LANG or "en"
-local LCLE = require("awesome-wm-widgets.weather-widget.locale." .. LANG)
+local LCLE = require("awesome-wm-widgets.weather-api-widget.locale." .. LANG)
 -- WeatherAPI supports only these according to https://www.weatherapi.com/docs/
 -- ar, bn, bg, zh, zh_tw, cs, da, nl, fi, fr, de, el, hi, hu, it, ja, jv, ko,
 -- zh_cmn, mr, pl, pt, pa, ro, ru, sr, si, sk, es, sv, ta, te, tr, uk, ur, vi,

@@ -15,7 +15,7 @@
 setxkbmap -layout by,by,ru -variant latin,, -option grp:caps_toggle &  # Łacinka
 # setxkbmap -layout us,ru,by,by -variant ,,,latin -option grp:caps_toggle &  # Łacinka
 # setxkbmap -option ctrl:swap_lalt_lctl_lwin & # swapping for Emacs
-/usr/bin/emacs --daemon &
+# /usr/bin/emacs --daemon &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 # /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &  # for Arch
 # /usr/libexec/polkit-gnome-authentication-agent-1 &  # for Void

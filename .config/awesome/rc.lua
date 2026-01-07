@@ -1140,7 +1140,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- Autostart
-
 local function run_once(cmd_arr)
   for _, cmd in ipairs(cmd_arr) do
     os.execute(string.format("pgrep -u $USER -fx '%s' > /dev/null || (%s &)", cmd, cmd))
@@ -1153,7 +1152,7 @@ run_once({
   -- "setxkbmap -layout us,ru,by -option grp:caps_toggle",
   "setxkbmap -layout by,by,ru -variant latin,, -option grp:caps_toggle", -- Łacinka
   -- "setxkbmap -option ctrl:swap_lalt_lctl_lwin", -- swapping for Emacs
-  "/usr/bin/emacs --daemon", 
+  -- "/usr/bin/emacs --daemon", 
   -- "setxkbmap -layout us,ru,by,by -variant ,,,latin -option grp:caps_toggle", -- Łacinka
   -- "/usr/lib/xfce4/notifyd/xfce4-notifyd", -- no need on AwesomeWM
   -- /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1, -- for Debian

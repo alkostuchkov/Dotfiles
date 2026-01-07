@@ -27,6 +27,7 @@ options=(
 "dm-run-scripts - $HOME/.myScripts/dmscripts/dm-run-scripts.sh"
 "dm-search - $HOME/.myScripts/dmscripts/dm-search.sh"
 "dm-system-exit - $HOME/.myScripts/dmscripts/dm-system-exit.sh"
+"dm-start-emacs-daemon - $HOME/.myScripts/dmscripts/dm-start-emacs-daemon.sh"
 "dm-unicode - $HOME/.myScripts/dmscripts/dm-unicode.sh"
 "dm-wanna-read - $HOME/.myScripts/dmscripts/dm-wanna-read.sh"
 "dwm - $HOME/Programs/DWM/config.h"
