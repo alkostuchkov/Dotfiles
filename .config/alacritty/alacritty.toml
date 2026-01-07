@@ -16,7 +16,7 @@ unfocused_hollow = true
 TERM = "xterm-256color"
 
 [font]
-size = 15.5  # JetBrainsMono Nerd Font
+size = 17.0  # JetBrainsMono Nerd Font
 
 [font.bold]
 # family = "mplus Nerd Font"
@@ -24,8 +24,9 @@ size = 15.5  # JetBrainsMono Nerd Font
 # family = "Consolas NF"
 # family = "FiraMono Nerd Font"
 # family = "JetBrainsMono Nerd Font"
-family = "FiraCode Nerd Font"
+# family = "FiraCode Nerd Font"
 # family = "Fira Mono"
+family = "IosevkaTerm_Ilike"
 style = "Bold"
 # style = "Semibold"
 
@@ -35,7 +36,8 @@ style = "Bold"
 # style = "Semibold Italic"
 # family = "Consolas NF"
 # family = "JetBrainsMono Nerd Font"
-family = "Fira Mono"
+# family = "Fira Mono"
+family = "IosevkaTerm_Ilike"
 style = "Bold Italic"
 
 [font.italic]
@@ -43,7 +45,8 @@ style = "Bold Italic"
 # family = "Sarasa Mono SC Nerd"
 # family = "Consolas NF"
 # family = "JetBrainsMono Nerd Font"
-family = "Fira Mono"
+# family = "Fira Mono"
+family = "IosevkaTerm_Ilike"
 style = "Italic"
 
 [font.normal]
@@ -52,8 +55,9 @@ style = "Italic"
 # family = "Consolas NF"
 # family = "FiraMono Nerd Font"
 # family = "JetBrainsMono Nerd Font"
-family = "FiraCode Nerd Font"
+# family = "FiraCode Nerd Font"
 # family = "Fira Mono"
+family = "IosevkaTerm_Ilike"
 # style = "Light"
 style = "Regular"
 

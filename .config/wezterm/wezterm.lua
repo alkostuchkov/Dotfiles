@@ -98,8 +98,8 @@ config.colors = {
 --   { weight = "Regular", italic = false }
 -- )
 -- config.font = wezterm.font("JetBrainsMono Nerd Font")
--- config.font = wezterm.font("Iosevka (SourceCodePro)")
-config.font = wezterm.font("Iosevka (JetBrainsMono)")
+-- config.font = wezterm.font("IosevkaTerm_JBMono")
+config.font = wezterm.font("IosevkaTerm_Ilike")
 -- config.font = wezterm.font("JetBrainsMono NF Light")
 -- config.font = wezterm.font("DejaVuSansMono Nerd Font Mono")
 -- config.font = wezterm.font("DejaVuSansM Nerd Font")
