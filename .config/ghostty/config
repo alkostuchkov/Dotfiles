@@ -44,10 +44,10 @@ theme = Cobalt2
 # font-family-bold = JetBrainsMono Nerd Font
 # font-family-italic = JetBrainsMono Nerd Font
 # font-family-bold-italic = JetBrainsMono Nerd Font
-font-family = IosevkaTerm_Ilike
-font-family-bold = IosevkaTerm_Ilike
-font-family-italic = IosevkaTerm_Ilike
-font-family-bold-italic = IosevkaTerm_Ilike
+font-family = IosevkaTerm_IlovePlus
+font-family-bold = IosevkaTerm_IlovePlus
+font-family-italic = IosevkaTerm_IlovePlus
+font-family-bold-italic = IosevkaTerm_IlovePlus
 
 # font-family = mplus Nerd Font
 # font-family-bold = mplus Nerd Font

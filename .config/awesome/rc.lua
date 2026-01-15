@@ -19,7 +19,7 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 naughty.config.defaults["icon_size"] = 100
-naughty.config.defaults["timeout"] = 5
+naughty.config.defaults["timeout"] = 3
 -- naughty.config.defaults["font"] = "Sarasa Mono SC Nerd 13"
 naughty.config.defaults["font"] = "Ubuntu 13"
 -- naughty.config.defaults["font"] = "Iosevka 13"
@@ -459,7 +459,7 @@ globalkeys = gears.table.join(
   awful.key({ super, alt }, "d",
     function()
       awful.util.spawn(
-        "dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'JetbrainsMono Nerd Font-16:normal'")  -- MyBlue
+        "dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'JetbrainsMono Nerd Font-15:normal'")  -- MyBlue
         -- "dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'Ubuntu-17:normal'")  -- MyBlue
         -- "dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'Iosevka-18:normal'")  -- MyBlue
         -- "dmenu_run -i -l 10 -nb '#2d353b' -nf '#d3c6aa' -sb '#475258' -sf '#a7c080' -p 'Run: ' -fn 'Iosevka-18:normal'")
@@ -674,11 +674,17 @@ globalkeys = gears.table.join(
     { description = "Brightness -5%", group = "hotkeys" }),
 
   -- ALSA volume control
-  awful.key({ super }, "F9", function() awful.spawn(HOME .. "/.myScripts/volume_up.sh") end,
+  -- awful.key({ super }, "F9", function() awful.spawn(HOME .. "/.myScripts/volume_up.sh") end,
+  --   { description = "Volume Up", group = "hotkeys" }),
+  -- awful.key({ super }, "F8", function() awful.spawn(HOME .. "/.myScripts/volume_down.sh") end,
+  --   { description = "Volume Down", group = "hotkeys" }),
+  -- awful.key({ super }, "F7", function() awful.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle") end,
+  --   { description = "Volume Mute", group = "hotkeys" }),
+  awful.key({ super }, "F9", function() awful.spawn(HOME .. "/.myScripts/volume.sh up") end,
     { description = "Volume Up", group = "hotkeys" }),
-  awful.key({ super }, "F8", function() awful.spawn(HOME .. "/.myScripts/volume_down.sh") end,
+  awful.key({ super }, "F8", function() awful.spawn(HOME .. "/.myScripts/volume.sh down") end,
     { description = "Volume Down", group = "hotkeys" }),
-  awful.key({ super }, "F7", function() awful.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle") end,
+  awful.key({ super }, "F7", function() awful.spawn(HOME .. "/.myScripts/volume.sh mute") end,
     { description = "Volume Mute", group = "hotkeys" }),
   -- XF86AudioRaiseVolume
   -- XF86AudioLowerVolume

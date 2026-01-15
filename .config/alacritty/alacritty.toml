@@ -26,7 +26,7 @@ size = 17.0  # JetBrainsMono Nerd Font
 # family = "JetBrainsMono Nerd Font"
 # family = "FiraCode Nerd Font"
 # family = "Fira Mono"
-family = "IosevkaTerm_Ilike"
+family = "IosevkaTerm_IloveModern"
 style = "Bold"
 # style = "Semibold"
 
@@ -37,7 +37,7 @@ style = "Bold"
 # family = "Consolas NF"
 # family = "JetBrainsMono Nerd Font"
 # family = "Fira Mono"
-family = "IosevkaTerm_Ilike"
+family = "IosevkaTerm_IloveModern"
 style = "Bold Italic"
 
 [font.italic]
@@ -46,7 +46,7 @@ style = "Bold Italic"
 # family = "Consolas NF"
 # family = "JetBrainsMono Nerd Font"
 # family = "Fira Mono"
-family = "IosevkaTerm_Ilike"
+family = "IosevkaTerm_IloveModern"
 style = "Italic"
 
 [font.normal]
@@ -57,7 +57,7 @@ style = "Italic"
 # family = "JetBrainsMono Nerd Font"
 # family = "FiraCode Nerd Font"
 # family = "Fira Mono"
-family = "IosevkaTerm_Ilike"
+family = "IosevkaTerm_IloveModern"
 # style = "Light"
 style = "Regular"
 

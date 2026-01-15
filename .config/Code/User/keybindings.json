@@ -139,14 +139,9 @@
     "when": "!terminalFocus"
   },
   {
-    "key": "shift+meta+a",
-    "command": "cursorEnd",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "shift+meta+i",
+    "key": "ctrl+a",
     "command": "cursorHome",
-    "when": "textInputFocus"
+    "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl && vim.mode == 'Insert'"
   },
   {
     "key": "shift+alt+up",
@@ -226,18 +221,13 @@
     "when": "textInputFocus"
   },
   {
-    "key": "alt+i",
-    "command": "cursorHome",
-    "when": "textInputFocus"
-  },
-  {
     "key": "ctrl+r",
     "command": "-workbench.action.openRecent"
   },
   {
     "key": "u",
     "command": "undo",
-    "when": "!editorFocus && editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+    "when": "editorTextFocus && vim.active && !editorFocus && !inDebugRepl && vim.mode != 'Insert'"
   },
   {
     "key": "ctrl+r",
@@ -257,5 +247,60 @@
   {
     "key": "ctrl+f10",
     "command": "rust-analyzer.run"
+  },
+  {
+    "key": "ctrl+z",
+    "command": "undo"
+  },
+  {
+    "key": "ctrl+z",
+    "command": "-undo"
+  },
+  {
+    "key": "ctrl+alt+h",
+    "command": "workbench.action.navigateLeft"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "workbench.action.navigateRight"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "contextmenu f",
+    "command": "actions.find",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-actions.find",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-workbench.action.terminal.focusFind",
+    "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "deleteRight",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "cursorRight",
+    "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode == 'Insert'"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "cursorLeft",
+    "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode == 'Insert'"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "cursorEnd",
+    "when": "textInputFocus"
   }
 ]

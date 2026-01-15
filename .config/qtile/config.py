@@ -134,9 +134,9 @@ keys = [
     Key([mod], "Return", lazy.spawn(my_term), desc="Launch terminal"),
     Key([mod, alt], "Return", lazy.spawn(my_term_extra), desc="Launch extra terminal"),
     Key([mod, alt], "r", lazy.spawn("rofi run -show drun -show-icons"), desc="Run App Lancher"),
-    Key([mod, alt], "d", lazy.spawn(f"dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'JetbrainsMono Nerd Font-16:normal'"), desc="Run dmenu"),  # MyBlue
+    Key([mod, alt], "d", lazy.spawn(f"dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'JetbrainsMono Nerd Font-15:normal'"), desc="Run dmenu"),  # MyBlue
     # Key([mod, alt], "d", lazy.spawn(f"dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'Ubuntu-17:normal'"), desc="Run dmenu"),  # MyBlue
-    # Key([mod, alt], "d", lazy.spawn(f"dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'Iosevka-18:normal'"), desc="Run dmenu"),  # Everforest
+    # Key([mod, alt], "d", lazy.spawn(f"dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'Iosevka-18:normal'"), desc="Run dmenu"),  # MyBlue
     # Key([mod, alt], "d", lazy.spawn(f"dmenu_run -i -l 10 -nb '#2d353b' -nf '#d3c6aa' -sb '#475258' -sf '#a7c080' -p 'Run: ' -fn 'Iosevka-18:normal'"), desc="Run dmenu"),  # Everforest
     #  Key([mod, alt], "d", lazy.spawn(f"dmenu_run -i -l 10 -nb '#263238' -nf '#24d2af' -sb '#009185' -p 'Run: ' -fn 'Iosevka-18:normal'"), desc="Run dmenu"),  # Materia Manjaro
     #  Key([mod, alt], "d", lazy.spawn("dmenu_run -nb #282828 -nf #e3a84e -sb #665c54 -p 'Run: ' -fn 'Ubuntu-18:normal'"), desc="Run dmenu"),  # Gruvbox
@@ -325,7 +325,6 @@ keys = [
     Key([], "XF86ScreenSaver", lazy.spawn(f"{HOME}/.myScripts/system_exit/lock.sh"), desc="Lock screen"),
     Key([], "XF86Battery", lazy.spawn("xfce4-power-manager-settings"), desc="Power manager settings"),
     Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle"), desc="Toggle audio mute"),
-    Key([mod], "F7", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle"), desc="Toggle audio mute"),
 
 # <SUPER> + <F1-F12>
     # Brightness & Volume (extra step 5)
@@ -333,8 +332,12 @@ keys = [
                    # lazy.spawn("brightnessctl set 5-"),
     Key([mod], "F3", lazy.spawn(f"{HOME}/.myScripts/brightness_up.sh"), desc="Brightness Up (+5)"),
                    # lazy.spawn("brightnessctl set +5"),
-    Key([mod], "F8", lazy.spawn(f"{HOME}/.myScripts/volume_down.sh"), desc="Volume Down"),
-    Key([mod], "F9", lazy.spawn(f"{HOME}/.myScripts/volume_up.sh"), desc="Volume Up more than 100%"),
+    Key([mod], "F7", lazy.spawn(f"{HOME}/.myScripts/volume.sh mute"), desc="Toggle audio mute"),
+    Key([mod], "F8", lazy.spawn(f"{HOME}/.myScripts/volume.sh down"), desc="Volume Down"),
+    Key([mod], "F9", lazy.spawn(f"{HOME}/.myScripts/volume.sh up"), desc="Volume Up more than 100%"),
+    # Key([mod], "F7", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle"), desc="Toggle audio mute"),
+    # Key([mod], "F8", lazy.spawn(f"{HOME}/.myScripts/volume_down.sh"), desc="Volume Down"),
+    # Key([mod], "F9", lazy.spawn(f"{HOME}/.myScripts/volume_up.sh"), desc="Volume Up more than 100%"),
 ]
 # MOVE/RESIZE FLOATING WINDOW
 for key, x, y in [
@@ -936,7 +939,13 @@ def move_new_window_to_certain_group(c):
     #               "lazarus",):
     #     c.togroup(group_names_indexes[4])
     #     qtile.groups_map[group_names_indexes[4]].cmd_toscreen()
-    if c.name in ("Telegram", "Rakuten Viber"):
+    if c.name.split()[0] in ("Telegram",
+                             "TelegramDesktop",
+                             "telegram",):
+        c.togroup(group_names_indexes[6])
+        qtile.groups_map[group_names_indexes[6]].cmd_toscreen()
+    # if c.name in ("Telegram", "Rakuten Viber"):
+    if c.name in ("Rakuten Viber"):
         c.togroup(group_names_indexes[6])
         qtile.groups_map[group_names_indexes[6]].cmd_toscreen()
     if c.name == "GNU Image Manipulation Program":
