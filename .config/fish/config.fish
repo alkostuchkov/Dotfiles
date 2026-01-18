@@ -27,8 +27,12 @@ end
 #     alias stack="stack --resolver ghc-$ghci_ver"
 # end
 
+# if [ -f "/usr/bin/foliate" ]
+#     set WEBKIT_DISABLE_DMABUF_RENDERER 1 # for Foliate (with NVidia drivers)
+# end
+
 set -U fish_user_paths $HOME/.local/bin $HOME/Programs/AppImageApplications $fish_user_paths
-set PATH $PATH $HOME/.cargo/bin $HOME/.config/vifm/scripts $HOME/.config/emacs/bin $GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin $HOME/Programs/Android_SDK/platform-tools $GOPATH/bin # PATH for exa in cargo and ...
+set PATH $PATH $HOME/.cargo/bin $HOME/.config/vifm/scripts $HOME/.config/emacs/bin $GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin $HOME/Programs/Android_SDK/platform-tools $HOME/.cabal/bin $GOPATH/bin # PATH for exa in cargo and ...
 
 # set EDITOR emacsclient -t -a ''              # $EDITOR use Emacs in terminal
 # set VISUAL emacsclient -c -a emacs           # $VISUAL use Emacs in GUI mode
@@ -118,7 +122,7 @@ function __history_previous_command_arguments
 end
 
 # The bindings for !! and !$ --------------------------------------------------
-if [ $fish_key_bindings = fish_vi_key_bindings ]
+if [ "$fish_key_bindings" = fish_vi_key_bindings ]
     bind -Minsert ! __history_previous_command
     bind -Minsert '$' __history_previous_command_arguments
 else
@@ -351,9 +355,6 @@ end
 alias emacs="emacsclient -c -a 'emacs'" # GUI versions of Emacs
 alias em="/usr/bin/emacs -nw" # Terminal version of Emacs
 alias rem="killall emacs || echo 'Emacs server not running'; /usr/bin/emacs --daemon" # Kill Emacs and restart daemon..
-
-# For stack (Haskell) get version of system ghci
-alias stack="stack --resolver ghc-$ghci_ver"
 
 # alias ls='ls --color=auto'
 # alias ll='ls -l'

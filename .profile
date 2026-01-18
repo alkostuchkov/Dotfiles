@@ -24,6 +24,11 @@ export HOME=$(echo /home/$USER)
 
 export SXHKD_SHELL="/usr/bin/bash"
 
+# foliate_path=$(whereis foliate | awk -F: '{print $NF}' | cut -d" " -f2)
+# if [ -n "$foliate_path" ]; then
+#     export WEBKIT_DISABLE_DMABUF_RENDERER=1 # for Foliate (with NVidia drivers)
+# fi
+
 # export GHCUP_INSTALL_BASE_PREFIX="$HOME/.config"  # for GHCUP
 # export GOPATH="$HOME/go"
 # export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications:$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin:$HOME/Programs/Android_SDK/platform-tools:$GOPATH/bin

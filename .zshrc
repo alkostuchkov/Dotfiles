@@ -24,8 +24,13 @@ fi
 #     export ghci_ver=$(ghci --version | awk {'print $NF'})
 # fi
 
+# foliate_path=$(whereis foliate | awk -F: '{print $NF}' | cut -d" " -f2)
+# if [ -n "$foliate_path" ]; then
+#     export WEBKIT_DISABLE_DMABUF_RENDERER=1 # for Foliate (with NVidia drivers)
+# fi
+
 # export
-PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications:$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin:$HOME/Programs/Android_SDK/platform-tools:$GOPATH/bin:$HOME/.config/emacs/bin
+PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Programs/AppImageApplications:$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin:$HOME/Programs/Android_SDK/platform-tools:$GOPATH/bin:$HOME/.config/emacs/bin:$HOME/.cabal/bin
 
 # export EDITOR="emacsclient -t -a ''"              # $EDITOR use Emacs in terminal
 # export VISUAL="emacsclient -c -a emacs"           # $VISUAL use Emacs in GUI mode
@@ -45,6 +50,15 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 # export XDG_DATA_DIRS="$HOME/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share/applications:/var/lib/flatpak/exports/share/applications"
 export XDG_CACHE_HOME="$HOME/.cache"
+
+# # export LIBVA_DRIVERS_PATH="/usr/lib/xorg/modules/drivers"
+# # export LIBVA_DRIVER_NAME="vdpau"
+# export LIBVA_DRIVER_NAME="nvidia"
+# # export VDPAU_DRIVER="nvidia"
+#
+# # export LIBVA_DRIVERS_PATH="/usr/lib/dri/"
+# # export LIBVA_DRIVER_NAME="vdpau"
+# # export VDPAU_DRIVER="nvidia"
 
 # # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # # Initialization code that may require console input (password prompts, [y/n]
