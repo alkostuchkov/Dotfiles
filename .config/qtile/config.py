@@ -134,7 +134,7 @@ keys = [
     Key([mod], "Return", lazy.spawn(my_term), desc="Launch terminal"),
     Key([mod, alt], "Return", lazy.spawn(my_term_extra), desc="Launch extra terminal"),
     Key([mod, alt], "r", lazy.spawn("rofi run -show drun -show-icons"), desc="Run App Lancher"),
-    Key([mod, alt], "d", lazy.spawn(f"dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'JetbrainsMono Nerd Font-15:normal'"), desc="Run dmenu"),  # MyBlue
+    Key([mod, alt], "d", lazy.spawn(f"dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'JetBrainsMono Nerd Font-16:normal'"), desc="Run dmenu"),  # MyBlue
     # Key([mod, alt], "d", lazy.spawn(f"dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'Ubuntu-17:normal'"), desc="Run dmenu"),  # MyBlue
     # Key([mod, alt], "d", lazy.spawn(f"dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'Iosevka-18:normal'"), desc="Run dmenu"),  # MyBlue
     # Key([mod, alt], "d", lazy.spawn(f"dmenu_run -i -l 10 -nb '#2d353b' -nf '#d3c6aa' -sb '#475258' -sf '#a7c080' -p 'Run: ' -fn 'Iosevka-18:normal'"), desc="Run dmenu"),  # Everforest
@@ -396,43 +396,43 @@ layout_theme = {
 layouts = [
     #  layout.Columns(**layout_theme, border_on_single=False, margin_on_single=False),
     layout.Columns(**layout_theme, border_on_single=True),
-    layout.TreeTab(
-         #  font=my_font,
-         font=my_nerd_font,
-         fontsize=14,
-         bg_color=colors.get("bg_panel", "#222222"),
-         active_bg=colors.get("bg_current_tab", "#535d6c"),
-         active_fg=colors.get("fg_active_group", "#ffffff"),
-         inactive_bg=colors.get("bg_systray", "#222222"),
-         inactive_fg=colors.get("fg_group_names", "#aaaaaa"),
-         border_width=2,
-         padding_y=5,
-         sections=["FIRST", "SECOND"],
-         section_fontsize=12,
-         section_fg=colors.get("fg_group_names", "#aaaaaa"),
-         section_top=10,
-         panel_width=320
-    ),
-    #  layout.Max(**layout_theme),
+    # layout.TreeTab(
+    #      #  font=my_font,
+    #      font=my_nerd_font,
+    #      fontsize=14,
+    #      bg_color=colors.get("bg_panel", "#222222"),
+    #      active_bg=colors.get("bg_current_tab", "#535d6c"),
+    #      active_fg=colors.get("fg_active_group", "#ffffff"),
+    #      inactive_bg=colors.get("bg_systray", "#222222"),
+    #      inactive_fg=colors.get("fg_group_names", "#aaaaaa"),
+    #      border_width=2,
+    #      padding_y=5,
+    #      sections=["FIRST", "SECOND"],
+    #      section_fontsize=12,
+    #      section_fg=colors.get("fg_group_names", "#aaaaaa"),
+    #      section_top=10,
+    #      panel_width=320
+    # ),
+    # #  layout.Max(**layout_theme),
     layout.Max(
       margin=4,
       border_width=3,
       border_focus=colors.get("border_focus", "#535d6c"),
       border_normal=colors.get("border_normal", "#000000")
     ),
-    #  layout.MonadTall(**layout_theme, single_border_width=False, single_margin=False),
-    #  layout.MonadWide(**layout_theme, single_border_width=False, single_margin=False),
-    layout.MonadTall(**layout_theme),
-    layout.MonadWide(**layout_theme),
-    #  layout.Bsp(**layout_theme),
-    #  layout.Tile(shift_windows=True, **layout_theme),
-    #  layout.Stack(stacks=2, **layout_theme),
-    #  layout.Stack(num_stacks=2),
-    #  layout.RatioTile(**layout_theme),
-    #  layout.VerticalTile(**layout_theme),
-    #  layout.Matrix(**layout_theme),
-    #  layout.Zoomy(**layout_theme),
-    #  layout.Floating(**layout_theme)
+    # #  layout.MonadTall(**layout_theme, single_border_width=False, single_margin=False),
+    # #  layout.MonadWide(**layout_theme, single_border_width=False, single_margin=False),
+    # layout.MonadTall(**layout_theme),
+    # layout.MonadWide(**layout_theme),
+    # #  layout.Bsp(**layout_theme),
+    # #  layout.Tile(shift_windows=True, **layout_theme),
+    # #  layout.Stack(stacks=2, **layout_theme),
+    # #  layout.Stack(num_stacks=2),
+    # #  layout.RatioTile(**layout_theme),
+    # #  layout.VerticalTile(**layout_theme),
+    # #  layout.Matrix(**layout_theme),
+    # #  layout.Zoomy(**layout_theme),
+    # #  layout.Floating(**layout_theme)
 ]
 
 ##### DEFAULT WIDGET SETTINGS #####

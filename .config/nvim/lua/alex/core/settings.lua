@@ -53,7 +53,7 @@ opt.softtabstop = 4
 opt.syntax = "ON"
 -- Данная вариация работает как wrap,... но переносит строчки не посимвольно, а по словам
 opt.wrap = true
-opt.linebreak = true
+-- opt.linebreak = true
 g.nolist = true
 
 opt.mouse = "a"

@@ -4,7 +4,7 @@ configuration {
     // font: "Iosevka 16";
     // font: "Ubuntu 17";
     // font: "JetbrainsMono Nerd Font 16";
-    font: "IosevkaTerm_IlovePlus 18";
+    font: "IosevkaFixed_IlovePlus 17";
     show-icons: true;
     /* location: 1; */
     /* yoffset: 35; */

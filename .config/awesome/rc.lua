@@ -459,7 +459,7 @@ globalkeys = gears.table.join(
   awful.key({ super, alt }, "d",
     function()
       awful.util.spawn(
-        "dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'JetbrainsMono Nerd Font-15:normal'")  -- MyBlue
+        "dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'JetBrainsMono Nerd Font-16:normal'")  -- MyBlue
         -- "dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'Ubuntu-17:normal'")  -- MyBlue
         -- "dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'Iosevka-18:normal'")  -- MyBlue
         -- "dmenu_run -i -l 10 -nb '#2d353b' -nf '#d3c6aa' -sb '#475258' -sf '#a7c080' -p 'Run: ' -fn 'Iosevka-18:normal'")

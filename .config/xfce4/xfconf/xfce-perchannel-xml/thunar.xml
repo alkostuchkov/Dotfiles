@@ -25,7 +25,7 @@
   <property name="last-side-pane" type="string" value="ThunarShortcutsPane"/>
   <property name="misc-text-beside-icons" type="bool" value="false"/>
   <property name="last-image-preview-visible" type="bool" value="false"/>
-  <property name="last-splitview-separator-position" type="int" value="426"/>
+  <property name="last-splitview-separator-position" type="int" value="547"/>
   <property name="misc-image-preview-mode" type="string" value="THUNAR_IMAGE_PREVIEW_MODE_STANDALONE"/>
   <property name="misc-highlighting-enabled" type="bool" value="true"/>
   <property name="last-restore-tabs" type="bool" value="true"/>
