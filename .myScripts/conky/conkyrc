@@ -52,7 +52,7 @@ conky.config = {
     default_outline_color = '#dbdcd5', -- Manjaro White
 
     -- own_window_colour black (прозрачность вывода окна conky yes/no)
-    own_window_transparent =true,
+    own_window_transparent = true,
 
     -- Text alignment, other possible values are commented (положение на экране)
     --alignment top_left (верхний левый угол)

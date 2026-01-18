@@ -63,6 +63,7 @@ fi
 # notify-send " " -i $icon_name -h int:value:$display_volume -h string:synchronous:volume
 # # notify-send " " -h int:value:$display_volume -h string:synchronous:volume
 
-notify-send "$display_volume%" -i $icon_name -h int:value:$display_volume -h string:x-canonical-private-synchronous:volume
-# notify-send "$display_volume%" -i $icon_name -h int:value:$display_volume -h string:x-canonical-private-synchronous:anything
+notify-send "$display_volume%" -i $icon_name 
+# notify-send "$display_volume%" -i $icon_name -h int:value:$display_volume -h string:x-canonical-private-synchronous:volume
+# # notify-send "$display_volume%" -i $icon_name -h int:value:$display_volume -h string:x-canonical-private-synchronous:anything
 

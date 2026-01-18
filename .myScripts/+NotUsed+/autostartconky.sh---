@@ -1,0 +1,12 @@
+#!/bin/bash
+killall conky
+
+sleep 15
+##conky
+conky -c ~/conky/conkyrc2 2>&1 > /dev/null &
+sleep 3
+conky -c ~/conky/conkyrc1 2>&1 > /dev/null &
+
+#xscreensaver &
+
+exit

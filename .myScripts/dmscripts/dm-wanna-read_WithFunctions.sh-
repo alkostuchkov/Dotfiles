@@ -1,0 +1,88 @@
+#!/usr/bin/env bash
+
+# Dmenu script for choice a book I wanna read right now.
+
+options=(
+"EmacsLISP:$HOME/Documents/Books/Programming/LISP/EmacsLISP/"
+"LISP:$HOME/Documents/Books/Programming/LISP/CommonLISP/"
+"Haskell:$HOME/Documents/Books/Programming/Haskell/"
+)
+
+# Colors:
+# # Materia Manjaro
+# nf='#09dbc9'
+# nb='#222b2e'
+# sf='#dbdcd5'
+# sb='#009185'
+
+# # Everforest
+# nf='#d3c6aa'
+# nb='#2d353b'
+# sf='#a7c080'
+# sb='#475258'
+# fn='Iosevka-17:normal'
+# fn='Ubuntu-17:normal'
+fn='JetbrainsMonoNerdFont-16:normal'
+
+# MyBlue
+nf='#CFD6DF'
+nb='#32343D'
+sf='#F9F9F9'
+sb='#3D5E87'
+
+# Gruvbox
+# nf='#fea63c'
+# nb='#282828'
+# # sf='#dbdcd5'
+# sb='#d79921'
+# fn='Sarasa Mono SC Nerd-17:normal'
+
+# dmenu colors
+# DMENU="rofi -dmenu -theme-str 'window {width: 80%;}' -p"
+DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
+
+get_dirpath() {
+    # Get dirpath.
+    dirpath=$(printf '%s\n' "${options[@]}" | awk -F: '{print $NF}' | ${DMENU} 'Choose path:')
+    check_input "$dirpath"
+}
+
+get_bookname() {
+    # Get bookname of chosen book.
+    bookname=$(ls "$1" | ${DMENU} 'Choose book:')
+    check_input "$bookname"
+
+    while [[ -d "$dirpath$bookname" ]]; do
+        echo "while In get_bookname"
+        dirpath=$dirpath$bookname/
+        echo "New dirpath !!!!!!!!!!!!!!!!\n$dirpath"
+        get_bookname "$dirpath"
+    done
+}
+
+get_extention() {
+    # Get extention of chosen book.
+    ext=${bookname##*.}
+}
+
+open_book() {
+    # Open chosen book in the sertain app depending of the extention.
+    case $ext in
+        pdf|djvu) zathura "$dirpath$bookname" || qpdfview "$dirpath$bookname";;
+        fb2|epub) foliate "$dirpath$bookname" || FBReader "$dirpath$bookname";;
+        *) notify-send -t 5000 -i dialog-information "Unknown book extention: $ext";;
+    esac
+}
+
+check_input() {
+    # Exit program if chosen "Quit".
+    if [[ "$1" == "" ]]; then
+        notify-send -t 3000 -i dialog-information "Program terminated" && exit 1
+    fi
+}
+
+get_dirpath
+get_bookname "$dirpath"
+get_extention
+open_book
+

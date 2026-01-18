@@ -1,0 +1,59 @@
+#! /bin/sh
+
+### BEGIN INIT INFO
+# Provides:          xflux
+# Required-Start:    $all
+# Required-Stop:     $all
+# Should-Start:      ipsec
+# Should-Stop:       ipsec
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: auto change bright of monitor
+# Description:       auto change bright of monitor
+#                    
+### END INIT INFO
+
+NAME=xflux
+INSTANCE=`pidof xflux`
+
+case "$1" in
+  start)
+   if [ -z $INSTANCE ]
+   then
+      /usr/bin/xflux -l 52.4452778 -g 30.9841667
+      echo "xflux is running with pid $INSTANCE."
+   else
+      echo "xflux is already running with pid $INSTANCE."
+   fi
+	;;
+  stop)
+   if [ -z $INSTANCE ]
+   then
+      killall xflux
+      echo "xflux is stopping."
+   else
+      echo "xflux is already stopping."
+   fi
+	;;
+#  force-reload)
+#	;;
+  restart)
+   if [ -z $INSTANCE ]
+   then
+      killall xflux
+      /usr/bin/xflux -l 52.4452778 -g 30.9841667
+      echo "xflux is restarting with pid $INSTANCE."
+   else
+      /usr/bin/xflux -l 52.4452778 -g 30.9841667
+      echo "xflux is restarting with pid $INSTANCE."
+   fi
+	;;
+  *)
+	N=/etc/init.d/$NAME
+	echo "Usage: $N {start|stop|restart|force-reload}" >&2
+	exit 1
+	;;
+esac
+
+exit 0
+

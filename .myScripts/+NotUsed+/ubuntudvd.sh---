@@ -1,0 +1,12 @@
+#! /bin/sh
+sudo mount -t iso9660 -o loop /home/alex/Distrib/Linux/Литература_and_more/Debianbased/Ubuntu/Репозитории/'DVD-репозитории_для_Ubuntu-10.10_(2010-10-11)'/ubuntu-10.10-2010-10-11-complete-i386-dvd1.iso /mnt/dvd1/
+sudo mount -t iso9660 -o loop /home/alex/Distrib/Linux/Литература_and_more/Debianbased/Ubuntu/Репозитории/'DVD-репозитории_для_Ubuntu-10.10_(2010-10-11)'/ubuntu-10.10-2010-10-11-complete-i386-dvd2.iso /mnt/dvd2/
+sudo mount -t iso9660 -o loop /home/alex/Distrib/Linux/Литература_and_more/Debianbased/Ubuntu/Репозитории/'DVD-репозитории_для_Ubuntu-10.10_(2010-10-11)'/ubuntu-10.10-2010-10-11-complete-i386-dvd3.iso /mnt/dvd3/
+sudo mount -t iso9660 -o loop /home/alex/Distrib/Linux/Литература_and_more/Debianbased/Ubuntu/Репозитории/'DVD-репозитории_для_Ubuntu-10.10_(2010-10-11)'/ubuntu-10.10-2010-10-11-complete-i386-dvd4.iso /mnt/dvd4/
+sudo mount -t iso9660 -o loop /home/alex/Distrib/Linux/Литература_and_more/Debianbased/Ubuntu/Репозитории/'DVD-репозитории_для_Ubuntu-10.10_(2010-10-11)'/ubuntu-10.10-2010-10-11-complete-i386-dvd5.iso /mnt/dvd5/
+sudo mount -t iso9660 -o loop /home/alex/Distrib/Linux/Литература_and_more/Debianbased/Ubuntu/Репозитории/'DVD-репозитории_для_Ubuntu-10.10_(2010-10-11)'/ubuntu-10.10-2010-10-11-complete-i386-dvd6.iso /mnt/dvd6/
+sudo mount -t iso9660 -o loop /home/alex/Distrib/Linux/Литература_and_more/Debianbased/Ubuntu/Репозитории/'DVD-репозитории_для_Ubuntu-10.10_(2010-10-11)'/ubuntu-10.10-2010-10-11-complete-i386-dvd7.iso /mnt/dvd7/
+sudo mount -t iso9660 -o loop /home/alex/Distrib/Linux/Литература_and_more/Debianbased/Ubuntu/Репозитории/'DVD-репозитории_для_Ubuntu-10.10_(2010-10-11)'/ubuntu-10.10-2010-10-11-complete-i386-dvd8.iso /mnt/dvd8/
+sudo mount -t iso9660 -o loop /home/alex/Distrib/Linux/Литература_and_more/Debianbased/Ubuntu/Репозитории/'DVD-репозитории_для_Ubuntu-10.10_(2010-10-11)'/ubuntu-10.10-2010-10-11-complete-i386-dvd9.iso /mnt/dvd9/
+
+

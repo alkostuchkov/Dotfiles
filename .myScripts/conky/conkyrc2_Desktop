@@ -1,0 +1,25 @@
+conky.config = {
+    override_utf8_locale = true, --форсируем UFT-8 локаль (нужно для xft)  
+    use_xft = true, --используем xft  
+    xftalpha = 1, --коэффциент прозрачности  
+    update_interval = 1.0, --частота обновления (на самом деле период)  
+    own_window = true,  
+    own_window_transparent = true,
+    own_window_type = 'override', --'override', --'panel', --'dock', --'desktop' #panel ##override
+    -- own_window_type = 'dock', --'override', --'panel', --'dock', --'desktop' #panel ##override
+    own_window_hints = undecorated,below,sticky,skip_taskbar,skip_pager,
+    double_buffer = true, --двойная буферизация  
+    minimum_width = 1224, --1277, --1204 (leftPanel),  --минимальный размер (ширина экрана 1280 пикселей)
+    minimum_height = 2, 
+    draw_shades = false, --отключаем тень  
+    alignment = 'top_left', --top_middle # расположение сверху слева  
+    gap_x = 3, --70 (leftPanel), --начальные координаты: X  
+    gap_y = 7, --0, --начальные координаты: Y 
+    font = 'BauhausC Medium:size=13',
+    --font = 'Taurus:size=12',
+    draw_shades = true
+}
+
+conky.text = [[
+${color grey}cpu1:${color white} ${cpu cpu1}% ${color red}| ${color grey}cpu2: ${color white} ${cpu cpu2}% ${color red}| ${color grey}Mem: ${color white}${memperc}% ${color red}| ${color grey}IP: ${color white}${execpi 30 ~/.myScripts/conky/get_ip.py}${color red} | ${color grey}Down: ${color white}${totaldown enp1s6}  ${downspeed enp1s6} /s ${color red} | ${color grey}Up: ${color white}${totalup enp1s6}  ${upspeed enp1s6} /s ${color red} | ${color grey}Top: ${color white}${top name 1}${alignr}${color grey}cpu: ${color white}${execi 1 sensors | grep 'CPU Temperature:' | cut -c 26-33} ${color red} | ${color grey}${color white}${time %a,%e.%m %H:%M:%S}
+]]

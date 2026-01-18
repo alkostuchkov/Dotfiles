@@ -5,8 +5,7 @@ declare options=(
 "mount D - $HOME/.myScripts/winD_mount.sh"
 "unmount C - $HOME/.myScripts/winC_unmount.sh"
 "unmount D - $HOME/.myScripts/winD_unmount.sh"
-"Quit")
-
+)
 
 # Colors:
 # # Materia Manjaro
@@ -22,7 +21,8 @@ declare options=(
 # sb='#475258'
 # fn='Iosevka-18:normal'
 # fn='Ubuntu-17:normal'
-fn='JetbrainsMonoNerdFont-16:normal'
+fn='IosevkaTerm_IlovePlus-17:normal'
+# fn='JetbrainsMonoNerdFont-16:normal'
 
 # MyBlue
 nf='#CFD6DF'
@@ -42,7 +42,7 @@ DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
 choice=$(printf '%s\n' "${options[@]}" | ${DMENU} 'Windows:')
 # choice=$(printf '%s\n' "${options[@]}" | dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Windows:')
 
-if [[ "$choice" == "Quit" ]]; then
+if [[ "$choice" == "quit" ]]; then
     echo "Program terminated." && exit 1
 elif [[ "$choice" ]]; then
     drive=$(printf '%s\n' "${choice}" | awk '{print $NF}')

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Dmenu script for choice a book I wanna read right now.
+
+options=(
+"EmacsLISP:$HOME/Documents/Books hello/Programming/LISP book/EmacsLISP name/"
+
+"EmacsLISP:$HOME/Documents/Books/Programming/LISP/EmacsLISP/"
+"LISP:$HOME/Documents/Books/Programming/LISP/CommonLISP/"
+"Haskell:$HOME/Documents/Books/Programming/Haskell/"
+"Quit:Quit")
+
+pwd
+cd "/home/alexander/Documents/Books/Programming/LISP/CommonLISP/Peter Seibel - Practical Common Lisp - 2005"
+ls "/home/alexander/Documents/Books/Programming/LISP/CommonLISP/Peter Seibel - Practical Common Lisp - 2005"
+var="/home/alexander/Documents/Books/Programming/LISP/CommonLISP/Peter Seibel - Practical Common Lisp - 2005"
+echo $var
+cd "$var"
+ls "$var"

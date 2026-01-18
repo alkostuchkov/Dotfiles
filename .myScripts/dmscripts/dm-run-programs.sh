@@ -26,7 +26,8 @@ options=(
 # sb='#475258'
 # fn='Iosevka-18:normal'
 # fn='Ubuntu-17:normal'
-fn='JetbrainsMonoNerdFont-16:normal'
+fn='IosevkaTerm_IlovePlus-17:normal'
+# fn='JetbrainsMonoNerdFont-16:normal'
 
 # MyBlue
 nf='#CFD6DF'

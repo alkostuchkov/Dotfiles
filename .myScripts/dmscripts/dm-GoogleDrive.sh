@@ -9,12 +9,28 @@ declare options=(
 "quit")
 
 # Colors:
-# Materia Manjaro
-nf='#09dbc9'
-nb='#222b2e'
-sf='#dbdcd5'
-sb='#009185'
-fn='Ubuntu-16:normal'
+# # Materia Manjaro
+# nf='#09dbc9'
+# nb='#222b2e'
+# sf='#dbdcd5'
+# sb='#009185'
+
+# # Everforest
+# nf='#d3c6aa'
+# nb='#2d353b'
+# sf='#a7c080'
+# sb='#475258'
+# fn='Iosevka-17:normal'
+# fn='Ubuntu-17:normal'
+fn='IosevkaTerm_IlovePlus-17:normal'
+# fn='JetbrainsMonoNerdFont-16:normal'
+
+# MyBlue
+nf='#CFD6DF'
+nb='#32343D'
+sf='#F9F9F9'
+sb='#3D5E87'
+
 # Gruvbox
 # nf='#fea63c'
 # nb='#282828'
