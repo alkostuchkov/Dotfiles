@@ -33,10 +33,10 @@ return {
         -- "clangd",
         "lua_ls",
         "pyright",
+        "hls", -- Haskell
         -- "gopls",
         -- "ast_grep", -- Dart (Flutter)
         -- "rust_analyzer",
-        "hls", -- Haskell
       },
     })
 
