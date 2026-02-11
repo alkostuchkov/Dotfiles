@@ -107,7 +107,7 @@ pdf_djvu = [
 	{ run = 'qpdfview "$1"', orphan = true, desc = "qpdfview", for = "linux" },
 ]
 ebook = [
-  { run = 'foliate "$1"',  orphan = true, desc = "Foliate",  for = "linux" },
+    { run = 'foliate "$1"',  orphan = true, desc = "Foliate",  for = "linux" },
 	{ run = 'FBReader "$1"', orphan = true, desc = "FBReader", for = "linux" },
 	{ run = 'bookworm "$1"', orphan = true, desc = "Bookworm", for = "linux" },
 ]
