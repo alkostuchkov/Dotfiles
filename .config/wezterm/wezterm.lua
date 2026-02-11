@@ -99,6 +99,7 @@ config.colors = {
 -- )
 -- config.font = wezterm.font("JetBrainsMono Nerd Font")
 -- config.font = wezterm.font("IosevkaTerm_JBMono")
+-- config.font = wezterm.font("IosevkaTerm_IlovePlus")
 config.font = wezterm.font("IosevkaTerm_IloveModern")
 -- config.font = wezterm.font("JetBrainsMono NF Light")
 -- config.font = wezterm.font("DejaVuSansMono Nerd Font Mono")
@@ -165,7 +166,8 @@ config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 1.0
 -- config.window_background_image = '/home/alexander/Pictures/Wallpapers/NewWallpapers/0313.jpg'
 -- config.text_background_opacity = 0.3
-config.default_cursor_style = "SteadyBlock"
+config.default_cursor_style = "SteadyBar"
+-- config.default_cursor_style = "SteadyBlock"
 
 -- Keybindings
 local act = wezterm.action

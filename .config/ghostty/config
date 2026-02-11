@@ -86,7 +86,8 @@ font-feature = -dlig
 font-size = 17.0
 
 shell-integration-features = no-cursor
-cursor-style = block
+cursor-style = bar
+# cursor-style = block
 cursor-style-blink = true
 
 cursor-color = #abb2bf
@@ -94,8 +95,9 @@ cursor-text = #282c34
 selection-foreground = #2d353b
 selection-background = #a8adba
 
-# link-previews = false
-# mouse-hide-while-typing = true
+# link-previews = false  # from v1.2.0
+link-url = false
+mouse-hide-while-typing = true
 
 # window-padding-x = 2
 

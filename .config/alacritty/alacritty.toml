@@ -6,7 +6,8 @@ import = ["~/.config/alacritty/colors/Base16-Flat-LikeCobalt2+.toml"]
 draw_bold_text_with_bright_colors = false
 
 [cursor]
-style = "Block"
+style = "Beam"
+# style = "Block"
 blink_interval = 750
 # blink_timeout = 0
 # blinking = "Always"
@@ -16,7 +17,7 @@ unfocused_hollow = true
 TERM = "xterm-256color"
 
 [font]
-size = 17.0  # JetBrainsMono Nerd Font
+size = 17.5
 
 [font.bold]
 # family = "mplus Nerd Font"
