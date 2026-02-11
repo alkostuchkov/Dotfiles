@@ -155,7 +155,8 @@ keys = [
     Key([mod, alt], "p", lazy.spawn(f"{HOME}/Programs/PyCharm-Community/bin/pycharm"), desc="Launch PyCharm"),
     Key([mod, alt], "c", lazy.spawn("code"), desc="Launch VSCodium"),
     Key([mod, alt], "g", lazy.spawn("goldendict-ng"), desc="Launch GoldenDict"),
-    Key([mod, alt], "m", lazy.spawn(f"{my_term} -e vim"), desc="Launch Vim"),
+    # Key([mod, alt], "m", lazy.spawn(f"{my_term} -e vim"), desc="Launch Vim"),
+    Key([mod, alt], "m", lazy.spawn("ghostty -e vim"), desc="Launch Vim"),
     Key([mod, "control"], "m", lazy.spawn("gvim"), desc="Launch GVim"),
     Key([mod, alt], "s", lazy.spawn(f"{HOME}/Programs/SublimeText/sublime_text"), desc="Run Sublime Text"),
     Key([mod, alt], "b", lazy.spawn("brave"), desc="Run Brave"),
@@ -317,7 +318,8 @@ keys = [
     Key(["control", alt], "k", lazy.layout.section_up(), desc="Move down a section in TreeTab"),
 
 # <CONTROL> + <SHIFT> + KEYS
-    Key(["control", "shift"], "Escape", lazy.spawn(f"{my_term} -e htop"), desc="Run htop"),
+    Key(["control", "shift"], "Escape", lazy.spawn("ghostty -e btop"), desc="Run btop"),
+    # Key(["control", "shift"], "Escape", lazy.spawn(f"{my_term} -e htop"), desc="Run htop"),
 
 # MULTIMEDIA KEYS
 # <Fn> + <F1-F12>

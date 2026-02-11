@@ -110,7 +110,7 @@ local shft = "Shift"
 awful.layout.layouts = {
   awful.layout.suit.tile,
   awful.layout.suit.max,
-  awful.layout.suit.magnifier,
+  -- awful.layout.suit.magnifier,
   -- awful.layout.suit.floating,
   -- awful.layout.suit.tile.bottom,
   -- awful.layout.suit.max.fullscreen,
@@ -503,7 +503,8 @@ globalkeys = gears.table.join(
     { description = "VSCode", group = "applications" }),
   awful.key({ super, alt }, "g", function() awful.util.spawn("goldendict-ng") end,
     { description = "Goldendict", group = "applications" }),
-  awful.key({ super, alt }, "m", function() awful.util.spawn(TERMINAL .. " -e vim") end,
+  -- awful.key({ super, alt }, "m", function() awful.util.spawn(TERMINAL .. " -e vim") end,
+  awful.key({ super, alt }, "m", function() awful.util.spawn("ghostty -e vim") end,
     { description = "Vim", group = "applications" }),
   awful.key({ super, ctrl }, "m", function() awful.util.spawn("gvim") end,
     { description = "GVim", group = "applications" }),
@@ -521,8 +522,9 @@ globalkeys = gears.table.join(
     { description = "Onemore Terminal", group = "applications" }),
   awful.key({ super, alt }, "h", function() awful.util.spawn("ghostty") end,
     { description = "Ghostty Terminal", group = "applications" }),
-  awful.key({ ctrl, shft }, "Escape", function() awful.util.spawn(TERMINAL .. " -e " .. SHELL .. " -c htop") end,
-    { description = "htop", group = "applications" }),
+  -- awful.key({ ctrl, shft }, "Escape", function() awful.util.spawn(TERMINAL .. " -e " .. SHELL .. " -c htop") end,
+  awful.key({ ctrl, shft }, "Escape", function() awful.util.spawn("ghostty -e " .. SHELL .. " -c btop") end,
+    { description = "btop", group = "applications" }),
 
   -- My applications as Root <SUPER + SHIFT + ALT> + KEY
   awful.key({ super, shft, alt }, "v", function() awful.util.spawn(HOME .. "/.myScripts/runVifmAsRoot.sh") end,
