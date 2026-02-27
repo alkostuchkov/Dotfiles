@@ -117,7 +117,51 @@ return {
           },
         })
       end,
+      ["pyright"] = function()
+        -- configure pyright server (with special settings)
+        vim.lsp.config("pyright", {
+          capabilities = capabilities,
+          settings = {
+            python = {
+              analysis = {
+                useLibraryCodeForTypes = true,
+                venvPath = ".",
+                venv = ".venv",
+                -- diagnosticMode = "off", -- Disable diagnostics if using Ruff
+                -- typeCheckingMode = "off",
+              },
+            },
+          },
+        })
+      end,
     })
+    -- Configure Pyright
+    -- vim.lsp.config()
+    -- lspconfig.pyright.setup({
+    --   capabilities = capabilities,
+    --   settings = {
+    --     python = {
+    --       analysis = {
+    --         useLibraryCodeForTypes = true,
+    --         -- diagnosticMode = "off", -- Disable diagnostics if using Ruff
+    --         -- typeCheckingMode = "off",
+    --       },
+    --     },
+    --   },
+    -- })
+
+    -- I have no Ruff
+    -- -- Configure Ruff (optional, for fast linting)
+    -- lspconfig.ruff.setup({
+    --   capabilities = capabilities,
+    --   init_options = {
+    --     settings = {
+    --       args = { "--ignore", "F821", "--ignore", "E402" },
+    --     },
+    --   },
+    -- })
+
+
 
     -- -- for Nvim 0.10 (legacy, not supported) 
     -- -- mason_lspconfig.setup_handlers({
