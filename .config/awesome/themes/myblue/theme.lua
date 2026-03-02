@@ -14,8 +14,9 @@ local theme = {}
 theme.dir = home.."/.config/awesome/themes"
 
 -- theme.font = "Sarasa Mono SC Nerd 12"
+-- theme.font = "mplus Nerd Font 12"
 theme.font = "Ubuntu 12"
--- theme.font = "JetbrainsMono Nerd Font 12"
+-- theme.font = "JetBrainsMono Nerd Font 12"
 -- theme.font = "Iosevka 12"
 theme.taglist_font = "Ubuntu Nerd Font 12"
 
