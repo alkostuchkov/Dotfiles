@@ -140,10 +140,10 @@ key = "Down"
 mode = "~Alt"
 mods = "Control|Shift"
 
-[[keyboard.bindings]]
-action = "SpawnNewInstance"
-key = "Return"
-mods = "Control|Shift"
+# [[keyboard.bindings]]
+# action = "SpawnNewInstance"
+# key = "Return"
+# mods = "Control|Shift"
 
 [scrolling]
 history = 5000

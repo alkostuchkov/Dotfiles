@@ -123,7 +123,7 @@ rules = [
 	{ name = "bulk-rename.txt", use = [ "bulk-rename" ] },
 	{ name = "*/",              use = [ "reveal", "open" ] },
 	# { name = "*/",              use = [ "reveal", "edit", "open" ] },
-    { name = "{*.lua,*.txt,*.sh,.*.el,*.lisp,*.json,*.vim,*.kv}",   use = [ "edit", "reveal" ] },
+    { name = "{*.lua,*.txt,*.sh,.*.el,*.lisp,*.json,*.vim,*.kv,*.py}",   use = [ "edit", "reveal" ] },
     { name = "{*.epub,*.fb2}",  use = [ "ebook", "open", "reveal" ] },
     { name = "{*.pdf,*.djvu}",  use = [ "pdf_djvu", "open", "reveal" ] },
     { name = "*.torrent",       use = [ "torrent", "open", "reveal" ] },
