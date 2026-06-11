@@ -1,0 +1,30 @@
+-- my Cobalt2 colorscheme
+return {
+  foreground = "#e0e0e0",
+  background = "#213049",
+  cursor_bg = "#ecf0f1",
+  cursor_border = "#ecf0f1",
+  cursor_fg = "#213049",
+  selection_bg = "#e0e0e0",
+  selection_fg = "#213049",
+  brights = {
+    "#95a5a6",
+    "#ff628c",
+    "#2ecc71",
+    "#ffc600",
+    "#3498db",
+    "#9b59b6",
+    "#80ffbb",
+    "#ecf0f1",
+  },
+  ansi = {
+    "#213049",
+    "#ff628c",
+    "#2ecc71",
+    "#ffc600",
+    "#3498db",
+    "#9b59b6",
+    "#80ffbb",
+    "#e0e0e0",
+  },
+}
