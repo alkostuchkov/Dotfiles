@@ -32,7 +32,7 @@ return {
         -- "cssls",
         -- "clangd",
         "lua_ls",
-        "ruff",
+        -- "ruff",
         "pyright",
         -- "hls", -- Haskell
         -- "gopls",
@@ -48,7 +48,7 @@ return {
         -- -- "autopep8", -- python formatter
         -- -- "black", -- python formatter
         -- -- "isort", -- python formatter
-        "ruff", -- python linter, formatter,
+        -- "ruff", -- python linter, formatter,
         -- "pylint", -- python linter
         -- "flake8", -- python linter
         -- "mypy",   -- python linter

@@ -24,7 +24,7 @@ from modules import (
     memory,
     all_windows_count,
     window_count,
-    open_weather,
+    # open_weather,
     # syncthing,
     # show_updates,
 )
@@ -541,36 +541,36 @@ def init_widgets_list():
             #  linewidth=1,
             #  padding=10
         #  ),
-        widget.OpenWeather(
-            foreground=colors.get("fg_weather", "#ffffff"),
-            fontsize=20,
-            # app_key="69266794b403496387c163813240311",
-            # city_id=627907,
-            # location="Homyel', BY",
-            coordinates={"latitude": "52.434", "longitude": "30.975"},
-            format="{icon}",
-            language="be",
-            update_interval=1800,
-            mouse_callbacks={
-                "Button3": lambda: qtile.spawn("xdg-open https://openweathermap.org/city/627907"),
-            }
-        ),
-        open_weather.OpenWeather(
-            foreground=colors.get("fg_weather", "#ffffff"),
-            # app_key="69266794b403496387c163813240311",
-            coordinates={"latitude": "52.434", "longitude": "30.975"},
-            format="Гомель: {temp}°{units_temperature}\n{weather_details}",
-            # format="{location_city}: {temp}°{units_temperature}\n{weather_details}",
-            language="be",
-            update_interval=1800,
-            mouse_callbacks={
-                "Button3": lambda: qtile.spawn("xdg-open https://openweathermap.org/city/627907"),
-            }
-        ),
-        widget.Sep(
-            linewidth=1,
-            padding=10
-        ),
+        # widget.OpenWeather(
+        #     foreground=colors.get("fg_weather", "#ffffff"),
+        #     fontsize=20,
+        #     # app_key="69266794b403496387c163813240311",
+        #     # city_id=627907,
+        #     # location="Homyel', BY",
+        #     coordinates={"latitude": "52.434", "longitude": "30.975"},
+        #     format="{icon}",
+        #     language="be",
+        #     update_interval=1800,
+        #     mouse_callbacks={
+        #         "Button3": lambda: qtile.spawn("xdg-open https://openweathermap.org/city/627907"),
+        #     }
+        # ),
+        # open_weather.OpenWeather(
+        #     foreground=colors.get("fg_weather", "#ffffff"),
+        #     # app_key="69266794b403496387c163813240311",
+        #     coordinates={"latitude": "52.434", "longitude": "30.975"},
+        #     format="Гомель: {temp}°{units_temperature}\n{weather_details}",
+        #     # format="{location_city}: {temp}°{units_temperature}\n{weather_details}",
+        #     language="be",
+        #     update_interval=1800,
+        #     mouse_callbacks={
+        #         "Button3": lambda: qtile.spawn("xdg-open https://openweathermap.org/city/627907"),
+        #     }
+        # ),
+        # widget.Sep(
+        #     linewidth=1,
+        #     padding=10
+        # ),
         widget.TextBox(
             text="",
             #  text=" ",
