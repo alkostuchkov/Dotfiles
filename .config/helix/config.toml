@@ -1,28 +1,25 @@
-theme = "everforest_dark"
+# theme = "base16_default"
+# theme = "peachpuff"
+# theme = "tokyonight_moon"
+# theme = "ayu_mirage"
+# theme = "catppuccin_mocha"
+theme = "adwaita-dark"
 
 [editor]
-# auto-save = false
+scrolloff = 999
+true-color = true
 line-number = "relative"
+mouse = false
+rulers = [80]
 cursorline = true
 cursorcolumn = true
-auto-completion = true
-auto-info = true
-completion-trigger-len = 2
-color-modes = true
-true-color = true
-undercurl = true
-idle-timeout = 400
-bufferline = "multiple" # always | multiple | never
-text-width = 80
-rulers = [80]
-default-line-ending = "lf"
-insert-final-newline = true
-popup-border = "all"
-mouse = true
-middle-click-paste = true
+bufferline = "multiple"
+continue-comments = false   
 
-# [editor.gutters]
-# layout = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
 
 [editor.statusline]
 left = [
@@ -32,32 +29,23 @@ left = [
   "read-only-indicator",
   "file-name",
   "file-modification-indicator",
-  "file-type",
 ]
 center = ["diagnostics", "workspace-diagnostics"]
 right = [
-  "register",
+  # "diagnostics",
+  "selections",
   "file-encoding",
   "file-line-ending",
-  "position",
+  "file-type",
   "position-percentage",
+  "position"
 ]
-separator = "|"
-# mode.normal = "NORMAL"
-# mode.insert = "INSERT"
-# mode.select = "SELECT"
+separator = "│"
+diagnostics = ["warning", "error"]
+workspace-diagnostics = ["warning", "error"]
 
-[editor.soft-wrap]
-enable = true
-# max-wrap = 20 
-# max-indent-retain = 40
-# wrap-indicator = "↪ "
-# wrap-at-text-width = true # zen-mode center View.inner_area
-
-[editor.cursor-shape]
-insert = "bar"
-normal = "block"
-select = "underline"
+[editor.file-picker]
+hidden = false
 
 [editor.whitespace.render]
 # space = "all"
@@ -67,50 +55,182 @@ tab = "all"
 [editor.indent-guides]
 render = true
 character = "╎" # Some characters that work well: "▏", "╎", "┆", "┊"
-skip-levels = 0
+skip-levels = 1
+# skip-levels = 0
 
-[editor.lsp]
-display-messages = true
-display-inlay-hints = true
+[editor.soft-wrap]
+enable = true
+
+# [editor.lsp]
+# display-messages = true
+# display-inlay-hints = true
+
+[keys.select]
+"{" = "goto_prev_paragraph"
+"}" = "goto_next_paragraph"
 
 [keys.normal]
-"A-," = "goto_previous_buffer"
-"A-." = "goto_next_buffer"
-"A-w" = ":buffer-close"
-"A-/" = "repeat_last_motion"# 0 = "home"
-"A-x" = "extend_to_line_bounds"
-"X" = "extend_line_above"
-# "X" = ["extend_line_up", "extend_to_line_bounds"]
+C-p = ["move_line_up", "scroll_up"]
+C-n = ["move_line_down", "scroll_down"]
+esc = ["collapse_selection", "keep_primary_selection"]
+"{" = "goto_prev_paragraph"
+"}" = "goto_next_paragraph"
+# "A-," = "goto_previous_buffer"
+# "A-." = "goto_next_buffer"
+# "A-w" = ":buffer-close"
+# "A-/" = "repeat_last_motion"# 0 = "home"
+# "A-x" = "extend_to_line_bounds"
+# "X" = "extend_line_above"
+# # "X" = ["extend_line_up", "extend_to_line_bounds"]
 
-# "C-q" = ":q!"
-# "esc" = { "esc" = [":quit!",] }
-# "esc" = { "esc" = ":quit!" }
-"C-s" = ":w"
-"C-r" = { c = ":config-reload", r = ":reload" }
-"C-q" = { q = ":quit!", w = ":write-quit!", a = ":quit-all!" }
-"C-a" = "goto_line_start"
-"C-e" = "goto_line_end"
-"C-k" = "kill_to_line_end"
-"C-u" = "kill_to_line_start"
-"C-/" = "toggle_comments"
-"C-c" = "yank_to_clipboard"
-"C-v" = "paste_clipboard_after"
+# # "C-q" = ":q!"
+# # "esc" = { "esc" = [":quit!",] }
+# # "esc" = { "esc" = ":quit!" }
+# "C-s" = ":w"
+# "C-r" = { c = ":config-reload", r = ":reload" }
+# "C-q" = { q = ":quit!", w = ":write-quit!", a = ":quit-all!" }
+# "C-a" = "goto_line_start"
+# "C-e" = "goto_line_end"
+# "C-k" = "kill_to_line_end"
+# "C-u" = "kill_to_line_start"
+# "C-/" = "toggle_comments"
+# "C-c" = "yank_to_clipboard"
+# "C-v" = "paste_clipboard_after"
 
-"A-ret" = ["normal_mode", "open_below", "normal_mode"]
-"A-S-ret" = ["normal_mode", "open_above", "normal_mode"]
+# "A-ret" = ["normal_mode", "open_below", "normal_mode"]
+# "A-S-ret" = ["normal_mode", "open_above", "normal_mode"]
 
-# [keys.select]
-# A-x = "extend_to_line_bounds"
-# X = ["extend_line_up", "extend_to_line_bounds"]
+# # [keys.select]
+# # A-x = "extend_to_line_bounds"
+# # X = ["extend_line_up", "extend_to_line_bounds"]
 
 [keys.insert]
 j = { j = "normal_mode" }
-"C-n" = "normal_mode"
-"C-a" = ["normal_mode", "goto_line_start", "insert_mode"]
-"C-e" = ["normal_mode", "goto_line_end", "append_mode"]
-"A-ret" = ["normal_mode", "open_below"]
-"A-S-ret" = ["normal_mode", "open_above"]
+# "C-n" = "normal_mode"
+# "C-a" = ["normal_mode", "goto_line_start", "insert_mode"]
+# "C-e" = ["normal_mode", "goto_line_end", "append_mode"]
+# "A-ret" = ["normal_mode", "open_below"]
+# "A-S-ret" = ["normal_mode", "open_above"]
 
-[keys.select]
-"C-a" = "goto_line_start"
-"C-e" = "goto_line_end"
+# [keys.select]
+# "C-a" = "goto_line_start"
+# "C-e" = "goto_line_end"
+
+
+# theme = "everforest_dark"
+
+# [editor]
+# # auto-save = false
+# line-number = "relative"
+# cursorline = true
+# cursorcolumn = true
+# auto-completion = true
+# auto-info = true
+# completion-trigger-len = 2
+# color-modes = true
+# true-color = true
+# undercurl = true
+# idle-timeout = 400
+# bufferline = "multiple" # always | multiple | never
+# text-width = 80
+# rulers = [80]
+# default-line-ending = "lf"
+# insert-final-newline = true
+# popup-border = "all"
+# mouse = true
+# middle-click-paste = true
+
+# # [editor.gutters]
+# # layout = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+
+# [editor.statusline]
+# left = [
+#   "mode",
+#   "spinner",
+#   "version-control",
+#   "read-only-indicator",
+#   "file-name",
+#   "file-modification-indicator",
+#   "file-type",
+# ]
+# center = ["diagnostics", "workspace-diagnostics"]
+# right = [
+#   "register",
+#   "file-encoding",
+#   "file-line-ending",
+#   "position",
+#   "position-percentage",
+# ]
+# separator = "|"
+# # mode.normal = "NORMAL"
+# # mode.insert = "INSERT"
+# # mode.select = "SELECT"
+
+# [editor.soft-wrap]
+# enable = true
+# # max-wrap = 20 
+# # max-indent-retain = 40
+# # wrap-indicator = "↪ "
+# # wrap-at-text-width = true # zen-mode center View.inner_area
+
+# [editor.cursor-shape]
+# insert = "bar"
+# normal = "block"
+# select = "underline"
+
+# [editor.whitespace.render]
+# # space = "all"
+# tab = "all"
+# # newline = "all"
+
+# [editor.indent-guides]
+# render = true
+# character = "╎" # Some characters that work well: "▏", "╎", "┆", "┊"
+# skip-levels = 0
+
+# [editor.lsp]
+# display-messages = true
+# display-inlay-hints = true
+
+# [keys.normal]
+# "A-," = "goto_previous_buffer"
+# "A-." = "goto_next_buffer"
+# "A-w" = ":buffer-close"
+# "A-/" = "repeat_last_motion"# 0 = "home"
+# "A-x" = "extend_to_line_bounds"
+# "X" = "extend_line_above"
+# # "X" = ["extend_line_up", "extend_to_line_bounds"]
+
+# # "C-q" = ":q!"
+# # "esc" = { "esc" = [":quit!",] }
+# # "esc" = { "esc" = ":quit!" }
+# "C-s" = ":w"
+# "C-r" = { c = ":config-reload", r = ":reload" }
+# "C-q" = { q = ":quit!", w = ":write-quit!", a = ":quit-all!" }
+# "C-a" = "goto_line_start"
+# "C-e" = "goto_line_end"
+# "C-k" = "kill_to_line_end"
+# "C-u" = "kill_to_line_start"
+# "C-/" = "toggle_comments"
+# "C-c" = "yank_to_clipboard"
+# "C-v" = "paste_clipboard_after"
+
+# "A-ret" = ["normal_mode", "open_below", "normal_mode"]
+# "A-S-ret" = ["normal_mode", "open_above", "normal_mode"]
+
+# # [keys.select]
+# # A-x = "extend_to_line_bounds"
+# # X = ["extend_line_up", "extend_to_line_bounds"]
+
+# [keys.insert]
+# j = { j = "normal_mode" }
+# "C-n" = "normal_mode"
+# "C-a" = ["normal_mode", "goto_line_start", "insert_mode"]
+# "C-e" = ["normal_mode", "goto_line_end", "append_mode"]
+# "A-ret" = ["normal_mode", "open_below"]
+# "A-S-ret" = ["normal_mode", "open_above"]
+
+# [keys.select]
+# "C-a" = "goto_line_start"
+# "C-e" = "goto_line_end"
+

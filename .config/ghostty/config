@@ -24,30 +24,21 @@
 # background = #123abc
 
 gtk-titlebar = false
-# theme = MemoryColor
-theme = Cobalt2
-# theme = OneHalfDark
-# theme = Tomorrow Night
-# theme = Garuda
-# theme = Tomorrow Night Burns
-# theme = Tomorrow Night Eighties
-# theme = tokyonight
-# theme = tokyonight-storm
-# theme = tokyonight_moon
-# theme = tokyonight_night
 
-# theme = BlulocoDark
-# theme = Everblush
-# theme = ForestBlue
+theme = Cobalt2_default
 
 # font-family = JetBrainsMono Nerd Font
 # font-family-bold = JetBrainsMono Nerd Font
 # font-family-italic = JetBrainsMono Nerd Font
 # font-family-bold-italic = JetBrainsMono Nerd Font
-font-family = IosevkaTerm_IlovePlus
-font-family-bold = IosevkaTerm_IlovePlus
-font-family-italic = IosevkaTerm_IlovePlus
-font-family-bold-italic = IosevkaTerm_IlovePlus
+font-family = IosevkaTerm_IloveModern
+font-family-bold = IosevkaTerm_IloveModern
+font-family-italic = IosevkaTerm_IloveModern
+font-family-bold-italic = IosevkaTerm_IloveModern
+# font-family = IosevkaTerm_IlovePlus
+# font-family-bold = IosevkaTerm_IlovePlus
+# font-family-italic = IosevkaTerm_IlovePlus
+# font-family-bold-italic = IosevkaTerm_IlovePlus
 
 # font-family = mplus Nerd Font
 # font-family-bold = mplus Nerd Font
@@ -83,7 +74,7 @@ font-feature = -dlig
 # font-style-italic = Italic
 # font-style-bold-italic = Bold-Italic
 
-font-size = 17.0
+font-size = 17.5
 
 shell-integration-features = no-cursor
 cursor-style = bar

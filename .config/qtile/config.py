@@ -25,8 +25,8 @@ from modules import (
     all_windows_count,
     window_count,
     open_weather,
-    syncthing,
-    show_updates,
+    # syncthing,
+    # show_updates,
 )
 
 
@@ -146,10 +146,9 @@ keys = [
     Key([mod, alt], "e", lazy.spawn("dolphin"), desc="Launch File Manager"),
     # Key([mod, alt], "n", lazy.spawn("thunar"), desc="Launch File Manager"),
     Key([mod, alt], "n", lazy.spawn(f"{HOME}/.myScripts/runThunar.sh"), desc="Launch File Manager"),
-    Key([mod, alt], "i", lazy.spawn("/usr/bin/octopi"), desc="Launch Octopi"),
     Key([mod, alt], "a", lazy.spawn(f"{my_term} -e {SHELL} -c ranger"), desc="Launch ranger"),
-    Key([mod, alt], "y", lazy.spawn(f"ghostty -e \"{SHELL} -c 'yazi --cwd-file ~/.config/yazi/cwd (cat ~/.config/yazi/cwd)'\""), desc="Launch yazi"),  # for ghostty
-    # Key([mod, alt], "y", lazy.spawn(f"{my_term} -e {SHELL} -c 'yazi --cwd-file ~/.config/yazi/cwd (cat ~/.config/yazi/cwd)'"), desc="Launch yazi"),  # for wezterm
+    Key([mod, alt], "y", lazy.spawn(f"ghostty -e \"{SHELL} -c 'yazi --cwd-file ~/.config/yazi/cwd (cat ~/.config/yazi/cwd)'\""), desc="Launch yazi in Ghostty"),  # for ghostty
+    Key([mod, alt], "i", lazy.spawn(f"{my_term} -e {SHELL} -c 'yazi --cwd-file ~/.config/yazi/cwd (cat ~/.config/yazi/cwd)'"), desc="Launch yazi in WezTerm"),  # for wezterm
     Key([mod, alt], "t", lazy.spawn(f"{HOME}/Programs/Telegram/Telegram -workdir {HOME}/.local/share/TelegramDesktop/ -- %u"), desc="Launch Telegram"),
     Key([mod, alt], "v", lazy.spawn(f"{my_term} -e {HOME}/.config/vifm/scripts/vifmrun"), desc="Launch vifm"),
     Key([mod, alt], "p", lazy.spawn(f"{HOME}/Programs/PyCharm-Community/bin/pycharm"), desc="Launch PyCharm"),

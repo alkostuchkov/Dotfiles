@@ -32,12 +32,18 @@ ueberzug_offset = [ 0, 0, 0, 0 ]
 [opener]
 edit = [
     { run = 'ghostty -e vim "$@"', orphan = true, desc = "Neovim (Ghostty)", for = "unix" },
+    { run = 'alacritty -e vim "$@"', orphan = true, desc = "Neovim (Alacritty)", for = "unix" },
+    { run = 'wezterm start --always-new-process -e vim "$@"', orphan = true, desc = "Neovim (WezTerm)", for = "unix" },
+    { run = 'kitty -e vim "$@"', orphan = true, desc = "Neovim (Kitty)", for = "unix" },
+
+    { run = 'ghostty -e hx "$@"', orphan = true, desc = "Helix (Ghostty)", for = "unix" },
+    { run = 'alacritty -e hx "$@"', orphan = true, desc = "Helix (Alacritty)", for = "unix" },
+    { run = 'wezterm start --always-new-process -e hx "$@"', orphan = true, desc = "Helix (WezTerm)", for = "unix" },
+    { run = 'kitty -e hx "$@"', orphan = true, desc = "Helix (Kitty)", for = "unix" },
+
     { run = 'emacs "$@"', orphan = true, desc = "Emacsclient", for = "unix" },
     { run = 'code $@',    orphan = true, desc = "VSCode",           for = "unix" },
     { run = '~/.config/emacs/bin/doom emacs "$@"', orphan = true, desc = "Doom Emacs", for = "unix" },
-    { run = 'wezterm start --always-new-process -e vim "$@"', orphan = true, desc = "Neovim (WezTerm)", for = "unix" },
-	{ run = 'alacritty -e vim "$@"', orphan = true, desc = "Neovim (Alacritty)", for = "unix" },
-	{ run = 'kitty -e vim "$@"', orphan = true, desc = "Neovim (Kitty)", for = "unix" },
 	{ run = 'ghostty -e fresh "$@"', orphan = true, desc = "fresh", for = "unix" },
 	{ run = 'alacritty -e micro "$@"', orphan = true, desc = "micro", for = "unix" },
 	{ run = 'code %*',    orphan = true, desc = "VSCode",           for = "windows" },
@@ -120,21 +126,21 @@ bulk-rename = [
 # ]
 rules = [
 	# { name = "*/",              use = [ "open", "edit", "reveal" ] },
-	{ name = "bulk-rename.txt", use = [ "bulk-rename" ] },
+  { name = "bulk-rename.txt", use = [ "bulk-rename" ] },
 	{ name = "*/",              use = [ "reveal", "open" ] },
 	# { name = "*/",              use = [ "reveal", "edit", "open" ] },
-    { name = "{*.lua,*.txt,*.sh,.*.el,*.lisp,*.json,*.vim,*.kv,*.py}",   use = [ "edit", "reveal" ] },
-    { name = "{*.epub,*.fb2}",  use = [ "ebook", "open", "reveal" ] },
-    { name = "{*.pdf,*.djvu}",  use = [ "pdf_djvu", "open", "reveal" ] },
-    { name = "*.torrent",       use = [ "torrent", "open", "reveal" ] },
+  { name = "{*.lua,*.txt,*.sh,.*.el,*.lisp,*.json,*.vim,*.py,*.kv,*sql}", use = [ "edit", "reveal" ] },
+  { name = "{*.epub,*.fb2}",  use = [ "ebook", "open", "reveal" ] },
+  { name = "{*.pdf,*.djvu}",  use = [ "pdf_djvu", "open", "reveal" ] },
+  { name = "*.torrent",       use = [ "torrent", "open", "reveal" ] },
 
-    { mime = "font/*",                      use = [ "font", "open", "reveal" ] },
-    { mime = "application/vnd.ms-opentype", use = [ "font", "open", "reveal" ] },
+  { mime = "font/*",                      use = [ "font", "open", "reveal" ] },
+  { mime = "application/vnd.ms-opentype", use = [ "font", "open", "reveal" ] },
 	{ mime = "text/*",                      use = [ "edit", "reveal" ] },
 	{ mime = "image/*",                     use = [ "image", "open", "reveal" ] },
-    # { mime = "{audio,video}/*", use = [ "open", "video", "reveal" ] },
-    { mime = "video/*",                     use = [ "video", "open", "reveal" ] },
-    { mime = "audio/*",                     use = [ "audio", "open", "reveal" ] },
+  # { mime = "{audio,video}/*", use = [ "open", "video", "reveal" ] },
+  { mime = "video/*",                     use = [ "video", "open", "reveal" ] },
+  { mime = "audio/*",                     use = [ "audio", "open", "reveal" ] },
 	{ mime = "inode/x-empty",               use = [ "edit", "reveal" ] },
 
 	# { mime = "application/{,g}zip", use = [ "archive", "extract", "reveal" ] },

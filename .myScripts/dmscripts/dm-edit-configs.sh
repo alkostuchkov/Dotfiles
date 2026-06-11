@@ -41,6 +41,7 @@ options=(
 "gtkrc-2.0 - $HOME/.gtkrc-2.0"
 "gtkrc-3.0 - $HOME/.config/gtk-3.0/settings.ini"
 "helix - $HOME/.config/helix/config.toml"
+"helix - $HOME/.config/helix/languages.toml"
 "homepage - $HOME/.surf/homepage.html"
 "i3 - $HOME/.config/i3/config"
 "i3blocks - $HOME/.config/i3blocks/config"
@@ -93,6 +94,7 @@ options=(
 "yazi keymap - $HOME/.config/yazi/keymap.toml"
 "yazi theme - $HOME/.config/yazi/theme.toml"
 "zathura - $HOME/.config/zathura/zathurarc"
+"zellij - $HOME/.config/zellij/config.kdl"
 "zsh - $HOME/.zshrc"
 "Quit")
 
@@ -132,8 +134,10 @@ DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
 # TERMINAL="wezterm"
 TERMINAL="ghostty"
 terminal=${TERMINAL-"xterm"}
-editor=${EDITOR-"vi"}
-# editor="emacsclient"
+# EDITOR="emacsclient"
+# EDITOR="nvim"
+EDITOR="hx"
+editor=${EDITOR-"vim"}
 
 # names=$(printf '%s\n' "${options[@]}" | awk '{print $1}')
 # choice=$(printf '%s\n' "${names}" | dmenu -l 10  -nf '#09dbc9' -nb '#222b2e' -sf '#dbdcd5' -sb '#009185' -fn 'Ubuntu-16:normal' -p 'Edit config file:')

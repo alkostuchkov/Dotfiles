@@ -8,7 +8,8 @@ return {
   },
   config = function()
     -- import lspconfig plugin
-    local lspconfig = require("lspconfig")
+    local lspconfig = vim.lsp.config["lspconfig"]
+    -- local lspconfig = require("lspconfig")
 
     -- import mason_lspconfig plugin
     local mason_lspconfig = require("mason-lspconfig")
@@ -124,44 +125,29 @@ return {
           settings = {
             python = {
               analysis = {
-                useLibraryCodeForTypes = true,
+                -- useLibraryCodeForTypes = true,
                 venvPath = ".",
                 venv = ".venv",
-                -- diagnosticMode = "off", -- Disable diagnostics if using Ruff
-                -- typeCheckingMode = "off",
+                diagnosticMode = "off", -- Disable diagnostics if using Ruff
+                typeCheckingMode = "off",
               },
             },
           },
         })
       end,
     })
-    -- Configure Pyright
-    -- vim.lsp.config()
-    -- lspconfig.pyright.setup({
-    --   capabilities = capabilities,
-    --   settings = {
-    --     python = {
-    --       analysis = {
-    --         useLibraryCodeForTypes = true,
-    --         -- diagnosticMode = "off", -- Disable diagnostics if using Ruff
-    --         -- typeCheckingMode = "off",
-    --       },
-    --     },
-    --   },
-    -- })
 
-    -- I have no Ruff
-    -- -- Configure Ruff (optional, for fast linting)
+    -- Configure Ruff (optional, for fast linting)
     -- lspconfig.ruff.setup({
-    --   capabilities = capabilities,
-    --   init_options = {
-    --     settings = {
-    --       args = { "--ignore", "F821", "--ignore", "E402" },
-    --     },
-    --   },
-    -- })
-
-
+    vim.lsp.config("ruff", {
+      capabilities = capabilities,
+      init_options = {
+        settings = {
+          -- args = { "--ignore", "F821", "--ignore", "E402" },
+          format = { enabled = false },
+        },
+      },
+    })
 
     -- -- for Nvim 0.10 (legacy, not supported) 
     -- -- mason_lspconfig.setup_handlers({

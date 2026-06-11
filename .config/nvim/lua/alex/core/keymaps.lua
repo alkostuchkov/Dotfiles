@@ -57,6 +57,10 @@ keymap.set("n", "<leader>qa", ":qa<CR>", { desc = "Close all" })
 keymap.set("n", "<C-s>", ":w<CR>")
 keymap.set("i", "<C-s>", "<Esc>:w<CR>a")
 
+-- reload config files
+keymap.set("n", "<leader>vrs", ":source ~/.config/nvim/lua/alex/core/settings.lua<CR>", { desc = "Reload settings.lua" })
+keymap.set("n", "<leader>vrk", ":source ~/.config/nvim/lua/alex/core/keymaps.lua<CR>", { desc = "Reload keymaps.lua" })
+
 -- resize windows
 keymap.set("n", "<leader>s<Up>", ":resize +2<CR>")
 keymap.set("n", "<leader>s<Down>", ":resize -2<CR>")

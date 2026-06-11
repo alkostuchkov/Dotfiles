@@ -5,67 +5,67 @@ return {
     local lualine = require("lualine")
     local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
-    -- -- MyBlue colors
+    -- MyBlue colors
+    local colors = {
+      blue = "#61afef",
+      green = "#98c379",
+      violet = "#c678dd",
+      yellow = "#d19a66",
+      red = "#e06c75",
+      fg = "#abb2bf",
+      bg = "#475258",
+      inactive_bg = "#2d353b",
+    }
+
+    -- Everforest colors
     -- local colors = {
-    --   blue = "#61afef",
-    --   green = "#98c379",
-    --   violet = "#c678dd",
-    --   yellow = "#d19a66",
-    --   red = "#e06c75",
-    --   fg = "#abb2bf",
+    --   blue = "#7fbbb3",
+    --   green = "#a7c080",
+    --   violet = "#d699b6",
+    --   yellow = "#dbbc7f",
+    --   red = "#e67e80",
+    --   fg = "#c3ccdc",
     --   bg = "#475258",
     --   inactive_bg = "#2d353b",
     -- }
-    --
-    -- -- Everforest colors
-    -- -- local colors = {
-    -- --   blue = "#7fbbb3",
-    -- --   green = "#a7c080",
-    -- --   violet = "#d699b6",
-    -- --   yellow = "#dbbc7f",
-    -- --   red = "#e67e80",
-    -- --   fg = "#c3ccdc",
-    -- --   bg = "#475258",
-    -- --   inactive_bg = "#2d353b",
-    -- -- }
-    --
-    -- local my_lualine_theme = {
-    --   normal = {
-    --     a = { bg = colors.blue, fg = colors.bg, gui = "bold" },
-    --     b = { bg = colors.bg, fg = colors.fg },
-    --     c = { bg = colors.bg, fg = colors.fg },
-    --   },
-    --   insert = {
-    --     a = { bg = colors.green, fg = colors.bg, gui = "bold" },
-    --     b = { bg = colors.bg, fg = colors.fg },
-    --     c = { bg = colors.bg, fg = colors.fg },
-    --   },
-    --   visual = {
-    --     a = { bg = colors.violet, fg = colors.bg, gui = "bold" },
-    --     b = { bg = colors.bg, fg = colors.fg },
-    --     c = { bg = colors.bg, fg = colors.fg },
-    --   },
-    --   command = {
-    --     a = { bg = colors.yellow, fg = colors.bg, gui = "bold" },
-    --     b = { bg = colors.bg, fg = colors.fg },
-    --     c = { bg = colors.bg, fg = colors.fg },
-    --   },
-    --   replace = {
-    --     a = { bg = colors.red, fg = colors.bg, gui = "bold" },
-    --     b = { bg = colors.bg, fg = colors.fg },
-    --     c = { bg = colors.bg, fg = colors.fg },
-    --   },
-    --   inactive = {
-    --     a = { bg = colors.inactive_bg, fg = colors.semilightgray, gui = "bold" },
-    --     b = { bg = colors.inactive_bg, fg = colors.semilightgray },
-    --     c = { bg = colors.inactive_bg, fg = colors.semilightgray },
-    --   },
-    -- }
+
+    local my_lualine_theme = {
+      normal = {
+        a = { bg = colors.blue, fg = colors.bg, gui = "bold" },
+        b = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.bg, fg = colors.fg },
+      },
+      insert = {
+        a = { bg = colors.green, fg = colors.bg, gui = "bold" },
+        b = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.bg, fg = colors.fg },
+      },
+      visual = {
+        a = { bg = colors.violet, fg = colors.bg, gui = "bold" },
+        b = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.bg, fg = colors.fg },
+      },
+      command = {
+        a = { bg = colors.yellow, fg = colors.bg, gui = "bold" },
+        b = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.bg, fg = colors.fg },
+      },
+      replace = {
+        a = { bg = colors.red, fg = colors.bg, gui = "bold" },
+        b = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.bg, fg = colors.fg },
+      },
+      inactive = {
+        a = { bg = colors.inactive_bg, fg = colors.semilightgray, gui = "bold" },
+        b = { bg = colors.inactive_bg, fg = colors.semilightgray },
+        c = { bg = colors.inactive_bg, fg = colors.semilightgray },
+      },
+    }
 
     -- configure lualine with modified theme
     lualine.setup({
       options = {
-        -- theme = my_lualine_theme,
+        theme = my_lualine_theme,
         component_separators = "|",
         section_separators = { left = "", right = "" }
         -- section_separators = { left = "", right = "" }

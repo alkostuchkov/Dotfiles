@@ -74,10 +74,10 @@ end
 -- }}}
 
 -- {{{ Variable definitions
-local TERMINAL = "wezterm"
+local TERMINAL = "wezterm start --always-new-process"
 local EXTRA_TERMINAL = "alacritty"
 local ONEMORE_TERMINAL = "kitty"
-local EDITOR = os.getenv("EDITOR") or "vim"
+local EDITOR = os.getenv("EDITOR") or "nvim"
 local EDITOR_CMD = TERMINAL .. " -e " .. EDITOR
 local SHELL = os.getenv("SHELL")
 local HOME = os.getenv("HOME")
@@ -459,7 +459,9 @@ globalkeys = gears.table.join(
   awful.key({ super, alt }, "d",
     function()
       awful.util.spawn(
-        "dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'JetBrainsMono Nerd Font-16:normal'")  -- MyBlue
+        "dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'IosevkaFixed_IlovePlus-17:normal'")  -- MyBlue
+      -- awful.util.spawn(
+      --   "dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'JetBrainsMono Nerd Font-16:normal'")  -- MyBlue
         -- "dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'Ubuntu-17:normal'")  -- MyBlue
         -- "dmenu_run -i -l 10 -nb '#32343D' -nf '#CFD6DF' -sb '#3D5E87' -sf '#F9F9F9' -p 'Run: ' -fn 'Iosevka-18:normal'")  -- MyBlue
         -- "dmenu_run -i -l 10 -nb '#2d353b' -nf '#d3c6aa' -sb '#475258' -sf '#a7c080' -p 'Run: ' -fn 'Iosevka-18:normal'")
@@ -486,11 +488,15 @@ globalkeys = gears.table.join(
     { description = "Vifm", group = "applications" }),
   awful.key({ super, alt }, "y",
     function()
-      -- awful.util.spawn(TERMINAL ..
-      --   " -e " .. SHELL .. " -c 'yazi --cwd-file ~/.config/yazi/cwd (cat ~/.config/yazi/cwd)'")
       awful.util.spawn("ghostty -e \"" .. SHELL .. " -c 'yazi --cwd-file ~/.config/yazi/cwd (cat ~/.config/yazi/cwd)'\"")
     end,
-    { description = "Yazi", group = "applications" }),
+    { description = "Yazi in Ghostty", group = "applications" }),
+  awful.key({ super, alt }, "i",
+    function()
+      awful.util.spawn(TERMINAL ..
+        " -e " .. SHELL .. " -c 'yazi --cwd-file ~/.config/yazi/cwd (cat ~/.config/yazi/cwd)'")
+    end,
+    { description = "Yazi in WezTerm", group = "applications" }),
   awful.key({ super, alt }, "t",
     function()
       awful.util.spawn(HOME ..
@@ -503,11 +509,11 @@ globalkeys = gears.table.join(
     { description = "VSCode", group = "applications" }),
   awful.key({ super, alt }, "g", function() awful.util.spawn("goldendict-ng") end,
     { description = "Goldendict", group = "applications" }),
-  -- awful.key({ super, alt }, "m", function() awful.util.spawn(TERMINAL .. " -e vim") end,
-  awful.key({ super, alt }, "m", function() awful.util.spawn("ghostty -e vim") end,
+  -- awful.key({ super, alt }, "m", function() awful.util.spawn(TERMINAL .. " -e nvim") end,
+  awful.key({ super, alt }, "m", function() awful.util.spawn("ghostty -e nvim") end,
     { description = "Vim", group = "applications" }),
-  awful.key({ super, ctrl }, "m", function() awful.util.spawn("gvim") end,
-    { description = "GVim", group = "applications" }),
+  -- awful.key({ super, ctrl }, "m", function() awful.util.spawn("gvim") end,
+  --   { description = "GVim", group = "applications" }),
   awful.key({ super, alt }, "s", function() awful.util.spawn(HOME .. "/Programs/SublimeText/sublime_text") end,
     { description = "Sublime Text", group = "applications" }),
   awful.key({ super, alt }, "b", function() awful.util.spawn("brave") end,
@@ -745,7 +751,8 @@ clientkeys = gears.table.join(
   -- {description = "move to screen", group = "client"}),
   awful.key({ alt }, "t", function(c) c.ontop = not c.ontop end,
     { description = "toggle keep on top", group = "client" }),
-  awful.key({ alt }, "n",
+  awful.key({ super, ctrl }, "m",
+  -- awful.key({ alt }, "n",
     function(c)
       -- The client currently has the input focus, so it cannot be
       -- minimized, since minimized clients can't have the focus.
@@ -958,6 +965,8 @@ awful.rules.rules = {
         "Java",
         "lazarus",
         "Lazarus",
+        "gcr-prompter", -- pass GUI
+        "Gcr-prompter",
         "Lxappearance" },
 
       -- Note that the name property shown in xprop might be set slightly after creation of the client
@@ -1050,7 +1059,8 @@ awful.rules.rules = {
   },
 
   {
-    rule = { class = "Thunderbird" },
+    -- rule = { class = "Thunderbird" },
+    rule_any = { class = { "Thunderbird", "thunderbird-esr" } },
     except = { name = "Password Required - Mozilla Thunderbird" },
     properties = { screen = 1, tag = root.tags()[9], switch_to_tags = false }
     -- properties = { screen = 1, tag = root.tags()[9], switchtotag = false }

@@ -13,9 +13,9 @@ set GOPATH "$HOME/go"
 set GHCUP_INSTALL_BASE_PREFIX "$HOME/" # for GHCUP
 # For stack (Haskell) get version of system ghci
 if [ -f "$HOME/.ghcup/bin/ghci" ]
-    set ghci_path "$HOME/.ghcup/bin/ghci"    
+    set ghci_path "$HOME/.ghcup/bin/ghci"
 else if [ -f "/usr/bin/ghci" ]
-    set ghci_path "/usr/bin/ghci"    
+    set ghci_path "/usr/bin/ghci"
 end
 if [ -n "$ghci_path" ]
     set ghci_ver ($ghci_path --version | awk '{print $NF}')
@@ -31,7 +31,8 @@ end
 #     set WEBKIT_DISABLE_DMABUF_RENDERER 1 # for Foliate (with NVidia drivers)
 # end
 
-set -U fish_user_paths $HOME/.local/bin $HOME/Programs/AppImageApplications $fish_user_paths
+# set -U fish_user_paths $HOME/.local/bin $HOME/Programs/AppImageApplications $fish_user_paths
+set fish_user_paths $HOME/.local/bin $HOME/Programs/AppImageApplications $fish_user_paths
 set PATH $PATH $HOME/.cargo/bin $HOME/.config/vifm/scripts $HOME/.config/emacs/bin $GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin $HOME/Programs/Android_SDK/platform-tools $HOME/.cabal/bin $GOPATH/bin # PATH for exa in cargo and ...
 
 # set EDITOR emacsclient -t -a ''              # $EDITOR use Emacs in terminal
@@ -81,12 +82,12 @@ set_colorscheme_ayu_Mirage
 
 # Shell wrapper for Yazi ------------------------------------------------------
 function y
-	set tmp (mktemp -t "yazi-cwd.XXXXXX")
-	yazi $argv --cwd-file="$tmp"
-	if read -z cwd < "$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-		builtin cd -- "$cwd"
-	end
-	rm -f -- "$tmp"
+    set tmp (mktemp -t "yazi-cwd.XXXXXX")
+    yazi $argv --cwd-file="$tmp"
+    if read -z cwd < "$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+        builtin cd -- "$cwd"
+    end
+    rm -f -- "$tmp"
 end
 
 # SET EITHER DEFAULT EMACS MODE OR VI MODE ------------------------------------
@@ -166,25 +167,25 @@ function fish_prompt
 
     # Regular Colors
     set Blue (set_color blue) # Blue
-    set Green (set_color green) # Green
-    set Yellow (set_color yellow) # Yellow
-    set Cyan (set_color cyan)
+    # set Green (set_color green) # Green
+    # set Yellow (set_color yellow) # Yellow
+    # set Cyan (set_color cyan)
     set Red (set_color red) # Red
-    set White (set_color white)
+    # set White (set_color white)
 
     # Bold
-    set BBlue (set_color -o blue)
+    # set BBlue (set_color -o blue)
     set BGreen (set_color -o green) # Green
-    set BYellow (set_color -o yellow) # Yellow
-    set BCyan (set_color -o brcyan)
-    set BRed (set_color -o red)
-    set BWhite (set_color -o white)
+    # set BYellow (set_color -o yellow) # Yellow
+    # set BCyan (set_color -o brcyan)
+    # set BRed (set_color -o red)
+    # set BWhite (set_color -o white)
     set BMagenta (set_color -o magenta) # Purple
-    set BBlack (set_color -o black) # Black
+    # set BBlack (set_color -o black) # Black
 
     # # Default values for the appearance of the prompt. Configure at will.
-    set GIT_PROMPT_PREFIX "("
-    set GIT_PROMPT_SUFFIX ")"
+    # set GIT_PROMPT_PREFIX "("
+    # set GIT_PROMPT_SUFFIX ")"
     set GIT_PROMPT_SEPARATOR "|"
     set GIT_PROMPT_BRANCH "$BMagenta"
     set GIT_PROMPT_STAGED "$Red● "
@@ -209,7 +210,7 @@ function fish_prompt
         set_color -o green
         echo -n '['
         set_color normal
-        test -n $field_name
+        test -n "$field_name"
         and echo -n $field_name:
         set_color $retc
         echo -n $field_value
@@ -363,7 +364,7 @@ alias rem="killall emacs || echo 'Emacs server not running'; /usr/bin/emacs --da
 # alias la='ls -lah'
 # alias lf='ls -lFh'
 alias gb="~/.myScripts/gitbare_autoadding_files.sh" # Autoadd files to gitbare (dotfiles) repo
-alias cd='z'  # for Zoxide
+alias cd='z' # for Zoxide
 alias lse='exa -g --color=always --group-directories-first'
 alias lle='lse -l'
 alias ls='lsd --group-dirs=first'
@@ -430,7 +431,6 @@ source /home/alexander/.opam/opam-init/init.fish >/dev/null 2>/dev/null; or true
 # - $FZF_ALT_C_OPTS
 
 status is-interactive; or exit 0
-
 
 # Key bindings
 # ------------

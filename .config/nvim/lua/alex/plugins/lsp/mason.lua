@@ -32,8 +32,9 @@ return {
         -- "cssls",
         -- "clangd",
         "lua_ls",
+        "ruff",
         "pyright",
-        "hls", -- Haskell
+        -- "hls", -- Haskell
         -- "gopls",
         -- "ast_grep", -- Dart (Flutter)
         -- "rust_analyzer",
@@ -47,8 +48,9 @@ return {
         -- -- "autopep8", -- python formatter
         -- -- "black", -- python formatter
         -- -- "isort", -- python formatter
-        "pylint", -- python linter
-        "flake8", -- python linter
+        "ruff", -- python linter, formatter,
+        -- "pylint", -- python linter
+        -- "flake8", -- python linter
         -- "mypy",   -- python linter
         -- "ast_grep", -- Dart (Flutter)
       },

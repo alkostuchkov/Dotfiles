@@ -2,10 +2,9 @@ vim.cmd("let g:netrw_liststyle = 3") -- Explorer style
 
 local g = vim.g                      -- global
 local opt = vim.opt                  -- local
-local api = vim.api
-local cmd = vim.cmd
 -- local wo = vim.wo                    -- window-scoped
 -- local bo = vim.bo                    -- buffer-scoped
+-- local api = vim.api
 
 -- opt.linespace = 4 -- only for GUI (nvim-qt), for Consolas NF
 -- line numbers
@@ -21,11 +20,11 @@ opt.whichwrap = "<,>,[,],h,l" -- не останавливаться курсо�
 
 -- При редактировании файла всегда переходить на последнюю известную
 -- позицию курсора. Если позиция ошибочная - не переходим.
-cmd([[
+vim.cmd([[
   autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 ]])
 
-cmd([[
+vim.cmd([[
   let &t_SI.="\e[5 q"
   let &t_SR.="\e[3 q"
   let &t_EI.="\e[1 q"
@@ -42,29 +41,19 @@ cmd([[
 opt.autoindent = true -- copy indent from current line when starting new one
 opt.smartindent = true
 -- disable auto-comments on new line (2 lines below)
-cmd("autocmd BufEnter * set formatoptions-=cro")
-cmd("autocmd BufEnter * setlocal formatoptions-=cro")
+vim.cmd("autocmd BufEnter * set formatoptions-=cro")
+vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
 -- opt.formatoptions:remove({ "c", "r", "o" }) -- doesn't work
 
-opt.tabstop = 2      -- 2 spaces for tabs (prettier default)
-opt.shiftwidth = 2   -- 2 spaces for indent width
+opt.shiftwidth = 4   -- 2 spaces for indent width
+opt.tabstop = 4      -- 2 spaces for tabs (prettier default)
 opt.expandtab = true -- expand tab to spaces
-opt.softtabstop = 2
-
--- api.nvim_create_autocmd("FileType", {
---   pattern = "kivy",
---   callback = function()
---     opt.tabstop = 4
---     opt.shiftwidth = 4
---     opt.expandtab = true
---     opt.softtabstop = 4
---   end
--- })
+opt.softtabstop = 4
 
 opt.syntax = "ON"
 -- Данная вариация работает как wrap,... но переносит строчки не посимвольно, а по словам
 opt.wrap = true
--- opt.linebreak = true
+opt.linebreak = true
 g.nolist = true
 
 opt.mouse = "a"
@@ -125,6 +114,7 @@ g.browsedir = "current" -- browsedir    "last", "buffer" or "current": which dir
 
 opt.termguicolors = true
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
+-- opt.background = "light" -- colorschemes that can be light or dark will be made dark
 opt.signcolumn = "yes"  -- show sign column so that text doesn't shift
 -- vim.cmd([[highlight clear SignColumn]])
 

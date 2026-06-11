@@ -15,7 +15,7 @@ return {
     -- your configuration comes here
     -- or leave it empty to use the default settings
     -- refer to the configuration section below
-  preset = "classic", -- "classic", "modern", "helix"
+  preset = "helix", -- "classic", "modern", "helix"
   layout = {
       width = { min = 30 }, -- min and max width of the columns
       spacing = 3, -- spacing between columns

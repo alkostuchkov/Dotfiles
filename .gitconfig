@@ -7,7 +7,7 @@
 	name = alkostuchkov
 	email = alkostuchkov@gmail.com
 [core]
-	editor = vim
+	editor = hx
 	excludesFile = /home/alexander/.gitignore
 [alias]
 	co = checkout

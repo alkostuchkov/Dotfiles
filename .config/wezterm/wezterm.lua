@@ -4,104 +4,54 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
--- my Cobalt2 colorscheme
-config.colors = {
-  foreground = "#e0e0e0",
-  background = "#213049",
-  cursor_bg = "#ecf0f1",
-  cursor_border = "#ecf0f1",
-  cursor_fg = "#213049",
-  selection_bg = "#e0e0e0",
-  selection_fg = "#213049",
-  brights = {
-    "#95a5a6",
-    "#ff628c",
-    "#2ecc71",
-    "#ffc600",
-    "#3498db",
-    "#9b59b6",
-    "#80ffbb",
-    "#ecf0f1",
-  },
-  ansi = {
-    "#213049",
-    "#ff628c",
-    "#2ecc71",
-    "#ffc600",
-    "#3498db",
-    "#9b59b6",
-    "#80ffbb",
-    "#e0e0e0",
-  },
-}
+local sessions = wezterm.plugin.require("https://github.com/abidibo/wezterm-sessions")
+sessions.apply_to_config(config) -- optional, this adds default keybindings
 
--- -- my MemoryColor colorscheme
+local my_colors = require("colors/Cobalt2")
+config.colors = my_colors
+
+-- -- my Cobalt2 colorscheme
 -- config.colors = {
---   foreground = "#e6ac73",
---   background = "#203040",
---   cursor_bg = "#b7b0a7",
---   cursor_border = "#b7b0a7",
---   cursor_fg = "#152535",
---   selection_bg = "#e6ac73",
---   selection_fg = "#203040",
+--   foreground = "#e0e0e0",
+--   background = "#213049",
+--   cursor_bg = "#ecf0f1",
+--   cursor_border = "#ecf0f1",
+--   cursor_fg = "#213049",
+--   selection_bg = "#e0e0e0",
+--   selection_fg = "#213049",
 --   brights = {
---     "#000000",
---     "#ff6666",
---     "#00e673",
---     "#f0b16c",
---     "#66b2ff",
---     "#ff66ff",
---     "#00b3b3",
---     "#f0f0f0",
+--     "#95a5a6",
+--     "#ff628c",
+--     "#2ecc71",
+--     "#ffc600",
+--     "#3498db",
+--     "#9b59b6",
+--     "#80ffbb",
+--     "#ecf0f1",
 --   },
 --   ansi = {
---     "#000000",
---     -- "#e60073",  -- default red
---     "#F14199",
---     "#00e673",
---     "#e6e600",
---     "#66b2ff",
---     "#b366ff",
---     "#00b3b3",
---     "#f0f0f0",
+--     "#213049",
+--     "#ff628c",
+--     "#2ecc71",
+--     "#ffc600",
+--     "#3498db",
+--     "#9b59b6",
+--     "#80ffbb",
+--     "#e0e0e0",
 --   },
--- }
-
--- -- my One-Dark colorscheme
--- config.colors = {
---   foreground = "#abb2bf",
---   background = "#282c34",
---   cursor_bg = "#abb2bf",
---   cursor_border = "#abb2bf",
---   cursor_fg = "#282c34",
---   selection_bg = "#A8ADBA",
---   selection_fg = "#2d353b",
---   ansi = { "#282c34", "#e06c75", "#98c379", "#d19a66", "#61afef", "#c678dd", "#56b6c2", "#d3c6aa" },
---   brights = { "#5c6370", "#e06c75", "#98c379", "#d19a66", "#61afef", "#c678dd", "#56b6c2", "#ffffff" },
--- }
---
--- -- my Everforest colorscheme
--- config.colors = {
---   foreground = "#d3c6aa",
---   background = "#2d353b",
---   cursor_bg = "#d3c6aa",
---   cursor_border = "#d3c6aa",
---   cursor_fg = "#475258",
---   selection_bg = "#475258",
---   selection_fg = "#a7c080",
---   ansi = { "#475258", "#e67e80", "#a7c080", "#dbbc7f", "#7fbbb3", "#d699b6", "#83c092", "#d3c6aa" },
---   brights = { "#475258", "#e67e80", "#a7c080", "#dbbc7f", "#7fbbb3", "#d699b6", "#83c092", "#d3c6aa" },
 -- }
 
 -- config.font = wezterm.font(
 --   "JetBrainsMono NF",
 --   { weight = "Regular", italic = false }
 -- )
+-- config.font = wezterm.font("Monoid Nerd Font")
 -- config.font = wezterm.font("JetBrainsMono Nerd Font")
+-- config.font = wezterm.font("JetBrainsMono NF Light")
 -- config.font = wezterm.font("IosevkaTerm_JBMono")
 -- config.font = wezterm.font("IosevkaTerm_IlovePlus")
-config.font = wezterm.font("IosevkaTerm_IloveModern")
--- config.font = wezterm.font("JetBrainsMono NF Light")
+-- config.font = wezterm.font("IosevkaTerm_IloveModern")
+-- config.font = wezterm.font("mplus Nerd Font")
 -- config.font = wezterm.font("DejaVuSansMono Nerd Font Mono")
 -- config.font = wezterm.font("DejaVuSansM Nerd Font")
 -- config.font = wezterm.font("DejaVu Sans Mono")
@@ -137,11 +87,33 @@ config.font = wezterm.font("IosevkaTerm_IloveModern")
 --     },
 --   },
 -- }
+
+config.font = wezterm.font { family = "mplus Nerd Font" }
+config.font_rules = {
+  {
+    intensity = "Bold",
+    italic = true,
+    font = wezterm.font {
+      family = "UbuntuMono Nerd Font",
+      weight = "Bold",
+      style = "Italic",
+    },
+  },
+  {
+    intensity = "Normal",
+    italic = true,
+    font = wezterm.font {
+      family = "UbuntuMono Nerd Font",
+      style = "Italic",
+    },
+  },
+}
+
 config.font_size = 17.0
 -- config.line_height = 1.10 -- for Hack Nerd Font
 -- config.line_height = 1.15 -- for Consolas NF
 -- config.line_height = 1.05 -- for Mononoki Nerd Font
--- config.line_height = 0.90 -- for Iosevka
+config.line_height = 0.8 -- for Iosevka, mplus Nerd Font
 -- config.cell_width = 1
 
 config.bold_brightens_ansi_colors = true
@@ -152,15 +124,15 @@ config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
 config.enable_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
--- config.use_fancy_tab_bar = false
+config.use_fancy_tab_bar = true
 
--- config.window_padding = {
---   left = 0,
---   -- left = 3,
---   right = 0,
---   top = 0,
---   bottom = 0,
--- }
+config.window_padding = {
+  left = 0,
+  -- left = 3,
+  right = 0,
+  top = 0,
+  bottom = 0,
+}
 
 -- config.window_decorations = "RESIZE"
 config.window_background_opacity = 1.0
@@ -171,24 +143,76 @@ config.default_cursor_style = "SteadyBar"
 
 -- Keybindings
 local act = wezterm.action
+-- timeout_milliseconds defaults to 1000 and can be omitted
+config.leader = { key = "q", mods = "ALT", timeout_milliseconds = 2000 }
 config.keys = {
-  -- Disable Switch between tabs
+  -- Sessions
   {
-    key = "Tab",
-    mods = "CTRL",
-    action = act.DisableDefaultAssignment,
+      key = "s",
+      mods = "ALT",
+      action = act { EmitEvent = "save_session" },
   },
-  { -- Disable
-    key = "Tab",
-    mods = "CTRL|SHIFT",
-    action = act.DisableDefaultAssignment,
-  },
-  -- Disable Toggle full screen
   {
-    key = "Enter",
-    mods = "ALT",
-    action = act.DisableDefaultAssignment,
+      key = "l",
+      mods = "ALT",
+      action = act { EmitEvent = "load_session" },
   },
+  {
+      key = "r",
+      mods = "ALT",
+      action = act { EmitEvent = "restore_session" },
+  },
+  {
+      key = "d",
+      mods = "CTRL|SHIFT",
+      action = act { EmitEvent = "delete_session" },
+  },
+  {
+      key = "e",
+      mods = "CTRL|SHIFT",
+      action = act { EmitEvent = "edit_session" },
+  },
+  -- Rename current workspace
+  {
+      key = "$",
+      mods = "CTRL|SHIFT",
+      action = act.PromptInputLine {
+          description = "Enter new workspace name",
+          action = wezterm.action_callback(
+              function(window, pane, line)
+                  if line then
+                      wezterm.mux.rename_workspace(wezterm.mux.get_active_workspace(), line)
+                  end
+              end
+          ),
+      },
+  },
+  -- Prompt for a name to use for a new workspace and switch to it.
+  {
+      key = "w",
+      mods = "CTRL|SHIFT",
+      action = act.PromptInputLine {
+          description = wezterm.format {
+              { Attribute = { Intensity = "Bold" } },
+              { Foreground = { AnsiColor = "Fuchsia" } },
+              { Text = "Enter name for new workspace" },
+          },
+          action = wezterm.action_callback(function(window, pane, line)
+              -- line will be `nil` if they hit escape without entering anything
+              -- An empty string if they just hit enter
+              -- Or the actual line of text they wrote
+              if line then
+                  window:perform_action(
+                      act.SwitchToWorkspace {
+                          name = line,
+                      },
+                      pane
+                  )
+              end
+          end),
+      },
+  },
+
   -- Scrolling
   { key = "UpArrow",   mods = "CTRL|SHIFT", action = act.ScrollByLine(-1) },
   { key = "DownArrow", mods = "CTRL|SHIFT", action = act.ScrollByLine(1) },
@@ -196,51 +220,66 @@ config.keys = {
   { key = "PageDown",  mods = "CTRL|SHIFT", action = act.ScrollByPage(1) },
   { key = "Home",      mods = "CTRL|SHIFT", action = act.ScrollToTop },
   { key = "End",       mods = "CTRL|SHIFT", action = act.ScrollToBottom },
+
   -- Split
   { -- horizontal
-    key = "x",
-    mods = "CTRL|SHIFT",
-    action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+    -- key = "x",
+    -- mods = "CTRL|SHIFT",
+    key = "\\", -- |
+    mods = "LEADER",
+    action = act.SplitHorizontal { domain = "CurrentPaneDomain" },
   },
   { -- vertical
-    key = "z",
-    mods = "CTRL|SHIFT",
-    action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+    -- key = "z",
+    -- mods = "CTRL|SHIFT",
+    key = "-",
+    mods = "LEADER",
+    action = act.SplitVertical { domain = "CurrentPaneDomain" },
   },
+
+  -- Tabs
   { -- Create new tab
     key = "t",
     mods = "CTRL|SHIFT",
-    action = act.SpawnTab("CurrentPaneDomain"),
+    action = act.SpawnTab "CurrentPaneDomain",
     -- action = act.SpawnTab 'DefaultDomain',
     -- action = act.SpawnTab { DomainName = 'unix' },
   },
+  { -- Close current tab
+    key = "x",
+    mods = "CTRL|SHIFT",
+    action = act.CloseCurrentPane { confirm = true },
+  },
+
+  -- Moving between splitted (when no splitted - between tabs)
   {
     key = "j",
     mods = "CTRL|SHIFT",
-    action = wezterm.action.ActivatePaneDirection("Down"),
+    action = act.ActivatePaneDirection "Down",
   },
   {
     key = "k",
     mods = "CTRL|SHIFT",
-    action = wezterm.action.ActivatePaneDirection("Up"),
+    action = act.ActivatePaneDirection "Up",
   },
   {
     key = "h",
     mods = "CTRL|SHIFT",
-    action = wezterm.action.EmitEvent("switch-to-left"),
+    action = act.EmitEvent "switch-to-left",
   },
   {
     key = "l",
     mods = "CTRL|SHIFT",
-    action = wezterm.action.EmitEvent("switch-to-right"),
+    action = act.EmitEvent "switch-to-right",
   },
+
+  -- Moving between tabs
+  { key = "]",  mods = "CTRL", action = act.ActivateTabRelative(1) },
+  { key = "[",  mods = "CTRL", action = act.ActivateTabRelative(-1) },
+
   -- Show TabNavigator
-  { key = "F9", mods = "CTRL",  action = wezterm.action.ShowTabNavigator },
-  -- { key = "F9", mods = "ALT",  action = wezterm.action.ShowTabNavigator },
-  { key = "]",  mods = "CTRL", action = wezterm.action.ActivateTabRelative(1) },
-  { key = "[",  mods = "CTRL", action = wezterm.action.ActivateTabRelative(-1) },
-  -- { key = ']', mods = 'CTRL', action = wezterm.action.ActivateTabRelativeNoWrap(1) },
-  -- { key = '[', mods = 'CTRL', action = wezterm.action.ActivateTabRelativeNoWrap(-1) },
+  { key = "F9", mods = "CTRL",  action = act.ShowTabNavigator },
+
   { -- Rename current tab
     key = "t",
     mods = "ALT|SHIFT",
@@ -257,6 +296,23 @@ config.keys = {
       end),
     }),
   },
+
+  -- Disable defaults keys:
+  { -- Switch between tabs 
+    key = "Tab",
+    mods = "CTRL",
+    action = act.DisableDefaultAssignment,
+  },
+  {
+    key = "Tab",
+    mods = "CTRL|SHIFT",
+    action = act.DisableDefaultAssignment,
+  },
+  { -- Toggle full screen
+    key = "Enter",
+    mods = "ALT",
+    action = act.DisableDefaultAssignment,
+  },
 }
 
 -- Activate tab by ctrl+number
@@ -269,25 +325,10 @@ for i = 1, 8 do
   })
   -- -- F1 through F8 to activate that tab
   -- table.insert(config.keys, {
-  -- key = 'F' .. tostring(i),
+  -- key = "F" .. tostring(i),
   -- action = act.ActivateTab(i - 1),
   -- })
 end
--- -- timeout_milliseconds defaults to 1000 and can be omitted
--- config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
--- config.keys = {
--- {
--- key = '|',
--- mods = 'LEADER|SHIFT',
--- action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
--- },
--- -- Send "CTRL-A" to the terminal when pressing CTRL-A, CTRL-A
--- {
--- key = 'a',
--- mods = 'LEADER|CTRL',
--- action = wezterm.action.SendKey { key = 'a', mods = 'CTRL' },
--- },
--- }
 
 -- FUNCTIONS
 -- switch between splitted panes
@@ -295,9 +336,9 @@ wezterm.on("switch-to-left", function(window, pane)
   local tab = window:mux_window():active_tab()
 
   if tab:get_pane_direction("Left") ~= nil then
-    window:perform_action(wezterm.action.ActivatePaneDirection("Left"), pane)
+    window:perform_action(act.ActivatePaneDirection("Left"), pane)
   else
-    window:perform_action(wezterm.action.ActivateTabRelative(-1), pane)
+    window:perform_action(act.ActivateTabRelative(-1), pane)
   end
 end)
 
@@ -305,9 +346,9 @@ wezterm.on("switch-to-right", function(window, pane)
   local tab = window:mux_window():active_tab()
 
   if tab:get_pane_direction("Right") ~= nil then
-    window:perform_action(wezterm.action.ActivatePaneDirection("Right"), pane)
+    window:perform_action(act.ActivatePaneDirection("Right"), pane)
   else
-    window:perform_action(wezterm.action.ActivateTabRelative(1), pane)
+    window:perform_action(act.ActivateTabRelative(1), pane)
   end
 end)
 
