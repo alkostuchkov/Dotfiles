@@ -25,7 +25,7 @@
 
 gtk-titlebar = false
 
-theme = Cobalt2_default
+theme = Cobalt2
 
 # font-family = JetBrainsMono Nerd Font
 # font-family-bold = JetBrainsMono Nerd Font
@@ -74,7 +74,7 @@ font-feature = -dlig
 # font-style-italic = Italic
 # font-style-bold-italic = Bold-Italic
 
-font-size = 17.5
+font-size = 18.0
 
 shell-integration-features = no-cursor
 cursor-style = bar
