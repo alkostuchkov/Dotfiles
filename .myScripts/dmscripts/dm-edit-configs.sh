@@ -59,6 +59,7 @@ options=(
 "micro - $HOME/.config/micro/settings.json"
 "mimeapps - $HOME/.config/mimeapps.list"
 "neofetch - $HOME/.config/neofetch/config.conf"
+"niri - $HOME/.config/niri/config.kdl"
 "nvim-qt - $HOME/.config/nvim-qt/nvim-qt.conf"
 # "nvim - $HOME/.config/nvim/init.vim"
 "nvim keymap - $HOME/.config/nvim/lua/alex/core/keymaps.lua"
@@ -112,7 +113,9 @@ options=(
 # sb='#475258'
 # fn='Iosevka-17:normal'
 # fn='Ubuntu-17:normal'
-fn='IosevkaTerm_IlovePlus-17:normal'
+fn='IosevkaTerm_IlovePlus'
+# fn='IosevkaTerm_IlovePlus 17'
+# fn='IosevkaTerm_IlovePlus-17:normal'
 # fn='JetbrainsMonoNerdFont-16:normal'
 
 # MyBlue
@@ -128,8 +131,22 @@ sb='#3D5E87'
 # sb='#d79921'
 # fn='Sarasa Mono SC Nerd-17:normal'
 
-# DMENU="rofi -dmenu -theme-str 'window {width: 80%;}' -p"
-DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
+if [[ -n $WAYLAND_DISPLAY ]]; then
+    # DMENU="wmenu"
+    choice=$(printf '%s\n' "${options[@]}" | wmenu -i -l 10 -f 'IosevkaTerm_IlovePlus 17' -p 'Edit config file:')
+    # choice=$(printf '%s\n' "${options[@]}" | wmenu -i -l 10 -N ${nf} -n ${nb} -S ${sf} -s ${sb} -f 'IosevkaTerm_IlovePlus 17' -p 'Edit config file:')
+	xdotool="ydotool type --file -"
+elif [[ -n $DISPLAY ]]; then
+    DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
+    choice=$(printf '%s\n' "${options[@]}" | ${DMENU} 'Edit config file:')
+	xdotool="xdotool type --clearmodifiers --file -"
+else
+	echo "Error: No Wayland or X11 display detected" >&2
+	exit 1
+fi
+
+# DMENU="${DMENU} -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
+# # DMENU="${DMENU} -i -l 10 -nf '${nf}' -nb '${nb}' -sf '${sf}' -sb '${sb}' -fn '${fn}' -p"
 
 # TERMINAL="wezterm"
 TERMINAL="ghostty"
@@ -139,11 +156,7 @@ terminal=${TERMINAL-"xterm"}
 EDITOR="hx"
 editor=${EDITOR-"vim"}
 
-# names=$(printf '%s\n' "${options[@]}" | awk '{print $1}')
-# choice=$(printf '%s\n' "${names}" | dmenu -l 10  -nf '#09dbc9' -nb '#222b2e' -sf '#dbdcd5' -sb '#009185' -fn 'Ubuntu-16:normal' -p 'Edit config file:')
-
-# choice=$(printf '%s\n' "${options[@]}" | dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Edit config file:')
-choice=$(printf '%s\n' "${options[@]}" | ${DMENU} 'Edit config file:')
+# choice=$(printf '%s\n' "${options[@]}" | ${DMENU} 'Edit config file:')
 
 if [[ "$choice" == "quit" ]]; then
     echo "Program terminated." && exit 1

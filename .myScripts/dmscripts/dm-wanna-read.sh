@@ -69,21 +69,52 @@ sb='#3D5E87'
 # sb='#d79921'
 # fn='Sarasa Mono SC Nerd-17:normal'
 
-# dmenu colors
-# DMENU="rofi -dmenu -theme-str 'window {width: 80%;}' -p"
-DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
+# # dmenu colors
+# # DMENU="rofi -dmenu -theme-str 'window {width: 80%;}' -p"
+# DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
+if [[ -n $WAYLAND_DISPLAY ]]; then
+	xdotool="ydotool type --file -"
+elif [[ -n $DISPLAY ]]; then
+    DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
+	xdotool="xdotool type --clearmodifiers --file -"
+else
+	echo "Error: No Wayland or X11 display detected" >&2
+	exit 1
+fi
 
 get_dirpath() {
     # Get dirpath.
-    dirpath=$(printf '%s\n' "${options[@]}" | ${DMENU} 'Choose path:')
-    # dirpath=$(echo "$dirpath" | awk -F: '{print $NF}')
-    # dirpath=$(printf '%s\n' "${options[@]}" | awk -F: '{print $NF}' | ${DMENU} 'Choose path:')
+    if [[ -n $WAYLAND_DISPLAY ]]; then
+        # DMENU="wmenu"
+        dirpath=$(printf '%s\n' "${options[@]}" | wmenu -i -l 10 -f 'IosevkaTerm_IlovePlus 17' -p 'Choose path:')
+    elif [[ -n $DISPLAY ]]; then
+        dirpath=$(printf '%s\n' "${options[@]}" | ${DMENU} 'Choose path:')
+    else
+        echo "Error: No Wayland or X11 display detected" >&2
+        exit 1
+    fi
+
+    # # Get dirpath.
+    # dirpath=$(printf '%s\n' "${options[@]}" | ${DMENU} 'Choose path:')
+    # # dirpath=$(echo "$dirpath" | awk -F: '{print $NF}')
+    # # dirpath=$(printf '%s\n' "${options[@]}" | awk -F: '{print $NF}' | ${DMENU} 'Choose path:')
     check_input "$dirpath"
 }
 
 get_bookname() {
     # Get bookname of chosen book.
-    bookname=$(ls "$dirpath" | ${DMENU} 'Choose book:')
+    if [[ -n $WAYLAND_DISPLAY ]]; then
+        # DMENU="wmenu"
+        bookname=$(ls "$dirpath" | wmenu -i -l 10 -f 'IosevkaTerm_IlovePlus 17' -p 'Choose book:')
+    elif [[ -n $DISPLAY ]]; then
+        bookname=$(ls "$dirpath" | ${DMENU} 'Choose book:')
+    else
+        echo "Error: No Wayland or X11 display detected" >&2
+        exit 1
+    fi
+
+    # # Get bookname of chosen book.
+    # bookname=$(ls "$dirpath" | ${DMENU} 'Choose book:')
     check_input "$bookname"
 
     # while [[ -d "$dirpath$bookname" ]]; do
@@ -109,9 +140,17 @@ open_book() {
 
 check_input() {
     # Exit program if chosen "Quit".
-    if [[ "$1" == "" ]]; then
-        notify-send -t 3000 -i dialog-information "Program terminated" && exit 1
+    if [[ "$1" == "" && -n $DISPLAY ]]; then
+        notify-send -t 3000 -i dialog-information "Program terminated"
+        exit 1
+    elif [[ "$1" == "" && -n $WAYLAND_DISPLAY ]]; then
+        notify-send -t 3000 -i dialog-information "Program terminated"
+        exit 1
     fi
+
+    # if [[ "$1" == "" ]]; then
+    #     notify-send -t 3000 -i dialog-information "Program terminated" && exit 1
+    # fi
 }
 
 get_dirpath

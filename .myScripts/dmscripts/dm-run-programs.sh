@@ -42,10 +42,18 @@ sb='#3D5E87'
 # sb='#d79921'
 # fn='Sarasa Mono SC Nerd-17:normal'
 
-DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
-
-# choice=$(printf '%s\n' "${options[@]}" | dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Run program:')
-choice=$(printf '%s\n' "${options[@]}" | ${DMENU} 'Run program:')
+if [[ -n $WAYLAND_DISPLAY ]]; then
+    # DMENU="wmenu"
+    choice=$(printf '%s\n' "${options[@]}" | wmenu -i -l 10 -f 'IosevkaTerm_IlovePlus 17' -p 'Run program:')
+	xdotool="ydotool type --file -"
+elif [[ -n $DISPLAY ]]; then
+    DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
+    choice=$(printf '%s\n' "${options[@]}" | ${DMENU} 'Run program:')
+	xdotool="xdotool type --clearmodifiers --file -"
+else
+	echo "Error: No Wayland or X11 display detected" >&2
+	exit 1
+fi
 
 if [[ "$choice" == "quit" ]]; then
     echo "Program terminated." && exit 1

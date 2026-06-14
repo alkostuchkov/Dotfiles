@@ -42,10 +42,18 @@ sb='#3D5E87'
 # sb='#d79921'
 # fn='Sarasa Mono SC Nerd-17:normal'
 
-DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
-
-choice=$(${DMENU} 'System:'   <<< "$options")
-# choice=$(dmenu -i -l 10  -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'System:'   <<< "$options")
+if [[ -n $WAYLAND_DISPLAY ]]; then
+    # DMENU="wmenu"
+    choice=$(wmenu -i -l 10 -f 'IosevkaTerm_IlovePlus 17' -p 'System:'   <<< "$options")
+	xdotool="ydotool type --file -"
+elif [[ -n $DISPLAY ]]; then
+    DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
+    choice=$(${DMENU} 'System:'   <<< "$options")
+	xdotool="xdotool type --clearmodifiers --file -"
+else
+	echo "Error: No Wayland or X11 display detected" >&2
+	exit 1
+fi
 
 case $choice in
     lock)

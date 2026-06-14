@@ -42,16 +42,6 @@ is_color_exists() {
     echo "false"
 }
 
-if [[ -n $WAYLAND_DISPLAY ]]; then
-	DMENU=dmenu-wl
-	xdotool="ydotool type --file -"
-elif [[ -n $DISPLAY ]]; then
-  DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
-	xdotool="xdotool type --clearmodifiers --file -"
-else
-	echo "Error: No Wayland or X11 display detected" >&2
-	exit 1
-fi
 
 is_color_exists=0
 config_file=${CONFIG_STORE_DIR-~/.config/alacritty/alacritty.toml}
@@ -60,8 +50,19 @@ color_files=("$prefix"/*.toml)
 color_files=("${color_files[@]#"$prefix"/}")
 color_files=("${color_files[@]%.toml}")
 
-# color=$(printf '%s\n' "${color_files[@]}" | "$dmenu" -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Alacritty colors you want:')
-color=$(printf '%s\n' "${color_files[@]}" | ${DMENU} 'Alacritty colors you want:')
+if [[ -n $WAYLAND_DISPLAY ]]; then
+    # DMENU="wmenu"
+    color=$(printf '%s\n' "${color_files[@]}" | wmenu -i -l 10 -f 'IosevkaTerm_IlovePlus 17' -p 'Alacritty colors you want:')
+	xdotool="ydotool type --file -"
+elif [[ -n $DISPLAY ]]; then
+    DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
+    color=$(printf '%s\n' "${color_files[@]}" | ${DMENU} 'Alacritty colors you want:')
+    # DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
+	xdotool="xdotool type --clearmodifiers --file -"
+else
+	echo "Error: No Wayland or X11 display detected" >&2
+	exit 1
+fi
 
 [[ -n ${color} ]] || exit
 

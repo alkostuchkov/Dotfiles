@@ -30,27 +30,23 @@ sb='#3D5E87'
 # sb='#d79921'
 # fn='Sarasa Mono SC Nerd-17:normal'
 
-# shopt -s nullglob globstar
-
-if [[ -n $WAYLAND_DISPLAY ]]; then
-	DMENU=dmenu-wl
-	xdotool="ydotool type --file -"
-elif [[ -n $DISPLAY ]]; then
-  DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
-	xdotool="xdotool type --clearmodifiers --file -"
-else
-	echo "Error: No Wayland or X11 display detected" >&2
-	exit 1
-fi
-
 prefix=${PASSWORD_STORE_DIR-~/.password-store}
 password_files=( "$prefix"/**/*.gpg )
 password_files=( "${password_files[@]#"$prefix"/}" )
 password_files=( "${password_files[@]%.gpg}" )
 
-# password=$(printf '%s\n' "${password_files[@]}" | "$dmenu" "$@")
-username=$(printf '%s\n' "${password_files[@]}" | ${DMENU} 'Username for:')
-# username=$(printf '%s\n' "${password_files[@]}" | "$dmenu" -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p 'Username for:')
+if [[ -n $WAYLAND_DISPLAY ]]; then
+    # DMENU="wmenu"
+    username=$(printf '%s\n' "${password_files[@]}" | wmenu -i -l 10 -f 'IosevkaTerm_IlovePlus 17' -p 'Username for:')
+	xdotool="ydotool type --file -"
+elif [[ -n $DISPLAY ]]; then
+    DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
+    username=$(printf '%s\n' "${password_files[@]}" | ${DMENU} 'Username for:')
+	xdotool="xdotool type --clearmodifiers --file -"
+else
+	echo "Error: No Wayland or X11 display detected" >&2
+	exit 1
+fi
 
 [[ -n $username ]] || exit
 
@@ -60,10 +56,12 @@ if [[ -z $got_username ]]; then
 else
     for_notify=$(echo $username | cut -d "/" -f2)
     echo $got_username | xclip -selection clipboard
+    echo $got_username | wl-copy # Wayland
     notify-send -t 5000 -i dialog-information "Copied $for_notify to clipboard.
     Will clear in 45 seconds."
     sleep 45
     cat /dev/null | xclip -sel clip
+    wl-copy -c # Wayland
     notify-send -t 5000 -i dialog-information "Cleared."
 fi
 
