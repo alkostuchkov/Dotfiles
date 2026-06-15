@@ -123,7 +123,7 @@ gestures {
 // https://niri-wm.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 4
+    gaps 5
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -398,6 +398,20 @@ animations {
 // Find more information on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Window-Rules
 
+// "1  ", "2  ", "3  ", "4  ", "5  ", "6  ", "7  ", "8  ", "9  " 
+// workspace " "
+// workspace " "
+// workspace " "
+// workspace " "
+// workspace " "
+// window-rule {
+// match app-id="org.telegram.desktop"
+// open-on-workspace " "
+// open-focused true
+// // match at-startup=true // only uses this rule when the app is autostarted, not when i manually start it. useful for browser
+// }
+// "1  ", "2  ", "3  ", "4  ", "5  ", "6  ", "7  ", "8  ", "9  " 
+
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
 window-rule {
@@ -427,10 +441,17 @@ window-rule {
     match app-id="gnome-font-viewer"
     match app-id="qt6ct"
     match app-id="qt5ct"
-    match app-id="deadbeef"
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
 }
+
+window-rule {
+    match app-id="deadbeef"
+    default-column-width { fixed 1120; } // { proportion <0.0-1.0>; }
+    default-window-height { fixed 525; }
+    open-floating true
+}
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
@@ -534,6 +555,7 @@ binds {
     // You can also move the mouse into the top-left hot corner,
     // or do a four-finger swipe up on a touchpad.
     Mod+O repeat=false { toggle-overview; }
+    Mod+X hotkey-overlay-title="Show clipboard: CopyQ" { spawn-sh "copyq show"; }
 
     // Mod+Q repeat=false { close-window; }
     Mod+Shift+c repeat=false { close-window; }
