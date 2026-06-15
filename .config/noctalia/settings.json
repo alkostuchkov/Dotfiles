@@ -276,7 +276,7 @@
         ]
     },
     "colorSchemes": {
-        "darkMode": true,
+        "darkMode": false,
         "generationMethod": "tonal-spot",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
@@ -368,8 +368,8 @@
         "dockType": "attached",
         "enabled": true,
         "floatingRatio": 1,
-        "groupApps": false,
-        "groupClickAction": "cycle",
+        "groupApps": true,
+        "groupClickAction": "list",
         "groupContextMenuMode": "extended",
         "groupIndicatorStyle": "dots",
         "inactiveIndicators": false,

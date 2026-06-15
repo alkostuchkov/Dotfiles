@@ -682,21 +682,21 @@ globalkeys = gears.table.join(
     { description = "Brightness -5%", group = "hotkeys" }),
 
   -- ALSA volume control
-  -- awful.key({ super }, "F9", function() awful.spawn(HOME .. "/.myScripts/volume_up.sh") end,
-  --   { description = "Volume Up", group = "hotkeys" }),
-  -- awful.key({ super }, "F8", function() awful.spawn(HOME .. "/.myScripts/volume_down.sh") end,
-  --   { description = "Volume Down", group = "hotkeys" }),
-  -- awful.key({ super }, "F7", function() awful.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle") end,
-  --   { description = "Volume Mute", group = "hotkeys" }),
-  awful.key({ super }, "F9", function() awful.spawn(HOME .. "/.myScripts/volume.sh up") end,
+  awful.key({ super }, "F9", function() awful.spawn(HOME .. "/.myScripts/volume_up.sh") end,
     { description = "Volume Up", group = "hotkeys" }),
-  awful.key({ super }, "F8", function() awful.spawn(HOME .. "/.myScripts/volume.sh down") end,
+  awful.key({ super }, "F8", function() awful.spawn(HOME .. "/.myScripts/volume_down.sh") end,
     { description = "Volume Down", group = "hotkeys" }),
-  awful.key({ super }, "F7", function() awful.spawn(HOME .. "/.myScripts/volume.sh mute") end,
+  awful.key({ super }, "F7", function() awful.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle") end,
     { description = "Volume Mute", group = "hotkeys" }),
-  -- XF86AudioRaiseVolume
-  -- XF86AudioLowerVolume
-  -- XF86AudioMute
+  -- awful.key({ super }, "F9", function() awful.spawn(HOME .. "/.myScripts/volume.sh up") end,
+  --   { description = "Volume Up", group = "hotkeys" }),
+  -- awful.key({ super }, "F8", function() awful.spawn(HOME .. "/.myScripts/volume.sh down") end,
+  --   { description = "Volume Down", group = "hotkeys" }),
+  -- awful.key({ super }, "F7", function() awful.spawn(HOME .. "/.myScripts/volume.sh mute") end,
+  --   { description = "Volume Mute", group = "hotkeys" }),
+  -- -- XF86AudioRaiseVolume
+  -- -- XF86AudioLowerVolume
+  -- -- XF86AudioMute
 
   -- <ALT> + <F1-F12>
   awful.key({ alt }, "F4", function() awful.spawn(HOME .. "/Programs/ByeBye/ByeBye") end,
