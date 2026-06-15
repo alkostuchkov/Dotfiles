@@ -30,7 +30,7 @@
     "audio": {
         "mprisBlacklist": [
         ],
-        "preferredPlayer": "",
+        "preferredPlayer": "deadbeef",
         "spectrumFrameRate": 30,
         "spectrumMirrored": true,
         "visualizerType": "linear",
@@ -78,6 +78,22 @@
         "widgetSpacing": 6,
         "widgets": {
             "center": [
+                {
+                    "compactMode": false,
+                    "hideMode": "hidden",
+                    "hideWhenIdle": false,
+                    "id": "MediaMini",
+                    "maxWidth": 145,
+                    "panelShowAlbumArt": true,
+                    "scrollingMode": "hover",
+                    "showAlbumArt": true,
+                    "showArtistFirst": true,
+                    "showProgressRing": true,
+                    "showVisualizer": false,
+                    "textColor": "none",
+                    "useFixedWidth": false,
+                    "visualizerType": "linear"
+                },
                 {
                     "colorizeIcons": false,
                     "hideMode": "hidden",
@@ -127,6 +143,19 @@
                 {
                     "colorizeIcons": false,
                     "hideMode": "hidden",
+                    "iconScale": 0.8,
+                    "id": "Taskbar",
+                    "maxTaskbarWidth": 40,
+                    "onlyActiveWorkspaces": true,
+                    "onlySameOutput": true,
+                    "showPinnedApps": true,
+                    "showTitle": false,
+                    "smartWidth": true,
+                    "titleWidth": 120
+                },
+                {
+                    "colorizeIcons": false,
+                    "hideMode": "hidden",
                     "id": "ActiveWindow",
                     "maxWidth": 145,
                     "scrollingMode": "hover",
@@ -134,22 +163,6 @@
                     "showText": true,
                     "textColor": "none",
                     "useFixedWidth": false
-                },
-                {
-                    "compactMode": false,
-                    "hideMode": "hidden",
-                    "hideWhenIdle": false,
-                    "id": "MediaMini",
-                    "maxWidth": 145,
-                    "panelShowAlbumArt": true,
-                    "scrollingMode": "hover",
-                    "showAlbumArt": true,
-                    "showArtistFirst": true,
-                    "showProgressRing": true,
-                    "showVisualizer": false,
-                    "textColor": "none",
-                    "useFixedWidth": false,
-                    "visualizerType": "linear"
                 }
             ],
             "right": [
@@ -208,7 +221,7 @@
                 },
                 {
                     "applyToAllMonitors": false,
-                    "displayMode": "onhover",
+                    "displayMode": "alwaysShow",
                     "iconColor": "none",
                     "id": "Brightness",
                     "textColor": "none"
