@@ -22,6 +22,7 @@ language-servers = ["scls"]
 name = "stub"
 scope = "text.stub"
 file-types = ["txt", "config", "conf", "kv", "spec"]
+# file-types = ["txt", "config", "conf", "kv", "spec", "kdl"]
 # file-types = ["txt", "toml", "config"]
 shebangs = []
 roots = []

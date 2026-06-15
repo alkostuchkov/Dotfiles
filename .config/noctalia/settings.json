@@ -98,16 +98,6 @@
             ],
             "left": [
                 {
-                    "colorizeSystemIcon": "none",
-                    "colorizeSystemText": "none",
-                    "customIconPath": "",
-                    "enableColorization": false,
-                    "icon": "rocket",
-                    "iconColor": "none",
-                    "id": "Launcher",
-                    "useDistroLogo": false
-                },
-                {
                     "characterCount": 2,
                     "colorizeIcons": false,
                     "emptyColor": "secondary",
@@ -221,10 +211,10 @@
                     "deviceNativePath": "__default__",
                     "displayMode": "graphic-clean",
                     "hideIfIdle": false,
-                    "hideIfNotDetected": true,
+                    "hideIfNotDetected": false,
                     "id": "Battery",
                     "showNoctaliaPerformance": false,
-                    "showPowerProfiles": false
+                    "showPowerProfiles": true
                 },
                 {
                     "clockColor": "none",
@@ -280,13 +270,13 @@
         ]
     },
     "colorSchemes": {
-        "darkMode": false,
+        "darkMode": true,
         "generationMethod": "tonal-spot",
         "manualSunrise": "06:30",
-        "manualSunset": "18:30",
+        "manualSunset": "19:30",
         "monitorForColors": "",
         "predefinedScheme": "Tokyo Night",
-        "schedulingMode": "location",
+        "schedulingMode": "manual",
         "syncGsettings": true,
         "useWallpaperColors": false
     },
