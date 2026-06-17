@@ -5,6 +5,7 @@
 options=(
 "Kvantum - kvantummanager"
 "Appearance - lxappearance"
+"nwg-look - nwg-look"
 "Display - lxrandr"
 "Sound - pavucontrol"
 "Sound - pavucontrol-qt"

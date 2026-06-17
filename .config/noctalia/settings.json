@@ -87,13 +87,13 @@
                     "onlyActiveWorkspaces": true,
                     "onlySameOutput": true,
                     "showPinnedApps": true,
-                    "showTitle": false,
+                    "showTitle": true,
                     "smartWidth": true,
                     "titleWidth": 120
                 },
                 {
                     "id": "Spacer",
-                    "width": 90
+                    "width": 200
                 }
             ],
             "left": [
@@ -663,11 +663,15 @@
         "activeTemplates": [
             {
                 "enabled": true,
-                "id": "gtk"
+                "id": "niri"
             },
             {
                 "enabled": true,
-                "id": "niri"
+                "id": "qt"
+            },
+            {
+                "enabled": true,
+                "id": "gtk"
             }
         ],
         "enableUserTheming": false

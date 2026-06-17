@@ -123,7 +123,7 @@ gestures {
 // https://niri-wm.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 5
+    gaps 7
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -302,6 +302,7 @@ layout {
 
 // spawn-sh-at-startup "swayidle" "-w" \
 //   "timeout" "600" "niri msg action power-off-monitors"
+// spawn-at-startup "env" "QT_QPA_PLATFORMTHEME=gtk3" "qs" "-c" "noctalia-shell"
 spawn-at-startup "qs" "-c" "noctalia-shell"
 spawn-at-startup "copyq --start server"
 spawn-at-startup "/usr/libexec/xfce-polkit" // for Void
@@ -505,6 +506,7 @@ binds {
     Ctrl+Alt+R hotkey-overlay-title="Run programs:" { spawn "~/.myScripts/dmscripts/dm-run-programs.sh"; }
     Ctrl+Alt+S hotkey-overlay-title="Run scripts:" { spawn "~/.myScripts/dmscripts/dm-run-scripts.sh"; }
     Ctrl+Alt+X hotkey-overlay-title="Run scripts:" { spawn "~/.myScripts/dmscripts/dm-system-exit.sh"; }
+    Ctrl+Alt+Q hotkey-overlay-title="Session menu:" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
     // My applications <SUPER + ALT> + KEY
     Mod+Alt+SPACE hotkey-overlay-title="Touchpad On/Off" { spawn "~/.myScripts/touchpadONOFF.sh"; }
