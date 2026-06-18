@@ -156,18 +156,18 @@
                     "iconPosition": "left",
                     "id": "CustomButton",
                     "ipcIdentifier": "",
-                    "leftClickExec": "",
-                    "leftClickUpdateText": false,
+                    "leftClickExec": "/home/alexander/.config/niri/scripts/show_updates.sh",
+                    "leftClickUpdateText": true,
                     "maxTextLength": {
                         "horizontal": 10,
                         "vertical": 10
                     },
-                    "middleClickExec": "",
-                    "middleClickUpdateText": false,
+                    "middleClickExec": "alacritty --hold -e sudo xbps-install -Su",
+                    "middleClickUpdateText": true,
                     "parseJson": false,
                     "rightClickExec": "",
                     "rightClickUpdateText": false,
-                    "showExecTooltip": true,
+                    "showExecTooltip": false,
                     "showIcon": true,
                     "showTextTooltip": true,
                     "textCollapse": "",
@@ -305,14 +305,14 @@
         ]
     },
     "colorSchemes": {
-        "darkMode": false,
+        "darkMode": true,
         "generationMethod": "tonal-spot",
         "manualSunrise": "06:30",
         "manualSunset": "19:30",
         "monitorForColors": "",
         "predefinedScheme": "Tokyo Night",
         "schedulingMode": "manual",
-        "syncGsettings": true,
+        "syncGsettings": false,
         "useWallpaperColors": false
     },
     "controlCenter": {

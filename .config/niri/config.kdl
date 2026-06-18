@@ -310,10 +310,12 @@ spawn-at-startup "/usr/bin/python /usr/bin/udiskie"
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 spawn-sh-at-startup "dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus" // for fnott notifications
+
 spawn-sh-at-startup "set DBUS_SESSION_BUS_ADDRESS (dbus-launch)"
 spawn-sh-at-startup "wireplumber"
 spawn-sh-at-startup "pipewire"
 spawn-sh-at-startup "pipewire-pulse"
+
 spawn-sh-at-startup "copyq --start server"
 spawn-sh-at-startup "conky -c .myScripts/conky/conkyrc"
 

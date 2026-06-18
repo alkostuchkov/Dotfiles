@@ -15,6 +15,7 @@ feature_citations = false            # enable citation completion (only on `cita
 [[language]]
 name = "git-commit"
 language-servers = ["scls"]
+indent = { tab-width = 2, unit = "  " }
 
 # introduce a new language to enable completion on any doc
 # by forcing set language with :set-language stub
@@ -22,6 +23,7 @@ language-servers = ["scls"]
 name = "stub"
 scope = "text.stub"
 file-types = ["txt", "config", "conf", "kv", "spec"]
+indent = { tab-width = 4, unit = "    " }
 # file-types = ["txt", "config", "conf", "kv", "spec", "kdl"]
 # file-types = ["txt", "toml", "config"]
 shebangs = []
@@ -35,6 +37,7 @@ name = "python"
 # append language server to existed languages
 language-servers = ["scls", "ruff", "pyright", "pyright-langserver"]
 auto-format = false
+indent = { tab-width = 4, unit = "    " }
 
 [language-server.ruff]
 command = "ruff"
