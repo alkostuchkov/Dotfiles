@@ -78,23 +78,6 @@
         "widgetSpacing": 6,
         "widgets": {
             "center": [
-                {
-                    "colorizeIcons": false,
-                    "hideMode": "hidden",
-                    "iconScale": 0.8,
-                    "id": "Taskbar",
-                    "maxTaskbarWidth": 40,
-                    "onlyActiveWorkspaces": true,
-                    "onlySameOutput": true,
-                    "showPinnedApps": true,
-                    "showTitle": true,
-                    "smartWidth": true,
-                    "titleWidth": 120
-                },
-                {
-                    "id": "Spacer",
-                    "width": 200
-                }
             ],
             "left": [
                 {
@@ -152,7 +135,7 @@
                     "colorizeSystemText": "none",
                     "generalTooltipText": "Available updates:",
                     "hideMode": "alwaysExpanded",
-                    "icon": "brand-onedrive",
+                    "icon": "cloud",
                     "iconPosition": "left",
                     "id": "CustomButton",
                     "ipcIdentifier": "",
@@ -287,6 +270,19 @@
                     "showPowerProfiles": true
                 },
                 {
+                    "colorizeIcons": false,
+                    "hideMode": "hidden",
+                    "iconScale": 0.8,
+                    "id": "Taskbar",
+                    "maxTaskbarWidth": 40,
+                    "onlyActiveWorkspaces": true,
+                    "onlySameOutput": true,
+                    "showPinnedApps": true,
+                    "showTitle": false,
+                    "smartWidth": true,
+                    "titleWidth": 120
+                },
+                {
                     "clockColor": "none",
                     "customFont": "",
                     "formatHorizontal": "HH:mm:ss",
@@ -328,7 +324,7 @@
         "manualSunset": "19:30",
         "monitorForColors": "",
         "predefinedScheme": "Breeze",
-        "schedulingMode": "manual",
+        "schedulingMode": "off",
         "syncGsettings": false,
         "useWallpaperColors": false
     },
