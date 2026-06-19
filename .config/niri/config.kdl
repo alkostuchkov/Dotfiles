@@ -305,7 +305,7 @@ layout {
 // spawn-at-startup "env" "QT_QPA_PLATFORMTHEME=gtk3" "qs" "-c" "noctalia-shell"
 spawn-at-startup "qs" "-c" "noctalia-shell"
 spawn-at-startup "/usr/libexec/xfce-polkit" // for Void
-spawn-at-startup "/usr/bin/python /usr/bin/udiskie"
+spawn-at-startup "/usr/bin/python" "/usr/bin/udiskie"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -316,7 +316,7 @@ spawn-sh-at-startup "wireplumber"
 spawn-sh-at-startup "pipewire"
 spawn-sh-at-startup "pipewire-pulse"
 
-spawn-sh-at-startup "copyq --start server"
+spawn-sh-at-startup "copyq --start-server"
 spawn-sh-at-startup "conky -c .myScripts/conky/conkyrc"
 
 hotkey-overlay {
@@ -475,6 +475,11 @@ window-rule {
     clip-to-geometry true
 }
 
+// Disable Alt(Mod)+` Shift+Alt(Mod)+` (`=grave)
+recent-windows {
+    off
+}
+
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
     // in the end. To find an XKB name for a particular key, you may use a program
@@ -486,12 +491,24 @@ binds {
     // Most actions that you can bind here can also be invoked programmatically with
     // `niri msg action do-something`.
 
+    // Unbinds
+    // grave = `
+    // Alt+Tab         { next-window; }
+    // Alt+Shift+Tab   { previous-window; }
+    // Alt+grave       { next-window     filter="app-id"; }
+    // Alt+Shift+grave { previous-window filter="app-id"; }
+    // Mod+Tab         { next-window; }
+    // Mod+Shift+Tab   { previous-window; }
+    // Mod+grave       { next-window     filter="app-id"; }
+    // Mod+Shift+grave { previous-window filter="app-id"; }
+
     // Mod-Shift-/, which is usually the same as Mod-?,
     // shows a list of important hotkeys.
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
-    Mod+Shift+Q hotkey-overlay-title="Quit out of niri" { quit; }
+    // Mod+Shift+Q hotkey-overlay-title="Quit out of niri" { quit; }
+    Mod+Shift+Q hotkey-overlay-title="Quit out of niri" { quit skip-confirmation=true; }
     // Mod+Shift+E { quit; }
     // Ctrl+Alt+Delete { quit; }
 
@@ -510,6 +527,10 @@ binds {
     Ctrl+Alt+S hotkey-overlay-title="Run scripts:" { spawn "~/.myScripts/dmscripts/dm-run-scripts.sh"; }
     Ctrl+Alt+X hotkey-overlay-title="Run scripts:" { spawn "~/.myScripts/dmscripts/dm-system-exit.sh"; }
     Ctrl+Alt+Q hotkey-overlay-title="Session menu:" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+    Ctrl+Alt+N hotkey-overlay-title="Noctalia center:" { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
+    Ctrl+Alt+Z hotkey-overlay-title="Noctalia settings:" { spawn-sh "qs -c noctalia-shell ipc call settings toggle"; }
+    Ctrl+Alt+D hotkey-overlay-title="Noctalia darkMode:" { spawn-sh "qs -c noctalia-shell ipc call darkMode toggle"; }
+    Ctrl+Alt+V hotkey-overlay-title="Set volume max:" { spawn-sh "amixer -c 1 set Master 100%"; }
 
     // My applications <SUPER + ALT> + KEY
     Mod+Alt+SPACE hotkey-overlay-title="Touchpad On/Off" { spawn "~/.myScripts/touchpadONOFF.sh"; }
@@ -524,9 +545,9 @@ binds {
     Mod+Alt+T hotkey-overlay-title="Telegram" { spawn "~/Programs/Telegram/Telegram" "-- %u"; }
 
     // My applications as Root <SUPER + SHIFT + ALT> + KEY
-    Mod+Shift+Alt+N hotkey-overlay-title="Vifm as Root" { spawn "/.myScripts/runThunarAsRoot.sh"; }
-    Mod+Shift+Alt+Y hotkey-overlay-title="Yazi as Root" { spawn "/.myScripts/runYaziAsRoot.sh"; }
-    Mod+Shift+Alt+V hotkey-overlay-title="Vifm as Root" { spawn "/.myScripts/runVifmAsRoot.sh"; }
+    Mod+Shift+Alt+N hotkey-overlay-title="Vifm as Root" { spawn "~/.myScripts/runThunarAsRoot.sh"; }
+    Mod+Shift+Alt+Y hotkey-overlay-title="Yazi as Root" { spawn "~/.myScripts/runYaziAsRoot.sh"; }
+    Mod+Shift+Alt+V hotkey-overlay-title="Vifm as Root" { spawn "~/.myScripts/runVifmAsRoot.sh"; }
 
     // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     //
@@ -570,7 +591,7 @@ binds {
     // You can also move the mouse into the top-left hot corner,
     // or do a four-finger swipe up on a touchpad.
     Mod+O repeat=false { toggle-overview; }
-    Mod+X hotkey-overlay-title="Show clipboard: CopyQ" { spawn-sh "copyq show"; }
+    Mod+X hotkey-overlay-title="Show clipboard: CopyQ" { spawn-sh "copyq toggle"; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
@@ -756,12 +777,12 @@ binds {
     // * adjust width as a percentage of screen width: "-10%" or "+10%"
     // Pixel sizes use logical, or scaled, pixels. I.e. on an output with scale 2.0,
     // set-column-width "100" will make the column occupy 200 physical screen pixels.
-    Mod+Minus { set-column-width "-10%"; }
-    Mod+Equal { set-column-width "+10%"; }
+    Mod+Minus { set-column-width "-5%"; }
+    Mod+Equal { set-column-width "+5%"; }
 
     // Finer height adjustments when in column with other windows.
-    Mod+Shift+Minus { set-window-height "-10%"; }
-    Mod+Shift+Equal { set-window-height "+10%"; }
+    Mod+Shift+Minus { set-window-height "-5%"; }
+    Mod+Shift+Equal { set-window-height "+5%"; }
 
     // Move the focused window between the floating and the tiling layout.
     Mod+V       { toggle-window-floating; }

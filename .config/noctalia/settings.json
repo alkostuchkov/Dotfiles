@@ -259,24 +259,6 @@
                     "id": "Clock",
                     "tooltipFormat": "dddd, d MMMM",
                     "useCustomFont": false
-                },
-                {
-                    "colorizeDistroLogo": false,
-                    "colorizeSystemIcon": "none",
-                    "colorizeSystemText": "none",
-                    "customIconPath": "",
-                    "enableColorization": false,
-                    "icon": "noctalia",
-                    "id": "ControlCenter",
-                    "useDistroLogo": false
-                },
-                {
-                    "iconColor": "none",
-                    "id": "DarkMode"
-                },
-                {
-                    "iconColor": "none",
-                    "id": "NightLight"
                 }
             ]
         }
@@ -305,7 +287,7 @@
         ]
     },
     "colorSchemes": {
-        "darkMode": true,
+        "darkMode": false,
         "generationMethod": "tonal-spot",
         "manualSunrise": "06:30",
         "manualSunset": "19:30",
