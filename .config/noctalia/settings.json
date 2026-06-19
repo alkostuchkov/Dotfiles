@@ -544,11 +544,11 @@
         "enableMediaToast": false,
         "enabled": true,
         "location": "top_right",
-        "lowUrgencyDuration": 3,
+        "lowUrgencyDuration": 1,
         "monitors": [
             "LVDS-1"
         ],
-        "normalUrgencyDuration": 8,
+        "normalUrgencyDuration": 3,
         "overlayLayer": true,
         "respectExpireTimeout": true,
         "saveToHistory": {
