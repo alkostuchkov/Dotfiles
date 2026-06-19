@@ -172,7 +172,7 @@
                     "showTextTooltip": true,
                     "textCollapse": "",
                     "textCommand": "xbps-install -nuMS | wc -l",
-                    "textIntervalMs": 648000,
+                    "textIntervalMs": 10800000,
                     "textStream": false,
                     "wheelDownExec": "",
                     "wheelDownUpdateText": false,
@@ -214,6 +214,41 @@
                     "id": "Tray",
                     "pinned": [
                     ]
+                },
+                {
+                    "colorizeSystemIcon": "none",
+                    "colorizeSystemText": "none",
+                    "generalTooltipText": "Check Internet Connection",
+                    "hideMode": "alwaysExpanded",
+                    "icon": "heart",
+                    "iconPosition": "left",
+                    "id": "CustomButton",
+                    "ipcIdentifier": "",
+                    "leftClickExec": "",
+                    "leftClickUpdateText": false,
+                    "maxTextLength": {
+                        "horizontal": 10,
+                        "vertical": 10
+                    },
+                    "middleClickExec": "",
+                    "middleClickUpdateText": false,
+                    "parseJson": false,
+                    "rightClickExec": "",
+                    "rightClickUpdateText": false,
+                    "showExecTooltip": false,
+                    "showIcon": false,
+                    "showTextTooltip": true,
+                    "textCollapse": "",
+                    "textCommand": "~/.config/niri/scripts/check_internet_connection.py",
+                    "textIntervalMs": 10000,
+                    "textStream": false,
+                    "wheelDownExec": "",
+                    "wheelDownUpdateText": false,
+                    "wheelExec": "",
+                    "wheelMode": "unified",
+                    "wheelUpExec": "",
+                    "wheelUpUpdateText": false,
+                    "wheelUpdateText": false
                 },
                 {
                     "displayMode": "onhover",
@@ -287,12 +322,12 @@
         ]
     },
     "colorSchemes": {
-        "darkMode": false,
+        "darkMode": true,
         "generationMethod": "tonal-spot",
         "manualSunrise": "06:30",
         "manualSunset": "19:30",
         "monitorForColors": "",
-        "predefinedScheme": "Tokyo Night",
+        "predefinedScheme": "Breeze",
         "schedulingMode": "manual",
         "syncGsettings": false,
         "useWallpaperColors": false
