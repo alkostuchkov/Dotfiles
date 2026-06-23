@@ -59,8 +59,6 @@ show_updates_void() {
 # Show updates for Void Linux.
   updates=$(xbps-install -nuMS | awk '{print $1}')
   # updates=$(xbps-install -nuMS)
-  echo "$updates"
-  echo "$updates" | wc -l
 
   if [[ -z "$updates" ]]; then
     updates_output=
@@ -72,7 +70,8 @@ show_updates_void() {
 
   if [[ $amount_updates -lt 26 ]]; then
     # "" needs for multi-line output!!!
-    notify-send -i software-update-available "Updates" "available: $updates_output"
+    # notify-send -i software-update-available -a "Updates" "available:\n $updates_output"
+    notify-send -i software-update-available -a "Updates" "Available: $amount_updates" "$updates"
   else
     $terminal --hold -e $SHELL -c "echo 'Updates: $updates_output'; sleep 1"
   # $terminal --hold -e echo "Updates: ${updates_output}"
