@@ -59,13 +59,15 @@ show_updates_void() {
 # Show updates for Void Linux.
   updates=$(xbps-install -nuMS | awk '{print $1}')
   # updates=$(xbps-install -nuMS)
+  echo "$updates"
+  echo "$updates" | wc -l
 
   if [[ -z "$updates" ]]; then
     updates_output=
   else
     amount_updates=$(echo "$updates" | wc -l)
-    # updates_output=$(echo -e "$amount_updates\n\n$updates" | awk '{print $1}')
-    updates_output=$(echo -e "$amount_updates\n\n$updates")
+    # # updates_output=$(echo -e "$amount_updates\n\n$updates" | awk '{print $1}')
+    updates_output=$(echo -e "$amount_updates\n\n$updates\n")
   fi
 
   if [[ $amount_updates -lt 26 ]]; then

@@ -49,6 +49,7 @@ name = "fish"
 language-servers = ["scls", "fish-lsp"]
 formatter = { command = "fish_indent" }
 auto-format = false
+indent = { tab-width = 4, unit = "    " }
 
 [language-server.fish-lsp]
 command = "fish-lsp"
@@ -84,6 +85,7 @@ paramType = true
 [[language]]
 name = "bash"
 language-servers = ["scls", "bash-lsp"]
+indent = { tab-width = 4, unit = "    " }
 
 [language-server.bash-lsp]
 command = "bash-language-server"

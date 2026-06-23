@@ -412,7 +412,8 @@ animations {
 // window-rule {
 // match app-id="org.telegram.desktop"
 // open-on-workspace " "
-// open-focused true
+// // open-on-new-workspace
+// open-focused false
 // // match at-startup=true // only uses this rule when the app is autostarted, not when i manually start it. useful for browser
 // }
 // "1  ", "2  ", "3  ", "4  ", "5  ", "6  ", "7  ", "8  ", "9  " 
@@ -595,10 +596,13 @@ binds {
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
     // but you need to manually put each argument in separate "" quotes.
-    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
-    Mod+F3 allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
-    Mod+F2 allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+    // Disabled for niri
+    // XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%+"; }
+    // XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
+    // Mod+F3 allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%+"; }
+    // Mod+F2 allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
+    Mod+F3 allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
+    Mod+F2 allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
