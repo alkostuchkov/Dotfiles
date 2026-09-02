@@ -510,8 +510,8 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
-    // Mod+Shift+Q hotkey-overlay-title="Quit out of niri" { quit; }
-    Mod+Shift+Q hotkey-overlay-title="Quit out of niri" { quit skip-confirmation=true; }
+    Mod+Shift+Q hotkey-overlay-title="Quit out of niri" { quit; }
+    // Mod+Shift+Q hotkey-overlay-title="Quit out of niri" { quit skip-confirmation=true; }
     // Mod+Shift+E { quit; }
     // Ctrl+Alt+Delete { quit; }
 
@@ -529,10 +529,11 @@ binds {
     Ctrl+Alt+R hotkey-overlay-title="Run programs:" { spawn "~/.myScripts/dmscripts/dm-run-programs.sh"; }
     Ctrl+Alt+S hotkey-overlay-title="Run scripts:" { spawn "~/.myScripts/dmscripts/dm-run-scripts.sh"; }
     Ctrl+Alt+X hotkey-overlay-title="Run scripts:" { spawn "~/.myScripts/dmscripts/dm-system-exit.sh"; }
-    Ctrl+Alt+Q hotkey-overlay-title="Session menu:" { spawn-sh "noctalia msg session"; }
+
+    Ctrl+Alt+Q hotkey-overlay-title="Session menu:" { spawn-sh "noctalia msg panel-toggle session"; }
     Ctrl+Alt+N hotkey-overlay-title="Noctalia center:" { spawn-sh "noctalia msg panel-toggle control-center"; }
     Ctrl+Alt+Z hotkey-overlay-title="Noctalia settings:" { spawn-sh "noctalia msg settings-toggle"; }
-    Ctrl+Alt+D hotkey-overlay-title="Noctalia darkMode:" { spawn-sh "noctalia msg darkMode toggle"; }
+    Ctrl+Alt+D hotkey-overlay-title="Noctalia theme-mode:" { spawn-sh "noctalia msg theme-mode-toggle"; }
     Mod+Shift+Alt+R hotkey-overlay-title="Config reload:" { spawn-sh "noctalia msg config-reload"; }
     // Ctrl+Alt+Q hotkey-overlay-title="Session menu:" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
     // Ctrl+Alt+N hotkey-overlay-title="Noctalia center:" { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
@@ -600,28 +601,37 @@ binds {
     // Mod+F11 allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media next"; }
     // Mod+F12 allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media pause"; }
     //BUG:
-    XF86AudioPlay allow-when-locked=true { spawn-sh "noctalia msg media playPause"; }
+    XF86AudioPlay allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
     XF86AudioStop allow-when-locked=true { spawn-sh "noctalia msg media stop"; }
     XF86AudioPrev allow-when-locked=true { spawn-sh "noctalia msg media previous"; }
     XF86AudioNext allow-when-locked=true { spawn-sh "noctalia msg media next"; }
-    Pause allow-when-locked=true { spawn-sh "noctalia msg media pause"; }
+    Pause allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
 
-    Mod+F10 allow-when-locked=true { spawn-sh "noctalia msg media playPause"; }
+    Mod+F10 allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
     Mod+F9 allow-when-locked=true { spawn-sh "noctalia msg media stop"; }
     Mod+F8 allow-when-locked=true { spawn-sh "noctalia msg media previous"; }
     Mod+F11 allow-when-locked=true { spawn-sh "noctalia msg media next"; }
-    Mod+F12 allow-when-locked=true { spawn-sh "noctalia msg media pause"; }
+    Mod+F12 allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
 
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
     // but you need to manually put each argument in separate "" quotes.
     // Disabled for niri
-    // XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%+"; }
-    // XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
-    // Mod+F3 allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%+"; }
-    // Mod+F2 allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
-    Mod+F3 allow-when-locked=true { spawn-sh "noctalia msg brightness up"; }
-    Mod+F2 allow-when-locked=true { spawn-sh "noctalia msg brightness down"; }
+    // XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "set" "5%+"; }
+    // XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "set" "5%-"; }
+    // XF86MonBrightnessUp { spawn-sh "noctalia msg brightness-up"; }
+    // XF86MonBrightnessDown { spawn-sh "noctalia msg brightness-down"; }
+    XF86MonBrightnessUp { spawn-sh "~/.myScripts/brightness_up.sh"; }
+    XF86MonBrightnessDown { spawn-sh "~/.myScripts/brightness_down.sh"; }
+
+    Mod+F3 allow-when-locked=true { spawn "~/.myScripts/brightness_up.sh"; }
+    Mod+F2 allow-when-locked=true { spawn "~/.myScripts/brightness_down.sh"; }
+    // Mod+F3 allow-when-locked=true { spawn "brightnessctl" "set" "5%+"; }
+    // Mod+F2 allow-when-locked=true { spawn "brightnessctl" "set" "5%-"; }
+
+    // Mod+F3 allow-when-locked=true { spawn-sh "noctalia msg brightness-up"; }
+    // Mod+F2 allow-when-locked=true { spawn-sh "noctalia msg brightness-down"; }
+
     // Mod+F3 allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
     // Mod+F2 allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
 
@@ -630,6 +640,7 @@ binds {
     // or do a four-finger swipe up on a touchpad.
     Mod+O repeat=false { toggle-overview; }
     Mod+X hotkey-overlay-title="Show clipboard: CopyQ" { spawn-sh "copyq toggle"; }
+    Mod+Print hotkey-overlay-title="Screenshot of region" { spawn-sh "noctalia msg screenshot-region"; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }

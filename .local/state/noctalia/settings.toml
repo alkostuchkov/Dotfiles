@@ -7,12 +7,10 @@ end = [
     "keyboard_layout",
     "volume",
     "brightness",
+    "network",
     "tray",
     "clipboard",
-    "network",
     "battery",
-    "control-center",
-    "notifications",
     "clock",
     "session"
 ]
@@ -21,6 +19,19 @@ margin_edge = 7
 margin_ends = 7
 scale = 1.1000000089406967
 start = [ "launcher", "workspaces", "active_window", "media" ]
+
+# [brightness]
+# enable_ddcutil = false
+# ignore_mmids = []
+# minimum_brightness = 0.0
+# sync_all_monitors = false
+#
+#     [brightness.monitor.DP-1]
+#     backend = "ddcutil"
+#
+#     [brightness.monitor.eDP-1]
+#     backend = "backlight"
+#     backlight_device = "radeon_bl0"
 
 [calendar]
 enabled = true
@@ -81,6 +92,7 @@ ui_scale = 1.300000011920929
 
 [theme]
 builtin = "Tokyo-Night"
+mode = "dark"
 
 [wallpaper]
 directory = "/home/alexander/Pictures/Wallpapers/NewWallpapers"
