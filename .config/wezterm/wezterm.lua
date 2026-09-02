@@ -46,7 +46,7 @@ config.colors = my_colors
 --   { weight = "Regular", italic = false }
 -- )
 -- config.font = wezterm.font("Monoid Nerd Font")
--- config.font = wezterm.font("JetBrainsMono Nerd Font")
+config.font = wezterm.font("JetBrainsMono Nerd Font")
 -- config.font = wezterm.font("JetBrainsMono NF Light")
 -- config.font = wezterm.font("IosevkaTerm_JBMono")
 -- config.font = wezterm.font("IosevkaTerm_IlovePlus")
@@ -88,32 +88,33 @@ config.colors = my_colors
 --   },
 -- }
 
-config.font = wezterm.font { family = "mplus Nerd Font" }
-config.font_rules = {
-  {
-    intensity = "Bold",
-    italic = true,
-    font = wezterm.font {
-      family = "UbuntuMono Nerd Font",
-      weight = "Bold",
-      style = "Italic",
-    },
-  },
-  {
-    intensity = "Normal",
-    italic = true,
-    font = wezterm.font {
-      family = "UbuntuMono Nerd Font",
-      style = "Italic",
-    },
-  },
-}
+-- config.font = wezterm.font { family = "mplus Nerd Font" }
+-- config.font_rules = {
+--   {
+--     intensity = "Bold",
+--     italic = true,
+--     font = wezterm.font {
+--       family = "UbuntuMono Nerd Font",
+--       weight = "Bold",
+--       style = "Italic",
+--     },
+--   },
+--   {
+--     intensity = "Normal",
+--     italic = true,
+--     font = wezterm.font {
+--       family = "UbuntuMono Nerd Font",
+--       style = "Italic",
+--     },
+--   },
+-- }
 
-config.font_size = 17.5
+config.font_size = 16.0
 -- config.line_height = 1.10 -- for Hack Nerd Font
 -- config.line_height = 1.15 -- for Consolas NF
 -- config.line_height = 1.05 -- for Mononoki Nerd Font
-config.line_height = 0.8 -- for Iosevka, mplus Nerd Font
+-- config.line_height = 0.8 -- for Iosevka, mplus Nerd Font
+-- config.line_height = 0.85 -- for Iosevka, mplus Nerd Font
 -- config.cell_width = 1
 
 config.bold_brightens_ansi_colors = true
@@ -149,27 +150,32 @@ config.keys = {
   -- Sessions
   {
       key = "s",
-      mods = "ALT",
+      -- mods = "ALT",
+      mods = "LEADER",
       action = act { EmitEvent = "save_session" },
   },
   {
       key = "l",
-      mods = "ALT",
+      -- mods = "ALT",
+      mods = "LEADER",
       action = act { EmitEvent = "load_session" },
   },
   {
       key = "r",
-      mods = "ALT",
+      -- mods = "ALT",
+      mods = "LEADER",
       action = act { EmitEvent = "restore_session" },
   },
   {
       key = "d",
-      mods = "CTRL|SHIFT",
+      -- mods = "CTRL|SHIFT",
+      mods = "LEADER",
       action = act { EmitEvent = "delete_session" },
   },
   {
       key = "e",
-      mods = "CTRL|SHIFT",
+      -- mods = "CTRL|SHIFT",
+      mods = "LEADER",
       action = act { EmitEvent = "edit_session" },
   },
   -- Rename current workspace

@@ -17,15 +17,16 @@ unfocused_hollow = true
 TERM = "xterm-256color"
 
 [font]
-size = 16.0
+size = 18.0
+# size = 16.0 # JetBrainsMono Nerd Font
 # size = 17.5 # for IosevkaTerm_IloveModern
 
 [font.bold]
-# family = "mplus Nerd Font"
+family = "mplus Nerd Font"
 # family = "Sarasa Mono SC Nerd"
 # family = "Consolas NF"
 # family = "FiraMono Nerd Font"
-family = "JetBrainsMono Nerd Font"
+# family = "JetBrainsMono Nerd Font"
 # family = "FiraCode Nerd Font"
 # family = "Fira Mono"
 # family = "IosevkaTerm_IloveModern"
@@ -34,31 +35,31 @@ style = "Bold"
 
 [font.bold_italic]
 # family = "mplus Nerd Font"
-# family = "UbuntuMono Nerd Font"
+family = "UbuntuMono Nerd Font"
 # family = "Sarasa Mono SC Nerd"
 # style = "Semibold Italic"
 # family = "Consolas NF"
-family = "JetBrainsMono Nerd Font"
+# family = "JetBrainsMono Nerd Font"
 # family = "Fira Mono"
 # family = "IosevkaTerm_IloveModern"
 style = "Bold Italic"
 
 [font.italic]
 # family = "mplus Nerd Font"
-# family = "UbuntuMono Nerd Font"
+family = "UbuntuMono Nerd Font"
 # family = "Sarasa Mono SC Nerd"
 # family = "Consolas NF"
-family = "JetBrainsMono Nerd Font"
+# family = "JetBrainsMono Nerd Font"
 # family = "Fira Mono"
 # family = "IosevkaTerm_IloveModern"
 style = "Italic"
 
 [font.normal]
-# family = "mplus Nerd Font"
+family = "mplus Nerd Font"
 # family = "Sarasa Mono SC Nerd"
 # family = "Consolas NF"
 # family = "FiraMono Nerd Font"
-family = "JetBrainsMono Nerd Font"
+# family = "JetBrainsMono Nerd Font"
 # family = "FiraCode Nerd Font"
 # family = "Fira Mono"
 # family = "IosevkaTerm_IloveModern"
@@ -67,8 +68,8 @@ style = "Regular"
 
 [font.offset]
 x = 0
-y = 0
-# y = -6 # mplus Nerd Font
+# y = 0
+y = -4 # mplus Nerd Font
 # y = -3 # Sarasa Mono SC Nerd
 # y = -2 # JetBrainsMono Nerd Font
 # y = 2 # Consolas NF

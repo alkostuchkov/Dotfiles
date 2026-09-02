@@ -68,7 +68,8 @@ show_updates_void() {
     updates_output=$(echo -e "$amount_updates\n\n$updates\n")
   fi
 
-  if [[ $amount_updates -lt 26 ]]; then
+  # if [[ $amount_updates -lt 26 ]]; then
+  if [[ $amount_updates -lt 7 ]]; then
     # "" needs for multi-line output!!!
     # notify-send -i software-update-available -a "Updates" "available:\n $updates_output"
     notify-send -i software-update-available -a "Updates" "Available: $amount_updates" "$updates"
