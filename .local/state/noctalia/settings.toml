@@ -1,8 +1,9 @@
 [bar.default]
-center = []
+center = [ "media" ]
 end = [
     "Updates",
     "cpu",
+    "temp",
     "sysmon",
     "keyboard_layout",
     "volume",
@@ -11,27 +12,20 @@ end = [
     "tray",
     "clipboard",
     "battery",
-    "clock",
-    "session"
+    "date",
+    "clock"
 ]
 font_family = "Ubuntu"
 margin_edge = 7
 margin_ends = 7
 scale = 1.1000000089406967
-start = [ "launcher", "workspaces", "active_window", "media" ]
+start = [ "workspaces", "taskbar", "active_window" ]
 
-# [brightness]
-# enable_ddcutil = false
-# ignore_mmids = []
-# minimum_brightness = 0.0
-# sync_all_monitors = false
-#
-#     [brightness.monitor.DP-1]
-#     backend = "ddcutil"
-#
-#     [brightness.monitor.eDP-1]
-#     backend = "backlight"
-#     backlight_device = "radeon_bl0"
+    [bar.default.dead_zone]
+    command = "noctalia msg panel-toggle launcher"
+    middle_command = "exec kitty"
+    scroll_down_command = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05- -l 1.0"
+    scroll_up_command = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"
 
 [calendar]
 enabled = true
@@ -79,6 +73,9 @@ widget_order = [ "lockscreen-login-box@LVDS-1" ]
         show_login_button = true
         show_password_hint = true
 
+[nightlight]
+enabled = true
+
 [shell]
 font_family = "Ubuntu"
 settings_show_advanced = true
@@ -104,18 +101,41 @@ directory = "/home/alexander/Pictures/Wallpapers/NewWallpapers"
     path = "/home/alexander/Pictures/Wallpapers/NewWallpapers/0314.jpg"
 
 [widget.Updates]
+capsule = true
 command = "/home/alexander/.config/niri/scripts/show_updates.sh"
 glyph = "cloud"
 middle_command = "alacritty --hold -e sudo xbps-install -Su"
 tooltip = "Available updates"
 type = "custom_button"
 
+[widget.active_window]
+capsule = true
+
+[widget.audio_visualizer]
+capsule = true
+
 [widget.battery]
+capsule = true
 display_mode = "graphic"
 hide_when_full = true
 show_label = false
 
+[widget.brightness]
+capsule = true
+
+[widget.clock]
+capsule = true
+format = "{:%H:%M:%S}"
+
+[widget.cpu]
+capsule = true
+
+[widget.date]
+capsule = true
+format = "{:%d %b %y, %a}"
+
 [widget.keyboard_layout]
+capsule = true
 display = "full"
 font_family = "Ubuntu"
 glyph = "keyboard-filled"
@@ -127,7 +147,12 @@ show_icon = false
     Russian = "RU"
 
 [widget.media]
+capsule = true
 font_family = "Ubuntu"
+hide_when_no_media = true
+max_length = 120
+min_length = 70
+title_scroll = "on_hover"
 
 [widget.network]
 show_label = false
@@ -135,5 +160,19 @@ show_label = false
 [widget.notifications]
 hide_when_no_unread = true
 
+[widget.session]
+capsule = true
+
 [widget.sysmon]
+capsule = true
 stat = "ram_pct"
+
+[widget.taskbar]
+capsule = true
+only_active_workspace = true
+
+[widget.temp]
+capsule = true
+
+[widget.volume]
+capsule = true

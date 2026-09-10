@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=0.1.0
+Type=Application
+Name=Роднае_слова
+Icon=/home/alexander/Programs/Роднае_слова/nativeword.ico
+Exec=/home/alexander/Programs/Роднае_слова/Роднае_слова
+Path=/home/alexander/Programs/Роднае_слова/
+Comment=NativeWord
+GenericName=NativeWord
+Keywords=NativeWord
+Categories=Office
+Terminal=false
+NoDisplay=false
