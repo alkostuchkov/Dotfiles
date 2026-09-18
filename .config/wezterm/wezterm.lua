@@ -46,7 +46,8 @@ config.colors = my_colors
 --   { weight = "Regular", italic = false }
 -- )
 -- config.font = wezterm.font("Monoid Nerd Font")
-config.font = wezterm.font("JetBrainsMono Nerd Font")
+-- config.font = wezterm.font("JetBrainsMono Nerd Font")
+config.font = wezterm.font("UbuntuMono Nerd Font")
 -- config.font = wezterm.font("JetBrainsMono NF Light")
 -- config.font = wezterm.font("IosevkaTerm_JBMono")
 -- config.font = wezterm.font("IosevkaTerm_IlovePlus")
@@ -109,9 +110,9 @@ config.font = wezterm.font("JetBrainsMono Nerd Font")
 --   },
 -- }
 
-config.font_size = 16.0
+config.font_size = 18.5
 -- config.line_height = 1.10 -- for Hack Nerd Font
--- config.line_height = 1.15 -- for Consolas NF
+config.line_height = 1.15 -- for Consolas NF
 -- config.line_height = 1.05 -- for Mononoki Nerd Font
 -- config.line_height = 0.8 -- for Iosevka, mplus Nerd Font
 -- config.line_height = 0.85 -- for Iosevka, mplus Nerd Font
