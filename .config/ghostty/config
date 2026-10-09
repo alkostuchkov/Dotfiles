@@ -25,20 +25,38 @@
 
 gtk-titlebar = false
 
-theme = Cobalt2
+# theme = Cobalt2_default
+theme = Monokai_Classic
 
-# font-family = JetBrainsMono Nerd Font
-# font-family-bold = JetBrainsMono Nerd Font
-# font-family-italic = JetBrainsMono Nerd Font
-# font-family-bold-italic = JetBrainsMono Nerd Font
-font-family = IosevkaTerm_IloveModern
-font-family-bold = IosevkaTerm_IloveModern
-font-family-italic = IosevkaTerm_IloveModern
-font-family-bold-italic = IosevkaTerm_IloveModern
+# font-family = CaskaydiaMono NF
+# font-family-bold = CaskaydiaMono NF
+# font-family-italic = CaskaydiaMono NF
+# font-family-bold-italic = CaskaydiaMono NF
+
+# font-family = UbuntuMono Nerd Font
+# font-family-bold = UbuntuMono Nerd Font
+# font-family-italic = UbuntuMono Nerd Font
+# font-family-bold-italic = UbuntuMono Nerd Font
+
+font-family = JetBrainsMono Nerd Font
+font-family-bold = JetBrainsMono Nerd Font
+font-family-italic = JetBrainsMono Nerd Font
+font-family-bold-italic = JetBrainsMono Nerd Font
+
+# font-family = IosevkaTerm_IloveModern
+# font-family-bold = IosevkaTerm_IloveModern
+# font-family-italic = IosevkaTerm_IloveModern
+# font-family-bold-italic = IosevkaTerm_IloveModern
+
 # font-family = IosevkaTerm_IlovePlus
 # font-family-bold = IosevkaTerm_IlovePlus
 # font-family-italic = IosevkaTerm_IlovePlus
 # font-family-bold-italic = IosevkaTerm_IlovePlus
+
+# font-family = IosevkaFixed_IlovePlus_L
+# font-family-bold = IosevkaFixed_IlovePlus_L
+# font-family-italic = IosevkaFixed_IlovePlus_L
+# font-family-bold-italic = IosevkaFixed_IlovePlus_L
 
 # font-family = mplus Nerd Font
 # font-family-bold = mplus Nerd Font
@@ -57,8 +75,18 @@ font-style-bold-italic = Bold-Italic
 
 # font-style = Light
 # font-style-bold = SemiBold
-# font-style-italic = Italic
+# font-style-italic = Light Italic
 # font-style-bold-italic = SemiBold Italic
+
+# font-style = ExtraLight
+# font-style-bold = Regular
+# font-style-italic = ExtraLight Italic
+# font-style-bold-italic = Italic
+
+# font-style = ExtraLight
+# font-style-bold = Light
+# font-style-italic = ExtraLight Italic
+# font-style-bold-italic = Light Italic
 
 font-feature = -calt
 font-feature = -liga
@@ -74,7 +102,10 @@ font-feature = -dlig
 # font-style-italic = Italic
 # font-style-bold-italic = Bold-Italic
 
-font-size = 17.5
+# font-size = 18.5
+font-size = 16.5
+
+# adjust-cell-height = +15%
 
 shell-integration-features = no-cursor
 cursor-style = bar

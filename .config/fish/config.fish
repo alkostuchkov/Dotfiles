@@ -10,6 +10,7 @@ set fish_prompt_pwd_dir_length 0
 ###############################################################################
 set HOME (echo /home/$USER)
 set GOPATH "$HOME/go"
+set NVM_DIR "$HOME/.nvm"
 set GHCUP_INSTALL_BASE_PREFIX "$HOME/" # for GHCUP
 # For stack (Haskell) get version of system ghci
 if [ -f "$HOME/.ghcup/bin/ghci" ]
@@ -38,8 +39,9 @@ set PATH $PATH $HOME/.cargo/bin $HOME/.config/vifm/scripts $HOME/.config/emacs/b
 # set EDITOR emacsclient -t -a ''              # $EDITOR use Emacs in terminal
 # set VISUAL emacsclient -c -a emacs           # $VISUAL use Emacs in GUI mode
 
-set EDITOR vim #  vim is either a link to nvim    or just  vim
-set VISUAL gvim # gvim is either a link to nvim-qt or just gvim
+set EDITOR hx #  helix
+# set EDITOR nvim #  vim is either a link to nvim    or just  vim
+# set VISUAL gvim # gvim is either a link to nvim-qt or just gvim
 set TERM xterm-256color
 set TERMINAL wezterm
 set BROWSER firefox
@@ -363,6 +365,7 @@ alias rem="killall emacs || echo 'Emacs server not running'; /usr/bin/emacs --da
 # alias la='ls -la'
 # alias la='ls -lah'
 # alias lf='ls -lFh'
+alias e='hx (find | fzf --preview "cat {}")'
 alias gb="~/.myScripts/gitbare_autoadding_files.sh" # Autoadd files to gitbare (dotfiles) repo
 alias cd='z' # for Zoxide
 alias lse='exa -g --color=always --group-directories-first'
@@ -573,7 +576,7 @@ function fzf_key_bindings
     # eval is used to do shell expansion on paths
     eval set commandline $commandline
 
-    if [ -z $commandline ]
+    if [ -z "$commandline" ]
       # Default to current directory with no --query
       set dir '.'
       set fzf_query ''
