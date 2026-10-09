@@ -319,7 +319,8 @@ spawn-sh-at-startup "pipewire-pulse"
 spawn-sh-at-startup "amixer -c 1 set Master 100%"
 
 spawn-sh-at-startup "copyq --start-server"
-spawn-sh-at-startup "conky -c .myScripts/conky/conkyrc"
+// spawn-sh-at-startup "conky -c .myScripts/conky/conkyrc"
+spawn-sh-at-startup "~/.myScripts/runConky.sh"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.

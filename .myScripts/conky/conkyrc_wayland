@@ -64,7 +64,7 @@ conky.config = {
 
     -- Gap between borders of screen and text (расстояния от левого\правого (верхнего\нижнего) края экрана в пикселах)
     gap_x = 7,
-    gap_y = 25, -- Wayland (niri)
+    gap_y = 0, -- Wayland (niri)
     -- gap_y = 35, -- X11
     --gap_y = 47,
 

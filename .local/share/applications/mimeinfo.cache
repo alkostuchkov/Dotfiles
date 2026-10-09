@@ -100,5 +100,6 @@ x-scheme-handler/ksowpscloudsvr=appimagekit_wps-office-wps.desktop;
 x-scheme-handler/magnet=tixati.desktop;
 x-scheme-handler/org-protocol=emacs_doom.desktop;
 x-scheme-handler/tg=org.telegram.desktop._7cb4463cbfb6d37fa083bc06971fbe43.desktop;
+x-scheme-handler/ton=org.telegram.desktop._7cb4463cbfb6d37fa083bc06971fbe43.desktop;
 x-scheme-handler/tonsite=org.telegram.desktop._7cb4463cbfb6d37fa083bc06971fbe43.desktop;
 x-scheme-handler/viber=appimagekit_Viber.desktop;
