@@ -1179,6 +1179,10 @@ run_once({
   "/usr/libexec/xfce-polkit", -- for Void
   "xrdb " .. HOME .. "/.Xresources",
   "nitrogen --restore",
+  -- "pipewire-pulse",
+  -- "pipewire",
+  -- -- "sleep 1",
+  -- "wireplumber",
   "volumeicon",
   "nm-applet",
   "xfce4-power-manager",
@@ -1188,7 +1192,8 @@ run_once({
   -- "xfce4-clipman",
   -- "$HOME/.myScripts/restore_brightness.sh", -- for HP
   "picom --config " .. HOME .. "/.config/picom/picom.conf",
-  "conky -c " .. HOME .. "/.myScripts/conky/conkyrc",
+  -- "conky -c " .. HOME .. "/.myScripts/conky/conkyrc",
+  HOME .. "/.myScripts/runConky.sh",
   "/usr/bin/python /usr/bin/udiskie",
   "xiccd",
   -- "python /usr/bin/redshift-gtk",
