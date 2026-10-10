@@ -122,7 +122,7 @@ show_label = false
 format = "{:%H:%M:%S}"
 
 [widget.date]
-format = "{:%d %b %y, %a}"
+format = "{:%d %b, %a}"
 
 [widget.keyboard_layout]
 display = "full"

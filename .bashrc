@@ -33,8 +33,9 @@ PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/vifm/scripts:$HOME/Pr
 # export EDITOR="emacsclient -t -a ''"              # $EDITOR use Emacs in terminal
 # export VISUAL="emacsclient -c -a emacs"           # $VISUAL use Emacs in GUI mode
 
-export EDITOR="vim"   #  vim is either a link to nvim    or just  vim
-export VISUAL="gvim"  # gvim is either a link to nvim-qt or just gvim
+export EDITOR="hx"
+# export EDITOR="vim"   #  vim is either a link to nvim    or just  vim
+# export VISUAL="gvim"  # gvim is either a link to nvim-qt or just gvim
 export TERM="xterm-256color"
 export TERMINAL="wezterm"
 export BROWSER="firefox"
@@ -178,6 +179,7 @@ alias stack="stack --resolver ghc-$ghci_ver"
 # alias la='ls -la'
 # alias la='ls -lah'
 # alias lf='ls -lFh'
+alias e='hx (find | fzf --preview "cat {}")'
 alias cd='z'  # for Zoxide
 alias lse='exa -g --color=always --group-directories-first'
 alias lle='lse -l'
