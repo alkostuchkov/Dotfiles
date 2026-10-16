@@ -7,12 +7,27 @@ local config = wezterm.config_builder()
 local sessions = wezterm.plugin.require("https://github.com/abidibo/wezterm-sessions")
 sessions.apply_to_config(config) -- optional, this adds default keybindings
 
-local my_colors = require("colors/Cobalt2")
-config.colors = my_colors
+-- local my_colors = require("colors/Cobalt2")
+-- config.colors = my_colors
 
--- -- my Cobalt2 colorscheme
+-- Choose any variant:
+-- require("colors/monokai-pro").apply_to_config(config, "pro")
+-- require("colors/monokai-pro").apply_to_config(config, "octagon")
+-- require("colors/monokai-pro").apply_to_config(config, "machine")
+-- require("colors/monokai-pro").apply_to_config(config, "ristretto")
+-- require("colors/monokai-pro").apply_to_config(config, "spectrum")
+require("colors/monokai-pro").apply_to_config(config, "classic")
+-- require("colors/monokai-pro").apply_to_config(config, "light")
+
+-- -- config.color_scheme = 'Monokai (base16)'
+-- config.color_scheme = 'Monokai (dark) (terminal.sexy)'
+-- -- config.color_scheme = 'Monokai (light) (terminal.sexy)'
+-- -- config.color_scheme = 'Monokai Pro (Gogh)'
+-- -- config.color_scheme = "Monokai Soda"
+
+-- -- my Monokai-Pro colorscheme
 -- config.colors = {
---   foreground = "#e0e0e0",
+--   foreground = j#e0e0e0",
 --   background = "#213049",
 --   cursor_bg = "#ecf0f1",
 --   cursor_border = "#ecf0f1",
@@ -47,7 +62,7 @@ config.colors = my_colors
 -- )
 -- config.font = wezterm.font("Monoid Nerd Font")
 -- config.font = wezterm.font("JetBrainsMono Nerd Font")
-config.font = wezterm.font("UbuntuMono Nerd Font")
+-- config.font = wezterm.font("UbuntuMono Nerd Font")
 -- config.font = wezterm.font("JetBrainsMono NF Light")
 -- config.font = wezterm.font("IosevkaTerm_JBMono")
 -- config.font = wezterm.font("IosevkaTerm_IlovePlus")
@@ -66,28 +81,28 @@ config.font = wezterm.font("UbuntuMono Nerd Font")
 -- config.font = wezterm.font("Menlo")
 -- config.font = wezterm.font("Source Code Pro")
 
--- -- -- config.font = wezterm.font { family = "FiraMono Nerd Font" }
--- -- -- config.font = wezterm.font { family = "FiraCode Nerd Font" }
--- config.font = wezterm.font { family = "Fira Mono" }
--- config.font_rules = {
---   {
---     intensity = "Bold",
---     italic = true,
---     font = wezterm.font {
---       family = "Fira Mono",
---       weight = "Bold",
---       style = "Italic",
---     },
---   },
---   {
---     intensity = "Normal",
---     italic = true,
---     font = wezterm.font {
---       family = "Fira Mono",
---       style = "Italic",
---     },
---   },
--- }
+-- -- config.font = wezterm.font { family = "FiraMono Nerd Font" }
+-- -- config.font = wezterm.font { family = "FiraCode Nerd Font" }
+config.font = wezterm.font { family = "Fira Mono" }
+config.font_rules = {
+  {
+    intensity = "Bold",
+    italic = true,
+    font = wezterm.font {
+      family = "Fira Mono",
+      weight = "Bold",
+      style = "Italic",
+    },
+  },
+  {
+    intensity = "Normal",
+    italic = true,
+    font = wezterm.font {
+      family = "Fira Mono",
+      style = "Italic",
+    },
+  },
+}
 
 -- config.font = wezterm.font { family = "mplus Nerd Font" }
 -- config.font_rules = {
@@ -110,9 +125,9 @@ config.font = wezterm.font("UbuntuMono Nerd Font")
 --   },
 -- }
 
-config.font_size = 18.5
+config.font_size = 17.0
 -- config.line_height = 1.10 -- for Hack Nerd Font
-config.line_height = 1.15 -- for Consolas NF
+-- config.line_height = 1.15 -- for Consolas NF
 -- config.line_height = 1.05 -- for Mononoki Nerd Font
 -- config.line_height = 0.8 -- for Iosevka, mplus Nerd Font
 -- config.line_height = 0.85 -- for Iosevka, mplus Nerd Font
