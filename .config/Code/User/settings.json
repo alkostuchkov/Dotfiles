@@ -120,7 +120,7 @@
   "window.menuBarVisibility": "toggle",
   // "editor.defaultFormatter": "standard.vscode-standard",
   // "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "workbench.colorTheme": "Cobalt2",
+  "workbench.colorTheme": "Monokai Pro",
   "workbench.iconTheme": "vscode-icons",
   "prettier.bracketSpacing": false,
   "prettier.trailingComma": "none",

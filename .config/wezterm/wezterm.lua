@@ -61,7 +61,7 @@ require("colors/monokai-pro").apply_to_config(config, "classic")
 --   { weight = "Regular", italic = false }
 -- )
 -- config.font = wezterm.font("Monoid Nerd Font")
--- config.font = wezterm.font("JetBrainsMono Nerd Font")
+config.font = wezterm.font("JetBrainsMono Nerd Font")
 -- config.font = wezterm.font("UbuntuMono Nerd Font")
 -- config.font = wezterm.font("JetBrainsMono NF Light")
 -- config.font = wezterm.font("IosevkaTerm_JBMono")
@@ -80,29 +80,30 @@ require("colors/monokai-pro").apply_to_config(config, "classic")
 -- config.font = wezterm.font("Consolas NF")
 -- config.font = wezterm.font("Menlo")
 -- config.font = wezterm.font("Source Code Pro")
+-- config.font = wezterm.font("SauceCodePro Nerd Font Mono")
 
 -- -- config.font = wezterm.font { family = "FiraMono Nerd Font" }
 -- -- config.font = wezterm.font { family = "FiraCode Nerd Font" }
-config.font = wezterm.font { family = "Fira Mono" }
-config.font_rules = {
-  {
-    intensity = "Bold",
-    italic = true,
-    font = wezterm.font {
-      family = "Fira Mono",
-      weight = "Bold",
-      style = "Italic",
-    },
-  },
-  {
-    intensity = "Normal",
-    italic = true,
-    font = wezterm.font {
-      family = "Fira Mono",
-      style = "Italic",
-    },
-  },
-}
+-- config.font = wezterm.font { family = "Fira Mono" }
+-- config.font_rules = {
+--   {
+--     intensity = "Bold",
+--     italic = true,
+--     font = wezterm.font {
+--       family = "Fira Mono",
+--       weight = "Bold",
+--       style = "Italic",
+--     },
+--   },
+--   {
+--     intensity = "Normal",
+--     italic = true,
+--     font = wezterm.font {
+--       family = "Fira Mono",
+--       style = "Italic",
+--     },
+--   },
+-- }
 
 -- config.font = wezterm.font { family = "mplus Nerd Font" }
 -- config.font_rules = {
@@ -125,7 +126,7 @@ config.font_rules = {
 --   },
 -- }
 
-config.font_size = 17.0
+config.font_size = 16.5
 -- config.line_height = 1.10 -- for Hack Nerd Font
 -- config.line_height = 1.15 -- for Consolas NF
 -- config.line_height = 1.05 -- for Mononoki Nerd Font

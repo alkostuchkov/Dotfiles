@@ -91,6 +91,21 @@ indent = { tab-width = 4, unit = "    " }
 command = "bash-language-server"
 args = ["start"]
 
+[[language]]
+name = "rust"
+language-servers = ["scls", "rust-analyzer"]
+auto-format = true
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[language-server.rust-analyzer.config]
+check.command = "clippy"
+cargo.features = "all"
+inlayHints.typeHints.enable = true
+inlayHints.closureReturnTypeHints.enable = "with_block"
+diagnostics.disabled = ["inactive-code"]
+
 # # plain text files
 # [[language]]
 # name = "markdown"
