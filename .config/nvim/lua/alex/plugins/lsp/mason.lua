@@ -37,7 +37,7 @@ return {
         -- "hls", -- Haskell
         -- "gopls",
         -- "ast_grep", -- Dart (Flutter)
-        "rust_analyzer",
+        -- "rust_analyzer",
       },
     })
 
