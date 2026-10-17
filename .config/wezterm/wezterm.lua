@@ -11,12 +11,12 @@ sessions.apply_to_config(config) -- optional, this adds default keybindings
 -- config.colors = my_colors
 
 -- Choose any variant:
--- require("colors/monokai-pro").apply_to_config(config, "pro")
+require("colors/monokai-pro").apply_to_config(config, "pro")
 -- require("colors/monokai-pro").apply_to_config(config, "octagon")
 -- require("colors/monokai-pro").apply_to_config(config, "machine")
 -- require("colors/monokai-pro").apply_to_config(config, "ristretto")
 -- require("colors/monokai-pro").apply_to_config(config, "spectrum")
-require("colors/monokai-pro").apply_to_config(config, "classic")
+-- require("colors/monokai-pro").apply_to_config(config, "classic")
 -- require("colors/monokai-pro").apply_to_config(config, "light")
 
 -- -- config.color_scheme = 'Monokai (base16)'
