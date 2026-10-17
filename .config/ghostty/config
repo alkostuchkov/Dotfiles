@@ -26,7 +26,8 @@
 gtk-titlebar = false
 
 # theme = Cobalt2_default
-theme = Monokai_Classic
+# theme = Monokai_Classic
+theme = Monokai_Pro
 
 # font-family = CaskaydiaMono NF
 # font-family-bold = CaskaydiaMono NF
