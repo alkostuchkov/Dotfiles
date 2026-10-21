@@ -7,7 +7,7 @@ return {
     -- set keymaps
     local keymap = vim.keymap -- for conciseness
 
-    keymap.set("n", "<leader>ct", ":SmearCursorToggle<CR>", { desc = "SmearCursorToggle" }) -- toggle animated cursor
+    keymap.set("n", "<leader>kt", ":SmearCursorToggle<CR>", { desc = "SmearCursorToggle" }) -- toggle animated cursor
 
     -- keymap.set("n", "<C-F12>", ":SmearCursorToggle<CR>", { desc = "SmearCursorToggle" }) -- toggle animated cursor
     -- keymap.set("n", "<C-c>", ":SmearCursorToggle<CR>", { desc = "SmearCursorToggle" }) -- toggle animated cursor
