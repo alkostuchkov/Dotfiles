@@ -31,6 +31,7 @@ ueberzug_offset = [ 0, 0, 0, 0 ]
 
 [opener]
 edit = [
+    { run = 'neovide $@',    orphan = true, desc = "Neovide",      for = "unix" },
     { run = 'ghostty -e vim "$@"', orphan = true, desc = "Neovim (Ghostty)", for = "unix" },
     { run = 'alacritty -e vim "$@"', orphan = true, desc = "Neovim (Alacritty)", for = "unix" },
     { run = 'wezterm start --always-new-process -e vim "$@"', orphan = true, desc = "Neovim (WezTerm)", for = "unix" },
@@ -42,7 +43,7 @@ edit = [
     { run = 'kitty -e hx "$@"', orphan = true, desc = "Helix (Kitty)", for = "unix" },
 
     { run = 'emacs "$@"', orphan = true, desc = "Emacsclient", for = "unix" },
-    { run = 'code $@',    orphan = true, desc = "VSCode",           for = "unix" },
+    { run = 'code $@',    orphan = true, desc = "VSCode",      for = "unix" },
     { run = '~/.config/emacs/bin/doom emacs "$@"', orphan = true, desc = "Doom Emacs", for = "unix" },
 	{ run = 'ghostty -e fresh "$@"', orphan = true, desc = "fresh", for = "unix" },
 	{ run = 'alacritty -e micro "$@"', orphan = true, desc = "micro", for = "unix" },
