@@ -13,12 +13,13 @@ g.neovide_cursor_trail_size = 1.0 -- (default 1.0)
 g.neovide_cursor_animation_length = 0.150 -- (default 0.150 seconds)
 g.neovide_cursor_short_animation_length = 0.04 -- (default 0.04 seconds)
 
--- g.neovide_cursor_vfx_mode = "railgun"
--- g.neovide_cursor_vfx_mode = "torpedo"
--- g.neovide_cursor_vfx_mode = "pixiedust"
-g.neovide_cursor_vfx_mode = "sonicboom"
--- g.neovide_cursor_vfx_mode = "ripple"
--- g.neovide_cursor_vfx_mode = "wireframe"
+g.neovide_cursor_vfx_mode = ""
+-- -- g.neovide_cursor_vfx_mode = "railgun"
+-- -- g.neovide_cursor_vfx_mode = "torpedo"
+-- -- g.neovide_cursor_vfx_mode = "pixiedust"
+-- g.neovide_cursor_vfx_mode = "sonicboom"
+-- -- g.neovide_cursor_vfx_mode = "ripple"
+-- -- g.neovide_cursor_vfx_mode = "wireframe"
 
 -- opt.linespace = 4 -- only for GUI (nvim-qt), for Consolas NF
 -- line numbers

@@ -6,4 +6,5 @@ frame = "full"
 vsync = true
 idle = true   
 
-
+[font.features]
+"JetBrainsMono Nerd Font" = ["-calt"]
