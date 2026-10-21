@@ -1,0 +1,9 @@
+[font]
+normal = ["JetBrainsMono Nerd Font"]
+size = 14.5
+
+frame = "full"
+vsync = true
+idle = true   
+
+
