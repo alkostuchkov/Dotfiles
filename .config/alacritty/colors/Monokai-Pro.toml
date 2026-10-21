@@ -1,0 +1,24 @@
+# Example: Standard Monokai Dark Configuration
+[colors.primary]
+background = '#2d2a2e'
+foreground = '#fcfcfa'
+
+[colors.normal]
+black   = '#221f22'
+red     = '#ff6188'
+green   = '#a9dc76'
+yellow  = '#ffd866'
+blue    = '#fc9867'
+magenta = '#ab9df2'
+cyan    = '#78dce8'
+white   = '#fcfcfa'
+
+[colors.bright]
+black   = '#727072'
+red     = '#ff6188'
+green   = '#a9dc76'
+yellow  = '#ffd866'
+blue    = '#fc9867'
+magenta = '#ab9df2'
+cyan    = '#78dce8'
+white   = '#fcfcfa'   
