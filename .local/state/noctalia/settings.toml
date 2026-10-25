@@ -1,3 +1,5 @@
+config_version = 15
+
 [bar.default]
 center = []
 end = [
@@ -16,16 +18,16 @@ end = [
     "clock"
 ]
 font_family = "Ubuntu"
-margin_edge = 7
-margin_ends = 7
+margin_edge = 5
+margin_ends = 5
 scale = 1.1000000089406967
 start = [ "workspaces", "taskbar", "active_window", "media" ]
 
-    [bar.default.dead_zone]
-    command = "noctalia msg panel-toggle launcher"
-    middle_command = "exec kitty"
-    scroll_down_command = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05- -l 1.0"
-    scroll_up_command = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"
+    [bar.default.dead_zone.actions]
+    left = "exec noctalia msg panel-toggle launcher"
+    middle = "exec exec kitty"
+    scroll_down = "exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05- -l 1.0"
+    scroll_up = "exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"
 
 [calendar]
 enabled = true
@@ -54,11 +56,13 @@ widget_order = [ "lockscreen-login-box@LVDS-1" ]
     visible = true
 
     [lockscreen_widgets.widget."lockscreen-login-box@LVDS-1"]
-    box_height = 70.0
-    box_width = 400.0
+    box_height = 196.0
+    box_width = 720.0
     cx = 683.0
     cy = 649.0
     output = "LVDS-1"
+    placement_height = 768.0
+    placement_width = 1366.0
     rotation = 0.0
     type = "login_box"
 
@@ -66,12 +70,18 @@ widget_order = [ "lockscreen-login-box@LVDS-1" ]
         background_color = "surface_variant"
         background_opacity = 0.88
         background_radius = 12.0
+        center_password_text = false
         input_opacity = 1.0
         input_radius = 6.0
+        layout = "regular"
         show_caps_lock = true
         show_keyboard_layout = true
         show_login_button = true
-        show_password_hint = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
 
 [nightlight]
 enabled = true
@@ -80,6 +90,11 @@ enabled = true
 font_family = "Ubuntu"
 settings_show_advanced = true
 ui_scale = 1.300000011920929
+
+    [shell.keyboard_layout.custom_labels]
+    Belarusian = "BE"
+    "Belarusian (Latin)" = "BEŁ"
+    Russian = "RU"
 
     [shell.panel]
     open_near_click_clipboard = true
@@ -101,11 +116,13 @@ directory = "/home/alexander/Pictures/Wallpapers/NewWallpapers"
     path = "/home/alexander/Pictures/Wallpapers/NewWallpapers/0314.jpg"
 
 [widget.Updates]
-command = "/home/alexander/.config/niri/scripts/show_updates.sh"
 glyph = "cloud"
-middle_command = "alacritty --hold -e sudo xbps-install -Su"
 tooltip = "Available updates"
 type = "custom_button"
+
+    [widget.Updates.actions]
+    left = "exec /home/alexander/.config/niri/scripts/show_updates.sh"
+    middle = "exec alacritty --hold -e sudo xbps-install -Su"
 
 [widget.active_window]
 capsule = true
@@ -116,7 +133,7 @@ capsule = true
 [widget.battery]
 display_mode = "graphic"
 hide_when_full = true
-show_label = false
+hide_when_plugged = true
 
 [widget.clock]
 format = "{:%H:%M:%S}"
@@ -128,12 +145,7 @@ format = "{:%d %b, %a}"
 display = "full"
 font_family = "Ubuntu"
 glyph = "keyboard-filled"
-show_icon = false
-
-    [widget.keyboard_layout.custom_labels]
-    Belarusian = "BE"
-    "Belarusian (Latin)" = "BEŁ"
-    Russian = "RU"
+show_glyph = false
 
 [widget.media]
 capsule = true
@@ -158,3 +170,6 @@ stat = "ram_pct"
 [widget.taskbar]
 capsule = true
 only_active_workspace = true
+
+[widget.temp]
+highlight_color = "on_surface_variant"
