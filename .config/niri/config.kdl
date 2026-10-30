@@ -307,6 +307,7 @@ spawn-at-startup "noctalia"
 // spawn-at-startup "qs" "-c" "noctalia-shell"
 spawn-at-startup "/usr/libexec/xfce-polkit" // for Void
 spawn-at-startup "/usr/bin/python" "/usr/bin/udiskie"
+spawn-at-startup "/usr/bin/octoxbps-notifier"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"

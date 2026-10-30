@@ -1,6 +1,6 @@
 [font]
 normal = ["JetBrainsMono Nerd Font"]
-size = 16.5
+size = 15.0
 
 frame = "full"
 vsync = true

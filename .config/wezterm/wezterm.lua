@@ -145,11 +145,11 @@ config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = true
 
 config.window_padding = {
-  left = 0,
-  -- left = 3,
-  right = 0,
-  top = 0,
-  bottom = 0,
+	left = 0,
+	-- left = 3,
+	right = 0,
+	top = 0,
+	bottom = 0,
 }
 
 -- config.window_decorations = "RESIZE"
@@ -164,215 +164,213 @@ local act = wezterm.action
 -- timeout_milliseconds defaults to 1000 and can be omitted
 config.leader = { key = "q", mods = "ALT", timeout_milliseconds = 2000 }
 config.keys = {
-  -- Sessions
-  {
-      key = "s",
-      -- mods = "ALT",
-      mods = "LEADER",
-      action = act { EmitEvent = "save_session" },
-  },
-  {
-      key = "l",
-      -- mods = "ALT",
-      mods = "LEADER",
-      action = act { EmitEvent = "load_session" },
-  },
-  {
-      key = "r",
-      -- mods = "ALT",
-      mods = "LEADER",
-      action = act { EmitEvent = "restore_session" },
-  },
-  {
-      key = "d",
-      -- mods = "CTRL|SHIFT",
-      mods = "LEADER",
-      action = act { EmitEvent = "delete_session" },
-  },
-  {
-      key = "e",
-      -- mods = "CTRL|SHIFT",
-      mods = "LEADER",
-      action = act { EmitEvent = "edit_session" },
-  },
-  -- Rename current workspace
-  {
-      key = "$",
-      mods = "CTRL|SHIFT",
-      action = act.PromptInputLine {
-          description = "Enter new workspace name",
-          action = wezterm.action_callback(
-              function(window, pane, line)
-                  if line then
-                      wezterm.mux.rename_workspace(wezterm.mux.get_active_workspace(), line)
-                  end
-              end
-          ),
-      },
-  },
-  -- Prompt for a name to use for a new workspace and switch to it.
-  {
-      key = "w",
-      mods = "CTRL|SHIFT",
-      action = act.PromptInputLine {
-          description = wezterm.format {
-              { Attribute = { Intensity = "Bold" } },
-              { Foreground = { AnsiColor = "Fuchsia" } },
-              { Text = "Enter name for new workspace" },
-          },
-          action = wezterm.action_callback(function(window, pane, line)
-              -- line will be `nil` if they hit escape without entering anything
-              -- An empty string if they just hit enter
-              -- Or the actual line of text they wrote
-              if line then
-                  window:perform_action(
-                      act.SwitchToWorkspace {
-                          name = line,
-                      },
-                      pane
-                  )
-              end
-          end),
-      },
-  },
+	-- Sessions
+	{
+		key = "s",
+		-- mods = "ALT",
+		mods = "LEADER",
+		action = act({ EmitEvent = "save_session" }),
+	},
+	{
+		key = "l",
+		-- mods = "ALT",
+		mods = "LEADER",
+		action = act({ EmitEvent = "load_session" }),
+	},
+	{
+		key = "r",
+		-- mods = "ALT",
+		mods = "LEADER",
+		action = act({ EmitEvent = "restore_session" }),
+	},
+	{
+		key = "d",
+		-- mods = "CTRL|SHIFT",
+		mods = "LEADER",
+		action = act({ EmitEvent = "delete_session" }),
+	},
+	{
+		key = "e",
+		-- mods = "CTRL|SHIFT",
+		mods = "LEADER",
+		action = act({ EmitEvent = "edit_session" }),
+	},
+	-- Rename current workspace
+	{
+		key = "$",
+		mods = "CTRL|SHIFT",
+		action = act.PromptInputLine({
+			description = "Enter new workspace name",
+			action = wezterm.action_callback(function(window, pane, line)
+				if line then
+					wezterm.mux.rename_workspace(wezterm.mux.get_active_workspace(), line)
+				end
+			end),
+		}),
+	},
+	-- Prompt for a name to use for a new workspace and switch to it.
+	{
+		key = "w",
+		mods = "CTRL|SHIFT",
+		action = act.PromptInputLine({
+			description = wezterm.format({
+				{ Attribute = { Intensity = "Bold" } },
+				{ Foreground = { AnsiColor = "Fuchsia" } },
+				{ Text = "Enter name for new workspace" },
+			}),
+			action = wezterm.action_callback(function(window, pane, line)
+				-- line will be `nil` if they hit escape without entering anything
+				-- An empty string if they just hit enter
+				-- Or the actual line of text they wrote
+				if line then
+					window:perform_action(
+						act.SwitchToWorkspace({
+							name = line,
+						}),
+						pane
+					)
+				end
+			end),
+		}),
+	},
 
-  -- Scrolling
-  { key = "UpArrow",   mods = "CTRL|SHIFT", action = act.ScrollByLine(-1) },
-  { key = "DownArrow", mods = "CTRL|SHIFT", action = act.ScrollByLine(1) },
-  { key = "PageUp",    mods = "CTRL|SHIFT", action = act.ScrollByPage(-1) },
-  { key = "PageDown",  mods = "CTRL|SHIFT", action = act.ScrollByPage(1) },
-  { key = "Home",      mods = "CTRL|SHIFT", action = act.ScrollToTop },
-  { key = "End",       mods = "CTRL|SHIFT", action = act.ScrollToBottom },
+	-- Scrolling
+	{ key = "UpArrow", mods = "CTRL|SHIFT", action = act.ScrollByLine(-1) },
+	{ key = "DownArrow", mods = "CTRL|SHIFT", action = act.ScrollByLine(1) },
+	{ key = "PageUp", mods = "CTRL|SHIFT", action = act.ScrollByPage(-1) },
+	{ key = "PageDown", mods = "CTRL|SHIFT", action = act.ScrollByPage(1) },
+	{ key = "Home", mods = "CTRL|SHIFT", action = act.ScrollToTop },
+	{ key = "End", mods = "CTRL|SHIFT", action = act.ScrollToBottom },
 
-  -- Split
-  { -- horizontal
-    -- key = "x",
-    -- mods = "CTRL|SHIFT",
-    key = "\\", -- |
-    mods = "LEADER",
-    action = act.SplitHorizontal { domain = "CurrentPaneDomain" },
-  },
-  { -- vertical
-    -- key = "z",
-    -- mods = "CTRL|SHIFT",
-    key = "-",
-    mods = "LEADER",
-    action = act.SplitVertical { domain = "CurrentPaneDomain" },
-  },
+	-- Split
+	{ -- horizontal
+		-- key = "x",
+		-- mods = "CTRL|SHIFT",
+		key = "\\", -- |
+		mods = "LEADER",
+		action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+	{ -- vertical
+		-- key = "z",
+		-- mods = "CTRL|SHIFT",
+		key = "-",
+		mods = "LEADER",
+		action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
+	},
 
-  -- Tabs
-  { -- Create new tab
-    key = "t",
-    mods = "CTRL|SHIFT",
-    action = act.SpawnTab "CurrentPaneDomain",
-    -- action = act.SpawnTab 'DefaultDomain',
-    -- action = act.SpawnTab { DomainName = 'unix' },
-  },
-  { -- Close current tab
-    key = "x",
-    mods = "CTRL|SHIFT",
-    action = act.CloseCurrentPane { confirm = true },
-  },
+	-- Tabs
+	{ -- Create new tab
+		key = "t",
+		mods = "CTRL|SHIFT",
+		action = act.SpawnTab("CurrentPaneDomain"),
+		-- action = act.SpawnTab 'DefaultDomain',
+		-- action = act.SpawnTab { DomainName = 'unix' },
+	},
+	{ -- Close current tab
+		key = "x",
+		mods = "CTRL|SHIFT",
+		action = act.CloseCurrentPane({ confirm = true }),
+	},
 
-  -- Moving between splitted (when no splitted - between tabs)
-  {
-    key = "j",
-    mods = "CTRL|SHIFT",
-    action = act.ActivatePaneDirection "Down",
-  },
-  {
-    key = "k",
-    mods = "CTRL|SHIFT",
-    action = act.ActivatePaneDirection "Up",
-  },
-  {
-    key = "h",
-    mods = "CTRL|SHIFT",
-    action = act.EmitEvent "switch-to-left",
-  },
-  {
-    key = "l",
-    mods = "CTRL|SHIFT",
-    action = act.EmitEvent "switch-to-right",
-  },
+	-- Moving between splitted (when no splitted - between tabs)
+	{
+		key = "j",
+		mods = "CTRL|SHIFT",
+		action = act.ActivatePaneDirection("Down"),
+	},
+	{
+		key = "k",
+		mods = "CTRL|SHIFT",
+		action = act.ActivatePaneDirection("Up"),
+	},
+	{
+		key = "h",
+		mods = "CTRL|SHIFT",
+		action = act.EmitEvent("switch-to-left"),
+	},
+	{
+		key = "l",
+		mods = "CTRL|SHIFT",
+		action = act.EmitEvent("switch-to-right"),
+	},
 
-  -- Moving between tabs
-  { key = "]",  mods = "CTRL", action = act.ActivateTabRelative(1) },
-  { key = "[",  mods = "CTRL", action = act.ActivateTabRelative(-1) },
+	-- Moving between tabs
+	{ key = "]", mods = "CTRL", action = act.ActivateTabRelative(1) },
+	{ key = "[", mods = "CTRL", action = act.ActivateTabRelative(-1) },
 
-  -- Show TabNavigator
-  { key = "F9", mods = "CTRL",  action = act.ShowTabNavigator },
+	-- Show TabNavigator
+	{ key = "F9", mods = "CTRL", action = act.ShowTabNavigator },
 
-  { -- Rename current tab
-    key = "t",
-    mods = "ALT|SHIFT",
-    action = act.PromptInputLine({
-      description = "Enter new name for tab",
-      -- action = wezterm.action_callback(function(window, pane, line)
-      action = wezterm.action_callback(function(window, line)
-        -- line will be `nil` if they hit escape without entering anything
-        -- An empty string if they just hit enter
-        -- Or the actual line of text they wrote
-        if line then
-          window:active_tab():set_title(line)
-        end
-      end),
-    }),
-  },
+	{ -- Rename current tab
+		key = "t",
+		mods = "ALT|SHIFT",
+		action = act.PromptInputLine({
+			description = "Enter new name for tab",
+			-- action = wezterm.action_callback(function(window, pane, line)
+			action = wezterm.action_callback(function(window, line)
+				-- line will be `nil` if they hit escape without entering anything
+				-- An empty string if they just hit enter
+				-- Or the actual line of text they wrote
+				if line then
+					window:active_tab():set_title(line)
+				end
+			end),
+		}),
+	},
 
-  -- Disable defaults keys:
-  { -- Switch between tabs 
-    key = "Tab",
-    mods = "CTRL",
-    action = act.DisableDefaultAssignment,
-  },
-  {
-    key = "Tab",
-    mods = "CTRL|SHIFT",
-    action = act.DisableDefaultAssignment,
-  },
-  { -- Toggle full screen
-    key = "Enter",
-    mods = "ALT",
-    action = act.DisableDefaultAssignment,
-  },
+	-- Disable defaults keys:
+	{ -- Switch between tabs
+		key = "Tab",
+		mods = "CTRL",
+		action = act.DisableDefaultAssignment,
+	},
+	{
+		key = "Tab",
+		mods = "CTRL|SHIFT",
+		action = act.DisableDefaultAssignment,
+	},
+	{ -- Toggle full screen
+		key = "Enter",
+		mods = "ALT",
+		action = act.DisableDefaultAssignment,
+	},
 }
 
 -- Activate tab by ctrl+number
 for i = 1, 8 do
-  -- CTRL + number to activate that tab
-  table.insert(config.keys, {
-    key = tostring(i),
-    mods = "CTRL",
-    action = act.ActivateTab(i - 1),
-  })
-  -- -- F1 through F8 to activate that tab
-  -- table.insert(config.keys, {
-  -- key = "F" .. tostring(i),
-  -- action = act.ActivateTab(i - 1),
-  -- })
+	-- CTRL + number to activate that tab
+	table.insert(config.keys, {
+		key = tostring(i),
+		mods = "CTRL",
+		action = act.ActivateTab(i - 1),
+	})
+	-- -- F1 through F8 to activate that tab
+	-- table.insert(config.keys, {
+	-- key = "F" .. tostring(i),
+	-- action = act.ActivateTab(i - 1),
+	-- })
 end
 
 -- FUNCTIONS
 -- switch between splitted panes
 wezterm.on("switch-to-left", function(window, pane)
-  local tab = window:mux_window():active_tab()
+	local tab = window:mux_window():active_tab()
 
-  if tab:get_pane_direction("Left") ~= nil then
-    window:perform_action(act.ActivatePaneDirection("Left"), pane)
-  else
-    window:perform_action(act.ActivateTabRelative(-1), pane)
-  end
+	if tab:get_pane_direction("Left") ~= nil then
+		window:perform_action(act.ActivatePaneDirection("Left"), pane)
+	else
+		window:perform_action(act.ActivateTabRelative(-1), pane)
+	end
 end)
 
 wezterm.on("switch-to-right", function(window, pane)
-  local tab = window:mux_window():active_tab()
+	local tab = window:mux_window():active_tab()
 
-  if tab:get_pane_direction("Right") ~= nil then
-    window:perform_action(act.ActivatePaneDirection("Right"), pane)
-  else
-    window:perform_action(act.ActivateTabRelative(1), pane)
-  end
+	if tab:get_pane_direction("Right") ~= nil then
+		window:perform_action(act.ActivatePaneDirection("Right"), pane)
+	else
+		window:perform_action(act.ActivateTabRelative(1), pane)
+	end
 end)
 
 -- and finally, return the configuration to wezterm
