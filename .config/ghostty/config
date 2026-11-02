@@ -106,7 +106,7 @@ font-feature = -dlig
 # font-style-bold-italic = Bold-Italic
 
 # font-size = 18.5
-font-size = 16.5
+font-size = 16.0
 
 # adjust-cell-height = +15%
 

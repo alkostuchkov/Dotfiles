@@ -421,6 +421,11 @@ animations {
 // }
 // "1  ", "2  ", "3  ", "4  ", "5  ", "6  ", "7  ", "8  ", "9  " 
 
+// Open all windows maximized
+window-rule {
+    open-maximized true
+}   
+
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
 window-rule {
@@ -438,7 +443,7 @@ window-rule {
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id="firefox"
     match app-id="thunar"
-    open-maximized true
+    // open-maximized true
 }
 
 window-rule {
@@ -522,7 +527,8 @@ binds {
 
     // Terminals
     Mod+Alt+Return hotkey-overlay-title="Open a Terminal: Alacritty" { spawn "alacritty"; }
-    Mod+Return hotkey-overlay-title="Open a Terminal: WezTerm" { spawn "wezterm"; }
+    // Mod+Return hotkey-overlay-title="Open a Terminal: WezTerm" { spawn "wezterm"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: WezTerm" { spawn "wezterm start --always-new-process"; }
     Mod+Alt+H hotkey-overlay-title="Open a Terminal: Ghostty" { spawn "ghostty"; }
     Ctrl+Alt+Return hotkey-overlay-title="Open a Terminal: Kitty" { spawn "kitty"; }
 

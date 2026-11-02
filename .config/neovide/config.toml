@@ -1,6 +1,7 @@
 [font]
-normal = ["JetBrainsMono Nerd Font"]
-size = 15.0
+# normal = ["JetBrainsMono Nerd Font"]
+normal = ["UbuntuMono Nerd Font"]
+size = 18.5
 
 frame = "full"
 vsync = true

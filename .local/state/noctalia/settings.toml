@@ -1,7 +1,7 @@
 config_version = 16
 
 [bar.default]
-center = []
+center = [ "date", "clock" ]
 end = [
     "Updates",
     "cpu",
@@ -13,9 +13,7 @@ end = [
     "network",
     "tray",
     "clipboard",
-    "battery",
-    "date",
-    "clock"
+    "battery"
 ]
 font_family = "Ubuntu"
 margin_edge = 5
@@ -116,6 +114,7 @@ directory = "/home/alexander/Pictures/Wallpapers/NewWallpapers"
     path = "/home/alexander/Pictures/Wallpapers/NewWallpapers/0314.jpg"
 
 [widget.Updates]
+enabled = false
 glyph = "cloud"
 tooltip = "Available updates"
 type = "custom_button"
@@ -126,6 +125,7 @@ type = "custom_button"
 
 [widget.active_window]
 capsule = true
+enabled = false
 
 [widget.audio_visualizer]
 capsule = true
