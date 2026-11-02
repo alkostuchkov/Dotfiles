@@ -3,6 +3,7 @@ config_version = 16
 [bar.default]
 center = [ "date", "clock" ]
 end = [
+    "media",
     "Updates",
     "cpu",
     "temp",
@@ -19,7 +20,7 @@ font_family = "Ubuntu"
 margin_edge = 5
 margin_ends = 5
 scale = 1.1000000089406967
-start = [ "workspaces", "taskbar", "active_window", "media" ]
+start = [ "workspaces", "taskbar", "active_window" ]
 
     [bar.default.dead_zone.actions]
     left = "exec noctalia msg panel-toggle launcher"
@@ -124,7 +125,6 @@ type = "custom_button"
     middle = "exec alacritty --hold -e sudo xbps-install -Su"
 
 [widget.active_window]
-capsule = true
 enabled = false
 
 [widget.audio_visualizer]
@@ -148,7 +148,6 @@ glyph = "keyboard-filled"
 show_glyph = false
 
 [widget.media]
-capsule = true
 font_family = "Ubuntu"
 hide_when_no_media = true
 max_length = 120
@@ -168,7 +167,6 @@ capsule = true
 stat = "ram_pct"
 
 [widget.taskbar]
-capsule = true
 only_active_workspace = true
 
 [widget.temp]
