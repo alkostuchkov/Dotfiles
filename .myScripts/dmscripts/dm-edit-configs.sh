@@ -60,6 +60,7 @@ options=(
 "micro - $HOME/.config/micro/settings.json"
 "mimeapps - $HOME/.config/mimeapps.list"
 "neofetch - $HOME/.config/neofetch/config.conf"
+"neovide - $HOME/.config/neovide/config.toml"
 "niri - $HOME/.config/niri/config.kdl"
 "nvim-qt - $HOME/.config/nvim-qt/nvim-qt.conf"
 # "nvim - $HOME/.config/nvim/init.vim"

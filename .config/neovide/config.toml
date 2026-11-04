@@ -1,7 +1,9 @@
 [font]
 # normal = ["JetBrainsMono Nerd Font"]
-normal = ["UbuntuMono Nerd Font"]
-size = 18.5
+# normal = ["UbuntuMono Nerd Font"]
+# size = 18.5
+normal = ["CodeNewRoman Nerd Font"]
+size = 18.0
 
 frame = "full"
 vsync = true
