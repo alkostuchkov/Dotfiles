@@ -1,20 +1,23 @@
-config_version = 16
+config_version = 20
+
+[accessibility]
+ui_scale = 1.1500000096857548
 
 [bar.default]
-center = [ "date", "clock" ]
+center = [ "media" ]
 end = [
-    "media",
     "Updates",
-    "cpu",
     "temp",
+    "cpu",
     "sysmon",
     "keyboard_layout",
     "volume",
     "brightness",
     "network",
     "tray",
-    "clipboard",
-    "battery"
+    "battery",
+    "date",
+    "clock"
 ]
 font_family = "Ubuntu"
 margin_edge = 5
@@ -103,7 +106,6 @@ ui_scale = 1.300000011920929
 
 [theme]
 builtin = "Tokyo-Night"
-mode = "dark"
 
 [wallpaper]
 directory = "/home/alexander/Pictures/Wallpapers/NewWallpapers"
@@ -134,6 +136,9 @@ capsule = true
 display_mode = "graphic"
 hide_when_full = true
 hide_when_plugged = true
+
+[widget.clipboard]
+font_scale = 0.93999999999999995
 
 [widget.clock]
 format = "{:%H:%M:%S}"
