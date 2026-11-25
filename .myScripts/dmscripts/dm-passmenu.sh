@@ -34,42 +34,41 @@ sb='#3D5E87'
 
 typeit=0
 if [[ $1 == "--type" ]]; then
-	typeit=1
-	shift
+    typeit=1
+    shift
 fi
 
-
 prefix=${PASSWORD_STORE_DIR-~/.password-store}
-password_files=( "$prefix"/**/*.gpg )
-password_files=( "${password_files[@]#"$prefix"/}" )
-password_files=( "${password_files[@]%.gpg}" )
+password_files=("$prefix"/**/*.gpg)
+password_files=("${password_files[@]#"$prefix"/}")
+password_files=("${password_files[@]%.gpg}")
 
 if [[ -n $WAYLAND_DISPLAY ]]; then
     # DMENU="wmenu"
     password=$(printf '%s\n' "${password_files[@]}" | wmenu -i -l 10 -f 'IosevkaTerm_IlovePlus 17' -p 'Password for:')
-	xdotool="ydotool type --file -"
+    xdotool="ydotool type --file -"
 elif [[ -n $DISPLAY ]]; then
     DMENU="dmenu -i -l 10 -nf ${nf} -nb ${nb} -sf ${sf} -sb ${sb} -fn ${fn} -p"
     password=$(printf '%s\n' "${password_files[@]}" | ${DMENU} 'Password for:')
-	xdotool="xdotool type --clearmodifiers --file -"
+    xdotool="xdotool type --clearmodifiers --file -"
 else
-	echo "Error: No Wayland or X11 display detected" >&2
-	exit 1
+    echo "Error: No Wayland or X11 display detected" >&2
+    exit 1
 fi
 
 [[ -n $password ]] || exit
 
 if [[ $typeit -eq 0 ]]; then
-	# pass show -c "$password" 2>/dev/null
-    all_data=$(pass show $password)  # because 'pass show' shows all data(url, username, etc) from the file
+    # pass show -c "$password" 2>/dev/null
+    all_data=$(pass show $password) # because 'pass show' shows all data(url, username, etc) from the file
     # got_password=$(echo $(pass show $password) | awk '{print $1}')
     if [[ $? == 1 ]]; then
         notify-send -t 5000 -i dialog-information "$password doesn't exist."
     elif [[ $all_data ]]; then
-        got_password=$(echo $all_data | awk '{print $1}')  # get only password from all_data
+        got_password=$(echo $all_data | awk '{print $1}') # get only password from all_data
         for_notify=$(echo $password | cut -d "/" -f2)
         echo $got_password | xclip -selection clipboard
-        echo $got_username | wl-copy # Wayland
+        echo $got_password | wl-copy # Wayland
         notify-send -t 5000 -i dialog-information "Copied $for_notify to clipboard.
         Will clear in 45 seconds."
         sleep 45
@@ -80,6 +79,8 @@ if [[ $typeit -eq 0 ]]; then
         notify-send -t 5000 -i dialog-information "Bad Passphrase."
     fi
 else
-	pass show "$password" | { IFS= read -r pass; printf %s "$pass"; } | $xdotool
+    pass show "$password" | {
+        IFS= read -r pass
+        printf %s "$pass"
+    } | $xdotool
 fi
-
